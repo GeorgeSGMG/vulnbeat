@@ -13,7 +13,7 @@ class Ecosystem(str, Enum):
 
 
 @dataclass(frozen=True)
-class PackageEntry:
+class Component:
     version: str | None
     constraint: str | None
     exact: bool

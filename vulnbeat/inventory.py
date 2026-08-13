@@ -1,6 +1,6 @@
 import json
 
-from vulnbeat.models import Ecosystem, PackageEntry, Scope
+from vulnbeat.models import Component, Ecosystem, Scope
 
 PIP_VERSION_OPERATORS = ["==", ">=", "<=", "~=", "!=", ">", "<"]
 NPM_RANGE_INDICATORS = ["^", "~", ">=", "<=", ">", "<", "latest", "*"]
@@ -15,8 +15,8 @@ TARGET_ALIASES = {
 }
 
 
-def parse_requirements(content: str) -> dict[str, PackageEntry]:
-    packages = {}
+def parse_requirements(content: str) -> dict[str, Component]:
+    components = {}
     for line in content.splitlines():
         line = line.strip()
         if not line or line.startswith("#") or line.startswith("-"):
@@ -38,37 +38,37 @@ def parse_requirements(content: str) -> dict[str, PackageEntry]:
 
                 break
 
-        packages[name.strip().lower()] = PackageEntry(
+        components[name.strip().lower()] = Component(
             version=rhs.strip() if exact else None,
             constraint=constraint,
             exact=exact,
             scope=Scope.PRODUCTION,
             ecosystem=Ecosystem.PYPI,
         )
-    return packages
+    return components
 
 
-def _parse_dependency_block(deps: dict[str, str], scope: Scope) -> dict[str, PackageEntry]:
-    packages = {}
+def _parse_dependency_block(deps: dict[str, str], scope: Scope) -> dict[str, Component]:
+    components = {}
     for name, version in deps.items():
         exact = not any(version.startswith(indicator) for indicator in NPM_RANGE_INDICATORS)
 
-        packages[name.lower()] = PackageEntry(
+        components[name.lower()] = Component(
             version=version if exact else None,
             constraint=version,
             exact=exact,
             scope=scope,
             ecosystem=Ecosystem.NPM,
         )
-    return packages
+    return components
 
 
-def parse_package_json(content: str) -> dict[str, PackageEntry]:
+def parse_package_json(content: str) -> dict[str, Component]:
     data = json.loads(content)
-    packages = {}
-    packages.update(_parse_dependency_block(data.get(NPM_DEPENDENCIES_KEY, {}), Scope.PRODUCTION))
-    packages.update(_parse_dependency_block(data.get(NPM_DEV_DEPENDENCIES_KEY, {}), Scope.DEVELOPMENT))
-    return packages
+    components = {}
+    components.update(_parse_dependency_block(data.get(NPM_DEPENDENCIES_KEY, {}), Scope.PRODUCTION))
+    components.update(_parse_dependency_block(data.get(NPM_DEV_DEPENDENCIES_KEY, {}), Scope.DEVELOPMENT))
+    return components
 
 
 if __name__ == "__main__":
@@ -86,11 +86,11 @@ if __name__ == "__main__":
         url = "https://raw.githubusercontent.com/adeyosemanputra/pygoat/master/requirements.txt"
         response = requests.get(url, timeout=30)
         response.raise_for_status()
-        packages = parse_requirements(response.text)
-        print(f"Parsed {len(packages)} packages from pygoat.")
+        components = parse_requirements(response.text)
+        print(f"Parsed {len(components)} components from pygoat.")
     else:
         url = "https://raw.githubusercontent.com/snyk-labs/nodejs-goof/main/package.json"
         response = requests.get(url, timeout=30)
         response.raise_for_status()
-        packages = parse_package_json(response.text)
-        print(f"Parsed {len(packages)} packages from nodejs-goof.")
+        components = parse_package_json(response.text)
+        print(f"Parsed {len(components)} components from nodejs-goof.")

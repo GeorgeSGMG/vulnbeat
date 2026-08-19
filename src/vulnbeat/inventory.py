@@ -75,6 +75,13 @@ def parse_package_json(content: str) -> dict[str, Component]:
     return components
 
 
+# Maps each Ecosystem to the function that parses its manifest format.
+PARSER_REGISTRY = {
+    Ecosystem.PYPI: parse_requirements,
+    Ecosystem.NPM: parse_package_json,
+}
+
+
 if __name__ == "__main__":
     import argparse
 

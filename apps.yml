@@ -1,0 +1,21 @@
+apps:
+  - id: pygoat
+    name: "OWASP PyGoat"
+    ecosystem: PyPI
+    repo: https://github.com/adeyosemanputra/pygoat
+    source: remote
+    manifest_url: https://raw.githubusercontent.com/adeyosemanputra/pygoat/master/requirements.txt
+
+  - id: nodejs-goof
+    name: "Snyk Goof"
+    ecosystem: npm
+    repo: https://github.com/snyk-labs/nodejs-goof
+    source: remote
+    manifest_url: https://raw.githubusercontent.com/snyk-labs/nodejs-goof/main/package.json
+
+  - id: vulnbeat
+    name: "VulnBeat (self)"
+    ecosystem: PyPI
+    repo: https://github.com/georgesgmg/vulnbeat
+    source: local
+    manifest_path: requirements.txt

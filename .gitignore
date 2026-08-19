@@ -8,6 +8,11 @@ __pycache__/
 *.pyo
 *.pyd
 
+# Packaging
+*.egg-info/
+build/
+dist/
+
 # IDE
 .vscode/
 .idea/

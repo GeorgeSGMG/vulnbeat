@@ -23,6 +23,7 @@ def parse_requirements(content: str) -> dict[str, Component]:
             continue
 
         name = line
+        version = None
         constraint = None
         exact = False
 
@@ -35,11 +36,14 @@ def parse_requirements(content: str) -> dict[str, Component]:
                 if exact and any(extra_op in rhs for extra_op in PIP_VERSION_OPERATORS):
                     # Malformed: more than one constraint after "==".
                     exact = False
+                
+                if exact:
+                    version = rhs.strip()
 
                 break
 
         components[name.strip().lower()] = Component(
-            version=rhs.strip() if exact else None,
+            version=version,
             constraint=constraint,
             exact=exact,
             scope=Scope.PRODUCTION,

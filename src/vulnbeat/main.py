@@ -1,10 +1,10 @@
 import requests
 import yaml
 
+from vulnbeat.crossref import match
 from vulnbeat.inventory import PARSER_REGISTRY
-from vulnbeat.matching import match
 from vulnbeat.models import Component, Ecosystem, MonitoredApp, Source
-from vulnbeat.publisher import write_report
+from vulnbeat.publication import write_report
 from vulnbeat.sources.kev import fetch_kev
 
 APPS_CONFIG_PATH = "apps.yml"

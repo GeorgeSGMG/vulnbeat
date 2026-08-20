@@ -1,0 +1,1113 @@
+{
+  "generated_at": "2026-08-20T14:39:06.020406+00:00",
+  "sources": {
+    "kev": {
+      "entries": 1671
+    }
+  },
+  "apps": [
+    {
+      "id": "pygoat",
+      "name": "OWASP PyGoat",
+      "ecosystem": "PyPI",
+      "repo": "https://github.com/adeyosemanputra/pygoat",
+      "dependencies": 34
+    },
+    {
+      "id": "nodejs-goof",
+      "name": "Snyk Goof",
+      "ecosystem": "npm",
+      "repo": "https://github.com/snyk-labs/nodejs-goof",
+      "dependencies": 35
+    },
+    {
+      "id": "vulnbeat",
+      "name": "VulnBeat (self)",
+      "ecosystem": "PyPI",
+      "repo": "https://github.com/georgesgmg/vulnbeat",
+      "dependencies": 6
+    }
+  ],
+  "findings": [
+    {
+      "cve": "CVE-2026-8037",
+      "package": "st",
+      "ecosystem": "npm",
+      "installed_version": "0.2.4",
+      "app": "nodejs-goof",
+      "in_kev": true,
+      "kev_date_added": "2026-08-07",
+      "summary": "Progress LoadMaster contains a command injection vulnerability that allows an un-authenticated attacker to execute arbitrary commands on the LoadMaster appliance by exploiting unsanitized input in multiple command endpoints."
+    },
+    {
+      "cve": "CVE-2026-16812",
+      "package": "st",
+      "ecosystem": "npm",
+      "installed_version": "0.2.4",
+      "app": "nodejs-goof",
+      "in_kev": true,
+      "kev_date_added": "2026-07-27",
+      "summary": "Arista VeloCloud Orchestrator On-Prem contains an OS command injection vulnerability that may allow a remote attacker to access privileged internal functionality and impact the VCO host. Successful exploitation may compromise the confidentiality, integrity, and availability of the orchestrator and data managed by the orchestrator."
+    },
+    {
+      "cve": "CVE-2026-56291",
+      "package": "ms",
+      "ecosystem": "npm",
+      "installed_version": null,
+      "app": "nodejs-goof",
+      "in_kev": true,
+      "kev_date_added": "2026-07-10",
+      "summary": "Balbooa Forms contains an unrestricted upload of file with dangerous type vulnerability that allows an unauthenticated arbitrary file upload which could allow uploading of executable files leading to full RCE."
+    },
+    {
+      "cve": "CVE-2026-20262",
+      "package": "st",
+      "ecosystem": "npm",
+      "installed_version": "0.2.4",
+      "app": "nodejs-goof",
+      "in_kev": true,
+      "kev_date_added": "2026-06-15",
+      "summary": "Cisco Catalyst SD-WAN Manager contains a directory or path traversal vulnerability that could allow an authenticated, remote attacker to create a file or overwrite any file on the filesystem of an affected system."
+    },
+    {
+      "cve": "CVE-2026-7473",
+      "package": "st",
+      "ecosystem": "npm",
+      "installed_version": "0.2.4",
+      "app": "nodejs-goof",
+      "in_kev": true,
+      "kev_date_added": "2026-06-09",
+      "summary": "Arista Extensible Operating System (EOS) contains an incomplete comparison with missing factors vulnerability when the switch incorrectly decapsulate and forwards other unexpected tunneled packet with a destination IP matching its configured decapsulation IP."
+    },
+    {
+      "cve": "CVE-2026-20245",
+      "package": "st",
+      "ecosystem": "npm",
+      "installed_version": "0.2.4",
+      "app": "nodejs-goof",
+      "in_kev": true,
+      "kev_date_added": "2026-06-09",
+      "summary": "Cisco Catalyst SD-WAN Manager formerly SD-WAN vManage contains an improper encoding or escaping of output vulnerability. This vulnerability could allow an authenticated, local attacker to execute arbitrary commands as root by supplying a crafted file to the affected system."
+    },
+    {
+      "cve": "CVE-2026-45321",
+      "package": "st",
+      "ecosystem": "npm",
+      "installed_version": "0.2.4",
+      "app": "nodejs-goof",
+      "in_kev": true,
+      "kev_date_added": "2026-05-27",
+      "summary": "TanStack contains an unspecified vulnerability that allowed malicious versions of the product to be published to the npm registry to publish credential-stealing malware under a trusted identity."
+    },
+    {
+      "cve": "CVE-2026-20182",
+      "package": "st",
+      "ecosystem": "npm",
+      "installed_version": "0.2.4",
+      "app": "nodejs-goof",
+      "in_kev": true,
+      "kev_date_added": "2026-05-14",
+      "summary": "Cisco Catalyst SD-WAN Controller & Manager contain an authentication bypass vulnerability that allows an unauthenticated, remote attacker to bypass authentication and obtain administrative privileges on an affected system."
+    },
+    {
+      "cve": "CVE-2026-20122",
+      "package": "st",
+      "ecosystem": "npm",
+      "installed_version": "0.2.4",
+      "app": "nodejs-goof",
+      "in_kev": true,
+      "kev_date_added": "2026-04-20",
+      "summary": "Cisco Catalyst SD-WAN Manager contains an incorrect use of privileged APIs vulnerability due to improper file handling on the API interface of an affected system. An attacker could exploit this vulnerability by uploading a malicious file on the local file system. A successful exploit could allow the attacker to overwrite arbitrary files on the affected system and gain vmanage user privileges."
+    },
+    {
+      "cve": "CVE-2026-20133",
+      "package": "st",
+      "ecosystem": "npm",
+      "installed_version": "0.2.4",
+      "app": "nodejs-goof",
+      "in_kev": true,
+      "kev_date_added": "2026-04-20",
+      "summary": "Cisco Catalyst SD-WAN Manager contains an exposure of sensitive information to an unauthorized actor vulnerability that could allow remote attackers to view sensitive information on affected systems."
+    },
+    {
+      "cve": "CVE-2026-20128",
+      "package": "st",
+      "ecosystem": "npm",
+      "installed_version": "0.2.4",
+      "app": "nodejs-goof",
+      "in_kev": true,
+      "kev_date_added": "2026-04-20",
+      "summary": "Cisco Catalyst SD-WAN Manager contains a storing passwords in a recoverable format vulnerability that allows an authenticated, local attacker to gain DCA user privileges by accessing a credential file for the DCA user on the filesystem as a low-privileged user."
+    },
+    {
+      "cve": "CVE-2025-32975",
+      "package": "ms",
+      "ecosystem": "npm",
+      "installed_version": null,
+      "app": "nodejs-goof",
+      "in_kev": true,
+      "kev_date_added": "2026-04-20",
+      "summary": "Quest KACE Systems Management Appliance (SMA) contains an improper authentication vulnerability that could allow attackers to impersonate legitimate users without valid credentials."
+    },
+    {
+      "cve": "CVE-2025-32975",
+      "package": "st",
+      "ecosystem": "npm",
+      "installed_version": "0.2.4",
+      "app": "nodejs-goof",
+      "in_kev": true,
+      "kev_date_added": "2026-04-20",
+      "summary": "Quest KACE Systems Management Appliance (SMA) contains an improper authentication vulnerability that could allow attackers to impersonate legitimate users without valid credentials."
+    },
+    {
+      "cve": "CVE-2026-21643",
+      "package": "ms",
+      "ecosystem": "npm",
+      "installed_version": null,
+      "app": "nodejs-goof",
+      "in_kev": true,
+      "kev_date_added": "2026-04-13",
+      "summary": "Fortinet FortiClient EMS contains a SQL injection vulnerability that may allow an unauthenticated attacker to execute unauthorized code or commands via specifically crafted HTTP requests."
+    },
+    {
+      "cve": "CVE-2026-35616",
+      "package": "ms",
+      "ecosystem": "npm",
+      "installed_version": null,
+      "app": "nodejs-goof",
+      "in_kev": true,
+      "kev_date_added": "2026-04-06",
+      "summary": "Fortinet FortiClient EMS contains an improper access control vulnerability that may allow an unauthenticated attacker to execute unauthorized code or commands via crafted requests."
+    },
+    {
+      "cve": "CVE-2025-32432",
+      "package": "ms",
+      "ecosystem": "npm",
+      "installed_version": null,
+      "app": "nodejs-goof",
+      "in_kev": true,
+      "kev_date_added": "2026-03-20",
+      "summary": "Craft CMS contains a code injection vulnerability that allows a remote attacker to execute arbitrary code."
+    },
+    {
+      "cve": "CVE-2026-20127",
+      "package": "st",
+      "ecosystem": "npm",
+      "installed_version": "0.2.4",
+      "app": "nodejs-goof",
+      "in_kev": true,
+      "kev_date_added": "2026-02-25",
+      "summary": "Cisco Catalyst SD-WAN Controller, formerly SD-WAN vSmart, and Cisco Catalyst SD-WAN Manager, formerly SD-WAN vManage, contain an authentication bypass vulnerability could allow an unauthenticated, remote attacker to bypass authentication and obtain administrative privileges on an affected system. This vulnerability exists because the peering authentication mechanism in an affected system is not working properly. An attacker could exploit this vulnerability by sending crafted requests to an affected system. A successful exploit could allow the attacker to log in to an affected Cisco Catalyst SD-WAN Controller as an internal, high-privileged, non-root user account. Using this account, the attacker could access NETCONF, which would then allow the attacker to manipulate network configuration for the SD-WAN fabric."
+    },
+    {
+      "cve": "CVE-2026-22769",
+      "package": "ms",
+      "ecosystem": "npm",
+      "installed_version": null,
+      "app": "nodejs-goof",
+      "in_kev": true,
+      "kev_date_added": "2026-02-18",
+      "summary": "Dell RecoverPoint for Virtual Machines (RP4VMs) contains an use of hard-coded credentials vulnerability that could allow an unauthenticated remote attacker to gain unauthorized access to the underlying operating system and root-level persistence."
+    },
+    {
+      "cve": "CVE-2025-31125",
+      "package": "ejs",
+      "ecosystem": "npm",
+      "installed_version": "1.0.0",
+      "app": "nodejs-goof",
+      "in_kev": true,
+      "kev_date_added": "2026-01-22",
+      "summary": "Vite Vitejs contains an improper access control vulnerability that exposes content of non-allowed files using ?inline&import or ?raw?import. Only apps explicitly exposing the Vite dev server to the network (using --host or server.host config option) are affected."
+    },
+    {
+      "cve": "CVE-2025-14847",
+      "package": "mongodb",
+      "ecosystem": "npm",
+      "installed_version": null,
+      "app": "nodejs-goof",
+      "in_kev": true,
+      "kev_date_added": "2025-12-29",
+      "summary": "MongoDB Server contains an improper handling of length parameter inconsistency vulnerability in Zlib compressed protocol headers. This vulnerability may allow a read of uninitialized heap memory by an unauthenticated client."
+    },
+    {
+      "cve": "CVE-2025-14611",
+      "package": "st",
+      "ecosystem": "npm",
+      "installed_version": "0.2.4",
+      "app": "nodejs-goof",
+      "in_kev": true,
+      "kev_date_added": "2025-12-15",
+      "summary": "Gladinet CentreStack and TrioFox contain a hardcoded cryptographic keys vulnerability for their implementation of the AES cryptoscheme. This vulnerability degrades security for public exposed endpoints that may make use of it and may offer arbitrary local file inclusion when provided a specially crafted request without authentication."
+    },
+    {
+      "cve": "CVE-2025-11371",
+      "package": "st",
+      "ecosystem": "npm",
+      "installed_version": "0.2.4",
+      "app": "nodejs-goof",
+      "in_kev": true,
+      "kev_date_added": "2025-11-04",
+      "summary": "Gladinet CentreStack and Triofox contains a files or directories accessible to external parties vulnerability that allows unintended disclosure of system files."
+    },
+    {
+      "cve": "CVE-2025-2746",
+      "package": "ms",
+      "ecosystem": "npm",
+      "installed_version": null,
+      "app": "nodejs-goof",
+      "in_kev": true,
+      "kev_date_added": "2025-10-20",
+      "summary": "Kentico Xperience CMS contains an authentication bypass using an alternate path or channel vulnerability that could allow an attacker to control administrative objects."
+    },
+    {
+      "cve": "CVE-2025-2747",
+      "package": "ms",
+      "ecosystem": "npm",
+      "installed_version": null,
+      "app": "nodejs-goof",
+      "in_kev": true,
+      "kev_date_added": "2025-10-20",
+      "summary": "Kentico Xperience CMS contains an authentication bypass using an alternate path or channel vulnerability that could allow an attacker to control administrative objects."
+    },
+    {
+      "cve": "CVE-2025-54253",
+      "package": "ms",
+      "ecosystem": "npm",
+      "installed_version": null,
+      "app": "nodejs-goof",
+      "in_kev": true,
+      "kev_date_added": "2025-10-15",
+      "summary": "Adobe Experience Manager Forms in JEE contains an unspecified vulnerability that allows for arbitrary code execution."
+    },
+    {
+      "cve": "CVE-2025-35939",
+      "package": "ms",
+      "ecosystem": "npm",
+      "installed_version": null,
+      "app": "nodejs-goof",
+      "in_kev": true,
+      "kev_date_added": "2025-06-02",
+      "summary": "Craft CMS contains an external control of assumed-immutable web parameter vulnerability. This vulnerability could allow an unauthenticated client to introduce arbitrary values, such as PHP code, to a known local file location on the server. This vulnerability could be chained with CVE-2024-58136 as represented by CVE-2025-32432."
+    },
+    {
+      "cve": "CVE-2024-56145",
+      "package": "ms",
+      "ecosystem": "npm",
+      "installed_version": null,
+      "app": "nodejs-goof",
+      "in_kev": true,
+      "kev_date_added": "2025-06-02",
+      "summary": "Craft CMS contains a code injection vulnerability. Users with affected versions are vulnerable to remote code execution if their php.ini configuration has `register_argc_argv` enabled."
+    },
+    {
+      "cve": "CVE-2025-30406",
+      "package": "st",
+      "ecosystem": "npm",
+      "installed_version": "0.2.4",
+      "app": "nodejs-goof",
+      "in_kev": true,
+      "kev_date_added": "2025-04-08",
+      "summary": "Gladinet CentreStack and Triofox contains a use of hard-coded cryptographic key vulnerability in the way that the application manages keys used for ViewState integrity verification. Successful exploitation allows an attacker to forge ViewState payloads for server-side deserialization, allowing for remote code execution."
+    },
+    {
+      "cve": "CVE-2019-9875",
+      "package": "ms",
+      "ecosystem": "npm",
+      "installed_version": null,
+      "app": "nodejs-goof",
+      "in_kev": true,
+      "kev_date_added": "2025-03-26",
+      "summary": "Sitecore CMS and Experience Platform (XP) contain a deserialization vulnerability in the Sitecore.Security.AntiCSRF module that allows an authenticated attacker to execute arbitrary code by sending a serialized .NET object in the HTTP POST parameter __CSRFTOKEN."
+    },
+    {
+      "cve": "CVE-2019-9874",
+      "package": "ms",
+      "ecosystem": "npm",
+      "installed_version": null,
+      "app": "nodejs-goof",
+      "in_kev": true,
+      "kev_date_added": "2025-03-26",
+      "summary": "Sitecore CMS and Experience Platform (XP) contain a deserialization vulnerability in the Sitecore.Security.AntiCSRF module that allows an unauthenticated attacker to execute arbitrary code by sending a serialized .NET object in the HTTP POST parameter __CSRFTOKEN."
+    },
+    {
+      "cve": "CVE-2025-22226",
+      "package": "st",
+      "ecosystem": "npm",
+      "installed_version": "0.2.4",
+      "app": "nodejs-goof",
+      "in_kev": true,
+      "kev_date_added": "2025-03-04",
+      "summary": "VMware ESXi, Workstation, and Fusion contain an information disclosure vulnerability due to an out-of-bounds read in HGFS. Successful exploitation allows an attacker with administrative privileges to a virtual machine to leak memory from the vmx process."
+    },
+    {
+      "cve": "CVE-2025-22224",
+      "package": "st",
+      "ecosystem": "npm",
+      "installed_version": "0.2.4",
+      "app": "nodejs-goof",
+      "in_kev": true,
+      "kev_date_added": "2025-03-04",
+      "summary": "VMware ESXi and Workstation contain a time-of-check time-of-use (TOCTOU) race condition vulnerability that leads to an out-of-bounds write. Successful exploitation enables an attacker with local administrative privileges on a virtual machine to execute code as the virtual machine's VMX process running on the host."
+    },
+    {
+      "cve": "CVE-2025-23209",
+      "package": "ms",
+      "ecosystem": "npm",
+      "installed_version": null,
+      "app": "nodejs-goof",
+      "in_kev": true,
+      "kev_date_added": "2025-02-20",
+      "summary": "Craft CMS contains a code injection vulnerability caused by improper validation of the database backup path, ultimately enabling remote code execution."
+    },
+    {
+      "cve": "CVE-2020-11023",
+      "package": "jquery",
+      "ecosystem": "npm",
+      "installed_version": null,
+      "app": "nodejs-goof",
+      "in_kev": true,
+      "kev_date_added": "2025-01-23",
+      "summary": "JQuery contains a persistent cross-site scripting (XSS) vulnerability. When passing maliciously formed, untrusted input enclosed in HTML tags, JQuery's DOM manipulators can execute untrusted code in the context of the user's browser."
+    },
+    {
+      "cve": "CVE-2024-1212",
+      "package": "st",
+      "ecosystem": "npm",
+      "installed_version": "0.2.4",
+      "app": "nodejs-goof",
+      "in_kev": true,
+      "kev_date_added": "2024-11-18",
+      "summary": "Progress Kemp LoadMaster contains an OS command injection vulnerability that allows an unauthenticated, remote attacker to access the system through the LoadMaster management interface, enabling arbitrary system command execution."
+    },
+    {
+      "cve": "CVE-2023-45249",
+      "package": "st",
+      "ecosystem": "npm",
+      "installed_version": "0.2.4",
+      "app": "nodejs-goof",
+      "in_kev": true,
+      "kev_date_added": "2024-07-29",
+      "summary": "Acronis Cyber Infrastructure (ACI) allows an unauthenticated user to execute commands remotely due to the use of default passwords."
+    },
+    {
+      "cve": "CVE-2023-48788",
+      "package": "ms",
+      "ecosystem": "npm",
+      "installed_version": null,
+      "app": "nodejs-goof",
+      "in_kev": true,
+      "kev_date_added": "2024-03-25",
+      "summary": "Fortinet FortiClient EMS contains a SQL injection vulnerability that allows an unauthenticated attacker to execute commands as SYSTEM via specifically crafted requests."
+    },
+    {
+      "cve": "CVE-2023-29360",
+      "package": "st",
+      "ecosystem": "npm",
+      "installed_version": "0.2.4",
+      "app": "nodejs-goof",
+      "in_kev": true,
+      "kev_date_added": "2024-02-29",
+      "summary": "Microsoft Streaming Service contains an untrusted pointer dereference vulnerability that allows for privilege escalation, enabling a local attacker to gain SYSTEM privileges."
+    },
+    {
+      "cve": "CVE-2023-47565",
+      "package": "st",
+      "ecosystem": "npm",
+      "installed_version": "0.2.4",
+      "app": "nodejs-goof",
+      "in_kev": true,
+      "kev_date_added": "2023-12-21",
+      "summary": "QNAP VioStar NVR contains an OS command injection vulnerability that allows authenticated users to execute commands via a network."
+    },
+    {
+      "cve": "CVE-2023-36802",
+      "package": "st",
+      "ecosystem": "npm",
+      "installed_version": "0.2.4",
+      "app": "nodejs-goof",
+      "in_kev": true,
+      "kev_date_added": "2023-09-12",
+      "summary": "Microsoft Streaming Service Proxy contains an unspecified vulnerability that allows for privilege escalation."
+    },
+    {
+      "cve": "CVE-2023-38180",
+      "package": "st",
+      "ecosystem": "npm",
+      "installed_version": "0.2.4",
+      "app": "nodejs-goof",
+      "in_kev": true,
+      "kev_date_added": "2023-08-09",
+      "summary": "Microsoft .NET Core and Visual Studio contain an unspecified vulnerability that allows for denial-of-service (DoS)."
+    },
+    {
+      "cve": "CVE-2023-27992",
+      "package": "st",
+      "ecosystem": "npm",
+      "installed_version": "0.2.4",
+      "app": "nodejs-goof",
+      "in_kev": true,
+      "kev_date_added": "2023-06-23",
+      "summary": "Multiple Zyxel network-attached storage (NAS) devices contain a pre-authentication command injection vulnerability that could allow an unauthenticated attacker to execute commands remotely via a crafted HTTP request."
+    },
+    {
+      "cve": "CVE-2022-42948",
+      "package": "st",
+      "ecosystem": "npm",
+      "installed_version": "0.2.4",
+      "app": "nodejs-goof",
+      "in_kev": true,
+      "kev_date_added": "2023-03-30",
+      "summary": "Fortra Cobalt Strike User Interface contains an unspecified vulnerability rooted in Java Swing that may allow remote code execution."
+    },
+    {
+      "cve": "CVE-2022-39197",
+      "package": "st",
+      "ecosystem": "npm",
+      "installed_version": "0.2.4",
+      "app": "nodejs-goof",
+      "in_kev": true,
+      "kev_date_added": "2023-03-30",
+      "summary": "Fortra Cobalt Strike contains a cross-site scripting (XSS) vulnerability in Teamserver that would allow an attacker to set a malformed username in the Beacon configuration, allowing them to execute code remotely."
+    },
+    {
+      "cve": "CVE-2021-39144",
+      "package": "st",
+      "ecosystem": "npm",
+      "installed_version": "0.2.4",
+      "app": "nodejs-goof",
+      "in_kev": true,
+      "kev_date_added": "2023-03-10",
+      "summary": "XStream contains a remote code execution vulnerability that allows an attacker to manipulate the processed input stream and replace or inject objects that result in the execution of a local command on the server. This vulnerability can affect multiple products, including but not limited to VMware Cloud Foundation."
+    },
+    {
+      "cve": "CVE-2015-2291",
+      "package": "st",
+      "ecosystem": "npm",
+      "installed_version": "0.2.4",
+      "app": "nodejs-goof",
+      "in_kev": true,
+      "kev_date_added": "2023-02-10",
+      "summary": "Intel ethernet diagnostics driver for Windows IQVW32.sys and IQVW64.sys contain an unspecified vulnerability that allows for a denial-of-service (DoS)."
+    },
+    {
+      "cve": "CVE-2022-24990",
+      "package": "st",
+      "ecosystem": "npm",
+      "installed_version": "0.2.4",
+      "app": "nodejs-goof",
+      "in_kev": true,
+      "kev_date_added": "2023-02-10",
+      "summary": "TerraMaster OS contains a remote command execution vulnerability that allows an unauthenticated user to execute commands on the target endpoint."
+    },
+    {
+      "cve": "CVE-2022-41033",
+      "package": "st",
+      "ecosystem": "npm",
+      "installed_version": "0.2.4",
+      "app": "nodejs-goof",
+      "in_kev": true,
+      "kev_date_added": "2022-10-11",
+      "summary": "Microsoft Windows COM+ Event System Service contains an unspecified vulnerability that allows for privilege escalation."
+    },
+    {
+      "cve": "CVE-2022-27593",
+      "package": "st",
+      "ecosystem": "npm",
+      "installed_version": "0.2.4",
+      "app": "nodejs-goof",
+      "in_kev": true,
+      "kev_date_added": "2022-09-08",
+      "summary": "Certain QNAP NAS running Photo Station with internet exposure contain an externally controlled reference to a resource vulnerability which can allow an attacker to modify system files. This vulnerability was observed being utilized in a Deadbolt ransomware campaign."
+    },
+    {
+      "cve": "CVE-2022-26352",
+      "package": "ms",
+      "ecosystem": "npm",
+      "installed_version": null,
+      "app": "nodejs-goof",
+      "in_kev": true,
+      "kev_date_added": "2022-08-25",
+      "summary": "dotCMS ContentResource API contains an unrestricted upload of file with a dangerous type vulnerability that allows for directory traversal, in which the file is saved outside of the intended storage location. Exploitation allows for remote code execution."
+    },
+    {
+      "cve": "CVE-2019-7195",
+      "package": "st",
+      "ecosystem": "npm",
+      "installed_version": "0.2.4",
+      "app": "nodejs-goof",
+      "in_kev": true,
+      "kev_date_added": "2022-06-08",
+      "summary": "QNAP devices running Photo Station contain an external control of file name or path vulnerability allowing remote attackers to access or modify system files."
+    },
+    {
+      "cve": "CVE-2019-7194",
+      "package": "st",
+      "ecosystem": "npm",
+      "installed_version": "0.2.4",
+      "app": "nodejs-goof",
+      "in_kev": true,
+      "kev_date_added": "2022-06-08",
+      "summary": "QNAP devices running Photo Station contain an external control of file name or path vulnerability allowing remote attackers to access or modify system files."
+    },
+    {
+      "cve": "CVE-2019-7192",
+      "package": "st",
+      "ecosystem": "npm",
+      "installed_version": "0.2.4",
+      "app": "nodejs-goof",
+      "in_kev": true,
+      "kev_date_added": "2022-06-08",
+      "summary": "QNAP NAS devices running Photo Station contain an improper access control vulnerability allowing remote attackers to gain unauthorized access to the system."
+    },
+    {
+      "cve": "CVE-2018-19953",
+      "package": "st",
+      "ecosystem": "npm",
+      "installed_version": "0.2.4",
+      "app": "nodejs-goof",
+      "in_kev": true,
+      "kev_date_added": "2022-05-24",
+      "summary": "A cross-site scripting vulnerability affecting QNAP NAS File Station could allow remote attackers to inject malicious code."
+    },
+    {
+      "cve": "CVE-2018-19949",
+      "package": "st",
+      "ecosystem": "npm",
+      "installed_version": "0.2.4",
+      "app": "nodejs-goof",
+      "in_kev": true,
+      "kev_date_added": "2022-05-24",
+      "summary": "A command injection vulnerability affecting QNAP NAS File Station could allow remote attackers to run commands."
+    },
+    {
+      "cve": "CVE-2018-19943",
+      "package": "st",
+      "ecosystem": "npm",
+      "installed_version": "0.2.4",
+      "app": "nodejs-goof",
+      "in_kev": true,
+      "kev_date_added": "2022-05-24",
+      "summary": "A cross-site scripting vulnerability affecting QNAP NAS File Station could allow remote attackers to inject malicious code."
+    },
+    {
+      "cve": "CVE-2017-8291",
+      "package": "st",
+      "ecosystem": "npm",
+      "installed_version": "0.2.4",
+      "app": "nodejs-goof",
+      "in_kev": true,
+      "kev_date_added": "2022-05-24",
+      "summary": "Artifex Ghostscript allows -dSAFER bypass and remote command execution via .rsdparams type confusion with a \"/OutputFile."
+    },
+    {
+      "cve": "CVE-2017-18362",
+      "package": "st",
+      "ecosystem": "npm",
+      "installed_version": "0.2.4",
+      "app": "nodejs-goof",
+      "in_kev": true,
+      "kev_date_added": "2022-05-24",
+      "summary": "ConnectWise ManagedITSync integration for Kaseya VSA is vulnerable to unauthenticated remote commands that allow full direct access to the Kaseya VSA database."
+    },
+    {
+      "cve": "CVE-2019-16057",
+      "package": "st",
+      "ecosystem": "npm",
+      "installed_version": "0.2.4",
+      "app": "nodejs-goof",
+      "in_kev": true,
+      "kev_date_added": "2022-04-15",
+      "summary": "The login_mgr.cgi script in D-Link DNS-320 is vulnerable to remote code execution."
+    },
+    {
+      "cve": "CVE-2014-0780",
+      "package": "st",
+      "ecosystem": "npm",
+      "installed_version": "0.2.4",
+      "app": "nodejs-goof",
+      "in_kev": true,
+      "kev_date_added": "2022-04-15",
+      "summary": "InduSoft Web Studio NTWebServer contains a directory traversal vulnerability that allows remote attackers to read administrative passwords in APP files, allowing for remote code execution."
+    },
+    {
+      "cve": "CVE-2018-20753",
+      "package": "st",
+      "ecosystem": "npm",
+      "installed_version": "0.2.4",
+      "app": "nodejs-goof",
+      "in_kev": true,
+      "kev_date_added": "2022-04-13",
+      "summary": "Kaseya VSA RMM allows unprivileged remote attackers to execute PowerShell payloads on all managed devices."
+    },
+    {
+      "cve": "CVE-2020-2509",
+      "package": "st",
+      "ecosystem": "npm",
+      "installed_version": "0.2.4",
+      "app": "nodejs-goof",
+      "in_kev": true,
+      "kev_date_added": "2022-04-11",
+      "summary": "QNAP NAS devices contain a command injection vulnerability which could allow attackers to perform remote code execution."
+    },
+    {
+      "cve": "CVE-2021-31166",
+      "package": "st",
+      "ecosystem": "npm",
+      "installed_version": "0.2.4",
+      "app": "nodejs-goof",
+      "in_kev": true,
+      "kev_date_added": "2022-04-06",
+      "summary": "Microsoft HTTP Protocol Stack contains a vulnerability in http.sys that allows for remote code execution."
+    },
+    {
+      "cve": "CVE-2021-28799",
+      "package": "st",
+      "ecosystem": "npm",
+      "installed_version": "0.2.4",
+      "app": "nodejs-goof",
+      "in_kev": true,
+      "kev_date_added": "2022-03-31",
+      "summary": "QNAP NAS running HBS 3 contains an improper authorization vulnerability which can allow remote attackers to log in to a device."
+    },
+    {
+      "cve": "CVE-2016-0151",
+      "package": "st",
+      "ecosystem": "npm",
+      "installed_version": "0.2.4",
+      "app": "nodejs-goof",
+      "in_kev": true,
+      "kev_date_added": "2022-03-28",
+      "summary": "The Client-Server Run-time Subsystem (CSRSS) in Microsoft mismanages process tokens, which allows local users to gain privileges via a crafted application."
+    },
+    {
+      "cve": "CVE-2022-26143",
+      "package": "express",
+      "ecosystem": "npm",
+      "installed_version": "4.12.4",
+      "app": "nodejs-goof",
+      "in_kev": true,
+      "kev_date_added": "2022-03-25",
+      "summary": "A vulnerability has been identified in MiCollab and MiVoice Business Express that may allow a malicious actor to gain unauthorized access to sensitive information and services, cause performance degradations or a denial of service condition on the affected system."
+    },
+    {
+      "cve": "CVE-2020-9054",
+      "package": "st",
+      "ecosystem": "npm",
+      "installed_version": "0.2.4",
+      "app": "nodejs-goof",
+      "in_kev": true,
+      "kev_date_added": "2022-03-25",
+      "summary": "Multiple Zyxel network-attached storage (NAS) devices contain a pre-authentication command injection vulnerability, which may allow a remote, unauthenticated attacker to execute arbitrary code."
+    },
+    {
+      "cve": "CVE-2019-11043",
+      "package": "st",
+      "ecosystem": "npm",
+      "installed_version": "0.2.4",
+      "app": "nodejs-goof",
+      "in_kev": true,
+      "kev_date_added": "2022-03-25",
+      "summary": "In some versions of PHP in certain configurations of FPM setup, it is possible to cause FPM module to write past allocated buffers allowing the possibility of remote code execution."
+    },
+    {
+      "cve": "CVE-2018-11138",
+      "package": "st",
+      "ecosystem": "npm",
+      "installed_version": "0.2.4",
+      "app": "nodejs-goof",
+      "in_kev": true,
+      "kev_date_added": "2022-03-25",
+      "summary": "The '/common/download_agent_installer.php' script in the Quest KACE System Management Appliance is accessible by anonymous users and can be abused to perform remote code execution."
+    },
+    {
+      "cve": "CVE-2018-0147",
+      "package": "st",
+      "ecosystem": "npm",
+      "installed_version": "0.2.4",
+      "app": "nodejs-goof",
+      "in_kev": true,
+      "kev_date_added": "2022-03-25",
+      "summary": "A vulnerability in Java deserialization used by Cisco Secure Access Control System (ACS) could allow an unauthenticated, remote attacker to execute arbitrary commands on an affected device. The vulnerability is due to insecure deserialization of user-supplied content by the affected software."
+    },
+    {
+      "cve": "CVE-2015-1427",
+      "package": "st",
+      "ecosystem": "npm",
+      "installed_version": "0.2.4",
+      "app": "nodejs-goof",
+      "in_kev": true,
+      "kev_date_added": "2022-03-25",
+      "summary": "The Groovy scripting engine in Elasticsearch allows remote attackers to bypass the sandbox protection mechanism and execute arbitrary shell commands."
+    },
+    {
+      "cve": "CVE-2014-6324",
+      "package": "st",
+      "ecosystem": "npm",
+      "installed_version": "0.2.4",
+      "app": "nodejs-goof",
+      "in_kev": true,
+      "kev_date_added": "2022-03-25",
+      "summary": "The Kerberos Key Distribution Center (KDC) in Microsoft allows remote authenticated domain users to obtain domain administrator privileges."
+    },
+    {
+      "cve": "CVE-2014-3120",
+      "package": "st",
+      "ecosystem": "npm",
+      "installed_version": "0.2.4",
+      "app": "nodejs-goof",
+      "in_kev": true,
+      "kev_date_added": "2022-03-25",
+      "summary": "Elasticsearch enables dynamic scripting, which allows remote attackers to execute arbitrary MVEL expressions and Java code."
+    },
+    {
+      "cve": "CVE-2013-2251",
+      "package": "st",
+      "ecosystem": "npm",
+      "installed_version": "0.2.4",
+      "app": "nodejs-goof",
+      "in_kev": true,
+      "kev_date_added": "2022-03-25",
+      "summary": "Apache Struts allows remote attackers to execute arbitrary Object-Graph Navigation Language (OGNL) expressions."
+    },
+    {
+      "cve": "CVE-2018-0155",
+      "package": "st",
+      "ecosystem": "npm",
+      "installed_version": "0.2.4",
+      "app": "nodejs-goof",
+      "in_kev": true,
+      "kev_date_added": "2022-03-03",
+      "summary": "A vulnerability in the Bidirectional Forwarding Detection (BFD) offload implementation of Cisco Catalyst 4500 Series Switches and Cisco Catalyst 4500-X Series Switches could allow an unauthenticated, remote attacker to cause a crash of the iosd process, causing a denial-of-service (DoS) condition."
+    },
+    {
+      "cve": "CVE-2017-12238",
+      "package": "st",
+      "ecosystem": "npm",
+      "installed_version": "0.2.4",
+      "app": "nodejs-goof",
+      "in_kev": true,
+      "kev_date_added": "2022-03-03",
+      "summary": "A vulnerability in the Virtual Private LAN Service (VPLS) code of Cisco IOS for Cisco Catalyst 6800 Series Switches could allow an unauthenticated, adjacent attacker to cause a denial of service."
+    },
+    {
+      "cve": "CVE-2018-1000861",
+      "package": "st",
+      "ecosystem": "npm",
+      "installed_version": "0.2.4",
+      "app": "nodejs-goof",
+      "in_kev": true,
+      "kev_date_added": "2022-02-10",
+      "summary": "A code execution vulnerability exists in the Stapler web framework used by Jenkins"
+    },
+    {
+      "cve": "CVE-2018-1000861",
+      "package": "tap",
+      "ecosystem": "npm",
+      "installed_version": null,
+      "app": "nodejs-goof",
+      "in_kev": true,
+      "kev_date_added": "2022-02-10",
+      "summary": "A code execution vulnerability exists in the Stapler web framework used by Jenkins"
+    },
+    {
+      "cve": "CVE-2017-9791",
+      "package": "st",
+      "ecosystem": "npm",
+      "installed_version": "0.2.4",
+      "app": "nodejs-goof",
+      "in_kev": true,
+      "kev_date_added": "2022-02-10",
+      "summary": "The Struts 1 plugin in Apache Struts might allow remote code execution via a malicious field value passed in a raw message to the ActionMessage."
+    },
+    {
+      "cve": "CVE-2017-5689",
+      "package": "st",
+      "ecosystem": "npm",
+      "installed_version": "0.2.4",
+      "app": "nodejs-goof",
+      "in_kev": true,
+      "kev_date_added": "2022-01-28",
+      "summary": "Intel products contain a vulnerability which can allow attackers to perform privilege escalation."
+    },
+    {
+      "cve": "CVE-2006-1547",
+      "package": "st",
+      "ecosystem": "npm",
+      "installed_version": "0.2.4",
+      "app": "nodejs-goof",
+      "in_kev": true,
+      "kev_date_added": "2022-01-21",
+      "summary": "ActionForm in Apache Struts versions before 1.2.9 with BeanUtils 1.7 contains a vulnerability that allows for denial-of-service (DoS)."
+    },
+    {
+      "cve": "CVE-2012-0391",
+      "package": "st",
+      "ecosystem": "npm",
+      "installed_version": "0.2.4",
+      "app": "nodejs-goof",
+      "in_kev": true,
+      "kev_date_added": "2022-01-21",
+      "summary": "The ExceptionDelegator component in Apache Struts 2 before 2.2.3.1 contains an improper input validation vulnerability that allows for remote code execution."
+    },
+    {
+      "cve": "CVE-2021-32648",
+      "package": "ms",
+      "ecosystem": "npm",
+      "installed_version": null,
+      "app": "nodejs-goof",
+      "in_kev": true,
+      "kev_date_added": "2022-01-18",
+      "summary": "In affected versions of the october/system package an attacker can request an account password reset and then gain access to the account using a specially crafted request."
+    },
+    {
+      "cve": "CVE-2021-21315",
+      "package": "st",
+      "ecosystem": "npm",
+      "installed_version": "0.2.4",
+      "app": "nodejs-goof",
+      "in_kev": true,
+      "kev_date_added": "2022-01-18",
+      "summary": "In this vulnerability, an attacker can send a malicious payload that will exploit the name parameter. After successful exploitation, attackers can execute remote."
+    },
+    {
+      "cve": "CVE-2013-3900",
+      "package": "st",
+      "ecosystem": "npm",
+      "installed_version": "0.2.4",
+      "app": "nodejs-goof",
+      "in_kev": true,
+      "kev_date_added": "2022-01-10",
+      "summary": "A remote code execution vulnerability exists in the way that the WinVerifyTrust function handles Windows Authenticode signature verification for PE files."
+    },
+    {
+      "cve": "CVE-2020-17463",
+      "package": "ms",
+      "ecosystem": "npm",
+      "installed_version": null,
+      "app": "nodejs-goof",
+      "in_kev": true,
+      "kev_date_added": "2021-12-10",
+      "summary": "FUEL CMS 1.4.7 allows SQL Injection via the col parameter to /pages/items, /permissions/items, or /navigation/items."
+    },
+    {
+      "cve": "CVE-2019-10758",
+      "package": "express",
+      "ecosystem": "npm",
+      "installed_version": "4.12.4",
+      "app": "nodejs-goof",
+      "in_kev": true,
+      "kev_date_added": "2021-12-10",
+      "summary": "mongo-express before 0.54.0 is vulnerable to Remote Code Execution via endpoints that uses the `toBSON` method."
+    },
+    {
+      "cve": "CVE-2020-11261",
+      "package": "st",
+      "ecosystem": "npm",
+      "installed_version": "0.2.4",
+      "app": "nodejs-goof",
+      "in_kev": true,
+      "kev_date_added": "2021-12-01",
+      "summary": "Memory corruption due to improper check to return error when user application requests memory allocation of a huge size in Snapdragon Auto, Snapdragon Compute, Snapdragon Connectivity, Snapdragon Consumer IOT, Snapdragon Industrial IOT, Snapdragon Mobile, Snapdragon Voice & Music, Snapdragon Wearables"
+    },
+    {
+      "cve": "CVE-2017-9805",
+      "package": "st",
+      "ecosystem": "npm",
+      "installed_version": "0.2.4",
+      "app": "nodejs-goof",
+      "in_kev": true,
+      "kev_date_added": "2021-11-03",
+      "summary": "Apache Struts REST Plugin uses an XStreamHandler with an instance of XStream for deserialization without any type filtering, which can lead to remote code execution when deserializing XML payloads."
+    },
+    {
+      "cve": "CVE-2020-17530",
+      "package": "st",
+      "ecosystem": "npm",
+      "installed_version": "0.2.4",
+      "app": "nodejs-goof",
+      "in_kev": true,
+      "kev_date_added": "2021-11-03",
+      "summary": "Forced Object-Graph Navigation Language (OGNL) evaluation in Apache Struts, when evaluated on raw user input in tag attributes, can lead to remote code execution."
+    },
+    {
+      "cve": "CVE-2017-5638",
+      "package": "st",
+      "ecosystem": "npm",
+      "installed_version": "0.2.4",
+      "app": "nodejs-goof",
+      "in_kev": true,
+      "kev_date_added": "2021-11-03",
+      "summary": "Apache Struts Jakarta Multipart parser allows for malicious file upload using the Content-Type value, leading to remote code execution."
+    },
+    {
+      "cve": "CVE-2018-11776",
+      "package": "st",
+      "ecosystem": "npm",
+      "installed_version": "0.2.4",
+      "app": "nodejs-goof",
+      "in_kev": true,
+      "kev_date_added": "2021-11-03",
+      "summary": "Apache Struts contains a vulnerability that allows for remote code execution under two circumstances. One, where the alwaysSelectFullNamespace option is true and the value isn't set for a result defined in underlying configurations and in same time, its upper package configuration have no or wildcard namespace.  Or, using URL tag which doesn't have value and action set and in same time, its upper package configuration have no or wildcard namespace."
+    },
+    {
+      "cve": "CVE-2021-27562",
+      "package": "st",
+      "ecosystem": "npm",
+      "installed_version": "0.2.4",
+      "app": "nodejs-goof",
+      "in_kev": true,
+      "kev_date_added": "2021-11-03",
+      "summary": "Arm Trusted Firmware contains an out-of-bounds write vulnerability allowing the non-secure (NS) world to trigger a system halt, overwrite secure data, or print out secure data when calling secure functions under the non-secure processing environment (NSPE) handler mode. This vulnerability affects Yealink Device Management servers."
+    },
+    {
+      "cve": "CVE-2019-13608",
+      "package": "st",
+      "ecosystem": "npm",
+      "installed_version": "0.2.4",
+      "app": "nodejs-goof",
+      "in_kev": true,
+      "kev_date_added": "2021-11-03",
+      "summary": "Citrix StoreFront Server contains an XML External Entity (XXE) processing vulnerability that may allow an unauthenticated attacker to retrieve potentially sensitive information."
+    },
+    {
+      "cve": "CVE-2021-30116",
+      "package": "st",
+      "ecosystem": "npm",
+      "installed_version": "0.2.4",
+      "app": "nodejs-goof",
+      "in_kev": true,
+      "kev_date_added": "2021-11-03",
+      "summary": "Kaseya Virtual System/Server Administrator (VSA) contains an information disclosure vulnerability allowing an attacker to obtain the sessionId that can be used to execute further attacks against the system."
+    },
+    {
+      "cve": "CVE-2021-38647",
+      "package": "st",
+      "ecosystem": "npm",
+      "installed_version": "0.2.4",
+      "app": "nodejs-goof",
+      "in_kev": true,
+      "kev_date_added": "2021-11-03",
+      "summary": "Microsoft Open Management Infrastructure (OMI) within Azure VM Management Extensions contains an unspecified vulnerability allowing remote code execution."
+    },
+    {
+      "cve": "CVE-2021-38645",
+      "package": "st",
+      "ecosystem": "npm",
+      "installed_version": "0.2.4",
+      "app": "nodejs-goof",
+      "in_kev": true,
+      "kev_date_added": "2021-11-03",
+      "summary": "Microsoft Open Management Infrastructure (OMI) within Azure VM Management Extensions contains an unspecified vulnerability that allows for privilege escalation."
+    },
+    {
+      "cve": "CVE-2021-38649",
+      "package": "st",
+      "ecosystem": "npm",
+      "installed_version": "0.2.4",
+      "app": "nodejs-goof",
+      "in_kev": true,
+      "kev_date_added": "2021-11-03",
+      "summary": "Microsoft Open Management Infrastructure (OMI) within Azure VM Management Extensions contains an unspecified vulnerability allowing privilege escalation."
+    },
+    {
+      "cve": "CVE-2021-40444",
+      "package": "ms",
+      "ecosystem": "npm",
+      "installed_version": null,
+      "app": "nodejs-goof",
+      "in_kev": true,
+      "kev_date_added": "2021-11-03",
+      "summary": "Microsoft MSHTML contains a unspecified vulnerability that allows for remote code execution."
+    },
+    {
+      "cve": "CVE-2012-0158",
+      "package": "ms",
+      "ecosystem": "npm",
+      "installed_version": null,
+      "app": "nodejs-goof",
+      "in_kev": true,
+      "kev_date_added": "2021-11-03",
+      "summary": "Microsoft MSCOMCTL.OCX contains an unspecified vulnerability that allows for remote code execution, allowing an attacker to take complete control of an affected system under the context of the current user."
+    },
+    {
+      "cve": "CVE-2019-0541",
+      "package": "ms",
+      "ecosystem": "npm",
+      "installed_version": null,
+      "app": "nodejs-goof",
+      "in_kev": true,
+      "kev_date_added": "2021-11-03",
+      "summary": "Microsoft MSHTML engine contains an improper input validation vulnerability that allows for remote code execution vulnerability."
+    },
+    {
+      "cve": "CVE-2020-1147",
+      "package": "st",
+      "ecosystem": "npm",
+      "installed_version": "0.2.4",
+      "app": "nodejs-goof",
+      "in_kev": true,
+      "kev_date_added": "2021-11-03",
+      "summary": "Microsoft .NET Framework, Microsoft SharePoint, and Visual Studio contain a remote code execution vulnerability when the software fails to check the source markup of XML file input. Successful exploitation allows an attacker to execute code in the context of the process responsible for deserialization of the XML content."
+    },
+    {
+      "cve": "CVE-2021-38648",
+      "package": "st",
+      "ecosystem": "npm",
+      "installed_version": "0.2.4",
+      "app": "nodejs-goof",
+      "in_kev": true,
+      "kev_date_added": "2021-11-03",
+      "summary": "Microsoft Open Management Infrastructure (OMI) within Azure VM Management Extensions contains an unspecified vulnerability allowing privilege escalation."
+    },
+    {
+      "cve": "CVE-2020-14871",
+      "package": "st",
+      "ecosystem": "npm",
+      "installed_version": "0.2.4",
+      "app": "nodejs-goof",
+      "in_kev": true,
+      "kev_date_added": "2021-11-03",
+      "summary": "Oracle Solaris and Oracle ZFS Storage Appliance Kit contain an unspecified vulnerability causing high impacts to confidentiality, integrity, and availability of affected systems."
+    },
+    {
+      "cve": "CVE-2020-8644",
+      "package": "ms",
+      "ecosystem": "npm",
+      "installed_version": null,
+      "app": "nodejs-goof",
+      "in_kev": true,
+      "kev_date_added": "2021-11-03",
+      "summary": "PlaySMS contains a server-side template injection vulnerability that allows for remote code execution."
+    },
+    {
+      "cve": "CVE-2018-2380",
+      "package": "st",
+      "ecosystem": "npm",
+      "installed_version": "0.2.4",
+      "app": "nodejs-goof",
+      "in_kev": true,
+      "kev_date_added": "2021-11-03",
+      "summary": "SAP Customer Relationship Management (CRM) contains a path traversal vulnerability that allows an attacker to exploit insufficient validation of path information provided by users."
+    },
+    {
+      "cve": "CVE-2018-20062",
+      "package": "ms",
+      "ecosystem": "npm",
+      "installed_version": null,
+      "app": "nodejs-goof",
+      "in_kev": true,
+      "kev_date_added": "2021-11-03",
+      "summary": "ThinkPHP \"noneCms\" contains an unspecified vulnerability that allows for remote code execution through crafted use of the filter parameter."
+    },
+    {
+      "cve": "CVE-2019-20085",
+      "package": "ms",
+      "ecosystem": "npm",
+      "installed_version": null,
+      "app": "nodejs-goof",
+      "in_kev": true,
+      "kev_date_added": "2021-11-03",
+      "summary": "TVT devices utilizing NVMS-1000 software contain a directory traversal vulnerability via GET /.. requests."
+    }
+  ]
+}

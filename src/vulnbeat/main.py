@@ -4,9 +4,11 @@ import yaml
 from vulnbeat.inventory import PARSER_REGISTRY
 from vulnbeat.matching import match
 from vulnbeat.models import Component, Ecosystem, MonitoredApp, Source
+from vulnbeat.publisher import write_report
 from vulnbeat.sources.kev import fetch_kev
 
 APPS_CONFIG_PATH = "apps.yml"
+OUTPUT_PATH = "docs/data.json"
 APPS_KEY = "apps"
 APP_ID_KEY = "id"
 APP_NAME_KEY = "name"
@@ -61,7 +63,16 @@ if __name__ == "__main__":
 
     apps = load_apps()
     print(f"Loaded {len(apps)} apps from {APPS_CONFIG_PATH}.")
+
+    component_counts = {}
+    all_findings = []
     for app in apps:
         components = load_components(app)
         findings = match(app.id, components, vulnerabilities)
         print(f"  - {app.id} ({app.ecosystem.value}, {app.source.value}): {len(components)} components, {len(findings)} findings")
+
+        component_counts[app.id] = len(components)
+        all_findings.extend(findings)
+
+    write_report(len(vulnerabilities), apps, component_counts, all_findings, OUTPUT_PATH)
+    print(f"Report written to {OUTPUT_PATH}.")

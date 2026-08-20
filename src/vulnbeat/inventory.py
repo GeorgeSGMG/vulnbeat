@@ -1,4 +1,5 @@
 import json
+from typing import Callable
 
 from vulnbeat.models import Component, Ecosystem, Scope
 
@@ -75,8 +76,10 @@ def parse_package_json(content: str) -> dict[str, Component]:
     return components
 
 
+ManifestParser = Callable[[str], dict[str, Component]]
+
 # Maps each Ecosystem to the function that parses its manifest format.
-PARSER_REGISTRY = {
+PARSER_REGISTRY: dict[Ecosystem, ManifestParser] = {
     Ecosystem.PYPI: parse_requirements,
     Ecosystem.NPM: parse_package_json,
 }

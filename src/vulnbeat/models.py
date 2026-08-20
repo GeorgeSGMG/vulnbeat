@@ -2,6 +2,9 @@ from dataclasses import dataclass
 from enum import Enum
 
 
+# --- Enums ---
+
+
 class Scope(str, Enum):
     PRODUCTION = "production"
     DEVELOPMENT = "development"
@@ -17,13 +20,7 @@ class Source(str, Enum):
     LOCAL = "local"
 
 
-@dataclass(frozen=True)
-class Component:
-    version: str | None
-    constraint: str | None
-    exact: bool
-    scope: Scope
-    ecosystem: Ecosystem
+# --- Monitored apps configuration ---
 
 
 @dataclass(frozen=True)
@@ -43,3 +40,33 @@ class MonitoredApp:
         elif self.source == Source.LOCAL:
             if not self.manifest_path or self.manifest_url is not None:
                 raise ValueError(f"{self.id}: source=local requires manifest_path and no manifest_url")
+
+
+# --- Components, vulnerabilities, and findings ---
+
+
+@dataclass(frozen=True)
+class Component:
+    version: str | None
+    constraint: str | None
+    exact: bool
+    scope: Scope
+    ecosystem: Ecosystem
+
+
+@dataclass(frozen=True)
+class Vulnerability:
+    cve_id: str
+    vendor_project: str
+    product: str
+    vulnerability_name: str
+    date_added: str
+    short_description: str
+
+
+@dataclass(frozen=True)
+class Finding:
+    app_id: str
+    package_name: str
+    component: Component
+    vulnerability: Vulnerability

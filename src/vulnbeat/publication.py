@@ -2,7 +2,7 @@ import json
 from datetime import datetime, timezone
 from pathlib import Path
 
-from vulnbeat.models import Finding, MonitoredApp
+from vulnbeat.models import MonitoredApp, PrioritizedFinding
 from vulnbeat.report_schema import AppEntry, FindingEntry, Report
 
 
@@ -10,7 +10,7 @@ def write_report(
     kev_entry_count: int,
     apps: list[MonitoredApp],
     component_counts: dict[str, int],
-    findings: list[Finding],
+    prioritized_findings: list[PrioritizedFinding],
     output_path: str,
 ) -> None:
     apps_data: list[AppEntry] = []
@@ -24,7 +24,9 @@ def write_report(
         })
 
     findings_data: list[FindingEntry] = []
-    for finding in findings:
+    for prioritized_finding in prioritized_findings:
+        finding = prioritized_finding.finding
+        priority = prioritized_finding.priority
         findings_data.append({
             "cve": finding.vulnerability.cve_id,
             "package": finding.package_name,
@@ -33,6 +35,8 @@ def write_report(
             "app": finding.app_id,
             "in_kev": True,
             "kev_date_added": finding.vulnerability.date_added,
+            "priority_score": priority.score,
+            "priority_label": priority.label.value,
             "summary": finding.vulnerability.short_description,
         })
 

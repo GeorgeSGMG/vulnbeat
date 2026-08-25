@@ -86,3 +86,9 @@ class Finding:
 class PriorityResult:
     score: int
     label: PriorityLabel
+
+
+@dataclass(frozen=True)
+class PrioritizedFinding:
+    finding: Finding
+    priority: PriorityResult

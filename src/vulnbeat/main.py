@@ -3,7 +3,8 @@ import yaml
 
 from vulnbeat.crossref import match
 from vulnbeat.inventory import PARSER_REGISTRY
-from vulnbeat.models import Component, Ecosystem, MonitoredApp, Source
+from vulnbeat.models import Component, Ecosystem, MonitoredApp, PrioritizedFinding, Source
+from vulnbeat.priority import calculate_finding_priority
 from vulnbeat.publication import write_report
 from vulnbeat.resilience import retry
 from vulnbeat.sources.kev import fetch_kev
@@ -67,14 +68,16 @@ if __name__ == "__main__":
     print(f"Loaded {len(apps)} apps from {APPS_CONFIG_PATH}.")
 
     component_counts = {}
-    all_findings = []
+    prioritized_findings = []
     for app in apps:
         components = load_components(app)
         findings = match(app.id, components, vulnerabilities)
         print(f"  - {app.id} ({app.ecosystem.value}, {app.source.value}): {len(components)} components, {len(findings)} findings")
 
         component_counts[app.id] = len(components)
-        all_findings.extend(findings)
+        for finding in findings:
+            priority = calculate_finding_priority(finding)
+            prioritized_findings.append(PrioritizedFinding(finding=finding, priority=priority))
 
-    write_report(len(vulnerabilities), apps, component_counts, all_findings, OUTPUT_PATH)
+    write_report(len(vulnerabilities), apps, component_counts, prioritized_findings, OUTPUT_PATH)
     print(f"Report written to {OUTPUT_PATH}.")

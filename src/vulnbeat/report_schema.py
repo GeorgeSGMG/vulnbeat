@@ -25,6 +25,8 @@ class FindingEntry(TypedDict):
     app: str
     in_kev: bool
     kev_date_added: str
+    priority_score: int
+    priority_label: str
     summary: str
 
 

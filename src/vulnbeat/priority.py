@@ -1,4 +1,4 @@
-from vulnbeat.models import PriorityLabel, PriorityResult
+from vulnbeat.models import Finding, PriorityLabel, PriorityResult
 
 KEV_BASE_SCORE = 80
 EPSS_WEIGHT = 0.75
@@ -28,3 +28,7 @@ def calculate_priority(in_kev: bool, epss: float | None, cvss: float | None) -> 
         label = PriorityLabel.LOW
 
     return PriorityResult(score=score, label=label)
+
+
+def calculate_finding_priority(finding: Finding) -> PriorityResult:
+    return calculate_priority(in_kev=True, epss=None, cvss=None)

@@ -20,6 +20,13 @@ class Source(str, Enum):
     LOCAL = "local"
 
 
+class PriorityLabel(str, Enum):
+    CRITICAL = "critical"
+    HIGH = "high"
+    MEDIUM = "medium"
+    LOW = "low"
+
+
 # --- Monitored apps configuration ---
 
 
@@ -70,3 +77,12 @@ class Finding:
     package_name: str
     component: Component
     vulnerability: Vulnerability
+
+
+# --- Priority scoring ---
+
+
+@dataclass(frozen=True)
+class PriorityResult:
+    score: int
+    label: PriorityLabel

@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-08-25T07:57:32.117781+00:00",
+  "generated_at": "2026-08-25T12:40:05.058469+00:00",
   "sources": {
     "kev": {
       "entries": 1675
@@ -25,7 +25,7 @@
       "name": "VulnBeat (self)",
       "ecosystem": "PyPI",
       "repo": "https://github.com/georgesgmg/vulnbeat",
-      "dependencies": 6
+      "dependencies": 11
     }
   ],
   "findings": [

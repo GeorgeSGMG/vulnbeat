@@ -1,6 +1,7 @@
 import requests
 
 from vulnbeat.models import Vulnerability
+from vulnbeat.resilience import retry
 
 KEV_URL = "https://www.cisa.gov/sites/default/files/feeds/known_exploited_vulnerabilities.json"
 
@@ -13,6 +14,7 @@ KEV_DATE_ADDED_KEY = "dateAdded"
 KEV_SHORT_DESCRIPTION_KEY = "shortDescription"
 
 
+@retry()
 def fetch_kev(timeout: int = 30) -> list[Vulnerability]:
     response = requests.get(KEV_URL, timeout=timeout)
     response.raise_for_status()

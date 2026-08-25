@@ -5,6 +5,7 @@ from vulnbeat.crossref import match
 from vulnbeat.inventory import PARSER_REGISTRY
 from vulnbeat.models import Component, Ecosystem, MonitoredApp, Source
 from vulnbeat.publication import write_report
+from vulnbeat.resilience import retry
 from vulnbeat.sources.kev import fetch_kev
 
 APPS_CONFIG_PATH = "apps.yml"
@@ -39,6 +40,7 @@ def load_apps() -> list[MonitoredApp]:
     return apps
 
 
+@retry()
 def fetch_manifest(app: MonitoredApp) -> str:
     if app.source == Source.REMOTE:
         assert app.manifest_url is not None

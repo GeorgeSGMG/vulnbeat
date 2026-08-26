@@ -72,6 +72,13 @@ class Vulnerability:
 
 
 @dataclass(frozen=True)
+class EpssScore:
+    cve_id: str
+    epss: float
+    percentile: float
+
+
+@dataclass(frozen=True)
 class Finding:
     app_id: str
     package_name: str

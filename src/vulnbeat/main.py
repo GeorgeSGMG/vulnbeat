@@ -7,6 +7,7 @@ from vulnbeat.models import Component, Ecosystem, MonitoredApp, PrioritizedFindi
 from vulnbeat.priority import calculate_finding_priority
 from vulnbeat.publication import write_report
 from vulnbeat.resilience import retry
+from vulnbeat.sources.epss import fetch_epss
 from vulnbeat.sources.kev import fetch_kev
 
 APPS_CONFIG_PATH = "apps.yml"
@@ -68,16 +69,23 @@ if __name__ == "__main__":
     print(f"Loaded {len(apps)} apps from {APPS_CONFIG_PATH}.")
 
     component_counts = {}
-    prioritized_findings = []
+    all_findings = []
     for app in apps:
         components = load_components(app)
         findings = match(app.id, components, vulnerabilities)
         print(f"  - {app.id} ({app.ecosystem.value}, {app.source.value}): {len(components)} components, {len(findings)} findings")
 
         component_counts[app.id] = len(components)
-        for finding in findings:
-            priority = calculate_finding_priority(finding)
-            prioritized_findings.append(PrioritizedFinding(finding=finding, priority=priority))
+        all_findings.extend(findings)
+
+    cve_ids = list(set(finding.vulnerability.cve_id for finding in all_findings))
+    epss_scores = fetch_epss(cve_ids)
+    print(f"EPSS scores fetched for {len(epss_scores)} of {len(cve_ids)} unique CVEs.")
+
+    prioritized_findings = []
+    for finding in all_findings:
+        priority = calculate_finding_priority(finding, epss_scores)
+        prioritized_findings.append(PrioritizedFinding(finding=finding, priority=priority))
 
     write_report(len(vulnerabilities), apps, component_counts, prioritized_findings, OUTPUT_PATH)
     print(f"Report written to {OUTPUT_PATH}.")

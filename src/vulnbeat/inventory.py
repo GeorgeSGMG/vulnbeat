@@ -37,7 +37,7 @@ def parse_requirements(content: str) -> dict[str, Component]:
                 if exact and any(extra_op in rhs for extra_op in PIP_VERSION_OPERATORS):
                     # Malformed: more than one constraint after "==".
                     exact = False
-                
+
                 if exact:
                     version = rhs.strip()
 
@@ -74,6 +74,10 @@ def parse_package_json(content: str) -> dict[str, Component]:
     components.update(_parse_dependency_block(data.get(NPM_DEPENDENCIES_KEY, {}), Scope.PRODUCTION))
     components.update(_parse_dependency_block(data.get(NPM_DEV_DEPENDENCIES_KEY, {}), Scope.DEVELOPMENT))
     return components
+
+
+def extract_scopes(components: dict[str, Component]) -> dict[str, Scope]:
+    return dict((name, component.scope) for name, component in components.items())
 
 
 ManifestParser = Callable[[str], dict[str, Component]]

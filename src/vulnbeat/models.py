@@ -1,6 +1,8 @@
 from dataclasses import dataclass
 from enum import Enum
 
+from vulnbeat.localization import LocalizedText
+
 
 # --- Enums ---
 
@@ -64,11 +66,11 @@ class Component:
 @dataclass(frozen=True)
 class Vulnerability:
     cve_id: str
-    vendor_project: str
-    product: str
-    vulnerability_name: str
-    date_added: str
-    short_description: str
+    cvss: float | None
+    in_kev: bool
+    kev_date_added: str | None
+    summary: LocalizedText
+    references: list[str]
 
 
 @dataclass(frozen=True)
@@ -79,11 +81,20 @@ class EpssScore:
 
 
 @dataclass(frozen=True)
+class NvdEnrichment:
+    cve_id: str
+    cvss: float | None
+    summary: LocalizedText
+    references: list[str]
+
+
+@dataclass(frozen=True)
 class Finding:
     app_id: str
     package_name: str
     component: Component
     vulnerability: Vulnerability
+    fixed_version: str | None
 
 
 # --- Priority scoring ---

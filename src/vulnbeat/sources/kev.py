@@ -1,40 +1,26 @@
 import requests
 
-from vulnbeat.models import Vulnerability
 from vulnbeat.resilience import retry
 
 KEV_URL = "https://www.cisa.gov/sites/default/files/feeds/known_exploited_vulnerabilities.json"
 
 KEV_VULNERABILITIES_KEY = "vulnerabilities"
 KEV_CVE_ID_KEY = "cveID"
-KEV_VENDOR_PROJECT_KEY = "vendorProject"
-KEV_PRODUCT_KEY = "product"
-KEV_VULNERABILITY_NAME_KEY = "vulnerabilityName"
 KEV_DATE_ADDED_KEY = "dateAdded"
-KEV_SHORT_DESCRIPTION_KEY = "shortDescription"
 
 
 @retry()
-def fetch_kev(timeout: int = 30) -> list[Vulnerability]:
+def fetch_kev(timeout: int = 30) -> dict[str, str]:
     response = requests.get(KEV_URL, timeout=timeout)
     response.raise_for_status()
     data = response.json()
 
-    vulnerabilities = []
+    dates_by_cve = {}
     for entry in data[KEV_VULNERABILITIES_KEY]:
-        vulnerabilities.append(
-            Vulnerability(
-                cve_id=entry[KEV_CVE_ID_KEY],
-                vendor_project=entry[KEV_VENDOR_PROJECT_KEY],
-                product=entry[KEV_PRODUCT_KEY],
-                vulnerability_name=entry[KEV_VULNERABILITY_NAME_KEY],
-                date_added=entry[KEV_DATE_ADDED_KEY],
-                short_description=entry[KEV_SHORT_DESCRIPTION_KEY],
-            )
-        )
-    return vulnerabilities
+        dates_by_cve[entry[KEV_CVE_ID_KEY]] = entry[KEV_DATE_ADDED_KEY]
+    return dates_by_cve
 
 
 if __name__ == "__main__":
-    vulnerabilities = fetch_kev()
-    print(f"KEV downloaded: {len(vulnerabilities)} known exploited vulnerabilities.")
+    dates_by_cve = fetch_kev()
+    print(f"KEV downloaded: {len(dates_by_cve)} known exploited vulnerabilities.")

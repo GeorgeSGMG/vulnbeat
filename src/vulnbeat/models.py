@@ -64,13 +64,10 @@ class Component:
 
 
 @dataclass(frozen=True)
-class Vulnerability:
+class ScanMatch:
     cve_id: str
-    cvss: float | None
-    in_kev: bool
-    kev_date_added: str | None
-    summary: LocalizedText
-    references: list[str]
+    package_name: str
+    fixed_version: str | None
 
 
 @dataclass(frozen=True)
@@ -84,6 +81,16 @@ class EpssScore:
 class NvdEnrichment:
     cve_id: str
     cvss: float | None
+    summary: LocalizedText
+    references: list[str]
+
+
+@dataclass(frozen=True)
+class Vulnerability:
+    cve_id: str
+    cvss: float | None
+    in_kev: bool
+    kev_date_added: str | None
     summary: LocalizedText
     references: list[str]
 

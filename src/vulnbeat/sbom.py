@@ -3,7 +3,6 @@ import tempfile
 from pathlib import Path
 
 from vulnbeat.cli_runner import run_cli
-from vulnbeat.inventory import extract_scopes
 from vulnbeat.models import Component, Ecosystem, Scope
 
 SBOM_MANIFEST_FILENAMES = {
@@ -18,7 +17,7 @@ SBOM_NAME_KEY = "name"
 SBOM_VERSION_KEY = "version"
 
 
-def _generate_sbom(content: str, ecosystem: Ecosystem) -> str:
+def generate_sbom(content: str, ecosystem: Ecosystem) -> str:
     filename = SBOM_MANIFEST_FILENAMES[ecosystem]
 
     with tempfile.TemporaryDirectory() as tmp_dir:
@@ -31,7 +30,7 @@ def _generate_sbom(content: str, ecosystem: Ecosystem) -> str:
         return sbom_path.read_text(encoding="utf-8")
 
 
-def _parse_sbom(sbom_json: str, ecosystem: Ecosystem, scopes: dict[str, Scope]) -> dict[str, Component]:
+def parse_sbom(sbom_json: str, ecosystem: Ecosystem, scopes: dict[str, Scope]) -> dict[str, Component]:
     data = json.loads(sbom_json)
 
     components = {}
@@ -50,9 +49,3 @@ def _parse_sbom(sbom_json: str, ecosystem: Ecosystem, scopes: dict[str, Scope]) 
             ecosystem=ecosystem,
         )
     return components
-
-
-def build_components(content: str, ecosystem: Ecosystem, inventory_components: dict[str, Component]) -> dict[str, Component]:
-    sbom_json = _generate_sbom(content, ecosystem)
-    scopes = extract_scopes(inventory_components)
-    return _parse_sbom(sbom_json, ecosystem, scopes)

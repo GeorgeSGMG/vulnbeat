@@ -41,14 +41,34 @@ class MonitoredApp:
     source: Source
     manifest_url: str | None
     manifest_path: str | None
+    lockfile_url: str | None
+    lockfile_path: str | None
 
     def __post_init__(self) -> None:
+        self._validate_manifest_source()
+        self._validate_lockfile_requirement()
+
+    def _validate_manifest_source(self) -> None:
         if self.source == Source.REMOTE:
             if not self.manifest_url or self.manifest_path is not None:
                 raise ValueError(f"{self.id}: source=remote requires manifest_url and no manifest_path")
+            if self.lockfile_path is not None:
+                raise ValueError(f"{self.id}: source=remote requires no lockfile_path")
         elif self.source == Source.LOCAL:
             if not self.manifest_path or self.manifest_url is not None:
                 raise ValueError(f"{self.id}: source=local requires manifest_path and no manifest_url")
+            if self.lockfile_url is not None:
+                raise ValueError(f"{self.id}: source=local requires no lockfile_url")
+
+    def _validate_lockfile_requirement(self) -> None:
+        lockfile = self.lockfile_url if self.source == Source.REMOTE else self.lockfile_path
+
+        if self.ecosystem == Ecosystem.NPM:
+            if not lockfile:
+                raise ValueError(f"{self.id}: ecosystem=npm requires a lockfile ({'lockfile_url' if self.source == Source.REMOTE else 'lockfile_path'})")
+        else:
+            if lockfile:
+                raise ValueError(f"{self.id}: ecosystem={self.ecosystem.value} must not have a lockfile")
 
 
 # --- Components, vulnerabilities, and findings ---

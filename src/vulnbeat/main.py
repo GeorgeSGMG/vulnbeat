@@ -22,6 +22,8 @@ APP_REPO_KEY = "repo"
 APP_SOURCE_KEY = "source"
 APP_MANIFEST_URL_KEY = "manifest_url"
 APP_MANIFEST_PATH_KEY = "manifest_path"
+APP_LOCKFILE_URL_KEY = "lockfile_url"
+APP_LOCKFILE_PATH_KEY = "lockfile_path"
 
 
 def load_apps() -> list[MonitoredApp]:
@@ -39,6 +41,8 @@ def load_apps() -> list[MonitoredApp]:
                 source=Source(raw_app[APP_SOURCE_KEY]),
                 manifest_url=raw_app.get(APP_MANIFEST_URL_KEY),
                 manifest_path=raw_app.get(APP_MANIFEST_PATH_KEY),
+                lockfile_url=raw_app.get(APP_LOCKFILE_URL_KEY),
+                lockfile_path=raw_app.get(APP_LOCKFILE_PATH_KEY),
             )
         )
     return apps
@@ -57,14 +61,30 @@ def fetch_manifest(app: MonitoredApp) -> str:
             return f.read()
 
 
+@retry()
+def fetch_lockfile(app: MonitoredApp) -> str | None:
+    if app.source == Source.REMOTE:
+        if app.lockfile_url is None:
+            return None
+        response = requests.get(app.lockfile_url, timeout=30)
+        response.raise_for_status()
+        return response.text
+    else:
+        if app.lockfile_path is None:
+            return None
+        with open(app.lockfile_path, encoding="utf-8") as f:
+            return f.read()
+
+
 def scan_app(app: MonitoredApp) -> ScannedApp:
-    content = fetch_manifest(app)
+    manifest_content = fetch_manifest(app)
+    lockfile_content = fetch_lockfile(app)
 
     parser = PARSER_REGISTRY[app.ecosystem]
-    inventory_components = parser(content)
+    inventory_components = parser(manifest_content, lockfile_content)
     scopes = extract_scopes(inventory_components)
 
-    sbom_json = generate_sbom(content, app.ecosystem)
+    sbom_json = generate_sbom(manifest_content, app.ecosystem, lockfile_content)
     components = parse_sbom(sbom_json, app.ecosystem, scopes)
 
     scan_json = scan_sbom(sbom_json)

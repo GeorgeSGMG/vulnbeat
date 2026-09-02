@@ -10,6 +10,10 @@ SBOM_MANIFEST_FILENAMES = {
     Ecosystem.NPM: "package.json",
 }
 
+SBOM_LOCKFILE_FILENAMES = {
+    Ecosystem.NPM: "package-lock.json",
+}
+
 SBOM_OUTPUT_FILENAME = "sbom.json"
 
 SBOM_COMPONENTS_KEY = "components"
@@ -17,12 +21,17 @@ SBOM_NAME_KEY = "name"
 SBOM_VERSION_KEY = "version"
 
 
-def generate_sbom(content: str, ecosystem: Ecosystem) -> str:
-    filename = SBOM_MANIFEST_FILENAMES[ecosystem]
+def generate_sbom(manifest_content: str, ecosystem: Ecosystem, lockfile_content: str | None = None) -> str:
+    manifest_filename = SBOM_MANIFEST_FILENAMES[ecosystem]
 
     with tempfile.TemporaryDirectory() as tmp_dir:
-        manifest_path = Path(tmp_dir) / filename
-        manifest_path.write_text(content, encoding="utf-8")
+        manifest_path = Path(tmp_dir) / manifest_filename
+        manifest_path.write_text(manifest_content, encoding="utf-8")
+
+        if lockfile_content is not None:
+            lockfile_filename = SBOM_LOCKFILE_FILENAMES[ecosystem]
+            lockfile_path = Path(tmp_dir) / lockfile_filename
+            lockfile_path.write_text(lockfile_content, encoding="utf-8")
 
         sbom_path = Path(tmp_dir) / SBOM_OUTPUT_FILENAME
         run_cli(["syft", f"dir:{tmp_dir}", "-o", f"cyclonedx-json={sbom_path}"])

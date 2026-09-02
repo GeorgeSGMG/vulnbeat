@@ -5,7 +5,7 @@ from pathlib import Path
 
 from vulnbeat.cli_runner import run_cli
 from vulnbeat.localization import LocalizedText
-from vulnbeat.models import Component, Finding, NvdEnrichment, ScanMatch, Vulnerability
+from vulnbeat.models import Component, EpssScore, Finding, NvdEnrichment, ScanMatch, Vulnerability
 
 logger = logging.getLogger(__name__)
 
@@ -63,10 +63,11 @@ def extract_scan_matches(scan_json: str) -> list[ScanMatch]:
 
 def assemble_findings(
     app_id: str,
-    matches: list[ScanMatch],
     components: dict[str, Component],
-    dates_by_cve: dict[str, str],
+    matches: list[ScanMatch],
     nvd_data: dict[str, NvdEnrichment],
+    epss_scores: dict[str, EpssScore],
+    dates_by_cve: dict[str, str],
 ) -> list[Finding]:
     findings = []
     for match in matches:
@@ -85,9 +86,13 @@ def assemble_findings(
             cvss = enrichment.cvss
             references = enrichment.references
 
+        epss_score = epss_scores.get(match.cve_id)
+
         vulnerability = Vulnerability(
             cve_id=match.cve_id,
+            fixed_version=match.fixed_version,
             cvss=cvss,
+            epss=epss_score.epss if epss_score else None,
             in_kev=match.cve_id in dates_by_cve,
             kev_date_added=dates_by_cve.get(match.cve_id),
             summary=summary,
@@ -100,7 +105,6 @@ def assemble_findings(
                 package_name=match.package_name,
                 component=component,
                 vulnerability=vulnerability,
-                fixed_version=match.fixed_version,
             )
         )
     return findings

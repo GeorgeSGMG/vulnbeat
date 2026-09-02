@@ -1,14 +1,16 @@
 import requests
 import yaml
 
-from vulnbeat.crossref import match
-from vulnbeat.inventory import PARSER_REGISTRY
-from vulnbeat.models import Component, Ecosystem, MonitoredApp, PrioritizedFinding, Source
+from vulnbeat.crossref import assemble_findings, extract_scan_matches, scan_sbom
+from vulnbeat.inventory import PARSER_REGISTRY, extract_scopes
+from vulnbeat.models import Ecosystem, MonitoredApp, PrioritizedFinding, ScannedApp, Source
 from vulnbeat.priority import calculate_finding_priority
 from vulnbeat.publication import write_report
 from vulnbeat.resilience import retry
+from vulnbeat.sbom import generate_sbom, parse_sbom
 from vulnbeat.sources.epss import fetch_epss
 from vulnbeat.sources.kev import fetch_kev
+from vulnbeat.sources.nvd import fetch_nvd
 
 APPS_CONFIG_PATH = "apps.yml"
 OUTPUT_PATH = "docs/data.json"
@@ -55,37 +57,63 @@ def fetch_manifest(app: MonitoredApp) -> str:
             return f.read()
 
 
-def load_components(app: MonitoredApp) -> dict[str, Component]:
+def scan_app(app: MonitoredApp) -> ScannedApp:
     content = fetch_manifest(app)
+
     parser = PARSER_REGISTRY[app.ecosystem]
-    return parser(content)
+    inventory_components = parser(content)
+    scopes = extract_scopes(inventory_components)
+
+    sbom_json = generate_sbom(content, app.ecosystem)
+    components = parse_sbom(sbom_json, app.ecosystem, scopes)
+
+    scan_json = scan_sbom(sbom_json)
+    matches = extract_scan_matches(scan_json)
+
+    return ScannedApp(app=app, components=components, matches=matches)
 
 
 if __name__ == "__main__":
-    vulnerabilities = fetch_kev()
-    print(f"KEV downloaded: {len(vulnerabilities)} known exploited vulnerabilities.")
-
     apps = load_apps()
     print(f"Loaded {len(apps)} apps from {APPS_CONFIG_PATH}.")
 
+    scanned_apps = []
     component_counts = {}
-    all_findings = []
     for app in apps:
-        components = load_components(app)
-        findings = match(app.id, components, vulnerabilities)
-        print(f"  - {app.id} ({app.ecosystem.value}, {app.source.value}): {len(components)} components, {len(findings)} findings")
+        scanned_app = scan_app(app)
+        scanned_apps.append(scanned_app)
+        component_counts[app.id] = len(scanned_app.components)
+        print(f"  - {app.id} ({app.ecosystem.value}, {app.source.value}): {len(scanned_app.components)} components, {len(scanned_app.matches)} matches with real CVE")
 
-        component_counts[app.id] = len(components)
-        all_findings.extend(findings)
+    all_cve_ids = list(set(
+        match.cve_id
+        for scanned_app in scanned_apps
+        for match in scanned_app.matches
+    ))
+    print(f"{len(all_cve_ids)} unique CVEs found across all apps.")
 
-    cve_ids = list(set(finding.vulnerability.cve_id for finding in all_findings))
-    epss_scores = fetch_epss(cve_ids)
-    print(f"EPSS scores fetched for {len(epss_scores)} of {len(cve_ids)} unique CVEs.")
+    dates_by_cve = fetch_kev()
+    print(f"KEV downloaded: {len(dates_by_cve)} known exploited vulnerabilities.")
+
+    nvd_data = fetch_nvd(all_cve_ids)
+    print(f"NVD enrichment fetched for {len(nvd_data)} of {len(all_cve_ids)} CVEs.")
+
+    epss_scores = fetch_epss(all_cve_ids)
+    print(f"EPSS scores fetched for {len(epss_scores)} of {len(all_cve_ids)} CVEs.")
 
     prioritized_findings = []
-    for finding in all_findings:
-        priority = calculate_finding_priority(finding, epss_scores)
-        prioritized_findings.append(PrioritizedFinding(finding=finding, priority=priority))
+    for scanned_app in scanned_apps:
+        findings = assemble_findings(
+            app_id=scanned_app.app.id,
+            components=scanned_app.components,
+            matches=scanned_app.matches,
+            nvd_data=nvd_data,
+            epss_scores=epss_scores,
+            dates_by_cve=dates_by_cve,
+        )
+        for finding in findings:
+            priority = calculate_finding_priority(finding)
+            prioritized_findings.append(PrioritizedFinding(finding=finding, priority=priority))
 
-    write_report(len(vulnerabilities), apps, component_counts, prioritized_findings, OUTPUT_PATH)
+    write_report(len(dates_by_cve), apps, component_counts, prioritized_findings, OUTPUT_PATH)
     print(f"Report written to {OUTPUT_PATH}.")

@@ -71,6 +71,13 @@ class ScanMatch:
 
 
 @dataclass(frozen=True)
+class ScannedApp:
+    app: MonitoredApp
+    components: dict[str, Component]
+    matches: list[ScanMatch]
+
+
+@dataclass(frozen=True)
 class EpssScore:
     cve_id: str
     epss: float
@@ -88,7 +95,9 @@ class NvdEnrichment:
 @dataclass(frozen=True)
 class Vulnerability:
     cve_id: str
+    fixed_version: str | None
     cvss: float | None
+    epss: float | None
     in_kev: bool
     kev_date_added: str | None
     summary: LocalizedText
@@ -101,7 +110,6 @@ class Finding:
     package_name: str
     component: Component
     vulnerability: Vulnerability
-    fixed_version: str | None
 
 
 # --- Priority scoring ---

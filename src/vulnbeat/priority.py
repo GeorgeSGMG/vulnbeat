@@ -1,4 +1,4 @@
-from vulnbeat.models import EpssScore, Finding, PriorityLabel, PriorityResult
+from vulnbeat.models import Finding, PriorityLabel, PriorityResult
 
 KEV_BASE_SCORE = 80
 EPSS_WEIGHT = 0.75
@@ -30,7 +30,9 @@ def calculate_priority(in_kev: bool, epss: float | None, cvss: float | None) -> 
     return PriorityResult(score=score, label=label)
 
 
-def calculate_finding_priority(finding: Finding, epss_scores: dict[str, EpssScore]) -> PriorityResult:
-    epss_score = epss_scores.get(finding.vulnerability.cve_id)
-    epss = epss_score.epss if epss_score else None
-    return calculate_priority(in_kev=True, epss=epss, cvss=None)
+def calculate_finding_priority(finding: Finding) -> PriorityResult:
+    return calculate_priority(
+        in_kev=finding.vulnerability.in_kev,
+        epss=finding.vulnerability.epss,
+        cvss=finding.vulnerability.cvss,
+    )

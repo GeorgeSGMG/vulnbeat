@@ -17,7 +17,12 @@ def fetch_kev(timeout: int = 30) -> dict[str, str]:
 
     dates_by_cve = {}
     for entry in data[KEV_VULNERABILITIES_KEY]:
-        dates_by_cve[entry[KEV_CVE_ID_KEY]] = entry[KEV_DATE_ADDED_KEY]
+        cve_id = entry[KEV_CVE_ID_KEY]
+        date_added = entry[KEV_DATE_ADDED_KEY]
+
+        if cve_id not in dates_by_cve or date_added < dates_by_cve[cve_id]:
+            dates_by_cve[cve_id] = date_added
+
     return dates_by_cve
 
 

@@ -81,7 +81,7 @@ class MonitoredApp:
                 raise ValueError(f"{self.id}: ecosystem={self.ecosystem.value} must not have a lockfile")
 
 
-# --- Components, vulnerabilities, and findings ---
+# --- Vulnerability matching pipeline ---
 
 
 @dataclass(frozen=True)
@@ -156,3 +156,13 @@ class PriorityResult:
 class PrioritizedFinding:
     finding: Finding
     priority: PriorityResult
+
+
+# --- Publication metadata ---
+
+
+@dataclass(frozen=True)
+class SourceCounts:
+    kev: int
+    epss: int
+    nvd: int

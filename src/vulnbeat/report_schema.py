@@ -1,12 +1,15 @@
 from typing import TypedDict
 
 
-class KevSourceEntry(TypedDict):
+class SourceStatus(TypedDict):
+    fetched: bool
     entries: int
 
 
 class SourcesEntry(TypedDict):
-    kev: KevSourceEntry
+    kev: SourceStatus
+    epss: SourceStatus
+    nvd: SourceStatus
 
 
 class AppEntry(TypedDict):

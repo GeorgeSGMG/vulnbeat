@@ -1,8 +1,17 @@
 {
-  "generated_at": "2026-09-03T12:37:20.051404+00:00",
+  "generated_at": "2026-09-03T16:17:09.801701+00:00",
   "sources": {
     "kev": {
+      "fetched": true,
       "entries": 1694
+    },
+    "epss": {
+      "fetched": true,
+      "entries": 255
+    },
+    "nvd": {
+      "fetched": true,
+      "entries": 256
     }
   },
   "apps": [
@@ -5111,6 +5120,7 @@
         "https://access.redhat.com/errata/RHSA-2026:56789",
         "https://access.redhat.com/errata/RHSA-2026:56854",
         "https://access.redhat.com/errata/RHSA-2026:56912",
+        "https://access.redhat.com/errata/RHSA-2026:59833",
         "https://access.redhat.com/errata/RHSA-2026:8483",
         "https://access.redhat.com/errata/RHSA-2026:8484",
         "https://access.redhat.com/errata/RHSA-2026:8490",
@@ -5211,6 +5221,7 @@
         "https://access.redhat.com/errata/RHSA-2026:56789",
         "https://access.redhat.com/errata/RHSA-2026:56854",
         "https://access.redhat.com/errata/RHSA-2026:56912",
+        "https://access.redhat.com/errata/RHSA-2026:59833",
         "https://access.redhat.com/errata/RHSA-2026:8483",
         "https://access.redhat.com/errata/RHSA-2026:8484",
         "https://access.redhat.com/errata/RHSA-2026:8490",
@@ -5311,6 +5322,7 @@
         "https://access.redhat.com/errata/RHSA-2026:56789",
         "https://access.redhat.com/errata/RHSA-2026:56854",
         "https://access.redhat.com/errata/RHSA-2026:56912",
+        "https://access.redhat.com/errata/RHSA-2026:59833",
         "https://access.redhat.com/errata/RHSA-2026:8483",
         "https://access.redhat.com/errata/RHSA-2026:8484",
         "https://access.redhat.com/errata/RHSA-2026:8490",
@@ -5807,7 +5819,7 @@
       "fixed_version": "1.4.1",
       "app": "nodejs-goof",
       "cvss": 7.5,
-      "epss": 0.02135,
+      "epss": 0.02153,
       "in_kev": false,
       "kev_date_added": null,
       "priority_score": 20,
@@ -5830,7 +5842,7 @@
       "fixed_version": "1.4.1",
       "app": "nodejs-goof",
       "cvss": 7.5,
-      "epss": 0.02135,
+      "epss": 0.02153,
       "in_kev": false,
       "kev_date_added": null,
       "priority_score": 20,

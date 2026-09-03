@@ -3,7 +3,7 @@ import yaml
 
 from vulnbeat.crossref import assemble_findings, extract_scan_matches, scan_sbom
 from vulnbeat.inventory import PARSER_REGISTRY, extract_scopes
-from vulnbeat.models import Ecosystem, MonitoredApp, PrioritizedFinding, ScannedApp, Source
+from vulnbeat.models import Ecosystem, MonitoredApp, PrioritizedFinding, ScannedApp, Source, SourceCounts
 from vulnbeat.priority import calculate_finding_priority
 from vulnbeat.publication import write_report
 from vulnbeat.sbom import generate_sbom, parse_sbom
@@ -138,5 +138,11 @@ if __name__ == "__main__":
             priority = calculate_finding_priority(finding)
             prioritized_findings.append(PrioritizedFinding(finding=finding, priority=priority))
 
-    write_report(len(dates_by_cve), apps, component_counts, prioritized_findings, OUTPUT_PATH)
+    source_counts = SourceCounts(
+        kev=len(dates_by_cve),
+        epss=len(epss_scores),
+        nvd=len(nvd_data),
+    )
+
+    write_report(source_counts, apps, component_counts, prioritized_findings, OUTPUT_PATH)
     print(f"Report written to {OUTPUT_PATH}.")

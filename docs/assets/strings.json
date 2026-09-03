@@ -1,0 +1,122 @@
+{
+  "tagline": {
+    "en": "Automated daily vulnerability watch over application dependencies",
+    "es": "Vigilancia diaria automatizada de vulnerabilidades en dependencias"
+  },
+  "last_run": {
+    "en": "last run",
+    "es": "último análisis"
+  },
+  "demo_banner": {
+    "en": "Showing <b>sample data</b> (no <code>data.json</code> found next to this page). Once the pipeline writes its first <code>data.json</code>, real data is displayed automatically.",
+    "es": "Mostrando <b>datos de ejemplo</b> (no se ha encontrado <code>data.json</code> junto a esta página). Cuando el pipeline escriba su primer <code>data.json</code>, se mostrarán datos reales automáticamente."
+  },
+  "pulse_title": {
+    "en": "Daily pulse · one cell = one autonomous run",
+    "es": "Pulso diario · una celda = una ejecución autónoma"
+  },
+  "legend_clean": {
+    "en": "no criticals",
+    "es": "sin críticos"
+  },
+  "legend_high": {
+    "en": "with highs",
+    "es": "con altos"
+  },
+  "legend_critical": {
+    "en": "with criticals",
+    "es": "con críticos"
+  },
+  "pulse_note": {
+    "en": "{n} consecutive daily runs with no manual intervention.",
+    "es": "{n} ejecuciones diarias consecutivas sin intervención manual."
+  },
+  "pulse_tip": {
+    "en": "{date} · {total} findings · {critical} critical",
+    "es": "{date} · {total} hallazgos · {critical} críticos"
+  },
+  "stat_critical": {
+    "en": "open criticals",
+    "es": "críticos abiertos"
+  },
+  "stat_kev": {
+    "en": "actively exploited (KEV)",
+    "es": "en explotación activa (KEV)"
+  },
+  "stat_findings": {
+    "en": "total findings",
+    "es": "hallazgos totales"
+  },
+  "stat_apps": {
+    "en": "apps watched",
+    "es": "apps vigiladas"
+  },
+  "stat_deps": {
+    "en": "dependencies analyzed",
+    "es": "dependencias analizadas"
+  },
+  "filter_all": {
+    "en": "All apps",
+    "es": "Todas las apps"
+  },
+  "filter_label": {
+    "en": "Filter by application",
+    "es": "Filtrar por aplicación"
+  },
+  "queue_title": {
+    "en": "Priority queue",
+    "es": "Cola de prioridad"
+  },
+  "queue_count": {
+    "en": "{n} findings · sorted by priority_score (KEV > EPSS > CVSS)",
+    "es": "{n} hallazgos · ordenados por priority_score (KEV > EPSS > CVSS)"
+  },
+  "queue_empty": {
+    "en": "No findings for this filter. Switch application or wait for the next daily run.",
+    "es": "Sin hallazgos para este filtro. Cambia de aplicación o espera a la próxima ejecución diaria."
+  },
+  "badge_kev": {
+    "en": "KEV · actively exploited",
+    "es": "KEV · explotación activa"
+  },
+  "badge_kev_since": {
+    "en": "since {date}",
+    "es": "desde {date}"
+  },
+  "badge_fix": {
+    "en": "fix: {version}",
+    "es": "arreglo: {version}"
+  },
+  "badge_no_fix": {
+    "en": "no fixed version yet",
+    "es": "sin versión corregida"
+  },
+  "severity_critical": {
+    "en": "CRITICAL",
+    "es": "CRÍTICO"
+  },
+  "severity_high": {
+    "en": "HIGH",
+    "es": "ALTO"
+  },
+  "severity_medium": {
+    "en": "MEDIUM",
+    "es": "MEDIO"
+  },
+  "severity_low": {
+    "en": "LOW",
+    "es": "BAJO"
+  },
+  "source_pending": {
+    "en": "not integrated yet",
+    "es": "pendiente de integrar"
+  },
+  "source_entries": {
+    "en": "{n} entries",
+    "es": "{n} entradas"
+  },
+  "footer_credit": {
+    "en": "Python pipeline · GitHub Actions · georgesgmg",
+    "es": "pipeline Python · GitHub Actions · georgesgmg"
+  }
+}

@@ -1,4 +1,4 @@
-name: daily-analysis
+name: vulnerability-pipeline
 
 on:
   schedule:
@@ -9,7 +9,7 @@ permissions:
   contents: write
 
 jobs:
-  analyze:
+  scan-and-publish:
     runs-on: ubuntu-latest
     steps:
       - name: Check out the repository
@@ -42,5 +42,5 @@ jobs:
           git config user.name "github-actions[bot]"
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
           git add docs/data.json
-          git diff --cached --quiet || git commit -m "chore: daily analysis $(date -u +%F)"
+          git diff --cached --quiet || git commit -m "chore: analysis results at $(date -u +'%Y-%m-%d %H:%M UTC')"
           git push

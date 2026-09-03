@@ -22,6 +22,16 @@ class Source(str, Enum):
     LOCAL = "local"
 
 
+class NvdVulnStatus(str, Enum):
+    RECEIVED = "Received"
+    AWAITING_ANALYSIS = "Awaiting Analysis"
+    UNDERGOING_ANALYSIS = "Undergoing Analysis"
+    ANALYZED = "Analyzed"
+    MODIFIED = "Modified"
+    DEFERRED = "Deferred"
+    REJECTED = "Rejected"
+
+
 class PriorityLabel(str, Enum):
     CRITICAL = "critical"
     HIGH = "high"
@@ -107,6 +117,7 @@ class EpssScore:
 @dataclass(frozen=True)
 class NvdEnrichment:
     cve_id: str
+    vuln_status: NvdVulnStatus
     cvss: float | None
     summary: LocalizedText
     references: list[str]

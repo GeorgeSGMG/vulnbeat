@@ -3,7 +3,7 @@ import time
 import requests
 
 from vulnbeat.localization import LocalizedText
-from vulnbeat.models import NvdEnrichment
+from vulnbeat.models import NvdEnrichment, NvdVulnStatus
 from vulnbeat.resilience import retry
 
 NVD_URL = "https://services.nvd.nist.gov/rest/json/cves/2.0"
@@ -16,6 +16,7 @@ NVD_CVE_ID_PARAM = "cveId"
 
 NVD_VULNERABILITIES_KEY = "vulnerabilities"
 NVD_CVE_KEY = "cve"
+NVD_STATUS_KEY = "vulnStatus"
 NVD_DESCRIPTIONS_KEY = "descriptions"
 NVD_LANG_KEY = "lang"
 NVD_VALUE_KEY = "value"
@@ -61,8 +62,10 @@ def fetch_nvd(cve_ids: list[str], api_key: str | None = None) -> dict[str, NvdEn
             continue
 
         cve = vulnerabilities[0][NVD_CVE_KEY]
+
         results[cve_id] = NvdEnrichment(
             cve_id=cve_id,
+            vuln_status=NvdVulnStatus(cve[NVD_STATUS_KEY]),
             cvss=_extract_cvss(cve.get(NVD_METRICS_KEY, {})),
             summary=_extract_summary(cve[NVD_DESCRIPTIONS_KEY]),
             references=list(dict.fromkeys(ref[NVD_URL_KEY] for ref in cve.get(NVD_REFERENCES_KEY, []))),

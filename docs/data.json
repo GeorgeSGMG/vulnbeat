@@ -1,8 +1,8 @@
 {
-  "generated_at": "2026-09-02T17:45:40.592278+00:00",
+  "generated_at": "2026-09-03T08:28:03.437759+00:00",
   "sources": {
     "kev": {
-      "entries": 1687
+      "entries": 1694
     }
   },
   "apps": [
@@ -25,7 +25,7 @@
       "name": "VulnBeat (self)",
       "ecosystem": "PyPI",
       "repo": "https://github.com/georgesgmg/vulnbeat",
-      "dependencies": 11
+      "dependencies": 12
     }
   ],
   "findings": [
@@ -1362,28 +1362,6 @@
       ]
     },
     {
-      "id": "pygoat:CVE-2025-66471:urllib3",
-      "cve": "CVE-2025-66471",
-      "package": "urllib3",
-      "ecosystem": "PyPI",
-      "installed_version": "1.26.9",
-      "fixed_version": "2.6.0",
-      "app": "pygoat",
-      "cvss": 7.5,
-      "epss": 0.00682,
-      "in_kev": false,
-      "kev_date_added": null,
-      "priority_score": 19,
-      "priority_label": "low",
-      "summary": {
-        "en": "urllib3 is a user-friendly HTTP client library for Python. Starting in version 1.0 and prior to 2.6.0, the Streaming API improperly handles highly compressed data. urllib3's streaming API is designed for the efficient handling of large HTTP responses by reading the content in chunks, rather than loading the entire response body into memory at once. When streaming a compressed response, urllib3 can perform decoding or decompression based on the HTTP Content-Encoding header (e.g., gzip, deflate, br, or zstd). The library must read compressed data from the network and decompress it until the requested chunk size is met. Any resulting decompressed data that exceeds the requested amount is held in an internal buffer for the next read operation. The decompression logic could cause urllib3 to fully decode a small amount of highly compressed data in a single operation. This can result in excessive resource consumption (high CPU usage and massive memory allocation for the decompressed data."
-      },
-      "references": [
-        "https://github.com/urllib3/urllib3/commit/c19571de34c47de3a766541b041637ba5f716ed7",
-        "https://github.com/urllib3/urllib3/security/advisories/GHSA-2xpw-w6gg-jr37"
-      ]
-    },
-    {
       "id": "pygoat:CVE-2025-66418:urllib3",
       "cve": "CVE-2025-66418",
       "package": "urllib3",
@@ -1403,6 +1381,28 @@
       "references": [
         "https://github.com/urllib3/urllib3/commit/24d7b67eac89f94e11003424bcf0d8f7b72222a8",
         "https://github.com/urllib3/urllib3/security/advisories/GHSA-gm62-xv2j-4w53"
+      ]
+    },
+    {
+      "id": "pygoat:CVE-2025-66471:urllib3",
+      "cve": "CVE-2025-66471",
+      "package": "urllib3",
+      "ecosystem": "PyPI",
+      "installed_version": "1.26.9",
+      "fixed_version": "2.6.0",
+      "app": "pygoat",
+      "cvss": 7.5,
+      "epss": 0.00682,
+      "in_kev": false,
+      "kev_date_added": null,
+      "priority_score": 19,
+      "priority_label": "low",
+      "summary": {
+        "en": "urllib3 is a user-friendly HTTP client library for Python. Starting in version 1.0 and prior to 2.6.0, the Streaming API improperly handles highly compressed data. urllib3's streaming API is designed for the efficient handling of large HTTP responses by reading the content in chunks, rather than loading the entire response body into memory at once. When streaming a compressed response, urllib3 can perform decoding or decompression based on the HTTP Content-Encoding header (e.g., gzip, deflate, br, or zstd). The library must read compressed data from the network and decompress it until the requested chunk size is met. Any resulting decompressed data that exceeds the requested amount is held in an internal buffer for the next read operation. The decompression logic could cause urllib3 to fully decode a small amount of highly compressed data in a single operation. This can result in excessive resource consumption (high CPU usage and massive memory allocation for the decompressed data."
+      },
+      "references": [
+        "https://github.com/urllib3/urllib3/commit/c19571de34c47de3a766541b041637ba5f716ed7",
+        "https://github.com/urllib3/urllib3/security/advisories/GHSA-2xpw-w6gg-jr37"
       ]
     },
     {
@@ -1664,6 +1664,42 @@
       ]
     },
     {
+      "id": "pygoat:CVE-2026-1312:django",
+      "cve": "CVE-2026-1312",
+      "package": "django",
+      "ecosystem": "PyPI",
+      "installed_version": "4.2",
+      "fixed_version": "4.2.28",
+      "app": "pygoat",
+      "cvss": 5.4,
+      "epss": 0.00833,
+      "in_kev": false,
+      "kev_date_added": null,
+      "priority_score": 14,
+      "priority_label": "low",
+      "summary": {
+        "en": "An issue was discovered in 6.0 before 6.0.2, 5.2 before 5.2.11, and 4.2 before 4.2.28.\n`.QuerySet.order_by()` is subject to SQL injection in column aliases containing periods when the same alias is, using a suitably crafted dictionary, with dictionary expansion, used in `FilteredRelation`.\nEarlier, unsupported Django series (such as 5.0.x, 4.1.x, and 3.2.x) were not evaluated and may also be affected.\nDjango would like to thank Solomon Kebede for reporting this issue.",
+        "es": "Se descubri\u00f3 un problema en 6.0 anterior a 6.0.2, 5.2 anterior a 5.2.11 y 4.2 anterior a 4.2.28.\n.QuerySet.order_by() est\u00e1 sujeto a inyecci\u00f3n SQL en alias de columna que contienen puntos cuando el mismo alias es, utilizando un diccionario adecuadamente dise\u00f1ado, con expansi\u00f3n de diccionario, usado en FilteredRelation.\nSeries de Django anteriores y no compatibles (como 5.0.x, 4.1.x y 3.2.x) no fueron evaluadas y tambi\u00e9n pueden verse afectadas.\nDjango desea agradecer a Solomon Kebede por informar de este problema."
+      },
+      "references": [
+        "https://docs.djangoproject.com/en/dev/releases/security/",
+        "https://groups.google.com/g/django-announce",
+        "https://www.djangoproject.com/weblog/2026/feb/03/security-releases/",
+        "https://access.redhat.com/errata/RHSA-2026:14835",
+        "https://access.redhat.com/errata/RHSA-2026:2694",
+        "https://access.redhat.com/errata/RHSA-2026:3958",
+        "https://access.redhat.com/errata/RHSA-2026:3959",
+        "https://access.redhat.com/errata/RHSA-2026:3960",
+        "https://access.redhat.com/errata/RHSA-2026:3962",
+        "https://access.redhat.com/errata/RHSA-2026:5970",
+        "https://access.redhat.com/errata/RHSA-2026:5971",
+        "https://access.redhat.com/errata/RHSA-2026:6291",
+        "https://access.redhat.com/security/cve/CVE-2026-1312",
+        "https://bugzilla.redhat.com/show_bug.cgi?id=2436342",
+        "https://security.access.redhat.com/data/csaf/v2/vex/2026/cve-2026-1312.json"
+      ]
+    },
+    {
       "id": "pygoat:CVE-2025-13372:django",
       "cve": "CVE-2025-13372",
       "package": "django",
@@ -1709,42 +1745,6 @@
         "https://groups.google.com/a/mozilla.org/g/dev-security-policy/c/C-HrP1SEq1A",
         "https://lists.fedoraproject.org/archives/list/package-announce@lists.fedoraproject.org/message/5EX6NG7WUFNUKGFHLM35KHHU3GAKXRTG/",
         "https://security.netapp.com/advisory/ntap-20240912-0002/"
-      ]
-    },
-    {
-      "id": "pygoat:CVE-2026-1312:django",
-      "cve": "CVE-2026-1312",
-      "package": "django",
-      "ecosystem": "PyPI",
-      "installed_version": "4.2",
-      "fixed_version": "4.2.28",
-      "app": "pygoat",
-      "cvss": 5.4,
-      "epss": 0.00833,
-      "in_kev": false,
-      "kev_date_added": null,
-      "priority_score": 14,
-      "priority_label": "low",
-      "summary": {
-        "en": "An issue was discovered in 6.0 before 6.0.2, 5.2 before 5.2.11, and 4.2 before 4.2.28.\n`.QuerySet.order_by()` is subject to SQL injection in column aliases containing periods when the same alias is, using a suitably crafted dictionary, with dictionary expansion, used in `FilteredRelation`.\nEarlier, unsupported Django series (such as 5.0.x, 4.1.x, and 3.2.x) were not evaluated and may also be affected.\nDjango would like to thank Solomon Kebede for reporting this issue.",
-        "es": "Se descubri\u00f3 un problema en 6.0 anterior a 6.0.2, 5.2 anterior a 5.2.11 y 4.2 anterior a 4.2.28.\n.QuerySet.order_by() est\u00e1 sujeto a inyecci\u00f3n SQL en alias de columna que contienen puntos cuando el mismo alias es, utilizando un diccionario adecuadamente dise\u00f1ado, con expansi\u00f3n de diccionario, usado en FilteredRelation.\nSeries de Django anteriores y no compatibles (como 5.0.x, 4.1.x y 3.2.x) no fueron evaluadas y tambi\u00e9n pueden verse afectadas.\nDjango desea agradecer a Solomon Kebede por informar de este problema."
-      },
-      "references": [
-        "https://docs.djangoproject.com/en/dev/releases/security/",
-        "https://groups.google.com/g/django-announce",
-        "https://www.djangoproject.com/weblog/2026/feb/03/security-releases/",
-        "https://access.redhat.com/errata/RHSA-2026:14835",
-        "https://access.redhat.com/errata/RHSA-2026:2694",
-        "https://access.redhat.com/errata/RHSA-2026:3958",
-        "https://access.redhat.com/errata/RHSA-2026:3959",
-        "https://access.redhat.com/errata/RHSA-2026:3960",
-        "https://access.redhat.com/errata/RHSA-2026:3962",
-        "https://access.redhat.com/errata/RHSA-2026:5970",
-        "https://access.redhat.com/errata/RHSA-2026:5971",
-        "https://access.redhat.com/errata/RHSA-2026:6291",
-        "https://access.redhat.com/security/cve/CVE-2026-1312",
-        "https://bugzilla.redhat.com/show_bug.cgi?id=2436342",
-        "https://security.access.redhat.com/data/csaf/v2/vex/2026/cve-2026-1312.json"
       ]
     },
     {
@@ -2121,6 +2121,54 @@
       ]
     },
     {
+      "id": "pygoat:CVE-2025-14550:django",
+      "cve": "CVE-2025-14550",
+      "package": "django",
+      "ecosystem": "PyPI",
+      "installed_version": "4.2",
+      "fixed_version": "4.2.28",
+      "app": "pygoat",
+      "cvss": 7.5,
+      "epss": 0.01032,
+      "in_kev": false,
+      "kev_date_added": null,
+      "priority_score": 20,
+      "priority_label": "medium",
+      "summary": {
+        "en": "An issue was discovered in 6.0 before 6.0.2, 5.2 before 5.2.11, and 4.2 before 4.2.28.\n`ASGIRequest` allows a remote attacker to cause a potential denial-of-service via a crafted request with multiple duplicate headers.\nEarlier, unsupported Django series (such as 5.0.x, 4.1.x, and 3.2.x) were not evaluated and may also be affected.\nDjango would like to thank Jiyong Yang for reporting this issue.",
+        "es": "Se descubri\u00f3 un problema en 6.0 anterior a 6.0.2, 5.2 anterior a 5.2.11 y 4.2 anterior a 4.2.28.\n'ASGIRequest' permite a un atacante remoto causar una posible denegaci\u00f3n de servicio mediante una solicitud manipulada con m\u00faltiples encabezados duplicados.\nSeries de Django anteriores y no compatibles (como 5.0.x, 4.1.x y 3.2.x) no fueron evaluadas y tambi\u00e9n podr\u00edan verse afectadas.\nDjango desea agradecer a Jiyong Yang por informar sobre este problema."
+      },
+      "references": [
+        "https://docs.djangoproject.com/en/dev/releases/security/",
+        "https://groups.google.com/g/django-announce",
+        "https://www.djangoproject.com/weblog/2026/feb/03/security-releases/"
+      ]
+    },
+    {
+      "id": "pygoat:CVE-2026-1285:django",
+      "cve": "CVE-2026-1285",
+      "package": "django",
+      "ecosystem": "PyPI",
+      "installed_version": "4.2",
+      "fixed_version": "4.2.28",
+      "app": "pygoat",
+      "cvss": 7.5,
+      "epss": 0.01032,
+      "in_kev": false,
+      "kev_date_added": null,
+      "priority_score": 20,
+      "priority_label": "medium",
+      "summary": {
+        "en": "An issue was discovered in 6.0 before 6.0.2, 5.2 before 5.2.11, and 4.2 before 4.2.28.\n`django.utils.text.Truncator.chars()` and `Truncator.words()` methods (with `html=True`) and the `truncatechars_html` and `truncatewords_html` template filters allow a remote attacker to cause a potential denial-of-service via crafted inputs containing a large number of unmatched HTML end tags.\nEarlier, unsupported Django series (such as 5.0.x, 4.1.x, and 3.2.x) were not evaluated and may also be affected.\nDjango would like to thank Seokchan Yoon for reporting this issue.",
+        "es": "Se descubri\u00f3 un problema en 6.0 anterior a 6.0.2, 5.2 anterior a 5.2.11 y 4.2 anterior a 4.2.28.\nLos m\u00e9todos 'django.utils.text.Truncator.chars()' y 'Truncator.words()' (con 'html=True') y los filtros de plantilla 'truncatechars_html' y 'truncatewords_html' permiten a un atacante remoto causar una potencial denegaci\u00f3n de servicio mediante entradas manipuladas que contienen un gran n\u00famero de etiquetas de cierre HTML no coincidentes.\nSeries de Django anteriores y sin soporte (como 5.0.x, 4.1.x y 3.2.x) no fueron evaluadas y tambi\u00e9n pueden verse afectadas.\nDjango desea agradecer a Seokchan Yoon por informar de este problema."
+      },
+      "references": [
+        "https://docs.djangoproject.com/en/dev/releases/security/",
+        "https://groups.google.com/g/django-announce",
+        "https://www.djangoproject.com/weblog/2026/feb/03/security-releases/"
+      ]
+    },
+    {
       "id": "pygoat:CVE-2026-59199:pillow",
       "cve": "CVE-2026-59199",
       "package": "pillow",
@@ -2213,54 +2261,6 @@
         "https://github.com/pallets/werkzeug/commit/4b833376a45c323a189cd11d2362bcffdb1c0c13",
         "https://github.com/pallets/werkzeug/releases/tag/3.1.4",
         "https://github.com/pallets/werkzeug/security/advisories/GHSA-hgf8-39gv-g3f2"
-      ]
-    },
-    {
-      "id": "pygoat:CVE-2025-14550:django",
-      "cve": "CVE-2025-14550",
-      "package": "django",
-      "ecosystem": "PyPI",
-      "installed_version": "4.2",
-      "fixed_version": "4.2.28",
-      "app": "pygoat",
-      "cvss": 7.5,
-      "epss": 0.01032,
-      "in_kev": false,
-      "kev_date_added": null,
-      "priority_score": 20,
-      "priority_label": "medium",
-      "summary": {
-        "en": "An issue was discovered in 6.0 before 6.0.2, 5.2 before 5.2.11, and 4.2 before 4.2.28.\n`ASGIRequest` allows a remote attacker to cause a potential denial-of-service via a crafted request with multiple duplicate headers.\nEarlier, unsupported Django series (such as 5.0.x, 4.1.x, and 3.2.x) were not evaluated and may also be affected.\nDjango would like to thank Jiyong Yang for reporting this issue.",
-        "es": "Se descubri\u00f3 un problema en 6.0 anterior a 6.0.2, 5.2 anterior a 5.2.11 y 4.2 anterior a 4.2.28.\n'ASGIRequest' permite a un atacante remoto causar una posible denegaci\u00f3n de servicio mediante una solicitud manipulada con m\u00faltiples encabezados duplicados.\nSeries de Django anteriores y no compatibles (como 5.0.x, 4.1.x y 3.2.x) no fueron evaluadas y tambi\u00e9n podr\u00edan verse afectadas.\nDjango desea agradecer a Jiyong Yang por informar sobre este problema."
-      },
-      "references": [
-        "https://docs.djangoproject.com/en/dev/releases/security/",
-        "https://groups.google.com/g/django-announce",
-        "https://www.djangoproject.com/weblog/2026/feb/03/security-releases/"
-      ]
-    },
-    {
-      "id": "pygoat:CVE-2026-1285:django",
-      "cve": "CVE-2026-1285",
-      "package": "django",
-      "ecosystem": "PyPI",
-      "installed_version": "4.2",
-      "fixed_version": "4.2.28",
-      "app": "pygoat",
-      "cvss": 7.5,
-      "epss": 0.01032,
-      "in_kev": false,
-      "kev_date_added": null,
-      "priority_score": 20,
-      "priority_label": "medium",
-      "summary": {
-        "en": "An issue was discovered in 6.0 before 6.0.2, 5.2 before 5.2.11, and 4.2 before 4.2.28.\n`django.utils.text.Truncator.chars()` and `Truncator.words()` methods (with `html=True`) and the `truncatechars_html` and `truncatewords_html` template filters allow a remote attacker to cause a potential denial-of-service via crafted inputs containing a large number of unmatched HTML end tags.\nEarlier, unsupported Django series (such as 5.0.x, 4.1.x, and 3.2.x) were not evaluated and may also be affected.\nDjango would like to thank Seokchan Yoon for reporting this issue.",
-        "es": "Se descubri\u00f3 un problema en 6.0 anterior a 6.0.2, 5.2 anterior a 5.2.11 y 4.2 anterior a 4.2.28.\nLos m\u00e9todos 'django.utils.text.Truncator.chars()' y 'Truncator.words()' (con 'html=True') y los filtros de plantilla 'truncatechars_html' y 'truncatewords_html' permiten a un atacante remoto causar una potencial denegaci\u00f3n de servicio mediante entradas manipuladas que contienen un gran n\u00famero de etiquetas de cierre HTML no coincidentes.\nSeries de Django anteriores y sin soporte (como 5.0.x, 4.1.x y 3.2.x) no fueron evaluadas y tambi\u00e9n pueden verse afectadas.\nDjango desea agradecer a Seokchan Yoon por informar de este problema."
-      },
-      "references": [
-        "https://docs.djangoproject.com/en/dev/releases/security/",
-        "https://groups.google.com/g/django-announce",
-        "https://www.djangoproject.com/weblog/2026/feb/03/security-releases/"
       ]
     },
     {
@@ -2453,6 +2453,28 @@
       ]
     },
     {
+      "id": "pygoat:CVE-2026-54284:sqlparse",
+      "cve": "CVE-2026-54284",
+      "package": "sqlparse",
+      "ecosystem": "PyPI",
+      "installed_version": "0.3.1",
+      "fixed_version": "0.6.0",
+      "app": "pygoat",
+      "cvss": null,
+      "epss": 0.00263,
+      "in_kev": false,
+      "kev_date_added": null,
+      "priority_score": 0,
+      "priority_label": "low",
+      "summary": {
+        "en": "sqlparse is a non-validating SQL parser module for Python. Prior to 0.6.0, TokenList construction and string conversion in sqlparse/sql.py repeatedly flatten nested token subtrees constructed by group_parenthesis and group_case, causing quadratic CPU consumption through sqlparse.parse(), sqlparse.format(), and sqlparse.split() before depth and token limits terminate processing. This issue is fixed in version 0.6.0."
+      },
+      "references": [
+        "https://github.com/andialbrecht/sqlparse/commit/939b129e24c0ad5d51368b1aa72fffcaca76f06f",
+        "https://github.com/andialbrecht/sqlparse/security/advisories/GHSA-pwgv-4x5q-6m9f"
+      ]
+    },
+    {
       "id": "pygoat:CVE-2026-71491:sqlparse",
       "cve": "CVE-2026-71491",
       "package": "sqlparse",
@@ -2475,25 +2497,27 @@
       ]
     },
     {
-      "id": "pygoat:CVE-2026-54284:sqlparse",
-      "cve": "CVE-2026-54284",
-      "package": "sqlparse",
+      "id": "pygoat:CVE-2025-13473:django",
+      "cve": "CVE-2025-13473",
+      "package": "django",
       "ecosystem": "PyPI",
-      "installed_version": "0.3.1",
-      "fixed_version": "0.6.0",
+      "installed_version": "4.2",
+      "fixed_version": "4.2.28",
       "app": "pygoat",
-      "cvss": null,
-      "epss": 0.00263,
+      "cvss": 5.3,
+      "epss": 0.00741,
       "in_kev": false,
       "kev_date_added": null,
-      "priority_score": 0,
+      "priority_score": 14,
       "priority_label": "low",
       "summary": {
-        "en": "sqlparse is a non-validating SQL parser module for Python. Prior to 0.6.0, TokenList construction and string conversion in sqlparse/sql.py repeatedly flatten nested token subtrees constructed by group_parenthesis and group_case, causing quadratic CPU consumption through sqlparse.parse(), sqlparse.format(), and sqlparse.split() before depth and token limits terminate processing. This issue is fixed in version 0.6.0."
+        "en": "An issue was discovered in 6.0 before 6.0.2, 5.2 before 5.2.11, and 4.2 before 4.2.28.\nThe `django.contrib.auth.handlers.modwsgi.check_password()` function for authentication via `mod_wsgi` allows remote attackers to enumerate users via a timing attack.\nEarlier, unsupported Django series (such as 5.0.x, 4.1.x, and 3.2.x) were not evaluated and may also be affected.\nDjango would like to thank Stackered for reporting this issue.",
+        "es": "Se descubri\u00f3 un problema en 6.0 anterior a 6.0.2, 5.2 anterior a 5.2.11, y 4.2 anterior a 4.2.28.\nLa funci\u00f3n 'django.contrib.auth.handlers.modwsgi.check_password()' para autenticaci\u00f3n a trav\u00e9s de 'mod_wsgi' permite a atacantes remotos enumerar usuarios mediante un ataque de temporizaci\u00f3n.\nSeries de Django anteriores no soportadas (como 5.0.x, 4.1.x, y 3.2.x) no fueron evaluadas y tambi\u00e9n podr\u00edan estar afectadas.\nDjango desea agradecer a Stackered por reportar este problema."
       },
       "references": [
-        "https://github.com/andialbrecht/sqlparse/commit/939b129e24c0ad5d51368b1aa72fffcaca76f06f",
-        "https://github.com/andialbrecht/sqlparse/security/advisories/GHSA-pwgv-4x5q-6m9f"
+        "https://docs.djangoproject.com/en/dev/releases/security/",
+        "https://groups.google.com/g/django-announce",
+        "https://www.djangoproject.com/weblog/2026/feb/03/security-releases/"
       ]
     },
     {
@@ -2540,30 +2564,6 @@
       "references": [
         "https://github.com/andialbrecht/sqlparse/commit/d1d80602741f77ec78e5a04ce4719244cf32352e",
         "https://github.com/andialbrecht/sqlparse/security/advisories/GHSA-prg7-hcfm-mfcr"
-      ]
-    },
-    {
-      "id": "pygoat:CVE-2025-13473:django",
-      "cve": "CVE-2025-13473",
-      "package": "django",
-      "ecosystem": "PyPI",
-      "installed_version": "4.2",
-      "fixed_version": "4.2.28",
-      "app": "pygoat",
-      "cvss": 5.3,
-      "epss": 0.00741,
-      "in_kev": false,
-      "kev_date_added": null,
-      "priority_score": 14,
-      "priority_label": "low",
-      "summary": {
-        "en": "An issue was discovered in 6.0 before 6.0.2, 5.2 before 5.2.11, and 4.2 before 4.2.28.\nThe `django.contrib.auth.handlers.modwsgi.check_password()` function for authentication via `mod_wsgi` allows remote attackers to enumerate users via a timing attack.\nEarlier, unsupported Django series (such as 5.0.x, 4.1.x, and 3.2.x) were not evaluated and may also be affected.\nDjango would like to thank Stackered for reporting this issue.",
-        "es": "Se descubri\u00f3 un problema en 6.0 anterior a 6.0.2, 5.2 anterior a 5.2.11, y 4.2 anterior a 4.2.28.\nLa funci\u00f3n 'django.contrib.auth.handlers.modwsgi.check_password()' para autenticaci\u00f3n a trav\u00e9s de 'mod_wsgi' permite a atacantes remotos enumerar usuarios mediante un ataque de temporizaci\u00f3n.\nSeries de Django anteriores no soportadas (como 5.0.x, 4.1.x, y 3.2.x) no fueron evaluadas y tambi\u00e9n podr\u00edan estar afectadas.\nDjango desea agradecer a Stackered por reportar este problema."
-      },
-      "references": [
-        "https://docs.djangoproject.com/en/dev/releases/security/",
-        "https://groups.google.com/g/django-announce",
-        "https://www.djangoproject.com/weblog/2026/feb/03/security-releases/"
       ]
     },
     {
@@ -2858,29 +2858,6 @@
       ]
     },
     {
-      "id": "pygoat:CVE-2026-69248:cryptography",
-      "cve": "CVE-2026-69248",
-      "package": "cryptography",
-      "ecosystem": "PyPI",
-      "installed_version": "39.0.1",
-      "fixed_version": "49.0.0",
-      "app": "pygoat",
-      "cvss": null,
-      "epss": 0.00185,
-      "in_kev": false,
-      "kev_date_added": null,
-      "priority_score": 0,
-      "priority_label": "low",
-      "summary": {
-        "en": "cryptography is a package designed to expose cryptographic primitives and recipes to Python developers. In versions 45.0.0 through 48.0.0, if an intermediate constrained CA permits the DNS name foo.example.com, and the leaf certificate has a wildcard in its DNS SAN of *.example.com, python-cryptography's verifier accepts which allows escaping outside of the permitted names. The core issue is in DNSConstraint::matches, where a wildcard pattern was treated as matching a more-specific permitted constraint even though *.example.com can expand to sibling names such as bar.example.com outside foo.example.com. This allows acceptance of an invalid certificate chain. This issue is fixed in 49.0.0."
-      },
-      "references": [
-        "https://github.com/pyca/cryptography/commit/4d035a4225965edeffd312079a510ef25fcfdcb2",
-        "https://github.com/pyca/cryptography/pull/14888",
-        "https://github.com/pyca/cryptography/security/advisories/GHSA-m2h6-j472-rp4c"
-      ]
-    },
-    {
       "id": "pygoat:CVE-2026-48587:django",
       "cve": "CVE-2026-48587",
       "package": "django",
@@ -3157,6 +3134,29 @@
       ]
     },
     {
+      "id": "pygoat:CVE-2026-84305:sqlparse",
+      "cve": "CVE-2026-84305",
+      "package": "sqlparse",
+      "ecosystem": "PyPI",
+      "installed_version": "0.3.1",
+      "fixed_version": "0.6.0",
+      "app": "pygoat",
+      "cvss": null,
+      "epss": 0.00125,
+      "in_kev": false,
+      "kev_date_added": null,
+      "priority_score": 0,
+      "priority_label": "low",
+      "summary": {
+        "en": "sqlparse is a non-validating SQL parser module for Python. Prior to 0.6.0, sqlparse.format(sql, reindent=True) and sqlformat --reindent route attacker-controlled parenthesized tuple lists through ReindentFilter._get_offset() in sqlparse/filters/reindent.py, where _flatten_up_to_token() repeatedly rebuilds and joins the statement prefix. Thousands of offset calculations walk an expanding token tree, producing quadratic CPU consumption for inputs that remain below MAX_GROUPING_TOKENS and causing request delays, reduced throughput, or worker starvation. This issue is fixed in version 0.6.0."
+      },
+      "references": [
+        "https://github.com/andialbrecht/sqlparse/commit/a51df6d9e2d31b44be9adb6bc8732517db6bf96b",
+        "https://github.com/andialbrecht/sqlparse/releases/tag/0.6.0",
+        "https://github.com/andialbrecht/sqlparse/security/advisories/GHSA-cfqr-cjx5-5jcm"
+      ]
+    },
+    {
       "id": "pygoat:CVE-2026-42308:pillow",
       "cve": "CVE-2026-42308",
       "package": "pillow",
@@ -3199,29 +3199,6 @@
       },
       "references": [
         "https://github.com/pyca/cryptography/security/advisories/GHSA-m959-cc7f-wv43"
-      ]
-    },
-    {
-      "id": "pygoat:CVE-2026-84305:sqlparse",
-      "cve": "CVE-2026-84305",
-      "package": "sqlparse",
-      "ecosystem": "PyPI",
-      "installed_version": "0.3.1",
-      "fixed_version": "0.6.0",
-      "app": "pygoat",
-      "cvss": null,
-      "epss": 0.00125,
-      "in_kev": false,
-      "kev_date_added": null,
-      "priority_score": 0,
-      "priority_label": "low",
-      "summary": {
-        "en": "sqlparse is a non-validating SQL parser module for Python. Prior to 0.6.0, sqlparse.format(sql, reindent=True) and sqlformat --reindent route attacker-controlled parenthesized tuple lists through ReindentFilter._get_offset() in sqlparse/filters/reindent.py, where _flatten_up_to_token() repeatedly rebuilds and joins the statement prefix. Thousands of offset calculations walk an expanding token tree, producing quadratic CPU consumption for inputs that remain below MAX_GROUPING_TOKENS and causing request delays, reduced throughput, or worker starvation. This issue is fixed in version 0.6.0."
-      },
-      "references": [
-        "https://github.com/andialbrecht/sqlparse/commit/a51df6d9e2d31b44be9adb6bc8732517db6bf96b",
-        "https://github.com/andialbrecht/sqlparse/releases/tag/0.6.0",
-        "https://github.com/andialbrecht/sqlparse/security/advisories/GHSA-cfqr-cjx5-5jcm"
       ]
     },
     {
@@ -8930,6 +8907,50 @@
       ]
     },
     {
+      "id": "nodejs-goof:CVE-2026-82417:qs",
+      "cve": "CVE-2026-82417",
+      "package": "qs",
+      "ecosystem": "npm",
+      "installed_version": "6.5.2",
+      "fixed_version": "6.16.0",
+      "app": "nodejs-goof",
+      "cvss": 5.3,
+      "epss": 0.00261,
+      "in_kev": false,
+      "kev_date_added": null,
+      "priority_score": 13,
+      "priority_label": "low",
+      "summary": {
+        "en": "### Summary\n\n\n\n`qs.stringify` throws a `TypeError` when it serializes an object whose own `constructor` property has a truthy, non-callable `isBuffer` member. `utils.isBuffer` duck-types buffers by calling `obj.constructor.isBuffer(obj)` after checking only that the property is truthy, so a value such as `{ constructor: { isBuffer: \"x\" } }` makes the call throw `TypeError: obj.constructor.isBuffer is not a function`.\n\n\n\n### Details\n\n\n\n`lib/stringify.js:127` calls `utils.isBuffer` on every non-primitive value it serializes. `utils.isBuffer` (`lib/utils.js:332`) reads `obj.constructor.isBuffer` and invokes it without verifying that it is a function. `constructor` and `isBuffer` are ordinary property names, so any object carrying them as own properties reaches the unchecked call.\n\n\n\nSuch an object can be built from untrusted input. `qs.parse(\"x[constructor][isBuffer]=y\", { plainObjects: true })` or `{ allowPrototypes: true }` keeps the `constructor` key as an own property (the default parse options drop it), and `JSON.parse(\"{\\\"a\\\":{\\\"constructor\\\":{\\\"isBuffer\\\":\\\"x\\\"}}}\")` produces the same shape with no qs option involved. Express 4 with its default `query parser` setting and body-parser with `extended: true` both call `qs.parse` with `allowPrototypes: true`, so on those stacks `req.query` and `req.body` can carry the shape directly.\n\n\n\n#### PoC\n\n\n\n```js\n\n\n\nvar qs = require(\"qs\");\n\n\n\nqs.stringify(qs.parse(\"x[constructor][isBuffer]=y\", { plainObjects: true }));\n\n\n\nqs.stringify(JSON.parse(\"{\\\"a\\\":{\\\"constructor\\\":{\\\"isBuffer\\\":\\\"x\\\"}}}\"));\n\n\n\n// TypeError: obj.constructor.isBuffer is not a function\n\n\n\n//     at Object.isBuffer (lib/utils.js:332:78)\n\n\n\n//     at stringify (lib/stringify.js:127:45)\n\n\n\n```\n\n\n\n#### Fix\n\n\n\n`lib/utils.js`, applied in e83d321 on `main` and released as v6.16.0:\n\n\n\n```diff\n\n\n\n- return !!(obj.constructor && obj.constructor.isBuffer && obj.constructor.isBuffer(obj));\n\n\n\n+ return !!(obj.constructor && typeof obj.constructor.isBuffer === \"function\" && obj.constructor.isBuffer(obj));\n\n\n\n```\n\n\n\nReal `Buffer`, `safer-buffer`, and browserify `buffer` polyfill instances serialize exactly as before; only the throw is removed.\n\n\n\n### Affected versions\n\n\n\n`>=2.2.5 <6.16.0`, fixed in v6.16.0.\n\n\n\nThe unguarded duck-type was introduced in 3768a75 and first shipped in v2.2.5 (September 2014). v2.2.4 and earlier used `Buffer.isBuffer` and are not affected. Every release from v2.2.5 through v6.15.3 contains the unguarded call.\n\n\n\n### Impact\n\n\n\nAn unauthenticated request can make any code path that re-serializes attacker-influenced data with `qs.stringify` (for example, rebuilding a query string from `req.query` for a redirect or an upstream request, or serializing a parsed JSON body) throw synchronously. In a typical Node.js HTTP framework the throw is caught by the framework error boundary and the affected request returns a 500; the process survives and other requests are unaffected. Where the call runs outside an error boundary, such as an `async` Express 4 handler (where the throw becomes an unhandled promise rejection) or a background job, the process exits, so the impact in that case depends on the application error handling rather than on qs."
+      },
+      "references": [
+        "https://github.com/ljharb/qs/commit/e83d321ffafb38cf210683ac31714fce6ce1c6c6",
+        "https://github.com/ljharb/qs/security/advisories/GHSA-4mjr-xmp4-gh2g"
+      ]
+    },
+    {
+      "id": "nodejs-goof:CVE-2026-82417:qs",
+      "cve": "CVE-2026-82417",
+      "package": "qs",
+      "ecosystem": "npm",
+      "installed_version": "6.5.2",
+      "fixed_version": "6.16.0",
+      "app": "nodejs-goof",
+      "cvss": 5.3,
+      "epss": 0.00261,
+      "in_kev": false,
+      "kev_date_added": null,
+      "priority_score": 13,
+      "priority_label": "low",
+      "summary": {
+        "en": "### Summary\n\n\n\n`qs.stringify` throws a `TypeError` when it serializes an object whose own `constructor` property has a truthy, non-callable `isBuffer` member. `utils.isBuffer` duck-types buffers by calling `obj.constructor.isBuffer(obj)` after checking only that the property is truthy, so a value such as `{ constructor: { isBuffer: \"x\" } }` makes the call throw `TypeError: obj.constructor.isBuffer is not a function`.\n\n\n\n### Details\n\n\n\n`lib/stringify.js:127` calls `utils.isBuffer` on every non-primitive value it serializes. `utils.isBuffer` (`lib/utils.js:332`) reads `obj.constructor.isBuffer` and invokes it without verifying that it is a function. `constructor` and `isBuffer` are ordinary property names, so any object carrying them as own properties reaches the unchecked call.\n\n\n\nSuch an object can be built from untrusted input. `qs.parse(\"x[constructor][isBuffer]=y\", { plainObjects: true })` or `{ allowPrototypes: true }` keeps the `constructor` key as an own property (the default parse options drop it), and `JSON.parse(\"{\\\"a\\\":{\\\"constructor\\\":{\\\"isBuffer\\\":\\\"x\\\"}}}\")` produces the same shape with no qs option involved. Express 4 with its default `query parser` setting and body-parser with `extended: true` both call `qs.parse` with `allowPrototypes: true`, so on those stacks `req.query` and `req.body` can carry the shape directly.\n\n\n\n#### PoC\n\n\n\n```js\n\n\n\nvar qs = require(\"qs\");\n\n\n\nqs.stringify(qs.parse(\"x[constructor][isBuffer]=y\", { plainObjects: true }));\n\n\n\nqs.stringify(JSON.parse(\"{\\\"a\\\":{\\\"constructor\\\":{\\\"isBuffer\\\":\\\"x\\\"}}}\"));\n\n\n\n// TypeError: obj.constructor.isBuffer is not a function\n\n\n\n//     at Object.isBuffer (lib/utils.js:332:78)\n\n\n\n//     at stringify (lib/stringify.js:127:45)\n\n\n\n```\n\n\n\n#### Fix\n\n\n\n`lib/utils.js`, applied in e83d321 on `main` and released as v6.16.0:\n\n\n\n```diff\n\n\n\n- return !!(obj.constructor && obj.constructor.isBuffer && obj.constructor.isBuffer(obj));\n\n\n\n+ return !!(obj.constructor && typeof obj.constructor.isBuffer === \"function\" && obj.constructor.isBuffer(obj));\n\n\n\n```\n\n\n\nReal `Buffer`, `safer-buffer`, and browserify `buffer` polyfill instances serialize exactly as before; only the throw is removed.\n\n\n\n### Affected versions\n\n\n\n`>=2.2.5 <6.16.0`, fixed in v6.16.0.\n\n\n\nThe unguarded duck-type was introduced in 3768a75 and first shipped in v2.2.5 (September 2014). v2.2.4 and earlier used `Buffer.isBuffer` and are not affected. Every release from v2.2.5 through v6.15.3 contains the unguarded call.\n\n\n\n### Impact\n\n\n\nAn unauthenticated request can make any code path that re-serializes attacker-influenced data with `qs.stringify` (for example, rebuilding a query string from `req.query` for a redirect or an upstream request, or serializing a parsed JSON body) throw synchronously. In a typical Node.js HTTP framework the throw is caught by the framework error boundary and the affected request returns a 500; the process survives and other requests are unaffected. Where the call runs outside an error boundary, such as an `async` Express 4 handler (where the throw becomes an unhandled promise rejection) or a background job, the process exits, so the impact in that case depends on the application error handling rather than on qs."
+      },
+      "references": [
+        "https://github.com/ljharb/qs/commit/e83d321ffafb38cf210683ac31714fce6ce1c6c6",
+        "https://github.com/ljharb/qs/security/advisories/GHSA-4mjr-xmp4-gh2g"
+      ]
+    },
+    {
       "id": "nodejs-goof:CVE-2025-5889:brace-expansion",
       "cve": "CVE-2025-5889",
       "package": "brace-expansion",
@@ -9101,25 +9122,6 @@
         "https://github.com/jshttp/on-headers/issues/15",
         "https://github.com/jshttp/on-headers/security/advisories/GHSA-76c9-3jph-rj3q"
       ]
-    },
-    {
-      "id": "nodejs-goof:CVE-2022-24304:mongoose",
-      "cve": "CVE-2022-24304",
-      "package": "mongoose",
-      "ecosystem": "npm",
-      "installed_version": "4.2.4",
-      "fixed_version": "5.13.15",
-      "app": "nodejs-goof",
-      "cvss": null,
-      "epss": null,
-      "in_kev": false,
-      "kev_date_added": null,
-      "priority_score": 0,
-      "priority_label": "low",
-      "summary": {
-        "en": "Rejected reason: DO NOT USE THIS CANDIDATE NUMBER. ConsultIDs: CVE-2022-2564. Reason: This candidate is a duplicate of CVE-2022-2564. Notes: All CVE users should reference CVE-2022-2564 instead of this candidate. All references and descriptions in this candidate have been removed to prevent accidental usage"
-      },
-      "references": []
     }
   ]
 }

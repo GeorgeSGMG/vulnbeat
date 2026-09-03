@@ -5,7 +5,7 @@ from pathlib import Path
 
 from vulnbeat.cli_runner import run_cli
 from vulnbeat.localization import LocalizedText
-from vulnbeat.models import Component, EpssScore, Finding, NvdEnrichment, ScanMatch, Vulnerability
+from vulnbeat.models import Component, EpssScore, Finding, NvdEnrichment, NvdVulnStatus, ScanMatch, Vulnerability
 
 logger = logging.getLogger(__name__)
 
@@ -76,6 +76,10 @@ def assemble_findings(
             continue
 
         enrichment = nvd_data.get(match.cve_id)
+        if enrichment is not None and enrichment.vuln_status == NvdVulnStatus.REJECTED:
+            logger.warning(f"Skipping {match.cve_id}: rejected by NVD")
+            continue
+
         if enrichment is None:
             logger.warning(f"No NVD enrichment available for {match.cve_id}; publishing without CVSS/summary/references from NVD")
             summary = LocalizedText(values={})

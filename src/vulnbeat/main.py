@@ -8,6 +8,7 @@ from vulnbeat.priority import calculate_finding_priority
 from vulnbeat.publication import write_report
 from vulnbeat.resilience import retry
 from vulnbeat.sbom import generate_sbom, parse_sbom
+from vulnbeat.settings import Settings
 from vulnbeat.sources.epss import fetch_epss
 from vulnbeat.sources.kev import fetch_kev
 from vulnbeat.sources.nvd import fetch_nvd
@@ -94,6 +95,8 @@ def scan_app(app: MonitoredApp) -> ScannedApp:
 
 
 if __name__ == "__main__":
+    settings = Settings.from_env()
+
     apps = load_apps()
     print(f"Loaded {len(apps)} apps from {APPS_CONFIG_PATH}.")
 
@@ -115,7 +118,7 @@ if __name__ == "__main__":
     dates_by_cve = fetch_kev()
     print(f"KEV downloaded: {len(dates_by_cve)} known exploited vulnerabilities.")
 
-    nvd_data = fetch_nvd(all_cve_ids)
+    nvd_data = fetch_nvd(all_cve_ids, api_key=settings.nvd_api_key)
     print(f"NVD enrichment fetched for {len(nvd_data)} of {len(all_cve_ids)} CVEs.")
 
     epss_scores = fetch_epss(all_cve_ids)

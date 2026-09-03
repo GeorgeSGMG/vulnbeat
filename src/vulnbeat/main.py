@@ -139,7 +139,7 @@ if __name__ == "__main__":
             prioritized_findings.append(PrioritizedFinding(finding=finding, priority=priority))
 
     source_counts = SourceCounts(
-        kev=len(dates_by_cve),
+        kev=sum(1 for pf in prioritized_findings if pf.finding.vulnerability.in_kev),
         epss=len(epss_scores),
         nvd=len(nvd_data),
     )

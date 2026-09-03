@@ -52,9 +52,9 @@ def write_report(
     report: Report = {
         "generated_at": datetime.now(timezone.utc).isoformat(),
         "sources": {
-            "kev": {"fetched": source_counts.kev > 0, "entries": source_counts.kev},
-            "epss": {"fetched": source_counts.epss > 0, "entries": source_counts.epss},
-            "nvd": {"fetched": source_counts.nvd > 0, "entries": source_counts.nvd},
+            "kev": {"fetched": True, "entries": source_counts.kev},
+            "epss": {"fetched": True, "entries": source_counts.epss},
+            "nvd": {"fetched": True, "entries": source_counts.nvd},
         },
         "apps": apps_data,
         "findings": findings_data,

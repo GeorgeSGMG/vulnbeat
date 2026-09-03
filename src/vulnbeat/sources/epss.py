@@ -1,7 +1,7 @@
 import requests
 
 from vulnbeat.models import EpssScore
-from vulnbeat.resilience import retry
+from vulnbeat.shared.resilience import retry
 
 EPSS_URL = "https://api.first.org/data/v1/epss"
 

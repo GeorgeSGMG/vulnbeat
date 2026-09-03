@@ -6,9 +6,9 @@ from vulnbeat.inventory import PARSER_REGISTRY, extract_scopes
 from vulnbeat.models import Ecosystem, MonitoredApp, PrioritizedFinding, ScannedApp, Source
 from vulnbeat.priority import calculate_finding_priority
 from vulnbeat.publication import write_report
-from vulnbeat.resilience import retry
 from vulnbeat.sbom import generate_sbom, parse_sbom
 from vulnbeat.settings import Settings
+from vulnbeat.shared.resilience import retry
 from vulnbeat.sources.epss import fetch_epss
 from vulnbeat.sources.kev import fetch_kev
 from vulnbeat.sources.nvd import fetch_nvd

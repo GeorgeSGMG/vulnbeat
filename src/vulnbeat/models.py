@@ -1,7 +1,7 @@
 from dataclasses import dataclass
 from enum import Enum
 
-from vulnbeat.localization import LocalizedText
+from vulnbeat.shared.localization import LocalizedText
 
 
 # --- Enums ---

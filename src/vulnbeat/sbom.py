@@ -2,8 +2,8 @@ import json
 import tempfile
 from pathlib import Path
 
-from vulnbeat.cli_runner import run_cli
 from vulnbeat.models import Component, Ecosystem, Scope
+from vulnbeat.shared.cli_runner import run_cli
 
 SBOM_MANIFEST_FILENAMES = {
     Ecosystem.PYPI: "requirements.txt",

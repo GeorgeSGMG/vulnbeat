@@ -2,9 +2,9 @@ import time
 
 import requests
 
-from vulnbeat.localization import LocalizedText
 from vulnbeat.models import NvdEnrichment, NvdVulnStatus
-from vulnbeat.resilience import retry
+from vulnbeat.shared.localization import LocalizedText
+from vulnbeat.shared.resilience import retry
 
 NVD_URL = "https://services.nvd.nist.gov/rest/json/cves/2.0"
 

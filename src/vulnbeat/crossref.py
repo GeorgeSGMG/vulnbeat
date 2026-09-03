@@ -3,9 +3,9 @@ import logging
 import tempfile
 from pathlib import Path
 
-from vulnbeat.cli_runner import run_cli
-from vulnbeat.localization import LocalizedText
 from vulnbeat.models import Component, EpssScore, Finding, NvdEnrichment, NvdVulnStatus, ScanMatch, Vulnerability
+from vulnbeat.shared.cli_runner import run_cli
+from vulnbeat.shared.localization import LocalizedText
 
 logger = logging.getLogger(__name__)
 

@@ -1,6 +1,6 @@
 import requests
 
-from vulnbeat.resilience import retry
+from vulnbeat.shared.resilience import retry
 
 KEV_URL = "https://www.cisa.gov/sites/default/files/feeds/known_exploited_vulnerabilities.json"
 

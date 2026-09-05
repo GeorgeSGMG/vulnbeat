@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-09-04T10:56:12.625614+00:00",
+  "generated_at": "2026-09-05T10:15:09.555441+00:00",
   "sources": {
     "kev": {
       "fetched": true,
@@ -7,11 +7,11 @@
     },
     "epss": {
       "fetched": true,
-      "entries": 255
+      "entries": 254
     },
     "nvd": {
       "fetched": true,
-      "entries": 256
+      "entries": 255
     }
   },
   "apps": [
@@ -427,35 +427,6 @@
       ]
     },
     {
-      "id": "pygoat:CVE-2023-36053:django",
-      "cve": "CVE-2023-36053",
-      "package": "django",
-      "ecosystem": "PyPI",
-      "installed_version": "4.2",
-      "fixed_version": "4.2.3",
-      "app": "pygoat",
-      "cvss": 7.5,
-      "epss": 0.02978,
-      "in_kev": false,
-      "kev_date_added": null,
-      "priority_score": 21,
-      "priority_label": "medium",
-      "summary": {
-        "en": "In Django 3.2 before 3.2.20, 4 before 4.1.10, and 4.2 before 4.2.3, EmailValidator and URLValidator are subject to a potential ReDoS (regular expression denial of service) attack via a very large number of domain name labels of emails and URLs."
-      },
-      "references": [
-        "https://docs.djangoproject.com/en/4.2/releases/security/",
-        "https://groups.google.com/forum/#%21forum/django-announce",
-        "https://lists.debian.org/debian-lts-announce/2023/07/msg00022.html",
-        "https://lists.fedoraproject.org/archives/list/package-announce%40lists.fedoraproject.org/message/NRDGTUN4LTI6HG4TWR3JYLSFVXPZT42A/",
-        "https://lists.fedoraproject.org/archives/list/package-announce%40lists.fedoraproject.org/message/XG5DYKPNDCEHJQ3TKPJQO7QGSR4FAYMS/",
-        "https://lists.fedoraproject.org/archives/list/package-announce%40lists.fedoraproject.org/message/ZQJOMNRMVPCN5WMIZ7YSX5LQ7IR2NY4D/",
-        "https://www.debian.org/security/2023/dsa-5465",
-        "https://www.djangoproject.com/weblog/2023/jul/03/security-releases/",
-        "https://lists.fedoraproject.org/archives/list/package-announce@lists.fedoraproject.org/message/ZQJOMNRMVPCN5WMIZ7YSX5LQ7IR2NY4D/"
-      ]
-    },
-    {
       "id": "pygoat:CVE-2026-21441:urllib3",
       "cve": "CVE-2026-21441",
       "package": "urllib3",
@@ -464,7 +435,7 @@
       "fixed_version": "2.6.3",
       "app": "pygoat",
       "cvss": 7.5,
-      "epss": 0.02774,
+      "epss": 0.02965,
       "in_kev": false,
       "kev_date_added": null,
       "priority_score": 21,
@@ -592,6 +563,35 @@
         "https://access.redhat.com/security/cve/CVE-2026-21441",
         "https://bugzilla.redhat.com/show_bug.cgi?id=2427726",
         "https://security.access.redhat.com/data/csaf/v2/vex/2026/cve-2026-21441.json"
+      ]
+    },
+    {
+      "id": "pygoat:CVE-2023-36053:django",
+      "cve": "CVE-2023-36053",
+      "package": "django",
+      "ecosystem": "PyPI",
+      "installed_version": "4.2",
+      "fixed_version": "4.2.3",
+      "app": "pygoat",
+      "cvss": 7.5,
+      "epss": 0.02978,
+      "in_kev": false,
+      "kev_date_added": null,
+      "priority_score": 21,
+      "priority_label": "medium",
+      "summary": {
+        "en": "In Django 3.2 before 3.2.20, 4 before 4.1.10, and 4.2 before 4.2.3, EmailValidator and URLValidator are subject to a potential ReDoS (regular expression denial of service) attack via a very large number of domain name labels of emails and URLs."
+      },
+      "references": [
+        "https://docs.djangoproject.com/en/4.2/releases/security/",
+        "https://groups.google.com/forum/#%21forum/django-announce",
+        "https://lists.debian.org/debian-lts-announce/2023/07/msg00022.html",
+        "https://lists.fedoraproject.org/archives/list/package-announce%40lists.fedoraproject.org/message/NRDGTUN4LTI6HG4TWR3JYLSFVXPZT42A/",
+        "https://lists.fedoraproject.org/archives/list/package-announce%40lists.fedoraproject.org/message/XG5DYKPNDCEHJQ3TKPJQO7QGSR4FAYMS/",
+        "https://lists.fedoraproject.org/archives/list/package-announce%40lists.fedoraproject.org/message/ZQJOMNRMVPCN5WMIZ7YSX5LQ7IR2NY4D/",
+        "https://www.debian.org/security/2023/dsa-5465",
+        "https://www.djangoproject.com/weblog/2023/jul/03/security-releases/",
+        "https://lists.fedoraproject.org/archives/list/package-announce@lists.fedoraproject.org/message/ZQJOMNRMVPCN5WMIZ7YSX5LQ7IR2NY4D/"
       ]
     },
     {
@@ -1371,28 +1371,6 @@
       ]
     },
     {
-      "id": "pygoat:CVE-2025-66471:urllib3",
-      "cve": "CVE-2025-66471",
-      "package": "urllib3",
-      "ecosystem": "PyPI",
-      "installed_version": "1.26.9",
-      "fixed_version": "2.6.0",
-      "app": "pygoat",
-      "cvss": 7.5,
-      "epss": 0.00682,
-      "in_kev": false,
-      "kev_date_added": null,
-      "priority_score": 19,
-      "priority_label": "low",
-      "summary": {
-        "en": "urllib3 is a user-friendly HTTP client library for Python. Starting in version 1.0 and prior to 2.6.0, the Streaming API improperly handles highly compressed data. urllib3's streaming API is designed for the efficient handling of large HTTP responses by reading the content in chunks, rather than loading the entire response body into memory at once. When streaming a compressed response, urllib3 can perform decoding or decompression based on the HTTP Content-Encoding header (e.g., gzip, deflate, br, or zstd). The library must read compressed data from the network and decompress it until the requested chunk size is met. Any resulting decompressed data that exceeds the requested amount is held in an internal buffer for the next read operation. The decompression logic could cause urllib3 to fully decode a small amount of highly compressed data in a single operation. This can result in excessive resource consumption (high CPU usage and massive memory allocation for the decompressed data."
-      },
-      "references": [
-        "https://github.com/urllib3/urllib3/commit/c19571de34c47de3a766541b041637ba5f716ed7",
-        "https://github.com/urllib3/urllib3/security/advisories/GHSA-2xpw-w6gg-jr37"
-      ]
-    },
-    {
       "id": "pygoat:CVE-2025-66418:urllib3",
       "cve": "CVE-2025-66418",
       "package": "urllib3",
@@ -1412,6 +1390,28 @@
       "references": [
         "https://github.com/urllib3/urllib3/commit/24d7b67eac89f94e11003424bcf0d8f7b72222a8",
         "https://github.com/urllib3/urllib3/security/advisories/GHSA-gm62-xv2j-4w53"
+      ]
+    },
+    {
+      "id": "pygoat:CVE-2025-66471:urllib3",
+      "cve": "CVE-2025-66471",
+      "package": "urllib3",
+      "ecosystem": "PyPI",
+      "installed_version": "1.26.9",
+      "fixed_version": "2.6.0",
+      "app": "pygoat",
+      "cvss": 7.5,
+      "epss": 0.00682,
+      "in_kev": false,
+      "kev_date_added": null,
+      "priority_score": 19,
+      "priority_label": "low",
+      "summary": {
+        "en": "urllib3 is a user-friendly HTTP client library for Python. Starting in version 1.0 and prior to 2.6.0, the Streaming API improperly handles highly compressed data. urllib3's streaming API is designed for the efficient handling of large HTTP responses by reading the content in chunks, rather than loading the entire response body into memory at once. When streaming a compressed response, urllib3 can perform decoding or decompression based on the HTTP Content-Encoding header (e.g., gzip, deflate, br, or zstd). The library must read compressed data from the network and decompress it until the requested chunk size is met. Any resulting decompressed data that exceeds the requested amount is held in an internal buffer for the next read operation. The decompression logic could cause urllib3 to fully decode a small amount of highly compressed data in a single operation. This can result in excessive resource consumption (high CPU usage and massive memory allocation for the decompressed data."
+      },
+      "references": [
+        "https://github.com/urllib3/urllib3/commit/c19571de34c47de3a766541b041637ba5f716ed7",
+        "https://github.com/urllib3/urllib3/security/advisories/GHSA-2xpw-w6gg-jr37"
       ]
     },
     {
@@ -2130,30 +2130,6 @@
       ]
     },
     {
-      "id": "pygoat:CVE-2026-1285:django",
-      "cve": "CVE-2026-1285",
-      "package": "django",
-      "ecosystem": "PyPI",
-      "installed_version": "4.2",
-      "fixed_version": "4.2.28",
-      "app": "pygoat",
-      "cvss": 7.5,
-      "epss": 0.01032,
-      "in_kev": false,
-      "kev_date_added": null,
-      "priority_score": 20,
-      "priority_label": "medium",
-      "summary": {
-        "en": "An issue was discovered in 6.0 before 6.0.2, 5.2 before 5.2.11, and 4.2 before 4.2.28.\n`django.utils.text.Truncator.chars()` and `Truncator.words()` methods (with `html=True`) and the `truncatechars_html` and `truncatewords_html` template filters allow a remote attacker to cause a potential denial-of-service via crafted inputs containing a large number of unmatched HTML end tags.\nEarlier, unsupported Django series (such as 5.0.x, 4.1.x, and 3.2.x) were not evaluated and may also be affected.\nDjango would like to thank Seokchan Yoon for reporting this issue.",
-        "es": "Se descubri\u00f3 un problema en 6.0 anterior a 6.0.2, 5.2 anterior a 5.2.11 y 4.2 anterior a 4.2.28.\nLos m\u00e9todos 'django.utils.text.Truncator.chars()' y 'Truncator.words()' (con 'html=True') y los filtros de plantilla 'truncatechars_html' y 'truncatewords_html' permiten a un atacante remoto causar una potencial denegaci\u00f3n de servicio mediante entradas manipuladas que contienen un gran n\u00famero de etiquetas de cierre HTML no coincidentes.\nSeries de Django anteriores y sin soporte (como 5.0.x, 4.1.x y 3.2.x) no fueron evaluadas y tambi\u00e9n pueden verse afectadas.\nDjango desea agradecer a Seokchan Yoon por informar de este problema."
-      },
-      "references": [
-        "https://docs.djangoproject.com/en/dev/releases/security/",
-        "https://groups.google.com/g/django-announce",
-        "https://www.djangoproject.com/weblog/2026/feb/03/security-releases/"
-      ]
-    },
-    {
       "id": "pygoat:CVE-2025-14550:django",
       "cve": "CVE-2025-14550",
       "package": "django",
@@ -2178,27 +2154,27 @@
       ]
     },
     {
-      "id": "pygoat:CVE-2026-59199:pillow",
-      "cve": "CVE-2026-59199",
-      "package": "pillow",
+      "id": "pygoat:CVE-2026-1285:django",
+      "cve": "CVE-2026-1285",
+      "package": "django",
       "ecosystem": "PyPI",
-      "installed_version": "9.4.0",
-      "fixed_version": "12.3.0",
+      "installed_version": "4.2",
+      "fixed_version": "4.2.28",
       "app": "pygoat",
       "cvss": 7.5,
-      "epss": 0.00385,
+      "epss": 0.01032,
       "in_kev": false,
       "kev_date_added": null,
-      "priority_score": 19,
-      "priority_label": "low",
+      "priority_score": 20,
+      "priority_label": "medium",
       "summary": {
-        "en": "Pillow is a Python imaging library. Prior to 12.3.0, Pillow public image coordinate APIs can trigger a native heap out-of-bounds write when given coordinates near the signed 32-bit integer limits in Image.paste(), Image.crop(), or Image.alpha_composite(). This issue is fixed in version 12.3.0."
+        "en": "An issue was discovered in 6.0 before 6.0.2, 5.2 before 5.2.11, and 4.2 before 4.2.28.\n`django.utils.text.Truncator.chars()` and `Truncator.words()` methods (with `html=True`) and the `truncatechars_html` and `truncatewords_html` template filters allow a remote attacker to cause a potential denial-of-service via crafted inputs containing a large number of unmatched HTML end tags.\nEarlier, unsupported Django series (such as 5.0.x, 4.1.x, and 3.2.x) were not evaluated and may also be affected.\nDjango would like to thank Seokchan Yoon for reporting this issue.",
+        "es": "Se descubri\u00f3 un problema en 6.0 anterior a 6.0.2, 5.2 anterior a 5.2.11 y 4.2 anterior a 4.2.28.\nLos m\u00e9todos 'django.utils.text.Truncator.chars()' y 'Truncator.words()' (con 'html=True') y los filtros de plantilla 'truncatechars_html' y 'truncatewords_html' permiten a un atacante remoto causar una potencial denegaci\u00f3n de servicio mediante entradas manipuladas que contienen un gran n\u00famero de etiquetas de cierre HTML no coincidentes.\nSeries de Django anteriores y sin soporte (como 5.0.x, 4.1.x y 3.2.x) no fueron evaluadas y tambi\u00e9n pueden verse afectadas.\nDjango desea agradecer a Seokchan Yoon por informar de este problema."
       },
       "references": [
-        "https://github.com/python-pillow/Pillow/commit/ceefc348eb3c3844c7f9796ef2cc3a7dd5fbba7b",
-        "https://github.com/python-pillow/Pillow/pull/9703",
-        "https://github.com/python-pillow/Pillow/releases/tag/12.3.0",
-        "https://github.com/python-pillow/Pillow/security/advisories/GHSA-6r8x-57c9-28j4"
+        "https://docs.djangoproject.com/en/dev/releases/security/",
+        "https://groups.google.com/g/django-announce",
+        "https://www.djangoproject.com/weblog/2026/feb/03/security-releases/"
       ]
     },
     {
@@ -2223,6 +2199,30 @@
         "https://github.com/python-pillow/Pillow/pull/9715",
         "https://github.com/python-pillow/Pillow/releases/tag/12.3.0",
         "https://github.com/python-pillow/Pillow/security/advisories/GHSA-9hw9-ch79-4vh6"
+      ]
+    },
+    {
+      "id": "pygoat:CVE-2026-59199:pillow",
+      "cve": "CVE-2026-59199",
+      "package": "pillow",
+      "ecosystem": "PyPI",
+      "installed_version": "9.4.0",
+      "fixed_version": "12.3.0",
+      "app": "pygoat",
+      "cvss": 7.5,
+      "epss": 0.00385,
+      "in_kev": false,
+      "kev_date_added": null,
+      "priority_score": 19,
+      "priority_label": "low",
+      "summary": {
+        "en": "Pillow is a Python imaging library. Prior to 12.3.0, Pillow public image coordinate APIs can trigger a native heap out-of-bounds write when given coordinates near the signed 32-bit integer limits in Image.paste(), Image.crop(), or Image.alpha_composite(). This issue is fixed in version 12.3.0."
+      },
+      "references": [
+        "https://github.com/python-pillow/Pillow/commit/ceefc348eb3c3844c7f9796ef2cc3a7dd5fbba7b",
+        "https://github.com/python-pillow/Pillow/pull/9703",
+        "https://github.com/python-pillow/Pillow/releases/tag/12.3.0",
+        "https://github.com/python-pillow/Pillow/security/advisories/GHSA-6r8x-57c9-28j4"
       ]
     },
     {
@@ -2702,29 +2702,6 @@
         "https://docs.djangoproject.com/en/dev/releases/security/",
         "https://groups.google.com/g/django-announce",
         "https://www.djangoproject.com/weblog/2026/jul/07/security-releases/"
-      ]
-    },
-    {
-      "id": "pygoat:CVE-2026-69249:cryptography",
-      "cve": "CVE-2026-69249",
-      "package": "cryptography",
-      "ecosystem": "PyPI",
-      "installed_version": "39.0.1",
-      "fixed_version": "49.0.0",
-      "app": "pygoat",
-      "cvss": null,
-      "epss": 0.00192,
-      "in_kev": false,
-      "kev_date_added": null,
-      "priority_score": 0,
-      "priority_label": "low",
-      "summary": {
-        "en": "python-cryptography is a package designed to expose cryptographic primitives and recipes to Python developers. Prior to 49.0.0, when resolving invalid certificate chains that include duplicate copies of self-signed certificates, the processing recursively invokes the same candidate, leading to an exponential blowup. Although the limitation that the chain depth cannot exceed a specified maximum depth prevents unbounded recursion and guarantees termination, an attacker-controlled certificate chain can lead the processing to easily take more than 5s to reject in testing. This amplification could form the basis for a resource exhaustion denial of service attack. The core issue arises in the recursive nature of build_chain_inner, which does not de-duplicate against previously analyzed candidates. As the correctness of validation is not affected, the integrity of a system cannot be compromised through this vector, only its availability. This issue is fixed in 49.0.0."
-      },
-      "references": [
-        "https://github.com/pyca/cryptography/commit/4a12cf49675a184e47f912b00b04f3a629283582",
-        "https://github.com/pyca/cryptography/pull/14960",
-        "https://github.com/pyca/cryptography/security/advisories/GHSA-jwv3-5hgf-82ww"
       ]
     },
     {
@@ -5121,6 +5098,7 @@
         "https://access.redhat.com/errata/RHSA-2026:56854",
         "https://access.redhat.com/errata/RHSA-2026:56912",
         "https://access.redhat.com/errata/RHSA-2026:59833",
+        "https://access.redhat.com/errata/RHSA-2026:60023",
         "https://access.redhat.com/errata/RHSA-2026:8483",
         "https://access.redhat.com/errata/RHSA-2026:8484",
         "https://access.redhat.com/errata/RHSA-2026:8490",
@@ -5222,6 +5200,7 @@
         "https://access.redhat.com/errata/RHSA-2026:56854",
         "https://access.redhat.com/errata/RHSA-2026:56912",
         "https://access.redhat.com/errata/RHSA-2026:59833",
+        "https://access.redhat.com/errata/RHSA-2026:60023",
         "https://access.redhat.com/errata/RHSA-2026:8483",
         "https://access.redhat.com/errata/RHSA-2026:8484",
         "https://access.redhat.com/errata/RHSA-2026:8490",
@@ -5323,6 +5302,7 @@
         "https://access.redhat.com/errata/RHSA-2026:56854",
         "https://access.redhat.com/errata/RHSA-2026:56912",
         "https://access.redhat.com/errata/RHSA-2026:59833",
+        "https://access.redhat.com/errata/RHSA-2026:60023",
         "https://access.redhat.com/errata/RHSA-2026:8483",
         "https://access.redhat.com/errata/RHSA-2026:8484",
         "https://access.redhat.com/errata/RHSA-2026:8490",
@@ -7860,6 +7840,7 @@
         "https://access.redhat.com/errata/RHSA-2026:60477",
         "https://access.redhat.com/errata/RHSA-2026:60520",
         "https://access.redhat.com/errata/RHSA-2026:62260",
+        "https://access.redhat.com/errata/RHSA-2026:63355",
         "https://access.redhat.com/security/cve/CVE-2026-12143",
         "https://bugzilla.redhat.com/show_bug.cgi?id=2488480",
         "https://security.access.redhat.com/data/csaf/v2/vex/2026/cve-2026-12143.json"

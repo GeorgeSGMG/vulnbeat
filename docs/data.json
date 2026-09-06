@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-09-05T10:15:09.555441+00:00",
+  "generated_at": "2026-09-06T10:35:53.857662+00:00",
   "sources": {
     "kev": {
       "fetched": true,
@@ -1056,6 +1056,34 @@
       ]
     },
     {
+      "id": "pygoat:CVE-2023-41164:django",
+      "cve": "CVE-2023-41164",
+      "package": "django",
+      "ecosystem": "PyPI",
+      "installed_version": "4.2",
+      "fixed_version": "4.2.5",
+      "app": "pygoat",
+      "cvss": 7.5,
+      "epss": 0.01519,
+      "in_kev": false,
+      "kev_date_added": null,
+      "priority_score": 20,
+      "priority_label": "medium",
+      "summary": {
+        "en": "In Django 3.2 before 3.2.21, 4.1 before 4.1.11, and 4.2 before 4.2.5, django.utils.encoding.uri_to_iri() is subject to a potential DoS (denial of service) attack via certain inputs with a very large number of Unicode characters.",
+        "es": "En Django 3.2 anterior a 3.2.21, 4.1 anterior a 4.1.11 y 4.2 anterior a 4.2.5, django.utils.encoding.uri_to_iri() est\u00e1 sujeto a un posible ataque DoS (denegaci\u00f3n de servicio) a trav\u00e9s de ciertas entradas con un n\u00famero muy grande de caracteres Unicode."
+      },
+      "references": [
+        "https://docs.djangoproject.com/en/4.2/releases/security/",
+        "https://groups.google.com/forum/#%21forum/django-announce",
+        "https://lists.fedoraproject.org/archives/list/package-announce%40lists.fedoraproject.org/message/HJFRPUHDYJHBH3KYHSPGULQM4JN7BMSU/",
+        "https://lists.fedoraproject.org/archives/list/package-announce%40lists.fedoraproject.org/message/ZQJOMNRMVPCN5WMIZ7YSX5LQ7IR2NY4D/",
+        "https://security.netapp.com/advisory/ntap-20231214-0002/",
+        "https://www.djangoproject.com/weblog/2023/sep/04/security-releases/",
+        "https://lists.fedoraproject.org/archives/list/package-announce@lists.fedoraproject.org/message/ZQJOMNRMVPCN5WMIZ7YSX5LQ7IR2NY4D/"
+      ]
+    },
+    {
       "id": "pygoat:CVE-2024-53907:django",
       "cve": "CVE-2024-53907",
       "package": "django",
@@ -1117,7 +1145,7 @@
       "fixed_version": "4.2.14",
       "app": "pygoat",
       "cvss": 4.3,
-      "epss": 0.01,
+      "epss": 0.01008,
       "in_kev": false,
       "kev_date_added": null,
       "priority_score": 12,
@@ -1156,34 +1184,6 @@
         "https://lists.fedoraproject.org/archives/list/package-announce%40lists.fedoraproject.org/message/4XLPUT3VK4GQ6EVY525TT2QNUIXNRU5M/",
         "https://pillow.readthedocs.io/en/stable/releasenotes/10.3.0.html#security",
         "https://lists.fedoraproject.org/archives/list/package-announce@lists.fedoraproject.org/message/4XLPUT3VK4GQ6EVY525TT2QNUIXNRU5M/"
-      ]
-    },
-    {
-      "id": "pygoat:CVE-2023-41164:django",
-      "cve": "CVE-2023-41164",
-      "package": "django",
-      "ecosystem": "PyPI",
-      "installed_version": "4.2",
-      "fixed_version": "4.2.5",
-      "app": "pygoat",
-      "cvss": 7.5,
-      "epss": 0.01284,
-      "in_kev": false,
-      "kev_date_added": null,
-      "priority_score": 20,
-      "priority_label": "medium",
-      "summary": {
-        "en": "In Django 3.2 before 3.2.21, 4.1 before 4.1.11, and 4.2 before 4.2.5, django.utils.encoding.uri_to_iri() is subject to a potential DoS (denial of service) attack via certain inputs with a very large number of Unicode characters.",
-        "es": "En Django 3.2 anterior a 3.2.21, 4.1 anterior a 4.1.11 y 4.2 anterior a 4.2.5, django.utils.encoding.uri_to_iri() est\u00e1 sujeto a un posible ataque DoS (denegaci\u00f3n de servicio) a trav\u00e9s de ciertas entradas con un n\u00famero muy grande de caracteres Unicode."
-      },
-      "references": [
-        "https://docs.djangoproject.com/en/4.2/releases/security/",
-        "https://groups.google.com/forum/#%21forum/django-announce",
-        "https://lists.fedoraproject.org/archives/list/package-announce%40lists.fedoraproject.org/message/HJFRPUHDYJHBH3KYHSPGULQM4JN7BMSU/",
-        "https://lists.fedoraproject.org/archives/list/package-announce%40lists.fedoraproject.org/message/ZQJOMNRMVPCN5WMIZ7YSX5LQ7IR2NY4D/",
-        "https://security.netapp.com/advisory/ntap-20231214-0002/",
-        "https://www.djangoproject.com/weblog/2023/sep/04/security-releases/",
-        "https://lists.fedoraproject.org/archives/list/package-announce@lists.fedoraproject.org/message/ZQJOMNRMVPCN5WMIZ7YSX5LQ7IR2NY4D/"
       ]
     },
     {
@@ -1576,7 +1576,7 @@
       "fixed_version": "4.2.14",
       "app": "pygoat",
       "cvss": 5.3,
-      "epss": 0.00882,
+      "epss": 0.00889,
       "in_kev": false,
       "kev_date_added": null,
       "priority_score": 14,
@@ -2003,29 +2003,6 @@
       ]
     },
     {
-      "id": "pygoat:CVE-2026-54060:pillow",
-      "cve": "CVE-2026-54060",
-      "package": "pillow",
-      "ecosystem": "PyPI",
-      "installed_version": "9.4.0",
-      "fixed_version": "12.3.0",
-      "app": "pygoat",
-      "cvss": 7.5,
-      "epss": 0.00418,
-      "in_kev": false,
-      "kev_date_added": null,
-      "priority_score": 19,
-      "priority_label": "low",
-      "summary": {
-        "en": "Pillow is a Python imaging library. Prior to 12.3.0, PIL/FontFile.py FontFile.compile() assembled per-glyph images into a combined bitmap with Image.new(\"1\", (xsize, ysize)) without calling Image._decompression_bomb_check(), allowing a font to trigger excessive allocation during conversion or saving. This issue is fixed in version 12.3.0."
-      },
-      "references": [
-        "https://github.com/python-pillow/Pillow/blob/main/docs/releasenotes/12.3.0.rst",
-        "https://github.com/python-pillow/Pillow/commit/0a263e6264aa5399988d9acd3bbfbca2ca3ec77d",
-        "https://github.com/python-pillow/Pillow/security/advisories/GHSA-5x94-69rx-g8h2"
-      ]
-    },
-    {
       "id": "pygoat:CVE-2026-55380:pillow",
       "cve": "CVE-2026-55380",
       "package": "pillow",
@@ -2046,6 +2023,29 @@
         "https://github.com/python-pillow/Pillow/blob/main/docs/releasenotes/12.3.0.rst",
         "https://github.com/python-pillow/Pillow/commit/f39b0ae6624eb2d7c5c5d651d9bb5fdbd96a8675",
         "https://github.com/python-pillow/Pillow/security/advisories/GHSA-phj9-mv4w-65pm"
+      ]
+    },
+    {
+      "id": "pygoat:CVE-2026-54060:pillow",
+      "cve": "CVE-2026-54060",
+      "package": "pillow",
+      "ecosystem": "PyPI",
+      "installed_version": "9.4.0",
+      "fixed_version": "12.3.0",
+      "app": "pygoat",
+      "cvss": 7.5,
+      "epss": 0.00418,
+      "in_kev": false,
+      "kev_date_added": null,
+      "priority_score": 19,
+      "priority_label": "low",
+      "summary": {
+        "en": "Pillow is a Python imaging library. Prior to 12.3.0, PIL/FontFile.py FontFile.compile() assembled per-glyph images into a combined bitmap with Image.new(\"1\", (xsize, ysize)) without calling Image._decompression_bomb_check(), allowing a font to trigger excessive allocation during conversion or saving. This issue is fixed in version 12.3.0."
+      },
+      "references": [
+        "https://github.com/python-pillow/Pillow/blob/main/docs/releasenotes/12.3.0.rst",
+        "https://github.com/python-pillow/Pillow/commit/0a263e6264aa5399988d9acd3bbfbca2ca3ec77d",
+        "https://github.com/python-pillow/Pillow/security/advisories/GHSA-5x94-69rx-g8h2"
       ]
     },
     {
@@ -2178,30 +2178,6 @@
       ]
     },
     {
-      "id": "pygoat:CVE-2026-59205:pillow",
-      "cve": "CVE-2026-59205",
-      "package": "pillow",
-      "ecosystem": "PyPI",
-      "installed_version": "9.4.0",
-      "fixed_version": "12.3.0",
-      "app": "pygoat",
-      "cvss": 7.5,
-      "epss": 0.00385,
-      "in_kev": false,
-      "kev_date_added": null,
-      "priority_score": 19,
-      "priority_label": "low",
-      "summary": {
-        "en": "Pillow is a Python imaging library. Prior to 12.3.0, Pillow's ImageCms.ImageCmsTransform.apply(im, imOut) API can trigger controlled native heap corruption when the caller supplies an output image whose mode does not match the transform's declared output mode. This issue is fixed in version 12.3.0."
-      },
-      "references": [
-        "https://github.com/python-pillow/Pillow/commit/a9ffc42bedf4fc0a7ef8d6486e7f9e81e3397721",
-        "https://github.com/python-pillow/Pillow/pull/9715",
-        "https://github.com/python-pillow/Pillow/releases/tag/12.3.0",
-        "https://github.com/python-pillow/Pillow/security/advisories/GHSA-9hw9-ch79-4vh6"
-      ]
-    },
-    {
       "id": "pygoat:CVE-2026-59199:pillow",
       "cve": "CVE-2026-59199",
       "package": "pillow",
@@ -2247,6 +2223,30 @@
         "https://github.com/python-pillow/Pillow/pull/9718",
         "https://github.com/python-pillow/Pillow/releases/tag/12.3.0",
         "https://github.com/python-pillow/Pillow/security/advisories/GHSA-jjj6-mw9f-p565"
+      ]
+    },
+    {
+      "id": "pygoat:CVE-2026-59205:pillow",
+      "cve": "CVE-2026-59205",
+      "package": "pillow",
+      "ecosystem": "PyPI",
+      "installed_version": "9.4.0",
+      "fixed_version": "12.3.0",
+      "app": "pygoat",
+      "cvss": 7.5,
+      "epss": 0.00385,
+      "in_kev": false,
+      "kev_date_added": null,
+      "priority_score": 19,
+      "priority_label": "low",
+      "summary": {
+        "en": "Pillow is a Python imaging library. Prior to 12.3.0, Pillow's ImageCms.ImageCmsTransform.apply(im, imOut) API can trigger controlled native heap corruption when the caller supplies an output image whose mode does not match the transform's declared output mode. This issue is fixed in version 12.3.0."
+      },
+      "references": [
+        "https://github.com/python-pillow/Pillow/commit/a9ffc42bedf4fc0a7ef8d6486e7f9e81e3397721",
+        "https://github.com/python-pillow/Pillow/pull/9715",
+        "https://github.com/python-pillow/Pillow/releases/tag/12.3.0",
+        "https://github.com/python-pillow/Pillow/security/advisories/GHSA-9hw9-ch79-4vh6"
       ]
     },
     {
@@ -2380,7 +2380,7 @@
       "fixed_version": "3.1.5",
       "app": "pygoat",
       "cvss": 5.3,
-      "epss": 0.00451,
+      "epss": 0.00482,
       "in_kev": false,
       "kev_date_added": null,
       "priority_score": 14,
@@ -2462,28 +2462,6 @@
       ]
     },
     {
-      "id": "pygoat:CVE-2026-71491:sqlparse",
-      "cve": "CVE-2026-71491",
-      "package": "sqlparse",
-      "ecosystem": "PyPI",
-      "installed_version": "0.3.1",
-      "fixed_version": "0.6.0",
-      "app": "pygoat",
-      "cvss": null,
-      "epss": 0.00263,
-      "in_kev": false,
-      "kev_date_added": null,
-      "priority_score": 0,
-      "priority_label": "low",
-      "summary": {
-        "en": "sqlparse is a non-validating SQL parser module for Python. Prior to 0.6.0, group_comments in sqlparse/engine/grouping.py repeatedly rescans comment-only statements before the MAX_GROUPING_TOKENS guard, causing quadratic CPU consumption through sqlparse.parse() and sqlparse.format(sql, strip_comments=True). This issue is fixed in version 0.6.0."
-      },
-      "references": [
-        "https://github.com/andialbrecht/sqlparse/commit/ef2012a5eeb491e604dea2b00d516904a3830c87",
-        "https://github.com/andialbrecht/sqlparse/security/advisories/GHSA-f2ff-p2ww-7p4p"
-      ]
-    },
-    {
       "id": "pygoat:CVE-2026-54284:sqlparse",
       "cve": "CVE-2026-54284",
       "package": "sqlparse",
@@ -2503,6 +2481,28 @@
       "references": [
         "https://github.com/andialbrecht/sqlparse/commit/939b129e24c0ad5d51368b1aa72fffcaca76f06f",
         "https://github.com/andialbrecht/sqlparse/security/advisories/GHSA-pwgv-4x5q-6m9f"
+      ]
+    },
+    {
+      "id": "pygoat:CVE-2026-71491:sqlparse",
+      "cve": "CVE-2026-71491",
+      "package": "sqlparse",
+      "ecosystem": "PyPI",
+      "installed_version": "0.3.1",
+      "fixed_version": "0.6.0",
+      "app": "pygoat",
+      "cvss": null,
+      "epss": 0.00263,
+      "in_kev": false,
+      "kev_date_added": null,
+      "priority_score": 0,
+      "priority_label": "low",
+      "summary": {
+        "en": "sqlparse is a non-validating SQL parser module for Python. Prior to 0.6.0, group_comments in sqlparse/engine/grouping.py repeatedly rescans comment-only statements before the MAX_GROUPING_TOKENS guard, causing quadratic CPU consumption through sqlparse.parse() and sqlparse.format(sql, strip_comments=True). This issue is fixed in version 0.6.0."
+      },
+      "references": [
+        "https://github.com/andialbrecht/sqlparse/commit/ef2012a5eeb491e604dea2b00d516904a3830c87",
+        "https://github.com/andialbrecht/sqlparse/security/advisories/GHSA-f2ff-p2ww-7p4p"
       ]
     },
     {
@@ -3564,32 +3564,6 @@
       ]
     },
     {
-      "id": "nodejs-goof:CVE-2014-3744:st",
-      "cve": "CVE-2014-3744",
-      "package": "st",
-      "ecosystem": "npm",
-      "installed_version": "0.2.4",
-      "fixed_version": "0.2.5",
-      "app": "nodejs-goof",
-      "cvss": 7.5,
-      "epss": 0.34012,
-      "in_kev": false,
-      "kev_date_added": null,
-      "priority_score": 44,
-      "priority_label": "medium",
-      "summary": {
-        "en": "Directory traversal vulnerability in the st module before 0.2.5 for Node.js allows remote attackers to read arbitrary files via a %2e%2e (encoded dot dot) in an unspecified path.",
-        "es": "Vulnerabilidad de salto de directorio en el m\u00c3\u00b3dulo st en versiones anteriores a la 0.2.5 para Node.js permite que atacantes remotos lean archivos arbitrarios mediante un %2e%2e (punto punto de manera codificada) en una ruta no especificada."
-      },
-      "references": [
-        "http://www.openwall.com/lists/oss-security/2014/05/13/1",
-        "http://www.openwall.com/lists/oss-security/2014/05/15/2",
-        "http://www.securityfocus.com/bid/67389",
-        "https://github.com/isaacs/st",
-        "https://nodesecurity.io/advisories/st_directory_traversal"
-      ]
-    },
-    {
       "id": "nodejs-goof:CVE-2022-2564:mongoose",
       "cve": "CVE-2022-2564",
       "package": "mongoose",
@@ -3676,7 +3650,7 @@
       "fixed_version": "3.0.0",
       "app": "nodejs-goof",
       "cvss": 6.1,
-      "epss": 0.29726,
+      "epss": 0.30845,
       "in_kev": false,
       "kev_date_added": null,
       "priority_score": 38,
@@ -3792,6 +3766,32 @@
         "https://www.oracle.com/security-alerts/cpujan2022.html",
         "https://www.oracle.com/security-alerts/cpujul2022.html",
         "https://www.oracle.com/security-alerts/cpuoct2021.html"
+      ]
+    },
+    {
+      "id": "nodejs-goof:CVE-2014-3744:st",
+      "cve": "CVE-2014-3744",
+      "package": "st",
+      "ecosystem": "npm",
+      "installed_version": "0.2.4",
+      "fixed_version": "0.2.5",
+      "app": "nodejs-goof",
+      "cvss": 7.5,
+      "epss": 0.16957,
+      "in_kev": false,
+      "kev_date_added": null,
+      "priority_score": 31,
+      "priority_label": "medium",
+      "summary": {
+        "en": "Directory traversal vulnerability in the st module before 0.2.5 for Node.js allows remote attackers to read arbitrary files via a %2e%2e (encoded dot dot) in an unspecified path.",
+        "es": "Vulnerabilidad de salto de directorio en el m\u00c3\u00b3dulo st en versiones anteriores a la 0.2.5 para Node.js permite que atacantes remotos lean archivos arbitrarios mediante un %2e%2e (punto punto de manera codificada) en una ruta no especificada."
+      },
+      "references": [
+        "http://www.openwall.com/lists/oss-security/2014/05/13/1",
+        "http://www.openwall.com/lists/oss-security/2014/05/15/2",
+        "http://www.securityfocus.com/bid/67389",
+        "https://github.com/isaacs/st",
+        "https://nodesecurity.io/advisories/st_directory_traversal"
       ]
     },
     {
@@ -4035,7 +4035,7 @@
       "fixed_version": "2.5.5",
       "app": "nodejs-goof",
       "cvss": 9.8,
-      "epss": 0.06328,
+      "epss": 0.05661,
       "in_kev": false,
       "kev_date_added": null,
       "priority_score": 29,
@@ -4058,7 +4058,7 @@
       "fixed_version": "2.5.5",
       "app": "nodejs-goof",
       "cvss": 9.8,
-      "epss": 0.06328,
+      "epss": 0.05661,
       "in_kev": false,
       "kev_date_added": null,
       "priority_score": 29,
@@ -4095,30 +4095,6 @@
         "http://www.securityfocus.com/bid/96389",
         "https://nodesecurity.io/advisories/46",
         "https://support.f5.com/csp/article/K46337613?utm_source=f5support&amp%3Butm_medium=RSS"
-      ]
-    },
-    {
-      "id": "nodejs-goof:CVE-2015-8855:semver",
-      "cve": "CVE-2015-8855",
-      "package": "semver",
-      "ecosystem": "npm",
-      "installed_version": "5.7.0",
-      "fixed_version": "4.3.2",
-      "app": "nodejs-goof",
-      "cvss": 7.5,
-      "epss": 0.06488,
-      "in_kev": false,
-      "kev_date_added": null,
-      "priority_score": 24,
-      "priority_label": "medium",
-      "summary": {
-        "en": "The semver package before 4.3.2 for Node.js allows attackers to cause a denial of service (CPU consumption) via a long version string, aka a \"regular expression denial of service (ReDoS).\"",
-        "es": "El paquete semver en versiones anteriores a 4.3.2 para Node.js permite a atacantes provocar una denegaci\u00f3n de servicio (consumo de CPU) a trav\u00e9s de una cadena de versi\u00f3n larga, vulnerabilidad tambi\u00e9n conocida como \"denegaci\u00f3n de servicio de expresi\u00f3n regular (ReDoS)\"."
-      },
-      "references": [
-        "http://www.openwall.com/lists/oss-security/2016/04/20/11",
-        "http://www.securityfocus.com/bid/86957",
-        "https://nodesecurity.io/advisories/31"
       ]
     },
     {
@@ -4197,6 +4173,30 @@
         "https://github.com/richardgirges/express-fileupload/issues/236",
         "https://security.netapp.com/advisory/ntap-20200821-0003/",
         "https://snyk.io/vuln/SNYK-JS-EXPRESSFILEUPLOAD-595969"
+      ]
+    },
+    {
+      "id": "nodejs-goof:CVE-2015-8855:semver",
+      "cve": "CVE-2015-8855",
+      "package": "semver",
+      "ecosystem": "npm",
+      "installed_version": "5.7.0",
+      "fixed_version": "4.3.2",
+      "app": "nodejs-goof",
+      "cvss": 7.5,
+      "epss": 0.0583,
+      "in_kev": false,
+      "kev_date_added": null,
+      "priority_score": 23,
+      "priority_label": "medium",
+      "summary": {
+        "en": "The semver package before 4.3.2 for Node.js allows attackers to cause a denial of service (CPU consumption) via a long version string, aka a \"regular expression denial of service (ReDoS).\"",
+        "es": "El paquete semver en versiones anteriores a 4.3.2 para Node.js permite a atacantes provocar una denegaci\u00f3n de servicio (consumo de CPU) a trav\u00e9s de una cadena de versi\u00f3n larga, vulnerabilidad tambi\u00e9n conocida como \"denegaci\u00f3n de servicio de expresi\u00f3n regular (ReDoS)\"."
+      },
+      "references": [
+        "http://www.openwall.com/lists/oss-security/2016/04/20/11",
+        "http://www.securityfocus.com/bid/86957",
+        "https://nodesecurity.io/advisories/31"
       ]
     },
     {
@@ -4741,7 +4741,7 @@
       "fixed_version": "1.3.6",
       "app": "nodejs-goof",
       "cvss": 7.3,
-      "epss": 0.03612,
+      "epss": 0.03655,
       "in_kev": false,
       "kev_date_added": null,
       "priority_score": 21,
@@ -4765,7 +4765,7 @@
       "fixed_version": "1.3.6",
       "app": "nodejs-goof",
       "cvss": 7.3,
-      "epss": 0.03612,
+      "epss": 0.03655,
       "in_kev": false,
       "kev_date_added": null,
       "priority_score": 21,
@@ -5546,52 +5546,6 @@
       ]
     },
     {
-      "id": "nodejs-goof:CVE-2017-1000048:qs",
-      "cve": "CVE-2017-1000048",
-      "package": "qs",
-      "ecosystem": "npm",
-      "installed_version": "6.5.2",
-      "fixed_version": "6.0.4",
-      "app": "nodejs-goof",
-      "cvss": 7.5,
-      "epss": 0.02395,
-      "in_kev": false,
-      "kev_date_added": null,
-      "priority_score": 21,
-      "priority_label": "medium",
-      "summary": {
-        "en": "the web framework using ljharb's qs module older than v6.3.2, v6.2.3, v6.1.2, and v6.0.4 is vulnerable to a DoS. A malicious user can send a evil request to cause the web framework crash.",
-        "es": "El framework web utilizando el m\u00f3dulo qs anterior a las versiones v6.3.2, v6.2.3, v6.1.2 y v6.0.4 de ljharb, es vulnerable a una DoS. Un usuario malicioso puede enviar una petici\u00f3n malintencionada para causar un bloqueo del framework web."
-      },
-      "references": [
-        "https://access.redhat.com/errata/RHSA-2017:2672",
-        "https://github.com/ljharb/qs/issues/200"
-      ]
-    },
-    {
-      "id": "nodejs-goof:CVE-2017-1000048:qs",
-      "cve": "CVE-2017-1000048",
-      "package": "qs",
-      "ecosystem": "npm",
-      "installed_version": "6.5.2",
-      "fixed_version": "6.0.4",
-      "app": "nodejs-goof",
-      "cvss": 7.5,
-      "epss": 0.02395,
-      "in_kev": false,
-      "kev_date_added": null,
-      "priority_score": 21,
-      "priority_label": "medium",
-      "summary": {
-        "en": "the web framework using ljharb's qs module older than v6.3.2, v6.2.3, v6.1.2, and v6.0.4 is vulnerable to a DoS. A malicious user can send a evil request to cause the web framework crash.",
-        "es": "El framework web utilizando el m\u00f3dulo qs anterior a las versiones v6.3.2, v6.2.3, v6.1.2 y v6.0.4 de ljharb, es vulnerable a una DoS. Un usuario malicioso puede enviar una petici\u00f3n malintencionada para causar un bloqueo del framework web."
-      },
-      "references": [
-        "https://access.redhat.com/errata/RHSA-2017:2672",
-        "https://github.com/ljharb/qs/issues/200"
-      ]
-    },
-    {
       "id": "nodejs-goof:CVE-2019-1010266:lodash",
       "cve": "CVE-2019-1010266",
       "package": "lodash",
@@ -5665,49 +5619,49 @@
       ]
     },
     {
-      "id": "nodejs-goof:CVE-2017-1000189:ejs",
-      "cve": "CVE-2017-1000189",
-      "package": "ejs",
+      "id": "nodejs-goof:CVE-2017-1000048:qs",
+      "cve": "CVE-2017-1000048",
+      "package": "qs",
       "ecosystem": "npm",
-      "installed_version": "1.0.0",
-      "fixed_version": "2.5.5",
+      "installed_version": "6.5.2",
+      "fixed_version": "6.0.4",
       "app": "nodejs-goof",
       "cvss": 7.5,
-      "epss": 0.02267,
+      "epss": 0.02203,
       "in_kev": false,
       "kev_date_added": null,
       "priority_score": 20,
       "priority_label": "medium",
       "summary": {
-        "en": "nodejs ejs version older than 2.5.5 is vulnerable to a denial-of-service due to weak input validation in the ejs.renderFile()",
-        "es": "ejs de nodejs en versiones anteriores a la 2.5.5 es vulnerable a denegaci\u00f3n de servicio (DoS) debido a una validaci\u00f3n d\u00e9bil de entrada en la funci\u00f3n ejs.renderFile()."
+        "en": "the web framework using ljharb's qs module older than v6.3.2, v6.2.3, v6.1.2, and v6.0.4 is vulnerable to a DoS. A malicious user can send a evil request to cause the web framework crash.",
+        "es": "El framework web utilizando el m\u00f3dulo qs anterior a las versiones v6.3.2, v6.2.3, v6.1.2 y v6.0.4 de ljharb, es vulnerable a una DoS. Un usuario malicioso puede enviar una petici\u00f3n malintencionada para causar un bloqueo del framework web."
       },
       "references": [
-        "http://www.securityfocus.com/bid/101893",
-        "https://github.com/mde/ejs/commit/49264e0037e313a0a3e033450b5c184112516d8f"
+        "https://access.redhat.com/errata/RHSA-2017:2672",
+        "https://github.com/ljharb/qs/issues/200"
       ]
     },
     {
-      "id": "nodejs-goof:CVE-2017-1000189:ejs",
-      "cve": "CVE-2017-1000189",
-      "package": "ejs",
+      "id": "nodejs-goof:CVE-2017-1000048:qs",
+      "cve": "CVE-2017-1000048",
+      "package": "qs",
       "ecosystem": "npm",
-      "installed_version": "1.0.0",
-      "fixed_version": "2.5.5",
+      "installed_version": "6.5.2",
+      "fixed_version": "6.0.4",
       "app": "nodejs-goof",
       "cvss": 7.5,
-      "epss": 0.02267,
+      "epss": 0.02203,
       "in_kev": false,
       "kev_date_added": null,
       "priority_score": 20,
       "priority_label": "medium",
       "summary": {
-        "en": "nodejs ejs version older than 2.5.5 is vulnerable to a denial-of-service due to weak input validation in the ejs.renderFile()",
-        "es": "ejs de nodejs en versiones anteriores a la 2.5.5 es vulnerable a denegaci\u00f3n de servicio (DoS) debido a una validaci\u00f3n d\u00e9bil de entrada en la funci\u00f3n ejs.renderFile()."
+        "en": "the web framework using ljharb's qs module older than v6.3.2, v6.2.3, v6.1.2, and v6.0.4 is vulnerable to a DoS. A malicious user can send a evil request to cause the web framework crash.",
+        "es": "El framework web utilizando el m\u00f3dulo qs anterior a las versiones v6.3.2, v6.2.3, v6.1.2 y v6.0.4 de ljharb, es vulnerable a una DoS. Un usuario malicioso puede enviar una petici\u00f3n malintencionada para causar un bloqueo del framework web."
       },
       "references": [
-        "http://www.securityfocus.com/bid/101893",
-        "https://github.com/mde/ejs/commit/49264e0037e313a0a3e033450b5c184112516d8f"
+        "https://access.redhat.com/errata/RHSA-2017:2672",
+        "https://github.com/ljharb/qs/issues/200"
       ]
     },
     {
@@ -5735,52 +5689,6 @@
       ]
     },
     {
-      "id": "nodejs-goof:CVE-2017-16138:mime",
-      "cve": "CVE-2017-16138",
-      "package": "mime",
-      "ecosystem": "npm",
-      "installed_version": "1.3.4",
-      "fixed_version": "1.4.1",
-      "app": "nodejs-goof",
-      "cvss": 7.5,
-      "epss": 0.02153,
-      "in_kev": false,
-      "kev_date_added": null,
-      "priority_score": 20,
-      "priority_label": "medium",
-      "summary": {
-        "en": "The mime module < 1.4.1, 2.0.1, 2.0.2 is vulnerable to regular expression denial of service when a mime lookup is performed on untrusted user input.",
-        "es": "El m\u00f3dulo mime en versiones anteriores a la 1.4.1, 2.0.1 y 2.0.2 es vulnerable a una denegaci\u00f3n de servicio (DoS) por expresiones regulares cuando se realiza una b\u00fasqueda mime en entradas de usuario no fiables."
-      },
-      "references": [
-        "https://github.com/broofa/node-mime/issues/167",
-        "https://nodesecurity.io/advisories/535"
-      ]
-    },
-    {
-      "id": "nodejs-goof:CVE-2017-16138:mime",
-      "cve": "CVE-2017-16138",
-      "package": "mime",
-      "ecosystem": "npm",
-      "installed_version": "1.3.4",
-      "fixed_version": "1.4.1",
-      "app": "nodejs-goof",
-      "cvss": 7.5,
-      "epss": 0.02153,
-      "in_kev": false,
-      "kev_date_added": null,
-      "priority_score": 20,
-      "priority_label": "medium",
-      "summary": {
-        "en": "The mime module < 1.4.1, 2.0.1, 2.0.2 is vulnerable to regular expression denial of service when a mime lookup is performed on untrusted user input.",
-        "es": "El m\u00f3dulo mime en versiones anteriores a la 1.4.1, 2.0.1 y 2.0.2 es vulnerable a una denegaci\u00f3n de servicio (DoS) por expresiones regulares cuando se realiza una b\u00fasqueda mime en entradas de usuario no fiables."
-      },
-      "references": [
-        "https://github.com/broofa/node-mime/issues/167",
-        "https://nodesecurity.io/advisories/535"
-      ]
-    },
-    {
       "id": "nodejs-goof:CVE-2026-33937:handlebars",
       "cve": "CVE-2026-33937",
       "package": "handlebars",
@@ -5834,6 +5742,52 @@
         "https://access.redhat.com/security/cve/CVE-2026-33937",
         "https://bugzilla.redhat.com/show_bug.cgi?id=2452523",
         "https://security.access.redhat.com/data/csaf/v2/vex/2026/cve-2026-33937.json"
+      ]
+    },
+    {
+      "id": "nodejs-goof:CVE-2017-1000189:ejs",
+      "cve": "CVE-2017-1000189",
+      "package": "ejs",
+      "ecosystem": "npm",
+      "installed_version": "1.0.0",
+      "fixed_version": "2.5.5",
+      "app": "nodejs-goof",
+      "cvss": 7.5,
+      "epss": 0.02113,
+      "in_kev": false,
+      "kev_date_added": null,
+      "priority_score": 20,
+      "priority_label": "medium",
+      "summary": {
+        "en": "nodejs ejs version older than 2.5.5 is vulnerable to a denial-of-service due to weak input validation in the ejs.renderFile()",
+        "es": "ejs de nodejs en versiones anteriores a la 2.5.5 es vulnerable a denegaci\u00f3n de servicio (DoS) debido a una validaci\u00f3n d\u00e9bil de entrada en la funci\u00f3n ejs.renderFile()."
+      },
+      "references": [
+        "http://www.securityfocus.com/bid/101893",
+        "https://github.com/mde/ejs/commit/49264e0037e313a0a3e033450b5c184112516d8f"
+      ]
+    },
+    {
+      "id": "nodejs-goof:CVE-2017-1000189:ejs",
+      "cve": "CVE-2017-1000189",
+      "package": "ejs",
+      "ecosystem": "npm",
+      "installed_version": "1.0.0",
+      "fixed_version": "2.5.5",
+      "app": "nodejs-goof",
+      "cvss": 7.5,
+      "epss": 0.02113,
+      "in_kev": false,
+      "kev_date_added": null,
+      "priority_score": 20,
+      "priority_label": "medium",
+      "summary": {
+        "en": "nodejs ejs version older than 2.5.5 is vulnerable to a denial-of-service due to weak input validation in the ejs.renderFile()",
+        "es": "ejs de nodejs en versiones anteriores a la 2.5.5 es vulnerable a denegaci\u00f3n de servicio (DoS) debido a una validaci\u00f3n d\u00e9bil de entrada en la funci\u00f3n ejs.renderFile()."
+      },
+      "references": [
+        "http://www.securityfocus.com/bid/101893",
+        "https://github.com/mde/ejs/commit/49264e0037e313a0a3e033450b5c184112516d8f"
       ]
     },
     {
@@ -5883,6 +5837,52 @@
       "references": [
         "https://github.com/Automattic/mongoose/commit/f3eca5b94d822225c04e96cbeed9f095afb3c31c",
         "https://github.com/Automattic/mongoose/issues/8222"
+      ]
+    },
+    {
+      "id": "nodejs-goof:CVE-2017-16138:mime",
+      "cve": "CVE-2017-16138",
+      "package": "mime",
+      "ecosystem": "npm",
+      "installed_version": "1.3.4",
+      "fixed_version": "1.4.1",
+      "app": "nodejs-goof",
+      "cvss": 7.5,
+      "epss": 0.01979,
+      "in_kev": false,
+      "kev_date_added": null,
+      "priority_score": 20,
+      "priority_label": "medium",
+      "summary": {
+        "en": "The mime module < 1.4.1, 2.0.1, 2.0.2 is vulnerable to regular expression denial of service when a mime lookup is performed on untrusted user input.",
+        "es": "El m\u00f3dulo mime en versiones anteriores a la 1.4.1, 2.0.1 y 2.0.2 es vulnerable a una denegaci\u00f3n de servicio (DoS) por expresiones regulares cuando se realiza una b\u00fasqueda mime en entradas de usuario no fiables."
+      },
+      "references": [
+        "https://github.com/broofa/node-mime/issues/167",
+        "https://nodesecurity.io/advisories/535"
+      ]
+    },
+    {
+      "id": "nodejs-goof:CVE-2017-16138:mime",
+      "cve": "CVE-2017-16138",
+      "package": "mime",
+      "ecosystem": "npm",
+      "installed_version": "1.3.4",
+      "fixed_version": "1.4.1",
+      "app": "nodejs-goof",
+      "cvss": 7.5,
+      "epss": 0.01979,
+      "in_kev": false,
+      "kev_date_added": null,
+      "priority_score": 20,
+      "priority_label": "medium",
+      "summary": {
+        "en": "The mime module < 1.4.1, 2.0.1, 2.0.2 is vulnerable to regular expression denial of service when a mime lookup is performed on untrusted user input.",
+        "es": "El m\u00f3dulo mime en versiones anteriores a la 1.4.1, 2.0.1 y 2.0.2 es vulnerable a una denegaci\u00f3n de servicio (DoS) por expresiones regulares cuando se realiza una b\u00fasqueda mime en entradas de usuario no fiables."
+      },
+      "references": [
+        "https://github.com/broofa/node-mime/issues/167",
+        "https://nodesecurity.io/advisories/535"
       ]
     },
     {
@@ -5998,7 +5998,7 @@
       "fixed_version": "0.3.9",
       "app": "nodejs-goof",
       "cvss": 7.5,
-      "epss": 0.01758,
+      "epss": 0.01689,
       "in_kev": false,
       "kev_date_added": null,
       "priority_score": 20,
@@ -6061,6 +6061,52 @@
       ]
     },
     {
+      "id": "nodejs-goof:CVE-2018-16487:lodash",
+      "cve": "CVE-2018-16487",
+      "package": "lodash",
+      "ecosystem": "npm",
+      "installed_version": "4.17.4",
+      "fixed_version": "4.17.11",
+      "app": "nodejs-goof",
+      "cvss": 5.6,
+      "epss": 0.01553,
+      "in_kev": false,
+      "kev_date_added": null,
+      "priority_score": 15,
+      "priority_label": "low",
+      "summary": {
+        "en": "A prototype pollution vulnerability was found in lodash <4.17.11 where the functions merge, mergeWith, and defaultsDeep can be tricked into adding or modifying properties of Object.prototype.",
+        "es": "Se ha detectado una vulnerabilidad de contaminaci\u00f3n de prototipo en lodash, en versiones anteriores a la 4.17.11, en la que se puede enga\u00f1ar a las funciones merge, mergeWith y defaultsDeep para que a\u00f1adan o modifiquen las propiedades de Object.prototype."
+      },
+      "references": [
+        "https://hackerone.com/reports/380873",
+        "https://security.netapp.com/advisory/ntap-20190919-0004/"
+      ]
+    },
+    {
+      "id": "nodejs-goof:CVE-2018-16487:lodash",
+      "cve": "CVE-2018-16487",
+      "package": "lodash",
+      "ecosystem": "npm",
+      "installed_version": "4.17.4",
+      "fixed_version": "4.17.11",
+      "app": "nodejs-goof",
+      "cvss": 5.6,
+      "epss": 0.01553,
+      "in_kev": false,
+      "kev_date_added": null,
+      "priority_score": 15,
+      "priority_label": "low",
+      "summary": {
+        "en": "A prototype pollution vulnerability was found in lodash <4.17.11 where the functions merge, mergeWith, and defaultsDeep can be tricked into adding or modifying properties of Object.prototype.",
+        "es": "Se ha detectado una vulnerabilidad de contaminaci\u00f3n de prototipo en lodash, en versiones anteriores a la 4.17.11, en la que se puede enga\u00f1ar a las funciones merge, mergeWith y defaultsDeep para que a\u00f1adan o modifiquen las propiedades de Object.prototype."
+      },
+      "references": [
+        "https://hackerone.com/reports/380873",
+        "https://security.netapp.com/advisory/ntap-20190919-0004/"
+      ]
+    },
+    {
       "id": "nodejs-goof:CVE-2017-16119:fresh",
       "cve": "CVE-2017-16119",
       "package": "fresh",
@@ -6069,7 +6115,7 @@
       "fixed_version": "0.5.2",
       "app": "nodejs-goof",
       "cvss": 7.5,
-      "epss": 0.01584,
+      "epss": 0.01544,
       "in_kev": false,
       "kev_date_added": null,
       "priority_score": 20,
@@ -6080,52 +6126,6 @@
       },
       "references": [
         "https://nodesecurity.io/advisories/526"
-      ]
-    },
-    {
-      "id": "nodejs-goof:CVE-2018-16487:lodash",
-      "cve": "CVE-2018-16487",
-      "package": "lodash",
-      "ecosystem": "npm",
-      "installed_version": "4.17.4",
-      "fixed_version": "4.17.11",
-      "app": "nodejs-goof",
-      "cvss": 5.6,
-      "epss": 0.01553,
-      "in_kev": false,
-      "kev_date_added": null,
-      "priority_score": 15,
-      "priority_label": "low",
-      "summary": {
-        "en": "A prototype pollution vulnerability was found in lodash <4.17.11 where the functions merge, mergeWith, and defaultsDeep can be tricked into adding or modifying properties of Object.prototype.",
-        "es": "Se ha detectado una vulnerabilidad de contaminaci\u00f3n de prototipo en lodash, en versiones anteriores a la 4.17.11, en la que se puede enga\u00f1ar a las funciones merge, mergeWith y defaultsDeep para que a\u00f1adan o modifiquen las propiedades de Object.prototype."
-      },
-      "references": [
-        "https://hackerone.com/reports/380873",
-        "https://security.netapp.com/advisory/ntap-20190919-0004/"
-      ]
-    },
-    {
-      "id": "nodejs-goof:CVE-2018-16487:lodash",
-      "cve": "CVE-2018-16487",
-      "package": "lodash",
-      "ecosystem": "npm",
-      "installed_version": "4.17.4",
-      "fixed_version": "4.17.11",
-      "app": "nodejs-goof",
-      "cvss": 5.6,
-      "epss": 0.01553,
-      "in_kev": false,
-      "kev_date_added": null,
-      "priority_score": 15,
-      "priority_label": "low",
-      "summary": {
-        "en": "A prototype pollution vulnerability was found in lodash <4.17.11 where the functions merge, mergeWith, and defaultsDeep can be tricked into adding or modifying properties of Object.prototype.",
-        "es": "Se ha detectado una vulnerabilidad de contaminaci\u00f3n de prototipo en lodash, en versiones anteriores a la 4.17.11, en la que se puede enga\u00f1ar a las funciones merge, mergeWith y defaultsDeep para que a\u00f1adan o modifiquen las propiedades de Object.prototype."
-      },
-      "references": [
-        "https://hackerone.com/reports/380873",
-        "https://security.netapp.com/advisory/ntap-20190919-0004/"
       ]
     },
     {
@@ -6199,72 +6199,6 @@
         "https://github.com/micromatch/braces/issues/35",
         "https://github.com/micromatch/braces/pull/37",
         "https://github.com/micromatch/braces/pull/40"
-      ]
-    },
-    {
-      "id": "nodejs-goof:CVE-2016-10539:negotiator",
-      "cve": "CVE-2016-10539",
-      "package": "negotiator",
-      "ecosystem": "npm",
-      "installed_version": "0.5.3",
-      "fixed_version": "0.6.1",
-      "app": "nodejs-goof",
-      "cvss": 7.5,
-      "epss": 0.01399,
-      "in_kev": false,
-      "kev_date_added": null,
-      "priority_score": 20,
-      "priority_label": "medium",
-      "summary": {
-        "en": "negotiator is an HTTP content negotiator for Node.js and is used by many modules and frameworks including Express and Koa. The header for \"Accept-Language\", when parsed by negotiator 0.6.0 and earlier is vulnerable to Regular Expression Denial of Service via a specially crafted string.",
-        "es": "negotiator es un negociador de contenido HTTP para Node.js y es empleado por muchos m\u00f3dulos y frameworks, incluyendo Express y Koa. La cabecera para \"Accept-Language\", cuando es analizada por negotiator en versiones 0.6.0 y anteriores es vulnerable a una denegaci\u00f3n de servicio con expresiones regulares (ReDoS) mediante una cadena especialmente manipulada."
-      },
-      "references": [
-        "https://nodesecurity.io/advisories/106"
-      ]
-    },
-    {
-      "id": "nodejs-goof:CVE-2016-10539:negotiator",
-      "cve": "CVE-2016-10539",
-      "package": "negotiator",
-      "ecosystem": "npm",
-      "installed_version": "0.5.3",
-      "fixed_version": "0.6.1",
-      "app": "nodejs-goof",
-      "cvss": 7.5,
-      "epss": 0.01399,
-      "in_kev": false,
-      "kev_date_added": null,
-      "priority_score": 20,
-      "priority_label": "medium",
-      "summary": {
-        "en": "negotiator is an HTTP content negotiator for Node.js and is used by many modules and frameworks including Express and Koa. The header for \"Accept-Language\", when parsed by negotiator 0.6.0 and earlier is vulnerable to Regular Expression Denial of Service via a specially crafted string.",
-        "es": "negotiator es un negociador de contenido HTTP para Node.js y es empleado por muchos m\u00f3dulos y frameworks, incluyendo Express y Koa. La cabecera para \"Accept-Language\", cuando es analizada por negotiator en versiones 0.6.0 y anteriores es vulnerable a una denegaci\u00f3n de servicio con expresiones regulares (ReDoS) mediante una cadena especialmente manipulada."
-      },
-      "references": [
-        "https://nodesecurity.io/advisories/106"
-      ]
-    },
-    {
-      "id": "nodejs-goof:CVE-2016-10539:negotiator",
-      "cve": "CVE-2016-10539",
-      "package": "negotiator",
-      "ecosystem": "npm",
-      "installed_version": "0.5.3",
-      "fixed_version": "0.6.1",
-      "app": "nodejs-goof",
-      "cvss": 7.5,
-      "epss": 0.01399,
-      "in_kev": false,
-      "kev_date_added": null,
-      "priority_score": 20,
-      "priority_label": "medium",
-      "summary": {
-        "en": "negotiator is an HTTP content negotiator for Node.js and is used by many modules and frameworks including Express and Koa. The header for \"Accept-Language\", when parsed by negotiator 0.6.0 and earlier is vulnerable to Regular Expression Denial of Service via a specially crafted string.",
-        "es": "negotiator es un negociador de contenido HTTP para Node.js y es empleado por muchos m\u00f3dulos y frameworks, incluyendo Express y Koa. La cabecera para \"Accept-Language\", cuando es analizada por negotiator en versiones 0.6.0 y anteriores es vulnerable a una denegaci\u00f3n de servicio con expresiones regulares (ReDoS) mediante una cadena especialmente manipulada."
-      },
-      "references": [
-        "https://nodesecurity.io/advisories/106"
       ]
     },
     {
@@ -6383,55 +6317,93 @@
       ]
     },
     {
-      "id": "nodejs-goof:CVE-2017-16137:debug",
-      "cve": "CVE-2017-16137",
-      "package": "debug",
+      "id": "nodejs-goof:CVE-2016-10539:negotiator",
+      "cve": "CVE-2016-10539",
+      "package": "negotiator",
       "ecosystem": "npm",
-      "installed_version": "4.1.1",
-      "fixed_version": "2.6.9",
+      "installed_version": "0.5.3",
+      "fixed_version": "0.6.1",
       "app": "nodejs-goof",
-      "cvss": 5.3,
-      "epss": 0.02798,
+      "cvss": 7.5,
+      "epss": 0.01364,
       "in_kev": false,
       "kev_date_added": null,
-      "priority_score": 15,
-      "priority_label": "low",
+      "priority_score": 20,
+      "priority_label": "medium",
       "summary": {
-        "en": "The debug module is vulnerable to regular expression denial of service when untrusted user input is passed into the o formatter. It takes around 50k characters to block for 2 seconds making this a low severity issue.",
-        "es": "El m\u00f3dulo debug es vulnerable a una denegaci\u00f3n de servicio (DoS) por expresiones regulares cuando se le pasan entradas de usuario no fiables en el formateador o. Son necesarios alrededor de 50.000 caracteres para bloquear durante 2 segundos, por lo que este es un problema de baja gravedad."
+        "en": "negotiator is an HTTP content negotiator for Node.js and is used by many modules and frameworks including Express and Koa. The header for \"Accept-Language\", when parsed by negotiator 0.6.0 and earlier is vulnerable to Regular Expression Denial of Service via a specially crafted string.",
+        "es": "negotiator es un negociador de contenido HTTP para Node.js y es empleado por muchos m\u00f3dulos y frameworks, incluyendo Express y Koa. La cabecera para \"Accept-Language\", cuando es analizada por negotiator en versiones 0.6.0 y anteriores es vulnerable a una denegaci\u00f3n de servicio con expresiones regulares (ReDoS) mediante una cadena especialmente manipulada."
       },
       "references": [
-        "https://github.com/visionmedia/debug/issues/501",
-        "https://github.com/visionmedia/debug/pull/504",
-        "https://lists.apache.org/thread.html/r8ba4c628fba7181af58817d452119481adce4ba92e889c643e4c7dd3%40%3Ccommits.netbeans.apache.org%3E",
-        "https://lists.apache.org/thread.html/rb5ac16fad337d1f3bb7079549f97d8166d0ef3082629417c39f12d63%40%3Cnotifications.netbeans.apache.org%3E",
-        "https://nodesecurity.io/advisories/534"
+        "https://nodesecurity.io/advisories/106"
       ]
     },
     {
-      "id": "nodejs-goof:CVE-2017-16137:debug",
-      "cve": "CVE-2017-16137",
-      "package": "debug",
+      "id": "nodejs-goof:CVE-2016-10539:negotiator",
+      "cve": "CVE-2016-10539",
+      "package": "negotiator",
       "ecosystem": "npm",
-      "installed_version": "4.1.1",
-      "fixed_version": "4.3.1",
+      "installed_version": "0.5.3",
+      "fixed_version": "0.6.1",
       "app": "nodejs-goof",
-      "cvss": 5.3,
-      "epss": 0.02798,
+      "cvss": 7.5,
+      "epss": 0.01364,
       "in_kev": false,
       "kev_date_added": null,
-      "priority_score": 15,
-      "priority_label": "low",
+      "priority_score": 20,
+      "priority_label": "medium",
       "summary": {
-        "en": "The debug module is vulnerable to regular expression denial of service when untrusted user input is passed into the o formatter. It takes around 50k characters to block for 2 seconds making this a low severity issue.",
-        "es": "El m\u00f3dulo debug es vulnerable a una denegaci\u00f3n de servicio (DoS) por expresiones regulares cuando se le pasan entradas de usuario no fiables en el formateador o. Son necesarios alrededor de 50.000 caracteres para bloquear durante 2 segundos, por lo que este es un problema de baja gravedad."
+        "en": "negotiator is an HTTP content negotiator for Node.js and is used by many modules and frameworks including Express and Koa. The header for \"Accept-Language\", when parsed by negotiator 0.6.0 and earlier is vulnerable to Regular Expression Denial of Service via a specially crafted string.",
+        "es": "negotiator es un negociador de contenido HTTP para Node.js y es empleado por muchos m\u00f3dulos y frameworks, incluyendo Express y Koa. La cabecera para \"Accept-Language\", cuando es analizada por negotiator en versiones 0.6.0 y anteriores es vulnerable a una denegaci\u00f3n de servicio con expresiones regulares (ReDoS) mediante una cadena especialmente manipulada."
       },
       "references": [
-        "https://github.com/visionmedia/debug/issues/501",
-        "https://github.com/visionmedia/debug/pull/504",
-        "https://lists.apache.org/thread.html/r8ba4c628fba7181af58817d452119481adce4ba92e889c643e4c7dd3%40%3Ccommits.netbeans.apache.org%3E",
-        "https://lists.apache.org/thread.html/rb5ac16fad337d1f3bb7079549f97d8166d0ef3082629417c39f12d63%40%3Cnotifications.netbeans.apache.org%3E",
-        "https://nodesecurity.io/advisories/534"
+        "https://nodesecurity.io/advisories/106"
+      ]
+    },
+    {
+      "id": "nodejs-goof:CVE-2016-10539:negotiator",
+      "cve": "CVE-2016-10539",
+      "package": "negotiator",
+      "ecosystem": "npm",
+      "installed_version": "0.5.3",
+      "fixed_version": "0.6.1",
+      "app": "nodejs-goof",
+      "cvss": 7.5,
+      "epss": 0.01364,
+      "in_kev": false,
+      "kev_date_added": null,
+      "priority_score": 20,
+      "priority_label": "medium",
+      "summary": {
+        "en": "negotiator is an HTTP content negotiator for Node.js and is used by many modules and frameworks including Express and Koa. The header for \"Accept-Language\", when parsed by negotiator 0.6.0 and earlier is vulnerable to Regular Expression Denial of Service via a specially crafted string.",
+        "es": "negotiator es un negociador de contenido HTTP para Node.js y es empleado por muchos m\u00f3dulos y frameworks, incluyendo Express y Koa. La cabecera para \"Accept-Language\", cuando es analizada por negotiator en versiones 0.6.0 y anteriores es vulnerable a una denegaci\u00f3n de servicio con expresiones regulares (ReDoS) mediante una cadena especialmente manipulada."
+      },
+      "references": [
+        "https://nodesecurity.io/advisories/106"
+      ]
+    },
+    {
+      "id": "nodejs-goof:CVE-2017-1000427:marked",
+      "cve": "CVE-2017-1000427",
+      "package": "marked",
+      "ecosystem": "npm",
+      "installed_version": "0.3.5",
+      "fixed_version": "0.3.7",
+      "app": "nodejs-goof",
+      "cvss": 6.1,
+      "epss": 0.01682,
+      "in_kev": false,
+      "kev_date_added": null,
+      "priority_score": 17,
+      "priority_label": "low",
+      "summary": {
+        "en": "marked version 0.3.6 and earlier is vulnerable to an XSS attack in the data: URI parser.",
+        "es": "marked, en su versi\u00f3n 0.3.6 y anteriores, es vulnerable a un ataque de XSS en el analizador sint\u00e1ctico de URI data:."
+      },
+      "references": [
+        "https://lists.fedoraproject.org/archives/list/package-announce%40lists.fedoraproject.org/message/BO2RMVVZVV6NFTU46B5RYRK7ZCXYARZS/",
+        "https://lists.fedoraproject.org/archives/list/package-announce%40lists.fedoraproject.org/message/M6BJG6RGDH7ZWVVAUFBFI5L32RSMQN2S/",
+        "https://snyk.io/vuln/npm:marked:20170112"
       ]
     },
     {
@@ -6809,6 +6781,82 @@
       ]
     },
     {
+      "id": "nodejs-goof:CVE-2016-10531:marked",
+      "cve": "CVE-2016-10531",
+      "package": "marked",
+      "ecosystem": "npm",
+      "installed_version": "0.3.5",
+      "fixed_version": "0.3.6",
+      "app": "nodejs-goof",
+      "cvss": 6.1,
+      "epss": 0.01636,
+      "in_kev": false,
+      "kev_date_added": null,
+      "priority_score": 16,
+      "priority_label": "low",
+      "summary": {
+        "en": "marked is an application that is meant to parse and compile markdown. Due to the way that marked 0.3.5 and earlier parses input, specifically HTML entities, it's possible to bypass marked's content injection protection (`sanitize: true`) to inject a `javascript:` URL. This flaw exists because `&#xNNanything;` gets parsed to what it could and leaves the rest behind, resulting in just `anything;` being left.",
+        "es": "marked es una aplicaci\u00f3n hecha para analizar y compilar markdown. Debido a la forma en la que marked, en versiones 0.3.5 y anteriores, analiza entradas (espec\u00edficamente, entidades HTML), es posible omitir la protecci\u00f3n de inyecci\u00f3n de contenido de marked (\"sanitize: true\") para inyectar una URL \"javascript:\". Este fallo existe porque \"#xNNanything;\" se analiza hasta donde se puede y olvida el resto, lo que resulta en que \"anything;\" queda suelto."
+      },
+      "references": [
+        "https://github.com/chjj/marked/pull/592",
+        "https://github.com/chjj/marked/pull/592/commits/2cff85979be8e7a026a9aca35542c470cf5da523",
+        "https://nodesecurity.io/advisories/101"
+      ]
+    },
+    {
+      "id": "nodejs-goof:CVE-2017-16137:debug",
+      "cve": "CVE-2017-16137",
+      "package": "debug",
+      "ecosystem": "npm",
+      "installed_version": "4.1.1",
+      "fixed_version": "2.6.9",
+      "app": "nodejs-goof",
+      "cvss": 5.3,
+      "epss": 0.02658,
+      "in_kev": false,
+      "kev_date_added": null,
+      "priority_score": 15,
+      "priority_label": "low",
+      "summary": {
+        "en": "The debug module is vulnerable to regular expression denial of service when untrusted user input is passed into the o formatter. It takes around 50k characters to block for 2 seconds making this a low severity issue.",
+        "es": "El m\u00f3dulo debug es vulnerable a una denegaci\u00f3n de servicio (DoS) por expresiones regulares cuando se le pasan entradas de usuario no fiables en el formateador o. Son necesarios alrededor de 50.000 caracteres para bloquear durante 2 segundos, por lo que este es un problema de baja gravedad."
+      },
+      "references": [
+        "https://github.com/visionmedia/debug/issues/501",
+        "https://github.com/visionmedia/debug/pull/504",
+        "https://lists.apache.org/thread.html/r8ba4c628fba7181af58817d452119481adce4ba92e889c643e4c7dd3%40%3Ccommits.netbeans.apache.org%3E",
+        "https://lists.apache.org/thread.html/rb5ac16fad337d1f3bb7079549f97d8166d0ef3082629417c39f12d63%40%3Cnotifications.netbeans.apache.org%3E",
+        "https://nodesecurity.io/advisories/534"
+      ]
+    },
+    {
+      "id": "nodejs-goof:CVE-2017-16137:debug",
+      "cve": "CVE-2017-16137",
+      "package": "debug",
+      "ecosystem": "npm",
+      "installed_version": "4.1.1",
+      "fixed_version": "4.3.1",
+      "app": "nodejs-goof",
+      "cvss": 5.3,
+      "epss": 0.02658,
+      "in_kev": false,
+      "kev_date_added": null,
+      "priority_score": 15,
+      "priority_label": "low",
+      "summary": {
+        "en": "The debug module is vulnerable to regular expression denial of service when untrusted user input is passed into the o formatter. It takes around 50k characters to block for 2 seconds making this a low severity issue.",
+        "es": "El m\u00f3dulo debug es vulnerable a una denegaci\u00f3n de servicio (DoS) por expresiones regulares cuando se le pasan entradas de usuario no fiables en el formateador o. Son necesarios alrededor de 50.000 caracteres para bloquear durante 2 segundos, por lo que este es un problema de baja gravedad."
+      },
+      "references": [
+        "https://github.com/visionmedia/debug/issues/501",
+        "https://github.com/visionmedia/debug/pull/504",
+        "https://lists.apache.org/thread.html/r8ba4c628fba7181af58817d452119481adce4ba92e889c643e4c7dd3%40%3Ccommits.netbeans.apache.org%3E",
+        "https://lists.apache.org/thread.html/rb5ac16fad337d1f3bb7079549f97d8166d0ef3082629417c39f12d63%40%3Cnotifications.netbeans.apache.org%3E",
+        "https://nodesecurity.io/advisories/534"
+      ]
+    },
+    {
       "id": "nodejs-goof:CVE-2021-4264:dustjs-linkedin",
       "cve": "CVE-2021-4264",
       "package": "dustjs-linkedin",
@@ -6836,27 +6884,49 @@
       ]
     },
     {
-      "id": "nodejs-goof:CVE-2017-1000427:marked",
-      "cve": "CVE-2017-1000427",
-      "package": "marked",
+      "id": "nodejs-goof:CVE-2017-1000188:ejs",
+      "cve": "CVE-2017-1000188",
+      "package": "ejs",
       "ecosystem": "npm",
-      "installed_version": "0.3.5",
-      "fixed_version": "0.3.7",
+      "installed_version": "1.0.0",
+      "fixed_version": "2.5.5",
       "app": "nodejs-goof",
       "cvss": 6.1,
-      "epss": 0.01512,
+      "epss": 0.01564,
       "in_kev": false,
       "kev_date_added": null,
       "priority_score": 16,
       "priority_label": "low",
       "summary": {
-        "en": "marked version 0.3.6 and earlier is vulnerable to an XSS attack in the data: URI parser.",
-        "es": "marked, en su versi\u00f3n 0.3.6 y anteriores, es vulnerable a un ataque de XSS en el analizador sint\u00e1ctico de URI data:."
+        "en": "nodejs ejs version older than 2.5.5 is vulnerable to a Cross-site-scripting in the ejs.renderFile() resulting in code injection",
+        "es": "ejs de nodejs en versiones anteriores a la 2.5.5 es vulnerable a Cross-Site Scripting (XSS) en la funci\u00f3n ejs.renderFile(), provocando una inyecci\u00f3n de c\u00f3digo."
       },
       "references": [
-        "https://lists.fedoraproject.org/archives/list/package-announce%40lists.fedoraproject.org/message/BO2RMVVZVV6NFTU46B5RYRK7ZCXYARZS/",
-        "https://lists.fedoraproject.org/archives/list/package-announce%40lists.fedoraproject.org/message/M6BJG6RGDH7ZWVVAUFBFI5L32RSMQN2S/",
-        "https://snyk.io/vuln/npm:marked:20170112"
+        "http://www.securityfocus.com/bid/101889",
+        "https://github.com/mde/ejs/commit/49264e0037e313a0a3e033450b5c184112516d8f"
+      ]
+    },
+    {
+      "id": "nodejs-goof:CVE-2017-1000188:ejs",
+      "cve": "CVE-2017-1000188",
+      "package": "ejs",
+      "ecosystem": "npm",
+      "installed_version": "1.0.0",
+      "fixed_version": "2.5.5",
+      "app": "nodejs-goof",
+      "cvss": 6.1,
+      "epss": 0.01564,
+      "in_kev": false,
+      "kev_date_added": null,
+      "priority_score": 16,
+      "priority_label": "low",
+      "summary": {
+        "en": "nodejs ejs version older than 2.5.5 is vulnerable to a Cross-site-scripting in the ejs.renderFile() resulting in code injection",
+        "es": "ejs de nodejs en versiones anteriores a la 2.5.5 es vulnerable a Cross-Site Scripting (XSS) en la funci\u00f3n ejs.renderFile(), provocando una inyecci\u00f3n de c\u00f3digo."
+      },
+      "references": [
+        "http://www.securityfocus.com/bid/101889",
+        "https://github.com/mde/ejs/commit/49264e0037e313a0a3e033450b5c184112516d8f"
       ]
     },
     {
@@ -6868,7 +6938,7 @@
       "fixed_version": "0.5.1",
       "app": "nodejs-goof",
       "cvss": 7.5,
-      "epss": 0.01101,
+      "epss": 0.01099,
       "in_kev": false,
       "kev_date_added": null,
       "priority_score": 20,
@@ -6879,30 +6949,6 @@
       },
       "references": [
         "https://hackerone.com/reports/390860"
-      ]
-    },
-    {
-      "id": "nodejs-goof:CVE-2016-10531:marked",
-      "cve": "CVE-2016-10531",
-      "package": "marked",
-      "ecosystem": "npm",
-      "installed_version": "0.3.5",
-      "fixed_version": "0.3.6",
-      "app": "nodejs-goof",
-      "cvss": 6.1,
-      "epss": 0.01463,
-      "in_kev": false,
-      "kev_date_added": null,
-      "priority_score": 16,
-      "priority_label": "low",
-      "summary": {
-        "en": "marked is an application that is meant to parse and compile markdown. Due to the way that marked 0.3.5 and earlier parses input, specifically HTML entities, it's possible to bypass marked's content injection protection (`sanitize: true`) to inject a `javascript:` URL. This flaw exists because `&#xNNanything;` gets parsed to what it could and leaves the rest behind, resulting in just `anything;` being left.",
-        "es": "marked es una aplicaci\u00f3n hecha para analizar y compilar markdown. Debido a la forma en la que marked, en versiones 0.3.5 y anteriores, analiza entradas (espec\u00edficamente, entidades HTML), es posible omitir la protecci\u00f3n de inyecci\u00f3n de contenido de marked (\"sanitize: true\") para inyectar una URL \"javascript:\". Este fallo existe porque \"#xNNanything;\" se analiza hasta donde se puede y olvida el resto, lo que resulta en que \"anything;\" queda suelto."
-      },
-      "references": [
-        "https://github.com/chjj/marked/pull/592",
-        "https://github.com/chjj/marked/pull/592/commits/2cff85979be8e7a026a9aca35542c470cf5da523",
-        "https://nodesecurity.io/advisories/101"
       ]
     },
     {
@@ -7032,52 +7078,6 @@
         "https://github.com/jashkenas/underscore/commit/411e222eb0ca5d570cc4f6315c02c05b830ed2b4",
         "https://github.com/jashkenas/underscore/commit/a6e23ae9647461ec33ad9f92a2ecfc220eea0a84",
         "https://github.com/jashkenas/underscore/security/advisories/GHSA-qpx9-hpmf-5gmw"
-      ]
-    },
-    {
-      "id": "nodejs-goof:CVE-2017-1000188:ejs",
-      "cve": "CVE-2017-1000188",
-      "package": "ejs",
-      "ecosystem": "npm",
-      "installed_version": "1.0.0",
-      "fixed_version": "2.5.5",
-      "app": "nodejs-goof",
-      "cvss": 6.1,
-      "epss": 0.01233,
-      "in_kev": false,
-      "kev_date_added": null,
-      "priority_score": 16,
-      "priority_label": "low",
-      "summary": {
-        "en": "nodejs ejs version older than 2.5.5 is vulnerable to a Cross-site-scripting in the ejs.renderFile() resulting in code injection",
-        "es": "ejs de nodejs en versiones anteriores a la 2.5.5 es vulnerable a Cross-Site Scripting (XSS) en la funci\u00f3n ejs.renderFile(), provocando una inyecci\u00f3n de c\u00f3digo."
-      },
-      "references": [
-        "http://www.securityfocus.com/bid/101889",
-        "https://github.com/mde/ejs/commit/49264e0037e313a0a3e033450b5c184112516d8f"
-      ]
-    },
-    {
-      "id": "nodejs-goof:CVE-2017-1000188:ejs",
-      "cve": "CVE-2017-1000188",
-      "package": "ejs",
-      "ecosystem": "npm",
-      "installed_version": "1.0.0",
-      "fixed_version": "2.5.5",
-      "app": "nodejs-goof",
-      "cvss": 6.1,
-      "epss": 0.01233,
-      "in_kev": false,
-      "kev_date_added": null,
-      "priority_score": 16,
-      "priority_label": "low",
-      "summary": {
-        "en": "nodejs ejs version older than 2.5.5 is vulnerable to a Cross-site-scripting in the ejs.renderFile() resulting in code injection",
-        "es": "ejs de nodejs en versiones anteriores a la 2.5.5 es vulnerable a Cross-Site Scripting (XSS) en la funci\u00f3n ejs.renderFile(), provocando una inyecci\u00f3n de c\u00f3digo."
-      },
-      "references": [
-        "http://www.securityfocus.com/bid/101889",
-        "https://github.com/mde/ejs/commit/49264e0037e313a0a3e033450b5c184112516d8f"
       ]
     },
     {
@@ -7231,6 +7231,28 @@
       ]
     },
     {
+      "id": "nodejs-goof:CVE-2017-16224:st",
+      "cve": "CVE-2017-16224",
+      "package": "st",
+      "ecosystem": "npm",
+      "installed_version": "0.2.4",
+      "fixed_version": "1.2.2",
+      "app": "nodejs-goof",
+      "cvss": 6.1,
+      "epss": 0.01041,
+      "in_kev": false,
+      "kev_date_added": null,
+      "priority_score": 16,
+      "priority_label": "low",
+      "summary": {
+        "en": "st is a module for serving static files. An attacker is able to craft a request that results in an HTTP 301 (redirect) to an entirely different domain. A request for: http://some.server.com//nodesecurity.org/%2e%2e would result in a 301 to //nodesecurity.org/%2e%2e which most browsers treat as a proper redirect as // is translated into the current schema being used. Mitigating factor: In order for this to work, st must be serving from the root of a server (/) rather than the typical sub directory (/static/) and the redirect URL will end with some form of URL encoded .. (\"%2e%2e\", \"%2e.\", \".%2e\").",
+        "es": "st es un m\u00f3dulo para servir archivos est\u00e1ticos. Un atacante puede manipular una petici\u00f3n que resulta en un error HTTP 301 (redirecci\u00f3n) a un dominio totalmente distinto. Una petici\u00f3n para: http://some.server.com//nodesecurity.org/%2e%2e resultar\u00eda en un error 301 a //nodesecurity.org/%2e%2e, el cual se considerar\u00eda una redirecci\u00f3n correcta por la mayor\u00eda de navegadores. Esto se debe a que // se traduce en el esquema actual en uso. Factor mitigador: para que esto funcione, st debe estar sirviendo desde el root de un servidor (/) en lugar del t\u00edpico subdirectorio (/static/) y la URL de redirecci\u00f3n debe terminar con alg\u00fan tipo de URL cifrada en .. (\"%2e%2e\", \"%2e.\", \".%2e\")."
+      },
+      "references": [
+        "https://nodesecurity.io/advisories/547"
+      ]
+    },
+    {
       "id": "nodejs-goof:CVE-2020-13110:kerberos",
       "cve": "CVE-2020-13110",
       "package": "kerberos",
@@ -7368,6 +7390,28 @@
       ]
     },
     {
+      "id": "nodejs-goof:CVE-2020-35149:mquery",
+      "cve": "CVE-2020-35149",
+      "package": "mquery",
+      "ecosystem": "npm",
+      "installed_version": "1.6.3",
+      "fixed_version": "3.2.3",
+      "app": "nodejs-goof",
+      "cvss": 5.3,
+      "epss": 0.01041,
+      "in_kev": false,
+      "kev_date_added": null,
+      "priority_score": 14,
+      "priority_label": "low",
+      "summary": {
+        "en": "lib/utils.js in mquery before 3.2.3 allows a pollution attack because a special property (e.g., __proto__) can be copied during a merge or clone operation.",
+        "es": "En la biblioteca lib/utils.js en mquery versiones anteriores a 3.2.3, permite un ataque de contaminaci\u00f3n porque una propiedad especial (por ejemplo, __proto__) puede ser copiada durante una operaci\u00f3n de fusi\u00f3n o clonaci\u00f3n"
+      },
+      "references": [
+        "https://github.com/aheckmann/mquery/commit/792e69fd0a7281a0300be5cade5a6d7c1d468ad4"
+      ]
+    },
+    {
       "id": "nodejs-goof:CVE-2021-32822:hbs",
       "cve": "CVE-2021-32822",
       "package": "hbs",
@@ -7390,28 +7434,6 @@
       ]
     },
     {
-      "id": "nodejs-goof:CVE-2020-35149:mquery",
-      "cve": "CVE-2020-35149",
-      "package": "mquery",
-      "ecosystem": "npm",
-      "installed_version": "1.6.3",
-      "fixed_version": "3.2.3",
-      "app": "nodejs-goof",
-      "cvss": 5.3,
-      "epss": 0.01028,
-      "in_kev": false,
-      "kev_date_added": null,
-      "priority_score": 14,
-      "priority_label": "low",
-      "summary": {
-        "en": "lib/utils.js in mquery before 3.2.3 allows a pollution attack because a special property (e.g., __proto__) can be copied during a merge or clone operation.",
-        "es": "En la biblioteca lib/utils.js en mquery versiones anteriores a 3.2.3, permite un ataque de contaminaci\u00f3n porque una propiedad especial (por ejemplo, __proto__) puede ser copiada durante una operaci\u00f3n de fusi\u00f3n o clonaci\u00f3n"
-      },
-      "references": [
-        "https://github.com/aheckmann/mquery/commit/792e69fd0a7281a0300be5cade5a6d7c1d468ad4"
-      ]
-    },
-    {
       "id": "nodejs-goof:CVE-2017-20162:ms",
       "cve": "CVE-2017-20162",
       "package": "ms",
@@ -7490,28 +7512,6 @@
         "https://vuldb.com/?ctiid.217451",
         "https://vuldb.com/?id.217451",
         "https://security.netapp.com/advisory/ntap-20241108-0002/"
-      ]
-    },
-    {
-      "id": "nodejs-goof:CVE-2017-16224:st",
-      "cve": "CVE-2017-16224",
-      "package": "st",
-      "ecosystem": "npm",
-      "installed_version": "0.2.4",
-      "fixed_version": "1.2.2",
-      "app": "nodejs-goof",
-      "cvss": 6.1,
-      "epss": 0.00879,
-      "in_kev": false,
-      "kev_date_added": null,
-      "priority_score": 16,
-      "priority_label": "low",
-      "summary": {
-        "en": "st is a module for serving static files. An attacker is able to craft a request that results in an HTTP 301 (redirect) to an entirely different domain. A request for: http://some.server.com//nodesecurity.org/%2e%2e would result in a 301 to //nodesecurity.org/%2e%2e which most browsers treat as a proper redirect as // is translated into the current schema being used. Mitigating factor: In order for this to work, st must be serving from the root of a server (/) rather than the typical sub directory (/static/) and the redirect URL will end with some form of URL encoded .. (\"%2e%2e\", \"%2e.\", \".%2e\").",
-        "es": "st es un m\u00f3dulo para servir archivos est\u00e1ticos. Un atacante puede manipular una petici\u00f3n que resulta en un error HTTP 301 (redirecci\u00f3n) a un dominio totalmente distinto. Una petici\u00f3n para: http://some.server.com//nodesecurity.org/%2e%2e resultar\u00eda en un error 301 a //nodesecurity.org/%2e%2e, el cual se considerar\u00eda una redirecci\u00f3n correcta por la mayor\u00eda de navegadores. Esto se debe a que // se traduce en el esquema actual en uso. Factor mitigador: para que esto funcione, st debe estar sirviendo desde el root de un servidor (/) en lugar del t\u00edpico subdirectorio (/static/) y la URL de redirecci\u00f3n debe terminar con alg\u00fan tipo de URL cifrada en .. (\"%2e%2e\", \"%2e.\", \".%2e\")."
-      },
-      "references": [
-        "https://nodesecurity.io/advisories/547"
       ]
     },
     {

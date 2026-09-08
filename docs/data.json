@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-09-07T11:59:13.310790+00:00",
+  "generated_at": "2026-09-08T10:56:27.531213+00:00",
   "sources": {
     "kev": {
       "fetched": true,
@@ -2003,29 +2003,6 @@
       ]
     },
     {
-      "id": "pygoat:CVE-2026-54060:pillow",
-      "cve": "CVE-2026-54060",
-      "package": "pillow",
-      "ecosystem": "PyPI",
-      "installed_version": "9.4.0",
-      "fixed_version": "12.3.0",
-      "app": "pygoat",
-      "cvss": 7.5,
-      "epss": 0.00418,
-      "in_kev": false,
-      "kev_date_added": null,
-      "priority_score": 19,
-      "priority_label": "low",
-      "summary": {
-        "en": "Pillow is a Python imaging library. Prior to 12.3.0, PIL/FontFile.py FontFile.compile() assembled per-glyph images into a combined bitmap with Image.new(\"1\", (xsize, ysize)) without calling Image._decompression_bomb_check(), allowing a font to trigger excessive allocation during conversion or saving. This issue is fixed in version 12.3.0."
-      },
-      "references": [
-        "https://github.com/python-pillow/Pillow/blob/main/docs/releasenotes/12.3.0.rst",
-        "https://github.com/python-pillow/Pillow/commit/0a263e6264aa5399988d9acd3bbfbca2ca3ec77d",
-        "https://github.com/python-pillow/Pillow/security/advisories/GHSA-5x94-69rx-g8h2"
-      ]
-    },
-    {
       "id": "pygoat:CVE-2026-55380:pillow",
       "cve": "CVE-2026-55380",
       "package": "pillow",
@@ -2046,6 +2023,29 @@
         "https://github.com/python-pillow/Pillow/blob/main/docs/releasenotes/12.3.0.rst",
         "https://github.com/python-pillow/Pillow/commit/f39b0ae6624eb2d7c5c5d651d9bb5fdbd96a8675",
         "https://github.com/python-pillow/Pillow/security/advisories/GHSA-phj9-mv4w-65pm"
+      ]
+    },
+    {
+      "id": "pygoat:CVE-2026-54060:pillow",
+      "cve": "CVE-2026-54060",
+      "package": "pillow",
+      "ecosystem": "PyPI",
+      "installed_version": "9.4.0",
+      "fixed_version": "12.3.0",
+      "app": "pygoat",
+      "cvss": 7.5,
+      "epss": 0.00418,
+      "in_kev": false,
+      "kev_date_added": null,
+      "priority_score": 19,
+      "priority_label": "low",
+      "summary": {
+        "en": "Pillow is a Python imaging library. Prior to 12.3.0, PIL/FontFile.py FontFile.compile() assembled per-glyph images into a combined bitmap with Image.new(\"1\", (xsize, ysize)) without calling Image._decompression_bomb_check(), allowing a font to trigger excessive allocation during conversion or saving. This issue is fixed in version 12.3.0."
+      },
+      "references": [
+        "https://github.com/python-pillow/Pillow/blob/main/docs/releasenotes/12.3.0.rst",
+        "https://github.com/python-pillow/Pillow/commit/0a263e6264aa5399988d9acd3bbfbca2ca3ec77d",
+        "https://github.com/python-pillow/Pillow/security/advisories/GHSA-5x94-69rx-g8h2"
       ]
     },
     {
@@ -3648,7 +3648,7 @@
       "fixed_version": "0.2.1",
       "app": "nodejs-goof",
       "cvss": 7.5,
-      "epss": 0.24928,
+      "epss": 0.23789,
       "in_kev": false,
       "kev_date_added": null,
       "priority_score": 37,
@@ -7841,6 +7841,7 @@
         "https://access.redhat.com/errata/RHSA-2026:60520",
         "https://access.redhat.com/errata/RHSA-2026:62260",
         "https://access.redhat.com/errata/RHSA-2026:63355",
+        "https://access.redhat.com/errata/RHSA-2026:63373",
         "https://access.redhat.com/security/cve/CVE-2026-12143",
         "https://bugzilla.redhat.com/show_bug.cgi?id=2488480",
         "https://security.access.redhat.com/data/csaf/v2/vex/2026/cve-2026-12143.json"

@@ -1,0 +1,402 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>VulnBeat — Daily vulnerability watch</title>
+<!--
+  STATIC CONTRACT
+  ===============
+  This file is never touched by the automated pipeline. The pipeline only
+  rewrites data.json. UI strings live in assets/strings.json, loaded and
+  managed by assets/i18n.js.
+-->
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500;700&family=IBM+Plex+Mono:wght@400;600&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --bg:#0e131b;            /* deep blue-black canvas */
+    --panel:#161e2a;
+    --panel-2:#1c2635;
+    --line:#283445;
+    --text:#e8edf4;
+    --text-soft:#93a4ba;
+    --critical:#ff5a4e;
+    --critical-soft:rgba(255,90,78,.14);
+    --high:#f2a83b;
+    --high-soft:rgba(242,168,59,.13);
+    --medium:#5ea3ef;
+    --medium-soft:rgba(94,163,239,.13);
+    --low:#3ecfa5;
+    --low-soft:rgba(62,207,165,.12);
+    --pulse-empty:#233042;
+    --radius:6px;
+    --mono:'IBM Plex Mono',ui-monospace,monospace;
+    --display:'Space Grotesk',sans-serif;
+    --body:'Inter',system-ui,sans-serif;
+  }
+  *{box-sizing:border-box;margin:0;padding:0}
+  html{color-scheme:dark}
+  body{background:var(--bg);color:var(--text);font-family:var(--body);font-size:15px;line-height:1.5}
+  a{color:var(--medium)}
+  code{font-family:var(--mono);font-size:.9em;background:var(--panel-2);padding:1px 5px;border-radius:4px}
+  .wrap{max-width:1060px;margin:0 auto;padding:24px 16px 60px}
+
+  /* ---------- header ---------- */
+  header{display:flex;flex-wrap:wrap;align-items:center;gap:8px 16px;margin-bottom:6px}
+  h1{font-family:var(--display);font-weight:700;font-size:28px;letter-spacing:-.02em}
+  h1 .dot{color:var(--critical)}
+  .tagline{color:var(--text-soft);font-size:13.5px;flex-basis:100%;order:3}
+  .h-right{margin-left:auto;display:flex;align-items:center;gap:10px}
+  .lastrun{font-family:var(--mono);font-size:12px;color:var(--text-soft);
+    background:var(--panel);border:1px solid var(--line);border-radius:var(--radius);padding:6px 10px}
+  .lastrun b{color:var(--text);font-weight:600}
+  .lang{display:flex;border:1px solid var(--line);border-radius:var(--radius);overflow:hidden}
+  .lang button{font-family:var(--mono);font-size:12px;padding:6px 10px;border:0;cursor:pointer;
+    background:var(--panel);color:var(--text-soft)}
+  .lang button[aria-pressed="true"]{background:var(--text);color:var(--bg);font-weight:600}
+  .lang button:focus-visible{outline:2px solid var(--medium);outline-offset:-2px}
+
+  /* ---------- design signature: daily pulse strip ---------- */
+  .pulse{margin:18px 0 24px;background:var(--panel);border:1px solid var(--line);border-radius:var(--radius);padding:14px 16px}
+  .pulse-head{display:flex;flex-wrap:wrap;gap:6px 14px;justify-content:space-between;align-items:baseline;margin-bottom:10px}
+  .pulse-head h2{font-family:var(--mono);font-size:11.5px;font-weight:600;letter-spacing:.08em;text-transform:uppercase;color:var(--text-soft)}
+  .pulse-legend{font-family:var(--mono);font-size:11px;color:var(--text-soft);display:flex;gap:12px;flex-wrap:wrap}
+  .pulse-legend i{display:inline-block;width:10px;height:10px;border-radius:2px;margin-right:4px;vertical-align:-1px}
+  .pulse-row{display:flex;gap:4px;flex-wrap:wrap}
+  .pulse-cell{width:20px;height:20px;border-radius:3px;background:var(--pulse-empty);position:relative;cursor:default}
+  .pulse-cell:hover::after,.pulse-cell:focus-visible::after{
+    content:attr(data-tip);position:absolute;bottom:130%;left:50%;transform:translateX(-50%);
+    background:var(--text);color:var(--bg);font-family:var(--mono);font-size:11px;white-space:nowrap;
+    padding:4px 8px;border-radius:4px;z-index:5}
+  .pulse-note{margin-top:10px;font-size:12.5px;color:var(--text-soft)}
+
+  /* ---------- summary cards ---------- */
+  .stats{display:grid;grid-template-columns:repeat(auto-fit,minmax(140px,1fr));gap:10px;margin-bottom:24px}
+  .stat{background:var(--panel);border:1px solid var(--line);border-radius:var(--radius);padding:12px 14px}
+  .stat .n{font-family:var(--display);font-size:28px;font-weight:700;line-height:1.1}
+  .stat .l{font-family:var(--mono);font-size:10.5px;letter-spacing:.06em;text-transform:uppercase;color:var(--text-soft);margin-top:4px}
+  .stat.critical .n{color:var(--critical)}
+
+  /* ---------- filters ---------- */
+  .filters{display:flex;flex-wrap:wrap;gap:8px;margin-bottom:14px}
+  .chip{font-family:var(--mono);font-size:12px;border:1px solid var(--line);background:var(--panel);
+    border-radius:99px;padding:6px 13px;cursor:pointer;color:var(--text-soft)}
+  .chip[aria-pressed="true"]{background:var(--text);border-color:var(--text);color:var(--bg);font-weight:600}
+  .chip:focus-visible{outline:2px solid var(--medium);outline-offset:2px}
+
+  /* ---------- priority queue ---------- */
+  .queue-head{display:flex;flex-wrap:wrap;gap:4px 14px;justify-content:space-between;align-items:baseline;margin:4px 0 10px}
+  .queue-head h2{font-family:var(--display);font-size:18px;font-weight:700}
+  .queue-head span{font-family:var(--mono);font-size:11.5px;color:var(--text-soft)}
+  .finding{background:var(--panel);border:1px solid var(--line);border-radius:var(--radius);
+    padding:13px 15px;margin-bottom:10px;display:grid;
+    grid-template-columns:60px 1fr auto;gap:6px 16px;align-items:center}
+  .score{font-family:var(--mono);font-weight:600;font-size:19px;text-align:center;
+    border-radius:var(--radius);padding:10px 0;grid-row:span 2;align-self:stretch;
+    display:flex;flex-direction:column;justify-content:center}
+  .score small{font-size:9px;letter-spacing:.08em;font-weight:400;opacity:.9}
+  .critical .score{background:var(--critical-soft);color:var(--critical)}
+  .high .score{background:var(--high-soft);color:var(--high)}
+  .medium .score{background:var(--medium-soft);color:var(--medium)}
+  .low .score{background:var(--low-soft);color:var(--low)}
+  .f-main{min-width:0}
+  .f-top{display:flex;flex-wrap:wrap;align-items:baseline;gap:4px 12px}
+  .f-cve{font-family:var(--mono);font-weight:600;font-size:13.5px}
+  .f-pkg{font-family:var(--mono);font-size:12.5px;color:var(--text-soft)}
+  .f-pkg b{color:var(--text);font-weight:600}
+  .f-sum{font-size:13px;color:var(--text-soft);margin-top:3px}
+  .f-meta{grid-column:2/4;display:flex;flex-wrap:wrap;gap:6px 8px;align-items:center}
+  .badge{font-family:var(--mono);font-size:10.5px;border-radius:4px;padding:3px 8px;border:1px solid transparent}
+  .badge.kev{background:var(--critical);color:#14090a;font-weight:600}
+  .badge.dim{background:transparent;border-color:var(--line);color:var(--text-soft)}
+  .badge.fix{background:var(--low-soft);color:var(--low)}
+  .f-app{font-family:var(--mono);font-size:11.5px;color:var(--text-soft);text-align:right;grid-column:3;grid-row:1}
+  .empty{background:var(--panel);border:1px dashed var(--line);border-radius:var(--radius);
+    padding:34px 16px;text-align:center;color:var(--text-soft)}
+
+  /* ---------- footer ---------- */
+  footer{margin-top:32px;border-top:1px solid var(--line);padding-top:14px;
+    display:flex;flex-wrap:wrap;gap:8px 20px;font-family:var(--mono);font-size:11.5px;color:var(--text-soft)}
+  .src-ok::before{content:"●";color:var(--low);margin-right:5px}
+  .src-off::before{content:"○";color:var(--text-soft);margin-right:5px}
+  .footer-credit{margin-left:auto}
+  .demo-banner{background:var(--high-soft);border:1px solid var(--high);color:var(--high);
+    border-radius:var(--radius);padding:8px 12px;font-size:13px;margin-bottom:16px;display:none}
+  .demo-banner code{background:rgba(0,0,0,.25);color:inherit}
+
+  /* ---------- responsive ---------- */
+  @media (max-width:680px){
+    .wrap{padding:18px 12px 48px}
+    h1{font-size:24px}
+    .h-right{margin-left:auto}
+    .finding{grid-template-columns:50px 1fr;gap:6px 12px}
+    .f-app{grid-column:2;grid-row:auto;text-align:left}
+    .f-meta{grid-column:1/3}
+    .score{font-size:16px}
+    .stats{grid-template-columns:repeat(auto-fit,minmax(120px,1fr))}
+    .footer-credit{margin-left:0;flex-basis:100%}
+  }
+  @media (max-width:380px){
+    .pulse-cell{width:16px;height:16px}
+  }
+  @media (prefers-reduced-motion:no-preference){
+    .finding{transition:border-color .15s ease}
+    .finding:hover{border-color:var(--text-soft)}
+  }
+</style>
+</head>
+<body>
+<div class="wrap">
+
+  <header>
+    <h1>VulnBeat<span class="dot">.</span></h1>
+    <div class="h-right">
+      <span class="lastrun"><span data-i18n="last_run"></span>: <b id="lastrunValue">—</b></span>
+      <div class="lang" role="group" aria-label="Language">
+        <button type="button" data-lang="en">EN</button>
+        <button type="button" data-lang="es">ES</button>
+      </div>
+    </div>
+    <span class="tagline" data-i18n="tagline"></span>
+  </header>
+
+  <div class="demo-banner" id="demoBanner"></div>
+
+  <section class="pulse" aria-label="Daily run history">
+    <div class="pulse-head">
+      <h2 data-i18n="pulse_title"></h2>
+      <div class="pulse-legend">
+        <span><i style="background:var(--low)"></i><span data-i18n="legend_clean"></span></span>
+        <span><i style="background:var(--high)"></i><span data-i18n="legend_high"></span></span>
+        <span><i style="background:var(--critical)"></i><span data-i18n="legend_critical"></span></span>
+      </div>
+    </div>
+    <div class="pulse-row" id="pulseRow"></div>
+    <p class="pulse-note" id="pulseNote"></p>
+  </section>
+
+  <section class="stats" id="stats"></section>
+
+  <div class="filters" id="filters" role="group"></div>
+
+  <div class="queue-head">
+    <h2 data-i18n="queue_title"></h2>
+    <span id="queueCount"></span>
+  </div>
+  <section id="queue" aria-live="polite"></section>
+
+  <footer id="sources"></footer>
+</div>
+
+<!-- One file for i18n mechanics, one for VulnBeat's own strings. -->
+<script src="assets/i18n.js"></script>
+<script>
+"use strict";
+
+const SAMPLE_DATA = {
+  generated_at: "2026-09-09T06:04:11Z",
+  sources: { kev:{fetched:true,entries:2}, epss:{fetched:true,entries:41}, nvd:{fetched:true,entries:41} },
+  apps: [
+    {id:"demo-flask-shop",name:"Demo Flask Shop",ecosystem:"PyPI",dependencies:34},
+    {id:"demo-express-api",name:"Demo Express API",ecosystem:"npm",dependencies:61},
+    {id:"vulnbeat",name:"VulnBeat (self)",ecosystem:"PyPI",dependencies:6}
+  ],
+  findings: [
+    {id:"f-1",cve:"CVE-2026-11111",package:"examplelib",ecosystem:"PyPI",installed_version:"2.4.0",fixed_version:"2.4.3",app:"demo-flask-shop",cvss:9.8,epss:0.94,in_kev:true,kev_date_added:"2026-08-12",priority_score:97,priority_label:"critical",summary:{en:"Remote code execution in the template parser (sample data).",es:"Ejecución remota de código en el parser de plantillas (datos de ejemplo)."},references:[]},
+    {id:"f-2",cve:"CVE-2026-22222",package:"http-utils",ecosystem:"npm",installed_version:"1.9.1",fixed_version:"2.0.0",app:"demo-express-api",cvss:8.1,epss:0.61,in_kev:true,kev_date_added:"2026-08-13",priority_score:91,priority_label:"critical",summary:{en:"Authentication bypass in header middleware (sample data).",es:"Evasión de autenticación en el middleware de cabeceras (datos de ejemplo)."},references:[]},
+    {id:"f-3",cve:"CVE-2026-33333",package:"yaml-parse",ecosystem:"PyPI",installed_version:"0.8.2",fixed_version:null,app:"demo-flask-shop",cvss:7.5,epss:0.42,in_kev:false,kev_date_added:null,priority_score:58,priority_label:"high",summary:{en:"Denial of service with deeply nested documents (sample data).",es:"Denegación de servicio con documentos muy anidados (datos de ejemplo)."},references:[]},
+    {id:"f-4",cve:"CVE-2026-44444",package:"img-resize",ecosystem:"npm",installed_version:"3.1.0",fixed_version:"3.1.4",app:"demo-express-api",cvss:6.5,epss:0.07,in_kev:false,kev_date_added:null,priority_score:31,priority_label:"medium",summary:{en:"Out-of-bounds read while parsing EXIF metadata (sample data).",es:"Lectura fuera de límites al analizar metadatos EXIF (datos de ejemplo)."},references:[]},
+    {id:"f-5",cve:"CVE-2026-55555",package:"requests",ecosystem:"PyPI",installed_version:"2.32.0",fixed_version:"2.32.1",app:"vulnbeat",cvss:4.3,epss:0.01,in_kev:false,kev_date_added:null,priority_score:12,priority_label:"low",summary:{en:"Header leak across cross-scheme redirects (sample data).",es:"Filtrado de cabeceras en redirecciones entre esquemas (datos de ejemplo)."},references:[]}
+  ],
+  history: [
+    {date:"2026-09-03",findings_total:3,critical:0,high:1},
+    {date:"2026-09-04",findings_total:4,critical:0,high:1},
+    {date:"2026-09-05",findings_total:5,critical:0,high:2},
+    {date:"2026-09-06",findings_total:5,critical:0,high:2},
+    {date:"2026-09-07",findings_total:6,critical:1,high:2},
+    {date:"2026-09-08",findings_total:7,critical:2,high:2},
+    {date:"2026-09-09",findings_total:5,critical:2,high:1}
+  ]
+};
+
+let data = null;
+let activeApp = "all";
+
+function detectLang() {
+  try {
+    const saved = localStorage.getItem("vulnbeat_lang");
+    if (I18n.getAvailableLanguages().includes(saved)) return saved;
+  } catch (e) { /* storage unavailable: fall through */ }
+  const nav = (navigator.language || "").slice(0, 2).toLowerCase();
+  return I18n.getAvailableLanguages().includes(nav) ? nav : I18n.getLang();
+}
+
+function setLang(next) {
+  const lang = I18n.getAvailableLanguages().includes(next) ? next : I18n.getLang();
+  try { localStorage.setItem("vulnbeat_lang", lang); } catch (e) { /* ignore */ }
+  I18n.setLang(lang);
+}
+
+function applyStaticStrings() {
+  document.documentElement.lang = I18n.getLang();
+  document.querySelectorAll(".lang button").forEach(b =>
+    b.setAttribute("aria-pressed", String(b.dataset.lang === I18n.getLang())));
+  document.querySelectorAll("[data-i18n]").forEach(el => {
+    el.textContent = I18n.t(el.dataset.i18n);
+  });
+  document.getElementById("demoBanner").innerHTML = I18n.t("demo_banner");
+  document.getElementById("filters").setAttribute("aria-label", I18n.t("filter_label"));
+  document.getElementById("lastrunValue").textContent = formatDate(data.generated_at);
+}
+
+async function load() {
+  await I18n.load("assets/strings.json");
+
+  try {
+    const res = await fetch("data.json", { cache: "no-store" });
+    if (!res.ok) throw new Error("data.json not found");
+    data = await res.json();
+  } catch (e) {
+    data = SAMPLE_DATA;
+    document.getElementById("demoBanner").style.display = "block";
+  }
+
+  setLang(detectLang());
+}
+
+function escapeHtml(s) {
+  return String(s ?? "").replace(/[&<>"]/g, c =>
+    ({ "&": "&amp;", "<": "&lt;", ">": "&gt;", '"': "&quot;" }[c]));
+}
+
+function formatDate(iso) {
+  if (!iso) return "—";
+  const locale = I18n.getLang() === "es" ? "es-ES" : "en-GB";
+  return new Date(iso).toLocaleString(locale,
+    { day: "2-digit", month: "short", year: "numeric", hour: "2-digit", minute: "2-digit" });
+}
+
+function localizedSummary(summary) {
+  if (!summary) return "";
+  return summary[I18n.getLang()] ?? summary.en ?? "";
+}
+
+function renderPulse() {
+  const row = document.getElementById("pulseRow");
+  row.innerHTML = "";
+  const history = data.history || [];
+  history.forEach(day => {
+    const cell = document.createElement("span");
+    cell.className = "pulse-cell";
+    cell.tabIndex = 0;
+    let color = "var(--low)";
+    if (day.critical > 0) color = "var(--critical)";
+    else if (day.high > 0) color = "var(--high)";
+    cell.style.background = color;
+    cell.dataset.tip = I18n.t("pulse_tip",
+      { date: day.date, total: day.findings_total, critical: day.critical });
+    row.appendChild(cell);
+  });
+  document.getElementById("pulseNote").textContent =
+    I18n.t("pulse_note", { n: history.length });
+}
+
+function renderStats() {
+  const findings = data.findings || [];
+  const criticals = findings.filter(f => f.priority_label === "critical").length;
+  const inKev = findings.filter(f => f.in_kev).length;
+  const deps = (data.apps || []).reduce((sum, a) => sum + (a.dependencies || 0), 0);
+  const cards = [
+    { n: criticals, key: "stat_critical", cls: "critical" },
+    { n: inKev, key: "stat_kev", cls: inKev ? "critical" : "" },
+    { n: findings.length, key: "stat_findings", cls: "" },
+    { n: (data.apps || []).length, key: "stat_apps", cls: "" },
+    { n: deps, key: "stat_deps", cls: "" }
+  ];
+  document.getElementById("stats").innerHTML = cards.map(c =>
+    `<div class="stat ${c.cls}"><div class="n">${c.n}</div><div class="l">${I18n.t(c.key)}</div></div>`
+  ).join("");
+}
+
+function renderFilters() {
+  const box = document.getElementById("filters");
+  const chips = [{ id: "all", name: I18n.t("filter_all") }].concat(data.apps || []);
+  box.innerHTML = chips.map(a =>
+    `<button type="button" class="chip" aria-pressed="${activeApp === a.id}" data-app="${escapeHtml(a.id)}">${escapeHtml(a.name)}</button>`
+  ).join("");
+  box.querySelectorAll(".chip").forEach(b => {
+    b.onclick = () => { activeApp = b.dataset.app; renderFilters(); renderQueue(); };
+  });
+}
+
+function renderQueue() {
+  const box = document.getElementById("queue");
+  let findings = (data.findings || []).slice()
+    .sort((a, b) => b.priority_score - a.priority_score);
+  if (activeApp !== "all") findings = findings.filter(f => f.app === activeApp);
+
+  document.getElementById("queueCount").textContent =
+    I18n.t("queue_count", { n: findings.length });
+
+  if (!findings.length) {
+    box.innerHTML = `<div class="empty">${I18n.t("queue_empty")}</div>`;
+    return;
+  }
+
+  const appName = id => ((data.apps || []).find(a => a.id === id) || {}).name || id;
+
+  box.innerHTML = findings.map(f => {
+    const fixBadge = f.fixed_version
+      ? `<span class="badge fix">${I18n.t("badge_fix", { version: escapeHtml(f.fixed_version) })}</span>`
+      : `<span class="badge dim">${I18n.t("badge_no_fix")}</span>`;
+    const kevBadge = f.in_kev
+      ? `<span class="badge kev">${I18n.t("badge_kev")}${f.kev_date_added ? " " + I18n.t("badge_kev_since", { date: escapeHtml(f.kev_date_added) }) : ""}</span>`
+      : "";
+    const epss = f.epss != null ? (f.epss * 100).toFixed(0) + "%" : "—";
+    return `
+    <article class="finding ${escapeHtml(f.priority_label)}">
+      <div class="score">${f.priority_score}<small>${I18n.t("severity_" + f.priority_label)}</small></div>
+      <div class="f-main">
+        <div class="f-top">
+          <span class="f-cve">${escapeHtml(f.cve)}</span>
+          <span class="f-pkg"><b>${escapeHtml(f.package)}</b> ${escapeHtml(f.installed_version)} · ${escapeHtml(f.ecosystem)}</span>
+        </div>
+        <div class="f-sum">${escapeHtml(localizedSummary(f.summary))}</div>
+      </div>
+      <div class="f-app">${escapeHtml(appName(f.app))}</div>
+      <div class="f-meta">${kevBadge}<span class="badge dim">EPSS ${epss}</span><span class="badge dim">CVSS ${f.cvss ?? "—"}</span>${fixBadge}</div>
+    </article>`;
+  }).join("");
+}
+
+function renderSources() {
+  const sources = data.sources || {};
+  const labels = { kev: "CISA KEV", epss: "FIRST EPSS", nvd: "NVD" };
+  document.getElementById("sources").innerHTML =
+    Object.keys(labels).map(k => {
+      const src = sources[k] || {};
+      const cls = src.fetched ? "src-ok" : "src-off";
+      const text = src.fetched ? I18n.t("source_entries", { n: src.entries }) : I18n.t("source_pending");
+      return `<span class="${cls}">${labels[k]} · ${text}</span>`;
+    }).join("") +
+    `<span class="footer-credit">${I18n.t("footer_credit")}</span>`;
+}
+
+/* ---------- wire up ---------- */
+I18n.onLanguageChange(applyStaticStrings);
+I18n.onLanguageChange(renderPulse);
+I18n.onLanguageChange(renderStats);
+I18n.onLanguageChange(renderFilters);
+I18n.onLanguageChange(renderQueue);
+I18n.onLanguageChange(renderSources);
+
+document.querySelectorAll(".lang button").forEach(b => {
+  b.addEventListener("click", () => setLang(b.dataset.lang));
+});
+
+load();
+</script>
+</body>
+</html>

@@ -1,4 +1,8 @@
 {
+  "_meta": {
+    "languages": ["en", "es"],
+    "default": "en"
+  },
   "tagline": {
     "en": "Automated daily vulnerability watch over application dependencies",
     "es": "Vigilancia diaria automatizada de vulnerabilidades en dependencias"

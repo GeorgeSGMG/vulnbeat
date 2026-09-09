@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-09-09T11:01:53.565739+00:00",
+  "generated_at": "2026-09-09T17:53:55.641040+00:00",
   "sources": {
     "kev": {
       "fetched": true,
@@ -2333,7 +2333,7 @@
       "fixed_version": "46.0.5",
       "app": "pygoat",
       "cvss": 6.5,
-      "epss": 0.00341,
+      "epss": 0.00347,
       "in_kev": false,
       "kev_date_added": null,
       "priority_score": 17,
@@ -2538,7 +2538,7 @@
       "fixed_version": "2.5.0",
       "app": "pygoat",
       "cvss": 5.3,
-      "epss": 0.00408,
+      "epss": 0.00441,
       "in_kev": false,
       "kev_date_added": null,
       "priority_score": 14,
@@ -6443,7 +6443,7 @@
       "fixed_version": "4.17.23",
       "app": "nodejs-goof",
       "cvss": 5.3,
-      "epss": 0.01591,
+      "epss": 0.01627,
       "in_kev": false,
       "kev_date_added": null,
       "priority_score": 14,
@@ -6552,7 +6552,7 @@
       "fixed_version": "4.17.23",
       "app": "nodejs-goof",
       "cvss": 5.3,
-      "epss": 0.01591,
+      "epss": 0.01627,
       "in_kev": false,
       "kev_date_added": null,
       "priority_score": 14,
@@ -6661,7 +6661,7 @@
       "fixed_version": "4.17.23",
       "app": "nodejs-goof",
       "cvss": 5.3,
-      "epss": 0.01591,
+      "epss": 0.01627,
       "in_kev": false,
       "kev_date_added": null,
       "priority_score": 14,
@@ -7840,6 +7840,7 @@
         "https://access.redhat.com/errata/RHSA-2026:60477",
         "https://access.redhat.com/errata/RHSA-2026:60520",
         "https://access.redhat.com/errata/RHSA-2026:62260",
+        "https://access.redhat.com/errata/RHSA-2026:63047",
         "https://access.redhat.com/errata/RHSA-2026:63355",
         "https://access.redhat.com/errata/RHSA-2026:63373",
         "https://access.redhat.com/security/cve/CVE-2026-12143",
@@ -9165,6 +9166,14 @@
         "https://github.com/jshttp/on-headers/issues/15",
         "https://github.com/jshttp/on-headers/security/advisories/GHSA-76c9-3jph-rj3q"
       ]
+    }
+  ],
+  "history": [
+    {
+      "date": "2026-09-09",
+      "findings_total": 323,
+      "critical": 4,
+      "high": 3
     }
   ]
 }

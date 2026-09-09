@@ -38,8 +38,16 @@ class FindingEntry(TypedDict):
     references: list[str]
 
 
+class HistoryEntry(TypedDict):
+    date: str
+    findings_total: int
+    critical: int
+    high: int
+
+
 class Report(TypedDict):
     generated_at: str
     sources: SourcesEntry
     apps: list[AppEntry]
     findings: list[FindingEntry]
+    history: list[HistoryEntry]

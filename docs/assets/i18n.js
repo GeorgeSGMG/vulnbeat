@@ -5,19 +5,26 @@ window.I18n = (function () {
   let availableLangs = new Set();
   const subscribers = [];
 
-  async function load(url, defaultLang, fallback) {
+  async function load(url) {
     try {
       const res = await fetch(url, { cache: "no-store" });
       if (!res.ok) throw new Error(`HTTP error! status: ${res.status}`);
 
-      strings = await res.json();
-      fallbackLang = fallback || "en";
-      currentLang = defaultLang || fallbackLang;
+      const raw = await res.json();
+      const meta = raw._meta || {};
+      strings = { ...raw };
+      delete strings._meta;
 
-      availableLangs.clear();
-      Object.values(strings).forEach(entry => {
-        Object.keys(entry).forEach(lang => availableLangs.add(lang));
-      });
+      if (!meta.languages || !meta.languages.length) {
+        console.warn("[I18n] strings file is missing \"_meta.languages\"; no language will be available.");
+      }
+      if (!meta.default) {
+        console.warn("[I18n] strings file is missing \"_meta.default\"; falling back to \"en\".");
+      }
+
+      fallbackLang = meta.default || "en";
+      currentLang = fallbackLang;
+      availableLangs = new Set(meta.languages || []);
     } catch (error) {
       console.error("[I18n] Failed to load translations:", error);
     }
@@ -38,7 +45,7 @@ window.I18n = (function () {
       value = value.replace(/\{(\w+)\}/g, (match, varKey) => {
         if (varKey in safeVars) {
           usedKeys.add(varKey);
-          return safeVars[varKey];
+          return String(safeVars[varKey]);
         }
         console.warn(`[I18n] Missing variable "${varKey}" for key "${key}"`);
         return match;

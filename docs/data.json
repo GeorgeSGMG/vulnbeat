@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-09-08T10:56:27.531213+00:00",
+  "generated_at": "2026-09-09T11:01:53.565739+00:00",
   "sources": {
     "kev": {
       "fetched": true,
@@ -7,11 +7,11 @@
     },
     "epss": {
       "fetched": true,
-      "entries": 254
+      "entries": 256
     },
     "nvd": {
       "fetched": true,
-      "entries": 255
+      "entries": 257
     }
   },
   "apps": [
@@ -2003,29 +2003,6 @@
       ]
     },
     {
-      "id": "pygoat:CVE-2026-55380:pillow",
-      "cve": "CVE-2026-55380",
-      "package": "pillow",
-      "ecosystem": "PyPI",
-      "installed_version": "9.4.0",
-      "fixed_version": "12.3.0",
-      "app": "pygoat",
-      "cvss": 7.5,
-      "epss": 0.00418,
-      "in_kev": false,
-      "kev_date_added": null,
-      "priority_score": 19,
-      "priority_label": "low",
-      "summary": {
-        "en": "Pillow is a Python imaging library. Prior to 12.3.0, PIL/GdImageFile.py GdImageFile._open() read image dimensions from the GD 2.x header and stored them in self._size without calling Image._decompression_bomb_check(), allowing a crafted .gd file to trigger excessive C-heap allocation when loaded. This issue is fixed in version 12.3.0."
-      },
-      "references": [
-        "https://github.com/python-pillow/Pillow/blob/main/docs/releasenotes/12.3.0.rst",
-        "https://github.com/python-pillow/Pillow/commit/f39b0ae6624eb2d7c5c5d651d9bb5fdbd96a8675",
-        "https://github.com/python-pillow/Pillow/security/advisories/GHSA-phj9-mv4w-65pm"
-      ]
-    },
-    {
       "id": "pygoat:CVE-2026-54060:pillow",
       "cve": "CVE-2026-54060",
       "package": "pillow",
@@ -2046,6 +2023,29 @@
         "https://github.com/python-pillow/Pillow/blob/main/docs/releasenotes/12.3.0.rst",
         "https://github.com/python-pillow/Pillow/commit/0a263e6264aa5399988d9acd3bbfbca2ca3ec77d",
         "https://github.com/python-pillow/Pillow/security/advisories/GHSA-5x94-69rx-g8h2"
+      ]
+    },
+    {
+      "id": "pygoat:CVE-2026-55380:pillow",
+      "cve": "CVE-2026-55380",
+      "package": "pillow",
+      "ecosystem": "PyPI",
+      "installed_version": "9.4.0",
+      "fixed_version": "12.3.0",
+      "app": "pygoat",
+      "cvss": 7.5,
+      "epss": 0.00418,
+      "in_kev": false,
+      "kev_date_added": null,
+      "priority_score": 19,
+      "priority_label": "low",
+      "summary": {
+        "en": "Pillow is a Python imaging library. Prior to 12.3.0, PIL/GdImageFile.py GdImageFile._open() read image dimensions from the GD 2.x header and stored them in self._size without calling Image._decompression_bomb_check(), allowing a crafted .gd file to trigger excessive C-heap allocation when loaded. This issue is fixed in version 12.3.0."
+      },
+      "references": [
+        "https://github.com/python-pillow/Pillow/blob/main/docs/releasenotes/12.3.0.rst",
+        "https://github.com/python-pillow/Pillow/commit/f39b0ae6624eb2d7c5c5d651d9bb5fdbd96a8675",
+        "https://github.com/python-pillow/Pillow/security/advisories/GHSA-phj9-mv4w-65pm"
       ]
     },
     {
@@ -2462,28 +2462,6 @@
       ]
     },
     {
-      "id": "pygoat:CVE-2026-71491:sqlparse",
-      "cve": "CVE-2026-71491",
-      "package": "sqlparse",
-      "ecosystem": "PyPI",
-      "installed_version": "0.3.1",
-      "fixed_version": "0.6.0",
-      "app": "pygoat",
-      "cvss": null,
-      "epss": 0.00263,
-      "in_kev": false,
-      "kev_date_added": null,
-      "priority_score": 0,
-      "priority_label": "low",
-      "summary": {
-        "en": "sqlparse is a non-validating SQL parser module for Python. Prior to 0.6.0, group_comments in sqlparse/engine/grouping.py repeatedly rescans comment-only statements before the MAX_GROUPING_TOKENS guard, causing quadratic CPU consumption through sqlparse.parse() and sqlparse.format(sql, strip_comments=True). This issue is fixed in version 0.6.0."
-      },
-      "references": [
-        "https://github.com/andialbrecht/sqlparse/commit/ef2012a5eeb491e604dea2b00d516904a3830c87",
-        "https://github.com/andialbrecht/sqlparse/security/advisories/GHSA-f2ff-p2ww-7p4p"
-      ]
-    },
-    {
       "id": "pygoat:CVE-2026-54284:sqlparse",
       "cve": "CVE-2026-54284",
       "package": "sqlparse",
@@ -2503,6 +2481,28 @@
       "references": [
         "https://github.com/andialbrecht/sqlparse/commit/939b129e24c0ad5d51368b1aa72fffcaca76f06f",
         "https://github.com/andialbrecht/sqlparse/security/advisories/GHSA-pwgv-4x5q-6m9f"
+      ]
+    },
+    {
+      "id": "pygoat:CVE-2026-71491:sqlparse",
+      "cve": "CVE-2026-71491",
+      "package": "sqlparse",
+      "ecosystem": "PyPI",
+      "installed_version": "0.3.1",
+      "fixed_version": "0.6.0",
+      "app": "pygoat",
+      "cvss": null,
+      "epss": 0.00263,
+      "in_kev": false,
+      "kev_date_added": null,
+      "priority_score": 0,
+      "priority_label": "low",
+      "summary": {
+        "en": "sqlparse is a non-validating SQL parser module for Python. Prior to 0.6.0, group_comments in sqlparse/engine/grouping.py repeatedly rescans comment-only statements before the MAX_GROUPING_TOKENS guard, causing quadratic CPU consumption through sqlparse.parse() and sqlparse.format(sql, strip_comments=True). This issue is fixed in version 0.6.0."
+      },
+      "references": [
+        "https://github.com/andialbrecht/sqlparse/commit/ef2012a5eeb491e604dea2b00d516904a3830c87",
+        "https://github.com/andialbrecht/sqlparse/security/advisories/GHSA-f2ff-p2ww-7p4p"
       ]
     },
     {
@@ -4610,32 +4610,6 @@
       ]
     },
     {
-      "id": "nodejs-goof:CVE-2024-53900:mongoose",
-      "cve": "CVE-2024-53900",
-      "package": "mongoose",
-      "ecosystem": "npm",
-      "installed_version": "4.2.4",
-      "fixed_version": "5.13.23",
-      "app": "nodejs-goof",
-      "cvss": 9.1,
-      "epss": 0.03988,
-      "in_kev": false,
-      "kev_date_added": null,
-      "priority_score": 26,
-      "priority_label": "medium",
-      "summary": {
-        "en": "Mongoose before 8.8.3 can improperly use $where in match, leading to search injection.",
-        "es": " Mongoose anterior a 8.8.3 puede usar $where incorrectamente en la coincidencia."
-      },
-      "references": [
-        "https://github.com/Automattic/mongoose/blob/master/CHANGELOG.md",
-        "https://github.com/Automattic/mongoose/commit/c9e86bff7eef477da75a29af62a06d41a835a156",
-        "https://github.com/Automattic/mongoose/releases",
-        "https://github.com/advisories/GHSA-m7xq-9374-9rvx",
-        "https://www.npmjs.com/package/mongoose?activeTab=versions"
-      ]
-    },
-    {
       "id": "nodejs-goof:CVE-2019-10746:mixin-deep",
       "cve": "CVE-2019-10746",
       "package": "mixin-deep",
@@ -4658,6 +4632,32 @@
         "https://lists.fedoraproject.org/archives/list/package-announce%40lists.fedoraproject.org/message/UXRA365KZCUNXMU3KDH5JN5BEPNIGUKC/",
         "https://snyk.io/vuln/SNYK-JS-MIXINDEEP-450212",
         "https://www.oracle.com//security-alerts/cpujul2021.html"
+      ]
+    },
+    {
+      "id": "nodejs-goof:CVE-2024-53900:mongoose",
+      "cve": "CVE-2024-53900",
+      "package": "mongoose",
+      "ecosystem": "npm",
+      "installed_version": "4.2.4",
+      "fixed_version": "5.13.23",
+      "app": "nodejs-goof",
+      "cvss": 9.1,
+      "epss": 0.03904,
+      "in_kev": false,
+      "kev_date_added": null,
+      "priority_score": 26,
+      "priority_label": "medium",
+      "summary": {
+        "en": "Mongoose before 8.8.3 can improperly use $where in match, leading to search injection.",
+        "es": " Mongoose anterior a 8.8.3 puede usar $where incorrectamente en la coincidencia."
+      },
+      "references": [
+        "https://github.com/Automattic/mongoose/blob/master/CHANGELOG.md",
+        "https://github.com/Automattic/mongoose/commit/c9e86bff7eef477da75a29af62a06d41a835a156",
+        "https://github.com/Automattic/mongoose/releases",
+        "https://github.com/advisories/GHSA-m7xq-9374-9rvx",
+        "https://www.npmjs.com/package/mongoose?activeTab=versions"
       ]
     },
     {
@@ -8176,6 +8176,33 @@
       ]
     },
     {
+      "id": "nodejs-goof:CVE-2026-84375:js-yaml",
+      "cve": "CVE-2026-84375",
+      "package": "js-yaml",
+      "ecosystem": "npm",
+      "installed_version": "3.13.1",
+      "fixed_version": "3.15.2",
+      "app": "nodejs-goof",
+      "cvss": 7.5,
+      "epss": 0.00385,
+      "in_kev": false,
+      "kev_date_added": null,
+      "priority_score": 19,
+      "priority_label": "low",
+      "summary": {
+        "en": "js-yaml is a JavaScript YAML parser and dumper. From 3.0.0 until 3.15.2 and 4.3.2, maxTotalMergeKeys in lib/js-yaml/loader.js and lib/loader.js does not count empty mapping sources while processing the merge key <<. An attacker can alias a large sequence of empty mappings into many merge targets, causing O(N * K) processing while totalMergeKeys remains unchanged and the configured resource limit is never reached. A relatively small YAML document can therefore cause prolonged CPU consumption in applications that parse untrusted YAML, and merge processing is enabled by default on these release lines. This issue is fixed in versions 3.15.2 and 4.3.2."
+      },
+      "references": [
+        "https://github.com/nodeca/js-yaml/commit/3485bc06ff8a0251505f44a00414d90df2466639",
+        "https://github.com/nodeca/js-yaml/commit/6a8e05f9a485188ed730ac81e81ae221352ef480",
+        "https://github.com/nodeca/js-yaml/commit/d90b6612a5a84385bdcb556c44578eac76dc0f6b",
+        "https://github.com/nodeca/js-yaml/pull/797",
+        "https://github.com/nodeca/js-yaml/releases/tag/3.15.2",
+        "https://github.com/nodeca/js-yaml/releases/tag/4.3.2",
+        "https://github.com/nodeca/js-yaml/security/advisories/GHSA-2883-xcg3-v3hh"
+      ]
+    },
+    {
       "id": "nodejs-goof:CVE-2020-7608:yargs-parser",
       "cve": "CVE-2020-7608",
       "package": "yargs-parser",
@@ -9089,6 +9116,28 @@
         "https://github.com/typeorm/typeorm/releases/tag/0.3.31",
         "https://github.com/typeorm/typeorm/releases/tag/1.1.0",
         "https://github.com/typeorm/typeorm/security/advisories/GHSA-2rp8-mm9q-fp49"
+      ]
+    },
+    {
+      "id": "nodejs-goof:CVE-2026-15603:morgan",
+      "cve": "CVE-2026-15603",
+      "package": "morgan",
+      "ecosystem": "npm",
+      "installed_version": "1.10.0",
+      "fixed_version": "1.12.0",
+      "app": "nodejs-goof",
+      "cvss": 5.3,
+      "epss": 0.00235,
+      "in_kev": false,
+      "kev_date_added": null,
+      "priority_score": 13,
+      "priority_label": "low",
+      "summary": {
+        "en": "morgan is an HTTP request logger middleware for Node.js. In versions prior to 1.12.0, the internal helper that escapes log token values did not neutralize the Unicode line separator characters U+0085 (Next Line), U+2028 (Line Separator), and U+2029 (Paragraph Separator). An unauthenticated remote client can place these characters in an attacker-controlled log token, for example a Basic auth username surfaced through the remote-user token, so that Unicode-aware downstream log processing splits a single request log into multiple logical records. This is a log forging issue (CWE-117) and an incomplete-fix follow-up to CVE-2026-5078, which only addressed ASCII control characters. The issue is fixed in morgan 1.12.0, which extends the escaping set to cover these Unicode line separators. Upgrade to morgan 1.12.0 to remediate."
+      },
+      "references": [
+        "https://cna.openjsf.org/security-advisories.html",
+        "https://github.com/expressjs/morgan/security/advisories/GHSA-jxfw-x594-9x9m"
       ]
     },
     {

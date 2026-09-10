@@ -63,8 +63,12 @@
   .pulse{margin:18px 0 24px;background:var(--panel);border:1px solid var(--line);border-radius:var(--radius);padding:14px 16px}
   .pulse-head{display:flex;flex-wrap:wrap;gap:6px 14px;justify-content:space-between;align-items:baseline;margin-bottom:10px}
   .pulse-head h2{font-family:var(--mono);font-size:11.5px;font-weight:600;letter-spacing:.08em;text-transform:uppercase;color:var(--text-soft)}
+  .pulse-title-group{display:flex;flex-wrap:wrap;gap:4px 10px;align-items:baseline}
+  .pulse-title{width:16ch;flex-shrink:0}
+  .pulse-subtitle{width:30ch;flex-shrink:0}
   .pulse-legend{font-family:var(--mono);font-size:11px;color:var(--text-soft);display:flex;gap:12px;flex-wrap:wrap}
-  .pulse-legend i{display:inline-block;width:10px;height:10px;border-radius:2px;margin-right:4px;vertical-align:-1px}
+  .legend-item{display:inline-flex;align-items:center;gap:4px;width:17ch;flex-shrink:0}
+  .pulse-legend i{display:inline-block;width:10px;height:10px;border-radius:2px}
   .pulse-row{display:flex;gap:4px;flex-wrap:wrap}
   .pulse-cell{width:20px;height:20px;border-radius:3px;background:var(--pulse-empty);position:relative;cursor:default}
   .pulse-cell:hover::after,.pulse-cell:focus-visible::after{
@@ -142,6 +146,9 @@
   @media (max-width:380px){
     .pulse-cell{width:16px;height:16px}
   }
+  @media (max-width:326px){
+    .lastrun{height:50px;display:flex;align-items:center}
+  }
 </style>
 </head>
 <body>
@@ -150,7 +157,7 @@
   <header>
     <h1>VulnBeat<span class="dot">.</span></h1>
     <div class="h-right">
-      <span class="lastrun"><span data-i18n="last_run"></span>: <b id="lastrunValue">—</b></span>
+      <span class="lastrun"><span class="lastrun-text"><span data-i18n="last_run"></span>: <b id="lastrunValue">—</b></span></span>
       <div class="lang" role="group" aria-label="Language">
         <button type="button" data-lang="en">EN</button>
         <button type="button" data-lang="es">ES</button>
@@ -163,11 +170,14 @@
 
   <section class="pulse" aria-label="Daily run history">
     <div class="pulse-head">
-      <h2 data-i18n="pulse_title"></h2>
+      <div class="pulse-title-group">
+        <h2 class="pulse-title" data-i18n="pulse_title"></h2>
+        <h2 class="pulse-subtitle" data-i18n="pulse_subtitle"></h2>
+      </div>
       <div class="pulse-legend">
-        <span><i style="background:var(--low)"></i><span data-i18n="legend_clean"></span></span>
-        <span><i style="background:var(--high)"></i><span data-i18n="legend_high"></span></span>
-        <span><i style="background:var(--critical)"></i><span data-i18n="legend_critical"></span></span>
+        <span class="legend-item"><i style="background:var(--low)"></i><span data-i18n="legend_clean"></span></span>
+        <span class="legend-item"><i style="background:var(--high)"></i><span data-i18n="legend_high"></span></span>
+        <span class="legend-item"><i style="background:var(--critical)"></i><span data-i18n="legend_critical"></span></span>
       </div>
     </div>
     <div class="pulse-row" id="pulseRow"></div>

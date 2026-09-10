@@ -16,12 +16,16 @@
     "es": "Mostrando <b>datos de ejemplo</b> (no se ha encontrado <code>data.json</code> junto a esta página). Cuando el pipeline escriba su primer <code>data.json</code>, se mostrarán datos reales automáticamente."
   },
   "pulse_title": {
-    "en": "Daily pulse · one cell = one autonomous run",
-    "es": "Pulso diario · una celda = una ejecución autónoma"
+    "en": "Daily pulse",
+    "es": "Pulso diario"
+  },
+  "pulse_subtitle": {
+    "en": "one cell = one run",
+    "es": "una celda = una ejecución"
   },
   "legend_clean": {
-    "en": "no criticals",
-    "es": "sin críticos"
+    "en": "nothing urgent",
+    "es": "nada urgente"
   },
   "legend_high": {
     "en": "with highs",

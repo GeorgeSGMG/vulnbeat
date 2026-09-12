@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-09-11T10:54:30.086502+00:00",
+  "generated_at": "2026-09-12T10:22:39.781669+00:00",
   "sources": {
     "kev": {
       "fetched": true,
@@ -5011,6 +5011,28 @@
       ]
     },
     {
+      "id": "nodejs-goof:CVE-2020-7610:bson",
+      "cve": "CVE-2020-7610",
+      "package": "bson",
+      "ecosystem": "npm",
+      "installed_version": "1.1.4",
+      "fixed_version": "1.1.4",
+      "app": "nodejs-goof",
+      "cvss": 9.8,
+      "epss": 0.02328,
+      "in_kev": false,
+      "kev_date_added": null,
+      "priority_score": 26,
+      "priority_label": "medium",
+      "summary": {
+        "en": "All versions of bson before 1.1.4 are vulnerable to Deserialization of Untrusted Data. The package will ignore an unknown value for an object's _bsotype, leading to cases where an object is serialized as a document rather than the intended BSON type.",
+        "es": "Todas las versiones de bson anteriores a 1.1.4, son vulnerables a la Deserializaci\u00f3n de Datos No Confiables. El paquete ignorar\u00e1 un valor desconocido para un _bsotype de objeto, conllevando a casos donde un objeto es serializado como un documento en lugar del tipo BSON previsto."
+      },
+      "references": [
+        "https://snyk.io/vuln/SNYK-JS-BSON-561052"
+      ]
+    },
+    {
       "id": "nodejs-goof:CVE-2026-4800:lodash",
       "cve": "CVE-2026-4800",
       "package": "lodash",
@@ -5339,28 +5361,6 @@
         "https://github.com/markedjs/marked/releases/tag/v4.0.10",
         "https://github.com/markedjs/marked/security/advisories/GHSA-rrrm-qjm4-v8hf",
         "https://lists.fedoraproject.org/archives/list/package-announce%40lists.fedoraproject.org/message/AIXDMC3CSHYW3YWVSQOXAWLUYQHAO5UX/"
-      ]
-    },
-    {
-      "id": "nodejs-goof:CVE-2020-7610:bson",
-      "cve": "CVE-2020-7610",
-      "package": "bson",
-      "ecosystem": "npm",
-      "installed_version": "1.1.4",
-      "fixed_version": "1.1.4",
-      "app": "nodejs-goof",
-      "cvss": 9.8,
-      "epss": 0.02236,
-      "in_kev": false,
-      "kev_date_added": null,
-      "priority_score": 26,
-      "priority_label": "medium",
-      "summary": {
-        "en": "All versions of bson before 1.1.4 are vulnerable to Deserialization of Untrusted Data. The package will ignore an unknown value for an object's _bsotype, leading to cases where an object is serialized as a document rather than the intended BSON type.",
-        "es": "Todas las versiones de bson anteriores a 1.1.4, son vulnerables a la Deserializaci\u00f3n de Datos No Confiables. El paquete ignorar\u00e1 un valor desconocido para un _bsotype de objeto, conllevando a casos donde un objeto es serializado como un documento en lugar del tipo BSON previsto."
-      },
-      "references": [
-        "https://snyk.io/vuln/SNYK-JS-BSON-561052"
       ]
     },
     {
@@ -7215,7 +7215,7 @@
       "fixed_version": "0.1.12",
       "app": "nodejs-goof",
       "cvss": null,
-      "epss": 0.00792,
+      "epss": 0.00787,
       "in_kev": false,
       "kev_date_added": null,
       "priority_score": 1,
@@ -7844,6 +7844,8 @@
         "https://access.redhat.com/errata/RHSA-2026:63355",
         "https://access.redhat.com/errata/RHSA-2026:63373",
         "https://access.redhat.com/errata/RHSA-2026:66003",
+        "https://access.redhat.com/errata/RHSA-2026:66488",
+        "https://access.redhat.com/errata/RHSA-2026:66545",
         "https://access.redhat.com/security/cve/CVE-2026-12143",
         "https://bugzilla.redhat.com/show_bug.cgi?id=2488480",
         "https://security.access.redhat.com/data/csaf/v2/vex/2026/cve-2026-12143.json"
@@ -9184,6 +9186,12 @@
     },
     {
       "date": "2026-09-11",
+      "findings_total": 323,
+      "critical": 4,
+      "high": 3
+    },
+    {
+      "date": "2026-09-12",
       "findings_total": 323,
       "critical": 4,
       "high": 3

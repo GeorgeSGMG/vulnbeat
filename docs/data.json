@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-09-12T10:22:39.781669+00:00",
+  "generated_at": "2026-09-13T11:23:22.901398+00:00",
   "sources": {
     "kev": {
       "fetched": true,
@@ -820,7 +820,7 @@
       "fixed_version": "4.2.17",
       "app": "pygoat",
       "cvss": 9.8,
-      "epss": 0.01424,
+      "epss": 0.01415,
       "in_kev": false,
       "kev_date_added": null,
       "priority_score": 26,
@@ -1092,7 +1092,7 @@
       "fixed_version": "4.2.17",
       "app": "pygoat",
       "cvss": 7.5,
-      "epss": 0.01398,
+      "epss": 0.01388,
       "in_kev": false,
       "kev_date_added": null,
       "priority_score": 20,
@@ -2486,28 +2486,6 @@
       ]
     },
     {
-      "id": "pygoat:CVE-2026-54284:sqlparse",
-      "cve": "CVE-2026-54284",
-      "package": "sqlparse",
-      "ecosystem": "PyPI",
-      "installed_version": "0.3.1",
-      "fixed_version": "0.6.0",
-      "app": "pygoat",
-      "cvss": null,
-      "epss": 0.00263,
-      "in_kev": false,
-      "kev_date_added": null,
-      "priority_score": 0,
-      "priority_label": "low",
-      "summary": {
-        "en": "sqlparse is a non-validating SQL parser module for Python. Prior to 0.6.0, TokenList construction and string conversion in sqlparse/sql.py repeatedly flatten nested token subtrees constructed by group_parenthesis and group_case, causing quadratic CPU consumption through sqlparse.parse(), sqlparse.format(), and sqlparse.split() before depth and token limits terminate processing. This issue is fixed in version 0.6.0."
-      },
-      "references": [
-        "https://github.com/andialbrecht/sqlparse/commit/939b129e24c0ad5d51368b1aa72fffcaca76f06f",
-        "https://github.com/andialbrecht/sqlparse/security/advisories/GHSA-pwgv-4x5q-6m9f"
-      ]
-    },
-    {
       "id": "pygoat:CVE-2026-71491:sqlparse",
       "cve": "CVE-2026-71491",
       "package": "sqlparse",
@@ -2527,6 +2505,28 @@
       "references": [
         "https://github.com/andialbrecht/sqlparse/commit/ef2012a5eeb491e604dea2b00d516904a3830c87",
         "https://github.com/andialbrecht/sqlparse/security/advisories/GHSA-f2ff-p2ww-7p4p"
+      ]
+    },
+    {
+      "id": "pygoat:CVE-2026-54284:sqlparse",
+      "cve": "CVE-2026-54284",
+      "package": "sqlparse",
+      "ecosystem": "PyPI",
+      "installed_version": "0.3.1",
+      "fixed_version": "0.6.0",
+      "app": "pygoat",
+      "cvss": null,
+      "epss": 0.00263,
+      "in_kev": false,
+      "kev_date_added": null,
+      "priority_score": 0,
+      "priority_label": "low",
+      "summary": {
+        "en": "sqlparse is a non-validating SQL parser module for Python. Prior to 0.6.0, TokenList construction and string conversion in sqlparse/sql.py repeatedly flatten nested token subtrees constructed by group_parenthesis and group_case, causing quadratic CPU consumption through sqlparse.parse(), sqlparse.format(), and sqlparse.split() before depth and token limits terminate processing. This issue is fixed in version 0.6.0."
+      },
+      "references": [
+        "https://github.com/andialbrecht/sqlparse/commit/939b129e24c0ad5d51368b1aa72fffcaca76f06f",
+        "https://github.com/andialbrecht/sqlparse/security/advisories/GHSA-pwgv-4x5q-6m9f"
       ]
     },
     {
@@ -9192,6 +9192,12 @@
     },
     {
       "date": "2026-09-12",
+      "findings_total": 323,
+      "critical": 4,
+      "high": 3
+    },
+    {
+      "date": "2026-09-13",
       "findings_total": 323,
       "critical": 4,
       "high": 3

@@ -70,11 +70,11 @@
   .legend-item{display:inline-flex;align-items:center;gap:4px;width:17ch;flex-shrink:0}
   .pulse-legend i{display:inline-block;width:10px;height:10px;border-radius:2px}
   .pulse-row{display:flex;gap:4px;flex-wrap:wrap}
-  .pulse-cell{width:20px;height:20px;border-radius:3px;background:var(--pulse-empty);position:relative;cursor:default}
-  .pulse-cell:hover::after,.pulse-cell:focus-visible::after{
-    content:attr(data-tip);position:absolute;bottom:130%;left:50%;transform:translateX(-50%);
-    background:var(--text);color:var(--bg);font-family:var(--mono);font-size:11px;white-space:nowrap;
-    padding:4px 8px;border-radius:4px;z-index:5}
+  .pulse-cell{width:20px;height:20px;border-radius:3px;background:var(--pulse-empty);cursor:default}
+  .pulse-tooltip{position:fixed;background:var(--text);color:var(--bg);font-family:var(--mono);font-size:11px;
+    white-space:nowrap;padding:4px 8px;border-radius:4px;z-index:20;pointer-events:none;
+    opacity:0;visibility:hidden;transition:opacity .1s ease}
+  .pulse-tooltip.visible{opacity:1;visibility:visible}
   .pulse-note{margin-top:10px;font-size:12.5px;color:var(--text-soft)}
 
   /* ---------- summary cards ---------- */
@@ -231,6 +231,32 @@ const SAMPLE_DATA = {
 let data = null;
 let activeApp = "all";
 
+const pulseTooltip = document.createElement("div");
+pulseTooltip.className = "pulse-tooltip";
+document.body.appendChild(pulseTooltip);
+
+const TOOLTIP_MARGIN = 8;
+
+function showPulseTooltip(cell) {
+  pulseTooltip.textContent = cell.dataset.tip;
+  pulseTooltip.classList.add("visible");
+
+  const cellRect = cell.getBoundingClientRect();
+  const tooltipRect = pulseTooltip.getBoundingClientRect();
+
+  let left = cellRect.left + cellRect.width / 2 - tooltipRect.width / 2;
+  left = Math.max(TOOLTIP_MARGIN, Math.min(left, window.innerWidth - tooltipRect.width - TOOLTIP_MARGIN));
+
+  pulseTooltip.style.left = `${left}px`;
+  pulseTooltip.style.top = `${cellRect.top - tooltipRect.height - TOOLTIP_MARGIN}px`;
+}
+
+function hidePulseTooltip() {
+  pulseTooltip.classList.remove("visible");
+}
+
+window.addEventListener("resize", hidePulseTooltip);
+
 function detectLang() {
   try {
     const saved = localStorage.getItem("vulnbeat_lang");
@@ -291,6 +317,7 @@ function localizedSummary(summary) {
 }
 
 function renderPulse() {
+  hidePulseTooltip();
   const row = document.getElementById("pulseRow");
   row.innerHTML = "";
   const history = data.history || [];
@@ -304,6 +331,10 @@ function renderPulse() {
     cell.style.background = color;
     cell.dataset.tip = I18n.t("pulse_tip",
       { date: day.date, total: day.findings_total, critical: day.critical });
+    cell.addEventListener("mouseenter", () => showPulseTooltip(cell));
+    cell.addEventListener("mouseleave", hidePulseTooltip);
+    cell.addEventListener("focus", () => showPulseTooltip(cell));
+    cell.addEventListener("blur", hidePulseTooltip);
     row.appendChild(cell);
   });
   document.getElementById("pulseNote").textContent =

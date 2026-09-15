@@ -6,6 +6,7 @@ from vulnbeat.models import MonitoredApp, PriorityLabel, PrioritizedFinding, Sou
 from vulnbeat.report_schema import AppEntry, FindingEntry, HistoryEntry, Report
 
 REPORT_HISTORY_KEY = "history"
+HISTORY_MAX_ENTRIES = 30
 
 
 def _read_previous_history(output_path: str) -> list[HistoryEntry]:
@@ -78,6 +79,7 @@ def write_report(
 
     history = [entry for entry in _read_previous_history(output_path) if entry["date"] != report_date]
     history.append(history_entry)
+    history = history[-HISTORY_MAX_ENTRIES:]
 
     report: Report = {
         "generated_at": generated_at.isoformat(),

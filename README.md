@@ -33,9 +33,9 @@ This product uses the NVD API but is not endorsed or certified by the NVD.
                                       │                         │
                              KEV · EPSS · NVD enrichment        │
                                                                 │
-                                                        docs/data.json
+                                                           docs/data.json
                                                                 │
-         GitHub Actions (daily cron) orchestrates everything    │
+                      GitHub Actions (daily cron) orchestrates everything
                                                                 │
                                           GitHub Pages (static dashboard)
 ```

@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-09-14T12:14:05.937305+00:00",
+  "generated_at": "2026-09-15T11:25:30.279687+00:00",
   "sources": {
     "kev": {
       "fetched": true,
@@ -1371,28 +1371,6 @@
       ]
     },
     {
-      "id": "pygoat:CVE-2025-66471:urllib3",
-      "cve": "CVE-2025-66471",
-      "package": "urllib3",
-      "ecosystem": "PyPI",
-      "installed_version": "1.26.9",
-      "fixed_version": "2.6.0",
-      "app": "pygoat",
-      "cvss": 7.5,
-      "epss": 0.00682,
-      "in_kev": false,
-      "kev_date_added": null,
-      "priority_score": 19,
-      "priority_label": "low",
-      "summary": {
-        "en": "urllib3 is a user-friendly HTTP client library for Python. Starting in version 1.0 and prior to 2.6.0, the Streaming API improperly handles highly compressed data. urllib3's streaming API is designed for the efficient handling of large HTTP responses by reading the content in chunks, rather than loading the entire response body into memory at once. When streaming a compressed response, urllib3 can perform decoding or decompression based on the HTTP Content-Encoding header (e.g., gzip, deflate, br, or zstd). The library must read compressed data from the network and decompress it until the requested chunk size is met. Any resulting decompressed data that exceeds the requested amount is held in an internal buffer for the next read operation. The decompression logic could cause urllib3 to fully decode a small amount of highly compressed data in a single operation. This can result in excessive resource consumption (high CPU usage and massive memory allocation for the decompressed data."
-      },
-      "references": [
-        "https://github.com/urllib3/urllib3/commit/c19571de34c47de3a766541b041637ba5f716ed7",
-        "https://github.com/urllib3/urllib3/security/advisories/GHSA-2xpw-w6gg-jr37"
-      ]
-    },
-    {
       "id": "pygoat:CVE-2025-66418:urllib3",
       "cve": "CVE-2025-66418",
       "package": "urllib3",
@@ -1412,6 +1390,28 @@
       "references": [
         "https://github.com/urllib3/urllib3/commit/24d7b67eac89f94e11003424bcf0d8f7b72222a8",
         "https://github.com/urllib3/urllib3/security/advisories/GHSA-gm62-xv2j-4w53"
+      ]
+    },
+    {
+      "id": "pygoat:CVE-2025-66471:urllib3",
+      "cve": "CVE-2025-66471",
+      "package": "urllib3",
+      "ecosystem": "PyPI",
+      "installed_version": "1.26.9",
+      "fixed_version": "2.6.0",
+      "app": "pygoat",
+      "cvss": 7.5,
+      "epss": 0.00682,
+      "in_kev": false,
+      "kev_date_added": null,
+      "priority_score": 19,
+      "priority_label": "low",
+      "summary": {
+        "en": "urllib3 is a user-friendly HTTP client library for Python. Starting in version 1.0 and prior to 2.6.0, the Streaming API improperly handles highly compressed data. urllib3's streaming API is designed for the efficient handling of large HTTP responses by reading the content in chunks, rather than loading the entire response body into memory at once. When streaming a compressed response, urllib3 can perform decoding or decompression based on the HTTP Content-Encoding header (e.g., gzip, deflate, br, or zstd). The library must read compressed data from the network and decompress it until the requested chunk size is met. Any resulting decompressed data that exceeds the requested amount is held in an internal buffer for the next read operation. The decompression logic could cause urllib3 to fully decode a small amount of highly compressed data in a single operation. This can result in excessive resource consumption (high CPU usage and massive memory allocation for the decompressed data."
+      },
+      "references": [
+        "https://github.com/urllib3/urllib3/commit/c19571de34c47de3a766541b041637ba5f716ed7",
+        "https://github.com/urllib3/urllib3/security/advisories/GHSA-2xpw-w6gg-jr37"
       ]
     },
     {
@@ -2178,6 +2178,30 @@
       ]
     },
     {
+      "id": "pygoat:CVE-2026-59200:pillow",
+      "cve": "CVE-2026-59200",
+      "package": "pillow",
+      "ecosystem": "PyPI",
+      "installed_version": "9.4.0",
+      "fixed_version": "12.3.0",
+      "app": "pygoat",
+      "cvss": 7.5,
+      "epss": 0.00385,
+      "in_kev": false,
+      "kev_date_added": null,
+      "priority_score": 19,
+      "priority_label": "low",
+      "summary": {
+        "en": "Pillow is a Python imaging library. From 5.1.0 until 12.3.0, PdfParser.PdfStream.decode() in PIL/PdfParser.py calls zlib.decompress() with bufsize set to the PDF stream Length field without bounding the decompressed output size, allowing a crafted FlateDecode PDF stream to exhaust memory from a small file. This issue is fixed in version 12.3.0."
+      },
+      "references": [
+        "https://github.com/python-pillow/Pillow/commit/f7a31ea75e460e108c37126da1f47812f21f6b09",
+        "https://github.com/python-pillow/Pillow/pull/9718",
+        "https://github.com/python-pillow/Pillow/releases/tag/12.3.0",
+        "https://github.com/python-pillow/Pillow/security/advisories/GHSA-jjj6-mw9f-p565"
+      ]
+    },
+    {
       "id": "pygoat:CVE-2026-59199:pillow",
       "cve": "CVE-2026-59199",
       "package": "pillow",
@@ -2223,30 +2247,6 @@
         "https://github.com/python-pillow/Pillow/pull/9715",
         "https://github.com/python-pillow/Pillow/releases/tag/12.3.0",
         "https://github.com/python-pillow/Pillow/security/advisories/GHSA-9hw9-ch79-4vh6"
-      ]
-    },
-    {
-      "id": "pygoat:CVE-2026-59200:pillow",
-      "cve": "CVE-2026-59200",
-      "package": "pillow",
-      "ecosystem": "PyPI",
-      "installed_version": "9.4.0",
-      "fixed_version": "12.3.0",
-      "app": "pygoat",
-      "cvss": 7.5,
-      "epss": 0.00385,
-      "in_kev": false,
-      "kev_date_added": null,
-      "priority_score": 19,
-      "priority_label": "low",
-      "summary": {
-        "en": "Pillow is a Python imaging library. From 5.1.0 until 12.3.0, PdfParser.PdfStream.decode() in PIL/PdfParser.py calls zlib.decompress() with bufsize set to the PDF stream Length field without bounding the decompressed output size, allowing a crafted FlateDecode PDF stream to exhaust memory from a small file. This issue is fixed in version 12.3.0."
-      },
-      "references": [
-        "https://github.com/python-pillow/Pillow/commit/f7a31ea75e460e108c37126da1f47812f21f6b09",
-        "https://github.com/python-pillow/Pillow/pull/9718",
-        "https://github.com/python-pillow/Pillow/releases/tag/12.3.0",
-        "https://github.com/python-pillow/Pillow/security/advisories/GHSA-jjj6-mw9f-p565"
       ]
     },
     {
@@ -3196,7 +3196,7 @@
       "fixed_version": "3.5.0",
       "app": "nodejs-goof",
       "cvss": 6.9,
-      "epss": 0.8383,
+      "epss": 0.84887,
       "in_kev": true,
       "kev_date_added": "2025-01-23",
       "priority_score": 96,
@@ -3284,7 +3284,7 @@
       "fixed_version": "3.5.0",
       "app": "nodejs-goof",
       "cvss": 6.9,
-      "epss": 0.99019,
+      "epss": 0.99215,
       "in_kev": false,
       "kev_date_added": null,
       "priority_score": 92,
@@ -5550,7 +5550,7 @@
       "fixed_version": "6.0.4",
       "app": "nodejs-goof",
       "cvss": 7.5,
-      "epss": 0.02395,
+      "epss": 0.02415,
       "in_kev": false,
       "kev_date_added": null,
       "priority_score": 21,
@@ -5573,7 +5573,7 @@
       "fixed_version": "6.0.4",
       "app": "nodejs-goof",
       "cvss": 7.5,
-      "epss": 0.02395,
+      "epss": 0.02415,
       "in_kev": false,
       "kev_date_added": null,
       "priority_score": 21,
@@ -9204,6 +9204,12 @@
     },
     {
       "date": "2026-09-14",
+      "findings_total": 323,
+      "critical": 4,
+      "high": 3
+    },
+    {
+      "date": "2026-09-15",
       "findings_total": 323,
       "critical": 4,
       "high": 3

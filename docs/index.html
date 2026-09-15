@@ -78,8 +78,8 @@
   .pulse-note{margin-top:10px;font-size:12.5px;color:var(--text-soft)}
 
   /* ---------- summary cards ---------- */
-  .stats{display:grid;grid-template-columns:repeat(auto-fit,minmax(140px,1fr));gap:10px;margin-bottom:24px}
-  .stat{background:var(--panel);border:1px solid var(--line);border-radius:var(--radius);padding:12px 14px}
+  .stats{display:grid;grid-template-columns:repeat(auto-fit,minmax(170px,1fr));gap:10px;margin-bottom:24px}
+  .stat{background:var(--panel);border:1px solid var(--line);border-radius:var(--radius);padding:12px 14px;height:95px}
   .stat .n{font-family:var(--display);font-size:28px;font-weight:700;line-height:1.1}
   .stat .l{font-family:var(--mono);font-size:10.5px;letter-spacing:.06em;text-transform:uppercase;color:var(--text-soft);margin-top:4px}
   .stat.critical .n{color:var(--critical)}
@@ -140,7 +140,6 @@
     .f-app{grid-column:2;grid-row:auto;text-align:left}
     .f-meta{grid-column:1/3}
     .score{font-size:16px}
-    .stats{grid-template-columns:repeat(auto-fit,minmax(120px,1fr))}
     .footer-credit{margin-left:0;flex-basis:100%}
   }
   @media (max-width:380px){

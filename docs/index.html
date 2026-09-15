@@ -236,8 +236,10 @@ pulseTooltip.className = "pulse-tooltip";
 document.body.appendChild(pulseTooltip);
 
 const TOOLTIP_MARGIN = 8;
+let activePulseCell = null;
 
 function showPulseTooltip(cell) {
+  activePulseCell = cell;
   pulseTooltip.textContent = cell.dataset.tip;
   pulseTooltip.classList.add("visible");
 
@@ -253,6 +255,10 @@ function showPulseTooltip(cell) {
 
 function hidePulseTooltip() {
   pulseTooltip.classList.remove("visible");
+  if (activePulseCell) {
+    activePulseCell.blur();
+    activePulseCell = null;
+  }
 }
 
 window.addEventListener("resize", hidePulseTooltip);

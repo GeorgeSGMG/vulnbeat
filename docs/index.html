@@ -256,6 +256,7 @@ function hidePulseTooltip() {
 }
 
 window.addEventListener("resize", hidePulseTooltip);
+window.addEventListener("scroll", hidePulseTooltip, { passive: true });
 
 function detectLang() {
   try {

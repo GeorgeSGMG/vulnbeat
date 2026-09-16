@@ -62,7 +62,7 @@ def extract_scan_matches(scan_json: str) -> list[ScanMatch]:
                 fixed_version=_extract_fixed_version(vulnerability),
             )
         )
-    return matches
+    return list(dict.fromkeys(matches))
 
 
 def assemble_findings(

@@ -42,7 +42,8 @@ def generate_sbom(manifest_content: str, ecosystem: Ecosystem, lockfile_content:
 def parse_sbom(sbom_json: str, ecosystem: Ecosystem, scopes: dict[str, Scope]) -> dict[str, Component]:
     data = json.loads(sbom_json)
 
-    components = {}
+    components: dict[str, Component] = {}
+
     for entry in data.get(SBOM_COMPONENTS_KEY, []):
         if SBOM_VERSION_KEY not in entry:
             continue
@@ -50,11 +51,23 @@ def parse_sbom(sbom_json: str, ecosystem: Ecosystem, scopes: dict[str, Scope]) -
         name = entry[SBOM_NAME_KEY].lower()
         version = entry[SBOM_VERSION_KEY]
 
-        components[name] = Component(
-            version=version,
-            constraint=version,
-            exact=True,
-            scope=scopes.get(name, Scope.PRODUCTION),
-            ecosystem=ecosystem,
-        )
+        existing = components.get(name)
+
+        if existing is None:
+            components[name] = Component(
+                version=version,
+                constraint=version,
+                exact=True,
+                scope=scopes.get(name, Scope.PRODUCTION),
+                ecosystem=ecosystem,
+            )
+        elif existing.version is not None and existing.version != version:
+            components[name] = Component(
+                version=None,
+                constraint=None,
+                exact=False,
+                scope=existing.scope,
+                ecosystem=existing.ecosystem,
+            )
+
     return components

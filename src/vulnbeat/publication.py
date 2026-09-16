@@ -48,14 +48,14 @@ def write_report(
         priority = prioritized_finding.priority
         vulnerability = finding.vulnerability
 
-        finding_id = f"{finding.app_id}:{vulnerability.cve_id}:{finding.package_name}"
+        finding_id = f"{finding.app_id}:{vulnerability.cve_id}:{finding.package_name}:{finding.installed_version}"
 
         findings_data.append({
             "id": finding_id,
             "cve": vulnerability.cve_id,
             "package": finding.package_name,
             "ecosystem": finding.component.ecosystem.value,
-            "installed_version": finding.component.version,
+            "installed_version": finding.installed_version,
             "fixed_version": vulnerability.fixed_version,
             "app": finding.app_id,
             "cvss": vulnerability.cvss,

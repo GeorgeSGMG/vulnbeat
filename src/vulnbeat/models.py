@@ -97,6 +97,7 @@ class Component:
 class ScanMatch:
     cve_id: str
     package_name: str
+    installed_version: str
     fixed_version: str | None
 
 
@@ -139,6 +140,7 @@ class Vulnerability:
 class Finding:
     app_id: str
     package_name: str
+    installed_version: str
     component: Component
     vulnerability: Vulnerability
 

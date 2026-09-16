@@ -16,6 +16,7 @@ SCAN_VULNERABILITY_KEY = "vulnerability"
 SCAN_ID_KEY = "id"
 SCAN_ARTIFACT_KEY = "artifact"
 SCAN_NAME_KEY = "name"
+SCAN_VERSION_KEY = "version"
 SCAN_FIX_KEY = "fix"
 SCAN_FIX_STATE_KEY = "state"
 SCAN_FIX_VERSIONS_KEY = "versions"
@@ -51,10 +52,13 @@ def extract_scan_matches(scan_json: str) -> list[ScanMatch]:
         if not cve_id.startswith(CVE_PREFIX):
             continue
 
+        artifact = match[SCAN_ARTIFACT_KEY]
+
         matches.append(
             ScanMatch(
                 cve_id=cve_id,
-                package_name=match[SCAN_ARTIFACT_KEY][SCAN_NAME_KEY],
+                package_name=artifact[SCAN_NAME_KEY],
+                installed_version=artifact[SCAN_VERSION_KEY],
                 fixed_version=_extract_fixed_version(vulnerability),
             )
         )
@@ -107,6 +111,7 @@ def assemble_findings(
             Finding(
                 app_id=app_id,
                 package_name=match.package_name,
+                installed_version=match.installed_version,
                 component=component,
                 vulnerability=vulnerability,
             )

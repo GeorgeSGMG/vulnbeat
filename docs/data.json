@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-09-16T09:09:38.220878+00:00",
+  "generated_at": "2026-09-16T09:40:13.362258+00:00",
   "sources": {
     "kev": {
       "fetched": true,
@@ -4254,33 +4254,6 @@
       ]
     },
     {
-      "id": "nodejs-goof:CVE-2021-44906:minimist:0.0.8",
-      "cve": "CVE-2021-44906",
-      "package": "minimist",
-      "ecosystem": "npm",
-      "installed_version": "0.0.8",
-      "fixed_version": "0.2.4",
-      "app": "nodejs-goof",
-      "cvss": 9.8,
-      "epss": 0.04581,
-      "in_kev": false,
-      "kev_date_added": null,
-      "priority_score": 28,
-      "priority_label": "medium",
-      "summary": {
-        "en": "Minimist <=1.2.5 is vulnerable to Prototype Pollution via file index.js, function setKey() (lines 69-95).",
-        "es": "Minimist versiones anteriores a 1.2.5 incluy\u00e9ndola, es vulnerable a una Contaminaci\u00f3n de Prototipos por medio del archivo index.js, funci\u00f3n setKey() (l\u00edneas 69-95)"
-      },
-      "references": [
-        "https://github.com/Marynk/JavaScript-vulnerability-detection/blob/main/minimist%20PoC.zip",
-        "https://github.com/substack/minimist/blob/master/index.js#L69",
-        "https://github.com/substack/minimist/issues/164",
-        "https://security.netapp.com/advisory/ntap-20240621-0006/",
-        "https://snyk.io/vuln/SNYK-JS-MINIMIST-559764",
-        "https://stackoverflow.com/questions/8588563/adding-custom-properties-to-a-function/20278068#20278068"
-      ]
-    },
-    {
       "id": "nodejs-goof:CVE-2021-44906:minimist:1.2.0",
       "cve": "CVE-2021-44906",
       "package": "minimist",
@@ -5964,32 +5937,6 @@
       ]
     },
     {
-      "id": "nodejs-goof:CVE-2022-3517:minimatch:3.0.4",
-      "cve": "CVE-2022-3517",
-      "package": "minimatch",
-      "ecosystem": "npm",
-      "installed_version": "3.0.4",
-      "fixed_version": "3.0.5",
-      "app": "nodejs-goof",
-      "cvss": 7.5,
-      "epss": 0.01816,
-      "in_kev": false,
-      "kev_date_added": null,
-      "priority_score": 20,
-      "priority_label": "medium",
-      "summary": {
-        "en": "A vulnerability was found in the minimatch package. This flaw allows a Regular Expression Denial of Service (ReDoS) when calling the braceExpand function with specific arguments, resulting in a Denial of Service.",
-        "es": "Se ha encontrado una vulnerabilidad en el paquete minimatch. Este fallo permite una Denegaci\u00f3n de Servicio por Expresi\u00f3n Regular (ReDoS) cuando es llamada a la funci\u00f3n braceExpand con argumentos espec\u00edficos, resultando en una Denegaci\u00f3n de Servicio"
-      },
-      "references": [
-        "https://github.com/grafana/grafana-image-renderer/issues/329",
-        "https://github.com/isaacs/minimatch/commit/a8763f4388e51956be62dc6025cec1126beeb5e6",
-        "https://lists.debian.org/debian-lts-announce/2023/01/msg00011.html",
-        "https://lists.fedoraproject.org/archives/list/package-announce%40lists.fedoraproject.org/message/MTEUUTNIEBHGKUKKLNUZSV7IEP6IP3Q3/",
-        "https://lists.fedoraproject.org/archives/list/package-announce%40lists.fedoraproject.org/message/UM6XJ73Q3NAM5KSGCOKJ2ZIA6GUWUJLK/"
-      ]
-    },
-    {
       "id": "nodejs-goof:CVE-2017-16114:marked:0.3.5",
       "cve": "CVE-2017-16114",
       "package": "marked",
@@ -6296,29 +6243,6 @@
       "package": "minimist",
       "ecosystem": "npm",
       "installed_version": "0.0.10",
-      "fixed_version": "0.2.1",
-      "app": "nodejs-goof",
-      "cvss": 5.6,
-      "epss": 0.01931,
-      "in_kev": false,
-      "kev_date_added": null,
-      "priority_score": 15,
-      "priority_label": "low",
-      "summary": {
-        "en": "minimist before 1.2.2 could be tricked into adding or modifying properties of Object.prototype using a \"constructor\" or \"__proto__\" payload.",
-        "es": "minimist versiones anteriores a la versi\u00f3n 1.2.2, podr\u00eda ser enga\u00f1ado para agregar o modificar propiedades de Object.prototype usando una carga \u00fatil de \"constructor\" o \"__proto__\"."
-      },
-      "references": [
-        "http://lists.opensuse.org/opensuse-security-announce/2020-06/msg00024.html",
-        "https://snyk.io/vuln/SNYK-JS-MINIMIST-559764"
-      ]
-    },
-    {
-      "id": "nodejs-goof:CVE-2020-7598:minimist:0.0.8",
-      "cve": "CVE-2020-7598",
-      "package": "minimist",
-      "ecosystem": "npm",
-      "installed_version": "0.0.8",
       "fixed_version": "0.2.1",
       "app": "nodejs-goof",
       "cvss": 5.6,
@@ -7107,32 +7031,6 @@
       ]
     },
     {
-      "id": "nodejs-goof:CVE-2024-21538:cross-spawn:4.0.2",
-      "cve": "CVE-2024-21538",
-      "package": "cross-spawn",
-      "ecosystem": "npm",
-      "installed_version": "4.0.2",
-      "fixed_version": "6.0.6",
-      "app": "nodejs-goof",
-      "cvss": 7.5,
-      "epss": 0.00868,
-      "in_kev": false,
-      "kev_date_added": null,
-      "priority_score": 19,
-      "priority_label": "low",
-      "summary": {
-        "en": "Versions of the package cross-spawn before 6.0.6, from 7.0.0 and before 7.0.5 are vulnerable to Regular Expression Denial of Service (ReDoS) due to improper input sanitization. An attacker can increase the CPU usage and crash the program by crafting a very large and well crafted string.",
-        "es": "Las versiones del paquete cross-spawn anteriores a la 7.0.5 son vulnerables a la denegaci\u00f3n de servicio por expresi\u00f3n regular (ReDoS) debido a una desinfecci\u00f3n de entrada incorrecta. Un atacante puede aumentar el uso de la CPU y hacer que el programa se bloquee manipulando una cadena muy grande y bien manipulada."
-      },
-      "references": [
-        "https://github.com/moxystudio/node-cross-spawn/commit/5ff3a07d9add449021d806e45c4168203aa833ff",
-        "https://github.com/moxystudio/node-cross-spawn/commit/640d391fde65388548601d95abedccc12943374f",
-        "https://github.com/moxystudio/node-cross-spawn/pull/160",
-        "https://security.snyk.io/vuln/SNYK-JAVA-ORGWEBJARSNPM-8366349",
-        "https://security.snyk.io/vuln/SNYK-JS-CROSSSPAWN-8303230"
-      ]
-    },
-    {
       "id": "nodejs-goof:CVE-2024-21538:cross-spawn:5.1.0",
       "cve": "CVE-2024-21538",
       "package": "cross-spawn",
@@ -7568,31 +7466,6 @@
       ]
     },
     {
-      "id": "nodejs-goof:CVE-2026-69152:brace-expansion:1.1.11",
-      "cve": "CVE-2026-69152",
-      "package": "brace-expansion",
-      "ecosystem": "npm",
-      "installed_version": "1.1.11",
-      "fixed_version": "1.1.18",
-      "app": "nodejs-goof",
-      "cvss": 7.5,
-      "epss": 0.00623,
-      "in_kev": false,
-      "kev_date_added": null,
-      "priority_score": 19,
-      "priority_label": "low",
-      "summary": {
-        "en": "The brace-expansion library generates arbitrary strings containing a common prefix and suffix. Prior to 1.1.18, 2.1.4, 3.0.6, and 5.0.9, expand() does not apply maxLength while constructing comma-alternative intermediate arrays or padded sequences, allowing attacker-controlled input to exhaust memory or block the event loop. The fix for CVE-2026-14257 is bypassed by the vulnerability. This issue is fixed in versions 1.1.18, 2.1.4, 3.0.6, and 5.0.9."
-      },
-      "references": [
-        "https://github.com/juliangruber/brace-expansion/commit/139d015104e71433ad52a41d19467c48ecbb2c7d",
-        "https://github.com/juliangruber/brace-expansion/commit/1e30c930238d7162802d88a94189182def178dac",
-        "https://github.com/juliangruber/brace-expansion/commit/688a99eeaab02627c2b89ba8ba4821fecfa659cf",
-        "https://github.com/juliangruber/brace-expansion/commit/cb4b9e47cc2ec777c14b2b4492fb431a56f6a031",
-        "https://github.com/juliangruber/brace-expansion/security/advisories/GHSA-rgw5-rvv9-x895"
-      ]
-    },
-    {
       "id": "nodejs-goof:CVE-2026-33939:handlebars:4.0.11",
       "cve": "CVE-2026-33939",
       "package": "handlebars",
@@ -7718,29 +7591,6 @@
         "https://github.com/expressjs/express/pull/5539",
         "https://github.com/expressjs/express/security/advisories/GHSA-rv95-896h-c2vc",
         "https://github.com/koajs/koa/issues/1800"
-      ]
-    },
-    {
-      "id": "nodejs-goof:CVE-2026-26996:minimatch:3.0.4",
-      "cve": "CVE-2026-26996",
-      "package": "minimatch",
-      "ecosystem": "npm",
-      "installed_version": "3.0.4",
-      "fixed_version": "3.1.3",
-      "app": "nodejs-goof",
-      "cvss": 7.5,
-      "epss": 0.00519,
-      "in_kev": false,
-      "kev_date_added": null,
-      "priority_score": 19,
-      "priority_label": "low",
-      "summary": {
-        "en": "minimatch is a minimal matching utility for converting glob expressions into JavaScript RegExp objects. Versions 10.2.0 and below are vulnerable to Regular Expression Denial of Service (ReDoS) when a glob pattern contains many consecutive * wildcards followed by a literal character that doesn't appear in the test string. Each * compiles to a separate [^/]*? regex group, and when the match fails, V8's regex engine backtracks exponentially across all possible splits. The time complexity is O(4^N) where N is the number of * characters. With N=15, a single minimatch() call takes ~2 seconds. With N=34, it hangs effectively forever. Any application that passes user-controlled strings to minimatch() as the pattern argument is vulnerable to DoS. This issue has been fixed in version 10.2.1.",
-        "es": "minimatch es una utilidad de coincidencia m\u00ednima para convertir expresiones glob en objetos RegExp de JavaScript. Las versiones 10.2.0 e inferiores son vulnerables a la denegaci\u00f3n de servicio por expresi\u00f3n regular (ReDoS) cuando un patr\u00f3n glob contiene muchos comodines * consecutivos seguidos de un car\u00e1cter literal que no aparece en la cadena de prueba. Cada * se compila en un grupo de regex [^/]*? separado, y cuando la coincidencia falla, el motor de regex de V8 retrocede exponencialmente a trav\u00e9s de todas las posibles divisiones. La complejidad temporal es O(4^N) donde N es el n\u00famero de caracteres *. Con N=15, una sola llamada a minimatch() tarda ~2 segundos. Con N=34, se cuelga efectivamente para siempre. Cualquier aplicaci\u00f3n que pase cadenas controladas por el usuario a minimatch() como argumento de patr\u00f3n es vulnerable a DoS. Este problema ha sido solucionado en la versi\u00f3n 10.2.1."
-      },
-      "references": [
-        "https://github.com/isaacs/minimatch/commit/2e111f3a79abc00fa73110195de2c0f2351904f5",
-        "https://github.com/isaacs/minimatch/security/advisories/GHSA-3ppc-4f35-3m26"
       ]
     },
     {
@@ -7948,28 +7798,6 @@
       ]
     },
     {
-      "id": "nodejs-goof:CVE-2026-27903:minimatch:3.0.4",
-      "cve": "CVE-2026-27903",
-      "package": "minimatch",
-      "ecosystem": "npm",
-      "installed_version": "3.0.4",
-      "fixed_version": "3.1.3",
-      "app": "nodejs-goof",
-      "cvss": 7.5,
-      "epss": 0.00517,
-      "in_kev": false,
-      "kev_date_added": null,
-      "priority_score": 19,
-      "priority_label": "low",
-      "summary": {
-        "en": "minimatch is a minimal matching utility for converting glob expressions into JavaScript RegExp objects. Prior to version 10.2.3, 9.0.7, 8.0.6, 7.4.8, 6.2.2, 5.1.8, 4.2.5, and 3.1.3, `matchOne()` performs unbounded recursive backtracking when a glob pattern contains multiple non-adjacent `**` (GLOBSTAR) segments and the input path does not match. The time complexity is O(C(n, k)) -- binomial -- where `n` is the number of path segments and `k` is the number of globstars. With k=11 and n=30, a call to the default `minimatch()` API stalls for roughly 5 seconds. With k=13, it exceeds 15 seconds. No memoization or call budget exists to bound this behavior. Any application where an attacker can influence the glob pattern passed to `minimatch()` is vulnerable. The realistic attack surface includes build tools and task runners that accept user-supplied glob arguments (ESLint, Webpack, Rollup config), multi-tenant systems where one tenant configures glob-based rules that run in a shared process, admin or developer interfaces that accept ignore-rule or filter configuration as globs, and CI/CD pipelines that evaluate user-submitted config files containing glob patterns. An attacker who can place a crafted pattern into any of these paths can stall the Node.js event loop for tens of seconds per invocation. The pattern is 56 bytes for a 5-second stall and does not require authentication in contexts where pattern input is part of the feature. Versions 10.2.3, 9.0.7, 8.0.6, 7.4.8, 6.2.2, 5.1.8, 4.2.5, and 3.1.3 fix the issue.",
-        "es": "minimatch es una utilidad de coincidencia m\u00ednima para convertir expresiones glob en objetos RegExp de JavaScript. Antes de las versiones 10.2.3, 9.0.7, 8.0.6, 7.4.8, 6.2.2, 5.1.8, 4.2.5 y 3.1.3, 'matchOne()' realiza un retroceso recursivo ilimitado cuando un patr\u00f3n glob contiene m\u00faltiples segmentos '**' (GLOBSTAR) no adyacentes y la ruta de entrada no coincide. La complejidad temporal es O(C(n, k)) -- binomial -- donde 'n' es el n\u00famero de segmentos de ruta y 'k' es el n\u00famero de globstars. Con k=11 y n=30, una llamada a la API predeterminada de 'minimatch()' se detiene durante aproximadamente 5 segundos. Con k=13, supera los 15 segundos. No existe memoizaci\u00f3n ni presupuesto de llamadas para limitar este comportamiento. Cualquier aplicaci\u00f3n donde un atacante pueda influir en el patr\u00f3n glob pasado a 'minimatch()' es vulnerable. La superficie de ataque realista incluye herramientas de compilaci\u00f3n y ejecutores de tareas que aceptan argumentos glob proporcionados por el usuario (configuraci\u00f3n de ESLint, Webpack, Rollup), sistemas multi-inquilino donde un inquilino configura reglas basadas en glob que se ejecutan en un proceso compartido, interfaces de administrador o desarrollador que aceptan configuraci\u00f3n de reglas de ignorar o de filtro como globs, y pipelines de CI/CD que eval\u00faan archivos de configuraci\u00f3n enviados por el usuario que contienen patrones glob. Un atacante que pueda colocar un patr\u00f3n dise\u00f1ado en cualquiera de estas rutas puede detener el bucle de eventos de Node.js durante decenas de segundos por invocaci\u00f3n. El patr\u00f3n es de 56 bytes para una detenci\u00f3n de 5 segundos y no requiere autenticaci\u00f3n en contextos donde la entrada del patr\u00f3n es parte de la caracter\u00edstica. Las versiones 10.2.3, 9.0.7, 8.0.6, 7.4.8, 6.2.2, 5.1.8, 4.2.5 y 3.1.3 solucionan el problema."
-      },
-      "references": [
-        "https://github.com/isaacs/minimatch/security/advisories/GHSA-7r86-cg39-jmmj"
-      ]
-    },
-    {
       "id": "nodejs-goof:CVE-2026-4867:path-to-regexp:0.1.3",
       "cve": "CVE-2026-4867",
       "package": "path-to-regexp",
@@ -8013,51 +7841,6 @@
       },
       "references": [
         "https://github.com/isaacs/minimatch/security/advisories/GHSA-23c5-xmqv-rm74"
-      ]
-    },
-    {
-      "id": "nodejs-goof:CVE-2026-27904:minimatch:3.0.4",
-      "cve": "CVE-2026-27904",
-      "package": "minimatch",
-      "ecosystem": "npm",
-      "installed_version": "3.0.4",
-      "fixed_version": "3.1.4",
-      "app": "nodejs-goof",
-      "cvss": 7.5,
-      "epss": 0.00472,
-      "in_kev": false,
-      "kev_date_added": null,
-      "priority_score": 19,
-      "priority_label": "low",
-      "summary": {
-        "en": "minimatch is a minimal matching utility for converting glob expressions into JavaScript RegExp objects. Prior to version 10.2.3, 9.0.7, 8.0.6, 7.4.8, 6.2.2, 5.1.8, 4.2.5, and 3.1.4, nested `*()` extglobs produce regexps with nested unbounded quantifiers (e.g. `(?:(?:a|b)*)*`), which exhibit catastrophic backtracking in V8. With a 12-byte pattern `*(*(*(a|b)))` and an 18-byte non-matching input, `minimatch()` stalls for over 7 seconds. Adding a single nesting level or a few input characters pushes this to minutes. This is the most severe finding: it is triggered by the default `minimatch()` API with no special options, and the minimum viable pattern is only 12 bytes. The same issue affects `+()` extglobs equally. Versions 10.2.3, 9.0.7, 8.0.6, 7.4.8, 6.2.2, 5.1.8, 4.2.5, and 3.1.4 fix the issue.",
-        "es": "minimatch es una utilidad de coincidencia m\u00ednima para convertir expresiones glob en objetos RegExp de JavaScript. Antes de las versiones 10.2.3, 9.0.7, 8.0.6, 7.4.8, 6.2.2, 5.1.8, 4.2.5 y 3.1.4, los extglobs anidados '*( )' producen regexps con cuantificadores anidados ilimitados (por ejemplo, '(?:(?:a|b)*)*'), que exhiben retroceso catastr\u00f3fico en V8. Con un patr\u00f3n de 12 bytes '*(*(*(a|b)))' y una entrada no coincidente de 18 bytes, 'minimatch()' se detiene durante m\u00e1s de 7 segundos. A\u00f1adir un solo nivel de anidamiento o unos pocos caracteres de entrada eleva esto a minutos. Este es el hallazgo m\u00e1s grave: se activa por la API predeterminada de 'minimatch()' sin opciones especiales, y el patr\u00f3n m\u00ednimo viable es de solo 12 bytes. El mismo problema afecta a los extglobs '+()' por igual. Las versiones 10.2.3, 9.0.7, 8.0.6, 7.4.8, 6.2.2, 5.1.8, 4.2.5 y 3.1.4 solucionan el problema."
-      },
-      "references": [
-        "https://github.com/isaacs/minimatch/security/advisories/GHSA-23c5-xmqv-rm74"
-      ]
-    },
-    {
-      "id": "nodejs-goof:CVE-2026-14257:brace-expansion:1.1.11",
-      "cve": "CVE-2026-14257",
-      "package": "brace-expansion",
-      "ecosystem": "npm",
-      "installed_version": "1.1.11",
-      "fixed_version": "1.1.17",
-      "app": "nodejs-goof",
-      "cvss": 7.5,
-      "epss": 0.00466,
-      "in_kev": false,
-      "kev_date_added": null,
-      "priority_score": 19,
-      "priority_label": "low",
-      "summary": {
-        "en": "brace-expansion through 5.0.7 is vulnerable to denial of service via memory exhaustion. The expand() function limits the number of results with a max option (default 100,000) but does not bound the length of each result string. By chaining multiple brace groups, an attacker keeps the result count under the limit while making each result progressively longer, so total memory scales with both count and string length until the process hits a fatal, uncatchable out-of-memory error. About 7.5 KB of input ('{a,b}'.repeat(1500)) crashes a default Node.js process. Any application that passes attacker-influenced strings to brace-expansion.expand() - directly or transitively via minimatch / glob brace patterns - can be crashed by a small request. Fixed in 5.0.8 by adding a maxLength option (default 4,000,000) that bounds accumulated output and intermediate arrays."
-      },
-      "references": [
-        "https://github.com/juliangruber/brace-expansion",
-        "https://github.com/juliangruber/brace-expansion/commit/a1bd33999ea75262c4749fff3bbb0d1372bd07b5",
-        "https://www.npmjs.com/package/brace-expansion"
       ]
     },
     {
@@ -8328,58 +8111,6 @@
       "references": [
         "https://github.com/juliangruber/brace-expansion/commit/c7e33ec13ac1a684c116720843ce24e208611754",
         "https://www.npmjs.com/package/brace-expansion"
-      ]
-    },
-    {
-      "id": "nodejs-goof:CVE-2026-13149:brace-expansion:1.1.11",
-      "cve": "CVE-2026-13149",
-      "package": "brace-expansion",
-      "ecosystem": "npm",
-      "installed_version": "1.1.11",
-      "fixed_version": "1.1.16",
-      "app": "nodejs-goof",
-      "cvss": null,
-      "epss": 0.00364,
-      "in_kev": false,
-      "kev_date_added": null,
-      "priority_score": 0,
-      "priority_label": "low",
-      "summary": {
-        "en": "brace-expansion through 5.0.6 is vulnerable to denial of service. The expand() function exhibits exponential-time complexity in the number of consecutive non-expanding '{}' brace groups. An attacker who passes a crafted string to expand(), directly or transitively, can cause significant CPU consumption and event-loop blocking. The max option does not mitigate this, as it bounds the output size rather than the recursion work."
-      },
-      "references": [
-        "https://github.com/juliangruber/brace-expansion/commit/c7e33ec13ac1a684c116720843ce24e208611754",
-        "https://www.npmjs.com/package/brace-expansion"
-      ]
-    },
-    {
-      "id": "nodejs-goof:CVE-2026-33750:brace-expansion:1.1.11",
-      "cve": "CVE-2026-33750",
-      "package": "brace-expansion",
-      "ecosystem": "npm",
-      "installed_version": "1.1.11",
-      "fixed_version": "1.1.13",
-      "app": "nodejs-goof",
-      "cvss": 6.5,
-      "epss": 0.0043,
-      "in_kev": false,
-      "kev_date_added": null,
-      "priority_score": 17,
-      "priority_label": "low",
-      "summary": {
-        "en": "The brace-expansion library generates arbitrary strings containing a common prefix and suffix. Prior to versions 5.0.5, 3.0.2, 2.0.3, and 1.1.13, a brace pattern with a zero step value (e.g., `{1..2..0}`) causes the sequence generation loop to run indefinitely, making the process hang for seconds and allocate heaps of memory. Versions 5.0.5, 3.0.2, 2.0.3, and 1.1.13 fix the issue. As a workaround, sanitize strings passed to `expand()` to ensure a step value of `0` is not used."
-      },
-      "references": [
-        "https://github.com/juliangruber/brace-expansion/blob/daa71bcb4a30a2df9bcb7f7b8daaf2ab30e5794a/src/index.ts#L107-L113",
-        "https://github.com/juliangruber/brace-expansion/blob/daa71bcb4a30a2df9bcb7f7b8daaf2ab30e5794a/src/index.ts#L184",
-        "https://github.com/juliangruber/brace-expansion/commit/311ac0d54994158c0a384e286a7d6cbb17ee8ed5",
-        "https://github.com/juliangruber/brace-expansion/commit/7fd684f89fdde3549563d0a6522226a9189472a2",
-        "https://github.com/juliangruber/brace-expansion/commit/b9cacd9e55e7a1fa588fe4b7bb1159d52f1d902a",
-        "https://github.com/juliangruber/brace-expansion/issues/98",
-        "https://github.com/juliangruber/brace-expansion/pull/95",
-        "https://github.com/juliangruber/brace-expansion/pull/96",
-        "https://github.com/juliangruber/brace-expansion/pull/97",
-        "https://github.com/juliangruber/brace-expansion/security/advisories/GHSA-f886-m6hf-6m8v"
       ]
     },
     {
@@ -8959,33 +8690,6 @@
       ]
     },
     {
-      "id": "nodejs-goof:CVE-2025-5889:brace-expansion:1.1.11",
-      "cve": "CVE-2025-5889",
-      "package": "brace-expansion",
-      "ecosystem": "npm",
-      "installed_version": "1.1.11",
-      "fixed_version": "1.1.12",
-      "app": "nodejs-goof",
-      "cvss": 3.1,
-      "epss": 0.00572,
-      "in_kev": false,
-      "kev_date_added": null,
-      "priority_score": 8,
-      "priority_label": "low",
-      "summary": {
-        "en": "A vulnerability was found in juliangruber brace-expansion up to 1.1.11/2.0.1/3.0.0/4.0.0. It has been rated as problematic. Affected by this issue is the function expand of the file index.js. The manipulation leads to inefficient regular expression complexity. The attack may be launched remotely. The complexity of an attack is rather high. The exploitation is known to be difficult. The exploit has been disclosed to the public and may be used. Upgrading to version 1.1.12, 2.0.2, 3.0.1 and 4.0.1 is able to address this issue. The name of the patch is a5b98a4f30d7813266b221435e1eaaf25a1b0ac5. It is recommended to upgrade the affected component.",
-        "es": "Se encontr\u00f3 una vulnerabilidad en juliangruber brace-expansion hasta la versi\u00f3n 1.1.11. Se ha clasificado como problem\u00e1tica. Este problema afecta a la funci\u00f3n \"expand\" del archivo index.js. La manipulaci\u00f3n genera una complejidad ineficiente en las expresiones regulares. El ataque puede ejecutarse en remoto. Es un ataque de complejidad bastante alta. Parece dif\u00edcil de explotar. Se ha hecho p\u00fablico el exploit y puede que sea utilizado. El parche se llama a5b98a4f30d7813266b221435e1eaaf25a1b0ac5. Se recomienda aplicar un parche para solucionar este problema."
-      },
-      "references": [
-        "https://gist.github.com/mmmsssttt404/37a40ce7d6e5ca604858fe30814d9466",
-        "https://github.com/juliangruber/brace-expansion/pull/65/commits/a5b98a4f30d7813266b221435e1eaaf25a1b0ac5",
-        "https://github.com/juliangruber/brace-expansion/releases/tag/v4.0.1",
-        "https://vuldb.com/?ctiid.311660",
-        "https://vuldb.com/?id.311660",
-        "https://vuldb.com/?submit.585717"
-      ]
-    },
-    {
       "id": "nodejs-goof:CVE-2026-82417:qs:2.4.2",
       "cve": "CVE-2026-82417",
       "package": "qs",
@@ -9216,7 +8920,7 @@
     },
     {
       "date": "2026-09-16",
-      "findings_total": 323,
+      "findings_total": 311,
       "critical": 4,
       "high": 3
     }

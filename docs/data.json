@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-09-16T11:09:19.582601+00:00",
+  "generated_at": "2026-09-17T11:18:26.859663+00:00",
   "sources": {
     "kev": {
       "fetched": true,
@@ -1371,28 +1371,6 @@
       ]
     },
     {
-      "id": "pygoat:CVE-2025-66418:urllib3:1.26.9",
-      "cve": "CVE-2025-66418",
-      "package": "urllib3",
-      "ecosystem": "PyPI",
-      "installed_version": "1.26.9",
-      "fixed_version": "2.6.0",
-      "app": "pygoat",
-      "cvss": 7.5,
-      "epss": 0.00682,
-      "in_kev": false,
-      "kev_date_added": null,
-      "priority_score": 19,
-      "priority_label": "low",
-      "summary": {
-        "en": "urllib3 is a user-friendly HTTP client library for Python. Starting in version 1.24 and prior to 2.6.0, the number of links in the decompression chain was unbounded allowing a malicious server to insert a virtually unlimited number of compression steps leading to high CPU usage and massive memory allocation for the decompressed data. This vulnerability is fixed in 2.6.0."
-      },
-      "references": [
-        "https://github.com/urllib3/urllib3/commit/24d7b67eac89f94e11003424bcf0d8f7b72222a8",
-        "https://github.com/urllib3/urllib3/security/advisories/GHSA-gm62-xv2j-4w53"
-      ]
-    },
-    {
       "id": "pygoat:CVE-2025-66471:urllib3:1.26.9",
       "cve": "CVE-2025-66471",
       "package": "urllib3",
@@ -1412,6 +1390,28 @@
       "references": [
         "https://github.com/urllib3/urllib3/commit/c19571de34c47de3a766541b041637ba5f716ed7",
         "https://github.com/urllib3/urllib3/security/advisories/GHSA-2xpw-w6gg-jr37"
+      ]
+    },
+    {
+      "id": "pygoat:CVE-2025-66418:urllib3:1.26.9",
+      "cve": "CVE-2025-66418",
+      "package": "urllib3",
+      "ecosystem": "PyPI",
+      "installed_version": "1.26.9",
+      "fixed_version": "2.6.0",
+      "app": "pygoat",
+      "cvss": 7.5,
+      "epss": 0.00682,
+      "in_kev": false,
+      "kev_date_added": null,
+      "priority_score": 19,
+      "priority_label": "low",
+      "summary": {
+        "en": "urllib3 is a user-friendly HTTP client library for Python. Starting in version 1.24 and prior to 2.6.0, the number of links in the decompression chain was unbounded allowing a malicious server to insert a virtually unlimited number of compression steps leading to high CPU usage and massive memory allocation for the decompressed data. This vulnerability is fixed in 2.6.0."
+      },
+      "references": [
+        "https://github.com/urllib3/urllib3/commit/24d7b67eac89f94e11003424bcf0d8f7b72222a8",
+        "https://github.com/urllib3/urllib3/security/advisories/GHSA-gm62-xv2j-4w53"
       ]
     },
     {
@@ -2130,30 +2130,6 @@
       ]
     },
     {
-      "id": "pygoat:CVE-2026-1285:django:4.2",
-      "cve": "CVE-2026-1285",
-      "package": "django",
-      "ecosystem": "PyPI",
-      "installed_version": "4.2",
-      "fixed_version": "4.2.28",
-      "app": "pygoat",
-      "cvss": 7.5,
-      "epss": 0.01032,
-      "in_kev": false,
-      "kev_date_added": null,
-      "priority_score": 20,
-      "priority_label": "medium",
-      "summary": {
-        "en": "An issue was discovered in 6.0 before 6.0.2, 5.2 before 5.2.11, and 4.2 before 4.2.28.\n`django.utils.text.Truncator.chars()` and `Truncator.words()` methods (with `html=True`) and the `truncatechars_html` and `truncatewords_html` template filters allow a remote attacker to cause a potential denial-of-service via crafted inputs containing a large number of unmatched HTML end tags.\nEarlier, unsupported Django series (such as 5.0.x, 4.1.x, and 3.2.x) were not evaluated and may also be affected.\nDjango would like to thank Seokchan Yoon for reporting this issue.",
-        "es": "Se descubri\u00f3 un problema en 6.0 anterior a 6.0.2, 5.2 anterior a 5.2.11 y 4.2 anterior a 4.2.28.\nLos m\u00e9todos 'django.utils.text.Truncator.chars()' y 'Truncator.words()' (con 'html=True') y los filtros de plantilla 'truncatechars_html' y 'truncatewords_html' permiten a un atacante remoto causar una potencial denegaci\u00f3n de servicio mediante entradas manipuladas que contienen un gran n\u00famero de etiquetas de cierre HTML no coincidentes.\nSeries de Django anteriores y sin soporte (como 5.0.x, 4.1.x y 3.2.x) no fueron evaluadas y tambi\u00e9n pueden verse afectadas.\nDjango desea agradecer a Seokchan Yoon por informar de este problema."
-      },
-      "references": [
-        "https://docs.djangoproject.com/en/dev/releases/security/",
-        "https://groups.google.com/g/django-announce",
-        "https://www.djangoproject.com/weblog/2026/feb/03/security-releases/"
-      ]
-    },
-    {
       "id": "pygoat:CVE-2025-14550:django:4.2",
       "cve": "CVE-2025-14550",
       "package": "django",
@@ -2178,8 +2154,32 @@
       ]
     },
     {
-      "id": "pygoat:CVE-2026-59199:pillow:9.4.0",
-      "cve": "CVE-2026-59199",
+      "id": "pygoat:CVE-2026-1285:django:4.2",
+      "cve": "CVE-2026-1285",
+      "package": "django",
+      "ecosystem": "PyPI",
+      "installed_version": "4.2",
+      "fixed_version": "4.2.28",
+      "app": "pygoat",
+      "cvss": 7.5,
+      "epss": 0.01032,
+      "in_kev": false,
+      "kev_date_added": null,
+      "priority_score": 20,
+      "priority_label": "medium",
+      "summary": {
+        "en": "An issue was discovered in 6.0 before 6.0.2, 5.2 before 5.2.11, and 4.2 before 4.2.28.\n`django.utils.text.Truncator.chars()` and `Truncator.words()` methods (with `html=True`) and the `truncatechars_html` and `truncatewords_html` template filters allow a remote attacker to cause a potential denial-of-service via crafted inputs containing a large number of unmatched HTML end tags.\nEarlier, unsupported Django series (such as 5.0.x, 4.1.x, and 3.2.x) were not evaluated and may also be affected.\nDjango would like to thank Seokchan Yoon for reporting this issue.",
+        "es": "Se descubri\u00f3 un problema en 6.0 anterior a 6.0.2, 5.2 anterior a 5.2.11 y 4.2 anterior a 4.2.28.\nLos m\u00e9todos 'django.utils.text.Truncator.chars()' y 'Truncator.words()' (con 'html=True') y los filtros de plantilla 'truncatechars_html' y 'truncatewords_html' permiten a un atacante remoto causar una potencial denegaci\u00f3n de servicio mediante entradas manipuladas que contienen un gran n\u00famero de etiquetas de cierre HTML no coincidentes.\nSeries de Django anteriores y sin soporte (como 5.0.x, 4.1.x y 3.2.x) no fueron evaluadas y tambi\u00e9n pueden verse afectadas.\nDjango desea agradecer a Seokchan Yoon por informar de este problema."
+      },
+      "references": [
+        "https://docs.djangoproject.com/en/dev/releases/security/",
+        "https://groups.google.com/g/django-announce",
+        "https://www.djangoproject.com/weblog/2026/feb/03/security-releases/"
+      ]
+    },
+    {
+      "id": "pygoat:CVE-2026-59200:pillow:9.4.0",
+      "cve": "CVE-2026-59200",
       "package": "pillow",
       "ecosystem": "PyPI",
       "installed_version": "9.4.0",
@@ -2192,13 +2192,13 @@
       "priority_score": 19,
       "priority_label": "low",
       "summary": {
-        "en": "Pillow is a Python imaging library. Prior to 12.3.0, Pillow public image coordinate APIs can trigger a native heap out-of-bounds write when given coordinates near the signed 32-bit integer limits in Image.paste(), Image.crop(), or Image.alpha_composite(). This issue is fixed in version 12.3.0."
+        "en": "Pillow is a Python imaging library. From 5.1.0 until 12.3.0, PdfParser.PdfStream.decode() in PIL/PdfParser.py calls zlib.decompress() with bufsize set to the PDF stream Length field without bounding the decompressed output size, allowing a crafted FlateDecode PDF stream to exhaust memory from a small file. This issue is fixed in version 12.3.0."
       },
       "references": [
-        "https://github.com/python-pillow/Pillow/commit/ceefc348eb3c3844c7f9796ef2cc3a7dd5fbba7b",
-        "https://github.com/python-pillow/Pillow/pull/9703",
+        "https://github.com/python-pillow/Pillow/commit/f7a31ea75e460e108c37126da1f47812f21f6b09",
+        "https://github.com/python-pillow/Pillow/pull/9718",
         "https://github.com/python-pillow/Pillow/releases/tag/12.3.0",
-        "https://github.com/python-pillow/Pillow/security/advisories/GHSA-6r8x-57c9-28j4"
+        "https://github.com/python-pillow/Pillow/security/advisories/GHSA-jjj6-mw9f-p565"
       ]
     },
     {
@@ -2226,8 +2226,8 @@
       ]
     },
     {
-      "id": "pygoat:CVE-2026-59200:pillow:9.4.0",
-      "cve": "CVE-2026-59200",
+      "id": "pygoat:CVE-2026-59199:pillow:9.4.0",
+      "cve": "CVE-2026-59199",
       "package": "pillow",
       "ecosystem": "PyPI",
       "installed_version": "9.4.0",
@@ -2240,13 +2240,13 @@
       "priority_score": 19,
       "priority_label": "low",
       "summary": {
-        "en": "Pillow is a Python imaging library. From 5.1.0 until 12.3.0, PdfParser.PdfStream.decode() in PIL/PdfParser.py calls zlib.decompress() with bufsize set to the PDF stream Length field without bounding the decompressed output size, allowing a crafted FlateDecode PDF stream to exhaust memory from a small file. This issue is fixed in version 12.3.0."
+        "en": "Pillow is a Python imaging library. Prior to 12.3.0, Pillow public image coordinate APIs can trigger a native heap out-of-bounds write when given coordinates near the signed 32-bit integer limits in Image.paste(), Image.crop(), or Image.alpha_composite(). This issue is fixed in version 12.3.0."
       },
       "references": [
-        "https://github.com/python-pillow/Pillow/commit/f7a31ea75e460e108c37126da1f47812f21f6b09",
-        "https://github.com/python-pillow/Pillow/pull/9718",
+        "https://github.com/python-pillow/Pillow/commit/ceefc348eb3c3844c7f9796ef2cc3a7dd5fbba7b",
+        "https://github.com/python-pillow/Pillow/pull/9703",
         "https://github.com/python-pillow/Pillow/releases/tag/12.3.0",
-        "https://github.com/python-pillow/Pillow/security/advisories/GHSA-jjj6-mw9f-p565"
+        "https://github.com/python-pillow/Pillow/security/advisories/GHSA-6r8x-57c9-28j4"
       ]
     },
     {
@@ -3873,6 +3873,35 @@
       ]
     },
     {
+      "id": "nodejs-goof:CVE-2022-24785:moment:2.15.1",
+      "cve": "CVE-2022-24785",
+      "package": "moment",
+      "ecosystem": "npm",
+      "installed_version": "2.15.1",
+      "fixed_version": "2.29.2",
+      "app": "nodejs-goof",
+      "cvss": 7.5,
+      "epss": 0.13904,
+      "in_kev": false,
+      "kev_date_added": null,
+      "priority_score": 29,
+      "priority_label": "medium",
+      "summary": {
+        "en": "Moment.js is a JavaScript date library for parsing, validating, manipulating, and formatting dates. A path traversal vulnerability impacts npm (server) users of Moment.js between versions 1.0.1 and 2.29.1, especially if a user-provided locale string is directly used to switch moment locale. This problem is patched in 2.29.2, and the patch can be applied to all affected versions. As a workaround, sanitize the user-provided locale name before passing it to Moment.js.",
+        "es": "Moment.js es una librer\u00eda de fechas en JavaScript para analizar, comprobar, manipular y formatear fechas. Una vulnerabilidad de salto de ruta afecta a usuarios de npm (servidor) de Moment.js entre las versiones 1.0.1 y 2.29.1, especialmente si es usada directamente una cadena de configuraci\u00f3n regional proporcionada por el usuario para cambiar la configuraci\u00f3n regional de Moment. Este problema est\u00e1 parcheado en la versi\u00f3n 2.29.2, y el parche puede aplicarse a todas las versiones afectadas. Como medida de mitigaci\u00f3n, sanee el nombre de la configuraci\u00f3n regional proporcionada por el usuario antes de pasarlo a Moment.js"
+      },
+      "references": [
+        "https://github.com/moment/moment/commit/4211bfc8f15746be4019bba557e29a7ba83d54c5",
+        "https://github.com/moment/moment/security/advisories/GHSA-8hfj-j24r-96c4",
+        "https://lists.debian.org/debian-lts-announce/2023/01/msg00035.html",
+        "https://lists.fedoraproject.org/archives/list/package-announce%40lists.fedoraproject.org/message/6QIO6YNLTK2T7SPKDS4JEL45FANLNC2Q/",
+        "https://lists.fedoraproject.org/archives/list/package-announce%40lists.fedoraproject.org/message/ORJX2LF6KMPIHP6B2P6KZIVKMLE3LVJ5/",
+        "https://security.netapp.com/advisory/ntap-20220513-0006/",
+        "https://www.tenable.com/security/tns-2022-09",
+        "https://security.netapp.com/advisory/ntap-20241108-0002/"
+      ]
+    },
+    {
       "id": "nodejs-goof:CVE-2018-1002204:adm-zip:0.4.7",
       "cve": "CVE-2018-1002204",
       "package": "adm-zip",
@@ -4359,35 +4388,6 @@
         "https://snyk.io/vuln/SNYK-JAVA-ORGWEBJARSBOWER-1279032",
         "https://snyk.io/vuln/SNYK-JAVA-ORGWEBJARSNPM-1279030",
         "https://snyk.io/vuln/SNYK-JS-HANDLEBARS-1279029"
-      ]
-    },
-    {
-      "id": "nodejs-goof:CVE-2022-24785:moment:2.15.1",
-      "cve": "CVE-2022-24785",
-      "package": "moment",
-      "ecosystem": "npm",
-      "installed_version": "2.15.1",
-      "fixed_version": "2.29.2",
-      "app": "nodejs-goof",
-      "cvss": 7.5,
-      "epss": 0.0552,
-      "in_kev": false,
-      "kev_date_added": null,
-      "priority_score": 23,
-      "priority_label": "medium",
-      "summary": {
-        "en": "Moment.js is a JavaScript date library for parsing, validating, manipulating, and formatting dates. A path traversal vulnerability impacts npm (server) users of Moment.js between versions 1.0.1 and 2.29.1, especially if a user-provided locale string is directly used to switch moment locale. This problem is patched in 2.29.2, and the patch can be applied to all affected versions. As a workaround, sanitize the user-provided locale name before passing it to Moment.js.",
-        "es": "Moment.js es una librer\u00eda de fechas en JavaScript para analizar, comprobar, manipular y formatear fechas. Una vulnerabilidad de salto de ruta afecta a usuarios de npm (servidor) de Moment.js entre las versiones 1.0.1 y 2.29.1, especialmente si es usada directamente una cadena de configuraci\u00f3n regional proporcionada por el usuario para cambiar la configuraci\u00f3n regional de Moment. Este problema est\u00e1 parcheado en la versi\u00f3n 2.29.2, y el parche puede aplicarse a todas las versiones afectadas. Como medida de mitigaci\u00f3n, sanee el nombre de la configuraci\u00f3n regional proporcionada por el usuario antes de pasarlo a Moment.js"
-      },
-      "references": [
-        "https://github.com/moment/moment/commit/4211bfc8f15746be4019bba557e29a7ba83d54c5",
-        "https://github.com/moment/moment/security/advisories/GHSA-8hfj-j24r-96c4",
-        "https://lists.debian.org/debian-lts-announce/2023/01/msg00035.html",
-        "https://lists.fedoraproject.org/archives/list/package-announce%40lists.fedoraproject.org/message/6QIO6YNLTK2T7SPKDS4JEL45FANLNC2Q/",
-        "https://lists.fedoraproject.org/archives/list/package-announce%40lists.fedoraproject.org/message/ORJX2LF6KMPIHP6B2P6KZIVKMLE3LVJ5/",
-        "https://security.netapp.com/advisory/ntap-20220513-0006/",
-        "https://www.tenable.com/security/tns-2022-09",
-        "https://security.netapp.com/advisory/ntap-20241108-0002/"
       ]
     },
     {
@@ -7413,6 +7413,29 @@
       ]
     },
     {
+      "id": "nodejs-goof:CVE-2026-14257:brace-expansion:1.1.11",
+      "cve": "CVE-2026-14257",
+      "package": "brace-expansion",
+      "ecosystem": "npm",
+      "installed_version": "1.1.11",
+      "fixed_version": "1.1.17",
+      "app": "nodejs-goof",
+      "cvss": 7.5,
+      "epss": 0.00643,
+      "in_kev": false,
+      "kev_date_added": null,
+      "priority_score": 19,
+      "priority_label": "low",
+      "summary": {
+        "en": "brace-expansion through 5.0.7 is vulnerable to denial of service via memory exhaustion. The expand() function limits the number of results with a max option (default 100,000) but does not bound the length of each result string. By chaining multiple brace groups, an attacker keeps the result count under the limit while making each result progressively longer, so total memory scales with both count and string length until the process hits a fatal, uncatchable out-of-memory error. About 7.5 KB of input ('{a,b}'.repeat(1500)) crashes a default Node.js process. Any application that passes attacker-influenced strings to brace-expansion.expand() - directly or transitively via minimatch / glob brace patterns - can be crashed by a small request. Fixed in 5.0.8 by adding a maxLength option (default 4,000,000) that bounds accumulated output and intermediate arrays."
+      },
+      "references": [
+        "https://github.com/juliangruber/brace-expansion",
+        "https://github.com/juliangruber/brace-expansion/commit/a1bd33999ea75262c4749fff3bbb0d1372bd07b5",
+        "https://www.npmjs.com/package/brace-expansion"
+      ]
+    },
+    {
       "id": "nodejs-goof:CVE-2023-45133:babel-traverse:6.26.0",
       "cve": "CVE-2023-45133",
       "package": "babel-traverse",
@@ -7841,29 +7864,6 @@
       },
       "references": [
         "https://github.com/isaacs/minimatch/security/advisories/GHSA-23c5-xmqv-rm74"
-      ]
-    },
-    {
-      "id": "nodejs-goof:CVE-2026-14257:brace-expansion:1.1.11",
-      "cve": "CVE-2026-14257",
-      "package": "brace-expansion",
-      "ecosystem": "npm",
-      "installed_version": "1.1.11",
-      "fixed_version": "1.1.17",
-      "app": "nodejs-goof",
-      "cvss": 7.5,
-      "epss": 0.00466,
-      "in_kev": false,
-      "kev_date_added": null,
-      "priority_score": 19,
-      "priority_label": "low",
-      "summary": {
-        "en": "brace-expansion through 5.0.7 is vulnerable to denial of service via memory exhaustion. The expand() function limits the number of results with a max option (default 100,000) but does not bound the length of each result string. By chaining multiple brace groups, an attacker keeps the result count under the limit while making each result progressively longer, so total memory scales with both count and string length until the process hits a fatal, uncatchable out-of-memory error. About 7.5 KB of input ('{a,b}'.repeat(1500)) crashes a default Node.js process. Any application that passes attacker-influenced strings to brace-expansion.expand() - directly or transitively via minimatch / glob brace patterns - can be crashed by a small request. Fixed in 5.0.8 by adding a maxLength option (default 4,000,000) that bounds accumulated output and intermediate arrays."
-      },
-      "references": [
-        "https://github.com/juliangruber/brace-expansion",
-        "https://github.com/juliangruber/brace-expansion/commit/a1bd33999ea75262c4749fff3bbb0d1372bd07b5",
-        "https://www.npmjs.com/package/brace-expansion"
       ]
     },
     {
@@ -8857,7 +8857,7 @@
       "fixed_version": "1.1.0",
       "app": "nodejs-goof",
       "cvss": 3.4,
-      "epss": 0.00175,
+      "epss": 0.00182,
       "in_kev": false,
       "kev_date_added": null,
       "priority_score": 9,
@@ -8920,6 +8920,12 @@
     },
     {
       "date": "2026-09-16",
+      "findings_total": 311,
+      "critical": 4,
+      "high": 3
+    },
+    {
+      "date": "2026-09-17",
       "findings_total": 311,
       "critical": 4,
       "high": 3

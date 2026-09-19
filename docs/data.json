@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-09-18T10:50:51.779394+00:00",
+  "generated_at": "2026-09-19T10:34:55.087931+00:00",
   "sources": {
     "kev": {
       "fetched": true,
@@ -11,7 +11,7 @@
     },
     "nvd": {
       "fetched": true,
-      "entries": 257
+      "entries": 258
     }
   },
   "apps": [
@@ -2130,30 +2130,6 @@
       ]
     },
     {
-      "id": "pygoat:CVE-2026-1285:django:4.2",
-      "cve": "CVE-2026-1285",
-      "package": "django",
-      "ecosystem": "PyPI",
-      "installed_version": "4.2",
-      "fixed_version": "4.2.28",
-      "app": "pygoat",
-      "cvss": 7.5,
-      "epss": 0.01032,
-      "in_kev": false,
-      "kev_date_added": null,
-      "priority_score": 20,
-      "priority_label": "medium",
-      "summary": {
-        "en": "An issue was discovered in 6.0 before 6.0.2, 5.2 before 5.2.11, and 4.2 before 4.2.28.\n`django.utils.text.Truncator.chars()` and `Truncator.words()` methods (with `html=True`) and the `truncatechars_html` and `truncatewords_html` template filters allow a remote attacker to cause a potential denial-of-service via crafted inputs containing a large number of unmatched HTML end tags.\nEarlier, unsupported Django series (such as 5.0.x, 4.1.x, and 3.2.x) were not evaluated and may also be affected.\nDjango would like to thank Seokchan Yoon for reporting this issue.",
-        "es": "Se descubri\u00f3 un problema en 6.0 anterior a 6.0.2, 5.2 anterior a 5.2.11 y 4.2 anterior a 4.2.28.\nLos m\u00e9todos 'django.utils.text.Truncator.chars()' y 'Truncator.words()' (con 'html=True') y los filtros de plantilla 'truncatechars_html' y 'truncatewords_html' permiten a un atacante remoto causar una potencial denegaci\u00f3n de servicio mediante entradas manipuladas que contienen un gran n\u00famero de etiquetas de cierre HTML no coincidentes.\nSeries de Django anteriores y sin soporte (como 5.0.x, 4.1.x y 3.2.x) no fueron evaluadas y tambi\u00e9n pueden verse afectadas.\nDjango desea agradecer a Seokchan Yoon por informar de este problema."
-      },
-      "references": [
-        "https://docs.djangoproject.com/en/dev/releases/security/",
-        "https://groups.google.com/g/django-announce",
-        "https://www.djangoproject.com/weblog/2026/feb/03/security-releases/"
-      ]
-    },
-    {
       "id": "pygoat:CVE-2025-14550:django:4.2",
       "cve": "CVE-2025-14550",
       "package": "django",
@@ -2178,27 +2154,27 @@
       ]
     },
     {
-      "id": "pygoat:CVE-2026-59200:pillow:9.4.0",
-      "cve": "CVE-2026-59200",
-      "package": "pillow",
+      "id": "pygoat:CVE-2026-1285:django:4.2",
+      "cve": "CVE-2026-1285",
+      "package": "django",
       "ecosystem": "PyPI",
-      "installed_version": "9.4.0",
-      "fixed_version": "12.3.0",
+      "installed_version": "4.2",
+      "fixed_version": "4.2.28",
       "app": "pygoat",
       "cvss": 7.5,
-      "epss": 0.00385,
+      "epss": 0.01032,
       "in_kev": false,
       "kev_date_added": null,
-      "priority_score": 19,
-      "priority_label": "low",
+      "priority_score": 20,
+      "priority_label": "medium",
       "summary": {
-        "en": "Pillow is a Python imaging library. From 5.1.0 until 12.3.0, PdfParser.PdfStream.decode() in PIL/PdfParser.py calls zlib.decompress() with bufsize set to the PDF stream Length field without bounding the decompressed output size, allowing a crafted FlateDecode PDF stream to exhaust memory from a small file. This issue is fixed in version 12.3.0."
+        "en": "An issue was discovered in 6.0 before 6.0.2, 5.2 before 5.2.11, and 4.2 before 4.2.28.\n`django.utils.text.Truncator.chars()` and `Truncator.words()` methods (with `html=True`) and the `truncatechars_html` and `truncatewords_html` template filters allow a remote attacker to cause a potential denial-of-service via crafted inputs containing a large number of unmatched HTML end tags.\nEarlier, unsupported Django series (such as 5.0.x, 4.1.x, and 3.2.x) were not evaluated and may also be affected.\nDjango would like to thank Seokchan Yoon for reporting this issue.",
+        "es": "Se descubri\u00f3 un problema en 6.0 anterior a 6.0.2, 5.2 anterior a 5.2.11 y 4.2 anterior a 4.2.28.\nLos m\u00e9todos 'django.utils.text.Truncator.chars()' y 'Truncator.words()' (con 'html=True') y los filtros de plantilla 'truncatechars_html' y 'truncatewords_html' permiten a un atacante remoto causar una potencial denegaci\u00f3n de servicio mediante entradas manipuladas que contienen un gran n\u00famero de etiquetas de cierre HTML no coincidentes.\nSeries de Django anteriores y sin soporte (como 5.0.x, 4.1.x y 3.2.x) no fueron evaluadas y tambi\u00e9n pueden verse afectadas.\nDjango desea agradecer a Seokchan Yoon por informar de este problema."
       },
       "references": [
-        "https://github.com/python-pillow/Pillow/commit/f7a31ea75e460e108c37126da1f47812f21f6b09",
-        "https://github.com/python-pillow/Pillow/pull/9718",
-        "https://github.com/python-pillow/Pillow/releases/tag/12.3.0",
-        "https://github.com/python-pillow/Pillow/security/advisories/GHSA-jjj6-mw9f-p565"
+        "https://docs.djangoproject.com/en/dev/releases/security/",
+        "https://groups.google.com/g/django-announce",
+        "https://www.djangoproject.com/weblog/2026/feb/03/security-releases/"
       ]
     },
     {
@@ -2223,6 +2199,30 @@
         "https://github.com/python-pillow/Pillow/pull/9703",
         "https://github.com/python-pillow/Pillow/releases/tag/12.3.0",
         "https://github.com/python-pillow/Pillow/security/advisories/GHSA-6r8x-57c9-28j4"
+      ]
+    },
+    {
+      "id": "pygoat:CVE-2026-59200:pillow:9.4.0",
+      "cve": "CVE-2026-59200",
+      "package": "pillow",
+      "ecosystem": "PyPI",
+      "installed_version": "9.4.0",
+      "fixed_version": "12.3.0",
+      "app": "pygoat",
+      "cvss": 7.5,
+      "epss": 0.00385,
+      "in_kev": false,
+      "kev_date_added": null,
+      "priority_score": 19,
+      "priority_label": "low",
+      "summary": {
+        "en": "Pillow is a Python imaging library. From 5.1.0 until 12.3.0, PdfParser.PdfStream.decode() in PIL/PdfParser.py calls zlib.decompress() with bufsize set to the PDF stream Length field without bounding the decompressed output size, allowing a crafted FlateDecode PDF stream to exhaust memory from a small file. This issue is fixed in version 12.3.0."
+      },
+      "references": [
+        "https://github.com/python-pillow/Pillow/commit/f7a31ea75e460e108c37126da1f47812f21f6b09",
+        "https://github.com/python-pillow/Pillow/pull/9718",
+        "https://github.com/python-pillow/Pillow/releases/tag/12.3.0",
+        "https://github.com/python-pillow/Pillow/security/advisories/GHSA-jjj6-mw9f-p565"
       ]
     },
     {
@@ -6215,98 +6215,6 @@
       ]
     },
     {
-      "id": "nodejs-goof:CVE-2022-27261:express-fileupload:0.0.5",
-      "cve": "CVE-2022-27261",
-      "package": "express-fileupload",
-      "ecosystem": "npm",
-      "installed_version": "0.0.5",
-      "fixed_version": null,
-      "app": "nodejs-goof",
-      "cvss": 7.5,
-      "epss": 0.01381,
-      "in_kev": false,
-      "kev_date_added": null,
-      "priority_score": 20,
-      "priority_label": "medium",
-      "summary": {
-        "en": "An arbitrary file write vulnerability in Express-FileUpload v1.3.1 allows attackers to upload multiple files with the same name, causing an overwrite of files in the web application server.",
-        "es": "Una vulnerabilidad de escritura de archivos arbitrarios en Express-FileUpload versi\u00f3n v1.3.1, permite a atacantes subir varios archivos con el mismo nombre, causando una sobreescritura de archivos en el servidor de la aplicaci\u00f3n web"
-      },
-      "references": [
-        "https://www.npmjs.com/package/express-fileupload",
-        "https://www.youtube.com/watch?v=3ROHB3ck4tA"
-      ]
-    },
-    {
-      "id": "nodejs-goof:CVE-2020-7598:minimist:0.0.10",
-      "cve": "CVE-2020-7598",
-      "package": "minimist",
-      "ecosystem": "npm",
-      "installed_version": "0.0.10",
-      "fixed_version": "0.2.1",
-      "app": "nodejs-goof",
-      "cvss": 5.6,
-      "epss": 0.01931,
-      "in_kev": false,
-      "kev_date_added": null,
-      "priority_score": 15,
-      "priority_label": "low",
-      "summary": {
-        "en": "minimist before 1.2.2 could be tricked into adding or modifying properties of Object.prototype using a \"constructor\" or \"__proto__\" payload.",
-        "es": "minimist versiones anteriores a la versi\u00f3n 1.2.2, podr\u00eda ser enga\u00f1ado para agregar o modificar propiedades de Object.prototype usando una carga \u00fatil de \"constructor\" o \"__proto__\"."
-      },
-      "references": [
-        "http://lists.opensuse.org/opensuse-security-announce/2020-06/msg00024.html",
-        "https://snyk.io/vuln/SNYK-JS-MINIMIST-559764"
-      ]
-    },
-    {
-      "id": "nodejs-goof:CVE-2020-7598:minimist:0.0.8",
-      "cve": "CVE-2020-7598",
-      "package": "minimist",
-      "ecosystem": "npm",
-      "installed_version": "0.0.8",
-      "fixed_version": "0.2.1",
-      "app": "nodejs-goof",
-      "cvss": 5.6,
-      "epss": 0.01931,
-      "in_kev": false,
-      "kev_date_added": null,
-      "priority_score": 15,
-      "priority_label": "low",
-      "summary": {
-        "en": "minimist before 1.2.2 could be tricked into adding or modifying properties of Object.prototype using a \"constructor\" or \"__proto__\" payload.",
-        "es": "minimist versiones anteriores a la versi\u00f3n 1.2.2, podr\u00eda ser enga\u00f1ado para agregar o modificar propiedades de Object.prototype usando una carga \u00fatil de \"constructor\" o \"__proto__\"."
-      },
-      "references": [
-        "http://lists.opensuse.org/opensuse-security-announce/2020-06/msg00024.html",
-        "https://snyk.io/vuln/SNYK-JS-MINIMIST-559764"
-      ]
-    },
-    {
-      "id": "nodejs-goof:CVE-2020-7598:minimist:1.2.0",
-      "cve": "CVE-2020-7598",
-      "package": "minimist",
-      "ecosystem": "npm",
-      "installed_version": "1.2.0",
-      "fixed_version": "1.2.3",
-      "app": "nodejs-goof",
-      "cvss": 5.6,
-      "epss": 0.01931,
-      "in_kev": false,
-      "kev_date_added": null,
-      "priority_score": 15,
-      "priority_label": "low",
-      "summary": {
-        "en": "minimist before 1.2.2 could be tricked into adding or modifying properties of Object.prototype using a \"constructor\" or \"__proto__\" payload.",
-        "es": "minimist versiones anteriores a la versi\u00f3n 1.2.2, podr\u00eda ser enga\u00f1ado para agregar o modificar propiedades de Object.prototype usando una carga \u00fatil de \"constructor\" o \"__proto__\"."
-      },
-      "references": [
-        "http://lists.opensuse.org/opensuse-security-announce/2020-06/msg00024.html",
-        "https://snyk.io/vuln/SNYK-JS-MINIMIST-559764"
-      ]
-    },
-    {
       "id": "nodejs-goof:CVE-2025-13465:lodash:4.17.10",
       "cve": "CVE-2025-13465",
       "package": "lodash",
@@ -6315,10 +6223,10 @@
       "fixed_version": "4.17.23",
       "app": "nodejs-goof",
       "cvss": 5.3,
-      "epss": 0.01627,
+      "epss": 0.01782,
       "in_kev": false,
       "kev_date_added": null,
-      "priority_score": 14,
+      "priority_score": 15,
       "priority_label": "low",
       "summary": {
         "en": "Lodash versions 4.0.0 through 4.17.22 are vulnerable to prototype pollution in the _.unset\u00a0and _.omit\u00a0functions. An attacker can pass crafted paths which cause Lodash to delete methods from global prototypes.\n\nThe issue permits deletion of properties but does not allow overwriting their original behavior.\n\nThis issue is patched on 4.17.23",
@@ -6424,10 +6332,10 @@
       "fixed_version": "4.17.23",
       "app": "nodejs-goof",
       "cvss": 5.3,
-      "epss": 0.01627,
+      "epss": 0.01782,
       "in_kev": false,
       "kev_date_added": null,
-      "priority_score": 14,
+      "priority_score": 15,
       "priority_label": "low",
       "summary": {
         "en": "Lodash versions 4.0.0 through 4.17.22 are vulnerable to prototype pollution in the _.unset\u00a0and _.omit\u00a0functions. An attacker can pass crafted paths which cause Lodash to delete methods from global prototypes.\n\nThe issue permits deletion of properties but does not allow overwriting their original behavior.\n\nThis issue is patched on 4.17.23",
@@ -6533,10 +6441,10 @@
       "fixed_version": "4.17.23",
       "app": "nodejs-goof",
       "cvss": 5.3,
-      "epss": 0.01627,
+      "epss": 0.01782,
       "in_kev": false,
       "kev_date_added": null,
-      "priority_score": 14,
+      "priority_score": 15,
       "priority_label": "low",
       "summary": {
         "en": "Lodash versions 4.0.0 through 4.17.22 are vulnerable to prototype pollution in the _.unset\u00a0and _.omit\u00a0functions. An attacker can pass crafted paths which cause Lodash to delete methods from global prototypes.\n\nThe issue permits deletion of properties but does not allow overwriting their original behavior.\n\nThis issue is patched on 4.17.23",
@@ -6631,6 +6539,98 @@
         "https://bugzilla.redhat.com/show_bug.cgi?id=2431740",
         "https://cert-portal.siemens.com/productcert/html/ssa-253495.html",
         "https://security.access.redhat.com/data/csaf/v2/vex/2025/cve-2025-13465.json"
+      ]
+    },
+    {
+      "id": "nodejs-goof:CVE-2022-27261:express-fileupload:0.0.5",
+      "cve": "CVE-2022-27261",
+      "package": "express-fileupload",
+      "ecosystem": "npm",
+      "installed_version": "0.0.5",
+      "fixed_version": null,
+      "app": "nodejs-goof",
+      "cvss": 7.5,
+      "epss": 0.01381,
+      "in_kev": false,
+      "kev_date_added": null,
+      "priority_score": 20,
+      "priority_label": "medium",
+      "summary": {
+        "en": "An arbitrary file write vulnerability in Express-FileUpload v1.3.1 allows attackers to upload multiple files with the same name, causing an overwrite of files in the web application server.",
+        "es": "Una vulnerabilidad de escritura de archivos arbitrarios en Express-FileUpload versi\u00f3n v1.3.1, permite a atacantes subir varios archivos con el mismo nombre, causando una sobreescritura de archivos en el servidor de la aplicaci\u00f3n web"
+      },
+      "references": [
+        "https://www.npmjs.com/package/express-fileupload",
+        "https://www.youtube.com/watch?v=3ROHB3ck4tA"
+      ]
+    },
+    {
+      "id": "nodejs-goof:CVE-2020-7598:minimist:0.0.10",
+      "cve": "CVE-2020-7598",
+      "package": "minimist",
+      "ecosystem": "npm",
+      "installed_version": "0.0.10",
+      "fixed_version": "0.2.1",
+      "app": "nodejs-goof",
+      "cvss": 5.6,
+      "epss": 0.01931,
+      "in_kev": false,
+      "kev_date_added": null,
+      "priority_score": 15,
+      "priority_label": "low",
+      "summary": {
+        "en": "minimist before 1.2.2 could be tricked into adding or modifying properties of Object.prototype using a \"constructor\" or \"__proto__\" payload.",
+        "es": "minimist versiones anteriores a la versi\u00f3n 1.2.2, podr\u00eda ser enga\u00f1ado para agregar o modificar propiedades de Object.prototype usando una carga \u00fatil de \"constructor\" o \"__proto__\"."
+      },
+      "references": [
+        "http://lists.opensuse.org/opensuse-security-announce/2020-06/msg00024.html",
+        "https://snyk.io/vuln/SNYK-JS-MINIMIST-559764"
+      ]
+    },
+    {
+      "id": "nodejs-goof:CVE-2020-7598:minimist:0.0.8",
+      "cve": "CVE-2020-7598",
+      "package": "minimist",
+      "ecosystem": "npm",
+      "installed_version": "0.0.8",
+      "fixed_version": "0.2.1",
+      "app": "nodejs-goof",
+      "cvss": 5.6,
+      "epss": 0.01931,
+      "in_kev": false,
+      "kev_date_added": null,
+      "priority_score": 15,
+      "priority_label": "low",
+      "summary": {
+        "en": "minimist before 1.2.2 could be tricked into adding or modifying properties of Object.prototype using a \"constructor\" or \"__proto__\" payload.",
+        "es": "minimist versiones anteriores a la versi\u00f3n 1.2.2, podr\u00eda ser enga\u00f1ado para agregar o modificar propiedades de Object.prototype usando una carga \u00fatil de \"constructor\" o \"__proto__\"."
+      },
+      "references": [
+        "http://lists.opensuse.org/opensuse-security-announce/2020-06/msg00024.html",
+        "https://snyk.io/vuln/SNYK-JS-MINIMIST-559764"
+      ]
+    },
+    {
+      "id": "nodejs-goof:CVE-2020-7598:minimist:1.2.0",
+      "cve": "CVE-2020-7598",
+      "package": "minimist",
+      "ecosystem": "npm",
+      "installed_version": "1.2.0",
+      "fixed_version": "1.2.3",
+      "app": "nodejs-goof",
+      "cvss": 5.6,
+      "epss": 0.01931,
+      "in_kev": false,
+      "kev_date_added": null,
+      "priority_score": 15,
+      "priority_label": "low",
+      "summary": {
+        "en": "minimist before 1.2.2 could be tricked into adding or modifying properties of Object.prototype using a \"constructor\" or \"__proto__\" payload.",
+        "es": "minimist versiones anteriores a la versi\u00f3n 1.2.2, podr\u00eda ser enga\u00f1ado para agregar o modificar propiedades de Object.prototype usando una carga \u00fatil de \"constructor\" o \"__proto__\"."
+      },
+      "references": [
+        "http://lists.opensuse.org/opensuse-security-announce/2020-06/msg00024.html",
+        "https://snyk.io/vuln/SNYK-JS-MINIMIST-559764"
       ]
     },
     {
@@ -8873,6 +8873,29 @@
         "https://github.com/jshttp/on-headers/issues/15",
         "https://github.com/jshttp/on-headers/security/advisories/GHSA-76c9-3jph-rj3q"
       ]
+    },
+    {
+      "id": "nodejs-goof:CVE-2026-77301:adm-zip:0.4.7",
+      "cve": "CVE-2026-77301",
+      "package": "adm-zip",
+      "ecosystem": "npm",
+      "installed_version": "0.4.7",
+      "fixed_version": "0.6.1",
+      "app": "nodejs-goof",
+      "cvss": 7.5,
+      "epss": null,
+      "in_kev": false,
+      "kev_date_added": null,
+      "priority_score": 19,
+      "priority_label": "low",
+      "summary": {
+        "en": "adm-zip is a JavaScript library for creating and extracting ZIP archives in Node.js. Prior to 0.6.1, getData() in zipEntry.js trusts an entry's central-directory uncompressed size and allocates output memory before validating that value against the actual compressed data and decompression result. A small crafted ZIP can declare a multi-gigabyte uncompressed size, causing Buffer.alloc and decompression handling to commit excessive resident memory before CRC validation reports an error. Applications that read entries from untrusted archives can therefore be terminated by the operating system or suffer service-wide memory exhaustion. This issue is fixed in version 0.6.1."
+      },
+      "references": [
+        "https://github.com/cthackers/adm-zip/commit/491600683dacb6cb9fe0718a0eeb9cb5eb49afa6",
+        "https://github.com/cthackers/adm-zip/releases/tag/v0.6.1",
+        "https://github.com/cthackers/adm-zip/security/advisories/GHSA-7q85-xj36-vmfc"
+      ]
     }
   ],
   "history": [
@@ -8933,6 +8956,12 @@
     {
       "date": "2026-09-18",
       "findings_total": 311,
+      "critical": 4,
+      "high": 3
+    },
+    {
+      "date": "2026-09-19",
+      "findings_total": 312,
       "critical": 4,
       "high": 3
     }

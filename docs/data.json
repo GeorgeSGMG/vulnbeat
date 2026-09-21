@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-09-20T10:57:14.506260+00:00",
+  "generated_at": "2026-09-21T12:23:16.189888+00:00",
   "sources": {
     "kev": {
       "fetched": true,
@@ -358,7 +358,7 @@
       "fixed_version": "5.2",
       "app": "pygoat",
       "cvss": 9.8,
-      "epss": 0.05018,
+      "epss": 0.05114,
       "in_kev": false,
       "kev_date_added": null,
       "priority_score": 28,
@@ -1907,6 +1907,30 @@
       ]
     },
     {
+      "id": "pygoat:CVE-2026-27199:werkzeug:2.1.2",
+      "cve": "CVE-2026-27199",
+      "package": "werkzeug",
+      "ecosystem": "PyPI",
+      "installed_version": "2.1.2",
+      "fixed_version": "3.1.6",
+      "app": "pygoat",
+      "cvss": 5.3,
+      "epss": 0.00578,
+      "in_kev": false,
+      "kev_date_added": null,
+      "priority_score": 14,
+      "priority_label": "low",
+      "summary": {
+        "en": "Werkzeug is a comprehensive WSGI web application library. Versions 3.1.5 and below, the safe_join function allows Windows device names as filenames if preceded by other path segments. This was previously reported as GHSA-hgf8-39gv-g3f2, but the added filtering failed to account for the fact that safe_join accepts paths with multiple segments, such as example/NUL. The function send_from_directory uses safe_join to safely serve files at user-specified paths under a directory. If the application is running on Windows, and the requested path ends with a special device name, the file will be opened successfully, but reading will hang indefinitely. This issue has been fixed in version 3.1.6.",
+        "es": "Werkzeug es una completa biblioteca de aplicaciones web WSGI. Las versiones 3.1.5 e inferiores, la funci\u00f3n safe_join permite nombres de dispositivos de Windows como nombres de archivo si van precedidos por otros segmentos de ruta. Esto fue reportado previamente como GHSA-hgf8-39gv-g3f2, pero el filtrado a\u00f1adido no tuvo en cuenta el hecho de que safe_join acepta rutas con m\u00faltiples segmentos, como example/NUL. La funci\u00f3n send_from_directory utiliza safe_join para servir archivos de forma segura en rutas especificadas por el usuario bajo un directorio. Si la aplicaci\u00f3n se est\u00e1 ejecutando en Windows, y la ruta solicitada termina con un nombre de dispositivo especial, el archivo se abrir\u00e1 con \u00e9xito, pero la lectura se colgar\u00e1 indefinidamente. Este problema ha sido solucionado en la versi\u00f3n 3.1.6."
+      },
+      "references": [
+        "https://github.com/pallets/werkzeug/commit/f407712fdc60a09c2b3f4fe7db557703e5d9338d",
+        "https://github.com/pallets/werkzeug/releases/tag/3.1.6",
+        "https://github.com/pallets/werkzeug/security/advisories/GHSA-29vq-49wr-vm6x"
+      ]
+    },
+    {
       "id": "pygoat:CVE-2026-59204:pillow:9.4.0",
       "cve": "CVE-2026-59204",
       "package": "pillow",
@@ -1979,27 +2003,26 @@
       ]
     },
     {
-      "id": "pygoat:CVE-2026-27199:werkzeug:2.1.2",
-      "cve": "CVE-2026-27199",
-      "package": "werkzeug",
+      "id": "pygoat:CVE-2026-55380:pillow:9.4.0",
+      "cve": "CVE-2026-55380",
+      "package": "pillow",
       "ecosystem": "PyPI",
-      "installed_version": "2.1.2",
-      "fixed_version": "3.1.6",
+      "installed_version": "9.4.0",
+      "fixed_version": "12.3.0",
       "app": "pygoat",
-      "cvss": 5.3,
-      "epss": 0.00556,
+      "cvss": 7.5,
+      "epss": 0.00418,
       "in_kev": false,
       "kev_date_added": null,
-      "priority_score": 14,
+      "priority_score": 19,
       "priority_label": "low",
       "summary": {
-        "en": "Werkzeug is a comprehensive WSGI web application library. Versions 3.1.5 and below, the safe_join function allows Windows device names as filenames if preceded by other path segments. This was previously reported as GHSA-hgf8-39gv-g3f2, but the added filtering failed to account for the fact that safe_join accepts paths with multiple segments, such as example/NUL. The function send_from_directory uses safe_join to safely serve files at user-specified paths under a directory. If the application is running on Windows, and the requested path ends with a special device name, the file will be opened successfully, but reading will hang indefinitely. This issue has been fixed in version 3.1.6.",
-        "es": "Werkzeug es una completa biblioteca de aplicaciones web WSGI. Las versiones 3.1.5 e inferiores, la funci\u00f3n safe_join permite nombres de dispositivos de Windows como nombres de archivo si van precedidos por otros segmentos de ruta. Esto fue reportado previamente como GHSA-hgf8-39gv-g3f2, pero el filtrado a\u00f1adido no tuvo en cuenta el hecho de que safe_join acepta rutas con m\u00faltiples segmentos, como example/NUL. La funci\u00f3n send_from_directory utiliza safe_join para servir archivos de forma segura en rutas especificadas por el usuario bajo un directorio. Si la aplicaci\u00f3n se est\u00e1 ejecutando en Windows, y la ruta solicitada termina con un nombre de dispositivo especial, el archivo se abrir\u00e1 con \u00e9xito, pero la lectura se colgar\u00e1 indefinidamente. Este problema ha sido solucionado en la versi\u00f3n 3.1.6."
+        "en": "Pillow is a Python imaging library. Prior to 12.3.0, PIL/GdImageFile.py GdImageFile._open() read image dimensions from the GD 2.x header and stored them in self._size without calling Image._decompression_bomb_check(), allowing a crafted .gd file to trigger excessive C-heap allocation when loaded. This issue is fixed in version 12.3.0."
       },
       "references": [
-        "https://github.com/pallets/werkzeug/commit/f407712fdc60a09c2b3f4fe7db557703e5d9338d",
-        "https://github.com/pallets/werkzeug/releases/tag/3.1.6",
-        "https://github.com/pallets/werkzeug/security/advisories/GHSA-29vq-49wr-vm6x"
+        "https://github.com/python-pillow/Pillow/blob/main/docs/releasenotes/12.3.0.rst",
+        "https://github.com/python-pillow/Pillow/commit/f39b0ae6624eb2d7c5c5d651d9bb5fdbd96a8675",
+        "https://github.com/python-pillow/Pillow/security/advisories/GHSA-phj9-mv4w-65pm"
       ]
     },
     {
@@ -2023,29 +2046,6 @@
         "https://github.com/python-pillow/Pillow/blob/main/docs/releasenotes/12.3.0.rst",
         "https://github.com/python-pillow/Pillow/commit/0a263e6264aa5399988d9acd3bbfbca2ca3ec77d",
         "https://github.com/python-pillow/Pillow/security/advisories/GHSA-5x94-69rx-g8h2"
-      ]
-    },
-    {
-      "id": "pygoat:CVE-2026-55380:pillow:9.4.0",
-      "cve": "CVE-2026-55380",
-      "package": "pillow",
-      "ecosystem": "PyPI",
-      "installed_version": "9.4.0",
-      "fixed_version": "12.3.0",
-      "app": "pygoat",
-      "cvss": 7.5,
-      "epss": 0.00418,
-      "in_kev": false,
-      "kev_date_added": null,
-      "priority_score": 19,
-      "priority_label": "low",
-      "summary": {
-        "en": "Pillow is a Python imaging library. Prior to 12.3.0, PIL/GdImageFile.py GdImageFile._open() read image dimensions from the GD 2.x header and stored them in self._size without calling Image._decompression_bomb_check(), allowing a crafted .gd file to trigger excessive C-heap allocation when loaded. This issue is fixed in version 12.3.0."
-      },
-      "references": [
-        "https://github.com/python-pillow/Pillow/blob/main/docs/releasenotes/12.3.0.rst",
-        "https://github.com/python-pillow/Pillow/commit/f39b0ae6624eb2d7c5c5d651d9bb5fdbd96a8675",
-        "https://github.com/python-pillow/Pillow/security/advisories/GHSA-phj9-mv4w-65pm"
       ]
     },
     {
@@ -2178,30 +2178,6 @@
       ]
     },
     {
-      "id": "pygoat:CVE-2026-59205:pillow:9.4.0",
-      "cve": "CVE-2026-59205",
-      "package": "pillow",
-      "ecosystem": "PyPI",
-      "installed_version": "9.4.0",
-      "fixed_version": "12.3.0",
-      "app": "pygoat",
-      "cvss": 7.5,
-      "epss": 0.00385,
-      "in_kev": false,
-      "kev_date_added": null,
-      "priority_score": 19,
-      "priority_label": "low",
-      "summary": {
-        "en": "Pillow is a Python imaging library. Prior to 12.3.0, Pillow's ImageCms.ImageCmsTransform.apply(im, imOut) API can trigger controlled native heap corruption when the caller supplies an output image whose mode does not match the transform's declared output mode. This issue is fixed in version 12.3.0."
-      },
-      "references": [
-        "https://github.com/python-pillow/Pillow/commit/a9ffc42bedf4fc0a7ef8d6486e7f9e81e3397721",
-        "https://github.com/python-pillow/Pillow/pull/9715",
-        "https://github.com/python-pillow/Pillow/releases/tag/12.3.0",
-        "https://github.com/python-pillow/Pillow/security/advisories/GHSA-9hw9-ch79-4vh6"
-      ]
-    },
-    {
       "id": "pygoat:CVE-2026-59199:pillow:9.4.0",
       "cve": "CVE-2026-59199",
       "package": "pillow",
@@ -2247,6 +2223,30 @@
         "https://github.com/python-pillow/Pillow/pull/9718",
         "https://github.com/python-pillow/Pillow/releases/tag/12.3.0",
         "https://github.com/python-pillow/Pillow/security/advisories/GHSA-jjj6-mw9f-p565"
+      ]
+    },
+    {
+      "id": "pygoat:CVE-2026-59205:pillow:9.4.0",
+      "cve": "CVE-2026-59205",
+      "package": "pillow",
+      "ecosystem": "PyPI",
+      "installed_version": "9.4.0",
+      "fixed_version": "12.3.0",
+      "app": "pygoat",
+      "cvss": 7.5,
+      "epss": 0.00385,
+      "in_kev": false,
+      "kev_date_added": null,
+      "priority_score": 19,
+      "priority_label": "low",
+      "summary": {
+        "en": "Pillow is a Python imaging library. Prior to 12.3.0, Pillow's ImageCms.ImageCmsTransform.apply(im, imOut) API can trigger controlled native heap corruption when the caller supplies an output image whose mode does not match the transform's declared output mode. This issue is fixed in version 12.3.0."
+      },
+      "references": [
+        "https://github.com/python-pillow/Pillow/commit/a9ffc42bedf4fc0a7ef8d6486e7f9e81e3397721",
+        "https://github.com/python-pillow/Pillow/pull/9715",
+        "https://github.com/python-pillow/Pillow/releases/tag/12.3.0",
+        "https://github.com/python-pillow/Pillow/security/advisories/GHSA-9hw9-ch79-4vh6"
       ]
     },
     {
@@ -2395,6 +2395,30 @@
       ]
     },
     {
+      "id": "pygoat:CVE-2025-50181:urllib3:1.26.9",
+      "cve": "CVE-2025-50181",
+      "package": "urllib3",
+      "ecosystem": "PyPI",
+      "installed_version": "1.26.9",
+      "fixed_version": "2.5.0",
+      "app": "pygoat",
+      "cvss": 5.3,
+      "epss": 0.00474,
+      "in_kev": false,
+      "kev_date_added": null,
+      "priority_score": 14,
+      "priority_label": "low",
+      "summary": {
+        "en": "urllib3 is a user-friendly HTTP client library for Python. Prior to 2.5.0, it is possible to disable redirects for all requests by instantiating a PoolManager and specifying retries in a way that disable redirects. By default, requests and botocore users are not affected. An application attempting to mitigate SSRF or open redirect vulnerabilities by disabling redirects at the PoolManager level will remain vulnerable. This issue has been patched in version 2.5.0.",
+        "es": "urllib3 es una librer\u00eda cliente HTTP intuitiva para Python. Antes de la versi\u00f3n 2.5.0, era posible deshabilitar las redirecciones para todas las solicitudes instanciando un PoolManager y especificando reintentos para deshabilitarlas. Por defecto, las solicitudes y los usuarios de botocore no se ven afectados. Una aplicaci\u00f3n que intente mitigar vulnerabilidades de SSRF o de redirecci\u00f3n abierta deshabilitando las redirecciones a nivel de PoolManager seguir\u00e1 siendo vulnerable. Este problema se ha corregido en la versi\u00f3n 2.5.0."
+      },
+      "references": [
+        "https://github.com/urllib3/urllib3/commit/f05b1329126d5be6de501f9d1e3e36738bc08857",
+        "https://github.com/urllib3/urllib3/releases/tag/2.5.0",
+        "https://github.com/urllib3/urllib3/security/advisories/GHSA-pq67-6m6q-mj2v"
+      ]
+    },
+    {
       "id": "pygoat:CVE-2026-44431:urllib3:1.26.9",
       "cve": "CVE-2026-44431",
       "package": "urllib3",
@@ -2437,30 +2461,6 @@
         "https://docs.djangoproject.com/en/dev/releases/security/",
         "https://groups.google.com/g/django-announce",
         "https://www.djangoproject.com/weblog/2026/jul/07/security-releases/"
-      ]
-    },
-    {
-      "id": "pygoat:CVE-2025-50181:urllib3:1.26.9",
-      "cve": "CVE-2025-50181",
-      "package": "urllib3",
-      "ecosystem": "PyPI",
-      "installed_version": "1.26.9",
-      "fixed_version": "2.5.0",
-      "app": "pygoat",
-      "cvss": 5.3,
-      "epss": 0.00441,
-      "in_kev": false,
-      "kev_date_added": null,
-      "priority_score": 14,
-      "priority_label": "low",
-      "summary": {
-        "en": "urllib3 is a user-friendly HTTP client library for Python. Prior to 2.5.0, it is possible to disable redirects for all requests by instantiating a PoolManager and specifying retries in a way that disable redirects. By default, requests and botocore users are not affected. An application attempting to mitigate SSRF or open redirect vulnerabilities by disabling redirects at the PoolManager level will remain vulnerable. This issue has been patched in version 2.5.0.",
-        "es": "urllib3 es una librer\u00eda cliente HTTP intuitiva para Python. Antes de la versi\u00f3n 2.5.0, era posible deshabilitar las redirecciones para todas las solicitudes instanciando un PoolManager y especificando reintentos para deshabilitarlas. Por defecto, las solicitudes y los usuarios de botocore no se ven afectados. Una aplicaci\u00f3n que intente mitigar vulnerabilidades de SSRF o de redirecci\u00f3n abierta deshabilitando las redirecciones a nivel de PoolManager seguir\u00e1 siendo vulnerable. Este problema se ha corregido en la versi\u00f3n 2.5.0."
-      },
-      "references": [
-        "https://github.com/urllib3/urllib3/commit/f05b1329126d5be6de501f9d1e3e36738bc08857",
-        "https://github.com/urllib3/urllib3/releases/tag/2.5.0",
-        "https://github.com/urllib3/urllib3/security/advisories/GHSA-pq67-6m6q-mj2v"
       ]
     },
     {
@@ -3623,10 +3623,10 @@
       "fixed_version": "0.3.0",
       "app": "nodejs-goof",
       "cvss": 9.8,
-      "epss": 0.20299,
+      "epss": 0.21393,
       "in_kev": false,
       "kev_date_added": null,
-      "priority_score": 40,
+      "priority_score": 41,
       "priority_label": "medium",
       "summary": {
         "en": "The findOne function in TypeORM before 0.3.0 can either be supplied with a string or a FindOneOptions object. When input to the function is a user-controlled parsed JSON object, supplying a crafted FindOneOptions instead of an id string leads to SQL injection. NOTE: the vendor's position is that the user's application is responsible for input validation",
@@ -3910,10 +3910,10 @@
       "fixed_version": "0.4.11",
       "app": "nodejs-goof",
       "cvss": 5.5,
-      "epss": 0.15359,
+      "epss": 0.13622,
       "in_kev": false,
       "kev_date_added": null,
-      "priority_score": 25,
+      "priority_score": 24,
       "priority_label": "medium",
       "summary": {
         "en": "adm-zip npm library before 0.4.9 is vulnerable to directory traversal, allowing attackers to write to arbitrary files via a ../ (dot dot slash) in a Zip archive entry that is mishandled during extraction. This vulnerability is also known as 'Zip-Slip'.",
@@ -5991,7 +5991,7 @@
       "fixed_version": "6.12.3",
       "app": "nodejs-goof",
       "cvss": 5.6,
-      "epss": 0.02294,
+      "epss": 0.02313,
       "in_kev": false,
       "kev_date_added": null,
       "priority_score": 16,
@@ -8967,6 +8967,12 @@
     },
     {
       "date": "2026-09-20",
+      "findings_total": 312,
+      "critical": 4,
+      "high": 3
+    },
+    {
+      "date": "2026-09-21",
       "findings_total": 312,
       "critical": 4,
       "high": 3

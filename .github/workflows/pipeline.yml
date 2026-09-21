@@ -35,7 +35,15 @@ jobs:
       - name: Run the analysis
         env:
           NVD_API_KEY: ${{ secrets.NVD_API_KEY }}
-        run: python3 -m vulnbeat.main
+        run: |
+          for attempt in 1 2 3; do
+            python3 -m vulnbeat.main && break
+            echo "Attempt $attempt failed."
+            if [ "$attempt" = "3" ]; then
+              exit 1
+            fi
+            sleep 60
+          done
 
       - name: Publish results (automatic commit)
         run: |

@@ -78,7 +78,7 @@
   .pulse-row{display:flex;gap:4px;flex-wrap:wrap}
   .pulse-cell{width:20px;height:20px;border-radius:3px;background:var(--pulse-empty);cursor:default}
   .pulse-tooltip{position:fixed;background:var(--text);color:var(--bg);font-family:var(--mono);font-size:11px;
-    max-width:calc(100vw - 16px);padding:4px 8px;border-radius:4px;z-index:20;pointer-events:none;
+    padding:4px 8px;border-radius:4px;z-index:20;pointer-events:none;
     opacity:0;visibility:hidden;transition:opacity .1s ease}
   .pulse-tooltip.visible{opacity:1;visibility:visible}
   .pulse-note{margin-top:10px;font-size:12.5px;color:var(--text-soft)}
@@ -256,6 +256,7 @@ function showPulseTooltip(cell) {
   activePulseCell = cell;
   pulseTooltip.textContent = cell.dataset.tip;
   pulseTooltip.style.left = "0px";
+  pulseTooltip.style.maxWidth = `${window.innerWidth - 2 * TOOLTIP_MARGIN}px`;
   pulseTooltip.classList.add("visible");
 
   const cellRect = cell.getBoundingClientRect();

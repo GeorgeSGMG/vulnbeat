@@ -256,14 +256,23 @@ function showPulseTooltip(cell) {
   activePulseCell = cell;
   pulseTooltip.textContent = cell.dataset.tip;
   pulseTooltip.style.left = "0px";
-  pulseTooltip.style.maxWidth = `${window.innerWidth - 2 * TOOLTIP_MARGIN}px`;
+  pulseTooltip.style.whiteSpace = "nowrap";
+  pulseTooltip.style.width = "auto";
   pulseTooltip.classList.add("visible");
+
+  const viewportWidth = document.documentElement.clientWidth;
+  const naturalWidth = pulseTooltip.getBoundingClientRect().width;
+  const availableWidth = viewportWidth - 2 * TOOLTIP_MARGIN;
+  const finalWidth = Math.min(naturalWidth, availableWidth);
+
+  pulseTooltip.style.whiteSpace = "normal";
+  pulseTooltip.style.width = `${finalWidth}px`;
 
   const cellRect = cell.getBoundingClientRect();
   const tooltipRect = pulseTooltip.getBoundingClientRect();
 
   let left = cellRect.left + cellRect.width / 2 - tooltipRect.width / 2;
-  left = Math.max(TOOLTIP_MARGIN, Math.min(left, window.innerWidth - tooltipRect.width - TOOLTIP_MARGIN));
+  left = Math.max(TOOLTIP_MARGIN, Math.min(left, viewportWidth - tooltipRect.width - TOOLTIP_MARGIN));
 
   pulseTooltip.style.left = `${left}px`;
   pulseTooltip.style.top = `${cellRect.top - tooltipRect.height - TOOLTIP_MARGIN}px`;

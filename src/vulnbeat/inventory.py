@@ -107,24 +107,31 @@ if __name__ == "__main__":
 
     import requests
 
-    parser = argparse.ArgumentParser(description="Manually test inventory parsing against real dependency data.")
-    parser.add_argument("target", choices=TARGET_ALIASES.keys(), help="Which parser to exercise.")
-    args = parser.parse_args()
+    arg_parser = argparse.ArgumentParser(description="Manually test inventory parsing against real dependency data.")
+    arg_parser.add_argument("target", choices=TARGET_ALIASES.keys(), help="Which parser to exercise.")
+    args = arg_parser.parse_args()
 
     ecosystem = TARGET_ALIASES[args.target]
 
     if ecosystem == Ecosystem.PYPI:
-        url = "https://raw.githubusercontent.com/adeyosemanputra/pygoat/master/requirements.txt"
-        response = requests.get(url, timeout=30)
-        response.raise_for_status()
-        components = parse_requirements(response.text)
-        print(f"Parsed {len(components)} components from pygoat.")
+        manifest_url = "https://raw.githubusercontent.com/adeyosemanputra/pygoat/master/requirements.txt"
+        lockfile_url = None
+        name = "pygoat"
     else:
         manifest_url = "https://raw.githubusercontent.com/snyk-labs/nodejs-goof/main/package.json"
         lockfile_url = "https://raw.githubusercontent.com/snyk-labs/nodejs-goof/main/package-lock.json"
-        manifest_response = requests.get(manifest_url, timeout=30)
-        manifest_response.raise_for_status()
+        name = "nodejs-goof"
+
+    manifest_response = requests.get(manifest_url, timeout=30)
+    manifest_response.raise_for_status()
+    manifest_content = manifest_response.text
+
+    lockfile_content = None
+    if lockfile_url is not None:
         lockfile_response = requests.get(lockfile_url, timeout=30)
         lockfile_response.raise_for_status()
-        components = parse_package_lock(manifest_response.text, lockfile_response.text)
-        print(f"Parsed {len(components)} components from nodejs-goof.")
+        lockfile_content = lockfile_response.text
+
+    component_parser = PARSER_REGISTRY[ecosystem]
+    components = component_parser(manifest_content, lockfile_content)
+    print(f"Parsed {len(components)} components from {name}.")

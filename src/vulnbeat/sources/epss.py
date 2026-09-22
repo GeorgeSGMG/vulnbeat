@@ -64,3 +64,9 @@ def fetch_epss(cve_ids: list[str]) -> dict[str, EpssScore]:
     for batch in _chunk_by_length(cve_ids, EPSS_MAX_BATCH_CHARS, EPSS_MAX_BATCH_SIZE):
         scores.update(_fetch_epss_batch(batch))
     return scores
+
+
+if __name__ == "__main__":
+    cve_id = "CVE-2014-0160"
+    scores = fetch_epss([cve_id])
+    print(scores.get(cve_id))

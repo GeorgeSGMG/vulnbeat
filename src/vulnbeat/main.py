@@ -1,3 +1,6 @@
+import logging
+import sys
+
 import requests
 import yaml
 
@@ -12,6 +15,8 @@ from vulnbeat.shared.resilience import retry
 from vulnbeat.sources.epss import fetch_epss
 from vulnbeat.sources.kev import fetch_kev
 from vulnbeat.sources.nvd import fetch_nvd
+
+logger = logging.getLogger(__name__)
 
 APPS_CONFIG_PATH = "apps.yml"
 OUTPUT_PATH = "docs/data.json"
@@ -95,10 +100,12 @@ def scan_app(app: MonitoredApp) -> ScannedApp:
 
 
 if __name__ == "__main__":
+    logging.basicConfig(level=logging.INFO, format="%(message)s", stream=sys.stdout)
+
     settings = Settings.from_env()
 
     apps = load_apps()
-    print(f"Loaded {len(apps)} apps from {APPS_CONFIG_PATH}.")
+    logger.info(f"Loaded {len(apps)} apps from {APPS_CONFIG_PATH}.")
 
     scanned_apps = []
     component_counts = {}
@@ -106,23 +113,23 @@ if __name__ == "__main__":
         scanned_app = scan_app(app)
         scanned_apps.append(scanned_app)
         component_counts[app.id] = len(scanned_app.components)
-        print(f"  - {app.id} ({app.ecosystem.value}, {app.source.value}): {len(scanned_app.components)} components, {len(scanned_app.matches)} matches with real CVE")
+        logger.info(f"  - {app.id} ({app.ecosystem.value}, {app.source.value}): {len(scanned_app.components)} components, {len(scanned_app.matches)} matches with real CVE")
 
     all_cve_ids = list(set(
         match.cve_id
         for scanned_app in scanned_apps
         for match in scanned_app.matches
     ))
-    print(f"{len(all_cve_ids)} unique CVEs found across all apps.")
+    logger.info(f"{len(all_cve_ids)} unique CVEs found across all apps.")
 
     dates_by_cve = fetch_kev()
-    print(f"KEV downloaded: {len(dates_by_cve)} known exploited vulnerabilities.")
+    logger.info(f"KEV downloaded: {len(dates_by_cve)} known exploited vulnerabilities.")
 
     nvd_data = fetch_nvd(all_cve_ids, api_key=settings.nvd_api_key)
-    print(f"NVD enrichment fetched for {len(nvd_data)} of {len(all_cve_ids)} CVEs.")
+    logger.info(f"NVD enrichment fetched for {len(nvd_data)} of {len(all_cve_ids)} CVEs.")
 
     epss_scores = fetch_epss(all_cve_ids)
-    print(f"EPSS scores fetched for {len(epss_scores)} of {len(all_cve_ids)} CVEs.")
+    logger.info(f"EPSS scores fetched for {len(epss_scores)} of {len(all_cve_ids)} CVEs.")
 
     prioritized_findings = []
     for scanned_app in scanned_apps:
@@ -145,4 +152,4 @@ if __name__ == "__main__":
     )
 
     write_report(source_counts, apps, component_counts, prioritized_findings, OUTPUT_PATH)
-    print(f"Report written to {OUTPUT_PATH}.")
+    logger.info(f"Report written to {OUTPUT_PATH}.")

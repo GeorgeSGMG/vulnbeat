@@ -1,5 +1,5 @@
-from vulnbeat.priority import calculate_priority
 from vulnbeat.models import PriorityLabel
+from vulnbeat.priority import calculate_priority
 
 
 def test_no_data_gives_lowest_priority():

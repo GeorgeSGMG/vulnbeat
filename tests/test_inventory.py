@@ -1,8 +1,14 @@
 import json
 
-from vulnbeat.inventory import LOCK_DEV_KEY, LOCK_NODE_MODULES_PREFIX, LOCK_PACKAGES_KEY, LOCK_VERSION_KEY, parse_package_lock, parse_requirements
+from vulnbeat.inventory import (
+    LOCK_DEV_KEY,
+    LOCK_NODE_MODULES_PREFIX,
+    LOCK_PACKAGES_KEY,
+    LOCK_VERSION_KEY,
+    parse_package_lock,
+    parse_requirements,
+)
 from vulnbeat.models import Scope
-
 
 # --- parse_requirements ---
 

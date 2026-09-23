@@ -3,7 +3,15 @@ import logging
 import tempfile
 from pathlib import Path
 
-from vulnbeat.models import Component, EpssScore, Finding, NvdEnrichment, NvdVulnStatus, ScanMatch, Vulnerability
+from vulnbeat.models import (
+    Component,
+    EpssScore,
+    Finding,
+    NvdEnrichment,
+    NvdVulnStatus,
+    ScanMatch,
+    Vulnerability,
+)
 from vulnbeat.shared.cli_runner import run_cli
 from vulnbeat.shared.localization import LocalizedText
 

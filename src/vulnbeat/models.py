@@ -3,7 +3,6 @@ from enum import Enum
 
 from vulnbeat.shared.localization import LocalizedText
 
-
 # --- Enums ---
 
 

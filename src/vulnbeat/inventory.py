@@ -1,5 +1,5 @@
 import json
-from typing import Callable
+from collections.abc import Callable
 
 from vulnbeat.models import Component, Ecosystem, Scope
 
@@ -21,7 +21,7 @@ def parse_requirements(manifest_content: str, lockfile_content: str | None = Non
     components = {}
     for line in manifest_content.splitlines():
         line = line.strip()
-        if not line or line.startswith("#") or line.startswith("-"):
+        if not line or line.startswith(("#", "-")):
             continue
 
         name = line
@@ -90,7 +90,7 @@ def parse_package_lock(manifest_content: str, lockfile_content: str | None = Non
 
 
 def extract_scopes(components: dict[str, Component]) -> dict[str, Scope]:
-    return dict((name, component.scope) for name, component in components.items())
+    return {name: component.scope for name, component in components.items()}
 
 
 ComponentParser = Callable[[str, str | None], dict[str, Component]]

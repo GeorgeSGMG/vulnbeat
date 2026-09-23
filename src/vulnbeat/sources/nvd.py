@@ -30,7 +30,7 @@ NVD_CVSS_METRIC_KEYS_BY_PREFERENCE = ["cvssMetricV31", "cvssMetricV30", "cvssMet
 
 
 def _extract_summary(descriptions: list[dict[str, str]]) -> LocalizedText:
-    values = dict((entry[NVD_LANG_KEY], entry[NVD_VALUE_KEY]) for entry in descriptions)
+    values = {entry[NVD_LANG_KEY]: entry[NVD_VALUE_KEY] for entry in descriptions}
     return LocalizedText(values=values)
 
 

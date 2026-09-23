@@ -1,7 +1,12 @@
 import json
 
 from vulnbeat.models import Ecosystem, Scope
-from vulnbeat.sbom import SBOM_COMPONENTS_KEY, SBOM_NAME_KEY, SBOM_VERSION_KEY, parse_sbom
+from vulnbeat.sbom import (
+    SBOM_COMPONENTS_KEY,
+    SBOM_NAME_KEY,
+    SBOM_VERSION_KEY,
+    parse_sbom,
+)
 
 
 def _sbom(components: list[dict]) -> str:

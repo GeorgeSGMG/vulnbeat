@@ -6,7 +6,14 @@ import yaml
 
 from vulnbeat.crossref import assemble_findings, extract_scan_matches, scan_sbom
 from vulnbeat.inventory import PARSER_REGISTRY, extract_scopes
-from vulnbeat.models import Ecosystem, MonitoredApp, PrioritizedFinding, ScannedApp, Source, SourceCounts
+from vulnbeat.models import (
+    Ecosystem,
+    MonitoredApp,
+    PrioritizedFinding,
+    ScannedApp,
+    Source,
+    SourceCounts,
+)
 from vulnbeat.priority import calculate_finding_priority
 from vulnbeat.publication import write_report
 from vulnbeat.sbom import generate_sbom, parse_sbom
@@ -115,11 +122,7 @@ if __name__ == "__main__":
         component_counts[app.id] = len(scanned_app.components)
         logger.info(f"  - {app.id} ({app.ecosystem.value}, {app.source.value}): {len(scanned_app.components)} components, {len(scanned_app.matches)} matches with real CVE")
 
-    all_cve_ids = list(set(
-        match.cve_id
-        for scanned_app in scanned_apps
-        for match in scanned_app.matches
-    ))
+    all_cve_ids = list({match.cve_id for scanned_app in scanned_apps for match in scanned_app.matches})
     logger.info(f"{len(all_cve_ids)} unique CVEs found across all apps.")
 
     dates_by_cve = fetch_kev()

@@ -9,6 +9,7 @@ def run_cli(command: list[str], timeout: int = CLI_TIMEOUT_SECONDS) -> str:
         capture_output=True,
         text=True,
         timeout=timeout,
+        check=False,
     )
     if result.returncode != 0:
         raise RuntimeError(f"{command[0]} failed (exit {result.returncode}): {result.stderr.strip()}")

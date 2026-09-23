@@ -1,8 +1,13 @@
 import json
-from datetime import datetime, timezone
+from datetime import UTC, datetime
 from pathlib import Path
 
-from vulnbeat.models import MonitoredApp, PriorityLabel, PrioritizedFinding, SourceCounts
+from vulnbeat.models import (
+    MonitoredApp,
+    PrioritizedFinding,
+    PriorityLabel,
+    SourceCounts,
+)
 from vulnbeat.report_schema import AppEntry, FindingEntry, HistoryEntry, Report
 
 REPORT_HISTORY_KEY = "history"
@@ -30,7 +35,7 @@ def write_report(
     prioritized_findings: list[PrioritizedFinding],
     output_path: str,
 ) -> None:
-    generated_at = datetime.now(timezone.utc)
+    generated_at = datetime.now(UTC)
 
     apps_data: list[AppEntry] = []
     for app in apps:

@@ -14,9 +14,16 @@ from vulnbeat.crossref import (
     assemble_findings,
     extract_scan_matches,
 )
-from vulnbeat.models import Component, Ecosystem, EpssScore, NvdEnrichment, NvdVulnStatus, ScanMatch, Scope
+from vulnbeat.models import (
+    Component,
+    Ecosystem,
+    EpssScore,
+    NvdEnrichment,
+    NvdVulnStatus,
+    ScanMatch,
+    Scope,
+)
 from vulnbeat.shared.localization import LocalizedText
-
 
 # --- extract_scan_matches ---
 
@@ -89,7 +96,7 @@ def test_same_cve_and_package_different_version_are_kept_separately():
     ])
     matches = extract_scan_matches(scan_json)
     assert len(matches) == 2
-    versions = set(match.installed_version for match in matches)
+    versions = {match.installed_version for match in matches}
     assert versions == {"4.0.11", "4.0.14"}
 
 

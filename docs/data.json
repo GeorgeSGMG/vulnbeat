@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-09-25T11:29:46.731828+00:00",
+  "generated_at": "2026-09-26T11:05:14.127323+00:00",
   "sources": {
     "kev": {
       "fetched": true,
@@ -1398,28 +1398,6 @@
       ]
     },
     {
-      "id": "pygoat:CVE-2025-66418:urllib3:1.26.9",
-      "cve": "CVE-2025-66418",
-      "package": "urllib3",
-      "ecosystem": "PyPI",
-      "installed_version": "1.26.9",
-      "fixed_version": "2.6.0",
-      "app": "pygoat",
-      "cvss": 7.5,
-      "epss": 0.00682,
-      "in_kev": false,
-      "kev_date_added": null,
-      "priority_score": 19,
-      "priority_label": "low",
-      "summary": {
-        "en": "urllib3 is a user-friendly HTTP client library for Python. Starting in version 1.24 and prior to 2.6.0, the number of links in the decompression chain was unbounded allowing a malicious server to insert a virtually unlimited number of compression steps leading to high CPU usage and massive memory allocation for the decompressed data. This vulnerability is fixed in 2.6.0."
-      },
-      "references": [
-        "https://github.com/urllib3/urllib3/commit/24d7b67eac89f94e11003424bcf0d8f7b72222a8",
-        "https://github.com/urllib3/urllib3/security/advisories/GHSA-gm62-xv2j-4w53"
-      ]
-    },
-    {
       "id": "pygoat:CVE-2025-66471:urllib3:1.26.9",
       "cve": "CVE-2025-66471",
       "package": "urllib3",
@@ -1434,11 +1412,35 @@
       "priority_score": 19,
       "priority_label": "low",
       "summary": {
-        "en": "urllib3 is a user-friendly HTTP client library for Python. Starting in version 1.0 and prior to 2.6.0, the Streaming API improperly handles highly compressed data. urllib3's streaming API is designed for the efficient handling of large HTTP responses by reading the content in chunks, rather than loading the entire response body into memory at once. When streaming a compressed response, urllib3 can perform decoding or decompression based on the HTTP Content-Encoding header (e.g., gzip, deflate, br, or zstd). The library must read compressed data from the network and decompress it until the requested chunk size is met. Any resulting decompressed data that exceeds the requested amount is held in an internal buffer for the next read operation. The decompression logic could cause urllib3 to fully decode a small amount of highly compressed data in a single operation. This can result in excessive resource consumption (high CPU usage and massive memory allocation for the decompressed data."
+        "en": "urllib3 is a user-friendly HTTP client library for Python. Starting in version 1.0 and prior to 2.6.0, the Streaming API improperly handles highly compressed data. urllib3's streaming API is designed for the efficient handling of large HTTP responses by reading the content in chunks, rather than loading the entire response body into memory at once. When streaming a compressed response, urllib3 can perform decoding or decompression based on the HTTP Content-Encoding header (e.g., gzip, deflate, br, or zstd). The library must read compressed data from the network and decompress it until the requested chunk size is met. Any resulting decompressed data that exceeds the requested amount is held in an internal buffer for the next read operation. The decompression logic could cause urllib3 to fully decode a small amount of highly compressed data in a single operation. This can result in excessive resource consumption (high CPU usage and massive memory allocation for the decompressed data.",
+        "es": "urllib3 es una biblioteca cliente HTTP f\u00e1cil de usar para Python. A partir de la versi\u00f3n 1.0 y versiones anteriores a la 2.6.0, la API de Streaming maneja incorrectamente los datos altamente comprimidos. La API de streaming de urllib3 est\u00e1 dise\u00f1ada para el manejo eficiente de grandes respuestas HTTP leyendo el contenido en fragmentos, en lugar de cargar todo el cuerpo de la respuesta en la memoria de una sola vez. Al transmitir una respuesta comprimida, urllib3 puede realizar la decodificaci\u00f3n o descompresi\u00f3n bas\u00e1ndose en el encabezado HTTP Content-Encoding (por ejemplo, gzip, deflate, br o zstd). La biblioteca debe leer datos comprimidos de la red y descomprimirlos hasta que se alcance el tama\u00f1o de fragmento solicitado. Cualquier dato descomprimido resultante que exceda la cantidad solicitada se mantiene en un b\u00fafer interno para la siguiente operaci\u00f3n de lectura. La l\u00f3gica de descompresi\u00f3n podr\u00eda hacer que urllib3 decodifique completamente una peque\u00f1a cantidad de datos altamente comprimidos en una sola operaci\u00f3n. Esto puede resultar en un consumo excesivo de recursos (alto uso de CPU y asignaci\u00f3n masiva de memoria para los datos descomprimidos)."
       },
       "references": [
         "https://github.com/urllib3/urllib3/commit/c19571de34c47de3a766541b041637ba5f716ed7",
         "https://github.com/urllib3/urllib3/security/advisories/GHSA-2xpw-w6gg-jr37"
+      ]
+    },
+    {
+      "id": "pygoat:CVE-2025-66418:urllib3:1.26.9",
+      "cve": "CVE-2025-66418",
+      "package": "urllib3",
+      "ecosystem": "PyPI",
+      "installed_version": "1.26.9",
+      "fixed_version": "2.6.0",
+      "app": "pygoat",
+      "cvss": 7.5,
+      "epss": 0.00682,
+      "in_kev": false,
+      "kev_date_added": null,
+      "priority_score": 19,
+      "priority_label": "low",
+      "summary": {
+        "en": "urllib3 is a user-friendly HTTP client library for Python. Starting in version 1.24 and prior to 2.6.0, the number of links in the decompression chain was unbounded allowing a malicious server to insert a virtually unlimited number of compression steps leading to high CPU usage and massive memory allocation for the decompressed data. This vulnerability is fixed in 2.6.0.",
+        "es": "urllib3 es una biblioteca cliente HTTP f\u00e1cil de usar para Python. A partir de la versi\u00f3n 1.24 y en versiones anteriores a la 2.6.0, el n\u00famero de enlaces en la cadena de descompresi\u00f3n era ilimitado, lo que permit\u00eda a un servidor malicioso insertar un n\u00famero pr\u00e1cticamente ilimitado de pasos de compresi\u00f3n, lo que provocaba un alto uso de CPU y una asignaci\u00f3n masiva de memoria para los datos descomprimidos. Esta vulnerabilidad se corrigi\u00f3 en la versi\u00f3n 2.6.0."
+      },
+      "references": [
+        "https://github.com/urllib3/urllib3/commit/24d7b67eac89f94e11003424bcf0d8f7b72222a8",
+        "https://github.com/urllib3/urllib3/security/advisories/GHSA-gm62-xv2j-4w53"
       ]
     },
     {
@@ -1696,30 +1698,6 @@
       ]
     },
     {
-      "id": "pygoat:CVE-2026-59205:pillow:9.4.0",
-      "cve": "CVE-2026-59205",
-      "package": "pillow",
-      "ecosystem": "PyPI",
-      "installed_version": "9.4.0",
-      "fixed_version": "12.3.0",
-      "app": "pygoat",
-      "cvss": 7.5,
-      "epss": 0.00655,
-      "in_kev": false,
-      "kev_date_added": null,
-      "priority_score": 19,
-      "priority_label": "low",
-      "summary": {
-        "en": "Pillow is a Python imaging library. Prior to 12.3.0, Pillow's ImageCms.ImageCmsTransform.apply(im, imOut) API can trigger controlled native heap corruption when the caller supplies an output image whose mode does not match the transform's declared output mode. This issue is fixed in version 12.3.0."
-      },
-      "references": [
-        "https://github.com/python-pillow/Pillow/commit/a9ffc42bedf4fc0a7ef8d6486e7f9e81e3397721",
-        "https://github.com/python-pillow/Pillow/pull/9715",
-        "https://github.com/python-pillow/Pillow/releases/tag/12.3.0",
-        "https://github.com/python-pillow/Pillow/security/advisories/GHSA-9hw9-ch79-4vh6"
-      ]
-    },
-    {
       "id": "pygoat:CVE-2026-59200:pillow:9.4.0",
       "cve": "CVE-2026-59200",
       "package": "pillow",
@@ -1741,6 +1719,30 @@
         "https://github.com/python-pillow/Pillow/pull/9718",
         "https://github.com/python-pillow/Pillow/releases/tag/12.3.0",
         "https://github.com/python-pillow/Pillow/security/advisories/GHSA-jjj6-mw9f-p565"
+      ]
+    },
+    {
+      "id": "pygoat:CVE-2026-59205:pillow:9.4.0",
+      "cve": "CVE-2026-59205",
+      "package": "pillow",
+      "ecosystem": "PyPI",
+      "installed_version": "9.4.0",
+      "fixed_version": "12.3.0",
+      "app": "pygoat",
+      "cvss": 7.5,
+      "epss": 0.00655,
+      "in_kev": false,
+      "kev_date_added": null,
+      "priority_score": 19,
+      "priority_label": "low",
+      "summary": {
+        "en": "Pillow is a Python imaging library. Prior to 12.3.0, Pillow's ImageCms.ImageCmsTransform.apply(im, imOut) API can trigger controlled native heap corruption when the caller supplies an output image whose mode does not match the transform's declared output mode. This issue is fixed in version 12.3.0."
+      },
+      "references": [
+        "https://github.com/python-pillow/Pillow/commit/a9ffc42bedf4fc0a7ef8d6486e7f9e81e3397721",
+        "https://github.com/python-pillow/Pillow/pull/9715",
+        "https://github.com/python-pillow/Pillow/releases/tag/12.3.0",
+        "https://github.com/python-pillow/Pillow/security/advisories/GHSA-9hw9-ch79-4vh6"
       ]
     },
     {
@@ -1790,29 +1792,6 @@
       ]
     },
     {
-      "id": "pygoat:CVE-2026-54059:pillow:9.4.0",
-      "cve": "CVE-2026-54059",
-      "package": "pillow",
-      "ecosystem": "PyPI",
-      "installed_version": "9.4.0",
-      "fixed_version": "12.3.0",
-      "app": "pygoat",
-      "cvss": 7.5,
-      "epss": 0.00644,
-      "in_kev": false,
-      "kev_date_added": null,
-      "priority_score": 19,
-      "priority_label": "low",
-      "summary": {
-        "en": "Pillow is a Python imaging library. Prior to 12.3.0, PIL/PcfFontFile.py _load_bitmaps() read glyph dimensions from the PCF METRICS section and passed them directly to Image.frombytes() without calling Image._decompression_bomb_check(), allowing crafted PCF font data to cause excessive memory allocation. This issue is fixed in version 12.3.0."
-      },
-      "references": [
-        "https://github.com/python-pillow/Pillow/blob/main/docs/releasenotes/12.3.0.rst",
-        "https://github.com/python-pillow/Pillow/commit/0a263e6264aa5399988d9acd3bbfbca2ca3ec77d",
-        "https://github.com/python-pillow/Pillow/security/advisories/GHSA-8v84-f9pq-wr9x"
-      ]
-    },
-    {
       "id": "pygoat:CVE-2026-55380:pillow:9.4.0",
       "cve": "CVE-2026-55380",
       "package": "pillow",
@@ -1833,6 +1812,29 @@
         "https://github.com/python-pillow/Pillow/blob/main/docs/releasenotes/12.3.0.rst",
         "https://github.com/python-pillow/Pillow/commit/f39b0ae6624eb2d7c5c5d651d9bb5fdbd96a8675",
         "https://github.com/python-pillow/Pillow/security/advisories/GHSA-phj9-mv4w-65pm"
+      ]
+    },
+    {
+      "id": "pygoat:CVE-2026-54059:pillow:9.4.0",
+      "cve": "CVE-2026-54059",
+      "package": "pillow",
+      "ecosystem": "PyPI",
+      "installed_version": "9.4.0",
+      "fixed_version": "12.3.0",
+      "app": "pygoat",
+      "cvss": 7.5,
+      "epss": 0.00644,
+      "in_kev": false,
+      "kev_date_added": null,
+      "priority_score": 19,
+      "priority_label": "low",
+      "summary": {
+        "en": "Pillow is a Python imaging library. Prior to 12.3.0, PIL/PcfFontFile.py _load_bitmaps() read glyph dimensions from the PCF METRICS section and passed them directly to Image.frombytes() without calling Image._decompression_bomb_check(), allowing crafted PCF font data to cause excessive memory allocation. This issue is fixed in version 12.3.0."
+      },
+      "references": [
+        "https://github.com/python-pillow/Pillow/blob/main/docs/releasenotes/12.3.0.rst",
+        "https://github.com/python-pillow/Pillow/commit/0a263e6264aa5399988d9acd3bbfbca2ca3ec77d",
+        "https://github.com/python-pillow/Pillow/security/advisories/GHSA-8v84-f9pq-wr9x"
       ]
     },
     {
@@ -7345,31 +7347,6 @@
       ]
     },
     {
-      "id": "nodejs-goof:CVE-2026-69152:brace-expansion:1.1.11",
-      "cve": "CVE-2026-69152",
-      "package": "brace-expansion",
-      "ecosystem": "npm",
-      "installed_version": "1.1.11",
-      "fixed_version": "1.1.18",
-      "app": "nodejs-goof",
-      "cvss": 7.5,
-      "epss": 0.00748,
-      "in_kev": false,
-      "kev_date_added": null,
-      "priority_score": 19,
-      "priority_label": "low",
-      "summary": {
-        "en": "The brace-expansion library generates arbitrary strings containing a common prefix and suffix. Prior to 1.1.18, 2.1.4, 3.0.6, and 5.0.9, expand() does not apply maxLength while constructing comma-alternative intermediate arrays or padded sequences, allowing attacker-controlled input to exhaust memory or block the event loop. The fix for CVE-2026-14257 is bypassed by the vulnerability. This issue is fixed in versions 1.1.18, 2.1.4, 3.0.6, and 5.0.9."
-      },
-      "references": [
-        "https://github.com/juliangruber/brace-expansion/commit/139d015104e71433ad52a41d19467c48ecbb2c7d",
-        "https://github.com/juliangruber/brace-expansion/commit/1e30c930238d7162802d88a94189182def178dac",
-        "https://github.com/juliangruber/brace-expansion/commit/688a99eeaab02627c2b89ba8ba4821fecfa659cf",
-        "https://github.com/juliangruber/brace-expansion/commit/cb4b9e47cc2ec777c14b2b4492fb431a56f6a031",
-        "https://github.com/juliangruber/brace-expansion/security/advisories/GHSA-rgw5-rvv9-x895"
-      ]
-    },
-    {
       "id": "nodejs-goof:CVE-2020-35149:mquery:1.6.3",
       "cve": "CVE-2020-35149",
       "package": "mquery",
@@ -7602,6 +7579,31 @@
       ]
     },
     {
+      "id": "nodejs-goof:CVE-2026-69152:brace-expansion:1.1.11",
+      "cve": "CVE-2026-69152",
+      "package": "brace-expansion",
+      "ecosystem": "npm",
+      "installed_version": "1.1.11",
+      "fixed_version": "1.1.18",
+      "app": "nodejs-goof",
+      "cvss": 7.5,
+      "epss": 0.00647,
+      "in_kev": false,
+      "kev_date_added": null,
+      "priority_score": 19,
+      "priority_label": "low",
+      "summary": {
+        "en": "The brace-expansion library generates arbitrary strings containing a common prefix and suffix. Prior to 1.1.18, 2.1.4, 3.0.6, and 5.0.9, expand() does not apply maxLength while constructing comma-alternative intermediate arrays or padded sequences, allowing attacker-controlled input to exhaust memory or block the event loop. The fix for CVE-2026-14257 is bypassed by the vulnerability. This issue is fixed in versions 1.1.18, 2.1.4, 3.0.6, and 5.0.9."
+      },
+      "references": [
+        "https://github.com/juliangruber/brace-expansion/commit/139d015104e71433ad52a41d19467c48ecbb2c7d",
+        "https://github.com/juliangruber/brace-expansion/commit/1e30c930238d7162802d88a94189182def178dac",
+        "https://github.com/juliangruber/brace-expansion/commit/688a99eeaab02627c2b89ba8ba4821fecfa659cf",
+        "https://github.com/juliangruber/brace-expansion/commit/cb4b9e47cc2ec777c14b2b4492fb431a56f6a031",
+        "https://github.com/juliangruber/brace-expansion/security/advisories/GHSA-rgw5-rvv9-x895"
+      ]
+    },
+    {
       "id": "nodejs-goof:CVE-2026-14257:brace-expansion:1.1.11",
       "cve": "CVE-2026-14257",
       "package": "brace-expansion",
@@ -7722,6 +7724,28 @@
       ]
     },
     {
+      "id": "nodejs-goof:CVE-2026-27903:minimatch:3.0.4",
+      "cve": "CVE-2026-27903",
+      "package": "minimatch",
+      "ecosystem": "npm",
+      "installed_version": "3.0.4",
+      "fixed_version": "3.1.3",
+      "app": "nodejs-goof",
+      "cvss": 7.5,
+      "epss": 0.00595,
+      "in_kev": false,
+      "kev_date_added": null,
+      "priority_score": 19,
+      "priority_label": "low",
+      "summary": {
+        "en": "minimatch is a minimal matching utility for converting glob expressions into JavaScript RegExp objects. Prior to version 10.2.3, 9.0.7, 8.0.6, 7.4.8, 6.2.2, 5.1.8, 4.2.5, and 3.1.3, `matchOne()` performs unbounded recursive backtracking when a glob pattern contains multiple non-adjacent `**` (GLOBSTAR) segments and the input path does not match. The time complexity is O(C(n, k)) -- binomial -- where `n` is the number of path segments and `k` is the number of globstars. With k=11 and n=30, a call to the default `minimatch()` API stalls for roughly 5 seconds. With k=13, it exceeds 15 seconds. No memoization or call budget exists to bound this behavior. Any application where an attacker can influence the glob pattern passed to `minimatch()` is vulnerable. The realistic attack surface includes build tools and task runners that accept user-supplied glob arguments (ESLint, Webpack, Rollup config), multi-tenant systems where one tenant configures glob-based rules that run in a shared process, admin or developer interfaces that accept ignore-rule or filter configuration as globs, and CI/CD pipelines that evaluate user-submitted config files containing glob patterns. An attacker who can place a crafted pattern into any of these paths can stall the Node.js event loop for tens of seconds per invocation. The pattern is 56 bytes for a 5-second stall and does not require authentication in contexts where pattern input is part of the feature. Versions 10.2.3, 9.0.7, 8.0.6, 7.4.8, 6.2.2, 5.1.8, 4.2.5, and 3.1.3 fix the issue.",
+        "es": "minimatch es una utilidad de coincidencia m\u00ednima para convertir expresiones glob en objetos RegExp de JavaScript. Antes de las versiones 10.2.3, 9.0.7, 8.0.6, 7.4.8, 6.2.2, 5.1.8, 4.2.5 y 3.1.3, 'matchOne()' realiza un retroceso recursivo ilimitado cuando un patr\u00f3n glob contiene m\u00faltiples segmentos '**' (GLOBSTAR) no adyacentes y la ruta de entrada no coincide. La complejidad temporal es O(C(n, k)) -- binomial -- donde 'n' es el n\u00famero de segmentos de ruta y 'k' es el n\u00famero de globstars. Con k=11 y n=30, una llamada a la API predeterminada de 'minimatch()' se detiene durante aproximadamente 5 segundos. Con k=13, supera los 15 segundos. No existe memoizaci\u00f3n ni presupuesto de llamadas para limitar este comportamiento. Cualquier aplicaci\u00f3n donde un atacante pueda influir en el patr\u00f3n glob pasado a 'minimatch()' es vulnerable. La superficie de ataque realista incluye herramientas de compilaci\u00f3n y ejecutores de tareas que aceptan argumentos glob proporcionados por el usuario (configuraci\u00f3n de ESLint, Webpack, Rollup), sistemas multi-inquilino donde un inquilino configura reglas basadas en glob que se ejecutan en un proceso compartido, interfaces de administrador o desarrollador que aceptan configuraci\u00f3n de reglas de ignorar o de filtro como globs, y pipelines de CI/CD que eval\u00faan archivos de configuraci\u00f3n enviados por el usuario que contienen patrones glob. Un atacante que pueda colocar un patr\u00f3n dise\u00f1ado en cualquiera de estas rutas puede detener el bucle de eventos de Node.js durante decenas de segundos por invocaci\u00f3n. El patr\u00f3n es de 56 bytes para una detenci\u00f3n de 5 segundos y no requiere autenticaci\u00f3n en contextos donde la entrada del patr\u00f3n es parte de la caracter\u00edstica. Las versiones 10.2.3, 9.0.7, 8.0.6, 7.4.8, 6.2.2, 5.1.8, 4.2.5 y 3.1.3 solucionan el problema."
+      },
+      "references": [
+        "https://github.com/isaacs/minimatch/security/advisories/GHSA-7r86-cg39-jmmj"
+      ]
+    },
+    {
       "id": "nodejs-goof:CVE-2026-59869:js-yaml:3.13.1",
       "cve": "CVE-2026-59869",
       "package": "js-yaml",
@@ -7794,28 +7818,6 @@
       "references": [
         "https://github.com/isaacs/minimatch/commit/2e111f3a79abc00fa73110195de2c0f2351904f5",
         "https://github.com/isaacs/minimatch/security/advisories/GHSA-3ppc-4f35-3m26"
-      ]
-    },
-    {
-      "id": "nodejs-goof:CVE-2026-27903:minimatch:3.0.4",
-      "cve": "CVE-2026-27903",
-      "package": "minimatch",
-      "ecosystem": "npm",
-      "installed_version": "3.0.4",
-      "fixed_version": "3.1.3",
-      "app": "nodejs-goof",
-      "cvss": 7.5,
-      "epss": 0.00573,
-      "in_kev": false,
-      "kev_date_added": null,
-      "priority_score": 19,
-      "priority_label": "low",
-      "summary": {
-        "en": "minimatch is a minimal matching utility for converting glob expressions into JavaScript RegExp objects. Prior to version 10.2.3, 9.0.7, 8.0.6, 7.4.8, 6.2.2, 5.1.8, 4.2.5, and 3.1.3, `matchOne()` performs unbounded recursive backtracking when a glob pattern contains multiple non-adjacent `**` (GLOBSTAR) segments and the input path does not match. The time complexity is O(C(n, k)) -- binomial -- where `n` is the number of path segments and `k` is the number of globstars. With k=11 and n=30, a call to the default `minimatch()` API stalls for roughly 5 seconds. With k=13, it exceeds 15 seconds. No memoization or call budget exists to bound this behavior. Any application where an attacker can influence the glob pattern passed to `minimatch()` is vulnerable. The realistic attack surface includes build tools and task runners that accept user-supplied glob arguments (ESLint, Webpack, Rollup config), multi-tenant systems where one tenant configures glob-based rules that run in a shared process, admin or developer interfaces that accept ignore-rule or filter configuration as globs, and CI/CD pipelines that evaluate user-submitted config files containing glob patterns. An attacker who can place a crafted pattern into any of these paths can stall the Node.js event loop for tens of seconds per invocation. The pattern is 56 bytes for a 5-second stall and does not require authentication in contexts where pattern input is part of the feature. Versions 10.2.3, 9.0.7, 8.0.6, 7.4.8, 6.2.2, 5.1.8, 4.2.5, and 3.1.3 fix the issue.",
-        "es": "minimatch es una utilidad de coincidencia m\u00ednima para convertir expresiones glob en objetos RegExp de JavaScript. Antes de las versiones 10.2.3, 9.0.7, 8.0.6, 7.4.8, 6.2.2, 5.1.8, 4.2.5 y 3.1.3, 'matchOne()' realiza un retroceso recursivo ilimitado cuando un patr\u00f3n glob contiene m\u00faltiples segmentos '**' (GLOBSTAR) no adyacentes y la ruta de entrada no coincide. La complejidad temporal es O(C(n, k)) -- binomial -- donde 'n' es el n\u00famero de segmentos de ruta y 'k' es el n\u00famero de globstars. Con k=11 y n=30, una llamada a la API predeterminada de 'minimatch()' se detiene durante aproximadamente 5 segundos. Con k=13, supera los 15 segundos. No existe memoizaci\u00f3n ni presupuesto de llamadas para limitar este comportamiento. Cualquier aplicaci\u00f3n donde un atacante pueda influir en el patr\u00f3n glob pasado a 'minimatch()' es vulnerable. La superficie de ataque realista incluye herramientas de compilaci\u00f3n y ejecutores de tareas que aceptan argumentos glob proporcionados por el usuario (configuraci\u00f3n de ESLint, Webpack, Rollup), sistemas multi-inquilino donde un inquilino configura reglas basadas en glob que se ejecutan en un proceso compartido, interfaces de administrador o desarrollador que aceptan configuraci\u00f3n de reglas de ignorar o de filtro como globs, y pipelines de CI/CD que eval\u00faan archivos de configuraci\u00f3n enviados por el usuario que contienen patrones glob. Un atacante que pueda colocar un patr\u00f3n dise\u00f1ado en cualquiera de estas rutas puede detener el bucle de eventos de Node.js durante decenas de segundos por invocaci\u00f3n. El patr\u00f3n es de 56 bytes para una detenci\u00f3n de 5 segundos y no requiere autenticaci\u00f3n en contextos donde la entrada del patr\u00f3n es parte de la caracter\u00edstica. Las versiones 10.2.3, 9.0.7, 8.0.6, 7.4.8, 6.2.2, 5.1.8, 4.2.5 y 3.1.3 solucionan el problema."
-      },
-      "references": [
-        "https://github.com/isaacs/minimatch/security/advisories/GHSA-7r86-cg39-jmmj"
       ]
     },
     {
@@ -7903,7 +7905,7 @@
       "fixed_version": "3.1.4",
       "app": "nodejs-goof",
       "cvss": 7.5,
-      "epss": 0.00486,
+      "epss": 0.00505,
       "in_kev": false,
       "kev_date_added": null,
       "priority_score": 19,
@@ -8997,6 +8999,12 @@
     },
     {
       "date": "2026-09-25",
+      "findings_total": 312,
+      "critical": 4,
+      "high": 3
+    },
+    {
+      "date": "2026-09-26",
       "findings_total": 312,
       "critical": 4,
       "high": 3

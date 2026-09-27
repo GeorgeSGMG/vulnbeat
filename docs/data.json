@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-09-26T11:05:14.127323+00:00",
+  "generated_at": "2026-09-27T11:44:24.843129+00:00",
   "sources": {
     "kev": {
       "fetched": true,
@@ -1398,29 +1398,6 @@
       ]
     },
     {
-      "id": "pygoat:CVE-2025-66471:urllib3:1.26.9",
-      "cve": "CVE-2025-66471",
-      "package": "urllib3",
-      "ecosystem": "PyPI",
-      "installed_version": "1.26.9",
-      "fixed_version": "2.6.0",
-      "app": "pygoat",
-      "cvss": 7.5,
-      "epss": 0.00682,
-      "in_kev": false,
-      "kev_date_added": null,
-      "priority_score": 19,
-      "priority_label": "low",
-      "summary": {
-        "en": "urllib3 is a user-friendly HTTP client library for Python. Starting in version 1.0 and prior to 2.6.0, the Streaming API improperly handles highly compressed data. urllib3's streaming API is designed for the efficient handling of large HTTP responses by reading the content in chunks, rather than loading the entire response body into memory at once. When streaming a compressed response, urllib3 can perform decoding or decompression based on the HTTP Content-Encoding header (e.g., gzip, deflate, br, or zstd). The library must read compressed data from the network and decompress it until the requested chunk size is met. Any resulting decompressed data that exceeds the requested amount is held in an internal buffer for the next read operation. The decompression logic could cause urllib3 to fully decode a small amount of highly compressed data in a single operation. This can result in excessive resource consumption (high CPU usage and massive memory allocation for the decompressed data.",
-        "es": "urllib3 es una biblioteca cliente HTTP f\u00e1cil de usar para Python. A partir de la versi\u00f3n 1.0 y versiones anteriores a la 2.6.0, la API de Streaming maneja incorrectamente los datos altamente comprimidos. La API de streaming de urllib3 est\u00e1 dise\u00f1ada para el manejo eficiente de grandes respuestas HTTP leyendo el contenido en fragmentos, en lugar de cargar todo el cuerpo de la respuesta en la memoria de una sola vez. Al transmitir una respuesta comprimida, urllib3 puede realizar la decodificaci\u00f3n o descompresi\u00f3n bas\u00e1ndose en el encabezado HTTP Content-Encoding (por ejemplo, gzip, deflate, br o zstd). La biblioteca debe leer datos comprimidos de la red y descomprimirlos hasta que se alcance el tama\u00f1o de fragmento solicitado. Cualquier dato descomprimido resultante que exceda la cantidad solicitada se mantiene en un b\u00fafer interno para la siguiente operaci\u00f3n de lectura. La l\u00f3gica de descompresi\u00f3n podr\u00eda hacer que urllib3 decodifique completamente una peque\u00f1a cantidad de datos altamente comprimidos en una sola operaci\u00f3n. Esto puede resultar en un consumo excesivo de recursos (alto uso de CPU y asignaci\u00f3n masiva de memoria para los datos descomprimidos)."
-      },
-      "references": [
-        "https://github.com/urllib3/urllib3/commit/c19571de34c47de3a766541b041637ba5f716ed7",
-        "https://github.com/urllib3/urllib3/security/advisories/GHSA-2xpw-w6gg-jr37"
-      ]
-    },
-    {
       "id": "pygoat:CVE-2025-66418:urllib3:1.26.9",
       "cve": "CVE-2025-66418",
       "package": "urllib3",
@@ -1441,6 +1418,29 @@
       "references": [
         "https://github.com/urllib3/urllib3/commit/24d7b67eac89f94e11003424bcf0d8f7b72222a8",
         "https://github.com/urllib3/urllib3/security/advisories/GHSA-gm62-xv2j-4w53"
+      ]
+    },
+    {
+      "id": "pygoat:CVE-2025-66471:urllib3:1.26.9",
+      "cve": "CVE-2025-66471",
+      "package": "urllib3",
+      "ecosystem": "PyPI",
+      "installed_version": "1.26.9",
+      "fixed_version": "2.6.0",
+      "app": "pygoat",
+      "cvss": 7.5,
+      "epss": 0.00682,
+      "in_kev": false,
+      "kev_date_added": null,
+      "priority_score": 19,
+      "priority_label": "low",
+      "summary": {
+        "en": "urllib3 is a user-friendly HTTP client library for Python. Starting in version 1.0 and prior to 2.6.0, the Streaming API improperly handles highly compressed data. urllib3's streaming API is designed for the efficient handling of large HTTP responses by reading the content in chunks, rather than loading the entire response body into memory at once. When streaming a compressed response, urllib3 can perform decoding or decompression based on the HTTP Content-Encoding header (e.g., gzip, deflate, br, or zstd). The library must read compressed data from the network and decompress it until the requested chunk size is met. Any resulting decompressed data that exceeds the requested amount is held in an internal buffer for the next read operation. The decompression logic could cause urllib3 to fully decode a small amount of highly compressed data in a single operation. This can result in excessive resource consumption (high CPU usage and massive memory allocation for the decompressed data.",
+        "es": "urllib3 es una biblioteca cliente HTTP f\u00e1cil de usar para Python. A partir de la versi\u00f3n 1.0 y versiones anteriores a la 2.6.0, la API de Streaming maneja incorrectamente los datos altamente comprimidos. La API de streaming de urllib3 est\u00e1 dise\u00f1ada para el manejo eficiente de grandes respuestas HTTP leyendo el contenido en fragmentos, en lugar de cargar todo el cuerpo de la respuesta en la memoria de una sola vez. Al transmitir una respuesta comprimida, urllib3 puede realizar la decodificaci\u00f3n o descompresi\u00f3n bas\u00e1ndose en el encabezado HTTP Content-Encoding (por ejemplo, gzip, deflate, br o zstd). La biblioteca debe leer datos comprimidos de la red y descomprimirlos hasta que se alcance el tama\u00f1o de fragmento solicitado. Cualquier dato descomprimido resultante que exceda la cantidad solicitada se mantiene en un b\u00fafer interno para la siguiente operaci\u00f3n de lectura. La l\u00f3gica de descompresi\u00f3n podr\u00eda hacer que urllib3 decodifique completamente una peque\u00f1a cantidad de datos altamente comprimidos en una sola operaci\u00f3n. Esto puede resultar en un consumo excesivo de recursos (alto uso de CPU y asignaci\u00f3n masiva de memoria para los datos descomprimidos)."
+      },
+      "references": [
+        "https://github.com/urllib3/urllib3/commit/c19571de34c47de3a766541b041637ba5f716ed7",
+        "https://github.com/urllib3/urllib3/security/advisories/GHSA-2xpw-w6gg-jr37"
       ]
     },
     {
@@ -1674,30 +1674,6 @@
       ]
     },
     {
-      "id": "pygoat:CVE-2026-59199:pillow:9.4.0",
-      "cve": "CVE-2026-59199",
-      "package": "pillow",
-      "ecosystem": "PyPI",
-      "installed_version": "9.4.0",
-      "fixed_version": "12.3.0",
-      "app": "pygoat",
-      "cvss": 7.5,
-      "epss": 0.00655,
-      "in_kev": false,
-      "kev_date_added": null,
-      "priority_score": 19,
-      "priority_label": "low",
-      "summary": {
-        "en": "Pillow is a Python imaging library. Prior to 12.3.0, Pillow public image coordinate APIs can trigger a native heap out-of-bounds write when given coordinates near the signed 32-bit integer limits in Image.paste(), Image.crop(), or Image.alpha_composite(). This issue is fixed in version 12.3.0."
-      },
-      "references": [
-        "https://github.com/python-pillow/Pillow/commit/ceefc348eb3c3844c7f9796ef2cc3a7dd5fbba7b",
-        "https://github.com/python-pillow/Pillow/pull/9703",
-        "https://github.com/python-pillow/Pillow/releases/tag/12.3.0",
-        "https://github.com/python-pillow/Pillow/security/advisories/GHSA-6r8x-57c9-28j4"
-      ]
-    },
-    {
       "id": "pygoat:CVE-2026-59200:pillow:9.4.0",
       "cve": "CVE-2026-59200",
       "package": "pillow",
@@ -1719,6 +1695,30 @@
         "https://github.com/python-pillow/Pillow/pull/9718",
         "https://github.com/python-pillow/Pillow/releases/tag/12.3.0",
         "https://github.com/python-pillow/Pillow/security/advisories/GHSA-jjj6-mw9f-p565"
+      ]
+    },
+    {
+      "id": "pygoat:CVE-2026-59199:pillow:9.4.0",
+      "cve": "CVE-2026-59199",
+      "package": "pillow",
+      "ecosystem": "PyPI",
+      "installed_version": "9.4.0",
+      "fixed_version": "12.3.0",
+      "app": "pygoat",
+      "cvss": 7.5,
+      "epss": 0.00655,
+      "in_kev": false,
+      "kev_date_added": null,
+      "priority_score": 19,
+      "priority_label": "low",
+      "summary": {
+        "en": "Pillow is a Python imaging library. Prior to 12.3.0, Pillow public image coordinate APIs can trigger a native heap out-of-bounds write when given coordinates near the signed 32-bit integer limits in Image.paste(), Image.crop(), or Image.alpha_composite(). This issue is fixed in version 12.3.0."
+      },
+      "references": [
+        "https://github.com/python-pillow/Pillow/commit/ceefc348eb3c3844c7f9796ef2cc3a7dd5fbba7b",
+        "https://github.com/python-pillow/Pillow/pull/9703",
+        "https://github.com/python-pillow/Pillow/releases/tag/12.3.0",
+        "https://github.com/python-pillow/Pillow/security/advisories/GHSA-6r8x-57c9-28j4"
       ]
     },
     {
@@ -2801,6 +2801,30 @@
       ]
     },
     {
+      "id": "pygoat:CVE-2026-48587:django:4.2",
+      "cve": "CVE-2026-48587",
+      "package": "django",
+      "ecosystem": "PyPI",
+      "installed_version": "4.2",
+      "fixed_version": "5.2.15",
+      "app": "pygoat",
+      "cvss": 3.1,
+      "epss": 0.00429,
+      "in_kev": false,
+      "kev_date_added": null,
+      "priority_score": 8,
+      "priority_label": "low",
+      "summary": {
+        "en": "An issue was discovered in Django 5.2 before 5.2.15 and 6.0 before 6.0.6.\n`django.utils.cache.has_vary_header()` in Django does not strip leading or trailing whitespace from `Vary` response header values before comparison, which allows remote attackers to read cached responses via requests to URLs whose responses contain whitespace-padded Vary header values.\nEarlier, unsupported Django series (such as 5.0.x, 4.1.x, and 3.2.x) were not evaluated and may also be affected.\nDjango would like to thank Navid Rezazadeh for reporting this issue.",
+        "es": "Se descubri\u00f3 un problema en Django 5.2 anterior a 5.2.15 y 6.0 anterior a 6.0.6.\n'django.utils.cache.has_vary_header()' en Django no elimina los espacios en blanco iniciales o finales de los valores del encabezado de respuesta 'Vary' antes de la comparaci\u00f3n, lo que permite a atacantes remotos leer respuestas en cach\u00e9 a trav\u00e9s de solicitudes a URL cuyas respuestas contienen valores de encabezado Vary rellenados con espacios en blanco.\nSeries de Django anteriores y no compatibles (como 5.0.x, 4.1.x y 3.2.x) no fueron evaluadas y tambi\u00e9n podr\u00edan estar afectadas.\nDjango desea agradecer a Navid Rezazadeh por informar sobre este problema."
+      },
+      "references": [
+        "https://docs.djangoproject.com/en/dev/releases/security/",
+        "https://groups.google.com/g/django-announce",
+        "https://www.djangoproject.com/weblog/2026/jun/03/security-releases/"
+      ]
+    },
+    {
       "id": "pygoat:CVE-2026-48588:django:4.2",
       "cve": "CVE-2026-48588",
       "package": "django",
@@ -2840,30 +2864,6 @@
       "summary": {
         "en": "An issue was discovered in Django 5.2 before 5.2.15 and 6.0 before 6.0.6.\n`django.middleware.cache.UpdateCacheMiddleware` in Django does not match `Cache-Control` response directives case-insensitively, which allows remote attackers to read responses that were incorrectly cached because their `Cache-Control` directives used uppercase or mixed-case values.\nEarlier, unsupported Django series (such as 5.0.x, 4.1.x, and 3.2.x) were not evaluated and may also be affected.\nDjango would like to thank Ahmed Badawe for reporting this issue.",
         "es": "Se descubri\u00f3 un problema en Django 5.2 anterior a 5.2.15 y 6.0 anterior a 6.0.6.\n'django.middleware.cache.UpdateCacheMiddleware' en Django no compara las directivas de respuesta 'Cache-Control' sin distinguir entre may\u00fasculas y min\u00fasculas, lo que permite a atacantes remotos leer respuestas que fueron almacenadas en cach\u00e9 incorrectamente porque sus directivas 'Cache-Control' usaban valores en may\u00fasculas o con una combinaci\u00f3n de may\u00fasculas y min\u00fasculas.\nSeries de Django anteriores y no compatibles (como 5.0.x, 4.1.x y 3.2.x) no fueron evaluadas y tambi\u00e9n podr\u00edan estar afectadas.\nDjango desea agradecer a Ahmed Badawe por informar de este problema."
-      },
-      "references": [
-        "https://docs.djangoproject.com/en/dev/releases/security/",
-        "https://groups.google.com/g/django-announce",
-        "https://www.djangoproject.com/weblog/2026/jun/03/security-releases/"
-      ]
-    },
-    {
-      "id": "pygoat:CVE-2026-48587:django:4.2",
-      "cve": "CVE-2026-48587",
-      "package": "django",
-      "ecosystem": "PyPI",
-      "installed_version": "4.2",
-      "fixed_version": "5.2.15",
-      "app": "pygoat",
-      "cvss": 3.1,
-      "epss": 0.00429,
-      "in_kev": false,
-      "kev_date_added": null,
-      "priority_score": 8,
-      "priority_label": "low",
-      "summary": {
-        "en": "An issue was discovered in Django 5.2 before 5.2.15 and 6.0 before 6.0.6.\n`django.utils.cache.has_vary_header()` in Django does not strip leading or trailing whitespace from `Vary` response header values before comparison, which allows remote attackers to read cached responses via requests to URLs whose responses contain whitespace-padded Vary header values.\nEarlier, unsupported Django series (such as 5.0.x, 4.1.x, and 3.2.x) were not evaluated and may also be affected.\nDjango would like to thank Navid Rezazadeh for reporting this issue.",
-        "es": "Se descubri\u00f3 un problema en Django 5.2 anterior a 5.2.15 y 6.0 anterior a 6.0.6.\n'django.utils.cache.has_vary_header()' en Django no elimina los espacios en blanco iniciales o finales de los valores del encabezado de respuesta 'Vary' antes de la comparaci\u00f3n, lo que permite a atacantes remotos leer respuestas en cach\u00e9 a trav\u00e9s de solicitudes a URL cuyas respuestas contienen valores de encabezado Vary rellenados con espacios en blanco.\nSeries de Django anteriores y no compatibles (como 5.0.x, 4.1.x y 3.2.x) no fueron evaluadas y tambi\u00e9n podr\u00edan estar afectadas.\nDjango desea agradecer a Navid Rezazadeh por informar sobre este problema."
       },
       "references": [
         "https://docs.djangoproject.com/en/dev/releases/security/",
@@ -3805,7 +3805,7 @@
       "fixed_version": "6.2.4",
       "app": "nodejs-goof",
       "cvss": 7.5,
-      "epss": 0.15064,
+      "epss": 0.15622,
       "in_kev": false,
       "kev_date_added": null,
       "priority_score": 30,
@@ -3831,7 +3831,7 @@
       "fixed_version": "6.2.4",
       "app": "nodejs-goof",
       "cvss": 7.5,
-      "epss": 0.15064,
+      "epss": 0.15622,
       "in_kev": false,
       "kev_date_added": null,
       "priority_score": 30,
@@ -3857,7 +3857,7 @@
       "fixed_version": "6.5.3",
       "app": "nodejs-goof",
       "cvss": 7.5,
-      "epss": 0.15064,
+      "epss": 0.15622,
       "in_kev": false,
       "kev_date_added": null,
       "priority_score": 30,
@@ -4644,7 +4644,7 @@
       "fixed_version": "4.4.5",
       "app": "nodejs-goof",
       "cvss": 7.5,
-      "epss": 0.03793,
+      "epss": 0.03691,
       "in_kev": false,
       "kev_date_added": null,
       "priority_score": 22,
@@ -4668,7 +4668,7 @@
       "fixed_version": "4.4.5",
       "app": "nodejs-goof",
       "cvss": 7.5,
-      "epss": 0.03793,
+      "epss": 0.03691,
       "in_kev": false,
       "kev_date_added": null,
       "priority_score": 22,
@@ -9005,6 +9005,12 @@
     },
     {
       "date": "2026-09-26",
+      "findings_total": 312,
+      "critical": 4,
+      "high": 3
+    },
+    {
+      "date": "2026-09-27",
       "findings_total": 312,
       "critical": 4,
       "high": 3

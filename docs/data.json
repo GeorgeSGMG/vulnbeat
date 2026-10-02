@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-10-01T12:46:37.200086+00:00",
+  "generated_at": "2026-10-02T12:10:39.196283+00:00",
   "sources": {
     "kev": {
       "fetched": true,
@@ -7,7 +7,7 @@
     },
     "epss": {
       "fetched": true,
-      "entries": 270
+      "entries": 273
     },
     "nvd": {
       "fetched": true,
@@ -1060,7 +1060,7 @@
       "fixed_version": "4.2.29",
       "app": "pygoat",
       "cvss": 7.5,
-      "epss": 0.01101,
+      "epss": 0.01144,
       "in_kev": false,
       "kev_date_added": null,
       "priority_score": 20,
@@ -1701,6 +1701,30 @@
       ]
     },
     {
+      "id": "pygoat:CVE-2026-59205:pillow:9.4.0",
+      "cve": "CVE-2026-59205",
+      "package": "pillow",
+      "ecosystem": "PyPI",
+      "installed_version": "9.4.0",
+      "fixed_version": "12.3.0",
+      "app": "pygoat",
+      "cvss": 7.5,
+      "epss": 0.00655,
+      "in_kev": false,
+      "kev_date_added": null,
+      "priority_score": 19,
+      "priority_label": "low",
+      "summary": {
+        "en": "Pillow is a Python imaging library. Prior to 12.3.0, Pillow's ImageCms.ImageCmsTransform.apply(im, imOut) API can trigger controlled native heap corruption when the caller supplies an output image whose mode does not match the transform's declared output mode. This issue is fixed in version 12.3.0."
+      },
+      "references": [
+        "https://github.com/python-pillow/Pillow/commit/a9ffc42bedf4fc0a7ef8d6486e7f9e81e3397721",
+        "https://github.com/python-pillow/Pillow/pull/9715",
+        "https://github.com/python-pillow/Pillow/releases/tag/12.3.0",
+        "https://github.com/python-pillow/Pillow/security/advisories/GHSA-9hw9-ch79-4vh6"
+      ]
+    },
+    {
       "id": "pygoat:CVE-2026-59200:pillow:9.4.0",
       "cve": "CVE-2026-59200",
       "package": "pillow",
@@ -1746,30 +1770,6 @@
         "https://github.com/python-pillow/Pillow/pull/9703",
         "https://github.com/python-pillow/Pillow/releases/tag/12.3.0",
         "https://github.com/python-pillow/Pillow/security/advisories/GHSA-6r8x-57c9-28j4"
-      ]
-    },
-    {
-      "id": "pygoat:CVE-2026-59205:pillow:9.4.0",
-      "cve": "CVE-2026-59205",
-      "package": "pillow",
-      "ecosystem": "PyPI",
-      "installed_version": "9.4.0",
-      "fixed_version": "12.3.0",
-      "app": "pygoat",
-      "cvss": 7.5,
-      "epss": 0.00655,
-      "in_kev": false,
-      "kev_date_added": null,
-      "priority_score": 19,
-      "priority_label": "low",
-      "summary": {
-        "en": "Pillow is a Python imaging library. Prior to 12.3.0, Pillow's ImageCms.ImageCmsTransform.apply(im, imOut) API can trigger controlled native heap corruption when the caller supplies an output image whose mode does not match the transform's declared output mode. This issue is fixed in version 12.3.0."
-      },
-      "references": [
-        "https://github.com/python-pillow/Pillow/commit/a9ffc42bedf4fc0a7ef8d6486e7f9e81e3397721",
-        "https://github.com/python-pillow/Pillow/pull/9715",
-        "https://github.com/python-pillow/Pillow/releases/tag/12.3.0",
-        "https://github.com/python-pillow/Pillow/security/advisories/GHSA-9hw9-ch79-4vh6"
       ]
     },
     {
@@ -1819,29 +1819,6 @@
       ]
     },
     {
-      "id": "pygoat:CVE-2026-54059:pillow:9.4.0",
-      "cve": "CVE-2026-54059",
-      "package": "pillow",
-      "ecosystem": "PyPI",
-      "installed_version": "9.4.0",
-      "fixed_version": "12.3.0",
-      "app": "pygoat",
-      "cvss": 7.5,
-      "epss": 0.00644,
-      "in_kev": false,
-      "kev_date_added": null,
-      "priority_score": 19,
-      "priority_label": "low",
-      "summary": {
-        "en": "Pillow is a Python imaging library. Prior to 12.3.0, PIL/PcfFontFile.py _load_bitmaps() read glyph dimensions from the PCF METRICS section and passed them directly to Image.frombytes() without calling Image._decompression_bomb_check(), allowing crafted PCF font data to cause excessive memory allocation. This issue is fixed in version 12.3.0."
-      },
-      "references": [
-        "https://github.com/python-pillow/Pillow/blob/main/docs/releasenotes/12.3.0.rst",
-        "https://github.com/python-pillow/Pillow/commit/0a263e6264aa5399988d9acd3bbfbca2ca3ec77d",
-        "https://github.com/python-pillow/Pillow/security/advisories/GHSA-8v84-f9pq-wr9x"
-      ]
-    },
-    {
       "id": "pygoat:CVE-2026-54060:pillow:9.4.0",
       "cve": "CVE-2026-54060",
       "package": "pillow",
@@ -1862,6 +1839,29 @@
         "https://github.com/python-pillow/Pillow/blob/main/docs/releasenotes/12.3.0.rst",
         "https://github.com/python-pillow/Pillow/commit/0a263e6264aa5399988d9acd3bbfbca2ca3ec77d",
         "https://github.com/python-pillow/Pillow/security/advisories/GHSA-5x94-69rx-g8h2"
+      ]
+    },
+    {
+      "id": "pygoat:CVE-2026-54059:pillow:9.4.0",
+      "cve": "CVE-2026-54059",
+      "package": "pillow",
+      "ecosystem": "PyPI",
+      "installed_version": "9.4.0",
+      "fixed_version": "12.3.0",
+      "app": "pygoat",
+      "cvss": 7.5,
+      "epss": 0.00644,
+      "in_kev": false,
+      "kev_date_added": null,
+      "priority_score": 19,
+      "priority_label": "low",
+      "summary": {
+        "en": "Pillow is a Python imaging library. Prior to 12.3.0, PIL/PcfFontFile.py _load_bitmaps() read glyph dimensions from the PCF METRICS section and passed them directly to Image.frombytes() without calling Image._decompression_bomb_check(), allowing crafted PCF font data to cause excessive memory allocation. This issue is fixed in version 12.3.0."
+      },
+      "references": [
+        "https://github.com/python-pillow/Pillow/blob/main/docs/releasenotes/12.3.0.rst",
+        "https://github.com/python-pillow/Pillow/commit/0a263e6264aa5399988d9acd3bbfbca2ca3ec77d",
+        "https://github.com/python-pillow/Pillow/security/advisories/GHSA-8v84-f9pq-wr9x"
       ]
     },
     {
@@ -2258,30 +2258,6 @@
       ]
     },
     {
-      "id": "pygoat:CVE-2025-14550:django:4.2",
-      "cve": "CVE-2025-14550",
-      "package": "django",
-      "ecosystem": "PyPI",
-      "installed_version": "4.2",
-      "fixed_version": "4.2.28",
-      "app": "pygoat",
-      "cvss": 7.5,
-      "epss": 0.01055,
-      "in_kev": false,
-      "kev_date_added": null,
-      "priority_score": 20,
-      "priority_label": "medium",
-      "summary": {
-        "en": "An issue was discovered in 6.0 before 6.0.2, 5.2 before 5.2.11, and 4.2 before 4.2.28.\n`ASGIRequest` allows a remote attacker to cause a potential denial-of-service via a crafted request with multiple duplicate headers.\nEarlier, unsupported Django series (such as 5.0.x, 4.1.x, and 3.2.x) were not evaluated and may also be affected.\nDjango would like to thank Jiyong Yang for reporting this issue.",
-        "es": "Se descubri\u00f3 un problema en 6.0 anterior a 6.0.2, 5.2 anterior a 5.2.11 y 4.2 anterior a 4.2.28.\n'ASGIRequest' permite a un atacante remoto causar una posible denegaci\u00f3n de servicio mediante una solicitud manipulada con m\u00faltiples encabezados duplicados.\nSeries de Django anteriores y no compatibles (como 5.0.x, 4.1.x y 3.2.x) no fueron evaluadas y tambi\u00e9n podr\u00edan verse afectadas.\nDjango desea agradecer a Jiyong Yang por informar sobre este problema."
-      },
-      "references": [
-        "https://docs.djangoproject.com/en/dev/releases/security/",
-        "https://groups.google.com/g/django-announce",
-        "https://www.djangoproject.com/weblog/2026/feb/03/security-releases/"
-      ]
-    },
-    {
       "id": "pygoat:CVE-2026-1285:django:4.2",
       "cve": "CVE-2026-1285",
       "package": "django",
@@ -2298,6 +2274,30 @@
       "summary": {
         "en": "An issue was discovered in 6.0 before 6.0.2, 5.2 before 5.2.11, and 4.2 before 4.2.28.\n`django.utils.text.Truncator.chars()` and `Truncator.words()` methods (with `html=True`) and the `truncatechars_html` and `truncatewords_html` template filters allow a remote attacker to cause a potential denial-of-service via crafted inputs containing a large number of unmatched HTML end tags.\nEarlier, unsupported Django series (such as 5.0.x, 4.1.x, and 3.2.x) were not evaluated and may also be affected.\nDjango would like to thank Seokchan Yoon for reporting this issue.",
         "es": "Se descubri\u00f3 un problema en 6.0 anterior a 6.0.2, 5.2 anterior a 5.2.11 y 4.2 anterior a 4.2.28.\nLos m\u00e9todos 'django.utils.text.Truncator.chars()' y 'Truncator.words()' (con 'html=True') y los filtros de plantilla 'truncatechars_html' y 'truncatewords_html' permiten a un atacante remoto causar una potencial denegaci\u00f3n de servicio mediante entradas manipuladas que contienen un gran n\u00famero de etiquetas de cierre HTML no coincidentes.\nSeries de Django anteriores y sin soporte (como 5.0.x, 4.1.x y 3.2.x) no fueron evaluadas y tambi\u00e9n pueden verse afectadas.\nDjango desea agradecer a Seokchan Yoon por informar de este problema."
+      },
+      "references": [
+        "https://docs.djangoproject.com/en/dev/releases/security/",
+        "https://groups.google.com/g/django-announce",
+        "https://www.djangoproject.com/weblog/2026/feb/03/security-releases/"
+      ]
+    },
+    {
+      "id": "pygoat:CVE-2025-14550:django:4.2",
+      "cve": "CVE-2025-14550",
+      "package": "django",
+      "ecosystem": "PyPI",
+      "installed_version": "4.2",
+      "fixed_version": "4.2.28",
+      "app": "pygoat",
+      "cvss": 7.5,
+      "epss": 0.01055,
+      "in_kev": false,
+      "kev_date_added": null,
+      "priority_score": 20,
+      "priority_label": "medium",
+      "summary": {
+        "en": "An issue was discovered in 6.0 before 6.0.2, 5.2 before 5.2.11, and 4.2 before 4.2.28.\n`ASGIRequest` allows a remote attacker to cause a potential denial-of-service via a crafted request with multiple duplicate headers.\nEarlier, unsupported Django series (such as 5.0.x, 4.1.x, and 3.2.x) were not evaluated and may also be affected.\nDjango would like to thank Jiyong Yang for reporting this issue.",
+        "es": "Se descubri\u00f3 un problema en 6.0 anterior a 6.0.2, 5.2 anterior a 5.2.11 y 4.2 anterior a 4.2.28.\n'ASGIRequest' permite a un atacante remoto causar una posible denegaci\u00f3n de servicio mediante una solicitud manipulada con m\u00faltiples encabezados duplicados.\nSeries de Django anteriores y no compatibles (como 5.0.x, 4.1.x y 3.2.x) no fueron evaluadas y tambi\u00e9n podr\u00edan verse afectadas.\nDjango desea agradecer a Jiyong Yang por informar sobre este problema."
       },
       "references": [
         "https://docs.djangoproject.com/en/dev/releases/security/",
@@ -2595,7 +2595,7 @@
       "fixed_version": "2.8.0",
       "app": "pygoat",
       "cvss": null,
-      "epss": null,
+      "epss": 0.00292,
       "in_kev": false,
       "kev_date_added": null,
       "priority_score": 0,
@@ -2743,7 +2743,7 @@
       "fixed_version": "2.8.0",
       "app": "pygoat",
       "cvss": null,
-      "epss": null,
+      "epss": 0.00242,
       "in_kev": false,
       "kev_date_added": null,
       "priority_score": 0,
@@ -2995,6 +2995,30 @@
       ]
     },
     {
+      "id": "pygoat:CVE-2026-48587:django:4.2",
+      "cve": "CVE-2026-48587",
+      "package": "django",
+      "ecosystem": "PyPI",
+      "installed_version": "4.2",
+      "fixed_version": "5.2.15",
+      "app": "pygoat",
+      "cvss": 3.1,
+      "epss": 0.00429,
+      "in_kev": false,
+      "kev_date_added": null,
+      "priority_score": 8,
+      "priority_label": "low",
+      "summary": {
+        "en": "An issue was discovered in Django 5.2 before 5.2.15 and 6.0 before 6.0.6.\n`django.utils.cache.has_vary_header()` in Django does not strip leading or trailing whitespace from `Vary` response header values before comparison, which allows remote attackers to read cached responses via requests to URLs whose responses contain whitespace-padded Vary header values.\nEarlier, unsupported Django series (such as 5.0.x, 4.1.x, and 3.2.x) were not evaluated and may also be affected.\nDjango would like to thank Navid Rezazadeh for reporting this issue.",
+        "es": "Se descubri\u00f3 un problema en Django 5.2 anterior a 5.2.15 y 6.0 anterior a 6.0.6.\n'django.utils.cache.has_vary_header()' en Django no elimina los espacios en blanco iniciales o finales de los valores del encabezado de respuesta 'Vary' antes de la comparaci\u00f3n, lo que permite a atacantes remotos leer respuestas en cach\u00e9 a trav\u00e9s de solicitudes a URL cuyas respuestas contienen valores de encabezado Vary rellenados con espacios en blanco.\nSeries de Django anteriores y no compatibles (como 5.0.x, 4.1.x y 3.2.x) no fueron evaluadas y tambi\u00e9n podr\u00edan estar afectadas.\nDjango desea agradecer a Navid Rezazadeh por informar sobre este problema."
+      },
+      "references": [
+        "https://docs.djangoproject.com/en/dev/releases/security/",
+        "https://groups.google.com/g/django-announce",
+        "https://www.djangoproject.com/weblog/2026/jun/03/security-releases/"
+      ]
+    },
+    {
       "id": "pygoat:CVE-2026-48588:django:4.2",
       "cve": "CVE-2026-48588",
       "package": "django",
@@ -3042,30 +3066,6 @@
       ]
     },
     {
-      "id": "pygoat:CVE-2026-48587:django:4.2",
-      "cve": "CVE-2026-48587",
-      "package": "django",
-      "ecosystem": "PyPI",
-      "installed_version": "4.2",
-      "fixed_version": "5.2.15",
-      "app": "pygoat",
-      "cvss": 3.1,
-      "epss": 0.00429,
-      "in_kev": false,
-      "kev_date_added": null,
-      "priority_score": 8,
-      "priority_label": "low",
-      "summary": {
-        "en": "An issue was discovered in Django 5.2 before 5.2.15 and 6.0 before 6.0.6.\n`django.utils.cache.has_vary_header()` in Django does not strip leading or trailing whitespace from `Vary` response header values before comparison, which allows remote attackers to read cached responses via requests to URLs whose responses contain whitespace-padded Vary header values.\nEarlier, unsupported Django series (such as 5.0.x, 4.1.x, and 3.2.x) were not evaluated and may also be affected.\nDjango would like to thank Navid Rezazadeh for reporting this issue.",
-        "es": "Se descubri\u00f3 un problema en Django 5.2 anterior a 5.2.15 y 6.0 anterior a 6.0.6.\n'django.utils.cache.has_vary_header()' en Django no elimina los espacios en blanco iniciales o finales de los valores del encabezado de respuesta 'Vary' antes de la comparaci\u00f3n, lo que permite a atacantes remotos leer respuestas en cach\u00e9 a trav\u00e9s de solicitudes a URL cuyas respuestas contienen valores de encabezado Vary rellenados con espacios en blanco.\nSeries de Django anteriores y no compatibles (como 5.0.x, 4.1.x y 3.2.x) no fueron evaluadas y tambi\u00e9n podr\u00edan estar afectadas.\nDjango desea agradecer a Navid Rezazadeh por informar sobre este problema."
-      },
-      "references": [
-        "https://docs.djangoproject.com/en/dev/releases/security/",
-        "https://groups.google.com/g/django-announce",
-        "https://www.djangoproject.com/weblog/2026/jun/03/security-releases/"
-      ]
-    },
-    {
       "id": "pygoat:CVE-2026-102267:pyjwt:2.4.0",
       "cve": "CVE-2026-102267",
       "package": "pyjwt",
@@ -3097,10 +3097,10 @@
       "fixed_version": "4.2.29",
       "app": "pygoat",
       "cvss": 3.7,
-      "epss": 0.00326,
+      "epss": 0.00338,
       "in_kev": false,
       "kev_date_added": null,
-      "priority_score": 9,
+      "priority_score": 10,
       "priority_label": "low",
       "summary": {
         "en": "An issue was discovered in 6.0 before 6.0.3, 5.2 before 5.2.12, and 4.2 before 4.2.29.\nRace condition in file-system storage and file-based cache backends in Django allows an attacker to cause file system objects to be created with incorrect permissions via concurrent requests, where one thread's temporary `umask` change affects other threads in multi-threaded environments.\nEarlier, unsupported Django series (such as 5.0.x, 4.1.x, and 3.2.x) were not evaluated and may also be affected.\nDjango would like to thank Tarek Nakkouch for reporting this issue.",
@@ -3729,10 +3729,10 @@
       "fixed_version": "3.4.0",
       "app": "nodejs-goof",
       "cvss": 6.1,
-      "epss": 0.87218,
+      "epss": 0.8682,
       "in_kev": false,
       "kev_date_added": null,
-      "priority_score": 81,
+      "priority_score": 80,
       "priority_label": "critical",
       "summary": {
         "en": "jQuery before 3.4.0, as used in Drupal, Backdrop CMS, and other products, mishandles jQuery.extend(true, {}, ...) because of Object.prototype pollution. If an unsanitized source object contained an enumerable __proto__ property, it could extend the native Object.prototype.",
@@ -7137,10 +7137,10 @@
       "fixed_version": "1.13.8",
       "app": "nodejs-goof",
       "cvss": 5.9,
-      "epss": 0.00986,
+      "epss": 0.01025,
       "in_kev": false,
       "kev_date_added": null,
-      "priority_score": 15,
+      "priority_score": 16,
       "priority_label": "low",
       "summary": {
         "en": "Underscore.js is a utility-belt library for JavaScript. Prior to 1.13.8, the _.flatten and _.isEqual functions use recursion without a depth limit. Under very specific conditions, detailed below, an attacker could exploit this in a Denial of Service (DoS) attack by triggering a stack overflow. Untrusted input must be used to create a recursive datastructure, for example using JSON.parse, with no enforced depth limit. The datastructure thus created must be passed to _.flatten or _.isEqual. In the case of _.flatten, the vulnerability can only be exploited if it is possible for a remote client to prepare a datastructure that consists of arrays at all levels AND if no finite depth limit is passed as the second argument to _.flatten. In the case of _.isEqual, the vulnerability can only be exploited if there exists a code path in which two distinct datastructures that were submitted by the same remote client are compared using _.isEqual. For example, if a client submits data that are stored in a database, and the same client can later submit another datastructure that is then compared to the data that were saved in the database previously, OR if a client submits a single request, but its data are parsed twice, creating two non-identical but equivalent datastructures that are then compared. Exceptions originating from the call to _.flatten or _.isEqual, as a result of a stack overflow, are not being caught. This vulnerability is fixed in 1.13.8.",
@@ -7443,7 +7443,7 @@
       "fixed_version": "2.4.12",
       "app": "nodejs-goof",
       "cvss": 9.1,
-      "epss": 0.00676,
+      "epss": 0.00709,
       "in_kev": false,
       "kev_date_added": null,
       "priority_score": 23,
@@ -8397,7 +8397,7 @@
       "fixed_version": "6.14.0",
       "app": "nodejs-goof",
       "cvss": 2.9,
-      "epss": 0.005,
+      "epss": 0.00512,
       "in_kev": false,
       "kev_date_added": null,
       "priority_score": 8,
@@ -9319,7 +9319,7 @@
       "fixed_version": "2.8.0",
       "app": "vulnbeat",
       "cvss": null,
-      "epss": null,
+      "epss": 0.00292,
       "in_kev": false,
       "kev_date_added": null,
       "priority_score": 0,
@@ -9342,7 +9342,7 @@
       "fixed_version": "2.8.0",
       "app": "vulnbeat",
       "cvss": null,
-      "epss": null,
+      "epss": 0.00242,
       "in_kev": false,
       "kev_date_added": null,
       "priority_score": 0,
@@ -9367,7 +9367,7 @@
       "fixed_version": "2.8.0",
       "app": "vulnbeat",
       "cvss": null,
-      "epss": null,
+      "epss": 0.00291,
       "in_kev": false,
       "kev_date_added": null,
       "priority_score": 0,
@@ -9517,6 +9517,12 @@
     },
     {
       "date": "2026-10-01",
+      "findings_total": 333,
+      "critical": 4,
+      "high": 3
+    },
+    {
+      "date": "2026-10-02",
       "findings_total": 333,
       "critical": 4,
       "high": 3

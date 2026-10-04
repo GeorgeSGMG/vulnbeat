@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-10-03T11:21:47.698538+00:00",
+  "generated_at": "2026-10-04T12:02:03.671608+00:00",
   "sources": {
     "kev": {
       "fetched": true,
@@ -427,6 +427,35 @@
       ]
     },
     {
+      "id": "pygoat:CVE-2023-36053:django:4.2",
+      "cve": "CVE-2023-36053",
+      "package": "django",
+      "ecosystem": "PyPI",
+      "installed_version": "4.2",
+      "fixed_version": "4.2.3",
+      "app": "pygoat",
+      "cvss": 7.5,
+      "epss": 0.02978,
+      "in_kev": false,
+      "kev_date_added": null,
+      "priority_score": 21,
+      "priority_label": "medium",
+      "summary": {
+        "en": "In Django 3.2 before 3.2.20, 4 before 4.1.10, and 4.2 before 4.2.3, EmailValidator and URLValidator are subject to a potential ReDoS (regular expression denial of service) attack via a very large number of domain name labels of emails and URLs."
+      },
+      "references": [
+        "https://docs.djangoproject.com/en/4.2/releases/security/",
+        "https://groups.google.com/forum/#%21forum/django-announce",
+        "https://lists.debian.org/debian-lts-announce/2023/07/msg00022.html",
+        "https://lists.fedoraproject.org/archives/list/package-announce%40lists.fedoraproject.org/message/NRDGTUN4LTI6HG4TWR3JYLSFVXPZT42A/",
+        "https://lists.fedoraproject.org/archives/list/package-announce%40lists.fedoraproject.org/message/XG5DYKPNDCEHJQ3TKPJQO7QGSR4FAYMS/",
+        "https://lists.fedoraproject.org/archives/list/package-announce%40lists.fedoraproject.org/message/ZQJOMNRMVPCN5WMIZ7YSX5LQ7IR2NY4D/",
+        "https://www.debian.org/security/2023/dsa-5465",
+        "https://www.djangoproject.com/weblog/2023/jul/03/security-releases/",
+        "https://lists.fedoraproject.org/archives/list/package-announce@lists.fedoraproject.org/message/ZQJOMNRMVPCN5WMIZ7YSX5LQ7IR2NY4D/"
+      ]
+    },
+    {
       "id": "pygoat:CVE-2026-21441:urllib3:1.26.9",
       "cve": "CVE-2026-21441",
       "package": "urllib3",
@@ -435,7 +464,7 @@
       "fixed_version": "2.6.3",
       "app": "pygoat",
       "cvss": 7.5,
-      "epss": 0.02965,
+      "epss": 0.02922,
       "in_kev": false,
       "kev_date_added": null,
       "priority_score": 21,
@@ -563,35 +592,6 @@
         "https://access.redhat.com/security/cve/CVE-2026-21441",
         "https://bugzilla.redhat.com/show_bug.cgi?id=2427726",
         "https://security.access.redhat.com/data/csaf/v2/vex/2026/cve-2026-21441.json"
-      ]
-    },
-    {
-      "id": "pygoat:CVE-2023-36053:django:4.2",
-      "cve": "CVE-2023-36053",
-      "package": "django",
-      "ecosystem": "PyPI",
-      "installed_version": "4.2",
-      "fixed_version": "4.2.3",
-      "app": "pygoat",
-      "cvss": 7.5,
-      "epss": 0.02978,
-      "in_kev": false,
-      "kev_date_added": null,
-      "priority_score": 21,
-      "priority_label": "medium",
-      "summary": {
-        "en": "In Django 3.2 before 3.2.20, 4 before 4.1.10, and 4.2 before 4.2.3, EmailValidator and URLValidator are subject to a potential ReDoS (regular expression denial of service) attack via a very large number of domain name labels of emails and URLs."
-      },
-      "references": [
-        "https://docs.djangoproject.com/en/4.2/releases/security/",
-        "https://groups.google.com/forum/#%21forum/django-announce",
-        "https://lists.debian.org/debian-lts-announce/2023/07/msg00022.html",
-        "https://lists.fedoraproject.org/archives/list/package-announce%40lists.fedoraproject.org/message/NRDGTUN4LTI6HG4TWR3JYLSFVXPZT42A/",
-        "https://lists.fedoraproject.org/archives/list/package-announce%40lists.fedoraproject.org/message/XG5DYKPNDCEHJQ3TKPJQO7QGSR4FAYMS/",
-        "https://lists.fedoraproject.org/archives/list/package-announce%40lists.fedoraproject.org/message/ZQJOMNRMVPCN5WMIZ7YSX5LQ7IR2NY4D/",
-        "https://www.debian.org/security/2023/dsa-5465",
-        "https://www.djangoproject.com/weblog/2023/jul/03/security-releases/",
-        "https://lists.fedoraproject.org/archives/list/package-announce@lists.fedoraproject.org/message/ZQJOMNRMVPCN5WMIZ7YSX5LQ7IR2NY4D/"
       ]
     },
     {
@@ -887,6 +887,37 @@
       ]
     },
     {
+      "id": "pygoat:CVE-2023-43804:urllib3:1.26.9",
+      "cve": "CVE-2023-43804",
+      "package": "urllib3",
+      "ecosystem": "PyPI",
+      "installed_version": "1.26.9",
+      "fixed_version": "1.26.17",
+      "app": "pygoat",
+      "cvss": 5.9,
+      "epss": 0.0136,
+      "in_kev": false,
+      "kev_date_added": null,
+      "priority_score": 16,
+      "priority_label": "low",
+      "summary": {
+        "en": "urllib3 is a user-friendly HTTP client library for Python. urllib3 doesn't treat the `Cookie` HTTP header special or provide any helpers for managing cookies over HTTP, that is the responsibility of the user. However, it is possible for a user to specify a `Cookie` header and unknowingly leak information via HTTP redirects to a different origin if that user doesn't disable redirects explicitly. This issue has been patched in urllib3 version 1.26.17 or 2.0.5.",
+        "es": "urllib3 es una librer\u00eda cliente HTTP f\u00e1cil de usar para Python. urllib3 no trata el encabezado HTTP \"Cookie\" de manera especial ni proporciona ayuda para administrar las cookies a trav\u00e9s de HTTP, eso es responsabilidad del usuario. Sin embargo, es posible que un usuario especifique un encabezado \"Cookie\" y, sin saberlo, filtre informaci\u00f3n a trav\u00e9s de redireccionamientos HTTP a un origen diferente si ese usuario no deshabilita los redireccionamientos expl\u00edcitamente. Este problema se solucion\u00f3 en urllib3 versi\u00f3n 1.26.17 o 2.0.5."
+      },
+      "references": [
+        "https://github.com/urllib3/urllib3/commit/01220354d389cd05474713f8c982d05c9b17aafb",
+        "https://github.com/urllib3/urllib3/commit/644124ecd0b6e417c527191f866daa05a5a2056d",
+        "https://github.com/urllib3/urllib3/security/advisories/GHSA-v845-jxx5-vc9f",
+        "https://lists.debian.org/debian-lts-announce/2023/10/msg00012.html",
+        "https://lists.fedoraproject.org/archives/list/package-announce@lists.fedoraproject.org/message/5F5CUBAN5XMEBVBZPHFITBLMJV5FIJJ5/",
+        "https://lists.fedoraproject.org/archives/list/package-announce@lists.fedoraproject.org/message/I3PR7C6RJ6JUBQKIJ644DMIJSUP36VDY/",
+        "https://lists.fedoraproject.org/archives/list/package-announce@lists.fedoraproject.org/message/NDAGZXYJ7H2G3SB47M453VQVNAWKAEJJ/",
+        "https://lists.debian.org/debian-lts-announce/2024/12/msg00020.html",
+        "https://security.netapp.com/advisory/ntap-20241213-0007/",
+        "https://www.vicarius.io/vsociety/posts/cve-2023-43804-urllib3-vulnerability-3"
+      ]
+    },
+    {
       "id": "pygoat:CVE-2024-27351:django:4.2",
       "cve": "CVE-2024-27351",
       "package": "django",
@@ -1076,37 +1107,6 @@
         "https://access.redhat.com/security/cve/CVE-2026-25673",
         "https://bugzilla.redhat.com/show_bug.cgi?id=2444115",
         "https://security.access.redhat.com/data/csaf/v2/vex/2026/cve-2026-25673.json"
-      ]
-    },
-    {
-      "id": "pygoat:CVE-2023-43804:urllib3:1.26.9",
-      "cve": "CVE-2023-43804",
-      "package": "urllib3",
-      "ecosystem": "PyPI",
-      "installed_version": "1.26.9",
-      "fixed_version": "1.26.17",
-      "app": "pygoat",
-      "cvss": 5.9,
-      "epss": 0.01207,
-      "in_kev": false,
-      "kev_date_added": null,
-      "priority_score": 16,
-      "priority_label": "low",
-      "summary": {
-        "en": "urllib3 is a user-friendly HTTP client library for Python. urllib3 doesn't treat the `Cookie` HTTP header special or provide any helpers for managing cookies over HTTP, that is the responsibility of the user. However, it is possible for a user to specify a `Cookie` header and unknowingly leak information via HTTP redirects to a different origin if that user doesn't disable redirects explicitly. This issue has been patched in urllib3 version 1.26.17 or 2.0.5.",
-        "es": "urllib3 es una librer\u00eda cliente HTTP f\u00e1cil de usar para Python. urllib3 no trata el encabezado HTTP \"Cookie\" de manera especial ni proporciona ayuda para administrar las cookies a trav\u00e9s de HTTP, eso es responsabilidad del usuario. Sin embargo, es posible que un usuario especifique un encabezado \"Cookie\" y, sin saberlo, filtre informaci\u00f3n a trav\u00e9s de redireccionamientos HTTP a un origen diferente si ese usuario no deshabilita los redireccionamientos expl\u00edcitamente. Este problema se solucion\u00f3 en urllib3 versi\u00f3n 1.26.17 o 2.0.5."
-      },
-      "references": [
-        "https://github.com/urllib3/urllib3/commit/01220354d389cd05474713f8c982d05c9b17aafb",
-        "https://github.com/urllib3/urllib3/commit/644124ecd0b6e417c527191f866daa05a5a2056d",
-        "https://github.com/urllib3/urllib3/security/advisories/GHSA-v845-jxx5-vc9f",
-        "https://lists.debian.org/debian-lts-announce/2023/10/msg00012.html",
-        "https://lists.fedoraproject.org/archives/list/package-announce@lists.fedoraproject.org/message/5F5CUBAN5XMEBVBZPHFITBLMJV5FIJJ5/",
-        "https://lists.fedoraproject.org/archives/list/package-announce@lists.fedoraproject.org/message/I3PR7C6RJ6JUBQKIJ644DMIJSUP36VDY/",
-        "https://lists.fedoraproject.org/archives/list/package-announce@lists.fedoraproject.org/message/NDAGZXYJ7H2G3SB47M453VQVNAWKAEJJ/",
-        "https://lists.debian.org/debian-lts-announce/2024/12/msg00020.html",
-        "https://security.netapp.com/advisory/ntap-20241213-0007/",
-        "https://www.vicarius.io/vsociety/posts/cve-2023-43804-urllib3-vulnerability-3"
       ]
     },
     {
@@ -1425,29 +1425,6 @@
       ]
     },
     {
-      "id": "pygoat:CVE-2025-66418:urllib3:1.26.9",
-      "cve": "CVE-2025-66418",
-      "package": "urllib3",
-      "ecosystem": "PyPI",
-      "installed_version": "1.26.9",
-      "fixed_version": "2.6.0",
-      "app": "pygoat",
-      "cvss": 7.5,
-      "epss": 0.00682,
-      "in_kev": false,
-      "kev_date_added": null,
-      "priority_score": 19,
-      "priority_label": "low",
-      "summary": {
-        "en": "urllib3 is a user-friendly HTTP client library for Python. Starting in version 1.24 and prior to 2.6.0, the number of links in the decompression chain was unbounded allowing a malicious server to insert a virtually unlimited number of compression steps leading to high CPU usage and massive memory allocation for the decompressed data. This vulnerability is fixed in 2.6.0.",
-        "es": "urllib3 es una biblioteca cliente HTTP f\u00e1cil de usar para Python. A partir de la versi\u00f3n 1.24 y en versiones anteriores a la 2.6.0, el n\u00famero de enlaces en la cadena de descompresi\u00f3n era ilimitado, lo que permit\u00eda a un servidor malicioso insertar un n\u00famero pr\u00e1cticamente ilimitado de pasos de compresi\u00f3n, lo que provocaba un alto uso de CPU y una asignaci\u00f3n masiva de memoria para los datos descomprimidos. Esta vulnerabilidad se corrigi\u00f3 en la versi\u00f3n 2.6.0."
-      },
-      "references": [
-        "https://github.com/urllib3/urllib3/commit/24d7b67eac89f94e11003424bcf0d8f7b72222a8",
-        "https://github.com/urllib3/urllib3/security/advisories/GHSA-gm62-xv2j-4w53"
-      ]
-    },
-    {
       "id": "pygoat:CVE-2025-66471:urllib3:1.26.9",
       "cve": "CVE-2025-66471",
       "package": "urllib3",
@@ -1468,6 +1445,29 @@
       "references": [
         "https://github.com/urllib3/urllib3/commit/c19571de34c47de3a766541b041637ba5f716ed7",
         "https://github.com/urllib3/urllib3/security/advisories/GHSA-2xpw-w6gg-jr37"
+      ]
+    },
+    {
+      "id": "pygoat:CVE-2025-66418:urllib3:1.26.9",
+      "cve": "CVE-2025-66418",
+      "package": "urllib3",
+      "ecosystem": "PyPI",
+      "installed_version": "1.26.9",
+      "fixed_version": "2.6.0",
+      "app": "pygoat",
+      "cvss": 7.5,
+      "epss": 0.00682,
+      "in_kev": false,
+      "kev_date_added": null,
+      "priority_score": 19,
+      "priority_label": "low",
+      "summary": {
+        "en": "urllib3 is a user-friendly HTTP client library for Python. Starting in version 1.24 and prior to 2.6.0, the number of links in the decompression chain was unbounded allowing a malicious server to insert a virtually unlimited number of compression steps leading to high CPU usage and massive memory allocation for the decompressed data. This vulnerability is fixed in 2.6.0.",
+        "es": "urllib3 es una biblioteca cliente HTTP f\u00e1cil de usar para Python. A partir de la versi\u00f3n 1.24 y en versiones anteriores a la 2.6.0, el n\u00famero de enlaces en la cadena de descompresi\u00f3n era ilimitado, lo que permit\u00eda a un servidor malicioso insertar un n\u00famero pr\u00e1cticamente ilimitado de pasos de compresi\u00f3n, lo que provocaba un alto uso de CPU y una asignaci\u00f3n masiva de memoria para los datos descomprimidos. Esta vulnerabilidad se corrigi\u00f3 en la versi\u00f3n 2.6.0."
+      },
+      "references": [
+        "https://github.com/urllib3/urllib3/commit/24d7b67eac89f94e11003424bcf0d8f7b72222a8",
+        "https://github.com/urllib3/urllib3/security/advisories/GHSA-gm62-xv2j-4w53"
       ]
     },
     {
@@ -1963,30 +1963,6 @@
       ]
     },
     {
-      "id": "pygoat:CVE-2025-14550:django:4.2",
-      "cve": "CVE-2025-14550",
-      "package": "django",
-      "ecosystem": "PyPI",
-      "installed_version": "4.2",
-      "fixed_version": "4.2.28",
-      "app": "pygoat",
-      "cvss": 7.5,
-      "epss": 0.01128,
-      "in_kev": false,
-      "kev_date_added": null,
-      "priority_score": 20,
-      "priority_label": "medium",
-      "summary": {
-        "en": "An issue was discovered in 6.0 before 6.0.2, 5.2 before 5.2.11, and 4.2 before 4.2.28.\n`ASGIRequest` allows a remote attacker to cause a potential denial-of-service via a crafted request with multiple duplicate headers.\nEarlier, unsupported Django series (such as 5.0.x, 4.1.x, and 3.2.x) were not evaluated and may also be affected.\nDjango would like to thank Jiyong Yang for reporting this issue.",
-        "es": "Se descubri\u00f3 un problema en 6.0 anterior a 6.0.2, 5.2 anterior a 5.2.11 y 4.2 anterior a 4.2.28.\n'ASGIRequest' permite a un atacante remoto causar una posible denegaci\u00f3n de servicio mediante una solicitud manipulada con m\u00faltiples encabezados duplicados.\nSeries de Django anteriores y no compatibles (como 5.0.x, 4.1.x y 3.2.x) no fueron evaluadas y tambi\u00e9n podr\u00edan verse afectadas.\nDjango desea agradecer a Jiyong Yang por informar sobre este problema."
-      },
-      "references": [
-        "https://docs.djangoproject.com/en/dev/releases/security/",
-        "https://groups.google.com/g/django-announce",
-        "https://www.djangoproject.com/weblog/2026/feb/03/security-releases/"
-      ]
-    },
-    {
       "id": "pygoat:CVE-2026-1285:django:4.2",
       "cve": "CVE-2026-1285",
       "package": "django",
@@ -2003,6 +1979,30 @@
       "summary": {
         "en": "An issue was discovered in 6.0 before 6.0.2, 5.2 before 5.2.11, and 4.2 before 4.2.28.\n`django.utils.text.Truncator.chars()` and `Truncator.words()` methods (with `html=True`) and the `truncatechars_html` and `truncatewords_html` template filters allow a remote attacker to cause a potential denial-of-service via crafted inputs containing a large number of unmatched HTML end tags.\nEarlier, unsupported Django series (such as 5.0.x, 4.1.x, and 3.2.x) were not evaluated and may also be affected.\nDjango would like to thank Seokchan Yoon for reporting this issue.",
         "es": "Se descubri\u00f3 un problema en 6.0 anterior a 6.0.2, 5.2 anterior a 5.2.11 y 4.2 anterior a 4.2.28.\nLos m\u00e9todos 'django.utils.text.Truncator.chars()' y 'Truncator.words()' (con 'html=True') y los filtros de plantilla 'truncatechars_html' y 'truncatewords_html' permiten a un atacante remoto causar una potencial denegaci\u00f3n de servicio mediante entradas manipuladas que contienen un gran n\u00famero de etiquetas de cierre HTML no coincidentes.\nSeries de Django anteriores y sin soporte (como 5.0.x, 4.1.x y 3.2.x) no fueron evaluadas y tambi\u00e9n pueden verse afectadas.\nDjango desea agradecer a Seokchan Yoon por informar de este problema."
+      },
+      "references": [
+        "https://docs.djangoproject.com/en/dev/releases/security/",
+        "https://groups.google.com/g/django-announce",
+        "https://www.djangoproject.com/weblog/2026/feb/03/security-releases/"
+      ]
+    },
+    {
+      "id": "pygoat:CVE-2025-14550:django:4.2",
+      "cve": "CVE-2025-14550",
+      "package": "django",
+      "ecosystem": "PyPI",
+      "installed_version": "4.2",
+      "fixed_version": "4.2.28",
+      "app": "pygoat",
+      "cvss": 7.5,
+      "epss": 0.01128,
+      "in_kev": false,
+      "kev_date_added": null,
+      "priority_score": 20,
+      "priority_label": "medium",
+      "summary": {
+        "en": "An issue was discovered in 6.0 before 6.0.2, 5.2 before 5.2.11, and 4.2 before 4.2.28.\n`ASGIRequest` allows a remote attacker to cause a potential denial-of-service via a crafted request with multiple duplicate headers.\nEarlier, unsupported Django series (such as 5.0.x, 4.1.x, and 3.2.x) were not evaluated and may also be affected.\nDjango would like to thank Jiyong Yang for reporting this issue.",
+        "es": "Se descubri\u00f3 un problema en 6.0 anterior a 6.0.2, 5.2 anterior a 5.2.11 y 4.2 anterior a 4.2.28.\n'ASGIRequest' permite a un atacante remoto causar una posible denegaci\u00f3n de servicio mediante una solicitud manipulada con m\u00faltiples encabezados duplicados.\nSeries de Django anteriores y no compatibles (como 5.0.x, 4.1.x y 3.2.x) no fueron evaluadas y tambi\u00e9n podr\u00edan verse afectadas.\nDjango desea agradecer a Jiyong Yang por informar sobre este problema."
       },
       "references": [
         "https://docs.djangoproject.com/en/dev/releases/security/",
@@ -2234,30 +2234,6 @@
       ]
     },
     {
-      "id": "pygoat:CVE-2026-59199:pillow:9.4.0",
-      "cve": "CVE-2026-59199",
-      "package": "pillow",
-      "ecosystem": "PyPI",
-      "installed_version": "9.4.0",
-      "fixed_version": "12.3.0",
-      "app": "pygoat",
-      "cvss": 7.5,
-      "epss": 0.00385,
-      "in_kev": false,
-      "kev_date_added": null,
-      "priority_score": 19,
-      "priority_label": "low",
-      "summary": {
-        "en": "Pillow is a Python imaging library. Prior to 12.3.0, Pillow public image coordinate APIs can trigger a native heap out-of-bounds write when given coordinates near the signed 32-bit integer limits in Image.paste(), Image.crop(), or Image.alpha_composite(). This issue is fixed in version 12.3.0."
-      },
-      "references": [
-        "https://github.com/python-pillow/Pillow/commit/ceefc348eb3c3844c7f9796ef2cc3a7dd5fbba7b",
-        "https://github.com/python-pillow/Pillow/pull/9703",
-        "https://github.com/python-pillow/Pillow/releases/tag/12.3.0",
-        "https://github.com/python-pillow/Pillow/security/advisories/GHSA-6r8x-57c9-28j4"
-      ]
-    },
-    {
       "id": "pygoat:CVE-2026-59200:pillow:9.4.0",
       "cve": "CVE-2026-59200",
       "package": "pillow",
@@ -2279,6 +2255,30 @@
         "https://github.com/python-pillow/Pillow/pull/9718",
         "https://github.com/python-pillow/Pillow/releases/tag/12.3.0",
         "https://github.com/python-pillow/Pillow/security/advisories/GHSA-jjj6-mw9f-p565"
+      ]
+    },
+    {
+      "id": "pygoat:CVE-2026-59199:pillow:9.4.0",
+      "cve": "CVE-2026-59199",
+      "package": "pillow",
+      "ecosystem": "PyPI",
+      "installed_version": "9.4.0",
+      "fixed_version": "12.3.0",
+      "app": "pygoat",
+      "cvss": 7.5,
+      "epss": 0.00385,
+      "in_kev": false,
+      "kev_date_added": null,
+      "priority_score": 19,
+      "priority_label": "low",
+      "summary": {
+        "en": "Pillow is a Python imaging library. Prior to 12.3.0, Pillow public image coordinate APIs can trigger a native heap out-of-bounds write when given coordinates near the signed 32-bit integer limits in Image.paste(), Image.crop(), or Image.alpha_composite(). This issue is fixed in version 12.3.0."
+      },
+      "references": [
+        "https://github.com/python-pillow/Pillow/commit/ceefc348eb3c3844c7f9796ef2cc3a7dd5fbba7b",
+        "https://github.com/python-pillow/Pillow/pull/9703",
+        "https://github.com/python-pillow/Pillow/releases/tag/12.3.0",
+        "https://github.com/python-pillow/Pillow/security/advisories/GHSA-6r8x-57c9-28j4"
       ]
     },
     {
@@ -2995,30 +2995,6 @@
       ]
     },
     {
-      "id": "pygoat:CVE-2026-8404:django:4.2",
-      "cve": "CVE-2026-8404",
-      "package": "django",
-      "ecosystem": "PyPI",
-      "installed_version": "4.2",
-      "fixed_version": "5.2.15",
-      "app": "pygoat",
-      "cvss": 3.1,
-      "epss": 0.00429,
-      "in_kev": false,
-      "kev_date_added": null,
-      "priority_score": 8,
-      "priority_label": "low",
-      "summary": {
-        "en": "An issue was discovered in Django 5.2 before 5.2.15 and 6.0 before 6.0.6.\n`django.middleware.cache.UpdateCacheMiddleware` in Django does not match `Cache-Control` response directives case-insensitively, which allows remote attackers to read responses that were incorrectly cached because their `Cache-Control` directives used uppercase or mixed-case values.\nEarlier, unsupported Django series (such as 5.0.x, 4.1.x, and 3.2.x) were not evaluated and may also be affected.\nDjango would like to thank Ahmed Badawe for reporting this issue.",
-        "es": "Se descubri\u00f3 un problema en Django 5.2 anterior a 5.2.15 y 6.0 anterior a 6.0.6.\n'django.middleware.cache.UpdateCacheMiddleware' en Django no compara las directivas de respuesta 'Cache-Control' sin distinguir entre may\u00fasculas y min\u00fasculas, lo que permite a atacantes remotos leer respuestas que fueron almacenadas en cach\u00e9 incorrectamente porque sus directivas 'Cache-Control' usaban valores en may\u00fasculas o con una combinaci\u00f3n de may\u00fasculas y min\u00fasculas.\nSeries de Django anteriores y no compatibles (como 5.0.x, 4.1.x y 3.2.x) no fueron evaluadas y tambi\u00e9n podr\u00edan estar afectadas.\nDjango desea agradecer a Ahmed Badawe por informar de este problema."
-      },
-      "references": [
-        "https://docs.djangoproject.com/en/dev/releases/security/",
-        "https://groups.google.com/g/django-announce",
-        "https://www.djangoproject.com/weblog/2026/jun/03/security-releases/"
-      ]
-    },
-    {
       "id": "pygoat:CVE-2026-48587:django:4.2",
       "cve": "CVE-2026-48587",
       "package": "django",
@@ -3063,6 +3039,30 @@
         "https://docs.djangoproject.com/en/dev/releases/security/",
         "https://groups.google.com/g/django-announce",
         "https://www.djangoproject.com/weblog/2026/jul/07/security-releases/"
+      ]
+    },
+    {
+      "id": "pygoat:CVE-2026-8404:django:4.2",
+      "cve": "CVE-2026-8404",
+      "package": "django",
+      "ecosystem": "PyPI",
+      "installed_version": "4.2",
+      "fixed_version": "5.2.15",
+      "app": "pygoat",
+      "cvss": 3.1,
+      "epss": 0.00429,
+      "in_kev": false,
+      "kev_date_added": null,
+      "priority_score": 8,
+      "priority_label": "low",
+      "summary": {
+        "en": "An issue was discovered in Django 5.2 before 5.2.15 and 6.0 before 6.0.6.\n`django.middleware.cache.UpdateCacheMiddleware` in Django does not match `Cache-Control` response directives case-insensitively, which allows remote attackers to read responses that were incorrectly cached because their `Cache-Control` directives used uppercase or mixed-case values.\nEarlier, unsupported Django series (such as 5.0.x, 4.1.x, and 3.2.x) were not evaluated and may also be affected.\nDjango would like to thank Ahmed Badawe for reporting this issue.",
+        "es": "Se descubri\u00f3 un problema en Django 5.2 anterior a 5.2.15 y 6.0 anterior a 6.0.6.\n'django.middleware.cache.UpdateCacheMiddleware' en Django no compara las directivas de respuesta 'Cache-Control' sin distinguir entre may\u00fasculas y min\u00fasculas, lo que permite a atacantes remotos leer respuestas que fueron almacenadas en cach\u00e9 incorrectamente porque sus directivas 'Cache-Control' usaban valores en may\u00fasculas o con una combinaci\u00f3n de may\u00fasculas y min\u00fasculas.\nSeries de Django anteriores y no compatibles (como 5.0.x, 4.1.x y 3.2.x) no fueron evaluadas y tambi\u00e9n podr\u00edan estar afectadas.\nDjango desea agradecer a Ahmed Badawe por informar de este problema."
+      },
+      "references": [
+        "https://docs.djangoproject.com/en/dev/releases/security/",
+        "https://groups.google.com/g/django-announce",
+        "https://www.djangoproject.com/weblog/2026/jun/03/security-releases/"
       ]
     },
     {
@@ -9578,6 +9578,12 @@
     },
     {
       "date": "2026-10-03",
+      "findings_total": 335,
+      "critical": 4,
+      "high": 3
+    },
+    {
+      "date": "2026-10-04",
       "findings_total": 335,
       "critical": 4,
       "high": 3

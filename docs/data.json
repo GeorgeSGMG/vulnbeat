@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-10-05T14:03:27.280497+00:00",
+  "generated_at": "2026-10-06T13:04:54.351727+00:00",
   "sources": {
     "kev": {
       "fetched": true,
@@ -7,11 +7,11 @@
     },
     "epss": {
       "fetched": true,
-      "entries": 275
+      "entries": 278
     },
     "nvd": {
       "fetched": true,
-      "entries": 276
+      "entries": 280
     }
   },
   "apps": [
@@ -836,6 +836,35 @@
       ]
     },
     {
+      "id": "pygoat:CVE-2023-43665:django:4.2",
+      "cve": "CVE-2023-43665",
+      "package": "django",
+      "ecosystem": "PyPI",
+      "installed_version": "4.2",
+      "fixed_version": "4.2.6",
+      "app": "pygoat",
+      "cvss": 7.5,
+      "epss": 0.01462,
+      "in_kev": false,
+      "kev_date_added": null,
+      "priority_score": 20,
+      "priority_label": "medium",
+      "summary": {
+        "en": "In Django 3.2 before 3.2.22, 4.1 before 4.1.12, and 4.2 before 4.2.6, the django.utils.text.Truncator chars() and words() methods (when used with html=True) are subject to a potential DoS (denial of service) attack via certain inputs with very long, potentially malformed HTML text. The chars() and words() methods are used to implement the truncatechars_html and truncatewords_html template filters, which are thus also vulnerable. NOTE: this issue exists because of an incomplete fix for CVE-2019-14232.",
+        "es": "En Django 3.2 anterior a 3.2.22, 4.1 anterior a 4.1.12 y 4.2 anterior a 4.2.6, los m\u00e9todos django.utils.text.Truncator chars() y palabras() (cuando se usan con html=True) est\u00e1n sujetos a un potencial Ataque DoS (denegaci\u00f3n de servicio) a trav\u00e9s de ciertas entradas con texto HTML muy largo y potencialmente mal formado. Los m\u00e9todos chars() y palabras() se utilizan para implementar los filtros de plantilla truncatechars_html y truncatewords_html, que por tanto tambi\u00e9n son vulnerables. NOTA: este problema existe debido a una soluci\u00f3n incompleta para CVE-2019-14232."
+      },
+      "references": [
+        "http://www.openwall.com/lists/oss-security/2024/03/04/1",
+        "https://docs.djangoproject.com/en/4.2/releases/security/",
+        "https://groups.google.com/forum/#%21forum/django-announce",
+        "https://lists.fedoraproject.org/archives/list/package-announce%40lists.fedoraproject.org/message/HJFRPUHDYJHBH3KYHSPGULQM4JN7BMSU/",
+        "https://lists.fedoraproject.org/archives/list/package-announce%40lists.fedoraproject.org/message/ZQJOMNRMVPCN5WMIZ7YSX5LQ7IR2NY4D/",
+        "https://security.netapp.com/advisory/ntap-20231221-0001/",
+        "https://www.djangoproject.com/weblog/2023/oct/04/security-releases/",
+        "https://lists.fedoraproject.org/archives/list/package-announce@lists.fedoraproject.org/message/ZQJOMNRMVPCN5WMIZ7YSX5LQ7IR2NY4D/"
+      ]
+    },
+    {
       "id": "pygoat:CVE-2023-25577:werkzeug:2.1.2",
       "cve": "CVE-2023-25577",
       "package": "werkzeug",
@@ -974,35 +1003,6 @@
         "https://groups.google.com/forum/#%21forum/django-announce",
         "https://www.djangoproject.com/weblog/2024/jul/09/security-releases/",
         "https://security.netapp.com/advisory/ntap-20240808-0005/"
-      ]
-    },
-    {
-      "id": "pygoat:CVE-2023-43665:django:4.2",
-      "cve": "CVE-2023-43665",
-      "package": "django",
-      "ecosystem": "PyPI",
-      "installed_version": "4.2",
-      "fixed_version": "4.2.6",
-      "app": "pygoat",
-      "cvss": 7.5,
-      "epss": 0.01236,
-      "in_kev": false,
-      "kev_date_added": null,
-      "priority_score": 20,
-      "priority_label": "medium",
-      "summary": {
-        "en": "In Django 3.2 before 3.2.22, 4.1 before 4.1.12, and 4.2 before 4.2.6, the django.utils.text.Truncator chars() and words() methods (when used with html=True) are subject to a potential DoS (denial of service) attack via certain inputs with very long, potentially malformed HTML text. The chars() and words() methods are used to implement the truncatechars_html and truncatewords_html template filters, which are thus also vulnerable. NOTE: this issue exists because of an incomplete fix for CVE-2019-14232.",
-        "es": "En Django 3.2 anterior a 3.2.22, 4.1 anterior a 4.1.12 y 4.2 anterior a 4.2.6, los m\u00e9todos django.utils.text.Truncator chars() y palabras() (cuando se usan con html=True) est\u00e1n sujetos a un potencial Ataque DoS (denegaci\u00f3n de servicio) a trav\u00e9s de ciertas entradas con texto HTML muy largo y potencialmente mal formado. Los m\u00e9todos chars() y palabras() se utilizan para implementar los filtros de plantilla truncatechars_html y truncatewords_html, que por tanto tambi\u00e9n son vulnerables. NOTA: este problema existe debido a una soluci\u00f3n incompleta para CVE-2019-14232."
-      },
-      "references": [
-        "http://www.openwall.com/lists/oss-security/2024/03/04/1",
-        "https://docs.djangoproject.com/en/4.2/releases/security/",
-        "https://groups.google.com/forum/#%21forum/django-announce",
-        "https://lists.fedoraproject.org/archives/list/package-announce%40lists.fedoraproject.org/message/HJFRPUHDYJHBH3KYHSPGULQM4JN7BMSU/",
-        "https://lists.fedoraproject.org/archives/list/package-announce%40lists.fedoraproject.org/message/ZQJOMNRMVPCN5WMIZ7YSX5LQ7IR2NY4D/",
-        "https://security.netapp.com/advisory/ntap-20231221-0001/",
-        "https://www.djangoproject.com/weblog/2023/oct/04/security-releases/",
-        "https://lists.fedoraproject.org/archives/list/package-announce@lists.fedoraproject.org/message/ZQJOMNRMVPCN5WMIZ7YSX5LQ7IR2NY4D/"
       ]
     },
     {
@@ -1963,30 +1963,6 @@
       ]
     },
     {
-      "id": "pygoat:CVE-2026-1285:django:4.2",
-      "cve": "CVE-2026-1285",
-      "package": "django",
-      "ecosystem": "PyPI",
-      "installed_version": "4.2",
-      "fixed_version": "4.2.28",
-      "app": "pygoat",
-      "cvss": 7.5,
-      "epss": 0.01128,
-      "in_kev": false,
-      "kev_date_added": null,
-      "priority_score": 20,
-      "priority_label": "medium",
-      "summary": {
-        "en": "An issue was discovered in 6.0 before 6.0.2, 5.2 before 5.2.11, and 4.2 before 4.2.28.\n`django.utils.text.Truncator.chars()` and `Truncator.words()` methods (with `html=True`) and the `truncatechars_html` and `truncatewords_html` template filters allow a remote attacker to cause a potential denial-of-service via crafted inputs containing a large number of unmatched HTML end tags.\nEarlier, unsupported Django series (such as 5.0.x, 4.1.x, and 3.2.x) were not evaluated and may also be affected.\nDjango would like to thank Seokchan Yoon for reporting this issue.",
-        "es": "Se descubri\u00f3 un problema en 6.0 anterior a 6.0.2, 5.2 anterior a 5.2.11 y 4.2 anterior a 4.2.28.\nLos m\u00e9todos 'django.utils.text.Truncator.chars()' y 'Truncator.words()' (con 'html=True') y los filtros de plantilla 'truncatechars_html' y 'truncatewords_html' permiten a un atacante remoto causar una potencial denegaci\u00f3n de servicio mediante entradas manipuladas que contienen un gran n\u00famero de etiquetas de cierre HTML no coincidentes.\nSeries de Django anteriores y sin soporte (como 5.0.x, 4.1.x y 3.2.x) no fueron evaluadas y tambi\u00e9n pueden verse afectadas.\nDjango desea agradecer a Seokchan Yoon por informar de este problema."
-      },
-      "references": [
-        "https://docs.djangoproject.com/en/dev/releases/security/",
-        "https://groups.google.com/g/django-announce",
-        "https://www.djangoproject.com/weblog/2026/feb/03/security-releases/"
-      ]
-    },
-    {
       "id": "pygoat:CVE-2025-14550:django:4.2",
       "cve": "CVE-2025-14550",
       "package": "django",
@@ -2003,6 +1979,30 @@
       "summary": {
         "en": "An issue was discovered in 6.0 before 6.0.2, 5.2 before 5.2.11, and 4.2 before 4.2.28.\n`ASGIRequest` allows a remote attacker to cause a potential denial-of-service via a crafted request with multiple duplicate headers.\nEarlier, unsupported Django series (such as 5.0.x, 4.1.x, and 3.2.x) were not evaluated and may also be affected.\nDjango would like to thank Jiyong Yang for reporting this issue.",
         "es": "Se descubri\u00f3 un problema en 6.0 anterior a 6.0.2, 5.2 anterior a 5.2.11 y 4.2 anterior a 4.2.28.\n'ASGIRequest' permite a un atacante remoto causar una posible denegaci\u00f3n de servicio mediante una solicitud manipulada con m\u00faltiples encabezados duplicados.\nSeries de Django anteriores y no compatibles (como 5.0.x, 4.1.x y 3.2.x) no fueron evaluadas y tambi\u00e9n podr\u00edan verse afectadas.\nDjango desea agradecer a Jiyong Yang por informar sobre este problema."
+      },
+      "references": [
+        "https://docs.djangoproject.com/en/dev/releases/security/",
+        "https://groups.google.com/g/django-announce",
+        "https://www.djangoproject.com/weblog/2026/feb/03/security-releases/"
+      ]
+    },
+    {
+      "id": "pygoat:CVE-2026-1285:django:4.2",
+      "cve": "CVE-2026-1285",
+      "package": "django",
+      "ecosystem": "PyPI",
+      "installed_version": "4.2",
+      "fixed_version": "4.2.28",
+      "app": "pygoat",
+      "cvss": 7.5,
+      "epss": 0.01128,
+      "in_kev": false,
+      "kev_date_added": null,
+      "priority_score": 20,
+      "priority_label": "medium",
+      "summary": {
+        "en": "An issue was discovered in 6.0 before 6.0.2, 5.2 before 5.2.11, and 4.2 before 4.2.28.\n`django.utils.text.Truncator.chars()` and `Truncator.words()` methods (with `html=True`) and the `truncatechars_html` and `truncatewords_html` template filters allow a remote attacker to cause a potential denial-of-service via crafted inputs containing a large number of unmatched HTML end tags.\nEarlier, unsupported Django series (such as 5.0.x, 4.1.x, and 3.2.x) were not evaluated and may also be affected.\nDjango would like to thank Seokchan Yoon for reporting this issue.",
+        "es": "Se descubri\u00f3 un problema en 6.0 anterior a 6.0.2, 5.2 anterior a 5.2.11 y 4.2 anterior a 4.2.28.\nLos m\u00e9todos 'django.utils.text.Truncator.chars()' y 'Truncator.words()' (con 'html=True') y los filtros de plantilla 'truncatechars_html' y 'truncatewords_html' permiten a un atacante remoto causar una potencial denegaci\u00f3n de servicio mediante entradas manipuladas que contienen un gran n\u00famero de etiquetas de cierre HTML no coincidentes.\nSeries de Django anteriores y sin soporte (como 5.0.x, 4.1.x y 3.2.x) no fueron evaluadas y tambi\u00e9n pueden verse afectadas.\nDjango desea agradecer a Seokchan Yoon por informar de este problema."
       },
       "references": [
         "https://docs.djangoproject.com/en/dev/releases/security/",
@@ -2234,30 +2234,6 @@
       ]
     },
     {
-      "id": "pygoat:CVE-2026-59200:pillow:9.4.0",
-      "cve": "CVE-2026-59200",
-      "package": "pillow",
-      "ecosystem": "PyPI",
-      "installed_version": "9.4.0",
-      "fixed_version": "12.3.0",
-      "app": "pygoat",
-      "cvss": 7.5,
-      "epss": 0.00385,
-      "in_kev": false,
-      "kev_date_added": null,
-      "priority_score": 19,
-      "priority_label": "low",
-      "summary": {
-        "en": "Pillow is a Python imaging library. From 5.1.0 until 12.3.0, PdfParser.PdfStream.decode() in PIL/PdfParser.py calls zlib.decompress() with bufsize set to the PDF stream Length field without bounding the decompressed output size, allowing a crafted FlateDecode PDF stream to exhaust memory from a small file. This issue is fixed in version 12.3.0."
-      },
-      "references": [
-        "https://github.com/python-pillow/Pillow/commit/f7a31ea75e460e108c37126da1f47812f21f6b09",
-        "https://github.com/python-pillow/Pillow/pull/9718",
-        "https://github.com/python-pillow/Pillow/releases/tag/12.3.0",
-        "https://github.com/python-pillow/Pillow/security/advisories/GHSA-jjj6-mw9f-p565"
-      ]
-    },
-    {
       "id": "pygoat:CVE-2026-59199:pillow:9.4.0",
       "cve": "CVE-2026-59199",
       "package": "pillow",
@@ -2279,6 +2255,30 @@
         "https://github.com/python-pillow/Pillow/pull/9703",
         "https://github.com/python-pillow/Pillow/releases/tag/12.3.0",
         "https://github.com/python-pillow/Pillow/security/advisories/GHSA-6r8x-57c9-28j4"
+      ]
+    },
+    {
+      "id": "pygoat:CVE-2026-59200:pillow:9.4.0",
+      "cve": "CVE-2026-59200",
+      "package": "pillow",
+      "ecosystem": "PyPI",
+      "installed_version": "9.4.0",
+      "fixed_version": "12.3.0",
+      "app": "pygoat",
+      "cvss": 7.5,
+      "epss": 0.00385,
+      "in_kev": false,
+      "kev_date_added": null,
+      "priority_score": 19,
+      "priority_label": "low",
+      "summary": {
+        "en": "Pillow is a Python imaging library. From 5.1.0 until 12.3.0, PdfParser.PdfStream.decode() in PIL/PdfParser.py calls zlib.decompress() with bufsize set to the PDF stream Length field without bounding the decompressed output size, allowing a crafted FlateDecode PDF stream to exhaust memory from a small file. This issue is fixed in version 12.3.0."
+      },
+      "references": [
+        "https://github.com/python-pillow/Pillow/commit/f7a31ea75e460e108c37126da1f47812f21f6b09",
+        "https://github.com/python-pillow/Pillow/pull/9718",
+        "https://github.com/python-pillow/Pillow/releases/tag/12.3.0",
+        "https://github.com/python-pillow/Pillow/security/advisories/GHSA-jjj6-mw9f-p565"
       ]
     },
     {
@@ -2708,6 +2708,30 @@
         "https://access.redhat.com/security/cve/CVE-2026-32597",
         "https://bugzilla.redhat.com/show_bug.cgi?id=2447194",
         "https://security.access.redhat.com/data/csaf/v2/vex/2026/cve-2026-32597.json"
+      ]
+    },
+    {
+      "id": "pygoat:CVE-2026-102598:werkzeug:2.1.2",
+      "cve": "CVE-2026-102598",
+      "package": "werkzeug",
+      "ecosystem": "PyPI",
+      "installed_version": "2.1.2",
+      "fixed_version": "3.1.9",
+      "app": "pygoat",
+      "cvss": null,
+      "epss": 0.00368,
+      "in_kev": false,
+      "kev_date_added": null,
+      "priority_score": 0,
+      "priority_label": "low",
+      "summary": {
+        "en": "Werkzeug is a comprehensive WSGI web application library. Prior to 3.1.9, the safe_join function used by send_from_directory can allow a NUL: special-device path because safe_join checks the Windows device name without first removing an empty NTFS ADS marker. The trigger is that an application runs on Windows with NTFS and serves a user-specified path ending in a special device name such as NUL:. The attack mechanism is that a requested path ends in a Windows special device name with an empty ADS marker. The impact is that the special device opens successfully and the file read hangs indefinitely. This issue is fixed in version 3.1.9."
+      },
+      "references": [
+        "https://github.com/pallets/werkzeug/commit/8d77320bcdf3a34941ec06dcf16b03c065cd21b6",
+        "https://github.com/pallets/werkzeug/pull/3309",
+        "https://github.com/pallets/werkzeug/releases/tag/3.1.9",
+        "https://github.com/pallets/werkzeug/security/advisories/GHSA-g6x2-hccm-hh4m"
       ]
     },
     {
@@ -3407,6 +3431,29 @@
         "https://docs.djangoproject.com/en/dev/releases/security/",
         "https://groups.google.com/g/django-announce",
         "https://www.djangoproject.com/weblog/2026/jun/03/security-releases/"
+      ]
+    },
+    {
+      "id": "pygoat:CVE-2026-102275:pyjwt:2.4.0",
+      "cve": "CVE-2026-102275",
+      "package": "pyjwt",
+      "ecosystem": "PyPI",
+      "installed_version": "2.4.0",
+      "fixed_version": "2.15.0",
+      "app": "pygoat",
+      "cvss": 6.5,
+      "epss": 0.00137,
+      "in_kev": false,
+      "kev_date_added": null,
+      "priority_score": 16,
+      "priority_label": "low",
+      "summary": {
+        "en": "PyJWT is a Python implementation of JSON Web Token standards. From 2.1.0 until 2.15.0, PyJWT OKPAlgorithm.from_jwk in  jwt/algorithms.py is affected because private-JWK import path does not compare the public key derived from d with x. This occurs when an OKP private JWK supplies non-corresponding x and d components. As a result, identity derived from x can differ from operations performed with d. Consequently, if an integration also accepts private key parameters from a proof header without rejecting them, an attacker may use a stolen sender-constrained token without the legitimate private key. This issue is fixed in version 2.15.0."
+      },
+      "references": [
+        "https://github.com/jpadilla/pyjwt/commit/3cd9ceec33ced359decbad75b413ad668ae6332c",
+        "https://github.com/jpadilla/pyjwt/releases/tag/2.15.0",
+        "https://github.com/jpadilla/pyjwt/security/advisories/GHSA-x33g-cr3x-6449"
       ]
     },
     {
@@ -8996,6 +9043,31 @@
       ]
     },
     {
+      "id": "nodejs-goof:CVE-2026-97058:sprintf-js:1.0.3",
+      "cve": "CVE-2026-97058",
+      "package": "sprintf-js",
+      "ecosystem": "npm",
+      "installed_version": "1.0.3",
+      "fixed_version": null,
+      "app": "nodejs-goof",
+      "cvss": 5.3,
+      "epss": 0.00366,
+      "in_kev": false,
+      "kev_date_added": null,
+      "priority_score": 14,
+      "priority_label": "low",
+      "summary": {
+        "en": "sprintf-js through 1.1.3 passes unbounded precision specifiers to toFixed, toExponential, and toPrecision methods without validation, causing uncaught RangeError exceptions. Attackers who control format strings can inject precision values exceeding ECMAScript limits to abort calling operations with minimal payload."
+      },
+      "references": [
+        "https://github.com/alexei/sprintf.js",
+        "https://github.com/alexei/sprintf.js/blob/3a0d8c26d291b5bd9f1974877ecc50739921d6f5/src/sprintf.js#L17",
+        "https://github.com/alexei/sprintf.js/blob/3a0d8c26d291b5bd9f1974877ecc50739921d6f5/src/sprintf.js#L84-L90",
+        "https://github.com/alexei/sprintf.js/issues/237",
+        "https://www.vulncheck.com/advisories/sprintf-js-through-1.1.3-denial-of-service-via-unbounded-precision"
+      ]
+    },
+    {
       "id": "nodejs-goof:CVE-2025-60542:typeorm:0.2.24",
       "cve": "CVE-2025-60542",
       "package": "typeorm",
@@ -9350,14 +9422,20 @@
       "installed_version": "0.4.7",
       "fixed_version": "0.6.1",
       "app": "nodejs-goof",
-      "cvss": null,
+      "cvss": 7.1,
       "epss": null,
       "in_kev": false,
       "kev_date_added": null,
-      "priority_score": 0,
+      "priority_score": 18,
       "priority_label": "low",
-      "summary": {},
-      "references": []
+      "summary": {
+        "en": "adm-zip is a JavaScript library for creating and extracting ZIP archives in Node.js. Prior to 0.6.1, adm-zip applies the Unix permission bits stored in a zip entry directly to the extracted file via `fs.chmodSync()` when `keepOriginalPermission=true` is passed to `extractAllTo()`/`extractEntryTo()` \u2014 and it never filters the setuid/setgid/sticky bits out of those bits. A zip crafted by an attacker can therefore produce an extracted binary with mode `04755`. When extraction runs as root (the default posture in Docker builds, CI runners, and privileged install steps \u2014 the exact environments where this flag is used), the resulting root-owned setuid file is executed later by a lesser-privileged user, turning the attacker's code into a root execution. Version 0.6.1 fixes the issue."
+      },
+      "references": [
+        "https://github.com/cthackers/adm-zip/commit/6a63c339b83c52915483efacda517660a7a7bf87",
+        "https://github.com/cthackers/adm-zip/releases/tag/v0.6.1",
+        "https://github.com/cthackers/adm-zip/security/advisories/GHSA-j5f4-cc29-5x44"
+      ]
     },
     {
       "id": "vulnbeat:CVE-2026-97689:urllib3:2.7.0",
@@ -9591,6 +9669,12 @@
     {
       "date": "2026-10-05",
       "findings_total": 335,
+      "critical": 4,
+      "high": 3
+    },
+    {
+      "date": "2026-10-06",
+      "findings_total": 338,
       "critical": 4,
       "high": 3
     }

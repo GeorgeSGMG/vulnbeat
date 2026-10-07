@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-10-06T13:04:54.351727+00:00",
+  "generated_at": "2026-10-07T12:58:44.963810+00:00",
   "sources": {
     "kev": {
       "fetched": true,
@@ -7,7 +7,7 @@
     },
     "epss": {
       "fetched": true,
-      "entries": 278
+      "entries": 279
     },
     "nvd": {
       "fetched": true,
@@ -165,7 +165,7 @@
       "fixed_version": "4.2.26",
       "app": "pygoat",
       "cvss": 9.1,
-      "epss": 0.19396,
+      "epss": 0.19257,
       "in_kev": false,
       "kev_date_added": null,
       "priority_score": 37,
@@ -693,7 +693,7 @@
       "fixed_version": "4.2.26",
       "app": "pygoat",
       "cvss": 7.5,
-      "epss": 0.01902,
+      "epss": 0.01909,
       "in_kev": false,
       "kev_date_added": null,
       "priority_score": 20,
@@ -9389,6 +9389,29 @@
       ]
     },
     {
+      "id": "nodejs-goof:CVE-2026-102282:adm-zip:0.4.7",
+      "cve": "CVE-2026-102282",
+      "package": "adm-zip",
+      "ecosystem": "npm",
+      "installed_version": "0.4.7",
+      "fixed_version": "0.6.1",
+      "app": "nodejs-goof",
+      "cvss": 7.1,
+      "epss": 0.00149,
+      "in_kev": false,
+      "kev_date_added": null,
+      "priority_score": 18,
+      "priority_label": "low",
+      "summary": {
+        "en": "adm-zip is a JavaScript library for creating and extracting ZIP archives in Node.js. Prior to 0.6.1, adm-zip applies the Unix permission bits stored in a zip entry directly to the extracted file via `fs.chmodSync()` when `keepOriginalPermission=true` is passed to `extractAllTo()`/`extractEntryTo()` \u2014 and it never filters the setuid/setgid/sticky bits out of those bits. A zip crafted by an attacker can therefore produce an extracted binary with mode `04755`. When extraction runs as root (the default posture in Docker builds, CI runners, and privileged install steps \u2014 the exact environments where this flag is used), the resulting root-owned setuid file is executed later by a lesser-privileged user, turning the attacker's code into a root execution. Version 0.6.1 fixes the issue."
+      },
+      "references": [
+        "https://github.com/cthackers/adm-zip/commit/6a63c339b83c52915483efacda517660a7a7bf87",
+        "https://github.com/cthackers/adm-zip/releases/tag/v0.6.1",
+        "https://github.com/cthackers/adm-zip/security/advisories/GHSA-j5f4-cc29-5x44"
+      ]
+    },
+    {
       "id": "nodejs-goof:CVE-2025-7339:on-headers:1.0.2",
       "cve": "CVE-2025-7339",
       "package": "on-headers",
@@ -9412,29 +9435,6 @@
         "https://github.com/jshttp/on-headers/commit/c6e384908c9c6127d18831d16ab0bd96e1231867",
         "https://github.com/jshttp/on-headers/issues/15",
         "https://github.com/jshttp/on-headers/security/advisories/GHSA-76c9-3jph-rj3q"
-      ]
-    },
-    {
-      "id": "nodejs-goof:CVE-2026-102282:adm-zip:0.4.7",
-      "cve": "CVE-2026-102282",
-      "package": "adm-zip",
-      "ecosystem": "npm",
-      "installed_version": "0.4.7",
-      "fixed_version": "0.6.1",
-      "app": "nodejs-goof",
-      "cvss": 7.1,
-      "epss": null,
-      "in_kev": false,
-      "kev_date_added": null,
-      "priority_score": 18,
-      "priority_label": "low",
-      "summary": {
-        "en": "adm-zip is a JavaScript library for creating and extracting ZIP archives in Node.js. Prior to 0.6.1, adm-zip applies the Unix permission bits stored in a zip entry directly to the extracted file via `fs.chmodSync()` when `keepOriginalPermission=true` is passed to `extractAllTo()`/`extractEntryTo()` \u2014 and it never filters the setuid/setgid/sticky bits out of those bits. A zip crafted by an attacker can therefore produce an extracted binary with mode `04755`. When extraction runs as root (the default posture in Docker builds, CI runners, and privileged install steps \u2014 the exact environments where this flag is used), the resulting root-owned setuid file is executed later by a lesser-privileged user, turning the attacker's code into a root execution. Version 0.6.1 fixes the issue."
-      },
-      "references": [
-        "https://github.com/cthackers/adm-zip/commit/6a63c339b83c52915483efacda517660a7a7bf87",
-        "https://github.com/cthackers/adm-zip/releases/tag/v0.6.1",
-        "https://github.com/cthackers/adm-zip/security/advisories/GHSA-j5f4-cc29-5x44"
       ]
     },
     {
@@ -9674,6 +9674,12 @@
     },
     {
       "date": "2026-10-06",
+      "findings_total": 338,
+      "critical": 4,
+      "high": 3
+    },
+    {
+      "date": "2026-10-07",
       "findings_total": 338,
       "critical": 4,
       "high": 3

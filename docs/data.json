@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-10-07T12:58:44.963810+00:00",
+  "generated_at": "2026-10-08T13:08:08.584926+00:00",
   "sources": {
     "kev": {
       "fetched": true,
@@ -1014,7 +1014,7 @@
       "fixed_version": "5.2.17",
       "app": "pygoat",
       "cvss": 8.8,
-      "epss": 0.01094,
+      "epss": 0.01134,
       "in_kev": false,
       "kev_date_added": null,
       "priority_score": 23,
@@ -1800,11 +1800,15 @@
       "priority_score": 14,
       "priority_label": "low",
       "summary": {
-        "en": "An issue was discovered in Django 5.2 before 5.2.17 and 6.0 before 6.0.8.\nGeoDjango's `django.contrib.gis.geos.GEOSGeometry` is subject to a potential denial-of-service when parsing deeply nested `GEOMETRYCOLLECTION` objects supplied as well-known text (WKT), well-known binary (WKB), or hex-encoded WKB, which triggers unbounded recursion and a segmentation fault in the underlying GEOS library. Spatial field lookups and the `django.contrib.gis.forms.GeometryField` form field are also affected.\nEarlier, unsupported Django series (such as 5.1.x, 5.0.x, and 4.2.x) were not evaluated and may also be affected.\nDjango would like to thank Andrew MacPherson and kimchunbok_ for reporting this issue."
+        "en": "An issue was discovered in Django 6.0 before 6.0.9 and 5.2 before 5.2.18.\nGeoDjango's `django.contrib.gis.geos.GEOSGeometry` is subject to a potential denial-of-service when parsing deeply nested `GEOMETRYCOLLECTION` objects supplied as well-known text (WKT), well-known binary (WKB), or hex-encoded WKB, which triggers unbounded recursion and a segmentation fault in the underlying GEOS library. Spatial field lookups and the `django.contrib.gis.forms.GeometryField` form field are also affected.\nEarlier, unsupported Django series (such as 5.1.x, 5.0.x, and 4.2.x) were not evaluated and may also be affected.\nDjango would like to thank Andrew MacPherson and kimchunbok_ for reporting this issue."
       },
       "references": [
         "https://docs.djangoproject.com/en/dev/releases/security/",
+        "https://github.com/django/django/commit/1eafa1a80f1363283f89208ba4499ed54e35f085",
+        "https://github.com/django/django/commit/4353dfb56f8ba3a6fccc4bdd7f2ef2fbee3aa638",
+        "https://github.com/django/django/commit/62ef9d40cf4ea75f16518436b44b8ab2515340df",
         "https://github.com/django/django/commit/6af5da31775417c610dbf9c3f1b5b8333d42daf6",
+        "https://github.com/django/django/commit/75d401a1491e04a907ed745c128836d51c982c0f",
         "https://github.com/django/django/commit/9e4a3f186b6b07b483bfd9195ea06734663fcd06",
         "https://github.com/django/django/commit/ba80833fa656dd09660b97c4429331067db1b080",
         "https://github.com/django/django/commit/d2e59b77fe18de318a8272c2a7bbc798d84d1d0d",
@@ -2320,7 +2324,8 @@
       "priority_score": 14,
       "priority_label": "low",
       "summary": {
-        "en": "Werkzeug is a comprehensive WSGI web application library. Prior to version 3.1.4, Werkzeug's safe_join function allows path segments with Windows device names. On Windows, there are special device names such as CON, AUX, etc that are implicitly present and readable in every directory. send_from_directory uses safe_join to safely serve files at user-specified paths under a directory. If the application is running on Windows, and the requested path ends with a special device name, the file will be opened successfully, but reading will hang indefinitely. This issue has been patched in version 3.1.4."
+        "en": "Werkzeug is a comprehensive WSGI web application library. Prior to version 3.1.4, Werkzeug's safe_join function allows path segments with Windows device names. On Windows, there are special device names such as CON, AUX, etc that are implicitly present and readable in every directory. send_from_directory uses safe_join to safely serve files at user-specified paths under a directory. If the application is running on Windows, and the requested path ends with a special device name, the file will be opened successfully, but reading will hang indefinitely. This issue has been patched in version 3.1.4.",
+        "es": "Werkzeug es una completa biblioteca de aplicaciones web WSGI. Antes de la versi\u00f3n 3.1.4, la funci\u00f3n safe_join de Werkzeug permite segmentos de ruta con nombres de dispositivos de Windows. En Windows, existen nombres de dispositivos especiales como CON, AUX, etc. que est\u00e1n impl\u00edcitamente presentes y son legibles en cada directorio. send_from_directory utiliza safe_join para servir archivos de forma segura en rutas especificadas por el usuario bajo un directorio. Si la aplicaci\u00f3n se est\u00e1 ejecutando en Windows, y la ruta solicitada termina con un nombre de dispositivo especial, el archivo se abrir\u00e1 correctamente, pero la lectura se colgar\u00e1 indefinidamente. Este problema ha sido parcheado en la versi\u00f3n 3.1.4."
       },
       "references": [
         "https://github.com/pallets/werkzeug/commit/4b833376a45c323a189cd11d2362bcffdb1c0c13",
@@ -3004,7 +3009,7 @@
       "fixed_version": "2.14.0",
       "app": "pygoat",
       "cvss": 7.4,
-      "epss": 0.00175,
+      "epss": 0.0018,
       "in_kev": false,
       "kev_date_added": null,
       "priority_score": 19,
@@ -3202,26 +3207,26 @@
       ]
     },
     {
-      "id": "pygoat:CVE-2026-102269:pyjwt:2.4.0",
-      "cve": "CVE-2026-102269",
+      "id": "pygoat:CVE-2026-102270:pyjwt:2.4.0",
+      "cve": "CVE-2026-102270",
       "package": "pyjwt",
       "ecosystem": "PyPI",
       "installed_version": "2.4.0",
       "fixed_version": "2.14.0",
       "app": "pygoat",
-      "cvss": 4.8,
-      "epss": 0.00198,
+      "cvss": 4.4,
+      "epss": 0.00212,
       "in_kev": false,
       "kev_date_added": null,
-      "priority_score": 12,
+      "priority_score": 11,
       "priority_label": "low",
       "summary": {
-        "en": "PyJWT is a Python implementation of JSON Web Token standards. Prior to 2.14.0, PyJWT signature segment is affected because signature segment decoding accepts characters outside the canonical Base64URL representation. This occurs when non-Base64URL characters are appended to a valid compact JWS signature segment. As a result, base64url_decode produces the same signature bytes for different serialized segments. Consequently, raw-token revocation checks can fail to recognize an equivalent modified token. This issue is fixed in version 2.14.0."
+        "en": "PyJWT is a Python implementation of JSON Web Token standards. Prior to 2.14.0, PyJWT is_pem_format is affected because lazy PEM regular expression backtracks extensively. This occurs when a certificate-like input contains repeated BEGIN markers without a matching END marker. As a result, is_pem_format performs unbounded backtracking while searching for a PEM end marker. Consequently, an attacker can cause intensive CPU consumption. This issue is fixed in version 2.14.0."
       },
       "references": [
-        "https://github.com/jpadilla/pyjwt/commit/e6f48401001609a8f99e71fcaf355fb895d508a8",
+        "https://github.com/jpadilla/pyjwt/commit/8b4e233a22206b34ec1186e912e75c0b2396ac07",
         "https://github.com/jpadilla/pyjwt/releases/tag/2.14.0",
-        "https://github.com/jpadilla/pyjwt/security/advisories/GHSA-hxm8-2xgr-2p9m"
+        "https://github.com/jpadilla/pyjwt/security/advisories/GHSA-jwrc-g2q2-pq5p"
       ]
     },
     {
@@ -3248,6 +3253,29 @@
       ]
     },
     {
+      "id": "pygoat:CVE-2026-102269:pyjwt:2.4.0",
+      "cve": "CVE-2026-102269",
+      "package": "pyjwt",
+      "ecosystem": "PyPI",
+      "installed_version": "2.4.0",
+      "fixed_version": "2.14.0",
+      "app": "pygoat",
+      "cvss": 4.8,
+      "epss": 0.00191,
+      "in_kev": false,
+      "kev_date_added": null,
+      "priority_score": 12,
+      "priority_label": "low",
+      "summary": {
+        "en": "PyJWT is a Python implementation of JSON Web Token standards. Prior to 2.14.0, PyJWT signature segment is affected because signature segment decoding accepts characters outside the canonical Base64URL representation. This occurs when non-Base64URL characters are appended to a valid compact JWS signature segment. As a result, base64url_decode produces the same signature bytes for different serialized segments. Consequently, raw-token revocation checks can fail to recognize an equivalent modified token. This issue is fixed in version 2.14.0."
+      },
+      "references": [
+        "https://github.com/jpadilla/pyjwt/commit/e6f48401001609a8f99e71fcaf355fb895d508a8",
+        "https://github.com/jpadilla/pyjwt/releases/tag/2.14.0",
+        "https://github.com/jpadilla/pyjwt/security/advisories/GHSA-hxm8-2xgr-2p9m"
+      ]
+    },
+    {
       "id": "pygoat:CVE-2026-42310:pillow:9.4.0",
       "cve": "CVE-2026-42310",
       "package": "pillow",
@@ -3270,29 +3298,6 @@
         "https://github.com/python-pillow/Pillow/pull/9519",
         "https://github.com/python-pillow/Pillow/releases/tag/12.2.0",
         "https://github.com/python-pillow/Pillow/security/advisories/GHSA-r73j-pqj5-w3x7"
-      ]
-    },
-    {
-      "id": "pygoat:CVE-2026-102270:pyjwt:2.4.0",
-      "cve": "CVE-2026-102270",
-      "package": "pyjwt",
-      "ecosystem": "PyPI",
-      "installed_version": "2.4.0",
-      "fixed_version": "2.14.0",
-      "app": "pygoat",
-      "cvss": 4.4,
-      "epss": 0.00192,
-      "in_kev": false,
-      "kev_date_added": null,
-      "priority_score": 11,
-      "priority_label": "low",
-      "summary": {
-        "en": "PyJWT is a Python implementation of JSON Web Token standards. Prior to 2.14.0, PyJWT is_pem_format is affected because lazy PEM regular expression backtracks extensively. This occurs when a certificate-like input contains repeated BEGIN markers without a matching END marker. As a result, is_pem_format performs unbounded backtracking while searching for a PEM end marker. Consequently, an attacker can cause intensive CPU consumption. This issue is fixed in version 2.14.0."
-      },
-      "references": [
-        "https://github.com/jpadilla/pyjwt/commit/8b4e233a22206b34ec1186e912e75c0b2396ac07",
-        "https://github.com/jpadilla/pyjwt/releases/tag/2.14.0",
-        "https://github.com/jpadilla/pyjwt/security/advisories/GHSA-jwrc-g2q2-pq5p"
       ]
     },
     {
@@ -3387,6 +3392,29 @@
       ]
     },
     {
+      "id": "pygoat:CVE-2026-102275:pyjwt:2.4.0",
+      "cve": "CVE-2026-102275",
+      "package": "pyjwt",
+      "ecosystem": "PyPI",
+      "installed_version": "2.4.0",
+      "fixed_version": "2.15.0",
+      "app": "pygoat",
+      "cvss": 6.5,
+      "epss": 0.00143,
+      "in_kev": false,
+      "kev_date_added": null,
+      "priority_score": 16,
+      "priority_label": "low",
+      "summary": {
+        "en": "PyJWT is a Python implementation of JSON Web Token standards. From 2.1.0 until 2.15.0, PyJWT OKPAlgorithm.from_jwk in  jwt/algorithms.py is affected because private-JWK import path does not compare the public key derived from d with x. This occurs when an OKP private JWK supplies non-corresponding x and d components. As a result, identity derived from x can differ from operations performed with d. Consequently, if an integration also accepts private key parameters from a proof header without rejecting them, an attacker may use a stolen sender-constrained token without the legitimate private key. This issue is fixed in version 2.15.0."
+      },
+      "references": [
+        "https://github.com/jpadilla/pyjwt/commit/3cd9ceec33ced359decbad75b413ad668ae6332c",
+        "https://github.com/jpadilla/pyjwt/releases/tag/2.15.0",
+        "https://github.com/jpadilla/pyjwt/security/advisories/GHSA-x33g-cr3x-6449"
+      ]
+    },
+    {
       "id": "pygoat:CVE-2026-42308:pillow:9.4.0",
       "cve": "CVE-2026-42308",
       "package": "pillow",
@@ -3431,29 +3459,6 @@
         "https://docs.djangoproject.com/en/dev/releases/security/",
         "https://groups.google.com/g/django-announce",
         "https://www.djangoproject.com/weblog/2026/jun/03/security-releases/"
-      ]
-    },
-    {
-      "id": "pygoat:CVE-2026-102275:pyjwt:2.4.0",
-      "cve": "CVE-2026-102275",
-      "package": "pyjwt",
-      "ecosystem": "PyPI",
-      "installed_version": "2.4.0",
-      "fixed_version": "2.15.0",
-      "app": "pygoat",
-      "cvss": 6.5,
-      "epss": 0.00137,
-      "in_kev": false,
-      "kev_date_added": null,
-      "priority_score": 16,
-      "priority_label": "low",
-      "summary": {
-        "en": "PyJWT is a Python implementation of JSON Web Token standards. From 2.1.0 until 2.15.0, PyJWT OKPAlgorithm.from_jwk in  jwt/algorithms.py is affected because private-JWK import path does not compare the public key derived from d with x. This occurs when an OKP private JWK supplies non-corresponding x and d components. As a result, identity derived from x can differ from operations performed with d. Consequently, if an integration also accepts private key parameters from a proof header without rejecting them, an attacker may use a stolen sender-constrained token without the legitimate private key. This issue is fixed in version 2.15.0."
-      },
-      "references": [
-        "https://github.com/jpadilla/pyjwt/commit/3cd9ceec33ced359decbad75b413ad668ae6332c",
-        "https://github.com/jpadilla/pyjwt/releases/tag/2.15.0",
-        "https://github.com/jpadilla/pyjwt/security/advisories/GHSA-x33g-cr3x-6449"
       ]
     },
     {
@@ -6182,6 +6187,34 @@
       ]
     },
     {
+      "id": "nodejs-goof:CVE-2023-26136:tough-cookie:2.4.3",
+      "cve": "CVE-2023-26136",
+      "package": "tough-cookie",
+      "ecosystem": "npm",
+      "installed_version": "2.4.3",
+      "fixed_version": "4.1.3",
+      "app": "nodejs-goof",
+      "cvss": 6.5,
+      "epss": 0.02627,
+      "in_kev": false,
+      "kev_date_added": null,
+      "priority_score": 18,
+      "priority_label": "low",
+      "summary": {
+        "en": "Versions of the package tough-cookie before 4.1.3 are vulnerable to Prototype Pollution due to improper handling of Cookies when using CookieJar in rejectPublicSuffixes=false mode. This issue arises from the manner in which the objects are initialized."
+      },
+      "references": [
+        "https://github.com/salesforce/tough-cookie/commit/12d474791bb856004e858fdb1c47b7608d09cf6e",
+        "https://github.com/salesforce/tough-cookie/issues/282",
+        "https://github.com/salesforce/tough-cookie/releases/tag/v4.1.3",
+        "https://lists.debian.org/debian-lts-announce/2023/07/msg00010.html",
+        "https://lists.fedoraproject.org/archives/list/package-announce@lists.fedoraproject.org/message/3HUE6ZR5SL73KHL7XUPAOEL6SB7HUDT2/",
+        "https://lists.fedoraproject.org/archives/list/package-announce@lists.fedoraproject.org/message/6PVVPNSAGSDS63HQ74PJ7MZ3MU5IYNVZ/",
+        "https://security.netapp.com/advisory/ntap-20240621-0006/",
+        "https://security.snyk.io/vuln/SNYK-JS-TOUGHCOOKIE-5672873"
+      ]
+    },
+    {
       "id": "nodejs-goof:CVE-2019-17426:mongoose:4.2.4",
       "cve": "CVE-2019-17426",
       "package": "mongoose",
@@ -6202,34 +6235,6 @@
       "references": [
         "https://github.com/Automattic/mongoose/commit/f3eca5b94d822225c04e96cbeed9f095afb3c31c",
         "https://github.com/Automattic/mongoose/issues/8222"
-      ]
-    },
-    {
-      "id": "nodejs-goof:CVE-2023-26136:tough-cookie:2.4.3",
-      "cve": "CVE-2023-26136",
-      "package": "tough-cookie",
-      "ecosystem": "npm",
-      "installed_version": "2.4.3",
-      "fixed_version": "4.1.3",
-      "app": "nodejs-goof",
-      "cvss": 6.5,
-      "epss": 0.02542,
-      "in_kev": false,
-      "kev_date_added": null,
-      "priority_score": 18,
-      "priority_label": "low",
-      "summary": {
-        "en": "Versions of the package tough-cookie before 4.1.3 are vulnerable to Prototype Pollution due to improper handling of Cookies when using CookieJar in rejectPublicSuffixes=false mode. This issue arises from the manner in which the objects are initialized."
-      },
-      "references": [
-        "https://github.com/salesforce/tough-cookie/commit/12d474791bb856004e858fdb1c47b7608d09cf6e",
-        "https://github.com/salesforce/tough-cookie/issues/282",
-        "https://github.com/salesforce/tough-cookie/releases/tag/v4.1.3",
-        "https://lists.debian.org/debian-lts-announce/2023/07/msg00010.html",
-        "https://lists.fedoraproject.org/archives/list/package-announce@lists.fedoraproject.org/message/3HUE6ZR5SL73KHL7XUPAOEL6SB7HUDT2/",
-        "https://lists.fedoraproject.org/archives/list/package-announce@lists.fedoraproject.org/message/6PVVPNSAGSDS63HQ74PJ7MZ3MU5IYNVZ/",
-        "https://security.netapp.com/advisory/ntap-20240621-0006/",
-        "https://security.snyk.io/vuln/SNYK-JS-TOUGHCOOKIE-5672873"
       ]
     },
     {
@@ -6830,7 +6835,7 @@
       "fixed_version": "0.6.1",
       "app": "nodejs-goof",
       "cvss": 7.5,
-      "epss": 0.01411,
+      "epss": 0.01389,
       "in_kev": false,
       "kev_date_added": null,
       "priority_score": 20,
@@ -6852,7 +6857,7 @@
       "fixed_version": "0.6.1",
       "app": "nodejs-goof",
       "cvss": 7.5,
-      "epss": 0.01411,
+      "epss": 0.01389,
       "in_kev": false,
       "kev_date_added": null,
       "priority_score": 20,
@@ -6874,7 +6879,7 @@
       "fixed_version": "0.6.1",
       "app": "nodejs-goof",
       "cvss": 7.5,
-      "epss": 0.01411,
+      "epss": 0.01389,
       "in_kev": false,
       "kev_date_added": null,
       "priority_score": 20,
@@ -7160,7 +7165,7 @@
       "fixed_version": "0.3.6",
       "app": "nodejs-goof",
       "cvss": 6.1,
-      "epss": 0.01463,
+      "epss": 0.0144,
       "in_kev": false,
       "kev_date_added": null,
       "priority_score": 16,
@@ -8587,6 +8592,30 @@
       ]
     },
     {
+      "id": "nodejs-goof:CVE-2026-102278:brace-expansion:1.1.11",
+      "cve": "CVE-2026-102278",
+      "package": "brace-expansion",
+      "ecosystem": "npm",
+      "installed_version": "1.1.11",
+      "fixed_version": "1.1.20",
+      "app": "nodejs-goof",
+      "cvss": 7.5,
+      "epss": 0.0035,
+      "in_kev": false,
+      "kev_date_added": null,
+      "priority_score": 19,
+      "priority_label": "low",
+      "summary": {
+        "en": "The brace-expansion library generates arbitrary strings containing a common prefix and suffix. Prior to 1.1.20, 2.1.6, 3.0.8, and 5.0.11, deeply nested brace groups cause expand_() to recurse once per nesting level at comma-member and single-set expansion sites, exhausting the native stack before output limits can apply and potentially terminating the Node.js process. expand_ performs uncontrolled recursion for nested brace alternatives and single-part sets. deeply nested brace groups supplied as an untrusted pattern. expand_ is affected. expand is affected. Comma members is affected. Single set is affected. native stack exhaustion during nested sub-expansion. process-terminating denial of service. This issue is fixed in versions 1.1.20, 2.1.6, 3.0.8, and 5.0.11."
+      },
+      "references": [
+        "https://github.com/juliangruber/brace-expansion/commit/1efee7c397c191da6287a78ec19512476a966a7b",
+        "https://github.com/juliangruber/brace-expansion/commit/935d78f32f335b2ff76578e5c5e877d31ae9888c",
+        "https://github.com/juliangruber/brace-expansion/commit/de84f144e9816f30e25fc8179e2e1249ab6df0db",
+        "https://github.com/juliangruber/brace-expansion/security/advisories/GHSA-qhr7-859c-m2p7"
+      ]
+    },
+    {
       "id": "nodejs-goof:CVE-2026-102276:brace-expansion:1.1.11",
       "cve": "CVE-2026-102276",
       "package": "brace-expansion",
@@ -8609,30 +8638,6 @@
         "https://github.com/juliangruber/brace-expansion/commit/5171e681c0922b7ae8bfaf9a331e309107be6edc",
         "https://github.com/juliangruber/brace-expansion/commit/6735c94873ca570bcdd6a0690033bdd3126379d3",
         "https://github.com/juliangruber/brace-expansion/security/advisories/GHSA-6j4f-fj2g-mc7p"
-      ]
-    },
-    {
-      "id": "nodejs-goof:CVE-2026-102278:brace-expansion:1.1.11",
-      "cve": "CVE-2026-102278",
-      "package": "brace-expansion",
-      "ecosystem": "npm",
-      "installed_version": "1.1.11",
-      "fixed_version": "1.1.20",
-      "app": "nodejs-goof",
-      "cvss": 7.5,
-      "epss": 0.0035,
-      "in_kev": false,
-      "kev_date_added": null,
-      "priority_score": 19,
-      "priority_label": "low",
-      "summary": {
-        "en": "The brace-expansion library generates arbitrary strings containing a common prefix and suffix. Prior to 1.1.20, 2.1.6, 3.0.8, and 5.0.11, deeply nested brace groups cause expand_() to recurse once per nesting level at comma-member and single-set expansion sites, exhausting the native stack before output limits can apply and potentially terminating the Node.js process. expand_ performs uncontrolled recursion for nested brace alternatives and single-part sets. deeply nested brace groups supplied as an untrusted pattern. expand_ is affected. expand is affected. Comma members is affected. Single set is affected. native stack exhaustion during nested sub-expansion. process-terminating denial of service. This issue is fixed in versions 1.1.20, 2.1.6, 3.0.8, and 5.0.11."
-      },
-      "references": [
-        "https://github.com/juliangruber/brace-expansion/commit/1efee7c397c191da6287a78ec19512476a966a7b",
-        "https://github.com/juliangruber/brace-expansion/commit/935d78f32f335b2ff76578e5c5e877d31ae9888c",
-        "https://github.com/juliangruber/brace-expansion/commit/de84f144e9816f30e25fc8179e2e1249ab6df0db",
-        "https://github.com/juliangruber/brace-expansion/security/advisories/GHSA-qhr7-859c-m2p7"
       ]
     },
     {
@@ -8983,7 +8988,8 @@
       "priority_score": 14,
       "priority_label": "low",
       "summary": {
-        "en": "js-yaml is a JavaScript YAML parser and dumper. In js-yaml before 4.1.1 and 3.14.2, it's possible for an attacker to modify the prototype of the result of a parsed yaml document via prototype pollution (`__proto__`). All users who parse untrusted yaml documents may be impacted. The problem is patched in js-yaml 4.1.1 and 3.14.2. Users can protect against this kind of attack on the server by using `node --disable-proto=delete` or `deno` (in Deno, pollution protection is on by default)."
+        "en": "js-yaml is a JavaScript YAML parser and dumper. In js-yaml before 4.1.1 and 3.14.2, it's possible for an attacker to modify the prototype of the result of a parsed yaml document via prototype pollution (`__proto__`). All users who parse untrusted yaml documents may be impacted. The problem is patched in js-yaml 4.1.1 and 3.14.2. Users can protect against this kind of attack on the server by using `node --disable-proto=delete` or `deno` (in Deno, pollution protection is on by default).",
+        "es": "js-yaml es un analizador y volcador YAML de JavaScript. En js-yaml antes de 4.1.1 y 3.14.2, es posible para un atacante modificar el prototipo del resultado de un documento YAML analizado a trav\u00e9s de la contaminaci\u00f3n de prototipos ('__proto__'). Todos los usuarios que analizan documentos YAML no confiables pueden verse afectados. El problema est\u00e1 parcheado en js-yaml 4.1.1 y 3.14.2. Los usuarios pueden protegerse contra este tipo de ataque en el servidor usando 'node --disable-proto=delete' o 'deno' (en Deno, la protecci\u00f3n contra la contaminaci\u00f3n est\u00e1 activada por defecto)."
       },
       "references": [
         "https://github.com/nodeca/js-yaml/commit/383665ff4248ec2192d1274e934462bb30426879",
@@ -9420,7 +9426,7 @@
       "fixed_version": "1.1.0",
       "app": "nodejs-goof",
       "cvss": 3.4,
-      "epss": 0.00182,
+      "epss": 0.00193,
       "in_kev": false,
       "kev_date_added": null,
       "priority_score": 9,
@@ -9680,6 +9686,12 @@
     },
     {
       "date": "2026-10-07",
+      "findings_total": 338,
+      "critical": 4,
+      "high": 3
+    },
+    {
+      "date": "2026-10-08",
       "findings_total": 338,
       "critical": 4,
       "high": 3

@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-10-08T13:08:08.584926+00:00",
+  "generated_at": "2026-10-09T12:52:56.652699+00:00",
   "sources": {
     "kev": {
       "fetched": true,
@@ -7,11 +7,11 @@
     },
     "epss": {
       "fetched": true,
-      "entries": 279
+      "entries": 282
     },
     "nvd": {
       "fetched": true,
-      "entries": 280
+      "entries": 283
     }
   },
   "apps": [
@@ -2238,6 +2238,53 @@
       ]
     },
     {
+      "id": "pygoat:CVE-2026-26007:cryptography:39.0.1",
+      "cve": "CVE-2026-26007",
+      "package": "cryptography",
+      "ecosystem": "PyPI",
+      "installed_version": "39.0.1",
+      "fixed_version": "46.0.5",
+      "app": "pygoat",
+      "cvss": 6.5,
+      "epss": 0.00389,
+      "in_kev": false,
+      "kev_date_added": null,
+      "priority_score": 17,
+      "priority_label": "low",
+      "summary": {
+        "en": "cryptography is a package designed to expose cryptographic primitives and recipes to Python developers. Prior to 46.0.5, the public_key_from_numbers (or EllipticCurvePublicNumbers.public_key()), EllipticCurvePublicNumbers.public_key(), load_der_public_key() and load_pem_public_key() functions do not verify that the point belongs to the expected prime-order subgroup of the curve. This missing validation allows an attacker to provide a public key point P from a small-order subgroup. This can lead to security issues in various situations, such as the most commonly used signature verification (ECDSA) and shared key negotiation (ECDH). When the victim computes the shared secret as S = [victim_private_key]P via ECDH, this leaks information about victim_private_key mod (small_subgroup_order). For curves with cofactor > 1, this reveals the least significant bits of the private key. When these weak public keys are used in ECDSA , it's easy to forge signatures on the small subgroup. Only SECT curves are impacted by this. This vulnerability is fixed in 46.0.5.",
+        "es": "Criptograf\u00eda es un paquete dise\u00f1ado para exponer primitivas criptogr\u00e1ficas y recetas a los desarrolladores de Python. Antes de la versi\u00f3n 46.0.5, las funciones public_key_from_numbers (o EllipticCurvePublicNumbers.public_key()), EllipticCurvePublicNumbers.public_key(), load_der_public_key() y load_pem_public_key() no verifican que el punto pertenezca al subgrupo de orden primo esperado de la curva. Esta validaci\u00f3n faltante permite a un atacante proporcionar un punto P de clave p\u00fablica de un subgrupo de orden peque\u00f1o. Esto puede llevar a problemas de seguridad en varias situaciones, como la verificaci\u00f3n de firma (ECDSA) y la negociaci\u00f3n de clave compartida (ECDH) m\u00e1s com\u00fanmente utilizadas. Cuando la v\u00edctima calcula el secreto compartido como S = [victim_private_key]P a trav\u00e9s de ECDH, esto filtra informaci\u00f3n sobre victim_private_key mod (orden_subgrupo_peque\u00f1o). Para curvas con cofactor &gt; 1, esto revela los bits menos significativos de la clave privada. Cuando estas claves p\u00fablicas d\u00e9biles se utilizan en ECDSA, es f\u00e1cil falsificar firmas en el subgrupo peque\u00f1o. Solo las curvas SECT se ven afectadas por esto. Esta vulnerabilidad est\u00e1 corregida en la versi\u00f3n 46.0.5."
+      },
+      "references": [
+        "https://github.com/pyca/cryptography/commit/0eebb9dbb6343d9bc1d91e5a2482ed4e054a6d8c",
+        "https://github.com/pyca/cryptography/security/advisories/GHSA-r6ph-v2qm-q3c2",
+        "http://www.openwall.com/lists/oss-security/2026/02/10/4",
+        "https://access.redhat.com/errata/RHSA-2026:10184",
+        "https://access.redhat.com/errata/RHSA-2026:12176",
+        "https://access.redhat.com/errata/RHSA-2026:13512",
+        "https://access.redhat.com/errata/RHSA-2026:13545",
+        "https://access.redhat.com/errata/RHSA-2026:13553",
+        "https://access.redhat.com/errata/RHSA-2026:13672",
+        "https://access.redhat.com/errata/RHSA-2026:19355",
+        "https://access.redhat.com/errata/RHSA-2026:21431",
+        "https://access.redhat.com/errata/RHSA-2026:21517",
+        "https://access.redhat.com/errata/RHSA-2026:22330",
+        "https://access.redhat.com/errata/RHSA-2026:22993",
+        "https://access.redhat.com/errata/RHSA-2026:2694",
+        "https://access.redhat.com/errata/RHSA-2026:5168",
+        "https://access.redhat.com/errata/RHSA-2026:5665",
+        "https://access.redhat.com/errata/RHSA-2026:6308",
+        "https://access.redhat.com/errata/RHSA-2026:6309",
+        "https://access.redhat.com/errata/RHSA-2026:6497",
+        "https://access.redhat.com/errata/RHSA-2026:6567",
+        "https://access.redhat.com/errata/RHSA-2026:6568",
+        "https://access.redhat.com/errata/RHSA-2026:7295",
+        "https://access.redhat.com/security/cve/CVE-2026-26007",
+        "https://bugzilla.redhat.com/show_bug.cgi?id=2438762",
+        "https://security.access.redhat.com/data/csaf/v2/vex/2026/cve-2026-26007.json"
+      ]
+    },
+    {
       "id": "pygoat:CVE-2026-59199:pillow:9.4.0",
       "cve": "CVE-2026-59199",
       "package": "pillow",
@@ -2355,53 +2402,6 @@
         "https://groups.google.com/g/django-announce",
         "https://www.djangoproject.com/weblog/2025/oct/01/security-releases/",
         "http://www.openwall.com/lists/oss-security/2025/10/01/3"
-      ]
-    },
-    {
-      "id": "pygoat:CVE-2026-26007:cryptography:39.0.1",
-      "cve": "CVE-2026-26007",
-      "package": "cryptography",
-      "ecosystem": "PyPI",
-      "installed_version": "39.0.1",
-      "fixed_version": "46.0.5",
-      "app": "pygoat",
-      "cvss": 6.5,
-      "epss": 0.00347,
-      "in_kev": false,
-      "kev_date_added": null,
-      "priority_score": 17,
-      "priority_label": "low",
-      "summary": {
-        "en": "cryptography is a package designed to expose cryptographic primitives and recipes to Python developers. Prior to 46.0.5, the public_key_from_numbers (or EllipticCurvePublicNumbers.public_key()), EllipticCurvePublicNumbers.public_key(), load_der_public_key() and load_pem_public_key() functions do not verify that the point belongs to the expected prime-order subgroup of the curve. This missing validation allows an attacker to provide a public key point P from a small-order subgroup. This can lead to security issues in various situations, such as the most commonly used signature verification (ECDSA) and shared key negotiation (ECDH). When the victim computes the shared secret as S = [victim_private_key]P via ECDH, this leaks information about victim_private_key mod (small_subgroup_order). For curves with cofactor > 1, this reveals the least significant bits of the private key. When these weak public keys are used in ECDSA , it's easy to forge signatures on the small subgroup. Only SECT curves are impacted by this. This vulnerability is fixed in 46.0.5.",
-        "es": "Criptograf\u00eda es un paquete dise\u00f1ado para exponer primitivas criptogr\u00e1ficas y recetas a los desarrolladores de Python. Antes de la versi\u00f3n 46.0.5, las funciones public_key_from_numbers (o EllipticCurvePublicNumbers.public_key()), EllipticCurvePublicNumbers.public_key(), load_der_public_key() y load_pem_public_key() no verifican que el punto pertenezca al subgrupo de orden primo esperado de la curva. Esta validaci\u00f3n faltante permite a un atacante proporcionar un punto P de clave p\u00fablica de un subgrupo de orden peque\u00f1o. Esto puede llevar a problemas de seguridad en varias situaciones, como la verificaci\u00f3n de firma (ECDSA) y la negociaci\u00f3n de clave compartida (ECDH) m\u00e1s com\u00fanmente utilizadas. Cuando la v\u00edctima calcula el secreto compartido como S = [victim_private_key]P a trav\u00e9s de ECDH, esto filtra informaci\u00f3n sobre victim_private_key mod (orden_subgrupo_peque\u00f1o). Para curvas con cofactor &gt; 1, esto revela los bits menos significativos de la clave privada. Cuando estas claves p\u00fablicas d\u00e9biles se utilizan en ECDSA, es f\u00e1cil falsificar firmas en el subgrupo peque\u00f1o. Solo las curvas SECT se ven afectadas por esto. Esta vulnerabilidad est\u00e1 corregida en la versi\u00f3n 46.0.5."
-      },
-      "references": [
-        "https://github.com/pyca/cryptography/commit/0eebb9dbb6343d9bc1d91e5a2482ed4e054a6d8c",
-        "https://github.com/pyca/cryptography/security/advisories/GHSA-r6ph-v2qm-q3c2",
-        "http://www.openwall.com/lists/oss-security/2026/02/10/4",
-        "https://access.redhat.com/errata/RHSA-2026:10184",
-        "https://access.redhat.com/errata/RHSA-2026:12176",
-        "https://access.redhat.com/errata/RHSA-2026:13512",
-        "https://access.redhat.com/errata/RHSA-2026:13545",
-        "https://access.redhat.com/errata/RHSA-2026:13553",
-        "https://access.redhat.com/errata/RHSA-2026:13672",
-        "https://access.redhat.com/errata/RHSA-2026:19355",
-        "https://access.redhat.com/errata/RHSA-2026:21431",
-        "https://access.redhat.com/errata/RHSA-2026:21517",
-        "https://access.redhat.com/errata/RHSA-2026:22330",
-        "https://access.redhat.com/errata/RHSA-2026:22993",
-        "https://access.redhat.com/errata/RHSA-2026:2694",
-        "https://access.redhat.com/errata/RHSA-2026:5168",
-        "https://access.redhat.com/errata/RHSA-2026:5665",
-        "https://access.redhat.com/errata/RHSA-2026:6308",
-        "https://access.redhat.com/errata/RHSA-2026:6309",
-        "https://access.redhat.com/errata/RHSA-2026:6497",
-        "https://access.redhat.com/errata/RHSA-2026:6567",
-        "https://access.redhat.com/errata/RHSA-2026:6568",
-        "https://access.redhat.com/errata/RHSA-2026:7295",
-        "https://access.redhat.com/security/cve/CVE-2026-26007",
-        "https://bugzilla.redhat.com/show_bug.cgi?id=2438762",
-        "https://security.access.redhat.com/data/csaf/v2/vex/2026/cve-2026-26007.json"
       ]
     },
     {
@@ -2638,6 +2638,29 @@
       ]
     },
     {
+      "id": "pygoat:CVE-2026-101917:pyjwt:2.4.0",
+      "cve": "CVE-2026-101917",
+      "package": "pyjwt",
+      "ecosystem": "PyPI",
+      "installed_version": "2.4.0",
+      "fixed_version": "2.14.0",
+      "app": "pygoat",
+      "cvss": 5.3,
+      "epss": 0.00418,
+      "in_kev": false,
+      "kev_date_added": null,
+      "priority_score": 14,
+      "priority_label": "low",
+      "summary": {
+        "en": "PyJWT is a Python implementation of JSON Web Token standards. Prior to 2.14.0, PyJWT get_signing_key_from_jwt is affected because unknown kid misses force refreshes without a negative cache or minimum refresh interval. This occurs when unauthenticated tokens repeatedly use the same unknown kid or varying kid values absent from the cached JWKS. As a result, each cache miss causes PyJWKClient to refresh the JWKS. Consequently, attacker traffic can amplify outbound requests to the configured JWKS endpoint. This issue is fixed in version 2.14.0."
+      },
+      "references": [
+        "https://github.com/jpadilla/pyjwt/commit/ba4853a75fb9676362da17f67d0f64bd18afd4e1",
+        "https://github.com/jpadilla/pyjwt/releases/tag/2.14.0",
+        "https://github.com/jpadilla/pyjwt/security/advisories/GHSA-2gx3-rcp4-g85q"
+      ]
+    },
+    {
       "id": "pygoat:CVE-2026-71491:sqlparse:0.3.1",
       "cve": "CVE-2026-71491",
       "package": "sqlparse",
@@ -2740,6 +2763,52 @@
       ]
     },
     {
+      "id": "pygoat:CVE-2026-101918:pyjwt:2.4.0",
+      "cve": "CVE-2026-101918",
+      "package": "pyjwt",
+      "ecosystem": "PyPI",
+      "installed_version": "2.4.0",
+      "fixed_version": "2.15.0",
+      "app": "pygoat",
+      "cvss": 5.3,
+      "epss": 0.00358,
+      "in_kev": false,
+      "kev_date_added": null,
+      "priority_score": 14,
+      "priority_label": "low",
+      "summary": {
+        "en": "PyJWT is a Python implementation of JSON Web Token standards. From 2.0.0a1 until 2.15.0, PyJWT PyJWKClient.get_signing_key_from_jwt is affected because payload parser catches ValueError but not RecursionError. This occurs when an attacker-controlled recursively nested payload reaches json.loads. As a result, documented PyJWT exception handling does not contain the failure. Consequently, an unauthenticated request can raise an exception that may produce an HTTP 500 response. The advisory-defined affected implementation also includes jwt/api_jwt.py, verify_signature=False. This issue is fixed in version 2.15.0."
+      },
+      "references": [
+        "https://github.com/jpadilla/pyjwt/commit/5fde08a6cf906aa7698de2d6391d88b73006b17b",
+        "https://github.com/jpadilla/pyjwt/releases/tag/2.15.0",
+        "https://github.com/jpadilla/pyjwt/security/advisories/GHSA-42vr-xj54-vc7v"
+      ]
+    },
+    {
+      "id": "pygoat:CVE-2026-102268:pyjwt:2.4.0",
+      "cve": "CVE-2026-102268",
+      "package": "pyjwt",
+      "ecosystem": "PyPI",
+      "installed_version": "2.4.0",
+      "fixed_version": "2.14.0",
+      "app": "pygoat",
+      "cvss": 9.1,
+      "epss": 0.00202,
+      "in_kev": false,
+      "kev_date_added": null,
+      "priority_score": 23,
+      "priority_label": "medium",
+      "summary": {
+        "en": "PyJWT is a Python implementation of JSON Web Token standards. Prior to 2.14.0, is_pem_format in jwt/utils.py is affected because is_pem_format does not recognize every PEM representation accepted by the cryptography loader. This occurs when an application mixes HMAC and asymmetric algorithms and supplies a mutated public-key PEM as raw key bytes. As a result, HMACAlgorithm.prepare_key treats the unrecognized asymmetric public key as an HMAC secret. Consequently, an attacker who knows the public key can forge authenticated HMAC tokens. This issue is fixed in version 2.14.0."
+      },
+      "references": [
+        "https://github.com/jpadilla/pyjwt/commit/8b4e233a22206b34ec1186e912e75c0b2396ac07",
+        "https://github.com/jpadilla/pyjwt/releases/tag/2.14.0",
+        "https://github.com/jpadilla/pyjwt/security/advisories/GHSA-ffc3-869f-jxw9"
+      ]
+    },
+    {
       "id": "pygoat:CVE-2026-97687:urllib3:1.26.9",
       "cve": "CVE-2026-97687",
       "package": "urllib3",
@@ -2762,29 +2831,6 @@
         "https://github.com/urllib3/urllib3/pull/5093",
         "https://github.com/urllib3/urllib3/releases/tag/2.8.0",
         "https://github.com/urllib3/urllib3/security/advisories/GHSA-8988-9cw3-xx77"
-      ]
-    },
-    {
-      "id": "pygoat:CVE-2026-101917:pyjwt:2.4.0",
-      "cve": "CVE-2026-101917",
-      "package": "pyjwt",
-      "ecosystem": "PyPI",
-      "installed_version": "2.4.0",
-      "fixed_version": "2.14.0",
-      "app": "pygoat",
-      "cvss": 5.3,
-      "epss": 0.00354,
-      "in_kev": false,
-      "kev_date_added": null,
-      "priority_score": 14,
-      "priority_label": "low",
-      "summary": {
-        "en": "PyJWT is a Python implementation of JSON Web Token standards. Prior to 2.14.0, PyJWT get_signing_key_from_jwt is affected because unknown kid misses force refreshes without a negative cache or minimum refresh interval. This occurs when unauthenticated tokens repeatedly use the same unknown kid or varying kid values absent from the cached JWKS. As a result, each cache miss causes PyJWKClient to refresh the JWKS. Consequently, attacker traffic can amplify outbound requests to the configured JWKS endpoint. This issue is fixed in version 2.14.0."
-      },
-      "references": [
-        "https://github.com/jpadilla/pyjwt/commit/ba4853a75fb9676362da17f67d0f64bd18afd4e1",
-        "https://github.com/jpadilla/pyjwt/releases/tag/2.14.0",
-        "https://github.com/jpadilla/pyjwt/security/advisories/GHSA-2gx3-rcp4-g85q"
       ]
     },
     {
@@ -2838,29 +2884,6 @@
       ]
     },
     {
-      "id": "pygoat:CVE-2026-102268:pyjwt:2.4.0",
-      "cve": "CVE-2026-102268",
-      "package": "pyjwt",
-      "ecosystem": "PyPI",
-      "installed_version": "2.4.0",
-      "fixed_version": "2.14.0",
-      "app": "pygoat",
-      "cvss": 9.1,
-      "epss": 0.00196,
-      "in_kev": false,
-      "kev_date_added": null,
-      "priority_score": 23,
-      "priority_label": "medium",
-      "summary": {
-        "en": "PyJWT is a Python implementation of JSON Web Token standards. Prior to 2.14.0, is_pem_format in jwt/utils.py is affected because is_pem_format does not recognize every PEM representation accepted by the cryptography loader. This occurs when an application mixes HMAC and asymmetric algorithms and supplies a mutated public-key PEM as raw key bytes. As a result, HMACAlgorithm.prepare_key treats the unrecognized asymmetric public key as an HMAC secret. Consequently, an attacker who knows the public key can forge authenticated HMAC tokens. This issue is fixed in version 2.14.0."
-      },
-      "references": [
-        "https://github.com/jpadilla/pyjwt/commit/8b4e233a22206b34ec1186e912e75c0b2396ac07",
-        "https://github.com/jpadilla/pyjwt/releases/tag/2.14.0",
-        "https://github.com/jpadilla/pyjwt/security/advisories/GHSA-ffc3-869f-jxw9"
-      ]
-    },
-    {
       "id": "pygoat:CVE-2026-53878:django:4.2",
       "cve": "CVE-2026-53878",
       "package": "django",
@@ -2904,29 +2927,6 @@
         "https://docs.djangoproject.com/en/dev/releases/security/",
         "https://groups.google.com/g/django-announce",
         "https://www.djangoproject.com/weblog/2026/apr/07/security-releases/"
-      ]
-    },
-    {
-      "id": "pygoat:CVE-2026-101918:pyjwt:2.4.0",
-      "cve": "CVE-2026-101918",
-      "package": "pyjwt",
-      "ecosystem": "PyPI",
-      "installed_version": "2.4.0",
-      "fixed_version": "2.15.0",
-      "app": "pygoat",
-      "cvss": 5.3,
-      "epss": 0.00291,
-      "in_kev": false,
-      "kev_date_added": null,
-      "priority_score": 13,
-      "priority_label": "low",
-      "summary": {
-        "en": "PyJWT is a Python implementation of JSON Web Token standards. From 2.0.0a1 until 2.15.0, PyJWT PyJWKClient.get_signing_key_from_jwt is affected because payload parser catches ValueError but not RecursionError. This occurs when an attacker-controlled recursively nested payload reaches json.loads. As a result, documented PyJWT exception handling does not contain the failure. Consequently, an unauthenticated request can raise an exception that may produce an HTTP 500 response. The advisory-defined affected implementation also includes jwt/api_jwt.py, verify_signature=False. This issue is fixed in version 2.15.0."
-      },
-      "references": [
-        "https://github.com/jpadilla/pyjwt/commit/5fde08a6cf906aa7698de2d6391d88b73006b17b",
-        "https://github.com/jpadilla/pyjwt/releases/tag/2.15.0",
-        "https://github.com/jpadilla/pyjwt/security/advisories/GHSA-42vr-xj54-vc7v"
       ]
     },
     {
@@ -3103,7 +3103,7 @@
       "fixed_version": "2.14.0",
       "app": "pygoat",
       "cvss": 7.4,
-      "epss": 0.00157,
+      "epss": 0.00159,
       "in_kev": false,
       "kev_date_added": null,
       "priority_score": 19,
@@ -5912,6 +5912,30 @@
       ]
     },
     {
+      "id": "nodejs-goof:CVE-2025-7783:form-data:2.3.3",
+      "cve": "CVE-2025-7783",
+      "package": "form-data",
+      "ecosystem": "npm",
+      "installed_version": "2.3.3",
+      "fixed_version": "2.5.4",
+      "app": "nodejs-goof",
+      "cvss": null,
+      "epss": 0.0191,
+      "in_kev": false,
+      "kev_date_added": null,
+      "priority_score": 1,
+      "priority_label": "low",
+      "summary": {
+        "en": "Use of Insufficiently Random Values vulnerability in form-data allows HTTP Parameter Pollution (HPP). This vulnerability is associated with program files lib/form_data.Js.\n\nThis issue affects form-data: < 2.5.4, 3.0.0 - 3.0.3, 4.0.0 - 4.0.3.",
+        "es": "La vulnerabilidad de uso de valores insuficientemente aleatorios en form-data permite la contaminaci\u00f3n de par\u00e1metros HTTP (HPP). Esta vulnerabilidad est\u00e1 asociada con los archivos de programa lib/form_data.Js. Este problema afecta a form-data: &lt; 2.5.4, 3.0.0 - 3.0.3, 4.0.0 - 4.0.3."
+      },
+      "references": [
+        "https://github.com/form-data/form-data/commit/3d1723080e6577a66f17f163ecd345a21d8d0fd0",
+        "https://github.com/form-data/form-data/security/advisories/GHSA-fjxv-7rqg-78g4",
+        "https://lists.debian.org/debian-lts-announce/2025/07/msg00023.html"
+      ]
+    },
+    {
       "id": "nodejs-goof:CVE-2019-20149:kind-of:6.0.2",
       "cve": "CVE-2019-20149",
       "package": "kind-of",
@@ -6088,30 +6112,6 @@
         "https://access.redhat.com/security/cve/CVE-2026-33937",
         "https://bugzilla.redhat.com/show_bug.cgi?id=2452523",
         "https://security.access.redhat.com/data/csaf/v2/vex/2026/cve-2026-33937.json"
-      ]
-    },
-    {
-      "id": "nodejs-goof:CVE-2025-7783:form-data:2.3.3",
-      "cve": "CVE-2025-7783",
-      "package": "form-data",
-      "ecosystem": "npm",
-      "installed_version": "2.3.3",
-      "fixed_version": "2.5.4",
-      "app": "nodejs-goof",
-      "cvss": null,
-      "epss": 0.01769,
-      "in_kev": false,
-      "kev_date_added": null,
-      "priority_score": 1,
-      "priority_label": "low",
-      "summary": {
-        "en": "Use of Insufficiently Random Values vulnerability in form-data allows HTTP Parameter Pollution (HPP). This vulnerability is associated with program files lib/form_data.Js.\n\nThis issue affects form-data: < 2.5.4, 3.0.0 - 3.0.3, 4.0.0 - 4.0.3.",
-        "es": "La vulnerabilidad de uso de valores insuficientemente aleatorios en form-data permite la contaminaci\u00f3n de par\u00e1metros HTTP (HPP). Esta vulnerabilidad est\u00e1 asociada con los archivos de programa lib/form_data.Js. Este problema afecta a form-data: &lt; 2.5.4, 3.0.0 - 3.0.3, 4.0.0 - 4.0.3."
-      },
-      "references": [
-        "https://github.com/form-data/form-data/commit/3d1723080e6577a66f17f163ecd345a21d8d0fd0",
-        "https://github.com/form-data/form-data/security/advisories/GHSA-fjxv-7rqg-78g4",
-        "https://lists.debian.org/debian-lts-announce/2025/07/msg00023.html"
       ]
     },
     {
@@ -7591,6 +7591,54 @@
       ]
     },
     {
+      "id": "nodejs-goof:CVE-2026-106446:handlebars:4.0.11",
+      "cve": "CVE-2026-106446",
+      "package": "handlebars",
+      "ecosystem": "npm",
+      "installed_version": "4.0.11",
+      "fixed_version": "4.7.10",
+      "app": "nodejs-goof",
+      "cvss": 9.8,
+      "epss": 0.0064,
+      "in_kev": false,
+      "kev_date_added": null,
+      "priority_score": 25,
+      "priority_label": "medium",
+      "summary": {
+        "en": "Handlebars provides the power necessary to let users build semantic templates. From 4.0.0 until 4.7.10, Handlebars.compile() and Handlebars.precompile() accept pre-parsed AST objects while validating only selected PathExpression, NumberLiteral, and BooleanLiteral values. This issue bypasses the AST validation introduced in version 4.7.9 for CVE-2026-33937. An attacker who can supply an object instead of a template string can place JavaScript expressions in unchecked values such as Program.blockParams.length, a non-PathExpression parameter depth, a non-string StringLiteral.value, or a non-string PathExpression.original. The compiler emits those values into generated JavaScript, causing code execution in the server process when compile output renders or wherever precompile output is loaded. Applications that pass only template strings are not affected. This issue is fixed in version 4.7.10."
+      },
+      "references": [
+        "https://github.com/handlebars-lang/handlebars.js/commit/703fdcc5fd6cc8d1cc0c33cc19de40c467c4b8d2",
+        "https://github.com/handlebars-lang/handlebars.js/pull/2185",
+        "https://github.com/handlebars-lang/handlebars.js/releases/tag/v4.7.10",
+        "https://github.com/handlebars-lang/handlebars.js/security/advisories/GHSA-8r5x-fm3f-whwj"
+      ]
+    },
+    {
+      "id": "nodejs-goof:CVE-2026-106446:handlebars:4.0.14",
+      "cve": "CVE-2026-106446",
+      "package": "handlebars",
+      "ecosystem": "npm",
+      "installed_version": "4.0.14",
+      "fixed_version": "4.7.10",
+      "app": "nodejs-goof",
+      "cvss": 9.8,
+      "epss": 0.0064,
+      "in_kev": false,
+      "kev_date_added": null,
+      "priority_score": 25,
+      "priority_label": "medium",
+      "summary": {
+        "en": "Handlebars provides the power necessary to let users build semantic templates. From 4.0.0 until 4.7.10, Handlebars.compile() and Handlebars.precompile() accept pre-parsed AST objects while validating only selected PathExpression, NumberLiteral, and BooleanLiteral values. This issue bypasses the AST validation introduced in version 4.7.9 for CVE-2026-33937. An attacker who can supply an object instead of a template string can place JavaScript expressions in unchecked values such as Program.blockParams.length, a non-PathExpression parameter depth, a non-string StringLiteral.value, or a non-string PathExpression.original. The compiler emits those values into generated JavaScript, causing code execution in the server process when compile output renders or wherever precompile output is loaded. Applications that pass only template strings are not affected. This issue is fixed in version 4.7.10."
+      },
+      "references": [
+        "https://github.com/handlebars-lang/handlebars.js/commit/703fdcc5fd6cc8d1cc0c33cc19de40c467c4b8d2",
+        "https://github.com/handlebars-lang/handlebars.js/pull/2185",
+        "https://github.com/handlebars-lang/handlebars.js/releases/tag/v4.7.10",
+        "https://github.com/handlebars-lang/handlebars.js/security/advisories/GHSA-8r5x-fm3f-whwj"
+      ]
+    },
+    {
       "id": "nodejs-goof:CVE-2024-52798:path-to-regexp:0.1.3",
       "cve": "CVE-2024-52798",
       "package": "path-to-regexp",
@@ -8295,6 +8343,54 @@
       ]
     },
     {
+      "id": "nodejs-goof:CVE-2026-106445:handlebars:4.0.11",
+      "cve": "CVE-2026-106445",
+      "package": "handlebars",
+      "ecosystem": "npm",
+      "installed_version": "4.0.11",
+      "fixed_version": "4.7.10",
+      "app": "nodejs-goof",
+      "cvss": null,
+      "epss": 0.00411,
+      "in_kev": false,
+      "kev_date_added": null,
+      "priority_score": 0,
+      "priority_label": "low",
+      "summary": {
+        "en": "Handlebars provides the power necessary to let users build semantic templates. From 4.0.0 until 4.7.10, Handlebars lookupProperty returns Function.prototype.constructor before applying the prototype-access deny list because constructor is an own property of Function.prototype. When an attacker can render a controlled template with allowProtoMethodsByDefault enabled and an accessible function in the template context, the template can traverse from that function through its prototype to Function.prototype and then obtain the Function constructor through the own-property bypass. This permits attacker-controlled JavaScript to execute with the server application's privileges. This issue is fixed in version 4.7.10."
+      },
+      "references": [
+        "https://github.com/handlebars-lang/handlebars.js/commit/ceec388abe1d1aac8f6369860d5f390fa71ef4fa",
+        "https://github.com/handlebars-lang/handlebars.js/pull/2185",
+        "https://github.com/handlebars-lang/handlebars.js/releases/tag/v4.7.10",
+        "https://github.com/handlebars-lang/handlebars.js/security/advisories/GHSA-p8wg-vrv2-v86f"
+      ]
+    },
+    {
+      "id": "nodejs-goof:CVE-2026-106445:handlebars:4.0.14",
+      "cve": "CVE-2026-106445",
+      "package": "handlebars",
+      "ecosystem": "npm",
+      "installed_version": "4.0.14",
+      "fixed_version": "4.7.10",
+      "app": "nodejs-goof",
+      "cvss": null,
+      "epss": 0.00411,
+      "in_kev": false,
+      "kev_date_added": null,
+      "priority_score": 0,
+      "priority_label": "low",
+      "summary": {
+        "en": "Handlebars provides the power necessary to let users build semantic templates. From 4.0.0 until 4.7.10, Handlebars lookupProperty returns Function.prototype.constructor before applying the prototype-access deny list because constructor is an own property of Function.prototype. When an attacker can render a controlled template with allowProtoMethodsByDefault enabled and an accessible function in the template context, the template can traverse from that function through its prototype to Function.prototype and then obtain the Function constructor through the own-property bypass. This permits attacker-controlled JavaScript to execute with the server application's privileges. This issue is fixed in version 4.7.10."
+      },
+      "references": [
+        "https://github.com/handlebars-lang/handlebars.js/commit/ceec388abe1d1aac8f6369860d5f390fa71ef4fa",
+        "https://github.com/handlebars-lang/handlebars.js/pull/2185",
+        "https://github.com/handlebars-lang/handlebars.js/releases/tag/v4.7.10",
+        "https://github.com/handlebars-lang/handlebars.js/security/advisories/GHSA-p8wg-vrv2-v86f"
+      ]
+    },
+    {
       "id": "nodejs-goof:CVE-2026-33750:brace-expansion:1.1.11",
       "cve": "CVE-2026-33750",
       "package": "brace-expansion",
@@ -8592,30 +8688,6 @@
       ]
     },
     {
-      "id": "nodejs-goof:CVE-2026-102278:brace-expansion:1.1.11",
-      "cve": "CVE-2026-102278",
-      "package": "brace-expansion",
-      "ecosystem": "npm",
-      "installed_version": "1.1.11",
-      "fixed_version": "1.1.20",
-      "app": "nodejs-goof",
-      "cvss": 7.5,
-      "epss": 0.0035,
-      "in_kev": false,
-      "kev_date_added": null,
-      "priority_score": 19,
-      "priority_label": "low",
-      "summary": {
-        "en": "The brace-expansion library generates arbitrary strings containing a common prefix and suffix. Prior to 1.1.20, 2.1.6, 3.0.8, and 5.0.11, deeply nested brace groups cause expand_() to recurse once per nesting level at comma-member and single-set expansion sites, exhausting the native stack before output limits can apply and potentially terminating the Node.js process. expand_ performs uncontrolled recursion for nested brace alternatives and single-part sets. deeply nested brace groups supplied as an untrusted pattern. expand_ is affected. expand is affected. Comma members is affected. Single set is affected. native stack exhaustion during nested sub-expansion. process-terminating denial of service. This issue is fixed in versions 1.1.20, 2.1.6, 3.0.8, and 5.0.11."
-      },
-      "references": [
-        "https://github.com/juliangruber/brace-expansion/commit/1efee7c397c191da6287a78ec19512476a966a7b",
-        "https://github.com/juliangruber/brace-expansion/commit/935d78f32f335b2ff76578e5c5e877d31ae9888c",
-        "https://github.com/juliangruber/brace-expansion/commit/de84f144e9816f30e25fc8179e2e1249ab6df0db",
-        "https://github.com/juliangruber/brace-expansion/security/advisories/GHSA-qhr7-859c-m2p7"
-      ]
-    },
-    {
       "id": "nodejs-goof:CVE-2026-102276:brace-expansion:1.1.11",
       "cve": "CVE-2026-102276",
       "package": "brace-expansion",
@@ -8638,6 +8710,30 @@
         "https://github.com/juliangruber/brace-expansion/commit/5171e681c0922b7ae8bfaf9a331e309107be6edc",
         "https://github.com/juliangruber/brace-expansion/commit/6735c94873ca570bcdd6a0690033bdd3126379d3",
         "https://github.com/juliangruber/brace-expansion/security/advisories/GHSA-6j4f-fj2g-mc7p"
+      ]
+    },
+    {
+      "id": "nodejs-goof:CVE-2026-102278:brace-expansion:1.1.11",
+      "cve": "CVE-2026-102278",
+      "package": "brace-expansion",
+      "ecosystem": "npm",
+      "installed_version": "1.1.11",
+      "fixed_version": "1.1.20",
+      "app": "nodejs-goof",
+      "cvss": 7.5,
+      "epss": 0.0035,
+      "in_kev": false,
+      "kev_date_added": null,
+      "priority_score": 19,
+      "priority_label": "low",
+      "summary": {
+        "en": "The brace-expansion library generates arbitrary strings containing a common prefix and suffix. Prior to 1.1.20, 2.1.6, 3.0.8, and 5.0.11, deeply nested brace groups cause expand_() to recurse once per nesting level at comma-member and single-set expansion sites, exhausting the native stack before output limits can apply and potentially terminating the Node.js process. expand_ performs uncontrolled recursion for nested brace alternatives and single-part sets. deeply nested brace groups supplied as an untrusted pattern. expand_ is affected. expand is affected. Comma members is affected. Single set is affected. native stack exhaustion during nested sub-expansion. process-terminating denial of service. This issue is fixed in versions 1.1.20, 2.1.6, 3.0.8, and 5.0.11."
+      },
+      "references": [
+        "https://github.com/juliangruber/brace-expansion/commit/1efee7c397c191da6287a78ec19512476a966a7b",
+        "https://github.com/juliangruber/brace-expansion/commit/935d78f32f335b2ff76578e5c5e877d31ae9888c",
+        "https://github.com/juliangruber/brace-expansion/commit/de84f144e9816f30e25fc8179e2e1249ab6df0db",
+        "https://github.com/juliangruber/brace-expansion/security/advisories/GHSA-qhr7-859c-m2p7"
       ]
     },
     {
@@ -9373,6 +9469,54 @@
       ]
     },
     {
+      "id": "nodejs-goof:CVE-2026-106444:handlebars:4.0.11",
+      "cve": "CVE-2026-106444",
+      "package": "handlebars",
+      "ecosystem": "npm",
+      "installed_version": "4.0.11",
+      "fixed_version": "4.7.10",
+      "app": "nodejs-goof",
+      "cvss": 4.7,
+      "epss": 0.00294,
+      "in_kev": false,
+      "kev_date_added": null,
+      "priority_score": 12,
+      "priority_label": "low",
+      "summary": {
+        "en": "Handlebars provides the power necessary to let users build semantic templates. From 4.0.0 until 4.7.10, Handlebars.precompile() uses quotedString() in lib/handlebars/compiler/code-gen.js to emit static template text into generated JavaScript without escaping sequences that terminate an enclosing HTML script element. When an application precompiles attacker-controlled template text and embeds the generated source directly in an inline script element, a closing script delimiter can end the element and cause following attacker-controlled markup to be parsed and executed. Ordinary server-side rendering and precompiled templates served as external JavaScript files are not affected. This issue is fixed in version 4.7.10."
+      },
+      "references": [
+        "https://github.com/handlebars-lang/handlebars.js/commit/609d1b11c833c9a3e00f56f2f34d22f425446725",
+        "https://github.com/handlebars-lang/handlebars.js/pull/2185",
+        "https://github.com/handlebars-lang/handlebars.js/releases/tag/v4.7.10",
+        "https://github.com/handlebars-lang/handlebars.js/security/advisories/GHSA-xw65-4hp5-5hc7"
+      ]
+    },
+    {
+      "id": "nodejs-goof:CVE-2026-106444:handlebars:4.0.14",
+      "cve": "CVE-2026-106444",
+      "package": "handlebars",
+      "ecosystem": "npm",
+      "installed_version": "4.0.14",
+      "fixed_version": "4.7.10",
+      "app": "nodejs-goof",
+      "cvss": 4.7,
+      "epss": 0.00294,
+      "in_kev": false,
+      "kev_date_added": null,
+      "priority_score": 12,
+      "priority_label": "low",
+      "summary": {
+        "en": "Handlebars provides the power necessary to let users build semantic templates. From 4.0.0 until 4.7.10, Handlebars.precompile() uses quotedString() in lib/handlebars/compiler/code-gen.js to emit static template text into generated JavaScript without escaping sequences that terminate an enclosing HTML script element. When an application precompiles attacker-controlled template text and embeds the generated source directly in an inline script element, a closing script delimiter can end the element and cause following attacker-controlled markup to be parsed and executed. Ordinary server-side rendering and precompiled templates served as external JavaScript files are not affected. This issue is fixed in version 4.7.10."
+      },
+      "references": [
+        "https://github.com/handlebars-lang/handlebars.js/commit/609d1b11c833c9a3e00f56f2f34d22f425446725",
+        "https://github.com/handlebars-lang/handlebars.js/pull/2185",
+        "https://github.com/handlebars-lang/handlebars.js/releases/tag/v4.7.10",
+        "https://github.com/handlebars-lang/handlebars.js/security/advisories/GHSA-xw65-4hp5-5hc7"
+      ]
+    },
+    {
       "id": "nodejs-goof:CVE-2026-12590:body-parser:1.9.0",
       "cve": "CVE-2026-12590",
       "package": "body-parser",
@@ -9516,12 +9660,6 @@
     }
   ],
   "history": [
-    {
-      "date": "2026-09-09",
-      "findings_total": 311,
-      "critical": 4,
-      "high": 3
-    },
     {
       "date": "2026-09-10",
       "findings_total": 311,
@@ -9693,6 +9831,12 @@
     {
       "date": "2026-10-08",
       "findings_total": 338,
+      "critical": 4,
+      "high": 3
+    },
+    {
+      "date": "2026-10-09",
+      "findings_total": 344,
       "critical": 4,
       "high": 3
     }

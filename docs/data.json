@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-10-10T12:11:16.981758+00:00",
+  "generated_at": "2026-10-11T12:24:59.403480+00:00",
   "sources": {
     "kev": {
       "fetched": true,
@@ -214,10 +214,10 @@
       "fixed_version": "4.2.24",
       "app": "pygoat",
       "cvss": 7.1,
-      "epss": 0.16759,
+      "epss": 0.17432,
       "in_kev": false,
       "kev_date_added": null,
-      "priority_score": 30,
+      "priority_score": 31,
       "priority_label": "medium",
       "summary": {
         "en": "An issue was discovered in Django 4.2 before 4.2.24, 5.1 before 5.1.12, and 5.2 before 5.2.6. FilteredRelation is subject to SQL injection in column aliases, using a suitably crafted dictionary, with dictionary expansion, as the **kwargs passed QuerySet.annotate() or QuerySet.alias()."
@@ -1456,29 +1456,6 @@
       ]
     },
     {
-      "id": "pygoat:CVE-2025-66418:urllib3:1.26.9",
-      "cve": "CVE-2025-66418",
-      "package": "urllib3",
-      "ecosystem": "PyPI",
-      "installed_version": "1.26.9",
-      "fixed_version": "2.6.0",
-      "app": "pygoat",
-      "cvss": 7.5,
-      "epss": 0.00682,
-      "in_kev": false,
-      "kev_date_added": null,
-      "priority_score": 19,
-      "priority_label": "low",
-      "summary": {
-        "en": "urllib3 is a user-friendly HTTP client library for Python. Starting in version 1.24 and prior to 2.6.0, the number of links in the decompression chain was unbounded allowing a malicious server to insert a virtually unlimited number of compression steps leading to high CPU usage and massive memory allocation for the decompressed data. This vulnerability is fixed in 2.6.0.",
-        "es": "urllib3 es una biblioteca cliente HTTP f\u00e1cil de usar para Python. A partir de la versi\u00f3n 1.24 y en versiones anteriores a la 2.6.0, el n\u00famero de enlaces en la cadena de descompresi\u00f3n era ilimitado, lo que permit\u00eda a un servidor malicioso insertar un n\u00famero pr\u00e1cticamente ilimitado de pasos de compresi\u00f3n, lo que provocaba un alto uso de CPU y una asignaci\u00f3n masiva de memoria para los datos descomprimidos. Esta vulnerabilidad se corrigi\u00f3 en la versi\u00f3n 2.6.0."
-      },
-      "references": [
-        "https://github.com/urllib3/urllib3/commit/24d7b67eac89f94e11003424bcf0d8f7b72222a8",
-        "https://github.com/urllib3/urllib3/security/advisories/GHSA-gm62-xv2j-4w53"
-      ]
-    },
-    {
       "id": "pygoat:CVE-2025-66471:urllib3:1.26.9",
       "cve": "CVE-2025-66471",
       "package": "urllib3",
@@ -1499,6 +1476,29 @@
       "references": [
         "https://github.com/urllib3/urllib3/commit/c19571de34c47de3a766541b041637ba5f716ed7",
         "https://github.com/urllib3/urllib3/security/advisories/GHSA-2xpw-w6gg-jr37"
+      ]
+    },
+    {
+      "id": "pygoat:CVE-2025-66418:urllib3:1.26.9",
+      "cve": "CVE-2025-66418",
+      "package": "urllib3",
+      "ecosystem": "PyPI",
+      "installed_version": "1.26.9",
+      "fixed_version": "2.6.0",
+      "app": "pygoat",
+      "cvss": 7.5,
+      "epss": 0.00682,
+      "in_kev": false,
+      "kev_date_added": null,
+      "priority_score": 19,
+      "priority_label": "low",
+      "summary": {
+        "en": "urllib3 is a user-friendly HTTP client library for Python. Starting in version 1.24 and prior to 2.6.0, the number of links in the decompression chain was unbounded allowing a malicious server to insert a virtually unlimited number of compression steps leading to high CPU usage and massive memory allocation for the decompressed data. This vulnerability is fixed in 2.6.0.",
+        "es": "urllib3 es una biblioteca cliente HTTP f\u00e1cil de usar para Python. A partir de la versi\u00f3n 1.24 y en versiones anteriores a la 2.6.0, el n\u00famero de enlaces en la cadena de descompresi\u00f3n era ilimitado, lo que permit\u00eda a un servidor malicioso insertar un n\u00famero pr\u00e1cticamente ilimitado de pasos de compresi\u00f3n, lo que provocaba un alto uso de CPU y una asignaci\u00f3n masiva de memoria para los datos descomprimidos. Esta vulnerabilidad se corrigi\u00f3 en la versi\u00f3n 2.6.0."
+      },
+      "references": [
+        "https://github.com/urllib3/urllib3/commit/24d7b67eac89f94e11003424bcf0d8f7b72222a8",
+        "https://github.com/urllib3/urllib3/security/advisories/GHSA-gm62-xv2j-4w53"
       ]
     },
     {
@@ -2121,6 +2121,30 @@
       ]
     },
     {
+      "id": "pygoat:CVE-2026-27199:werkzeug:2.1.2",
+      "cve": "CVE-2026-27199",
+      "package": "werkzeug",
+      "ecosystem": "PyPI",
+      "installed_version": "2.1.2",
+      "fixed_version": "3.1.6",
+      "app": "pygoat",
+      "cvss": 5.3,
+      "epss": 0.00555,
+      "in_kev": false,
+      "kev_date_added": null,
+      "priority_score": 14,
+      "priority_label": "low",
+      "summary": {
+        "en": "Werkzeug is a comprehensive WSGI web application library. Versions 3.1.5 and below, the safe_join function allows Windows device names as filenames if preceded by other path segments. This was previously reported as GHSA-hgf8-39gv-g3f2, but the added filtering failed to account for the fact that safe_join accepts paths with multiple segments, such as example/NUL. The function send_from_directory uses safe_join to safely serve files at user-specified paths under a directory. If the application is running on Windows, and the requested path ends with a special device name, the file will be opened successfully, but reading will hang indefinitely. This issue has been fixed in version 3.1.6.",
+        "es": "Werkzeug es una completa biblioteca de aplicaciones web WSGI. Las versiones 3.1.5 e inferiores, la funci\u00f3n safe_join permite nombres de dispositivos de Windows como nombres de archivo si van precedidos por otros segmentos de ruta. Esto fue reportado previamente como GHSA-hgf8-39gv-g3f2, pero el filtrado a\u00f1adido no tuvo en cuenta el hecho de que safe_join acepta rutas con m\u00faltiples segmentos, como example/NUL. La funci\u00f3n send_from_directory utiliza safe_join para servir archivos de forma segura en rutas especificadas por el usuario bajo un directorio. Si la aplicaci\u00f3n se est\u00e1 ejecutando en Windows, y la ruta solicitada termina con un nombre de dispositivo especial, el archivo se abrir\u00e1 con \u00e9xito, pero la lectura se colgar\u00e1 indefinidamente. Este problema ha sido solucionado en la versi\u00f3n 3.1.6."
+      },
+      "references": [
+        "https://github.com/pallets/werkzeug/commit/f407712fdc60a09c2b3f4fe7db557703e5d9338d",
+        "https://github.com/pallets/werkzeug/releases/tag/3.1.6",
+        "https://github.com/pallets/werkzeug/security/advisories/GHSA-29vq-49wr-vm6x"
+      ]
+    },
+    {
       "id": "pygoat:CVE-2026-54060:pillow:9.4.0",
       "cve": "CVE-2026-54060",
       "package": "pillow",
@@ -2211,30 +2235,6 @@
         "https://github.com/python-pillow/Pillow/blob/main/docs/releasenotes/12.3.0.rst",
         "https://github.com/python-pillow/Pillow/commit/0a263e6264aa5399988d9acd3bbfbca2ca3ec77d",
         "https://github.com/python-pillow/Pillow/security/advisories/GHSA-8v84-f9pq-wr9x"
-      ]
-    },
-    {
-      "id": "pygoat:CVE-2026-27199:werkzeug:2.1.2",
-      "cve": "CVE-2026-27199",
-      "package": "werkzeug",
-      "ecosystem": "PyPI",
-      "installed_version": "2.1.2",
-      "fixed_version": "3.1.6",
-      "app": "pygoat",
-      "cvss": 5.3,
-      "epss": 0.00543,
-      "in_kev": false,
-      "kev_date_added": null,
-      "priority_score": 14,
-      "priority_label": "low",
-      "summary": {
-        "en": "Werkzeug is a comprehensive WSGI web application library. Versions 3.1.5 and below, the safe_join function allows Windows device names as filenames if preceded by other path segments. This was previously reported as GHSA-hgf8-39gv-g3f2, but the added filtering failed to account for the fact that safe_join accepts paths with multiple segments, such as example/NUL. The function send_from_directory uses safe_join to safely serve files at user-specified paths under a directory. If the application is running on Windows, and the requested path ends with a special device name, the file will be opened successfully, but reading will hang indefinitely. This issue has been fixed in version 3.1.6.",
-        "es": "Werkzeug es una completa biblioteca de aplicaciones web WSGI. Las versiones 3.1.5 e inferiores, la funci\u00f3n safe_join permite nombres de dispositivos de Windows como nombres de archivo si van precedidos por otros segmentos de ruta. Esto fue reportado previamente como GHSA-hgf8-39gv-g3f2, pero el filtrado a\u00f1adido no tuvo en cuenta el hecho de que safe_join acepta rutas con m\u00faltiples segmentos, como example/NUL. La funci\u00f3n send_from_directory utiliza safe_join para servir archivos de forma segura en rutas especificadas por el usuario bajo un directorio. Si la aplicaci\u00f3n se est\u00e1 ejecutando en Windows, y la ruta solicitada termina con un nombre de dispositivo especial, el archivo se abrir\u00e1 con \u00e9xito, pero la lectura se colgar\u00e1 indefinidamente. Este problema ha sido solucionado en la versi\u00f3n 3.1.6."
-      },
-      "references": [
-        "https://github.com/pallets/werkzeug/commit/f407712fdc60a09c2b3f4fe7db557703e5d9338d",
-        "https://github.com/pallets/werkzeug/releases/tag/3.1.6",
-        "https://github.com/pallets/werkzeug/security/advisories/GHSA-29vq-49wr-vm6x"
       ]
     },
     {
@@ -2378,6 +2378,29 @@
         "https://github.com/pallets/werkzeug/commit/4b833376a45c323a189cd11d2362bcffdb1c0c13",
         "https://github.com/pallets/werkzeug/releases/tag/3.1.4",
         "https://github.com/pallets/werkzeug/security/advisories/GHSA-hgf8-39gv-g3f2"
+      ]
+    },
+    {
+      "id": "pygoat:CVE-2026-53877:django:4.2",
+      "cve": "CVE-2026-53877",
+      "package": "django",
+      "ecosystem": "PyPI",
+      "installed_version": "4.2",
+      "fixed_version": "5.2.16",
+      "app": "pygoat",
+      "cvss": 4.8,
+      "epss": 0.00527,
+      "in_kev": false,
+      "kev_date_added": null,
+      "priority_score": 12,
+      "priority_label": "low",
+      "summary": {
+        "en": "An issue was discovered in Django 6.0 before 6.0.7 and 5.2 before 5.2.16.\n`django.contrib.gis.gdal.GDALRaster` over-reads its in-memory buffer when constructed from a bytes object, which can disclose adjacent memory or cause service degradation via a potential segmentation fault when the `vsi_buffer` property is accessed.\nEarlier, unsupported Django series (such as 5.0.x, 4.1.x, and 3.2.x) were not evaluated and may also be affected.\nDjango would like to thank Bence Nagy for reporting this issue."
+      },
+      "references": [
+        "https://docs.djangoproject.com/en/dev/releases/security/",
+        "https://groups.google.com/g/django-announce",
+        "https://www.djangoproject.com/weblog/2026/jul/07/security-releases/"
       ]
     },
     {
@@ -2612,29 +2635,6 @@
         "https://docs.djangoproject.com/en/dev/releases/security/",
         "https://groups.google.com/g/django-announce",
         "https://www.djangoproject.com/weblog/2026/feb/03/security-releases/"
-      ]
-    },
-    {
-      "id": "pygoat:CVE-2026-53877:django:4.2",
-      "cve": "CVE-2026-53877",
-      "package": "django",
-      "ecosystem": "PyPI",
-      "installed_version": "4.2",
-      "fixed_version": "5.2.16",
-      "app": "pygoat",
-      "cvss": 4.8,
-      "epss": 0.00437,
-      "in_kev": false,
-      "kev_date_added": null,
-      "priority_score": 12,
-      "priority_label": "low",
-      "summary": {
-        "en": "An issue was discovered in Django 6.0 before 6.0.7 and 5.2 before 5.2.16.\n`django.contrib.gis.gdal.GDALRaster` over-reads its in-memory buffer when constructed from a bytes object, which can disclose adjacent memory or cause service degradation via a potential segmentation fault when the `vsi_buffer` property is accessed.\nEarlier, unsupported Django series (such as 5.0.x, 4.1.x, and 3.2.x) were not evaluated and may also be affected.\nDjango would like to thank Bence Nagy for reporting this issue."
-      },
-      "references": [
-        "https://docs.djangoproject.com/en/dev/releases/security/",
-        "https://groups.google.com/g/django-announce",
-        "https://www.djangoproject.com/weblog/2026/jul/07/security-releases/"
       ]
     },
     {
@@ -3024,30 +3024,6 @@
       ]
     },
     {
-      "id": "pygoat:CVE-2026-8404:django:4.2",
-      "cve": "CVE-2026-8404",
-      "package": "django",
-      "ecosystem": "PyPI",
-      "installed_version": "4.2",
-      "fixed_version": "5.2.15",
-      "app": "pygoat",
-      "cvss": 3.1,
-      "epss": 0.00429,
-      "in_kev": false,
-      "kev_date_added": null,
-      "priority_score": 8,
-      "priority_label": "low",
-      "summary": {
-        "en": "An issue was discovered in Django 5.2 before 5.2.15 and 6.0 before 6.0.6.\n`django.middleware.cache.UpdateCacheMiddleware` in Django does not match `Cache-Control` response directives case-insensitively, which allows remote attackers to read responses that were incorrectly cached because their `Cache-Control` directives used uppercase or mixed-case values.\nEarlier, unsupported Django series (such as 5.0.x, 4.1.x, and 3.2.x) were not evaluated and may also be affected.\nDjango would like to thank Ahmed Badawe for reporting this issue.",
-        "es": "Se descubri\u00f3 un problema en Django 5.2 anterior a 5.2.15 y 6.0 anterior a 6.0.6.\n'django.middleware.cache.UpdateCacheMiddleware' en Django no compara las directivas de respuesta 'Cache-Control' sin distinguir entre may\u00fasculas y min\u00fasculas, lo que permite a atacantes remotos leer respuestas que fueron almacenadas en cach\u00e9 incorrectamente porque sus directivas 'Cache-Control' usaban valores en may\u00fasculas o con una combinaci\u00f3n de may\u00fasculas y min\u00fasculas.\nSeries de Django anteriores y no compatibles (como 5.0.x, 4.1.x y 3.2.x) no fueron evaluadas y tambi\u00e9n podr\u00edan estar afectadas.\nDjango desea agradecer a Ahmed Badawe por informar de este problema."
-      },
-      "references": [
-        "https://docs.djangoproject.com/en/dev/releases/security/",
-        "https://groups.google.com/g/django-announce",
-        "https://www.djangoproject.com/weblog/2026/jun/03/security-releases/"
-      ]
-    },
-    {
       "id": "pygoat:CVE-2026-48587:django:4.2",
       "cve": "CVE-2026-48587",
       "package": "django",
@@ -3092,6 +3068,30 @@
         "https://docs.djangoproject.com/en/dev/releases/security/",
         "https://groups.google.com/g/django-announce",
         "https://www.djangoproject.com/weblog/2026/jul/07/security-releases/"
+      ]
+    },
+    {
+      "id": "pygoat:CVE-2026-8404:django:4.2",
+      "cve": "CVE-2026-8404",
+      "package": "django",
+      "ecosystem": "PyPI",
+      "installed_version": "4.2",
+      "fixed_version": "5.2.15",
+      "app": "pygoat",
+      "cvss": 3.1,
+      "epss": 0.00429,
+      "in_kev": false,
+      "kev_date_added": null,
+      "priority_score": 8,
+      "priority_label": "low",
+      "summary": {
+        "en": "An issue was discovered in Django 5.2 before 5.2.15 and 6.0 before 6.0.6.\n`django.middleware.cache.UpdateCacheMiddleware` in Django does not match `Cache-Control` response directives case-insensitively, which allows remote attackers to read responses that were incorrectly cached because their `Cache-Control` directives used uppercase or mixed-case values.\nEarlier, unsupported Django series (such as 5.0.x, 4.1.x, and 3.2.x) were not evaluated and may also be affected.\nDjango would like to thank Ahmed Badawe for reporting this issue.",
+        "es": "Se descubri\u00f3 un problema en Django 5.2 anterior a 5.2.15 y 6.0 anterior a 6.0.6.\n'django.middleware.cache.UpdateCacheMiddleware' en Django no compara las directivas de respuesta 'Cache-Control' sin distinguir entre may\u00fasculas y min\u00fasculas, lo que permite a atacantes remotos leer respuestas que fueron almacenadas en cach\u00e9 incorrectamente porque sus directivas 'Cache-Control' usaban valores en may\u00fasculas o con una combinaci\u00f3n de may\u00fasculas y min\u00fasculas.\nSeries de Django anteriores y no compatibles (como 5.0.x, 4.1.x y 3.2.x) no fueron evaluadas y tambi\u00e9n podr\u00edan estar afectadas.\nDjango desea agradecer a Ahmed Badawe por informar de este problema."
+      },
+      "references": [
+        "https://docs.djangoproject.com/en/dev/releases/security/",
+        "https://groups.google.com/g/django-announce",
+        "https://www.djangoproject.com/weblog/2026/jun/03/security-releases/"
       ]
     },
     {
@@ -4461,7 +4461,7 @@
       "fixed_version": "0.7.1",
       "app": "nodejs-goof",
       "cvss": 7.5,
-      "epss": 0.06824,
+      "epss": 0.06954,
       "in_kev": false,
       "kev_date_added": null,
       "priority_score": 24,
@@ -8688,6 +8688,30 @@
       ]
     },
     {
+      "id": "nodejs-goof:CVE-2026-102278:brace-expansion:1.1.11",
+      "cve": "CVE-2026-102278",
+      "package": "brace-expansion",
+      "ecosystem": "npm",
+      "installed_version": "1.1.11",
+      "fixed_version": "1.1.20",
+      "app": "nodejs-goof",
+      "cvss": 7.5,
+      "epss": 0.0035,
+      "in_kev": false,
+      "kev_date_added": null,
+      "priority_score": 19,
+      "priority_label": "low",
+      "summary": {
+        "en": "The brace-expansion library generates arbitrary strings containing a common prefix and suffix. Prior to 1.1.20, 2.1.6, 3.0.8, and 5.0.11, deeply nested brace groups cause expand_() to recurse once per nesting level at comma-member and single-set expansion sites, exhausting the native stack before output limits can apply and potentially terminating the Node.js process. expand_ performs uncontrolled recursion for nested brace alternatives and single-part sets. deeply nested brace groups supplied as an untrusted pattern. expand_ is affected. expand is affected. Comma members is affected. Single set is affected. native stack exhaustion during nested sub-expansion. process-terminating denial of service. This issue is fixed in versions 1.1.20, 2.1.6, 3.0.8, and 5.0.11."
+      },
+      "references": [
+        "https://github.com/juliangruber/brace-expansion/commit/1efee7c397c191da6287a78ec19512476a966a7b",
+        "https://github.com/juliangruber/brace-expansion/commit/935d78f32f335b2ff76578e5c5e877d31ae9888c",
+        "https://github.com/juliangruber/brace-expansion/commit/de84f144e9816f30e25fc8179e2e1249ab6df0db",
+        "https://github.com/juliangruber/brace-expansion/security/advisories/GHSA-qhr7-859c-m2p7"
+      ]
+    },
+    {
       "id": "nodejs-goof:CVE-2026-102276:brace-expansion:1.1.11",
       "cve": "CVE-2026-102276",
       "package": "brace-expansion",
@@ -8710,30 +8734,6 @@
         "https://github.com/juliangruber/brace-expansion/commit/5171e681c0922b7ae8bfaf9a331e309107be6edc",
         "https://github.com/juliangruber/brace-expansion/commit/6735c94873ca570bcdd6a0690033bdd3126379d3",
         "https://github.com/juliangruber/brace-expansion/security/advisories/GHSA-6j4f-fj2g-mc7p"
-      ]
-    },
-    {
-      "id": "nodejs-goof:CVE-2026-102278:brace-expansion:1.1.11",
-      "cve": "CVE-2026-102278",
-      "package": "brace-expansion",
-      "ecosystem": "npm",
-      "installed_version": "1.1.11",
-      "fixed_version": "1.1.20",
-      "app": "nodejs-goof",
-      "cvss": 7.5,
-      "epss": 0.0035,
-      "in_kev": false,
-      "kev_date_added": null,
-      "priority_score": 19,
-      "priority_label": "low",
-      "summary": {
-        "en": "The brace-expansion library generates arbitrary strings containing a common prefix and suffix. Prior to 1.1.20, 2.1.6, 3.0.8, and 5.0.11, deeply nested brace groups cause expand_() to recurse once per nesting level at comma-member and single-set expansion sites, exhausting the native stack before output limits can apply and potentially terminating the Node.js process. expand_ performs uncontrolled recursion for nested brace alternatives and single-part sets. deeply nested brace groups supplied as an untrusted pattern. expand_ is affected. expand is affected. Comma members is affected. Single set is affected. native stack exhaustion during nested sub-expansion. process-terminating denial of service. This issue is fixed in versions 1.1.20, 2.1.6, 3.0.8, and 5.0.11."
-      },
-      "references": [
-        "https://github.com/juliangruber/brace-expansion/commit/1efee7c397c191da6287a78ec19512476a966a7b",
-        "https://github.com/juliangruber/brace-expansion/commit/935d78f32f335b2ff76578e5c5e877d31ae9888c",
-        "https://github.com/juliangruber/brace-expansion/commit/de84f144e9816f30e25fc8179e2e1249ab6df0db",
-        "https://github.com/juliangruber/brace-expansion/security/advisories/GHSA-qhr7-859c-m2p7"
       ]
     },
     {
@@ -9661,12 +9661,6 @@
   ],
   "history": [
     {
-      "date": "2026-09-11",
-      "findings_total": 311,
-      "critical": 4,
-      "high": 3
-    },
-    {
       "date": "2026-09-12",
       "findings_total": 311,
       "critical": 4,
@@ -9836,6 +9830,12 @@
     },
     {
       "date": "2026-10-10",
+      "findings_total": 344,
+      "critical": 4,
+      "high": 3
+    },
+    {
+      "date": "2026-10-11",
       "findings_total": 344,
       "critical": 4,
       "high": 3

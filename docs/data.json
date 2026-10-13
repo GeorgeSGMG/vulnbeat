@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-10-12T14:52:18.542276+00:00",
+  "generated_at": "2026-10-13T13:52:39.362144+00:00",
   "sources": {
     "kev": {
       "fetched": true,
@@ -157,6 +157,32 @@
       ]
     },
     {
+      "id": "pygoat:CVE-2025-57833:django:4.2",
+      "cve": "CVE-2025-57833",
+      "package": "django",
+      "ecosystem": "PyPI",
+      "installed_version": "4.2",
+      "fixed_version": "4.2.24",
+      "app": "pygoat",
+      "cvss": 7.1,
+      "epss": 0.26106,
+      "in_kev": false,
+      "kev_date_added": null,
+      "priority_score": 37,
+      "priority_label": "medium",
+      "summary": {
+        "en": "An issue was discovered in Django 4.2 before 4.2.24, 5.1 before 5.1.12, and 5.2 before 5.2.6. FilteredRelation is subject to SQL injection in column aliases, using a suitably crafted dictionary, with dictionary expansion, as the **kwargs passed QuerySet.annotate() or QuerySet.alias()."
+      },
+      "references": [
+        "https://docs.djangoproject.com/en/dev/releases/security/",
+        "https://groups.google.com/g/django-announce",
+        "https://medium.com/@EyalSec/django-unauthenticated-0-click-rce-and-sql-injection-using-default-configuration-059964f3f898",
+        "https://www.djangoproject.com/weblog/2025/sep/03/security-releases/",
+        "http://www.openwall.com/lists/oss-security/2025/09/03/3",
+        "https://lists.debian.org/debian-lts-announce/2025/09/msg00017.html"
+      ]
+    },
+    {
       "id": "pygoat:CVE-2025-64459:django:4.2",
       "cve": "CVE-2025-64459",
       "package": "django",
@@ -203,32 +229,6 @@
         "https://docs.djangoproject.com/en/dev/releases/security/",
         "https://groups.google.com/forum/#%21forum/django-announce",
         "https://www.djangoproject.com/weblog/2024/sep/03/security-releases/"
-      ]
-    },
-    {
-      "id": "pygoat:CVE-2025-57833:django:4.2",
-      "cve": "CVE-2025-57833",
-      "package": "django",
-      "ecosystem": "PyPI",
-      "installed_version": "4.2",
-      "fixed_version": "4.2.24",
-      "app": "pygoat",
-      "cvss": 7.1,
-      "epss": 0.26106,
-      "in_kev": false,
-      "kev_date_added": null,
-      "priority_score": 37,
-      "priority_label": "medium",
-      "summary": {
-        "en": "An issue was discovered in Django 4.2 before 4.2.24, 5.1 before 5.1.12, and 5.2 before 5.2.6. FilteredRelation is subject to SQL injection in column aliases, using a suitably crafted dictionary, with dictionary expansion, as the **kwargs passed QuerySet.annotate() or QuerySet.alias()."
-      },
-      "references": [
-        "https://docs.djangoproject.com/en/dev/releases/security/",
-        "https://groups.google.com/g/django-announce",
-        "https://medium.com/@EyalSec/django-unauthenticated-0-click-rce-and-sql-injection-using-default-configuration-059964f3f898",
-        "https://www.djangoproject.com/weblog/2025/sep/03/security-releases/",
-        "http://www.openwall.com/lists/oss-security/2025/09/03/3",
-        "https://lists.debian.org/debian-lts-announce/2025/09/msg00017.html"
       ]
     },
     {
@@ -1734,7 +1734,8 @@
       "priority_score": 18,
       "priority_label": "low",
       "summary": {
-        "en": "An issue was discovered in Django 4.2 before 4.2.25, 5.1 before 5.1.13, and 5.2 before 5.2.7. QuerySet.annotate(), QuerySet.alias(), QuerySet.aggregate(), and QuerySet.extra() are subject to SQL injection in column aliases, when using a suitably crafted dictionary, with dictionary expansion, as the **kwargs passed to these methods (on MySQL and MariaDB)."
+        "en": "An issue was discovered in Django 4.2 before 4.2.25, 5.1 before 5.1.13, and 5.2 before 5.2.7. QuerySet.annotate(), QuerySet.alias(), QuerySet.aggregate(), and QuerySet.extra() are subject to SQL injection in column aliases, when using a suitably crafted dictionary, with dictionary expansion, as the **kwargs passed to these methods (on MySQL and MariaDB).",
+        "es": "Se descubri\u00f3 un problema en Django 4.2 anterior a 4.2.25, 5.1 anterior a 5.1.13 y 5.2 anterior a 5.2.7. QuerySet.annotate(), QuerySet.alias(), QuerySet.aggregate() y QuerySet.extra() est\u00e1n sujetos a inyecci\u00f3n SQL en los alias de columna, al usar un diccionario adecuadamente dise\u00f1ado, con expansi\u00f3n de diccionario, como los kwargs pasados a estos m\u00e9todos (en MySQL y MariaDB)."
       },
       "references": [
         "https://docs.djangoproject.com/en/dev/releases/security/",
@@ -2418,7 +2419,8 @@
       "priority_score": 8,
       "priority_label": "low",
       "summary": {
-        "en": "An issue was discovered in Django 4.2 before 4.2.25, 5.1 before 5.1.13, and 5.2 before 5.2.7. The django.utils.archive.extract() function, used by the \"startapp --template\" and \"startproject --template\" commands, allows partial directory traversal via an archive with file paths sharing a common prefix with the target directory."
+        "en": "An issue was discovered in Django 4.2 before 4.2.25, 5.1 before 5.1.13, and 5.2 before 5.2.7. The django.utils.archive.extract() function, used by the \"startapp --template\" and \"startproject --template\" commands, allows partial directory traversal via an archive with file paths sharing a common prefix with the target directory.",
+        "es": "Se descubri\u00f3 un problema en Django 4.2 anterior a 4.2.25, 5.1 anterior a 5.1.13, y 5.2 anterior a 5.2.7. La funci\u00f3n django.utils.archive.extract(), utilizada por los comandos 'startapp --template' y 'startproject --template', permite un salto de directorio parcial a trav\u00e9s de un archivo con rutas de fichero que comparten un prefijo com\u00fan con el directorio objetivo."
       },
       "references": [
         "https://docs.djangoproject.com/en/dev/releases/security/",
@@ -3047,30 +3049,6 @@
       ]
     },
     {
-      "id": "pygoat:CVE-2026-48587:django:4.2",
-      "cve": "CVE-2026-48587",
-      "package": "django",
-      "ecosystem": "PyPI",
-      "installed_version": "4.2",
-      "fixed_version": "5.2.15",
-      "app": "pygoat",
-      "cvss": 3.1,
-      "epss": 0.00429,
-      "in_kev": false,
-      "kev_date_added": null,
-      "priority_score": 8,
-      "priority_label": "low",
-      "summary": {
-        "en": "An issue was discovered in Django 5.2 before 5.2.15 and 6.0 before 6.0.6.\n`django.utils.cache.has_vary_header()` in Django does not strip leading or trailing whitespace from `Vary` response header values before comparison, which allows remote attackers to read cached responses via requests to URLs whose responses contain whitespace-padded Vary header values.\nEarlier, unsupported Django series (such as 5.0.x, 4.1.x, and 3.2.x) were not evaluated and may also be affected.\nDjango would like to thank Navid Rezazadeh for reporting this issue.",
-        "es": "Se descubri\u00f3 un problema en Django 5.2 anterior a 5.2.15 y 6.0 anterior a 6.0.6.\n'django.utils.cache.has_vary_header()' en Django no elimina los espacios en blanco iniciales o finales de los valores del encabezado de respuesta 'Vary' antes de la comparaci\u00f3n, lo que permite a atacantes remotos leer respuestas en cach\u00e9 a trav\u00e9s de solicitudes a URL cuyas respuestas contienen valores de encabezado Vary rellenados con espacios en blanco.\nSeries de Django anteriores y no compatibles (como 5.0.x, 4.1.x y 3.2.x) no fueron evaluadas y tambi\u00e9n podr\u00edan estar afectadas.\nDjango desea agradecer a Navid Rezazadeh por informar sobre este problema."
-      },
-      "references": [
-        "https://docs.djangoproject.com/en/dev/releases/security/",
-        "https://groups.google.com/g/django-announce",
-        "https://www.djangoproject.com/weblog/2026/jun/03/security-releases/"
-      ]
-    },
-    {
       "id": "pygoat:CVE-2026-8404:django:4.2",
       "cve": "CVE-2026-8404",
       "package": "django",
@@ -3087,6 +3065,30 @@
       "summary": {
         "en": "An issue was discovered in Django 5.2 before 5.2.15 and 6.0 before 6.0.6.\n`django.middleware.cache.UpdateCacheMiddleware` in Django does not match `Cache-Control` response directives case-insensitively, which allows remote attackers to read responses that were incorrectly cached because their `Cache-Control` directives used uppercase or mixed-case values.\nEarlier, unsupported Django series (such as 5.0.x, 4.1.x, and 3.2.x) were not evaluated and may also be affected.\nDjango would like to thank Ahmed Badawe for reporting this issue.",
         "es": "Se descubri\u00f3 un problema en Django 5.2 anterior a 5.2.15 y 6.0 anterior a 6.0.6.\n'django.middleware.cache.UpdateCacheMiddleware' en Django no compara las directivas de respuesta 'Cache-Control' sin distinguir entre may\u00fasculas y min\u00fasculas, lo que permite a atacantes remotos leer respuestas que fueron almacenadas en cach\u00e9 incorrectamente porque sus directivas 'Cache-Control' usaban valores en may\u00fasculas o con una combinaci\u00f3n de may\u00fasculas y min\u00fasculas.\nSeries de Django anteriores y no compatibles (como 5.0.x, 4.1.x y 3.2.x) no fueron evaluadas y tambi\u00e9n podr\u00edan estar afectadas.\nDjango desea agradecer a Ahmed Badawe por informar de este problema."
+      },
+      "references": [
+        "https://docs.djangoproject.com/en/dev/releases/security/",
+        "https://groups.google.com/g/django-announce",
+        "https://www.djangoproject.com/weblog/2026/jun/03/security-releases/"
+      ]
+    },
+    {
+      "id": "pygoat:CVE-2026-48587:django:4.2",
+      "cve": "CVE-2026-48587",
+      "package": "django",
+      "ecosystem": "PyPI",
+      "installed_version": "4.2",
+      "fixed_version": "5.2.15",
+      "app": "pygoat",
+      "cvss": 3.1,
+      "epss": 0.00429,
+      "in_kev": false,
+      "kev_date_added": null,
+      "priority_score": 8,
+      "priority_label": "low",
+      "summary": {
+        "en": "An issue was discovered in Django 5.2 before 5.2.15 and 6.0 before 6.0.6.\n`django.utils.cache.has_vary_header()` in Django does not strip leading or trailing whitespace from `Vary` response header values before comparison, which allows remote attackers to read cached responses via requests to URLs whose responses contain whitespace-padded Vary header values.\nEarlier, unsupported Django series (such as 5.0.x, 4.1.x, and 3.2.x) were not evaluated and may also be affected.\nDjango would like to thank Navid Rezazadeh for reporting this issue.",
+        "es": "Se descubri\u00f3 un problema en Django 5.2 anterior a 5.2.15 y 6.0 anterior a 6.0.6.\n'django.utils.cache.has_vary_header()' en Django no elimina los espacios en blanco iniciales o finales de los valores del encabezado de respuesta 'Vary' antes de la comparaci\u00f3n, lo que permite a atacantes remotos leer respuestas en cach\u00e9 a trav\u00e9s de solicitudes a URL cuyas respuestas contienen valores de encabezado Vary rellenados con espacios en blanco.\nSeries de Django anteriores y no compatibles (como 5.0.x, 4.1.x y 3.2.x) no fueron evaluadas y tambi\u00e9n podr\u00edan estar afectadas.\nDjango desea agradecer a Navid Rezazadeh por informar sobre este problema."
       },
       "references": [
         "https://docs.djangoproject.com/en/dev/releases/security/",
@@ -8358,7 +8360,7 @@
       "priority_score": 0,
       "priority_label": "low",
       "summary": {
-        "en": "Handlebars provides the power necessary to let users build semantic templates. From 4.0.0 until 4.7.10, Handlebars lookupProperty returns Function.prototype.constructor before applying the prototype-access deny list because constructor is an own property of Function.prototype. When an attacker can render a controlled template with allowProtoMethodsByDefault enabled and an accessible function in the template context, the template can traverse from that function through its prototype to Function.prototype and then obtain the Function constructor through the own-property bypass. This permits attacker-controlled JavaScript to execute with the server application's privileges. This issue is fixed in version 4.7.10."
+        "en": "Handlebars provides the power necessary to let users build semantic templates. From 3.0.0 until 4.7.10, Handlebars lookupProperty returns Function.prototype.constructor before applying the prototype-access deny list because constructor is an own property of Function.prototype. When an attacker can render a controlled template with allowProtoMethodsByDefault enabled and an accessible function in the template context, the template can traverse from that function through its prototype to Function.prototype and then obtain the Function constructor through the own-property bypass. This permits attacker-controlled JavaScript to execute with the server application's privileges. This issue is fixed in version 4.7.10."
       },
       "references": [
         "https://github.com/handlebars-lang/handlebars.js/commit/ceec388abe1d1aac8f6369860d5f390fa71ef4fa",
@@ -8382,7 +8384,7 @@
       "priority_score": 0,
       "priority_label": "low",
       "summary": {
-        "en": "Handlebars provides the power necessary to let users build semantic templates. From 4.0.0 until 4.7.10, Handlebars lookupProperty returns Function.prototype.constructor before applying the prototype-access deny list because constructor is an own property of Function.prototype. When an attacker can render a controlled template with allowProtoMethodsByDefault enabled and an accessible function in the template context, the template can traverse from that function through its prototype to Function.prototype and then obtain the Function constructor through the own-property bypass. This permits attacker-controlled JavaScript to execute with the server application's privileges. This issue is fixed in version 4.7.10."
+        "en": "Handlebars provides the power necessary to let users build semantic templates. From 3.0.0 until 4.7.10, Handlebars lookupProperty returns Function.prototype.constructor before applying the prototype-access deny list because constructor is an own property of Function.prototype. When an attacker can render a controlled template with allowProtoMethodsByDefault enabled and an accessible function in the template context, the template can traverse from that function through its prototype to Function.prototype and then obtain the Function constructor through the own-property bypass. This permits attacker-controlled JavaScript to execute with the server application's privileges. This issue is fixed in version 4.7.10."
       },
       "references": [
         "https://github.com/handlebars-lang/handlebars.js/commit/ceec388abe1d1aac8f6369860d5f390fa71ef4fa",
@@ -8689,30 +8691,6 @@
       ]
     },
     {
-      "id": "nodejs-goof:CVE-2026-102278:brace-expansion:1.1.11",
-      "cve": "CVE-2026-102278",
-      "package": "brace-expansion",
-      "ecosystem": "npm",
-      "installed_version": "1.1.11",
-      "fixed_version": "1.1.20",
-      "app": "nodejs-goof",
-      "cvss": 7.5,
-      "epss": 0.0035,
-      "in_kev": false,
-      "kev_date_added": null,
-      "priority_score": 19,
-      "priority_label": "low",
-      "summary": {
-        "en": "The brace-expansion library generates arbitrary strings containing a common prefix and suffix. Prior to 1.1.20, 2.1.6, 3.0.8, and 5.0.11, deeply nested brace groups cause expand_() to recurse once per nesting level at comma-member and single-set expansion sites, exhausting the native stack before output limits can apply and potentially terminating the Node.js process. expand_ performs uncontrolled recursion for nested brace alternatives and single-part sets. deeply nested brace groups supplied as an untrusted pattern. expand_ is affected. expand is affected. Comma members is affected. Single set is affected. native stack exhaustion during nested sub-expansion. process-terminating denial of service. This issue is fixed in versions 1.1.20, 2.1.6, 3.0.8, and 5.0.11."
-      },
-      "references": [
-        "https://github.com/juliangruber/brace-expansion/commit/1efee7c397c191da6287a78ec19512476a966a7b",
-        "https://github.com/juliangruber/brace-expansion/commit/935d78f32f335b2ff76578e5c5e877d31ae9888c",
-        "https://github.com/juliangruber/brace-expansion/commit/de84f144e9816f30e25fc8179e2e1249ab6df0db",
-        "https://github.com/juliangruber/brace-expansion/security/advisories/GHSA-qhr7-859c-m2p7"
-      ]
-    },
-    {
       "id": "nodejs-goof:CVE-2026-102276:brace-expansion:1.1.11",
       "cve": "CVE-2026-102276",
       "package": "brace-expansion",
@@ -8735,6 +8713,30 @@
         "https://github.com/juliangruber/brace-expansion/commit/5171e681c0922b7ae8bfaf9a331e309107be6edc",
         "https://github.com/juliangruber/brace-expansion/commit/6735c94873ca570bcdd6a0690033bdd3126379d3",
         "https://github.com/juliangruber/brace-expansion/security/advisories/GHSA-6j4f-fj2g-mc7p"
+      ]
+    },
+    {
+      "id": "nodejs-goof:CVE-2026-102278:brace-expansion:1.1.11",
+      "cve": "CVE-2026-102278",
+      "package": "brace-expansion",
+      "ecosystem": "npm",
+      "installed_version": "1.1.11",
+      "fixed_version": "1.1.20",
+      "app": "nodejs-goof",
+      "cvss": 7.5,
+      "epss": 0.0035,
+      "in_kev": false,
+      "kev_date_added": null,
+      "priority_score": 19,
+      "priority_label": "low",
+      "summary": {
+        "en": "The brace-expansion library generates arbitrary strings containing a common prefix and suffix. Prior to 1.1.20, 2.1.6, 3.0.8, and 5.0.11, deeply nested brace groups cause expand_() to recurse once per nesting level at comma-member and single-set expansion sites, exhausting the native stack before output limits can apply and potentially terminating the Node.js process. expand_ performs uncontrolled recursion for nested brace alternatives and single-part sets. deeply nested brace groups supplied as an untrusted pattern. expand_ is affected. expand is affected. Comma members is affected. Single set is affected. native stack exhaustion during nested sub-expansion. process-terminating denial of service. This issue is fixed in versions 1.1.20, 2.1.6, 3.0.8, and 5.0.11."
+      },
+      "references": [
+        "https://github.com/juliangruber/brace-expansion/commit/1efee7c397c191da6287a78ec19512476a966a7b",
+        "https://github.com/juliangruber/brace-expansion/commit/935d78f32f335b2ff76578e5c5e877d31ae9888c",
+        "https://github.com/juliangruber/brace-expansion/commit/de84f144e9816f30e25fc8179e2e1249ab6df0db",
+        "https://github.com/juliangruber/brace-expansion/security/advisories/GHSA-qhr7-859c-m2p7"
       ]
     },
     {
@@ -9143,32 +9145,6 @@
         "https://github.com/typeorm/typeorm/releases/tag/0.3.31",
         "https://github.com/typeorm/typeorm/releases/tag/1.1.0",
         "https://github.com/typeorm/typeorm/security/advisories/GHSA-2rp8-mm9q-fp49"
-      ]
-    },
-    {
-      "id": "nodejs-goof:CVE-2026-97058:sprintf-js:1.0.3",
-      "cve": "CVE-2026-97058",
-      "package": "sprintf-js",
-      "ecosystem": "npm",
-      "installed_version": "1.0.3",
-      "fixed_version": null,
-      "app": "nodejs-goof",
-      "cvss": 5.3,
-      "epss": 0.00398,
-      "in_kev": false,
-      "kev_date_added": null,
-      "priority_score": 14,
-      "priority_label": "low",
-      "summary": {
-        "en": "sprintf-js through 1.1.3 passes unbounded precision specifiers to toFixed, toExponential, and toPrecision methods without validation, causing uncaught RangeError exceptions. Attackers who control format strings can inject precision values exceeding ECMAScript limits to abort calling operations with minimal payload."
-      },
-      "references": [
-        "https://github.com/alexei/sprintf.js",
-        "https://github.com/alexei/sprintf.js/blob/3a0d8c26d291b5bd9f1974877ecc50739921d6f5/src/sprintf.js#L17",
-        "https://github.com/alexei/sprintf.js/blob/3a0d8c26d291b5bd9f1974877ecc50739921d6f5/src/sprintf.js#L84-L90",
-        "https://github.com/alexei/sprintf.js/issues/237",
-        "https://www.vulncheck.com/advisories/sprintf-js-through-1.1.3-denial-of-service-via-unbounded-precision",
-        "https://github.com/alexei/sprintf.js/issues/237#issuecomment-6025091396"
       ]
     },
     {
@@ -9663,12 +9639,6 @@
   ],
   "history": [
     {
-      "date": "2026-09-13",
-      "findings_total": 311,
-      "critical": 4,
-      "high": 3
-    },
-    {
       "date": "2026-09-14",
       "findings_total": 311,
       "critical": 4,
@@ -9839,6 +9809,12 @@
     {
       "date": "2026-10-12",
       "findings_total": 344,
+      "critical": 4,
+      "high": 3
+    },
+    {
+      "date": "2026-10-13",
+      "findings_total": 343,
       "critical": 4,
       "high": 3
     }

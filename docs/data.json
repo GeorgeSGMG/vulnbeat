@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-10-13T13:52:39.362144+00:00",
+  "generated_at": "2026-10-14T11:31:27.813668+00:00",
   "sources": {
     "kev": {
       "fetched": true,
@@ -7,11 +7,11 @@
     },
     "epss": {
       "fetched": true,
-      "entries": 282
+      "entries": 281
     },
     "nvd": {
       "fetched": true,
-      "entries": 283
+      "entries": 285
     }
   },
   "apps": [
@@ -2146,29 +2146,6 @@
       ]
     },
     {
-      "id": "pygoat:CVE-2026-54060:pillow:9.4.0",
-      "cve": "CVE-2026-54060",
-      "package": "pillow",
-      "ecosystem": "PyPI",
-      "installed_version": "9.4.0",
-      "fixed_version": "12.3.0",
-      "app": "pygoat",
-      "cvss": 7.5,
-      "epss": 0.00418,
-      "in_kev": false,
-      "kev_date_added": null,
-      "priority_score": 19,
-      "priority_label": "low",
-      "summary": {
-        "en": "Pillow is a Python imaging library. Prior to 12.3.0, PIL/FontFile.py FontFile.compile() assembled per-glyph images into a combined bitmap with Image.new(\"1\", (xsize, ysize)) without calling Image._decompression_bomb_check(), allowing a font to trigger excessive allocation during conversion or saving. This issue is fixed in version 12.3.0."
-      },
-      "references": [
-        "https://github.com/python-pillow/Pillow/blob/main/docs/releasenotes/12.3.0.rst",
-        "https://github.com/python-pillow/Pillow/commit/0a263e6264aa5399988d9acd3bbfbca2ca3ec77d",
-        "https://github.com/python-pillow/Pillow/security/advisories/GHSA-5x94-69rx-g8h2"
-      ]
-    },
-    {
       "id": "pygoat:CVE-2026-55380:pillow:9.4.0",
       "cve": "CVE-2026-55380",
       "package": "pillow",
@@ -2189,6 +2166,29 @@
         "https://github.com/python-pillow/Pillow/blob/main/docs/releasenotes/12.3.0.rst",
         "https://github.com/python-pillow/Pillow/commit/f39b0ae6624eb2d7c5c5d651d9bb5fdbd96a8675",
         "https://github.com/python-pillow/Pillow/security/advisories/GHSA-phj9-mv4w-65pm"
+      ]
+    },
+    {
+      "id": "pygoat:CVE-2026-54060:pillow:9.4.0",
+      "cve": "CVE-2026-54060",
+      "package": "pillow",
+      "ecosystem": "PyPI",
+      "installed_version": "9.4.0",
+      "fixed_version": "12.3.0",
+      "app": "pygoat",
+      "cvss": 7.5,
+      "epss": 0.00418,
+      "in_kev": false,
+      "kev_date_added": null,
+      "priority_score": 19,
+      "priority_label": "low",
+      "summary": {
+        "en": "Pillow is a Python imaging library. Prior to 12.3.0, PIL/FontFile.py FontFile.compile() assembled per-glyph images into a combined bitmap with Image.new(\"1\", (xsize, ysize)) without calling Image._decompression_bomb_check(), allowing a font to trigger excessive allocation during conversion or saving. This issue is fixed in version 12.3.0."
+      },
+      "references": [
+        "https://github.com/python-pillow/Pillow/blob/main/docs/releasenotes/12.3.0.rst",
+        "https://github.com/python-pillow/Pillow/commit/0a263e6264aa5399988d9acd3bbfbca2ca3ec77d",
+        "https://github.com/python-pillow/Pillow/security/advisories/GHSA-5x94-69rx-g8h2"
       ]
     },
     {
@@ -2286,30 +2286,6 @@
       ]
     },
     {
-      "id": "pygoat:CVE-2026-59199:pillow:9.4.0",
-      "cve": "CVE-2026-59199",
-      "package": "pillow",
-      "ecosystem": "PyPI",
-      "installed_version": "9.4.0",
-      "fixed_version": "12.3.0",
-      "app": "pygoat",
-      "cvss": 7.5,
-      "epss": 0.00385,
-      "in_kev": false,
-      "kev_date_added": null,
-      "priority_score": 19,
-      "priority_label": "low",
-      "summary": {
-        "en": "Pillow is a Python imaging library. Prior to 12.3.0, Pillow public image coordinate APIs can trigger a native heap out-of-bounds write when given coordinates near the signed 32-bit integer limits in Image.paste(), Image.crop(), or Image.alpha_composite(). This issue is fixed in version 12.3.0."
-      },
-      "references": [
-        "https://github.com/python-pillow/Pillow/commit/ceefc348eb3c3844c7f9796ef2cc3a7dd5fbba7b",
-        "https://github.com/python-pillow/Pillow/pull/9703",
-        "https://github.com/python-pillow/Pillow/releases/tag/12.3.0",
-        "https://github.com/python-pillow/Pillow/security/advisories/GHSA-6r8x-57c9-28j4"
-      ]
-    },
-    {
       "id": "pygoat:CVE-2026-59200:pillow:9.4.0",
       "cve": "CVE-2026-59200",
       "package": "pillow",
@@ -2331,6 +2307,30 @@
         "https://github.com/python-pillow/Pillow/pull/9718",
         "https://github.com/python-pillow/Pillow/releases/tag/12.3.0",
         "https://github.com/python-pillow/Pillow/security/advisories/GHSA-jjj6-mw9f-p565"
+      ]
+    },
+    {
+      "id": "pygoat:CVE-2026-59199:pillow:9.4.0",
+      "cve": "CVE-2026-59199",
+      "package": "pillow",
+      "ecosystem": "PyPI",
+      "installed_version": "9.4.0",
+      "fixed_version": "12.3.0",
+      "app": "pygoat",
+      "cvss": 7.5,
+      "epss": 0.00385,
+      "in_kev": false,
+      "kev_date_added": null,
+      "priority_score": 19,
+      "priority_label": "low",
+      "summary": {
+        "en": "Pillow is a Python imaging library. Prior to 12.3.0, Pillow public image coordinate APIs can trigger a native heap out-of-bounds write when given coordinates near the signed 32-bit integer limits in Image.paste(), Image.crop(), or Image.alpha_composite(). This issue is fixed in version 12.3.0."
+      },
+      "references": [
+        "https://github.com/python-pillow/Pillow/commit/ceefc348eb3c3844c7f9796ef2cc3a7dd5fbba7b",
+        "https://github.com/python-pillow/Pillow/pull/9703",
+        "https://github.com/python-pillow/Pillow/releases/tag/12.3.0",
+        "https://github.com/python-pillow/Pillow/security/advisories/GHSA-6r8x-57c9-28j4"
       ]
     },
     {
@@ -2600,11 +2600,11 @@
       "installed_version": "1.26.9",
       "fixed_version": "2.8.0",
       "app": "pygoat",
-      "cvss": null,
+      "cvss": 7.5,
       "epss": 0.00292,
       "in_kev": false,
       "kev_date_added": null,
-      "priority_score": 0,
+      "priority_score": 19,
       "priority_label": "low",
       "summary": {
         "en": "urllib3 is an HTTP client library for Python. From 1.10.3 until 2.8.0, the HTTPResponse.read_chunked and HTTPResponse.stream methods can allocate unbounded memory because the streaming chunk parser buffers the chunk-size field until newline or EOF without a length bound. The trigger is that a malicious server returns Transfer-Encoding: chunked followed by a very long run of bytes without a newline. The attack mechanism is that a malicious HTTP server sends a very long unterminated chunk-size line. The impact is that unbounded memory allocation can exhaust the client process. This issue is fixed in version 2.8.0."
@@ -2818,12 +2818,12 @@
       "installed_version": "1.26.9",
       "fixed_version": "2.8.0",
       "app": "pygoat",
-      "cvss": null,
+      "cvss": 8.1,
       "epss": 0.00242,
       "in_kev": false,
       "kev_date_added": null,
-      "priority_score": 0,
-      "priority_label": "low",
+      "priority_score": 20,
+      "priority_label": "medium",
       "summary": {
         "en": "urllib3 is an HTTP client library for Python. From 1.26.0 until 2.8.0, the proxy_ssl_context, proxy_assert_hostname, proxy_assert_fingerprint, ssl_context, cert_reqs, verify_mode, use_forwarding_for_https=True, and CERT_NONE configuration paths fail to remain separated because target-server TLS settings are incorrectly applied to the HTTPS proxy connection. The trigger is that an application uses an HTTPS proxy and configures target-server TLS settings that must remain separate from the proxy TLS handshake, including HTTPS forwarding with target-specific identity or credentials. Applying cert_reqs=CERT_NONE can overwrite proxy_ssl_context.verify_mode in place, and the mutation persists so later connections reusing the same context may connect to the HTTPS proxy without certificate verification. The attack mechanism is that an attacker intercepts and impersonates the HTTPS proxy after the effective proxy policy accepts the attacker's certificate. The impact is that the attacker can observe or modify forwarded traffic or receive a target TLS client certificate, while CONNECT tunneling still preserves the separate end-to-end target TLS connection. This issue is fixed in version 2.8.0."
       },
@@ -3026,6 +3026,30 @@
       ]
     },
     {
+      "id": "pygoat:CVE-2026-48587:django:4.2",
+      "cve": "CVE-2026-48587",
+      "package": "django",
+      "ecosystem": "PyPI",
+      "installed_version": "4.2",
+      "fixed_version": "5.2.15",
+      "app": "pygoat",
+      "cvss": 3.1,
+      "epss": 0.00429,
+      "in_kev": false,
+      "kev_date_added": null,
+      "priority_score": 8,
+      "priority_label": "low",
+      "summary": {
+        "en": "An issue was discovered in Django 5.2 before 5.2.15 and 6.0 before 6.0.6.\n`django.utils.cache.has_vary_header()` in Django does not strip leading or trailing whitespace from `Vary` response header values before comparison, which allows remote attackers to read cached responses via requests to URLs whose responses contain whitespace-padded Vary header values.\nEarlier, unsupported Django series (such as 5.0.x, 4.1.x, and 3.2.x) were not evaluated and may also be affected.\nDjango would like to thank Navid Rezazadeh for reporting this issue.",
+        "es": "Se descubri\u00f3 un problema en Django 5.2 anterior a 5.2.15 y 6.0 anterior a 6.0.6.\n'django.utils.cache.has_vary_header()' en Django no elimina los espacios en blanco iniciales o finales de los valores del encabezado de respuesta 'Vary' antes de la comparaci\u00f3n, lo que permite a atacantes remotos leer respuestas en cach\u00e9 a trav\u00e9s de solicitudes a URL cuyas respuestas contienen valores de encabezado Vary rellenados con espacios en blanco.\nSeries de Django anteriores y no compatibles (como 5.0.x, 4.1.x y 3.2.x) no fueron evaluadas y tambi\u00e9n podr\u00edan estar afectadas.\nDjango desea agradecer a Navid Rezazadeh por informar sobre este problema."
+      },
+      "references": [
+        "https://docs.djangoproject.com/en/dev/releases/security/",
+        "https://groups.google.com/g/django-announce",
+        "https://www.djangoproject.com/weblog/2026/jun/03/security-releases/"
+      ]
+    },
+    {
       "id": "pygoat:CVE-2026-48588:django:4.2",
       "cve": "CVE-2026-48588",
       "package": "django",
@@ -3065,30 +3089,6 @@
       "summary": {
         "en": "An issue was discovered in Django 5.2 before 5.2.15 and 6.0 before 6.0.6.\n`django.middleware.cache.UpdateCacheMiddleware` in Django does not match `Cache-Control` response directives case-insensitively, which allows remote attackers to read responses that were incorrectly cached because their `Cache-Control` directives used uppercase or mixed-case values.\nEarlier, unsupported Django series (such as 5.0.x, 4.1.x, and 3.2.x) were not evaluated and may also be affected.\nDjango would like to thank Ahmed Badawe for reporting this issue.",
         "es": "Se descubri\u00f3 un problema en Django 5.2 anterior a 5.2.15 y 6.0 anterior a 6.0.6.\n'django.middleware.cache.UpdateCacheMiddleware' en Django no compara las directivas de respuesta 'Cache-Control' sin distinguir entre may\u00fasculas y min\u00fasculas, lo que permite a atacantes remotos leer respuestas que fueron almacenadas en cach\u00e9 incorrectamente porque sus directivas 'Cache-Control' usaban valores en may\u00fasculas o con una combinaci\u00f3n de may\u00fasculas y min\u00fasculas.\nSeries de Django anteriores y no compatibles (como 5.0.x, 4.1.x y 3.2.x) no fueron evaluadas y tambi\u00e9n podr\u00edan estar afectadas.\nDjango desea agradecer a Ahmed Badawe por informar de este problema."
-      },
-      "references": [
-        "https://docs.djangoproject.com/en/dev/releases/security/",
-        "https://groups.google.com/g/django-announce",
-        "https://www.djangoproject.com/weblog/2026/jun/03/security-releases/"
-      ]
-    },
-    {
-      "id": "pygoat:CVE-2026-48587:django:4.2",
-      "cve": "CVE-2026-48587",
-      "package": "django",
-      "ecosystem": "PyPI",
-      "installed_version": "4.2",
-      "fixed_version": "5.2.15",
-      "app": "pygoat",
-      "cvss": 3.1,
-      "epss": 0.00429,
-      "in_kev": false,
-      "kev_date_added": null,
-      "priority_score": 8,
-      "priority_label": "low",
-      "summary": {
-        "en": "An issue was discovered in Django 5.2 before 5.2.15 and 6.0 before 6.0.6.\n`django.utils.cache.has_vary_header()` in Django does not strip leading or trailing whitespace from `Vary` response header values before comparison, which allows remote attackers to read cached responses via requests to URLs whose responses contain whitespace-padded Vary header values.\nEarlier, unsupported Django series (such as 5.0.x, 4.1.x, and 3.2.x) were not evaluated and may also be affected.\nDjango would like to thank Navid Rezazadeh for reporting this issue.",
-        "es": "Se descubri\u00f3 un problema en Django 5.2 anterior a 5.2.15 y 6.0 anterior a 6.0.6.\n'django.utils.cache.has_vary_header()' en Django no elimina los espacios en blanco iniciales o finales de los valores del encabezado de respuesta 'Vary' antes de la comparaci\u00f3n, lo que permite a atacantes remotos leer respuestas en cach\u00e9 a trav\u00e9s de solicitudes a URL cuyas respuestas contienen valores de encabezado Vary rellenados con espacios en blanco.\nSeries de Django anteriores y no compatibles (como 5.0.x, 4.1.x y 3.2.x) no fueron evaluadas y tambi\u00e9n podr\u00edan estar afectadas.\nDjango desea agradecer a Navid Rezazadeh por informar sobre este problema."
       },
       "references": [
         "https://docs.djangoproject.com/en/dev/releases/security/",
@@ -3514,14 +3514,21 @@
       "installed_version": "3.2.2",
       "fixed_version": "4.0.0",
       "app": "pygoat",
-      "cvss": null,
+      "cvss": 6.1,
       "epss": null,
       "in_kev": false,
       "kev_date_added": null,
-      "priority_score": 0,
+      "priority_score": 15,
       "priority_label": "low",
-      "summary": {},
-      "references": []
+      "summary": {
+        "en": "OAuthLib is an implementation of the OAuth request-signing logic for Python 3.6+. From 0.6.1 until 4.0.0, OAuthLib's RevocationEndpoint in oauthlib/oauth2/rfc6749/endpoints/revocation.py reflects an unvalidated callback request parameter into success and error response bodies when enable_jsonp=True. The callback can come from the query string or request body and is used without restricting it to a legal JavaScript function name. A browser application that loads the revocation response as trusted JSONP and permits attacker influence over callback can therefore execute attacker-controlled JavaScript in the including application's origin, with access to its DOM and script-accessible data. The feature is disabled by default, so only deployments that explicitly enable JSONP are affected. This issue is fixed in version 4.0.0."
+      },
+      "references": [
+        "https://github.com/oauthlib/oauthlib/commit/c888359f3c42bec235b2c5caab2069c9ed62457c",
+        "https://github.com/oauthlib/oauthlib/pull/951",
+        "https://github.com/oauthlib/oauthlib/releases/tag/v4.0.0",
+        "https://github.com/oauthlib/oauthlib/security/advisories/GHSA-hj66-6f7g-4r5v"
+      ]
     },
     {
       "id": "pygoat:CVE-2026-49265:oauthlib:3.2.2",
@@ -3531,14 +3538,22 @@
       "installed_version": "3.2.2",
       "fixed_version": "4.0.0",
       "app": "pygoat",
-      "cvss": null,
+      "cvss": 6.8,
       "epss": null,
       "in_kev": false,
       "kev_date_added": null,
-      "priority_score": 0,
+      "priority_score": 17,
       "priority_label": "low",
-      "summary": {},
-      "references": []
+      "summary": {
+        "en": "OAuthLib is an implementation of the OAuth request-signing logic for Python 3.6+. From 3.0.0 until 4.0.0, OAuthLib's PKCE checks in oauthlib/oauth2/rfc6749/grant_types/authorization_code.py compare attacker-supplied code_verifier values with stored challenges using ordinary string equality in code_challenge_method_plain and code_challenge_method_s256. Because the comparison can return after a length difference or the first mismatching character, repeated token endpoint measurements can reveal common-prefix timing information that could potentially allow recovery of the code_verifier, unauthorized access-token acquisition, and account takeover. Practical exploitation requires an intercepted, single-use authorization code and enough measurements to overcome real-world network noise; the local timing benchmark does not establish practical remote account takeover, so the weakness remains a defense-in-depth concern. This issue is fixed in version 4.0.0."
+      },
+      "references": [
+        "https://github.com/oauthlib/oauthlib/commit/74664d3fe037a354e180e305135c6bab1747a6b0",
+        "https://github.com/oauthlib/oauthlib/pull/963",
+        "https://github.com/oauthlib/oauthlib/releases/tag/v4.0.0",
+        "https://github.com/oauthlib/oauthlib/security/advisories/GHSA-xpv3-w29h-x7cv",
+        "https://github.com/pypa/advisory-database/tree/main/vulns/oauthlib/PYSEC-2026-4114.yaml"
+      ]
     },
     {
       "id": "nodejs-goof:CVE-2020-11023:jquery:2.2.4",
@@ -8061,7 +8076,7 @@
       "fixed_version": null,
       "app": "nodejs-goof",
       "cvss": 9.3,
-      "epss": 0.0052,
+      "epss": 0.00525,
       "in_kev": false,
       "kev_date_added": null,
       "priority_score": 24,
@@ -9398,6 +9413,33 @@
       ]
     },
     {
+      "id": "nodejs-goof:CVE-2025-5889:brace-expansion:1.1.11",
+      "cve": "CVE-2025-5889",
+      "package": "brace-expansion",
+      "ecosystem": "npm",
+      "installed_version": "1.1.11",
+      "fixed_version": "1.1.12",
+      "app": "nodejs-goof",
+      "cvss": 3.1,
+      "epss": 0.00586,
+      "in_kev": false,
+      "kev_date_added": null,
+      "priority_score": 8,
+      "priority_label": "low",
+      "summary": {
+        "en": "A vulnerability was found in juliangruber brace-expansion up to 1.1.11/2.0.1/3.0.0/4.0.0. It has been rated as problematic. Affected by this issue is the function expand of the file index.js. The manipulation leads to inefficient regular expression complexity. The attack may be launched remotely. The complexity of an attack is rather high. The exploitation is known to be difficult. The exploit has been disclosed to the public and may be used. Upgrading to version 1.1.12, 2.0.2, 3.0.1 and 4.0.1 is able to address this issue. The name of the patch is a5b98a4f30d7813266b221435e1eaaf25a1b0ac5. It is recommended to upgrade the affected component.",
+        "es": "Se encontr\u00f3 una vulnerabilidad en juliangruber brace-expansion hasta la versi\u00f3n 1.1.11. Se ha clasificado como problem\u00e1tica. Este problema afecta a la funci\u00f3n \"expand\" del archivo index.js. La manipulaci\u00f3n genera una complejidad ineficiente en las expresiones regulares. El ataque puede ejecutarse en remoto. Es un ataque de complejidad bastante alta. Parece dif\u00edcil de explotar. Se ha hecho p\u00fablico el exploit y puede que sea utilizado. El parche se llama a5b98a4f30d7813266b221435e1eaaf25a1b0ac5. Se recomienda aplicar un parche para solucionar este problema."
+      },
+      "references": [
+        "https://gist.github.com/mmmsssttt404/37a40ce7d6e5ca604858fe30814d9466",
+        "https://github.com/juliangruber/brace-expansion/pull/65/commits/a5b98a4f30d7813266b221435e1eaaf25a1b0ac5",
+        "https://github.com/juliangruber/brace-expansion/releases/tag/v4.0.1",
+        "https://vuldb.com/?ctiid.311660",
+        "https://vuldb.com/?id.311660",
+        "https://vuldb.com/?submit.585717"
+      ]
+    },
+    {
       "id": "nodejs-goof:CVE-2026-15603:morgan:1.10.0",
       "cve": "CVE-2026-15603",
       "package": "morgan",
@@ -9417,33 +9459,6 @@
       "references": [
         "https://cna.openjsf.org/security-advisories.html",
         "https://github.com/expressjs/morgan/security/advisories/GHSA-jxfw-x594-9x9m"
-      ]
-    },
-    {
-      "id": "nodejs-goof:CVE-2025-5889:brace-expansion:1.1.11",
-      "cve": "CVE-2025-5889",
-      "package": "brace-expansion",
-      "ecosystem": "npm",
-      "installed_version": "1.1.11",
-      "fixed_version": "1.1.12",
-      "app": "nodejs-goof",
-      "cvss": 3.1,
-      "epss": 0.00572,
-      "in_kev": false,
-      "kev_date_added": null,
-      "priority_score": 8,
-      "priority_label": "low",
-      "summary": {
-        "en": "A vulnerability was found in juliangruber brace-expansion up to 1.1.11/2.0.1/3.0.0/4.0.0. It has been rated as problematic. Affected by this issue is the function expand of the file index.js. The manipulation leads to inefficient regular expression complexity. The attack may be launched remotely. The complexity of an attack is rather high. The exploitation is known to be difficult. The exploit has been disclosed to the public and may be used. Upgrading to version 1.1.12, 2.0.2, 3.0.1 and 4.0.1 is able to address this issue. The name of the patch is a5b98a4f30d7813266b221435e1eaaf25a1b0ac5. It is recommended to upgrade the affected component.",
-        "es": "Se encontr\u00f3 una vulnerabilidad en juliangruber brace-expansion hasta la versi\u00f3n 1.1.11. Se ha clasificado como problem\u00e1tica. Este problema afecta a la funci\u00f3n \"expand\" del archivo index.js. La manipulaci\u00f3n genera una complejidad ineficiente en las expresiones regulares. El ataque puede ejecutarse en remoto. Es un ataque de complejidad bastante alta. Parece dif\u00edcil de explotar. Se ha hecho p\u00fablico el exploit y puede que sea utilizado. El parche se llama a5b98a4f30d7813266b221435e1eaaf25a1b0ac5. Se recomienda aplicar un parche para solucionar este problema."
-      },
-      "references": [
-        "https://gist.github.com/mmmsssttt404/37a40ce7d6e5ca604858fe30814d9466",
-        "https://github.com/juliangruber/brace-expansion/pull/65/commits/a5b98a4f30d7813266b221435e1eaaf25a1b0ac5",
-        "https://github.com/juliangruber/brace-expansion/releases/tag/v4.0.1",
-        "https://vuldb.com/?ctiid.311660",
-        "https://vuldb.com/?id.311660",
-        "https://vuldb.com/?submit.585717"
       ]
     },
     {
@@ -9573,11 +9588,11 @@
       "installed_version": "2.7.0",
       "fixed_version": "2.8.0",
       "app": "vulnbeat",
-      "cvss": null,
+      "cvss": 7.5,
       "epss": 0.00292,
       "in_kev": false,
       "kev_date_added": null,
-      "priority_score": 0,
+      "priority_score": 19,
       "priority_label": "low",
       "summary": {
         "en": "urllib3 is an HTTP client library for Python. From 1.10.3 until 2.8.0, the HTTPResponse.read_chunked and HTTPResponse.stream methods can allocate unbounded memory because the streaming chunk parser buffers the chunk-size field until newline or EOF without a length bound. The trigger is that a malicious server returns Transfer-Encoding: chunked followed by a very long run of bytes without a newline. The attack mechanism is that a malicious HTTP server sends a very long unterminated chunk-size line. The impact is that unbounded memory allocation can exhaust the client process. This issue is fixed in version 2.8.0."
@@ -9596,12 +9611,12 @@
       "installed_version": "2.7.0",
       "fixed_version": "2.8.0",
       "app": "vulnbeat",
-      "cvss": null,
+      "cvss": 8.1,
       "epss": 0.00242,
       "in_kev": false,
       "kev_date_added": null,
-      "priority_score": 0,
-      "priority_label": "low",
+      "priority_score": 20,
+      "priority_label": "medium",
       "summary": {
         "en": "urllib3 is an HTTP client library for Python. From 1.26.0 until 2.8.0, the proxy_ssl_context, proxy_assert_hostname, proxy_assert_fingerprint, ssl_context, cert_reqs, verify_mode, use_forwarding_for_https=True, and CERT_NONE configuration paths fail to remain separated because target-server TLS settings are incorrectly applied to the HTTPS proxy connection. The trigger is that an application uses an HTTPS proxy and configures target-server TLS settings that must remain separate from the proxy TLS handshake, including HTTPS forwarding with target-specific identity or credentials. Applying cert_reqs=CERT_NONE can overwrite proxy_ssl_context.verify_mode in place, and the mutation persists so later connections reusing the same context may connect to the HTTPS proxy without certificate verification. The attack mechanism is that an attacker intercepts and impersonates the HTTPS proxy after the effective proxy policy accepts the attacker's certificate. The impact is that the attacker can observe or modify forwarded traffic or receive a target TLS client certificate, while CONNECT tunneling still preserves the separate end-to-end target TLS connection. This issue is fixed in version 2.8.0."
       },
@@ -9621,11 +9636,11 @@
       "installed_version": "2.7.0",
       "fixed_version": "2.8.0",
       "app": "vulnbeat",
-      "cvss": null,
+      "cvss": 5.3,
       "epss": 0.00291,
       "in_kev": false,
       "kev_date_added": null,
-      "priority_score": 0,
+      "priority_score": 13,
       "priority_label": "low",
       "summary": {
         "en": "urllib3 is an HTTP client library for Python. From 2.6.2 until 2.8.0, HTTPResponse.stream and HTTPResponse.read_chunked can enter an infinite loop because the Deflate decoder retains trailing bytes as unconsumed input after reaching end-of-stream and repeatedly decodes them without progress. The issue occurs when an untrusted server sends a chunked Deflate response whose decoded body exceeds a positive finite chunk size and whose encoded body has trailing bytes, specifically a response with Transfer-Encoding: chunked and Content-Encoding: deflate, content decoding enabled, and the positive finite amt=N streaming chunk size. The attack mechanism is that a malicious server returns a compressed chunked response with trailing bytes after the Deflate stream. The impact is excessive CPU usage and a request that does not complete, and network read timeouts do not interrupt the loop because no further socket read occurs. This issue is fixed in version 2.8.0."
@@ -9638,12 +9653,6 @@
     }
   ],
   "history": [
-    {
-      "date": "2026-09-14",
-      "findings_total": 311,
-      "critical": 4,
-      "high": 3
-    },
     {
       "date": "2026-09-15",
       "findings_total": 311,
@@ -9814,6 +9823,12 @@
     },
     {
       "date": "2026-10-13",
+      "findings_total": 343,
+      "critical": 4,
+      "high": 3
+    },
+    {
+      "date": "2026-10-14",
       "findings_total": 343,
       "critical": 4,
       "high": 3

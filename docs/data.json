@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-10-15T11:07:27.848591+00:00",
+  "generated_at": "2026-10-16T11:03:20.157100+00:00",
   "sources": {
     "kev": {
       "fetched": true,
@@ -276,7 +276,7 @@
       "fixed_version": "4.2.21",
       "app": "pygoat",
       "cvss": 5.3,
-      "epss": 0.14187,
+      "epss": 0.1431,
       "in_kev": false,
       "kev_date_added": null,
       "priority_score": 24,
@@ -1968,30 +1968,6 @@
       ]
     },
     {
-      "id": "pygoat:CVE-2025-14550:django:4.2",
-      "cve": "CVE-2025-14550",
-      "package": "django",
-      "ecosystem": "PyPI",
-      "installed_version": "4.2",
-      "fixed_version": "4.2.28",
-      "app": "pygoat",
-      "cvss": 7.5,
-      "epss": 0.01128,
-      "in_kev": false,
-      "kev_date_added": null,
-      "priority_score": 20,
-      "priority_label": "medium",
-      "summary": {
-        "en": "An issue was discovered in 6.0 before 6.0.2, 5.2 before 5.2.11, and 4.2 before 4.2.28.\n`ASGIRequest` allows a remote attacker to cause a potential denial-of-service via a crafted request with multiple duplicate headers.\nEarlier, unsupported Django series (such as 5.0.x, 4.1.x, and 3.2.x) were not evaluated and may also be affected.\nDjango would like to thank Jiyong Yang for reporting this issue.",
-        "es": "Se descubri\u00f3 un problema en 6.0 anterior a 6.0.2, 5.2 anterior a 5.2.11 y 4.2 anterior a 4.2.28.\n'ASGIRequest' permite a un atacante remoto causar una posible denegaci\u00f3n de servicio mediante una solicitud manipulada con m\u00faltiples encabezados duplicados.\nSeries de Django anteriores y no compatibles (como 5.0.x, 4.1.x y 3.2.x) no fueron evaluadas y tambi\u00e9n podr\u00edan verse afectadas.\nDjango desea agradecer a Jiyong Yang por informar sobre este problema."
-      },
-      "references": [
-        "https://docs.djangoproject.com/en/dev/releases/security/",
-        "https://groups.google.com/g/django-announce",
-        "https://www.djangoproject.com/weblog/2026/feb/03/security-releases/"
-      ]
-    },
-    {
       "id": "pygoat:CVE-2026-1285:django:4.2",
       "cve": "CVE-2026-1285",
       "package": "django",
@@ -2008,6 +1984,30 @@
       "summary": {
         "en": "An issue was discovered in 6.0 before 6.0.2, 5.2 before 5.2.11, and 4.2 before 4.2.28.\n`django.utils.text.Truncator.chars()` and `Truncator.words()` methods (with `html=True`) and the `truncatechars_html` and `truncatewords_html` template filters allow a remote attacker to cause a potential denial-of-service via crafted inputs containing a large number of unmatched HTML end tags.\nEarlier, unsupported Django series (such as 5.0.x, 4.1.x, and 3.2.x) were not evaluated and may also be affected.\nDjango would like to thank Seokchan Yoon for reporting this issue.",
         "es": "Se descubri\u00f3 un problema en 6.0 anterior a 6.0.2, 5.2 anterior a 5.2.11 y 4.2 anterior a 4.2.28.\nLos m\u00e9todos 'django.utils.text.Truncator.chars()' y 'Truncator.words()' (con 'html=True') y los filtros de plantilla 'truncatechars_html' y 'truncatewords_html' permiten a un atacante remoto causar una potencial denegaci\u00f3n de servicio mediante entradas manipuladas que contienen un gran n\u00famero de etiquetas de cierre HTML no coincidentes.\nSeries de Django anteriores y sin soporte (como 5.0.x, 4.1.x y 3.2.x) no fueron evaluadas y tambi\u00e9n pueden verse afectadas.\nDjango desea agradecer a Seokchan Yoon por informar de este problema."
+      },
+      "references": [
+        "https://docs.djangoproject.com/en/dev/releases/security/",
+        "https://groups.google.com/g/django-announce",
+        "https://www.djangoproject.com/weblog/2026/feb/03/security-releases/"
+      ]
+    },
+    {
+      "id": "pygoat:CVE-2025-14550:django:4.2",
+      "cve": "CVE-2025-14550",
+      "package": "django",
+      "ecosystem": "PyPI",
+      "installed_version": "4.2",
+      "fixed_version": "4.2.28",
+      "app": "pygoat",
+      "cvss": 7.5,
+      "epss": 0.01128,
+      "in_kev": false,
+      "kev_date_added": null,
+      "priority_score": 20,
+      "priority_label": "medium",
+      "summary": {
+        "en": "An issue was discovered in 6.0 before 6.0.2, 5.2 before 5.2.11, and 4.2 before 4.2.28.\n`ASGIRequest` allows a remote attacker to cause a potential denial-of-service via a crafted request with multiple duplicate headers.\nEarlier, unsupported Django series (such as 5.0.x, 4.1.x, and 3.2.x) were not evaluated and may also be affected.\nDjango would like to thank Jiyong Yang for reporting this issue.",
+        "es": "Se descubri\u00f3 un problema en 6.0 anterior a 6.0.2, 5.2 anterior a 5.2.11 y 4.2 anterior a 4.2.28.\n'ASGIRequest' permite a un atacante remoto causar una posible denegaci\u00f3n de servicio mediante una solicitud manipulada con m\u00faltiples encabezados duplicados.\nSeries de Django anteriores y no compatibles (como 5.0.x, 4.1.x y 3.2.x) no fueron evaluadas y tambi\u00e9n podr\u00edan verse afectadas.\nDjango desea agradecer a Jiyong Yang por informar sobre este problema."
       },
       "references": [
         "https://docs.djangoproject.com/en/dev/releases/security/",
@@ -2286,30 +2286,6 @@
       ]
     },
     {
-      "id": "pygoat:CVE-2026-59199:pillow:9.4.0",
-      "cve": "CVE-2026-59199",
-      "package": "pillow",
-      "ecosystem": "PyPI",
-      "installed_version": "9.4.0",
-      "fixed_version": "12.3.0",
-      "app": "pygoat",
-      "cvss": 7.5,
-      "epss": 0.00385,
-      "in_kev": false,
-      "kev_date_added": null,
-      "priority_score": 19,
-      "priority_label": "low",
-      "summary": {
-        "en": "Pillow is a Python imaging library. Prior to 12.3.0, Pillow public image coordinate APIs can trigger a native heap out-of-bounds write when given coordinates near the signed 32-bit integer limits in Image.paste(), Image.crop(), or Image.alpha_composite(). This issue is fixed in version 12.3.0."
-      },
-      "references": [
-        "https://github.com/python-pillow/Pillow/commit/ceefc348eb3c3844c7f9796ef2cc3a7dd5fbba7b",
-        "https://github.com/python-pillow/Pillow/pull/9703",
-        "https://github.com/python-pillow/Pillow/releases/tag/12.3.0",
-        "https://github.com/python-pillow/Pillow/security/advisories/GHSA-6r8x-57c9-28j4"
-      ]
-    },
-    {
       "id": "pygoat:CVE-2026-59205:pillow:9.4.0",
       "cve": "CVE-2026-59205",
       "package": "pillow",
@@ -2331,6 +2307,30 @@
         "https://github.com/python-pillow/Pillow/pull/9715",
         "https://github.com/python-pillow/Pillow/releases/tag/12.3.0",
         "https://github.com/python-pillow/Pillow/security/advisories/GHSA-9hw9-ch79-4vh6"
+      ]
+    },
+    {
+      "id": "pygoat:CVE-2026-59199:pillow:9.4.0",
+      "cve": "CVE-2026-59199",
+      "package": "pillow",
+      "ecosystem": "PyPI",
+      "installed_version": "9.4.0",
+      "fixed_version": "12.3.0",
+      "app": "pygoat",
+      "cvss": 7.5,
+      "epss": 0.00385,
+      "in_kev": false,
+      "kev_date_added": null,
+      "priority_score": 19,
+      "priority_label": "low",
+      "summary": {
+        "en": "Pillow is a Python imaging library. Prior to 12.3.0, Pillow public image coordinate APIs can trigger a native heap out-of-bounds write when given coordinates near the signed 32-bit integer limits in Image.paste(), Image.crop(), or Image.alpha_composite(). This issue is fixed in version 12.3.0."
+      },
+      "references": [
+        "https://github.com/python-pillow/Pillow/commit/ceefc348eb3c3844c7f9796ef2cc3a7dd5fbba7b",
+        "https://github.com/python-pillow/Pillow/pull/9703",
+        "https://github.com/python-pillow/Pillow/releases/tag/12.3.0",
+        "https://github.com/python-pillow/Pillow/security/advisories/GHSA-6r8x-57c9-28j4"
       ]
     },
     {
@@ -3544,7 +3544,7 @@
       "fixed_version": "46.0.6",
       "app": "pygoat",
       "cvss": 5.3,
-      "epss": 0.00167,
+      "epss": 0.00184,
       "in_kev": false,
       "kev_date_added": null,
       "priority_score": 13,
@@ -7286,7 +7286,7 @@
       "fixed_version": "9.18.2",
       "app": "nodejs-goof",
       "cvss": 5.8,
-      "epss": 0.01323,
+      "epss": 0.01329,
       "in_kev": false,
       "kev_date_added": null,
       "priority_score": 15,
@@ -8154,7 +8154,7 @@
       "fixed_version": "3.1.3",
       "app": "nodejs-goof",
       "cvss": 7.5,
-      "epss": 0.00595,
+      "epss": 0.00608,
       "in_kev": false,
       "kev_date_added": null,
       "priority_score": 19,
@@ -8350,7 +8350,7 @@
       "fixed_version": "3.1.4",
       "app": "nodejs-goof",
       "cvss": 7.5,
-      "epss": 0.00505,
+      "epss": 0.00516,
       "in_kev": false,
       "kev_date_added": null,
       "priority_score": 19,
@@ -8780,6 +8780,75 @@
       ]
     },
     {
+      "id": "nodejs-goof:CVE-2026-2950:lodash:4.17.10",
+      "cve": "CVE-2026-2950",
+      "package": "lodash",
+      "ecosystem": "npm",
+      "installed_version": "4.17.10",
+      "fixed_version": "4.18.0",
+      "app": "nodejs-goof",
+      "cvss": 6.5,
+      "epss": 0.00402,
+      "in_kev": false,
+      "kev_date_added": null,
+      "priority_score": 17,
+      "priority_label": "low",
+      "summary": {
+        "en": "The _.unset and _.omit functions in Lodash are vulnerable to prototype pollution. The fix for CVE-2025-13465 only guards against string key members, so an attacker can bypass the check by passing array-wrapped path segments. This allows deletion of properties from built-in prototypes such as Object.prototype, Number.prototype, and String.prototype. The issue permits deletion of prototype properties but does not allow overwriting their original behavior. The issue is patched from 4.18.0 to 4.18.1 depending on the package: lodash, lodash-es, and lodash-amd in 4.18.1, and the standalone lodash.unset and lodash.omit packages in 4.18.0.",
+        "es": "Impacto:\n\nLas versiones de Lodash 4.17.23 y anteriores son vulnerables a la contaminaci\u00f3n de prototipos en las funciones _.unset y _.omit. La soluci\u00f3n para (CVE-2025-13465: https://github.com/lodash/lodash/security/advisories/GHSA-xxjr-mmjv-4gpg) solo protege contra miembros de clave de tipo cadena, por lo que un atacante puede eludir la verificaci\u00f3n pasando segmentos de ruta envueltos en arrays. Esto permite la eliminaci\u00f3n de propiedades de prototipos incorporados como Object.prototype, Number.prototype y String.prototype.\n\nEl problema permite la eliminaci\u00f3n de propiedades de prototipo, pero no permite sobrescribir su comportamiento original.\n\nParches:\n\nEste problema est\u00e1 parcheado en 4.18.0.\n\nSoluciones alternativas:\n\nNinguna. Actualice a la versi\u00f3n parcheada."
+      },
+      "references": [
+        "https://cna.openjsf.org/security-advisories.html",
+        "https://github.com/lodash/lodash/security/advisories/GHSA-f23m-r3pf-42rh"
+      ]
+    },
+    {
+      "id": "nodejs-goof:CVE-2026-2950:lodash:4.17.21",
+      "cve": "CVE-2026-2950",
+      "package": "lodash",
+      "ecosystem": "npm",
+      "installed_version": "4.17.21",
+      "fixed_version": "4.18.0",
+      "app": "nodejs-goof",
+      "cvss": 6.5,
+      "epss": 0.00402,
+      "in_kev": false,
+      "kev_date_added": null,
+      "priority_score": 17,
+      "priority_label": "low",
+      "summary": {
+        "en": "The _.unset and _.omit functions in Lodash are vulnerable to prototype pollution. The fix for CVE-2025-13465 only guards against string key members, so an attacker can bypass the check by passing array-wrapped path segments. This allows deletion of properties from built-in prototypes such as Object.prototype, Number.prototype, and String.prototype. The issue permits deletion of prototype properties but does not allow overwriting their original behavior. The issue is patched from 4.18.0 to 4.18.1 depending on the package: lodash, lodash-es, and lodash-amd in 4.18.1, and the standalone lodash.unset and lodash.omit packages in 4.18.0.",
+        "es": "Impacto:\n\nLas versiones de Lodash 4.17.23 y anteriores son vulnerables a la contaminaci\u00f3n de prototipos en las funciones _.unset y _.omit. La soluci\u00f3n para (CVE-2025-13465: https://github.com/lodash/lodash/security/advisories/GHSA-xxjr-mmjv-4gpg) solo protege contra miembros de clave de tipo cadena, por lo que un atacante puede eludir la verificaci\u00f3n pasando segmentos de ruta envueltos en arrays. Esto permite la eliminaci\u00f3n de propiedades de prototipos incorporados como Object.prototype, Number.prototype y String.prototype.\n\nEl problema permite la eliminaci\u00f3n de propiedades de prototipo, pero no permite sobrescribir su comportamiento original.\n\nParches:\n\nEste problema est\u00e1 parcheado en 4.18.0.\n\nSoluciones alternativas:\n\nNinguna. Actualice a la versi\u00f3n parcheada."
+      },
+      "references": [
+        "https://cna.openjsf.org/security-advisories.html",
+        "https://github.com/lodash/lodash/security/advisories/GHSA-f23m-r3pf-42rh"
+      ]
+    },
+    {
+      "id": "nodejs-goof:CVE-2026-2950:lodash:4.17.4",
+      "cve": "CVE-2026-2950",
+      "package": "lodash",
+      "ecosystem": "npm",
+      "installed_version": "4.17.4",
+      "fixed_version": "4.18.0",
+      "app": "nodejs-goof",
+      "cvss": 6.5,
+      "epss": 0.00402,
+      "in_kev": false,
+      "kev_date_added": null,
+      "priority_score": 17,
+      "priority_label": "low",
+      "summary": {
+        "en": "The _.unset and _.omit functions in Lodash are vulnerable to prototype pollution. The fix for CVE-2025-13465 only guards against string key members, so an attacker can bypass the check by passing array-wrapped path segments. This allows deletion of properties from built-in prototypes such as Object.prototype, Number.prototype, and String.prototype. The issue permits deletion of prototype properties but does not allow overwriting their original behavior. The issue is patched from 4.18.0 to 4.18.1 depending on the package: lodash, lodash-es, and lodash-amd in 4.18.1, and the standalone lodash.unset and lodash.omit packages in 4.18.0.",
+        "es": "Impacto:\n\nLas versiones de Lodash 4.17.23 y anteriores son vulnerables a la contaminaci\u00f3n de prototipos en las funciones _.unset y _.omit. La soluci\u00f3n para (CVE-2025-13465: https://github.com/lodash/lodash/security/advisories/GHSA-xxjr-mmjv-4gpg) solo protege contra miembros de clave de tipo cadena, por lo que un atacante puede eludir la verificaci\u00f3n pasando segmentos de ruta envueltos en arrays. Esto permite la eliminaci\u00f3n de propiedades de prototipos incorporados como Object.prototype, Number.prototype y String.prototype.\n\nEl problema permite la eliminaci\u00f3n de propiedades de prototipo, pero no permite sobrescribir su comportamiento original.\n\nParches:\n\nEste problema est\u00e1 parcheado en 4.18.0.\n\nSoluciones alternativas:\n\nNinguna. Actualice a la versi\u00f3n parcheada."
+      },
+      "references": [
+        "https://cna.openjsf.org/security-advisories.html",
+        "https://github.com/lodash/lodash/security/advisories/GHSA-f23m-r3pf-42rh"
+      ]
+    },
+    {
       "id": "nodejs-goof:CVE-2026-82417:qs:2.4.2",
       "cve": "CVE-2026-82417",
       "package": "qs",
@@ -8985,75 +9054,6 @@
         "https://github.com/nodeca/js-yaml/issues/730#issuecomment-3549635876",
         "https://github.com/nodeca/js-yaml/security/advisories/GHSA-mh29-5h37-fv8m",
         "https://github.com/advisories/GHSA-mh29-5h37-fv8m"
-      ]
-    },
-    {
-      "id": "nodejs-goof:CVE-2026-2950:lodash:4.17.10",
-      "cve": "CVE-2026-2950",
-      "package": "lodash",
-      "ecosystem": "npm",
-      "installed_version": "4.17.10",
-      "fixed_version": "4.18.0",
-      "app": "nodejs-goof",
-      "cvss": 6.5,
-      "epss": 0.00377,
-      "in_kev": false,
-      "kev_date_added": null,
-      "priority_score": 17,
-      "priority_label": "low",
-      "summary": {
-        "en": "The _.unset and _.omit functions in Lodash are vulnerable to prototype pollution. The fix for CVE-2025-13465 only guards against string key members, so an attacker can bypass the check by passing array-wrapped path segments. This allows deletion of properties from built-in prototypes such as Object.prototype, Number.prototype, and String.prototype. The issue permits deletion of prototype properties but does not allow overwriting their original behavior. The issue is patched from 4.18.0 to 4.18.1 depending on the package: lodash, lodash-es, and lodash-amd in 4.18.1, and the standalone lodash.unset and lodash.omit packages in 4.18.0.",
-        "es": "Impacto:\n\nLas versiones de Lodash 4.17.23 y anteriores son vulnerables a la contaminaci\u00f3n de prototipos en las funciones _.unset y _.omit. La soluci\u00f3n para (CVE-2025-13465: https://github.com/lodash/lodash/security/advisories/GHSA-xxjr-mmjv-4gpg) solo protege contra miembros de clave de tipo cadena, por lo que un atacante puede eludir la verificaci\u00f3n pasando segmentos de ruta envueltos en arrays. Esto permite la eliminaci\u00f3n de propiedades de prototipos incorporados como Object.prototype, Number.prototype y String.prototype.\n\nEl problema permite la eliminaci\u00f3n de propiedades de prototipo, pero no permite sobrescribir su comportamiento original.\n\nParches:\n\nEste problema est\u00e1 parcheado en 4.18.0.\n\nSoluciones alternativas:\n\nNinguna. Actualice a la versi\u00f3n parcheada."
-      },
-      "references": [
-        "https://cna.openjsf.org/security-advisories.html",
-        "https://github.com/lodash/lodash/security/advisories/GHSA-f23m-r3pf-42rh"
-      ]
-    },
-    {
-      "id": "nodejs-goof:CVE-2026-2950:lodash:4.17.21",
-      "cve": "CVE-2026-2950",
-      "package": "lodash",
-      "ecosystem": "npm",
-      "installed_version": "4.17.21",
-      "fixed_version": "4.18.0",
-      "app": "nodejs-goof",
-      "cvss": 6.5,
-      "epss": 0.00377,
-      "in_kev": false,
-      "kev_date_added": null,
-      "priority_score": 17,
-      "priority_label": "low",
-      "summary": {
-        "en": "The _.unset and _.omit functions in Lodash are vulnerable to prototype pollution. The fix for CVE-2025-13465 only guards against string key members, so an attacker can bypass the check by passing array-wrapped path segments. This allows deletion of properties from built-in prototypes such as Object.prototype, Number.prototype, and String.prototype. The issue permits deletion of prototype properties but does not allow overwriting their original behavior. The issue is patched from 4.18.0 to 4.18.1 depending on the package: lodash, lodash-es, and lodash-amd in 4.18.1, and the standalone lodash.unset and lodash.omit packages in 4.18.0.",
-        "es": "Impacto:\n\nLas versiones de Lodash 4.17.23 y anteriores son vulnerables a la contaminaci\u00f3n de prototipos en las funciones _.unset y _.omit. La soluci\u00f3n para (CVE-2025-13465: https://github.com/lodash/lodash/security/advisories/GHSA-xxjr-mmjv-4gpg) solo protege contra miembros de clave de tipo cadena, por lo que un atacante puede eludir la verificaci\u00f3n pasando segmentos de ruta envueltos en arrays. Esto permite la eliminaci\u00f3n de propiedades de prototipos incorporados como Object.prototype, Number.prototype y String.prototype.\n\nEl problema permite la eliminaci\u00f3n de propiedades de prototipo, pero no permite sobrescribir su comportamiento original.\n\nParches:\n\nEste problema est\u00e1 parcheado en 4.18.0.\n\nSoluciones alternativas:\n\nNinguna. Actualice a la versi\u00f3n parcheada."
-      },
-      "references": [
-        "https://cna.openjsf.org/security-advisories.html",
-        "https://github.com/lodash/lodash/security/advisories/GHSA-f23m-r3pf-42rh"
-      ]
-    },
-    {
-      "id": "nodejs-goof:CVE-2026-2950:lodash:4.17.4",
-      "cve": "CVE-2026-2950",
-      "package": "lodash",
-      "ecosystem": "npm",
-      "installed_version": "4.17.4",
-      "fixed_version": "4.18.0",
-      "app": "nodejs-goof",
-      "cvss": 6.5,
-      "epss": 0.00377,
-      "in_kev": false,
-      "kev_date_added": null,
-      "priority_score": 17,
-      "priority_label": "low",
-      "summary": {
-        "en": "The _.unset and _.omit functions in Lodash are vulnerable to prototype pollution. The fix for CVE-2025-13465 only guards against string key members, so an attacker can bypass the check by passing array-wrapped path segments. This allows deletion of properties from built-in prototypes such as Object.prototype, Number.prototype, and String.prototype. The issue permits deletion of prototype properties but does not allow overwriting their original behavior. The issue is patched from 4.18.0 to 4.18.1 depending on the package: lodash, lodash-es, and lodash-amd in 4.18.1, and the standalone lodash.unset and lodash.omit packages in 4.18.0.",
-        "es": "Impacto:\n\nLas versiones de Lodash 4.17.23 y anteriores son vulnerables a la contaminaci\u00f3n de prototipos en las funciones _.unset y _.omit. La soluci\u00f3n para (CVE-2025-13465: https://github.com/lodash/lodash/security/advisories/GHSA-xxjr-mmjv-4gpg) solo protege contra miembros de clave de tipo cadena, por lo que un atacante puede eludir la verificaci\u00f3n pasando segmentos de ruta envueltos en arrays. Esto permite la eliminaci\u00f3n de propiedades de prototipos incorporados como Object.prototype, Number.prototype y String.prototype.\n\nEl problema permite la eliminaci\u00f3n de propiedades de prototipo, pero no permite sobrescribir su comportamiento original.\n\nParches:\n\nEste problema est\u00e1 parcheado en 4.18.0.\n\nSoluciones alternativas:\n\nNinguna. Actualice a la versi\u00f3n parcheada."
-      },
-      "references": [
-        "https://cna.openjsf.org/security-advisories.html",
-        "https://github.com/lodash/lodash/security/advisories/GHSA-f23m-r3pf-42rh"
       ]
     },
     {
@@ -9663,12 +9663,6 @@
   ],
   "history": [
     {
-      "date": "2026-09-16",
-      "findings_total": 311,
-      "critical": 4,
-      "high": 3
-    },
-    {
       "date": "2026-09-17",
       "findings_total": 311,
       "critical": 4,
@@ -9838,6 +9832,12 @@
     },
     {
       "date": "2026-10-15",
+      "findings_total": 343,
+      "critical": 4,
+      "high": 4
+    },
+    {
+      "date": "2026-10-16",
       "findings_total": 343,
       "critical": 4,
       "high": 4

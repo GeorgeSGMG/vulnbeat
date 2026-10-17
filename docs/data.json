@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-10-16T11:03:20.157100+00:00",
+  "generated_at": "2026-10-17T10:24:34.643399+00:00",
   "sources": {
     "kev": {
       "fetched": true,
@@ -1968,30 +1968,6 @@
       ]
     },
     {
-      "id": "pygoat:CVE-2026-1285:django:4.2",
-      "cve": "CVE-2026-1285",
-      "package": "django",
-      "ecosystem": "PyPI",
-      "installed_version": "4.2",
-      "fixed_version": "4.2.28",
-      "app": "pygoat",
-      "cvss": 7.5,
-      "epss": 0.01128,
-      "in_kev": false,
-      "kev_date_added": null,
-      "priority_score": 20,
-      "priority_label": "medium",
-      "summary": {
-        "en": "An issue was discovered in 6.0 before 6.0.2, 5.2 before 5.2.11, and 4.2 before 4.2.28.\n`django.utils.text.Truncator.chars()` and `Truncator.words()` methods (with `html=True`) and the `truncatechars_html` and `truncatewords_html` template filters allow a remote attacker to cause a potential denial-of-service via crafted inputs containing a large number of unmatched HTML end tags.\nEarlier, unsupported Django series (such as 5.0.x, 4.1.x, and 3.2.x) were not evaluated and may also be affected.\nDjango would like to thank Seokchan Yoon for reporting this issue.",
-        "es": "Se descubri\u00f3 un problema en 6.0 anterior a 6.0.2, 5.2 anterior a 5.2.11 y 4.2 anterior a 4.2.28.\nLos m\u00e9todos 'django.utils.text.Truncator.chars()' y 'Truncator.words()' (con 'html=True') y los filtros de plantilla 'truncatechars_html' y 'truncatewords_html' permiten a un atacante remoto causar una potencial denegaci\u00f3n de servicio mediante entradas manipuladas que contienen un gran n\u00famero de etiquetas de cierre HTML no coincidentes.\nSeries de Django anteriores y sin soporte (como 5.0.x, 4.1.x y 3.2.x) no fueron evaluadas y tambi\u00e9n pueden verse afectadas.\nDjango desea agradecer a Seokchan Yoon por informar de este problema."
-      },
-      "references": [
-        "https://docs.djangoproject.com/en/dev/releases/security/",
-        "https://groups.google.com/g/django-announce",
-        "https://www.djangoproject.com/weblog/2026/feb/03/security-releases/"
-      ]
-    },
-    {
       "id": "pygoat:CVE-2025-14550:django:4.2",
       "cve": "CVE-2025-14550",
       "package": "django",
@@ -2008,6 +1984,30 @@
       "summary": {
         "en": "An issue was discovered in 6.0 before 6.0.2, 5.2 before 5.2.11, and 4.2 before 4.2.28.\n`ASGIRequest` allows a remote attacker to cause a potential denial-of-service via a crafted request with multiple duplicate headers.\nEarlier, unsupported Django series (such as 5.0.x, 4.1.x, and 3.2.x) were not evaluated and may also be affected.\nDjango would like to thank Jiyong Yang for reporting this issue.",
         "es": "Se descubri\u00f3 un problema en 6.0 anterior a 6.0.2, 5.2 anterior a 5.2.11 y 4.2 anterior a 4.2.28.\n'ASGIRequest' permite a un atacante remoto causar una posible denegaci\u00f3n de servicio mediante una solicitud manipulada con m\u00faltiples encabezados duplicados.\nSeries de Django anteriores y no compatibles (como 5.0.x, 4.1.x y 3.2.x) no fueron evaluadas y tambi\u00e9n podr\u00edan verse afectadas.\nDjango desea agradecer a Jiyong Yang por informar sobre este problema."
+      },
+      "references": [
+        "https://docs.djangoproject.com/en/dev/releases/security/",
+        "https://groups.google.com/g/django-announce",
+        "https://www.djangoproject.com/weblog/2026/feb/03/security-releases/"
+      ]
+    },
+    {
+      "id": "pygoat:CVE-2026-1285:django:4.2",
+      "cve": "CVE-2026-1285",
+      "package": "django",
+      "ecosystem": "PyPI",
+      "installed_version": "4.2",
+      "fixed_version": "4.2.28",
+      "app": "pygoat",
+      "cvss": 7.5,
+      "epss": 0.01128,
+      "in_kev": false,
+      "kev_date_added": null,
+      "priority_score": 20,
+      "priority_label": "medium",
+      "summary": {
+        "en": "An issue was discovered in 6.0 before 6.0.2, 5.2 before 5.2.11, and 4.2 before 4.2.28.\n`django.utils.text.Truncator.chars()` and `Truncator.words()` methods (with `html=True`) and the `truncatechars_html` and `truncatewords_html` template filters allow a remote attacker to cause a potential denial-of-service via crafted inputs containing a large number of unmatched HTML end tags.\nEarlier, unsupported Django series (such as 5.0.x, 4.1.x, and 3.2.x) were not evaluated and may also be affected.\nDjango would like to thank Seokchan Yoon for reporting this issue.",
+        "es": "Se descubri\u00f3 un problema en 6.0 anterior a 6.0.2, 5.2 anterior a 5.2.11 y 4.2 anterior a 4.2.28.\nLos m\u00e9todos 'django.utils.text.Truncator.chars()' y 'Truncator.words()' (con 'html=True') y los filtros de plantilla 'truncatechars_html' y 'truncatewords_html' permiten a un atacante remoto causar una potencial denegaci\u00f3n de servicio mediante entradas manipuladas que contienen un gran n\u00famero de etiquetas de cierre HTML no coincidentes.\nSeries de Django anteriores y sin soporte (como 5.0.x, 4.1.x y 3.2.x) no fueron evaluadas y tambi\u00e9n pueden verse afectadas.\nDjango desea agradecer a Seokchan Yoon por informar de este problema."
       },
       "references": [
         "https://docs.djangoproject.com/en/dev/releases/security/",
@@ -2286,30 +2286,6 @@
       ]
     },
     {
-      "id": "pygoat:CVE-2026-59205:pillow:9.4.0",
-      "cve": "CVE-2026-59205",
-      "package": "pillow",
-      "ecosystem": "PyPI",
-      "installed_version": "9.4.0",
-      "fixed_version": "12.3.0",
-      "app": "pygoat",
-      "cvss": 7.5,
-      "epss": 0.00385,
-      "in_kev": false,
-      "kev_date_added": null,
-      "priority_score": 19,
-      "priority_label": "low",
-      "summary": {
-        "en": "Pillow is a Python imaging library. Prior to 12.3.0, Pillow's ImageCms.ImageCmsTransform.apply(im, imOut) API can trigger controlled native heap corruption when the caller supplies an output image whose mode does not match the transform's declared output mode. This issue is fixed in version 12.3.0."
-      },
-      "references": [
-        "https://github.com/python-pillow/Pillow/commit/a9ffc42bedf4fc0a7ef8d6486e7f9e81e3397721",
-        "https://github.com/python-pillow/Pillow/pull/9715",
-        "https://github.com/python-pillow/Pillow/releases/tag/12.3.0",
-        "https://github.com/python-pillow/Pillow/security/advisories/GHSA-9hw9-ch79-4vh6"
-      ]
-    },
-    {
       "id": "pygoat:CVE-2026-59199:pillow:9.4.0",
       "cve": "CVE-2026-59199",
       "package": "pillow",
@@ -2331,6 +2307,30 @@
         "https://github.com/python-pillow/Pillow/pull/9703",
         "https://github.com/python-pillow/Pillow/releases/tag/12.3.0",
         "https://github.com/python-pillow/Pillow/security/advisories/GHSA-6r8x-57c9-28j4"
+      ]
+    },
+    {
+      "id": "pygoat:CVE-2026-59205:pillow:9.4.0",
+      "cve": "CVE-2026-59205",
+      "package": "pillow",
+      "ecosystem": "PyPI",
+      "installed_version": "9.4.0",
+      "fixed_version": "12.3.0",
+      "app": "pygoat",
+      "cvss": 7.5,
+      "epss": 0.00385,
+      "in_kev": false,
+      "kev_date_added": null,
+      "priority_score": 19,
+      "priority_label": "low",
+      "summary": {
+        "en": "Pillow is a Python imaging library. Prior to 12.3.0, Pillow's ImageCms.ImageCmsTransform.apply(im, imOut) API can trigger controlled native heap corruption when the caller supplies an output image whose mode does not match the transform's declared output mode. This issue is fixed in version 12.3.0."
+      },
+      "references": [
+        "https://github.com/python-pillow/Pillow/commit/a9ffc42bedf4fc0a7ef8d6486e7f9e81e3397721",
+        "https://github.com/python-pillow/Pillow/pull/9715",
+        "https://github.com/python-pillow/Pillow/releases/tag/12.3.0",
+        "https://github.com/python-pillow/Pillow/security/advisories/GHSA-9hw9-ch79-4vh6"
       ]
     },
     {
@@ -4762,6 +4762,45 @@
       ]
     },
     {
+      "id": "nodejs-goof:CVE-2021-23358:underscore:1.9.1",
+      "cve": "CVE-2021-23358",
+      "package": "underscore",
+      "ecosystem": "npm",
+      "installed_version": "1.9.1",
+      "fixed_version": "1.12.1",
+      "app": "nodejs-goof",
+      "cvss": 3.3,
+      "epss": 0.042,
+      "in_kev": false,
+      "kev_date_added": null,
+      "priority_score": 11,
+      "priority_label": "low",
+      "summary": {
+        "en": "The package underscore from 1.13.0-0 and before 1.13.0-2, from 1.3.2 and before 1.12.1 are vulnerable to Arbitrary Code Injection via the template function, particularly when a variable property is passed as an argument as it is not sanitized.",
+        "es": "El paquete underscore desde la versi\u00f3n 1.13.0-0 y anterior a la versi\u00f3n 1.13.0-2, desde la versi\u00f3n 1.3.2 y anterior a la versi\u00f3n 1.12.1, son vulnerables a una ejecuci\u00f3n de c\u00f3digo arbitraria por medio de la funci\u00f3n template, particularmente cuando una propiedad variable es pasada como un argumento ya que no es saneado"
+      },
+      "references": [
+        "https://github.com/jashkenas/underscore/blob/master/modules/template.js%23L71",
+        "https://lists.apache.org/thread.html/r5df90c46f7000c4aab246e947f62361ecfb849c5a553dcdb0ef545e1%40%3Cissues.cordova.apache.org%3E",
+        "https://lists.apache.org/thread.html/r770f910653772317b117ab4472b0a32c266ee4abbafda28b8a6f9306%40%3Cissues.cordova.apache.org%3E",
+        "https://lists.apache.org/thread.html/raae088abdfa4fbd84e1d19d7a7ffe52bf8e426b83e6599ea9a734dba%40%3Cissues.cordova.apache.org%3E",
+        "https://lists.apache.org/thread.html/rbc84926bacd377503a3f5c37b923c1931f9d343754488d94e6f08039%40%3Cissues.cordova.apache.org%3E",
+        "https://lists.apache.org/thread.html/re69ee408b3983b43e9c4a82a9a17cbbf8681bb91a4b61b46f365aeaf%40%3Cissues.cordova.apache.org%3E",
+        "https://lists.debian.org/debian-lts-announce/2021/03/msg00038.html",
+        "https://lists.fedoraproject.org/archives/list/package-announce%40lists.fedoraproject.org/message/EOKATXXETD2PF3OR36Q5PD2VSVAR6J5Z/",
+        "https://lists.fedoraproject.org/archives/list/package-announce%40lists.fedoraproject.org/message/FGEE7U4Z655A2MK5EW4UQQZ7B64XJWBV/",
+        "https://snyk.io/vuln/SNYK-JAVA-ORGWEBJARSBOWER-1081504",
+        "https://snyk.io/vuln/SNYK-JAVA-ORGWEBJARSBOWERGITHUBJASHKENAS-1081505",
+        "https://snyk.io/vuln/SNYK-JAVA-ORGWEBJARSNPM-1081503",
+        "https://snyk.io/vuln/SNYK-JS-UNDERSCORE-1080984",
+        "https://www.debian.org/security/2021/dsa-4883",
+        "https://www.tenable.com/security/tns-2021-14",
+        "http://seclists.org/fulldisclosure/2025/Apr/14",
+        "https://security.netapp.com/advisory/ntap-20240808-0003/",
+        "https://security.netapp.com/advisory/ntap-20241108-0002/"
+      ]
+    },
+    {
       "id": "nodejs-goof:CVE-2020-8203:lodash:4.17.10",
       "cve": "CVE-2020-8203",
       "package": "lodash",
@@ -4817,45 +4856,6 @@
         "https://www.oracle.com/security-alerts/cpuapr2022.html",
         "https://www.oracle.com/security-alerts/cpujan2022.html",
         "https://www.oracle.com/security-alerts/cpuoct2021.html"
-      ]
-    },
-    {
-      "id": "nodejs-goof:CVE-2021-23358:underscore:1.9.1",
-      "cve": "CVE-2021-23358",
-      "package": "underscore",
-      "ecosystem": "npm",
-      "installed_version": "1.9.1",
-      "fixed_version": "1.12.1",
-      "app": "nodejs-goof",
-      "cvss": 3.3,
-      "epss": 0.04087,
-      "in_kev": false,
-      "kev_date_added": null,
-      "priority_score": 11,
-      "priority_label": "low",
-      "summary": {
-        "en": "The package underscore from 1.13.0-0 and before 1.13.0-2, from 1.3.2 and before 1.12.1 are vulnerable to Arbitrary Code Injection via the template function, particularly when a variable property is passed as an argument as it is not sanitized.",
-        "es": "El paquete underscore desde la versi\u00f3n 1.13.0-0 y anterior a la versi\u00f3n 1.13.0-2, desde la versi\u00f3n 1.3.2 y anterior a la versi\u00f3n 1.12.1, son vulnerables a una ejecuci\u00f3n de c\u00f3digo arbitraria por medio de la funci\u00f3n template, particularmente cuando una propiedad variable es pasada como un argumento ya que no es saneado"
-      },
-      "references": [
-        "https://github.com/jashkenas/underscore/blob/master/modules/template.js%23L71",
-        "https://lists.apache.org/thread.html/r5df90c46f7000c4aab246e947f62361ecfb849c5a553dcdb0ef545e1%40%3Cissues.cordova.apache.org%3E",
-        "https://lists.apache.org/thread.html/r770f910653772317b117ab4472b0a32c266ee4abbafda28b8a6f9306%40%3Cissues.cordova.apache.org%3E",
-        "https://lists.apache.org/thread.html/raae088abdfa4fbd84e1d19d7a7ffe52bf8e426b83e6599ea9a734dba%40%3Cissues.cordova.apache.org%3E",
-        "https://lists.apache.org/thread.html/rbc84926bacd377503a3f5c37b923c1931f9d343754488d94e6f08039%40%3Cissues.cordova.apache.org%3E",
-        "https://lists.apache.org/thread.html/re69ee408b3983b43e9c4a82a9a17cbbf8681bb91a4b61b46f365aeaf%40%3Cissues.cordova.apache.org%3E",
-        "https://lists.debian.org/debian-lts-announce/2021/03/msg00038.html",
-        "https://lists.fedoraproject.org/archives/list/package-announce%40lists.fedoraproject.org/message/EOKATXXETD2PF3OR36Q5PD2VSVAR6J5Z/",
-        "https://lists.fedoraproject.org/archives/list/package-announce%40lists.fedoraproject.org/message/FGEE7U4Z655A2MK5EW4UQQZ7B64XJWBV/",
-        "https://snyk.io/vuln/SNYK-JAVA-ORGWEBJARSBOWER-1081504",
-        "https://snyk.io/vuln/SNYK-JAVA-ORGWEBJARSBOWERGITHUBJASHKENAS-1081505",
-        "https://snyk.io/vuln/SNYK-JAVA-ORGWEBJARSNPM-1081503",
-        "https://snyk.io/vuln/SNYK-JS-UNDERSCORE-1080984",
-        "https://www.debian.org/security/2021/dsa-4883",
-        "https://www.tenable.com/security/tns-2021-14",
-        "http://seclists.org/fulldisclosure/2025/Apr/14",
-        "https://security.netapp.com/advisory/ntap-20240808-0003/",
-        "https://security.netapp.com/advisory/ntap-20241108-0002/"
       ]
     },
     {
@@ -7835,6 +7835,87 @@
       ]
     },
     {
+      "id": "nodejs-goof:CVE-2017-20162:ms:0.6.2",
+      "cve": "CVE-2017-20162",
+      "package": "ms",
+      "ecosystem": "npm",
+      "installed_version": "0.6.2",
+      "fixed_version": "2.0.0",
+      "app": "nodejs-goof",
+      "cvss": 4.3,
+      "epss": 0.01018,
+      "in_kev": false,
+      "kev_date_added": null,
+      "priority_score": 12,
+      "priority_label": "low",
+      "summary": {
+        "en": "A vulnerability, which was classified as problematic, has been found in vercel ms up to 1.x. This issue affects the function parse of the file index.js. The manipulation of the argument str leads to inefficient regular expression complexity. The attack may be initiated remotely. The exploit has been disclosed to the public and may be used. Upgrading to version 2.0.0 is able to address this issue. The patch is named caae2988ba2a37765d055c4eee63d383320ee662. It is recommended to upgrade the affected component. The associated identifier of this vulnerability is VDB-217451.",
+        "es": "Se ha encontrado una vulnerabilidad clasificada como problem\u00e1tica en vercel ms hasta 1.x. Este problema afecta la funci\u00f3n de an\u00e1lisis del archivo index.js. La manipulaci\u00f3n del argumento str conduce a una complejidad de expresi\u00f3n regular ineficiente. El ataque puede iniciarse de forma remota. El exploit ha sido divulgado al p\u00fablico y puede utilizarse. La actualizaci\u00f3n a la versi\u00f3n 2.0.0 puede solucionar este problema. El parche se llama caae2988ba2a37765d055c4eee63d383320ee662. Se recomienda actualizar el componente afectado. El identificador asociado de esta vulnerabilidad es VDB-217451."
+      },
+      "references": [
+        "https://github.com/vercel/ms/commit/caae2988ba2a37765d055c4eee63d383320ee662",
+        "https://github.com/vercel/ms/pull/89",
+        "https://github.com/vercel/ms/releases/tag/2.0.0",
+        "https://vuldb.com/?ctiid.217451",
+        "https://vuldb.com/?id.217451",
+        "https://security.netapp.com/advisory/ntap-20241108-0002/"
+      ]
+    },
+    {
+      "id": "nodejs-goof:CVE-2017-20162:ms:0.7.1",
+      "cve": "CVE-2017-20162",
+      "package": "ms",
+      "ecosystem": "npm",
+      "installed_version": "0.7.1",
+      "fixed_version": "2.0.0",
+      "app": "nodejs-goof",
+      "cvss": 4.3,
+      "epss": 0.01018,
+      "in_kev": false,
+      "kev_date_added": null,
+      "priority_score": 12,
+      "priority_label": "low",
+      "summary": {
+        "en": "A vulnerability, which was classified as problematic, has been found in vercel ms up to 1.x. This issue affects the function parse of the file index.js. The manipulation of the argument str leads to inefficient regular expression complexity. The attack may be initiated remotely. The exploit has been disclosed to the public and may be used. Upgrading to version 2.0.0 is able to address this issue. The patch is named caae2988ba2a37765d055c4eee63d383320ee662. It is recommended to upgrade the affected component. The associated identifier of this vulnerability is VDB-217451.",
+        "es": "Se ha encontrado una vulnerabilidad clasificada como problem\u00e1tica en vercel ms hasta 1.x. Este problema afecta la funci\u00f3n de an\u00e1lisis del archivo index.js. La manipulaci\u00f3n del argumento str conduce a una complejidad de expresi\u00f3n regular ineficiente. El ataque puede iniciarse de forma remota. El exploit ha sido divulgado al p\u00fablico y puede utilizarse. La actualizaci\u00f3n a la versi\u00f3n 2.0.0 puede solucionar este problema. El parche se llama caae2988ba2a37765d055c4eee63d383320ee662. Se recomienda actualizar el componente afectado. El identificador asociado de esta vulnerabilidad es VDB-217451."
+      },
+      "references": [
+        "https://github.com/vercel/ms/commit/caae2988ba2a37765d055c4eee63d383320ee662",
+        "https://github.com/vercel/ms/pull/89",
+        "https://github.com/vercel/ms/releases/tag/2.0.0",
+        "https://vuldb.com/?ctiid.217451",
+        "https://vuldb.com/?id.217451",
+        "https://security.netapp.com/advisory/ntap-20241108-0002/"
+      ]
+    },
+    {
+      "id": "nodejs-goof:CVE-2017-20162:ms:0.7.3",
+      "cve": "CVE-2017-20162",
+      "package": "ms",
+      "ecosystem": "npm",
+      "installed_version": "0.7.3",
+      "fixed_version": "2.0.0",
+      "app": "nodejs-goof",
+      "cvss": 4.3,
+      "epss": 0.01018,
+      "in_kev": false,
+      "kev_date_added": null,
+      "priority_score": 12,
+      "priority_label": "low",
+      "summary": {
+        "en": "A vulnerability, which was classified as problematic, has been found in vercel ms up to 1.x. This issue affects the function parse of the file index.js. The manipulation of the argument str leads to inefficient regular expression complexity. The attack may be initiated remotely. The exploit has been disclosed to the public and may be used. Upgrading to version 2.0.0 is able to address this issue. The patch is named caae2988ba2a37765d055c4eee63d383320ee662. It is recommended to upgrade the affected component. The associated identifier of this vulnerability is VDB-217451.",
+        "es": "Se ha encontrado una vulnerabilidad clasificada como problem\u00e1tica en vercel ms hasta 1.x. Este problema afecta la funci\u00f3n de an\u00e1lisis del archivo index.js. La manipulaci\u00f3n del argumento str conduce a una complejidad de expresi\u00f3n regular ineficiente. El ataque puede iniciarse de forma remota. El exploit ha sido divulgado al p\u00fablico y puede utilizarse. La actualizaci\u00f3n a la versi\u00f3n 2.0.0 puede solucionar este problema. El parche se llama caae2988ba2a37765d055c4eee63d383320ee662. Se recomienda actualizar el componente afectado. El identificador asociado de esta vulnerabilidad es VDB-217451."
+      },
+      "references": [
+        "https://github.com/vercel/ms/commit/caae2988ba2a37765d055c4eee63d383320ee662",
+        "https://github.com/vercel/ms/pull/89",
+        "https://github.com/vercel/ms/releases/tag/2.0.0",
+        "https://vuldb.com/?ctiid.217451",
+        "https://vuldb.com/?id.217451",
+        "https://security.netapp.com/advisory/ntap-20241108-0002/"
+      ]
+    },
+    {
       "id": "nodejs-goof:CVE-2026-12143:form-data:2.3.3",
       "cve": "CVE-2026-12143",
       "package": "form-data",
@@ -7917,87 +7998,6 @@
         "https://access.redhat.com/security/cve/CVE-2026-12143",
         "https://bugzilla.redhat.com/show_bug.cgi?id=2488480",
         "https://security.access.redhat.com/data/csaf/v2/vex/2026/cve-2026-12143.json"
-      ]
-    },
-    {
-      "id": "nodejs-goof:CVE-2017-20162:ms:0.6.2",
-      "cve": "CVE-2017-20162",
-      "package": "ms",
-      "ecosystem": "npm",
-      "installed_version": "0.6.2",
-      "fixed_version": "2.0.0",
-      "app": "nodejs-goof",
-      "cvss": 4.3,
-      "epss": 0.00989,
-      "in_kev": false,
-      "kev_date_added": null,
-      "priority_score": 11,
-      "priority_label": "low",
-      "summary": {
-        "en": "A vulnerability, which was classified as problematic, has been found in vercel ms up to 1.x. This issue affects the function parse of the file index.js. The manipulation of the argument str leads to inefficient regular expression complexity. The attack may be initiated remotely. The exploit has been disclosed to the public and may be used. Upgrading to version 2.0.0 is able to address this issue. The patch is named caae2988ba2a37765d055c4eee63d383320ee662. It is recommended to upgrade the affected component. The associated identifier of this vulnerability is VDB-217451.",
-        "es": "Se ha encontrado una vulnerabilidad clasificada como problem\u00e1tica en vercel ms hasta 1.x. Este problema afecta la funci\u00f3n de an\u00e1lisis del archivo index.js. La manipulaci\u00f3n del argumento str conduce a una complejidad de expresi\u00f3n regular ineficiente. El ataque puede iniciarse de forma remota. El exploit ha sido divulgado al p\u00fablico y puede utilizarse. La actualizaci\u00f3n a la versi\u00f3n 2.0.0 puede solucionar este problema. El parche se llama caae2988ba2a37765d055c4eee63d383320ee662. Se recomienda actualizar el componente afectado. El identificador asociado de esta vulnerabilidad es VDB-217451."
-      },
-      "references": [
-        "https://github.com/vercel/ms/commit/caae2988ba2a37765d055c4eee63d383320ee662",
-        "https://github.com/vercel/ms/pull/89",
-        "https://github.com/vercel/ms/releases/tag/2.0.0",
-        "https://vuldb.com/?ctiid.217451",
-        "https://vuldb.com/?id.217451",
-        "https://security.netapp.com/advisory/ntap-20241108-0002/"
-      ]
-    },
-    {
-      "id": "nodejs-goof:CVE-2017-20162:ms:0.7.1",
-      "cve": "CVE-2017-20162",
-      "package": "ms",
-      "ecosystem": "npm",
-      "installed_version": "0.7.1",
-      "fixed_version": "2.0.0",
-      "app": "nodejs-goof",
-      "cvss": 4.3,
-      "epss": 0.00989,
-      "in_kev": false,
-      "kev_date_added": null,
-      "priority_score": 11,
-      "priority_label": "low",
-      "summary": {
-        "en": "A vulnerability, which was classified as problematic, has been found in vercel ms up to 1.x. This issue affects the function parse of the file index.js. The manipulation of the argument str leads to inefficient regular expression complexity. The attack may be initiated remotely. The exploit has been disclosed to the public and may be used. Upgrading to version 2.0.0 is able to address this issue. The patch is named caae2988ba2a37765d055c4eee63d383320ee662. It is recommended to upgrade the affected component. The associated identifier of this vulnerability is VDB-217451.",
-        "es": "Se ha encontrado una vulnerabilidad clasificada como problem\u00e1tica en vercel ms hasta 1.x. Este problema afecta la funci\u00f3n de an\u00e1lisis del archivo index.js. La manipulaci\u00f3n del argumento str conduce a una complejidad de expresi\u00f3n regular ineficiente. El ataque puede iniciarse de forma remota. El exploit ha sido divulgado al p\u00fablico y puede utilizarse. La actualizaci\u00f3n a la versi\u00f3n 2.0.0 puede solucionar este problema. El parche se llama caae2988ba2a37765d055c4eee63d383320ee662. Se recomienda actualizar el componente afectado. El identificador asociado de esta vulnerabilidad es VDB-217451."
-      },
-      "references": [
-        "https://github.com/vercel/ms/commit/caae2988ba2a37765d055c4eee63d383320ee662",
-        "https://github.com/vercel/ms/pull/89",
-        "https://github.com/vercel/ms/releases/tag/2.0.0",
-        "https://vuldb.com/?ctiid.217451",
-        "https://vuldb.com/?id.217451",
-        "https://security.netapp.com/advisory/ntap-20241108-0002/"
-      ]
-    },
-    {
-      "id": "nodejs-goof:CVE-2017-20162:ms:0.7.3",
-      "cve": "CVE-2017-20162",
-      "package": "ms",
-      "ecosystem": "npm",
-      "installed_version": "0.7.3",
-      "fixed_version": "2.0.0",
-      "app": "nodejs-goof",
-      "cvss": 4.3,
-      "epss": 0.00989,
-      "in_kev": false,
-      "kev_date_added": null,
-      "priority_score": 11,
-      "priority_label": "low",
-      "summary": {
-        "en": "A vulnerability, which was classified as problematic, has been found in vercel ms up to 1.x. This issue affects the function parse of the file index.js. The manipulation of the argument str leads to inefficient regular expression complexity. The attack may be initiated remotely. The exploit has been disclosed to the public and may be used. Upgrading to version 2.0.0 is able to address this issue. The patch is named caae2988ba2a37765d055c4eee63d383320ee662. It is recommended to upgrade the affected component. The associated identifier of this vulnerability is VDB-217451.",
-        "es": "Se ha encontrado una vulnerabilidad clasificada como problem\u00e1tica en vercel ms hasta 1.x. Este problema afecta la funci\u00f3n de an\u00e1lisis del archivo index.js. La manipulaci\u00f3n del argumento str conduce a una complejidad de expresi\u00f3n regular ineficiente. El ataque puede iniciarse de forma remota. El exploit ha sido divulgado al p\u00fablico y puede utilizarse. La actualizaci\u00f3n a la versi\u00f3n 2.0.0 puede solucionar este problema. El parche se llama caae2988ba2a37765d055c4eee63d383320ee662. Se recomienda actualizar el componente afectado. El identificador asociado de esta vulnerabilidad es VDB-217451."
-      },
-      "references": [
-        "https://github.com/vercel/ms/commit/caae2988ba2a37765d055c4eee63d383320ee662",
-        "https://github.com/vercel/ms/pull/89",
-        "https://github.com/vercel/ms/releases/tag/2.0.0",
-        "https://vuldb.com/?ctiid.217451",
-        "https://vuldb.com/?id.217451",
-        "https://security.netapp.com/advisory/ntap-20241108-0002/"
       ]
     },
     {
@@ -9663,12 +9663,6 @@
   ],
   "history": [
     {
-      "date": "2026-09-17",
-      "findings_total": 311,
-      "critical": 4,
-      "high": 3
-    },
-    {
       "date": "2026-09-18",
       "findings_total": 311,
       "critical": 4,
@@ -9838,6 +9832,12 @@
     },
     {
       "date": "2026-10-16",
+      "findings_total": 343,
+      "critical": 4,
+      "high": 4
+    },
+    {
+      "date": "2026-10-17",
       "findings_total": 343,
       "critical": 4,
       "high": 4

@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-10-17T10:24:34.643399+00:00",
+  "generated_at": "2026-10-18T10:39:48.882197+00:00",
   "sources": {
     "kev": {
       "fetched": true,
@@ -5833,56 +5833,6 @@
       ]
     },
     {
-      "id": "nodejs-goof:CVE-2019-1010266:lodash:4.17.10",
-      "cve": "CVE-2019-1010266",
-      "package": "lodash",
-      "ecosystem": "npm",
-      "installed_version": "4.17.10",
-      "fixed_version": "4.17.11",
-      "app": "nodejs-goof",
-      "cvss": 6.5,
-      "epss": 0.03162,
-      "in_kev": false,
-      "kev_date_added": null,
-      "priority_score": 19,
-      "priority_label": "low",
-      "summary": {
-        "en": "lodash prior to 4.17.11 is affected by: CWE-400: Uncontrolled Resource Consumption. The impact is: Denial of service. The component is: Date handler. The attack vector is: Attacker provides very long strings, which the library attempts to match using a regular expression. The fixed version is: 4.17.11.",
-        "es": "lodash anterior a versi\u00f3n 4.17.11, est\u00e1 afectado por: CWE-400: Consumo de Recursos No Controlado. El impacto es: Denegaci\u00f3n de servicio. El componente es: Manejador de Fecha. El vector de ataque es: el atacante proporciona cadenas muy largas, que la biblioteca intenta hacer coincidir mediante una expresi\u00f3n regular. La versi\u00f3n corregida es: 4.17.11."
-      },
-      "references": [
-        "https://github.com/lodash/lodash/issues/3359",
-        "https://github.com/lodash/lodash/wiki/Changelog",
-        "https://security.netapp.com/advisory/ntap-20190919-0004/",
-        "https://snyk.io/vuln/SNYK-JS-LODASH-73639"
-      ]
-    },
-    {
-      "id": "nodejs-goof:CVE-2019-1010266:lodash:4.17.4",
-      "cve": "CVE-2019-1010266",
-      "package": "lodash",
-      "ecosystem": "npm",
-      "installed_version": "4.17.4",
-      "fixed_version": "4.17.11",
-      "app": "nodejs-goof",
-      "cvss": 6.5,
-      "epss": 0.03162,
-      "in_kev": false,
-      "kev_date_added": null,
-      "priority_score": 19,
-      "priority_label": "low",
-      "summary": {
-        "en": "lodash prior to 4.17.11 is affected by: CWE-400: Uncontrolled Resource Consumption. The impact is: Denial of service. The component is: Date handler. The attack vector is: Attacker provides very long strings, which the library attempts to match using a regular expression. The fixed version is: 4.17.11.",
-        "es": "lodash anterior a versi\u00f3n 4.17.11, est\u00e1 afectado por: CWE-400: Consumo de Recursos No Controlado. El impacto es: Denegaci\u00f3n de servicio. El componente es: Manejador de Fecha. El vector de ataque es: el atacante proporciona cadenas muy largas, que la biblioteca intenta hacer coincidir mediante una expresi\u00f3n regular. La versi\u00f3n corregida es: 4.17.11."
-      },
-      "references": [
-        "https://github.com/lodash/lodash/issues/3359",
-        "https://github.com/lodash/lodash/wiki/Changelog",
-        "https://security.netapp.com/advisory/ntap-20190919-0004/",
-        "https://snyk.io/vuln/SNYK-JS-LODASH-73639"
-      ]
-    },
-    {
       "id": "nodejs-goof:CVE-2017-1000048:qs:2.2.4",
       "cve": "CVE-2017-1000048",
       "package": "qs",
@@ -5973,6 +5923,56 @@
       "references": [
         "https://github.com/jonschlinkert/kind-of/issues/30",
         "https://github.com/jonschlinkert/kind-of/pull/31"
+      ]
+    },
+    {
+      "id": "nodejs-goof:CVE-2019-1010266:lodash:4.17.10",
+      "cve": "CVE-2019-1010266",
+      "package": "lodash",
+      "ecosystem": "npm",
+      "installed_version": "4.17.10",
+      "fixed_version": "4.17.11",
+      "app": "nodejs-goof",
+      "cvss": 6.5,
+      "epss": 0.03162,
+      "in_kev": false,
+      "kev_date_added": null,
+      "priority_score": 19,
+      "priority_label": "low",
+      "summary": {
+        "en": "lodash prior to 4.17.11 is affected by: CWE-400: Uncontrolled Resource Consumption. The impact is: Denial of service. The component is: Date handler. The attack vector is: Attacker provides very long strings, which the library attempts to match using a regular expression. The fixed version is: 4.17.11.",
+        "es": "lodash anterior a versi\u00f3n 4.17.11, est\u00e1 afectado por: CWE-400: Consumo de Recursos No Controlado. El impacto es: Denegaci\u00f3n de servicio. El componente es: Manejador de Fecha. El vector de ataque es: el atacante proporciona cadenas muy largas, que la biblioteca intenta hacer coincidir mediante una expresi\u00f3n regular. La versi\u00f3n corregida es: 4.17.11."
+      },
+      "references": [
+        "https://github.com/lodash/lodash/issues/3359",
+        "https://github.com/lodash/lodash/wiki/Changelog",
+        "https://security.netapp.com/advisory/ntap-20190919-0004/",
+        "https://snyk.io/vuln/SNYK-JS-LODASH-73639"
+      ]
+    },
+    {
+      "id": "nodejs-goof:CVE-2019-1010266:lodash:4.17.4",
+      "cve": "CVE-2019-1010266",
+      "package": "lodash",
+      "ecosystem": "npm",
+      "installed_version": "4.17.4",
+      "fixed_version": "4.17.11",
+      "app": "nodejs-goof",
+      "cvss": 6.5,
+      "epss": 0.03162,
+      "in_kev": false,
+      "kev_date_added": null,
+      "priority_score": 19,
+      "priority_label": "low",
+      "summary": {
+        "en": "lodash prior to 4.17.11 is affected by: CWE-400: Uncontrolled Resource Consumption. The impact is: Denial of service. The component is: Date handler. The attack vector is: Attacker provides very long strings, which the library attempts to match using a regular expression. The fixed version is: 4.17.11.",
+        "es": "lodash anterior a versi\u00f3n 4.17.11, est\u00e1 afectado por: CWE-400: Consumo de Recursos No Controlado. El impacto es: Denegaci\u00f3n de servicio. El componente es: Manejador de Fecha. El vector de ataque es: el atacante proporciona cadenas muy largas, que la biblioteca intenta hacer coincidir mediante una expresi\u00f3n regular. La versi\u00f3n corregida es: 4.17.11."
+      },
+      "references": [
+        "https://github.com/lodash/lodash/issues/3359",
+        "https://github.com/lodash/lodash/wiki/Changelog",
+        "https://security.netapp.com/advisory/ntap-20190919-0004/",
+        "https://snyk.io/vuln/SNYK-JS-LODASH-73639"
       ]
     },
     {
@@ -6398,52 +6398,6 @@
       ]
     },
     {
-      "id": "nodejs-goof:CVE-2018-16487:lodash:4.17.10",
-      "cve": "CVE-2018-16487",
-      "package": "lodash",
-      "ecosystem": "npm",
-      "installed_version": "4.17.10",
-      "fixed_version": "4.17.11",
-      "app": "nodejs-goof",
-      "cvss": 5.6,
-      "epss": 0.01553,
-      "in_kev": false,
-      "kev_date_added": null,
-      "priority_score": 15,
-      "priority_label": "low",
-      "summary": {
-        "en": "A prototype pollution vulnerability was found in lodash <4.17.11 where the functions merge, mergeWith, and defaultsDeep can be tricked into adding or modifying properties of Object.prototype.",
-        "es": "Se ha detectado una vulnerabilidad de contaminaci\u00f3n de prototipo en lodash, en versiones anteriores a la 4.17.11, en la que se puede enga\u00f1ar a las funciones merge, mergeWith y defaultsDeep para que a\u00f1adan o modifiquen las propiedades de Object.prototype."
-      },
-      "references": [
-        "https://hackerone.com/reports/380873",
-        "https://security.netapp.com/advisory/ntap-20190919-0004/"
-      ]
-    },
-    {
-      "id": "nodejs-goof:CVE-2018-16487:lodash:4.17.4",
-      "cve": "CVE-2018-16487",
-      "package": "lodash",
-      "ecosystem": "npm",
-      "installed_version": "4.17.4",
-      "fixed_version": "4.17.11",
-      "app": "nodejs-goof",
-      "cvss": 5.6,
-      "epss": 0.01553,
-      "in_kev": false,
-      "kev_date_added": null,
-      "priority_score": 15,
-      "priority_label": "low",
-      "summary": {
-        "en": "A prototype pollution vulnerability was found in lodash <4.17.11 where the functions merge, mergeWith, and defaultsDeep can be tricked into adding or modifying properties of Object.prototype.",
-        "es": "Se ha detectado una vulnerabilidad de contaminaci\u00f3n de prototipo en lodash, en versiones anteriores a la 4.17.11, en la que se puede enga\u00f1ar a las funciones merge, mergeWith y defaultsDeep para que a\u00f1adan o modifiquen las propiedades de Object.prototype."
-      },
-      "references": [
-        "https://hackerone.com/reports/380873",
-        "https://security.netapp.com/advisory/ntap-20190919-0004/"
-      ]
-    },
-    {
       "id": "nodejs-goof:CVE-2023-3696:mongoose:4.2.4",
       "cve": "CVE-2023-3696",
       "package": "mongoose",
@@ -6488,6 +6442,52 @@
         "https://lists.apache.org/thread.html/r6a32cb3eda3b19096ad48ef1e7aa8f26e005f2f63765abb69ce08b85%40%3Cdev.myfaces.apache.org%3E",
         "https://snyk.io/vuln/SNYK-JAVA-ORGWEBJARSNPM-1279028",
         "https://snyk.io/vuln/SNYK-JS-PATHPARSE-1077067"
+      ]
+    },
+    {
+      "id": "nodejs-goof:CVE-2018-16487:lodash:4.17.10",
+      "cve": "CVE-2018-16487",
+      "package": "lodash",
+      "ecosystem": "npm",
+      "installed_version": "4.17.10",
+      "fixed_version": "4.17.11",
+      "app": "nodejs-goof",
+      "cvss": 5.6,
+      "epss": 0.01553,
+      "in_kev": false,
+      "kev_date_added": null,
+      "priority_score": 15,
+      "priority_label": "low",
+      "summary": {
+        "en": "A prototype pollution vulnerability was found in lodash <4.17.11 where the functions merge, mergeWith, and defaultsDeep can be tricked into adding or modifying properties of Object.prototype.",
+        "es": "Se ha detectado una vulnerabilidad de contaminaci\u00f3n de prototipo en lodash, en versiones anteriores a la 4.17.11, en la que se puede enga\u00f1ar a las funciones merge, mergeWith y defaultsDeep para que a\u00f1adan o modifiquen las propiedades de Object.prototype."
+      },
+      "references": [
+        "https://hackerone.com/reports/380873",
+        "https://security.netapp.com/advisory/ntap-20190919-0004/"
+      ]
+    },
+    {
+      "id": "nodejs-goof:CVE-2018-16487:lodash:4.17.4",
+      "cve": "CVE-2018-16487",
+      "package": "lodash",
+      "ecosystem": "npm",
+      "installed_version": "4.17.4",
+      "fixed_version": "4.17.11",
+      "app": "nodejs-goof",
+      "cvss": 5.6,
+      "epss": 0.01553,
+      "in_kev": false,
+      "kev_date_added": null,
+      "priority_score": 15,
+      "priority_label": "low",
+      "summary": {
+        "en": "A prototype pollution vulnerability was found in lodash <4.17.11 where the functions merge, mergeWith, and defaultsDeep can be tricked into adding or modifying properties of Object.prototype.",
+        "es": "Se ha detectado una vulnerabilidad de contaminaci\u00f3n de prototipo en lodash, en versiones anteriores a la 4.17.11, en la que se puede enga\u00f1ar a las funciones merge, mergeWith y defaultsDeep para que a\u00f1adan o modifiquen las propiedades de Object.prototype."
+      },
+      "references": [
+        "https://hackerone.com/reports/380873",
+        "https://security.netapp.com/advisory/ntap-20190919-0004/"
       ]
     },
     {
@@ -8709,6 +8709,30 @@
       ]
     },
     {
+      "id": "nodejs-goof:CVE-2026-102278:brace-expansion:1.1.11",
+      "cve": "CVE-2026-102278",
+      "package": "brace-expansion",
+      "ecosystem": "npm",
+      "installed_version": "1.1.11",
+      "fixed_version": "1.1.20",
+      "app": "nodejs-goof",
+      "cvss": 7.5,
+      "epss": 0.0035,
+      "in_kev": false,
+      "kev_date_added": null,
+      "priority_score": 19,
+      "priority_label": "low",
+      "summary": {
+        "en": "The brace-expansion library generates arbitrary strings containing a common prefix and suffix. Prior to 1.1.20, 2.1.6, 3.0.8, and 5.0.11, deeply nested brace groups cause expand_() to recurse once per nesting level at comma-member and single-set expansion sites, exhausting the native stack before output limits can apply and potentially terminating the Node.js process. expand_ performs uncontrolled recursion for nested brace alternatives and single-part sets. deeply nested brace groups supplied as an untrusted pattern. expand_ is affected. expand is affected. Comma members is affected. Single set is affected. native stack exhaustion during nested sub-expansion. process-terminating denial of service. This issue is fixed in versions 1.1.20, 2.1.6, 3.0.8, and 5.0.11."
+      },
+      "references": [
+        "https://github.com/juliangruber/brace-expansion/commit/1efee7c397c191da6287a78ec19512476a966a7b",
+        "https://github.com/juliangruber/brace-expansion/commit/935d78f32f335b2ff76578e5c5e877d31ae9888c",
+        "https://github.com/juliangruber/brace-expansion/commit/de84f144e9816f30e25fc8179e2e1249ab6df0db",
+        "https://github.com/juliangruber/brace-expansion/security/advisories/GHSA-qhr7-859c-m2p7"
+      ]
+    },
+    {
       "id": "nodejs-goof:CVE-2026-102276:brace-expansion:1.1.11",
       "cve": "CVE-2026-102276",
       "package": "brace-expansion",
@@ -8731,30 +8755,6 @@
         "https://github.com/juliangruber/brace-expansion/commit/5171e681c0922b7ae8bfaf9a331e309107be6edc",
         "https://github.com/juliangruber/brace-expansion/commit/6735c94873ca570bcdd6a0690033bdd3126379d3",
         "https://github.com/juliangruber/brace-expansion/security/advisories/GHSA-6j4f-fj2g-mc7p"
-      ]
-    },
-    {
-      "id": "nodejs-goof:CVE-2026-102278:brace-expansion:1.1.11",
-      "cve": "CVE-2026-102278",
-      "package": "brace-expansion",
-      "ecosystem": "npm",
-      "installed_version": "1.1.11",
-      "fixed_version": "1.1.20",
-      "app": "nodejs-goof",
-      "cvss": 7.5,
-      "epss": 0.0035,
-      "in_kev": false,
-      "kev_date_added": null,
-      "priority_score": 19,
-      "priority_label": "low",
-      "summary": {
-        "en": "The brace-expansion library generates arbitrary strings containing a common prefix and suffix. Prior to 1.1.20, 2.1.6, 3.0.8, and 5.0.11, deeply nested brace groups cause expand_() to recurse once per nesting level at comma-member and single-set expansion sites, exhausting the native stack before output limits can apply and potentially terminating the Node.js process. expand_ performs uncontrolled recursion for nested brace alternatives and single-part sets. deeply nested brace groups supplied as an untrusted pattern. expand_ is affected. expand is affected. Comma members is affected. Single set is affected. native stack exhaustion during nested sub-expansion. process-terminating denial of service. This issue is fixed in versions 1.1.20, 2.1.6, 3.0.8, and 5.0.11."
-      },
-      "references": [
-        "https://github.com/juliangruber/brace-expansion/commit/1efee7c397c191da6287a78ec19512476a966a7b",
-        "https://github.com/juliangruber/brace-expansion/commit/935d78f32f335b2ff76578e5c5e877d31ae9888c",
-        "https://github.com/juliangruber/brace-expansion/commit/de84f144e9816f30e25fc8179e2e1249ab6df0db",
-        "https://github.com/juliangruber/brace-expansion/security/advisories/GHSA-qhr7-859c-m2p7"
       ]
     },
     {
@@ -9663,12 +9663,6 @@
   ],
   "history": [
     {
-      "date": "2026-09-18",
-      "findings_total": 311,
-      "critical": 4,
-      "high": 3
-    },
-    {
       "date": "2026-09-19",
       "findings_total": 312,
       "critical": 4,
@@ -9838,6 +9832,12 @@
     },
     {
       "date": "2026-10-17",
+      "findings_total": 343,
+      "critical": 4,
+      "high": 4
+    },
+    {
+      "date": "2026-10-18",
       "findings_total": 343,
       "critical": 4,
       "high": 4

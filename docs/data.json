@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-10-19T12:36:14.362851+00:00",
+  "generated_at": "2026-10-20T11:12:11.017534+00:00",
   "sources": {
     "kev": {
       "fetched": true,
@@ -891,6 +891,32 @@
       ]
     },
     {
+      "id": "pygoat:CVE-2023-44271:pillow:9.4.0",
+      "cve": "CVE-2023-44271",
+      "package": "pillow",
+      "ecosystem": "PyPI",
+      "installed_version": "9.4.0",
+      "fixed_version": "10.0.0",
+      "app": "pygoat",
+      "cvss": 7.5,
+      "epss": 0.01348,
+      "in_kev": false,
+      "kev_date_added": null,
+      "priority_score": 20,
+      "priority_label": "medium",
+      "summary": {
+        "en": "An issue was discovered in Pillow before 10.0.0. It is a Denial of Service that uncontrollably allocates memory to process a given task, potentially causing a service to crash by having it run out of memory. This occurs for truetype in ImageFont when textlength in an ImageDraw instance operates on a long text argument.",
+        "es": "Se descubri\u00f3 un problema en Pillow antes de la versi\u00f3n 10.0.0. Es una Denegaci\u00f3n de Servicio que asigna memoria de forma incontrolable para procesar una tarea determinada, lo que puede provocar que un servicio falle al quedarse sin memoria. Esto ocurre para truetype en ImageFont cuando la longitud del texto en una instancia de ImageDraw opera con un argumento de texto largo."
+      },
+      "references": [
+        "https://devhub.checkmarx.com/cve-details/CVE-2023-44271/",
+        "https://github.com/python-pillow/Pillow/commit/1fe1bb49c452b0318cad12ea9d97c3bef188e9a7",
+        "https://github.com/python-pillow/Pillow/pull/7244",
+        "https://lists.debian.org/debian-lts-announce/2024/03/msg00021.html",
+        "https://lists.fedoraproject.org/archives/list/package-announce%40lists.fedoraproject.org/message/N2JOEDUJDQLCUII2LQYZYSM7RJL2I3P4/"
+      ]
+    },
+    {
       "id": "pygoat:CVE-2024-56374:django:4.2",
       "cve": "CVE-2024-56374",
       "package": "django",
@@ -1031,32 +1057,6 @@
         "https://github.com/django/django/commit/f1949c1f9758947ade984c895ff16bef46f56520",
         "https://groups.google.com/g/django-announce",
         "https://www.djangoproject.com/weblog/2026/aug/04/security-releases/"
-      ]
-    },
-    {
-      "id": "pygoat:CVE-2023-44271:pillow:9.4.0",
-      "cve": "CVE-2023-44271",
-      "package": "pillow",
-      "ecosystem": "PyPI",
-      "installed_version": "9.4.0",
-      "fixed_version": "10.0.0",
-      "app": "pygoat",
-      "cvss": 7.5,
-      "epss": 0.01131,
-      "in_kev": false,
-      "kev_date_added": null,
-      "priority_score": 20,
-      "priority_label": "medium",
-      "summary": {
-        "en": "An issue was discovered in Pillow before 10.0.0. It is a Denial of Service that uncontrollably allocates memory to process a given task, potentially causing a service to crash by having it run out of memory. This occurs for truetype in ImageFont when textlength in an ImageDraw instance operates on a long text argument.",
-        "es": "Se descubri\u00f3 un problema en Pillow antes de la versi\u00f3n 10.0.0. Es una Denegaci\u00f3n de Servicio que asigna memoria de forma incontrolable para procesar una tarea determinada, lo que puede provocar que un servicio falle al quedarse sin memoria. Esto ocurre para truetype en ImageFont cuando la longitud del texto en una instancia de ImageDraw opera con un argumento de texto largo."
-      },
-      "references": [
-        "https://devhub.checkmarx.com/cve-details/CVE-2023-44271/",
-        "https://github.com/python-pillow/Pillow/commit/1fe1bb49c452b0318cad12ea9d97c3bef188e9a7",
-        "https://github.com/python-pillow/Pillow/pull/7244",
-        "https://lists.debian.org/debian-lts-announce/2024/03/msg00021.html",
-        "https://lists.fedoraproject.org/archives/list/package-announce%40lists.fedoraproject.org/message/N2JOEDUJDQLCUII2LQYZYSM7RJL2I3P4/"
       ]
     },
     {
@@ -1941,6 +1941,30 @@
       ]
     },
     {
+      "id": "pygoat:CVE-2026-27199:werkzeug:2.1.2",
+      "cve": "CVE-2026-27199",
+      "package": "werkzeug",
+      "ecosystem": "PyPI",
+      "installed_version": "2.1.2",
+      "fixed_version": "3.1.6",
+      "app": "pygoat",
+      "cvss": 5.3,
+      "epss": 0.00607,
+      "in_kev": false,
+      "kev_date_added": null,
+      "priority_score": 14,
+      "priority_label": "low",
+      "summary": {
+        "en": "Werkzeug is a comprehensive WSGI web application library. Versions 3.1.5 and below, the safe_join function allows Windows device names as filenames if preceded by other path segments. This was previously reported as GHSA-hgf8-39gv-g3f2, but the added filtering failed to account for the fact that safe_join accepts paths with multiple segments, such as example/NUL. The function send_from_directory uses safe_join to safely serve files at user-specified paths under a directory. If the application is running on Windows, and the requested path ends with a special device name, the file will be opened successfully, but reading will hang indefinitely. This issue has been fixed in version 3.1.6.",
+        "es": "Werkzeug es una completa biblioteca de aplicaciones web WSGI. Las versiones 3.1.5 e inferiores, la funci\u00f3n safe_join permite nombres de dispositivos de Windows como nombres de archivo si van precedidos por otros segmentos de ruta. Esto fue reportado previamente como GHSA-hgf8-39gv-g3f2, pero el filtrado a\u00f1adido no tuvo en cuenta el hecho de que safe_join acepta rutas con m\u00faltiples segmentos, como example/NUL. La funci\u00f3n send_from_directory utiliza safe_join para servir archivos de forma segura en rutas especificadas por el usuario bajo un directorio. Si la aplicaci\u00f3n se est\u00e1 ejecutando en Windows, y la ruta solicitada termina con un nombre de dispositivo especial, el archivo se abrir\u00e1 con \u00e9xito, pero la lectura se colgar\u00e1 indefinidamente. Este problema ha sido solucionado en la versi\u00f3n 3.1.6."
+      },
+      "references": [
+        "https://github.com/pallets/werkzeug/commit/f407712fdc60a09c2b3f4fe7db557703e5d9338d",
+        "https://github.com/pallets/werkzeug/releases/tag/3.1.6",
+        "https://github.com/pallets/werkzeug/security/advisories/GHSA-29vq-49wr-vm6x"
+      ]
+    },
+    {
       "id": "pygoat:CVE-2025-48432:django:4.2",
       "cve": "CVE-2025-48432",
       "package": "django",
@@ -2121,30 +2145,6 @@
         "https://github.com/certifi/python-certifi/security/advisories/GHSA-248v-346w-9cwc",
         "https://groups.google.com/a/mozilla.org/g/dev-security-policy/c/XpknYMPO8dI",
         "https://security.netapp.com/advisory/ntap-20241206-0001/"
-      ]
-    },
-    {
-      "id": "pygoat:CVE-2026-27199:werkzeug:2.1.2",
-      "cve": "CVE-2026-27199",
-      "package": "werkzeug",
-      "ecosystem": "PyPI",
-      "installed_version": "2.1.2",
-      "fixed_version": "3.1.6",
-      "app": "pygoat",
-      "cvss": 5.3,
-      "epss": 0.00555,
-      "in_kev": false,
-      "kev_date_added": null,
-      "priority_score": 14,
-      "priority_label": "low",
-      "summary": {
-        "en": "Werkzeug is a comprehensive WSGI web application library. Versions 3.1.5 and below, the safe_join function allows Windows device names as filenames if preceded by other path segments. This was previously reported as GHSA-hgf8-39gv-g3f2, but the added filtering failed to account for the fact that safe_join accepts paths with multiple segments, such as example/NUL. The function send_from_directory uses safe_join to safely serve files at user-specified paths under a directory. If the application is running on Windows, and the requested path ends with a special device name, the file will be opened successfully, but reading will hang indefinitely. This issue has been fixed in version 3.1.6.",
-        "es": "Werkzeug es una completa biblioteca de aplicaciones web WSGI. Las versiones 3.1.5 e inferiores, la funci\u00f3n safe_join permite nombres de dispositivos de Windows como nombres de archivo si van precedidos por otros segmentos de ruta. Esto fue reportado previamente como GHSA-hgf8-39gv-g3f2, pero el filtrado a\u00f1adido no tuvo en cuenta el hecho de que safe_join acepta rutas con m\u00faltiples segmentos, como example/NUL. La funci\u00f3n send_from_directory utiliza safe_join para servir archivos de forma segura en rutas especificadas por el usuario bajo un directorio. Si la aplicaci\u00f3n se est\u00e1 ejecutando en Windows, y la ruta solicitada termina con un nombre de dispositivo especial, el archivo se abrir\u00e1 con \u00e9xito, pero la lectura se colgar\u00e1 indefinidamente. Este problema ha sido solucionado en la versi\u00f3n 3.1.6."
-      },
-      "references": [
-        "https://github.com/pallets/werkzeug/commit/f407712fdc60a09c2b3f4fe7db557703e5d9338d",
-        "https://github.com/pallets/werkzeug/releases/tag/3.1.6",
-        "https://github.com/pallets/werkzeug/security/advisories/GHSA-29vq-49wr-vm6x"
       ]
     },
     {
@@ -5881,30 +5881,6 @@
       ]
     },
     {
-      "id": "nodejs-goof:CVE-2025-7783:form-data:2.3.3",
-      "cve": "CVE-2025-7783",
-      "package": "form-data",
-      "ecosystem": "npm",
-      "installed_version": "2.3.3",
-      "fixed_version": "2.5.4",
-      "app": "nodejs-goof",
-      "cvss": null,
-      "epss": 0.0191,
-      "in_kev": false,
-      "kev_date_added": null,
-      "priority_score": 1,
-      "priority_label": "low",
-      "summary": {
-        "en": "Use of Insufficiently Random Values vulnerability in form-data allows HTTP Parameter Pollution (HPP). This vulnerability is associated with program files lib/form_data.Js.\n\nThis issue affects form-data: < 2.5.4, 3.0.0 - 3.0.3, 4.0.0 - 4.0.3.",
-        "es": "La vulnerabilidad de uso de valores insuficientemente aleatorios en form-data permite la contaminaci\u00f3n de par\u00e1metros HTTP (HPP). Esta vulnerabilidad est\u00e1 asociada con los archivos de programa lib/form_data.Js. Este problema afecta a form-data: &lt; 2.5.4, 3.0.0 - 3.0.3, 4.0.0 - 4.0.3."
-      },
-      "references": [
-        "https://github.com/form-data/form-data/commit/3d1723080e6577a66f17f163ecd345a21d8d0fd0",
-        "https://github.com/form-data/form-data/security/advisories/GHSA-fjxv-7rqg-78g4",
-        "https://lists.debian.org/debian-lts-announce/2025/07/msg00023.html"
-      ]
-    },
-    {
       "id": "nodejs-goof:CVE-2019-20149:kind-of:6.0.2",
       "cve": "CVE-2019-20149",
       "package": "kind-of",
@@ -6047,6 +6023,30 @@
       "references": [
         "http://www.securityfocus.com/bid/101893",
         "https://github.com/mde/ejs/commit/49264e0037e313a0a3e033450b5c184112516d8f"
+      ]
+    },
+    {
+      "id": "nodejs-goof:CVE-2025-7783:form-data:2.3.3",
+      "cve": "CVE-2025-7783",
+      "package": "form-data",
+      "ecosystem": "npm",
+      "installed_version": "2.3.3",
+      "fixed_version": "2.5.4",
+      "app": "nodejs-goof",
+      "cvss": null,
+      "epss": 0.0181,
+      "in_kev": false,
+      "kev_date_added": null,
+      "priority_score": 1,
+      "priority_label": "low",
+      "summary": {
+        "en": "Use of Insufficiently Random Values vulnerability in form-data allows HTTP Parameter Pollution (HPP). This vulnerability is associated with program files lib/form_data.Js.\n\nThis issue affects form-data: < 2.5.4, 3.0.0 - 3.0.3, 4.0.0 - 4.0.3.",
+        "es": "La vulnerabilidad de uso de valores insuficientemente aleatorios en form-data permite la contaminaci\u00f3n de par\u00e1metros HTTP (HPP). Esta vulnerabilidad est\u00e1 asociada con los archivos de programa lib/form_data.Js. Este problema afecta a form-data: &lt; 2.5.4, 3.0.0 - 3.0.3, 4.0.0 - 4.0.3."
+      },
+      "references": [
+        "https://github.com/form-data/form-data/commit/3d1723080e6577a66f17f163ecd345a21d8d0fd0",
+        "https://github.com/form-data/form-data/security/advisories/GHSA-fjxv-7rqg-78g4",
+        "https://lists.debian.org/debian-lts-announce/2025/07/msg00023.html"
       ]
     },
     {
@@ -8333,7 +8333,8 @@
       "priority_score": 19,
       "priority_label": "low",
       "summary": {
-        "en": "Versions of the package validator before 13.15.22 are vulnerable to Incomplete Filtering of One or More Instances of Special Elements in the isLength() function that does not take into account Unicode variation selectors (\\uFE0F, \\uFE0E) appearing in a sequence which lead to improper string length calculation. This can lead to an application using isLength for input validation accepting strings significantly longer than intended, resulting in issues like data truncation in databases, buffer overflows in other system components, or denial-of-service."
+        "en": "Versions of the package validator before 13.15.22 are vulnerable to Incomplete Filtering of One or More Instances of Special Elements in the isLength() function that does not take into account Unicode variation selectors (\\uFE0F, \\uFE0E) appearing in a sequence which lead to improper string length calculation. This can lead to an application using isLength for input validation accepting strings significantly longer than intended, resulting in issues like data truncation in databases, buffer overflows in other system components, or denial-of-service.",
+        "es": "Versiones del paquete validador anteriores a la 13.15.22 son vulnerables a un Filtrado Incompleto de Una o M\u00e1s Instancias de Elementos Especiales en la funci\u00f3n isLength() que no tiene en cuenta los selectores de variaci\u00f3n Unicode (\\uFE0F, \\uFE0E) que aparecen en una secuencia, lo que lleva a un c\u00e1lculo incorrecto de la longitud de la cadena. Esto puede llevar a que una aplicaci\u00f3n que utiliza isLength para la validaci\u00f3n de entrada acepte cadenas significativamente m\u00e1s largas de lo previsto, lo que resulta en problemas como truncamiento de datos en bases de datos, desbordamientos de b\u00fafer en otros componentes del sistema o denegaci\u00f3n de servicio."
       },
       "references": [
         "https://gist.github.com/koral--/ad31208b25b9e3d1e2e35f1d4d72572e",
@@ -8414,6 +8415,31 @@
       ]
     },
     {
+      "id": "nodejs-goof:CVE-2018-25110:marked:0.3.5",
+      "cve": "CVE-2018-25110",
+      "package": "marked",
+      "ecosystem": "npm",
+      "installed_version": "0.3.5",
+      "fixed_version": "0.3.17",
+      "app": "nodejs-goof",
+      "cvss": 7.5,
+      "epss": 0.0061,
+      "in_kev": false,
+      "kev_date_added": null,
+      "priority_score": 19,
+      "priority_label": "low",
+      "summary": {
+        "en": "Marked prior to version 0.3.17 is vulnerable to a Regular Expression Denial of Service (ReDoS) attack due to catastrophic backtracking in several regular expressions used for parsing HTML tags and markdown links. An attacker can exploit this vulnerability by providing specially crafted markdown input, such as deeply nested or repetitively structured brackets or tag attributes, which cause the parser to hang and lead to a Denial of Service.",
+        "es": "Marked antes de la versi\u00f3n 0.3.17 es vulnerable a un ataque de denegaci\u00f3n de servicio de expresiones regulares (ReDoS) debido a un retroceso catastr\u00f3fico en varias expresiones regulares utilizadas para analizar etiquetas HTML y enlaces de Markdown. Un atacante puede explotar esta vulnerabilidad proporcionando una entrada de Markdown especialmente manipulada, como corchetes o atributos de etiqueta profundamente anidados o con estructura repetitiva, que provocan el bloqueo del analizador y provocan una denegaci\u00f3n de servicio."
+      },
+      "references": [
+        "https://github.com/Checkmarx/Vulnerabilities-Proofs-of-Concept/tree/main/2018/CVE-2018-25110",
+        "https://github.com/markedjs/marked/commit/20bfc106013ed45713a21672ad4a34df94dcd485",
+        "https://github.com/markedjs/marked/issues/1070",
+        "https://github.com/markedjs/marked/pull/1083"
+      ]
+    },
+    {
       "id": "nodejs-goof:CVE-2026-33750:brace-expansion:1.1.11",
       "cve": "CVE-2026-33750",
       "package": "brace-expansion",
@@ -8462,31 +8488,6 @@
       },
       "references": [
         "https://github.com/Automattic/mongoose/security/advisories/GHSA-wpg9-53fq-2r8h"
-      ]
-    },
-    {
-      "id": "nodejs-goof:CVE-2018-25110:marked:0.3.5",
-      "cve": "CVE-2018-25110",
-      "package": "marked",
-      "ecosystem": "npm",
-      "installed_version": "0.3.5",
-      "fixed_version": "0.3.17",
-      "app": "nodejs-goof",
-      "cvss": 7.5,
-      "epss": 0.00585,
-      "in_kev": false,
-      "kev_date_added": null,
-      "priority_score": 19,
-      "priority_label": "low",
-      "summary": {
-        "en": "Marked prior to version 0.3.17 is vulnerable to a Regular Expression Denial of Service (ReDoS) attack due to catastrophic backtracking in several regular expressions used for parsing HTML tags and markdown links. An attacker can exploit this vulnerability by providing specially crafted markdown input, such as deeply nested or repetitively structured brackets or tag attributes, which cause the parser to hang and lead to a Denial of Service.",
-        "es": "Marked antes de la versi\u00f3n 0.3.17 es vulnerable a un ataque de denegaci\u00f3n de servicio de expresiones regulares (ReDoS) debido a un retroceso catastr\u00f3fico en varias expresiones regulares utilizadas para analizar etiquetas HTML y enlaces de Markdown. Un atacante puede explotar esta vulnerabilidad proporcionando una entrada de Markdown especialmente manipulada, como corchetes o atributos de etiqueta profundamente anidados o con estructura repetitiva, que provocan el bloqueo del analizador y provocan una denegaci\u00f3n de servicio."
-      },
-      "references": [
-        "https://github.com/Checkmarx/Vulnerabilities-Proofs-of-Concept/tree/main/2018/CVE-2018-25110",
-        "https://github.com/markedjs/marked/commit/20bfc106013ed45713a21672ad4a34df94dcd485",
-        "https://github.com/markedjs/marked/issues/1070",
-        "https://github.com/markedjs/marked/pull/1083"
       ]
     },
     {
@@ -8711,30 +8712,6 @@
       ]
     },
     {
-      "id": "nodejs-goof:CVE-2026-102278:brace-expansion:1.1.11",
-      "cve": "CVE-2026-102278",
-      "package": "brace-expansion",
-      "ecosystem": "npm",
-      "installed_version": "1.1.11",
-      "fixed_version": "1.1.20",
-      "app": "nodejs-goof",
-      "cvss": 7.5,
-      "epss": 0.0035,
-      "in_kev": false,
-      "kev_date_added": null,
-      "priority_score": 19,
-      "priority_label": "low",
-      "summary": {
-        "en": "The brace-expansion library generates arbitrary strings containing a common prefix and suffix. Prior to 1.1.20, 2.1.6, 3.0.8, and 5.0.11, deeply nested brace groups cause expand_() to recurse once per nesting level at comma-member and single-set expansion sites, exhausting the native stack before output limits can apply and potentially terminating the Node.js process. expand_ performs uncontrolled recursion for nested brace alternatives and single-part sets. deeply nested brace groups supplied as an untrusted pattern. expand_ is affected. expand is affected. Comma members is affected. Single set is affected. native stack exhaustion during nested sub-expansion. process-terminating denial of service. This issue is fixed in versions 1.1.20, 2.1.6, 3.0.8, and 5.0.11."
-      },
-      "references": [
-        "https://github.com/juliangruber/brace-expansion/commit/1efee7c397c191da6287a78ec19512476a966a7b",
-        "https://github.com/juliangruber/brace-expansion/commit/935d78f32f335b2ff76578e5c5e877d31ae9888c",
-        "https://github.com/juliangruber/brace-expansion/commit/de84f144e9816f30e25fc8179e2e1249ab6df0db",
-        "https://github.com/juliangruber/brace-expansion/security/advisories/GHSA-qhr7-859c-m2p7"
-      ]
-    },
-    {
       "id": "nodejs-goof:CVE-2026-102276:brace-expansion:1.1.11",
       "cve": "CVE-2026-102276",
       "package": "brace-expansion",
@@ -8757,6 +8734,30 @@
         "https://github.com/juliangruber/brace-expansion/commit/5171e681c0922b7ae8bfaf9a331e309107be6edc",
         "https://github.com/juliangruber/brace-expansion/commit/6735c94873ca570bcdd6a0690033bdd3126379d3",
         "https://github.com/juliangruber/brace-expansion/security/advisories/GHSA-6j4f-fj2g-mc7p"
+      ]
+    },
+    {
+      "id": "nodejs-goof:CVE-2026-102278:brace-expansion:1.1.11",
+      "cve": "CVE-2026-102278",
+      "package": "brace-expansion",
+      "ecosystem": "npm",
+      "installed_version": "1.1.11",
+      "fixed_version": "1.1.20",
+      "app": "nodejs-goof",
+      "cvss": 7.5,
+      "epss": 0.0035,
+      "in_kev": false,
+      "kev_date_added": null,
+      "priority_score": 19,
+      "priority_label": "low",
+      "summary": {
+        "en": "The brace-expansion library generates arbitrary strings containing a common prefix and suffix. Prior to 1.1.20, 2.1.6, 3.0.8, and 5.0.11, deeply nested brace groups cause expand_() to recurse once per nesting level at comma-member and single-set expansion sites, exhausting the native stack before output limits can apply and potentially terminating the Node.js process. expand_ performs uncontrolled recursion for nested brace alternatives and single-part sets. deeply nested brace groups supplied as an untrusted pattern. expand_ is affected. expand is affected. Comma members is affected. Single set is affected. native stack exhaustion during nested sub-expansion. process-terminating denial of service. This issue is fixed in versions 1.1.20, 2.1.6, 3.0.8, and 5.0.11."
+      },
+      "references": [
+        "https://github.com/juliangruber/brace-expansion/commit/1efee7c397c191da6287a78ec19512476a966a7b",
+        "https://github.com/juliangruber/brace-expansion/commit/935d78f32f335b2ff76578e5c5e877d31ae9888c",
+        "https://github.com/juliangruber/brace-expansion/commit/de84f144e9816f30e25fc8179e2e1249ab6df0db",
+        "https://github.com/juliangruber/brace-expansion/security/advisories/GHSA-qhr7-859c-m2p7"
       ]
     },
     {
@@ -9665,12 +9666,6 @@
   ],
   "history": [
     {
-      "date": "2026-09-20",
-      "findings_total": 312,
-      "critical": 4,
-      "high": 3
-    },
-    {
       "date": "2026-09-21",
       "findings_total": 312,
       "critical": 4,
@@ -9840,6 +9835,12 @@
     },
     {
       "date": "2026-10-19",
+      "findings_total": 343,
+      "critical": 4,
+      "high": 3
+    },
+    {
+      "date": "2026-10-20",
       "findings_total": 343,
       "critical": 4,
       "high": 3

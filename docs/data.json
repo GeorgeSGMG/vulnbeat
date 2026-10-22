@@ -1,17 +1,17 @@
 {
-  "generated_at": "2026-10-21T11:32:54.365783+00:00",
+  "generated_at": "2026-10-22T11:29:08.736584+00:00",
   "sources": {
     "kev": {
       "fetched": true,
-      "entries": 2
+      "entries": 1
     },
     "epss": {
       "fetched": true,
-      "entries": 291
+      "entries": 311
     },
     "nvd": {
       "fetched": true,
-      "entries": 293
+      "entries": 313
     }
   },
   "apps": [
@@ -20,7 +20,7 @@
       "name": "OWASP PyGoat",
       "ecosystem": "PyPI",
       "repo": "https://github.com/adeyosemanputra/pygoat",
-      "dependencies": 34
+      "dependencies": 32
     },
     {
       "id": "nodejs-goof",
@@ -38,74 +38,6 @@
     }
   ],
   "findings": [
-    {
-      "id": "pygoat:CVE-2023-4863:pillow:9.4.0",
-      "cve": "CVE-2023-4863",
-      "package": "pillow",
-      "ecosystem": "PyPI",
-      "installed_version": "9.4.0",
-      "fixed_version": "10.0.1",
-      "app": "pygoat",
-      "cvss": 8.8,
-      "epss": 0.99979,
-      "in_kev": true,
-      "kev_date_added": "2023-09-13",
-      "priority_score": 99,
-      "priority_label": "critical",
-      "summary": {
-        "en": "Heap buffer overflow in libwebp in Google Chrome prior to 116.0.5845.187 and libwebp 1.3.2 allowed a remote attacker to perform an out of bounds memory write via a crafted HTML page. (Chromium security severity: Critical)",
-        "es": "El desbordamiento del b\u00fafer de memoria en libwebp en Google Chrome anterior a 116.0.5845.187 y libwebp 1.3.2 permit\u00eda a un atacante remoto realizar una escritura en memoria fuera de los l\u00edmites a trav\u00e9s de una p\u00e1gina HTML manipulada. (Severidad de seguridad de Chromium: cr\u00edtica)"
-      },
-      "references": [
-        "http://www.openwall.com/lists/oss-security/2023/09/21/4",
-        "http://www.openwall.com/lists/oss-security/2023/09/22/1",
-        "http://www.openwall.com/lists/oss-security/2023/09/22/3",
-        "http://www.openwall.com/lists/oss-security/2023/09/22/4",
-        "http://www.openwall.com/lists/oss-security/2023/09/22/5",
-        "http://www.openwall.com/lists/oss-security/2023/09/22/6",
-        "http://www.openwall.com/lists/oss-security/2023/09/22/7",
-        "http://www.openwall.com/lists/oss-security/2023/09/22/8",
-        "http://www.openwall.com/lists/oss-security/2023/09/26/1",
-        "http://www.openwall.com/lists/oss-security/2023/09/26/7",
-        "http://www.openwall.com/lists/oss-security/2023/09/28/1",
-        "http://www.openwall.com/lists/oss-security/2023/09/28/2",
-        "http://www.openwall.com/lists/oss-security/2023/09/28/4",
-        "https://adamcaudill.com/2023/09/14/whose-cve-is-it-anyway/",
-        "https://blog.isosceles.com/the-webp-0day/",
-        "https://bugzilla.suse.com/show_bug.cgi?id=1215231",
-        "https://chromereleases.googleblog.com/2023/09/stable-channel-update-for-desktop_11.html",
-        "https://crbug.com/1479274",
-        "https://en.bandisoft.com/honeyview/history/",
-        "https://github.com/webmproject/libwebp/commit/902bc9190331343b2017211debcec8d2ab87e17a",
-        "https://github.com/webmproject/libwebp/releases/tag/v1.3.2",
-        "https://lists.debian.org/debian-lts-announce/2023/09/msg00015.html",
-        "https://lists.debian.org/debian-lts-announce/2023/09/msg00016.html",
-        "https://lists.debian.org/debian-lts-announce/2023/09/msg00017.html",
-        "https://lists.fedoraproject.org/archives/list/package-announce@lists.fedoraproject.org/message/6T655QF7CQ3DYAMPFV7IECQYGDEUIVVT/",
-        "https://lists.fedoraproject.org/archives/list/package-announce@lists.fedoraproject.org/message/FYYKLG6CRGEDTNRBSU26EEWAO6D6U645/",
-        "https://lists.fedoraproject.org/archives/list/package-announce@lists.fedoraproject.org/message/KUQ7CTX3W372X3UY56VVNAHCH6H2F4X3/",
-        "https://lists.fedoraproject.org/archives/list/package-announce@lists.fedoraproject.org/message/OZDGWWMJREPAGKWCJKSCM4WYLANSKIFX/",
-        "https://lists.fedoraproject.org/archives/list/package-announce@lists.fedoraproject.org/message/PYZV7TMKF4QHZ54SFJX54BDN52VHGGCX/",
-        "https://lists.fedoraproject.org/archives/list/package-announce@lists.fedoraproject.org/message/WHOLML7N2G5KCAZXFWC5IDFFHSQS5SDB/",
-        "https://lists.fedoraproject.org/archives/list/package-announce@lists.fedoraproject.org/message/WTRUIS3564P7ZLM2S2IH4Y4KZ327LI4I/",
-        "https://msrc.microsoft.com/update-guide/vulnerability/CVE-2023-4863",
-        "https://news.ycombinator.com/item?id=37478403",
-        "https://security-tracker.debian.org/tracker/CVE-2023-4863",
-        "https://security.gentoo.org/glsa/202309-05",
-        "https://security.gentoo.org/glsa/202401-10",
-        "https://security.netapp.com/advisory/ntap-20230929-0011/",
-        "https://sethmlarson.dev/security-developer-in-residence-weekly-report-16",
-        "https://stackdiary.com/critical-vulnerability-in-webp-codec-cve-2023-4863/",
-        "https://www.bentley.com/advisories/be-2023-0001/",
-        "https://www.bleepingcomputer.com/news/google/google-fixes-another-chrome-zero-day-bug-exploited-in-attacks/",
-        "https://www.debian.org/security/2023/dsa-5496",
-        "https://www.debian.org/security/2023/dsa-5497",
-        "https://www.debian.org/security/2023/dsa-5498",
-        "https://www.mozilla.org/en-US/security/advisories/mfsa2023-40/",
-        "https://www.vicarius.io/vsociety/posts/zero-day-webp-vulnerability-cve-2023-4863",
-        "https://www.cisa.gov/known-exploited-vulnerabilities-catalog?field_cve=CVE-2023-4863"
-      ]
-    },
     {
       "id": "pygoat:CVE-2023-46695:django:4.2",
       "cve": "CVE-2023-46695",
@@ -659,32 +591,6 @@
       ]
     },
     {
-      "id": "pygoat:CVE-2023-50447:pillow:9.4.0",
-      "cve": "CVE-2023-50447",
-      "package": "pillow",
-      "ecosystem": "PyPI",
-      "installed_version": "9.4.0",
-      "fixed_version": "10.2.0",
-      "app": "pygoat",
-      "cvss": 8.1,
-      "epss": 0.01703,
-      "in_kev": false,
-      "kev_date_added": null,
-      "priority_score": 22,
-      "priority_label": "medium",
-      "summary": {
-        "en": "Pillow through 10.1.0 allows PIL.ImageMath.eval Arbitrary Code Execution via the environment parameter, a different vulnerability than CVE-2022-22817 (which was about the expression parameter).",
-        "es": "Pillow hasta la versi\u00f3n 10.1.0 permite la ejecuci\u00f3n de c\u00f3digo arbitrario PIL.ImageMath.eval a trav\u00e9s del par\u00e1metro de entorno, una vulnerabilidad diferente a CVE-2022-22817 (que se refer\u00eda al par\u00e1metro de expresi\u00f3n)."
-      },
-      "references": [
-        "http://www.openwall.com/lists/oss-security/2024/01/20/1",
-        "https://devhub.checkmarx.com/cve-details/CVE-2023-50447/",
-        "https://duartecsantos.github.io/2024-01-02-CVE-2023-50447/",
-        "https://github.com/python-pillow/Pillow/releases",
-        "https://lists.debian.org/debian-lts-announce/2024/01/msg00019.html"
-      ]
-    },
-    {
       "id": "pygoat:CVE-2025-64458:django:4.2",
       "cve": "CVE-2025-64458",
       "package": "django",
@@ -888,58 +794,6 @@
         "https://github.com/pallets/werkzeug/security/advisories/GHSA-xg9f-g7g7-2323",
         "https://security.netapp.com/advisory/ntap-20230818-0003/",
         "https://www.debian.org/security/2023/dsa-5470"
-      ]
-    },
-    {
-      "id": "pygoat:CVE-2023-44271:pillow:9.4.0",
-      "cve": "CVE-2023-44271",
-      "package": "pillow",
-      "ecosystem": "PyPI",
-      "installed_version": "9.4.0",
-      "fixed_version": "10.0.0",
-      "app": "pygoat",
-      "cvss": 7.5,
-      "epss": 0.01348,
-      "in_kev": false,
-      "kev_date_added": null,
-      "priority_score": 20,
-      "priority_label": "medium",
-      "summary": {
-        "en": "An issue was discovered in Pillow before 10.0.0. It is a Denial of Service that uncontrollably allocates memory to process a given task, potentially causing a service to crash by having it run out of memory. This occurs for truetype in ImageFont when textlength in an ImageDraw instance operates on a long text argument.",
-        "es": "Se descubri\u00f3 un problema en Pillow antes de la versi\u00f3n 10.0.0. Es una Denegaci\u00f3n de Servicio que asigna memoria de forma incontrolable para procesar una tarea determinada, lo que puede provocar que un servicio falle al quedarse sin memoria. Esto ocurre para truetype en ImageFont cuando la longitud del texto en una instancia de ImageDraw opera con un argumento de texto largo."
-      },
-      "references": [
-        "https://devhub.checkmarx.com/cve-details/CVE-2023-44271/",
-        "https://github.com/python-pillow/Pillow/commit/1fe1bb49c452b0318cad12ea9d97c3bef188e9a7",
-        "https://github.com/python-pillow/Pillow/pull/7244",
-        "https://lists.debian.org/debian-lts-announce/2024/03/msg00021.html",
-        "https://lists.fedoraproject.org/archives/list/package-announce%40lists.fedoraproject.org/message/N2JOEDUJDQLCUII2LQYZYSM7RJL2I3P4/"
-      ]
-    },
-    {
-      "id": "pygoat:CVE-2024-56374:django:4.2",
-      "cve": "CVE-2024-56374",
-      "package": "django",
-      "ecosystem": "PyPI",
-      "installed_version": "4.2",
-      "fixed_version": "4.2.18",
-      "app": "pygoat",
-      "cvss": 5.8,
-      "epss": 0.01923,
-      "in_kev": false,
-      "kev_date_added": null,
-      "priority_score": 16,
-      "priority_label": "low",
-      "summary": {
-        "en": "An issue was discovered in Django 5.1 before 5.1.5, 5.0 before 5.0.11, and 4.2 before 4.2.18. Lack of upper-bound limit enforcement in strings passed when performing IPv6 validation could lead to a potential denial-of-service attack. The undocumented and private functions clean_ipv6_address and is_valid_ipv6_address are vulnerable, as is the django.forms.GenericIPAddressField form field. (The django.db.models.GenericIPAddressField model field is not affected.)",
-        "es": "Se descubri\u00f3 un problema en Django 5.1 antes de 5.1.5, 5.0 antes de 5.0.11 y 4.2 antes de 4.2.18. La falta de aplicaci\u00f3n de un l\u00edmite superior en las cadenas que se pasan al realizar la validaci\u00f3n de IPv6 podr\u00eda provocar un posible ataque de denegaci\u00f3n de servicio. Las funciones privadas y no documentadas clean_ipv6_address e is_valid_ipv6_address son vulnerables, al igual que el campo de formulario django.forms.GenericIPAddressField. (El campo de modelo django.db.models.GenericIPAddressField no se ve afectado)."
-      },
-      "references": [
-        "https://docs.djangoproject.com/en/dev/releases/security/",
-        "https://groups.google.com/g/django-announce",
-        "https://www.djangoproject.com/weblog/2025/jan/14/security-releases/",
-        "http://www.openwall.com/lists/oss-security/2025/01/14/2",
-        "https://lists.debian.org/debian-lts-announce/2025/01/msg00024.html"
       ]
     },
     {
@@ -1217,31 +1071,6 @@
       ]
     },
     {
-      "id": "pygoat:CVE-2024-28219:pillow:9.4.0",
-      "cve": "CVE-2024-28219",
-      "package": "pillow",
-      "ecosystem": "PyPI",
-      "installed_version": "9.4.0",
-      "fixed_version": "10.3.0",
-      "app": "pygoat",
-      "cvss": 6.7,
-      "epss": 0.00997,
-      "in_kev": false,
-      "kev_date_added": null,
-      "priority_score": 17,
-      "priority_label": "low",
-      "summary": {
-        "en": "In _imagingcms.c in Pillow before 10.3.0, a buffer overflow exists because strcpy is used instead of strncpy.",
-        "es": "En _imagingcms.c en Pillow anterior a 10.3.0, existe un desbordamiento del b\u00fafer porque se usa strcpy en lugar de strncpy."
-      },
-      "references": [
-        "https://lists.debian.org/debian-lts-announce/2024/04/msg00008.html",
-        "https://lists.fedoraproject.org/archives/list/package-announce%40lists.fedoraproject.org/message/4XLPUT3VK4GQ6EVY525TT2QNUIXNRU5M/",
-        "https://pillow.readthedocs.io/en/stable/releasenotes/10.3.0.html#security",
-        "https://lists.fedoraproject.org/archives/list/package-announce@lists.fedoraproject.org/message/4XLPUT3VK4GQ6EVY525TT2QNUIXNRU5M/"
-      ]
-    },
-    {
       "id": "pygoat:CVE-2024-41990:django:4.2",
       "cve": "CVE-2024-41990",
       "package": "django",
@@ -1264,6 +1093,87 @@
         "https://groups.google.com/forum/#%21forum/django-announce",
         "https://www.djangoproject.com/weblog/2024/aug/06/security-releases/",
         "https://security.netapp.com/advisory/ntap-20240905-0007/"
+      ]
+    },
+    {
+      "id": "pygoat:CVE-2024-56374:django:4.2",
+      "cve": "CVE-2024-56374",
+      "package": "django",
+      "ecosystem": "PyPI",
+      "installed_version": "4.2",
+      "fixed_version": "4.2.18",
+      "app": "pygoat",
+      "cvss": 5.8,
+      "epss": 0.01277,
+      "in_kev": false,
+      "kev_date_added": null,
+      "priority_score": 15,
+      "priority_label": "low",
+      "summary": {
+        "en": "An issue was discovered in Django 5.1 before 5.1.5, 5.0 before 5.0.11, and 4.2 before 4.2.18. Lack of upper-bound limit enforcement in strings passed when performing IPv6 validation could lead to a potential denial-of-service attack. The undocumented and private functions clean_ipv6_address and is_valid_ipv6_address are vulnerable, as is the django.forms.GenericIPAddressField form field. (The django.db.models.GenericIPAddressField model field is not affected.)",
+        "es": "Se descubri\u00f3 un problema en Django 5.1 antes de 5.1.5, 5.0 antes de 5.0.11 y 4.2 antes de 4.2.18. La falta de aplicaci\u00f3n de un l\u00edmite superior en las cadenas que se pasan al realizar la validaci\u00f3n de IPv6 podr\u00eda provocar un posible ataque de denegaci\u00f3n de servicio. Las funciones privadas y no documentadas clean_ipv6_address e is_valid_ipv6_address son vulnerables, al igual que el campo de formulario django.forms.GenericIPAddressField. (El campo de modelo django.db.models.GenericIPAddressField no se ve afectado)."
+      },
+      "references": [
+        "https://docs.djangoproject.com/en/dev/releases/security/",
+        "https://groups.google.com/g/django-announce",
+        "https://www.djangoproject.com/weblog/2025/jan/14/security-releases/",
+        "http://www.openwall.com/lists/oss-security/2025/01/14/2",
+        "https://lists.debian.org/debian-lts-announce/2025/01/msg00024.html"
+      ]
+    },
+    {
+      "id": "pygoat:CVE-2026-40192:pillow:12.1.0",
+      "cve": "CVE-2026-40192",
+      "package": "pillow",
+      "ecosystem": "PyPI",
+      "installed_version": "12.1.0",
+      "fixed_version": "12.2.0",
+      "app": "pygoat",
+      "cvss": 7.5,
+      "epss": 0.00868,
+      "in_kev": false,
+      "kev_date_added": null,
+      "priority_score": 19,
+      "priority_label": "low",
+      "summary": {
+        "en": "Pillow is a Python imaging library. Versions 10.3.0 through 12.1.1 did not limit the amount of GZIP-compressed data read when decoding a FITS image, making them vulnerable to decompression bomb attacks. A specially crafted FITS file could cause unbounded memory consumption, leading to denial of service (OOM crash or severe performance degradation). If users are unable to immediately upgrade, they should only open specific image formats, excluding FITS, as a workaround."
+      },
+      "references": [
+        "https://github.com/python-pillow/Pillow/commit/3cb854e8b2bab43f40e342e665f9340d861aa628",
+        "https://github.com/python-pillow/Pillow/pull/9521",
+        "https://github.com/python-pillow/Pillow/security/advisories/GHSA-whj4-6x5x-4v2j",
+        "https://pillow.readthedocs.io/en/stable/releasenotes/12.2.0.html#prevent-fits-decompression-bomb",
+        "https://access.redhat.com/errata/RHSA-2026:16008",
+        "https://access.redhat.com/errata/RHSA-2026:16009",
+        "https://access.redhat.com/errata/RHSA-2026:16030",
+        "https://access.redhat.com/errata/RHSA-2026:16174",
+        "https://access.redhat.com/errata/RHSA-2026:17609",
+        "https://access.redhat.com/errata/RHSA-2026:17611",
+        "https://access.redhat.com/errata/RHSA-2026:19375",
+        "https://access.redhat.com/errata/RHSA-2026:19712",
+        "https://access.redhat.com/errata/RHSA-2026:21017",
+        "https://access.redhat.com/errata/RHSA-2026:22465",
+        "https://access.redhat.com/errata/RHSA-2026:22629",
+        "https://access.redhat.com/errata/RHSA-2026:22840",
+        "https://access.redhat.com/errata/RHSA-2026:23361",
+        "https://access.redhat.com/errata/RHSA-2026:24761",
+        "https://access.redhat.com/errata/RHSA-2026:24762",
+        "https://access.redhat.com/errata/RHSA-2026:24853",
+        "https://access.redhat.com/errata/RHSA-2026:24866",
+        "https://access.redhat.com/errata/RHSA-2026:24977",
+        "https://access.redhat.com/errata/RHSA-2026:27076",
+        "https://access.redhat.com/errata/RHSA-2026:34365",
+        "https://access.redhat.com/errata/RHSA-2026:34366",
+        "https://access.redhat.com/errata/RHSA-2026:34368",
+        "https://access.redhat.com/errata/RHSA-2026:37275",
+        "https://access.redhat.com/errata/RHSA-2026:57387",
+        "https://access.redhat.com/errata/RHSA-2026:61627",
+        "https://access.redhat.com/errata/RHSA-2026:61628",
+        "https://access.redhat.com/errata/RHSA-2026:61629",
+        "https://access.redhat.com/errata/RHSA-2026:65126",
+        "https://access.redhat.com/security/cve/CVE-2026-40192",
+        "https://bugzilla.redhat.com/show_bug.cgi?id=2458856",
+        "https://security.access.redhat.com/data/csaf/v2/vex/2026/cve-2026-40192.json"
       ]
     },
     {
@@ -1433,6 +1343,40 @@
       ]
     },
     {
+      "id": "pygoat:CVE-2026-32274:black:26.1.0",
+      "cve": "CVE-2026-32274",
+      "package": "black",
+      "ecosystem": "PyPI",
+      "installed_version": "26.1.0",
+      "fixed_version": "26.3.1",
+      "app": "pygoat",
+      "cvss": 7.5,
+      "epss": 0.00744,
+      "in_kev": false,
+      "kev_date_added": null,
+      "priority_score": 19,
+      "priority_label": "low",
+      "summary": {
+        "en": "Black is the uncompromising Python code formatter. Starting in version 24.3.0 and prior to version 26.3.1, Black writes a cache file, the name of which is computed from various formatting options. The value of the --python-cell-magics option was placed in the filename without sanitization, which allowed an attacker who controls the value of this argument to write cache files to arbitrary file system locations. Fixed in Black 26.3.1.",
+        "es": "Black es el formateador de c\u00f3digo Python intransigente. Antes de la versi\u00f3n 26.3.1, Black escribe un archivo de cach\u00e9, cuyo nombre se calcula a partir de varias opciones de formato. El valor de la opci\u00f3n --python-cell-magics se colocaba en el nombre del archivo sin sanitizaci\u00f3n, lo que permit\u00eda a un atacante que controla el valor de este argumento escribir archivos de cach\u00e9 en ubicaciones arbitrarias del sistema de archivos. Corregido en Black 26.3.1."
+      },
+      "references": [
+        "https://access.redhat.com/errata/RHSA-2026:10184",
+        "https://access.redhat.com/errata/RHSA-2026:13545",
+        "https://access.redhat.com/errata/RHSA-2026:13553",
+        "https://access.redhat.com/security/cve/CVE-2026-32274",
+        "https://bugzilla.redhat.com/show_bug.cgi?id=2447111",
+        "https://github.com/psf/black/commit/4937fe6cf241139ddbfc16b0bdbb5b422798909d",
+        "https://github.com/psf/black/commit/ed770ba4dd50c419148a0fca2b43937a7447e1f9",
+        "https://github.com/psf/black/pull/4176",
+        "https://github.com/psf/black/pull/5038",
+        "https://github.com/psf/black/releases/tag/26.3.1",
+        "https://github.com/psf/black/security/advisories/GHSA-3936-cmfr-pm3m",
+        "https://github.com/pypa/advisory-database/tree/main/vulns/black/PYSEC-2026-2121.yaml",
+        "https://security.access.redhat.com/data/csaf/v2/vex/2026/cve-2026-32274.json"
+      ]
+    },
+    {
       "id": "pygoat:CVE-2023-46136:werkzeug:2.1.2",
       "cve": "CVE-2023-46136",
       "package": "werkzeug",
@@ -1457,29 +1401,6 @@
       ]
     },
     {
-      "id": "pygoat:CVE-2025-66471:urllib3:1.26.9",
-      "cve": "CVE-2025-66471",
-      "package": "urllib3",
-      "ecosystem": "PyPI",
-      "installed_version": "1.26.9",
-      "fixed_version": "2.6.0",
-      "app": "pygoat",
-      "cvss": 7.5,
-      "epss": 0.00682,
-      "in_kev": false,
-      "kev_date_added": null,
-      "priority_score": 19,
-      "priority_label": "low",
-      "summary": {
-        "en": "urllib3 is a user-friendly HTTP client library for Python. Starting in version 1.0 and prior to 2.6.0, the Streaming API improperly handles highly compressed data. urllib3's streaming API is designed for the efficient handling of large HTTP responses by reading the content in chunks, rather than loading the entire response body into memory at once. When streaming a compressed response, urllib3 can perform decoding or decompression based on the HTTP Content-Encoding header (e.g., gzip, deflate, br, or zstd). The library must read compressed data from the network and decompress it until the requested chunk size is met. Any resulting decompressed data that exceeds the requested amount is held in an internal buffer for the next read operation. The decompression logic could cause urllib3 to fully decode a small amount of highly compressed data in a single operation. This can result in excessive resource consumption (high CPU usage and massive memory allocation for the decompressed data.",
-        "es": "urllib3 es una biblioteca cliente HTTP f\u00e1cil de usar para Python. A partir de la versi\u00f3n 1.0 y versiones anteriores a la 2.6.0, la API de Streaming maneja incorrectamente los datos altamente comprimidos. La API de streaming de urllib3 est\u00e1 dise\u00f1ada para el manejo eficiente de grandes respuestas HTTP leyendo el contenido en fragmentos, en lugar de cargar todo el cuerpo de la respuesta en la memoria de una sola vez. Al transmitir una respuesta comprimida, urllib3 puede realizar la decodificaci\u00f3n o descompresi\u00f3n bas\u00e1ndose en el encabezado HTTP Content-Encoding (por ejemplo, gzip, deflate, br o zstd). La biblioteca debe leer datos comprimidos de la red y descomprimirlos hasta que se alcance el tama\u00f1o de fragmento solicitado. Cualquier dato descomprimido resultante que exceda la cantidad solicitada se mantiene en un b\u00fafer interno para la siguiente operaci\u00f3n de lectura. La l\u00f3gica de descompresi\u00f3n podr\u00eda hacer que urllib3 decodifique completamente una peque\u00f1a cantidad de datos altamente comprimidos en una sola operaci\u00f3n. Esto puede resultar en un consumo excesivo de recursos (alto uso de CPU y asignaci\u00f3n masiva de memoria para los datos descomprimidos)."
-      },
-      "references": [
-        "https://github.com/urllib3/urllib3/commit/c19571de34c47de3a766541b041637ba5f716ed7",
-        "https://github.com/urllib3/urllib3/security/advisories/GHSA-2xpw-w6gg-jr37"
-      ]
-    },
-    {
       "id": "pygoat:CVE-2025-66418:urllib3:1.26.9",
       "cve": "CVE-2025-66418",
       "package": "urllib3",
@@ -1500,6 +1421,29 @@
       "references": [
         "https://github.com/urllib3/urllib3/commit/24d7b67eac89f94e11003424bcf0d8f7b72222a8",
         "https://github.com/urllib3/urllib3/security/advisories/GHSA-gm62-xv2j-4w53"
+      ]
+    },
+    {
+      "id": "pygoat:CVE-2025-66471:urllib3:1.26.9",
+      "cve": "CVE-2025-66471",
+      "package": "urllib3",
+      "ecosystem": "PyPI",
+      "installed_version": "1.26.9",
+      "fixed_version": "2.6.0",
+      "app": "pygoat",
+      "cvss": 7.5,
+      "epss": 0.00682,
+      "in_kev": false,
+      "kev_date_added": null,
+      "priority_score": 19,
+      "priority_label": "low",
+      "summary": {
+        "en": "urllib3 is a user-friendly HTTP client library for Python. Starting in version 1.0 and prior to 2.6.0, the Streaming API improperly handles highly compressed data. urllib3's streaming API is designed for the efficient handling of large HTTP responses by reading the content in chunks, rather than loading the entire response body into memory at once. When streaming a compressed response, urllib3 can perform decoding or decompression based on the HTTP Content-Encoding header (e.g., gzip, deflate, br, or zstd). The library must read compressed data from the network and decompress it until the requested chunk size is met. Any resulting decompressed data that exceeds the requested amount is held in an internal buffer for the next read operation. The decompression logic could cause urllib3 to fully decode a small amount of highly compressed data in a single operation. This can result in excessive resource consumption (high CPU usage and massive memory allocation for the decompressed data.",
+        "es": "urllib3 es una biblioteca cliente HTTP f\u00e1cil de usar para Python. A partir de la versi\u00f3n 1.0 y versiones anteriores a la 2.6.0, la API de Streaming maneja incorrectamente los datos altamente comprimidos. La API de streaming de urllib3 est\u00e1 dise\u00f1ada para el manejo eficiente de grandes respuestas HTTP leyendo el contenido en fragmentos, en lugar de cargar todo el cuerpo de la respuesta en la memoria de una sola vez. Al transmitir una respuesta comprimida, urllib3 puede realizar la decodificaci\u00f3n o descompresi\u00f3n bas\u00e1ndose en el encabezado HTTP Content-Encoding (por ejemplo, gzip, deflate, br o zstd). La biblioteca debe leer datos comprimidos de la red y descomprimirlos hasta que se alcance el tama\u00f1o de fragmento solicitado. Cualquier dato descomprimido resultante que exceda la cantidad solicitada se mantiene en un b\u00fafer interno para la siguiente operaci\u00f3n de lectura. La l\u00f3gica de descompresi\u00f3n podr\u00eda hacer que urllib3 decodifique completamente una peque\u00f1a cantidad de datos altamente comprimidos en una sola operaci\u00f3n. Esto puede resultar en un consumo excesivo de recursos (alto uso de CPU y asignaci\u00f3n masiva de memoria para los datos descomprimidos)."
+      },
+      "references": [
+        "https://github.com/urllib3/urllib3/commit/c19571de34c47de3a766541b041637ba5f716ed7",
+        "https://github.com/urllib3/urllib3/security/advisories/GHSA-2xpw-w6gg-jr37"
       ]
     },
     {
@@ -1685,6 +1629,29 @@
       ]
     },
     {
+      "id": "pygoat:CVE-2026-112393:pillow:12.1.0",
+      "cve": "CVE-2026-112393",
+      "package": "pillow",
+      "ecosystem": "PyPI",
+      "installed_version": "12.1.0",
+      "fixed_version": "13.0.0",
+      "app": "pygoat",
+      "cvss": null,
+      "epss": 0.00528,
+      "in_kev": false,
+      "kev_date_added": null,
+      "priority_score": 0,
+      "priority_label": "low",
+      "summary": {
+        "en": "Pillow is a Python imaging library. From 2.0.0 until 13.0.0, Pillow has a heap buffer overflow and stale-heap disclosure in _tiffWriteProc when saving compressed TIFF data through libtiff to a target without a usable fileno(), such as BytesIO. The callback sizes its allocation from the prior buffer size instead of the current write position, allowing an attacker-controlled out-of-line TIFF tag or retained ICC profile to be copied beyond the allocation after libtiff seeks forward. This overflow can crash the process and may allow code execution. Independently, unwritten alignment gaps in compressed TIFF output larger than 64 KiB can disclose stale heap bytes without a crafted tag. File paths and targets with real file descriptors are unaffected. This issue is fixed in version 13.0.0."
+      },
+      "references": [
+        "https://github.com/python-pillow/Pillow/commit/11582e5ffbdceb973d5ee593f3105af5a9852b40",
+        "https://github.com/python-pillow/Pillow/releases/tag/13.0.0",
+        "https://github.com/python-pillow/Pillow/security/advisories/GHSA-332p-7hrc-92wf"
+      ]
+    },
+    {
       "id": "pygoat:CVE-2026-1312:django:4.2",
       "cve": "CVE-2026-1312",
       "package": "django",
@@ -1729,7 +1696,7 @@
       "fixed_version": "4.2.25",
       "app": "pygoat",
       "cvss": 7.1,
-      "epss": 0.00625,
+      "epss": 0.00639,
       "in_kev": false,
       "kev_date_added": null,
       "priority_score": 18,
@@ -1869,11 +1836,11 @@
       ]
     },
     {
-      "id": "pygoat:CVE-2026-54058:pillow:9.4.0",
+      "id": "pygoat:CVE-2026-54058:pillow:12.1.0",
       "cve": "CVE-2026-54058",
       "package": "pillow",
       "ecosystem": "PyPI",
-      "installed_version": "9.4.0",
+      "installed_version": "12.1.0",
       "fixed_version": "12.3.0",
       "app": "pygoat",
       "cvss": 9.1,
@@ -1890,6 +1857,53 @@
         "https://github.com/python-pillow/Pillow/pull/9719",
         "https://github.com/python-pillow/Pillow/releases/tag/12.3.0",
         "https://github.com/python-pillow/Pillow/security/advisories/GHSA-62p4-gmf7-7g93"
+      ]
+    },
+    {
+      "id": "pygoat:CVE-2026-25990:pillow:12.1.0",
+      "cve": "CVE-2026-25990",
+      "package": "pillow",
+      "ecosystem": "PyPI",
+      "installed_version": "12.1.0",
+      "fixed_version": "12.1.1",
+      "app": "pygoat",
+      "cvss": 7.5,
+      "epss": 0.0049,
+      "in_kev": false,
+      "kev_date_added": null,
+      "priority_score": 19,
+      "priority_label": "low",
+      "summary": {
+        "en": "Pillow is a Python imaging library. From 10.3.0 to before 12.1.1, an out-of-bounds write may be triggered when loading a specially crafted PSD image. This vulnerability is fixed in 12.1.1.",
+        "es": "Pillow es una librer\u00eda de procesamiento de im\u00e1genes de Python. Desde la versi\u00f3n 10.3.0 hasta antes de la 12.1.1, una escritura fuera de l\u00edmites puede ser activada al cargar una imagen PSD especialmente manipulada. Esta vulnerabilidad est\u00e1 corregida en la versi\u00f3n 12.1.1."
+      },
+      "references": [
+        "https://github.com/python-pillow/Pillow/commit/9000313cc5d4a31bdcdd6d7f0781101abab553aa",
+        "https://github.com/python-pillow/Pillow/security/advisories/GHSA-cfh3-3jmp-rvhc",
+        "http://www.openwall.com/lists/oss-security/2026/02/12/1",
+        "https://access.redhat.com/errata/RHSA-2026:10184",
+        "https://access.redhat.com/errata/RHSA-2026:14873",
+        "https://access.redhat.com/errata/RHSA-2026:14874",
+        "https://access.redhat.com/errata/RHSA-2026:16174",
+        "https://access.redhat.com/errata/RHSA-2026:19712",
+        "https://access.redhat.com/errata/RHSA-2026:28385",
+        "https://access.redhat.com/errata/RHSA-2026:3461",
+        "https://access.redhat.com/errata/RHSA-2026:3462",
+        "https://access.redhat.com/errata/RHSA-2026:4128",
+        "https://access.redhat.com/errata/RHSA-2026:42644",
+        "https://access.redhat.com/errata/RHSA-2026:4942",
+        "https://access.redhat.com/errata/RHSA-2026:5168",
+        "https://access.redhat.com/errata/RHSA-2026:5665",
+        "https://access.redhat.com/errata/RHSA-2026:6277",
+        "https://access.redhat.com/errata/RHSA-2026:6278",
+        "https://access.redhat.com/errata/RHSA-2026:6308",
+        "https://access.redhat.com/errata/RHSA-2026:6309",
+        "https://access.redhat.com/errata/RHSA-2026:6497",
+        "https://access.redhat.com/errata/RHSA-2026:6567",
+        "https://access.redhat.com/errata/RHSA-2026:6568",
+        "https://access.redhat.com/security/cve/CVE-2026-25990",
+        "https://bugzilla.redhat.com/show_bug.cgi?id=2439170",
+        "https://security.access.redhat.com/data/csaf/v2/vex/2026/cve-2026-25990.json"
       ]
     },
     {
@@ -1917,11 +1931,34 @@
       ]
     },
     {
-      "id": "pygoat:CVE-2026-112397:pillow:9.4.0",
+      "id": "pygoat:CVE-2026-112900:pillow:12.1.0",
+      "cve": "CVE-2026-112900",
+      "package": "pillow",
+      "ecosystem": "PyPI",
+      "installed_version": "12.1.0",
+      "fixed_version": "13.0.0",
+      "app": "pygoat",
+      "cvss": null,
+      "epss": 0.00431,
+      "in_kev": false,
+      "kev_date_added": null,
+      "priority_score": 0,
+      "priority_label": "low",
+      "summary": {
+        "en": "Pillow is a Python imaging library. From 2.6.0 until 13.0.0, Pillow is vulnerable to argument injection when invoking Ghostscript for EPS input. EpsImagePlugin.Ghostscript passes a caller-controlled input filename after -f without converting it to a safe absolute path, so a name beginning with a hyphen can be interpreted as a Ghostscript option. An attacker who controls the filename can inject Ghostscript arguments. Arbitrary command execution specifically requires a leading @ argument-file filename and control of the referenced text file containing additional Ghostscript arguments; the reported chain reproduces with the default -dSAFER invocation. This issue is fixed in version 13.0.0."
+      },
+      "references": [
+        "https://github.com/python-pillow/Pillow/commit/a2c363141da31a265dd536c945677db4b64f3ec9",
+        "https://github.com/python-pillow/Pillow/releases/tag/13.0.0",
+        "https://github.com/python-pillow/Pillow/security/advisories/GHSA-w889-685w-c8fh"
+      ]
+    },
+    {
+      "id": "pygoat:CVE-2026-112397:pillow:12.1.0",
       "cve": "CVE-2026-112397",
       "package": "pillow",
       "ecosystem": "PyPI",
-      "installed_version": "9.4.0",
+      "installed_version": "12.1.0",
       "fixed_version": "13.0.0",
       "app": "pygoat",
       "cvss": null,
@@ -1940,11 +1977,34 @@
       ]
     },
     {
-      "id": "pygoat:CVE-2026-59197:pillow:9.4.0",
+      "id": "pygoat:CVE-2026-112402:pillow:12.1.0",
+      "cve": "CVE-2026-112402",
+      "package": "pillow",
+      "ecosystem": "PyPI",
+      "installed_version": "12.1.0",
+      "fixed_version": "13.0.0",
+      "app": "pygoat",
+      "cvss": null,
+      "epss": 0.00436,
+      "in_kev": false,
+      "kev_date_added": null,
+      "priority_score": 0,
+      "priority_label": "low",
+      "summary": {
+        "en": "Pillow is a Python imaging library. Prior to 13.0.0, Pillow can double free image memory when ImagingScaleAffine encounters a selective allocation failure. The affected fast path handles Transform.EXTENT or pure scale-and-translate Transform.AFFINE operations with the default NEAREST resampling. The output image allocation must succeed while the additional per-column lookup allocation fails, after which the error path deletes image storage that later cleanup releases again. An attacker who can drive such a large Image.transform() operation under memory pressure may trigger the failure. This can crash the process and may corrupt memory. This issue is fixed in version 13.0.0."
+      },
+      "references": [
+        "https://github.com/python-pillow/Pillow/commit/aafa6c75f7cdabb9f409a8aac7c780bea31d08d9",
+        "https://github.com/python-pillow/Pillow/releases/tag/13.0.0",
+        "https://github.com/python-pillow/Pillow/security/advisories/GHSA-7mwm-ghpf-9vrm"
+      ]
+    },
+    {
+      "id": "pygoat:CVE-2026-59197:pillow:12.1.0",
       "cve": "CVE-2026-59197",
       "package": "pillow",
       "ecosystem": "PyPI",
-      "installed_version": "9.4.0",
+      "installed_version": "12.1.0",
       "fixed_version": "12.3.0",
       "app": "pygoat",
       "cvss": 8.2,
@@ -2123,11 +2183,11 @@
       ]
     },
     {
-      "id": "pygoat:CVE-2026-55379:pillow:9.4.0",
+      "id": "pygoat:CVE-2026-55379:pillow:12.1.0",
       "cve": "CVE-2026-55379",
       "package": "pillow",
       "ecosystem": "PyPI",
-      "installed_version": "9.4.0",
+      "installed_version": "12.1.0",
       "fixed_version": "12.3.0",
       "app": "pygoat",
       "cvss": 7.5,
@@ -2171,11 +2231,11 @@
       ]
     },
     {
-      "id": "pygoat:CVE-2026-54060:pillow:9.4.0",
+      "id": "pygoat:CVE-2026-54060:pillow:12.1.0",
       "cve": "CVE-2026-54060",
       "package": "pillow",
       "ecosystem": "PyPI",
-      "installed_version": "9.4.0",
+      "installed_version": "12.1.0",
       "fixed_version": "12.3.0",
       "app": "pygoat",
       "cvss": 7.5,
@@ -2194,11 +2254,11 @@
       ]
     },
     {
-      "id": "pygoat:CVE-2026-55380:pillow:9.4.0",
+      "id": "pygoat:CVE-2026-55380:pillow:12.1.0",
       "cve": "CVE-2026-55380",
       "package": "pillow",
       "ecosystem": "PyPI",
-      "installed_version": "9.4.0",
+      "installed_version": "12.1.0",
       "fixed_version": "12.3.0",
       "app": "pygoat",
       "cvss": 7.5,
@@ -2217,11 +2277,11 @@
       ]
     },
     {
-      "id": "pygoat:CVE-2026-59204:pillow:9.4.0",
+      "id": "pygoat:CVE-2026-59204:pillow:12.1.0",
       "cve": "CVE-2026-59204",
       "package": "pillow",
       "ecosystem": "PyPI",
-      "installed_version": "9.4.0",
+      "installed_version": "12.1.0",
       "fixed_version": "12.3.0",
       "app": "pygoat",
       "cvss": 7.5,
@@ -2241,11 +2301,11 @@
       ]
     },
     {
-      "id": "pygoat:CVE-2026-54059:pillow:9.4.0",
+      "id": "pygoat:CVE-2026-54059:pillow:12.1.0",
       "cve": "CVE-2026-54059",
       "package": "pillow",
       "ecosystem": "PyPI",
-      "installed_version": "9.4.0",
+      "installed_version": "12.1.0",
       "fixed_version": "12.3.0",
       "app": "pygoat",
       "cvss": 7.5,
@@ -2339,11 +2399,11 @@
       ]
     },
     {
-      "id": "pygoat:CVE-2026-112403:pillow:9.4.0",
+      "id": "pygoat:CVE-2026-112403:pillow:12.1.0",
       "cve": "CVE-2026-112403",
       "package": "pillow",
       "ecosystem": "PyPI",
-      "installed_version": "9.4.0",
+      "installed_version": "12.1.0",
       "fixed_version": "13.0.0",
       "app": "pygoat",
       "cvss": null,
@@ -2362,35 +2422,11 @@
       ]
     },
     {
-      "id": "pygoat:CVE-2026-59200:pillow:9.4.0",
-      "cve": "CVE-2026-59200",
-      "package": "pillow",
-      "ecosystem": "PyPI",
-      "installed_version": "9.4.0",
-      "fixed_version": "12.3.0",
-      "app": "pygoat",
-      "cvss": 7.5,
-      "epss": 0.00385,
-      "in_kev": false,
-      "kev_date_added": null,
-      "priority_score": 19,
-      "priority_label": "low",
-      "summary": {
-        "en": "Pillow is a Python imaging library. From 5.1.0 until 12.3.0, PdfParser.PdfStream.decode() in PIL/PdfParser.py calls zlib.decompress() with bufsize set to the PDF stream Length field without bounding the decompressed output size, allowing a crafted FlateDecode PDF stream to exhaust memory from a small file. This issue is fixed in version 12.3.0."
-      },
-      "references": [
-        "https://github.com/python-pillow/Pillow/commit/f7a31ea75e460e108c37126da1f47812f21f6b09",
-        "https://github.com/python-pillow/Pillow/pull/9718",
-        "https://github.com/python-pillow/Pillow/releases/tag/12.3.0",
-        "https://github.com/python-pillow/Pillow/security/advisories/GHSA-jjj6-mw9f-p565"
-      ]
-    },
-    {
-      "id": "pygoat:CVE-2026-59199:pillow:9.4.0",
+      "id": "pygoat:CVE-2026-59199:pillow:12.1.0",
       "cve": "CVE-2026-59199",
       "package": "pillow",
       "ecosystem": "PyPI",
-      "installed_version": "9.4.0",
+      "installed_version": "12.1.0",
       "fixed_version": "12.3.0",
       "app": "pygoat",
       "cvss": 7.5,
@@ -2410,11 +2446,35 @@
       ]
     },
     {
-      "id": "pygoat:CVE-2026-59205:pillow:9.4.0",
+      "id": "pygoat:CVE-2026-59200:pillow:12.1.0",
+      "cve": "CVE-2026-59200",
+      "package": "pillow",
+      "ecosystem": "PyPI",
+      "installed_version": "12.1.0",
+      "fixed_version": "12.3.0",
+      "app": "pygoat",
+      "cvss": 7.5,
+      "epss": 0.00385,
+      "in_kev": false,
+      "kev_date_added": null,
+      "priority_score": 19,
+      "priority_label": "low",
+      "summary": {
+        "en": "Pillow is a Python imaging library. From 5.1.0 until 12.3.0, PdfParser.PdfStream.decode() in PIL/PdfParser.py calls zlib.decompress() with bufsize set to the PDF stream Length field without bounding the decompressed output size, allowing a crafted FlateDecode PDF stream to exhaust memory from a small file. This issue is fixed in version 12.3.0."
+      },
+      "references": [
+        "https://github.com/python-pillow/Pillow/commit/f7a31ea75e460e108c37126da1f47812f21f6b09",
+        "https://github.com/python-pillow/Pillow/pull/9718",
+        "https://github.com/python-pillow/Pillow/releases/tag/12.3.0",
+        "https://github.com/python-pillow/Pillow/security/advisories/GHSA-jjj6-mw9f-p565"
+      ]
+    },
+    {
+      "id": "pygoat:CVE-2026-59205:pillow:12.1.0",
       "cve": "CVE-2026-59205",
       "package": "pillow",
       "ecosystem": "PyPI",
-      "installed_version": "9.4.0",
+      "installed_version": "12.1.0",
       "fixed_version": "12.3.0",
       "app": "pygoat",
       "cvss": 7.5,
@@ -2458,6 +2518,31 @@
       ]
     },
     {
+      "id": "pygoat:CVE-2025-59682:django:4.2",
+      "cve": "CVE-2025-59682",
+      "package": "django",
+      "ecosystem": "PyPI",
+      "installed_version": "4.2",
+      "fixed_version": "4.2.25",
+      "app": "pygoat",
+      "cvss": 3.1,
+      "epss": 0.00932,
+      "in_kev": false,
+      "kev_date_added": null,
+      "priority_score": 8,
+      "priority_label": "low",
+      "summary": {
+        "en": "An issue was discovered in Django 4.2 before 4.2.25, 5.1 before 5.1.13, and 5.2 before 5.2.7. The django.utils.archive.extract() function, used by the \"startapp --template\" and \"startproject --template\" commands, allows partial directory traversal via an archive with file paths sharing a common prefix with the target directory.",
+        "es": "Se descubri\u00f3 un problema en Django 4.2 anterior a 4.2.25, 5.1 anterior a 5.1.13, y 5.2 anterior a 5.2.7. La funci\u00f3n django.utils.archive.extract(), utilizada por los comandos 'startapp --template' y 'startproject --template', permite un salto de directorio parcial a trav\u00e9s de un archivo con rutas de fichero que comparten un prefijo com\u00fan con el directorio objetivo."
+      },
+      "references": [
+        "https://docs.djangoproject.com/en/dev/releases/security/",
+        "https://groups.google.com/g/django-announce",
+        "https://www.djangoproject.com/weblog/2025/oct/01/security-releases/",
+        "http://www.openwall.com/lists/oss-security/2025/10/01/3"
+      ]
+    },
+    {
       "id": "pygoat:CVE-2026-53877:django:4.2",
       "cve": "CVE-2026-53877",
       "package": "django",
@@ -2478,31 +2563,6 @@
         "https://docs.djangoproject.com/en/dev/releases/security/",
         "https://groups.google.com/g/django-announce",
         "https://www.djangoproject.com/weblog/2026/jul/07/security-releases/"
-      ]
-    },
-    {
-      "id": "pygoat:CVE-2025-59682:django:4.2",
-      "cve": "CVE-2025-59682",
-      "package": "django",
-      "ecosystem": "PyPI",
-      "installed_version": "4.2",
-      "fixed_version": "4.2.25",
-      "app": "pygoat",
-      "cvss": 3.1,
-      "epss": 0.00911,
-      "in_kev": false,
-      "kev_date_added": null,
-      "priority_score": 8,
-      "priority_label": "low",
-      "summary": {
-        "en": "An issue was discovered in Django 4.2 before 4.2.25, 5.1 before 5.1.13, and 5.2 before 5.2.7. The django.utils.archive.extract() function, used by the \"startapp --template\" and \"startproject --template\" commands, allows partial directory traversal via an archive with file paths sharing a common prefix with the target directory.",
-        "es": "Se descubri\u00f3 un problema en Django 4.2 anterior a 4.2.25, 5.1 anterior a 5.1.13, y 5.2 anterior a 5.2.7. La funci\u00f3n django.utils.archive.extract(), utilizada por los comandos 'startapp --template' y 'startproject --template', permite un salto de directorio parcial a trav\u00e9s de un archivo con rutas de fichero que comparten un prefijo com\u00fan con el directorio objetivo."
-      },
-      "references": [
-        "https://docs.djangoproject.com/en/dev/releases/security/",
-        "https://groups.google.com/g/django-announce",
-        "https://www.djangoproject.com/weblog/2025/oct/01/security-releases/",
-        "http://www.openwall.com/lists/oss-security/2025/10/01/3"
       ]
     },
     {
@@ -2618,6 +2678,29 @@
       ]
     },
     {
+      "id": "pygoat:CVE-2026-112396:pillow:12.1.0",
+      "cve": "CVE-2026-112396",
+      "package": "pillow",
+      "ecosystem": "PyPI",
+      "installed_version": "12.1.0",
+      "fixed_version": "13.0.0",
+      "app": "pygoat",
+      "cvss": 5.9,
+      "epss": 0.00462,
+      "in_kev": false,
+      "kev_date_added": null,
+      "priority_score": 15,
+      "priority_label": "low",
+      "summary": {
+        "en": "Pillow is a Python imaging library. From 11.3.0 until 13.0.0, Pillow has a heap use-after-free when libtiff rejects a tag while encoding TIFF data to an in-memory buffer. When an application saves attacker-influenced TIFF tags to BytesIO, libtiff can reject a tag during encoding in ImagingLibTiffEncode; the error path then frees the output buffer without closing or clearing the TIFF handle, and later cleanup flushes through the write callback into freed memory, which can crash the process and may enable code execution. This issue is fixed in version 13.0.0."
+      },
+      "references": [
+        "https://github.com/python-pillow/Pillow/commit/dc95da20207827a062cfbf551ee9f6031465a8bb",
+        "https://github.com/python-pillow/Pillow/releases/tag/13.0.0",
+        "https://github.com/python-pillow/Pillow/security/advisories/GHSA-4rr5-89j8-mwwm"
+      ]
+    },
+    {
       "id": "pygoat:CVE-2025-50181:urllib3:1.26.9",
       "cve": "CVE-2025-50181",
       "package": "urllib3",
@@ -2664,34 +2747,11 @@
       ]
     },
     {
-      "id": "pygoat:CVE-2026-112896:pillow:9.4.0",
-      "cve": "CVE-2026-112896",
-      "package": "pillow",
-      "ecosystem": "PyPI",
-      "installed_version": "9.4.0",
-      "fixed_version": "13.0.0",
-      "app": "pygoat",
-      "cvss": null,
-      "epss": 0.00291,
-      "in_kev": false,
-      "kev_date_added": null,
-      "priority_score": 0,
-      "priority_label": "low",
-      "summary": {
-        "en": "Pillow is a Python imaging library. Prior to 13.0.0, Pillow's TIFF encoder can read beyond a ColorMap buffer when retained TIFF metadata has a plane size inconsistent with BitsPerSample. A small TIFF can be opened normally and then retain a crafted ColorMap that is reused when the image is saved. An application that re-encodes the attacker's TIFF with libtiff can trigger the out-of-bounds read. This can disclose heap memory in the output or crash the process. This issue is fixed in version 13.0.0."
-      },
-      "references": [
-        "https://github.com/python-pillow/Pillow/commit/d03dc3c587a9b0bdc9e4304d70d59a635a87b742",
-        "https://github.com/python-pillow/Pillow/releases/tag/13.0.0",
-        "https://github.com/python-pillow/Pillow/security/advisories/GHSA-pchr-8j38-3x4p"
-      ]
-    },
-    {
-      "id": "pygoat:CVE-2026-112404:pillow:9.4.0",
+      "id": "pygoat:CVE-2026-112404:pillow:12.1.0",
       "cve": "CVE-2026-112404",
       "package": "pillow",
       "ecosystem": "PyPI",
-      "installed_version": "9.4.0",
+      "installed_version": "12.1.0",
       "fixed_version": "13.0.0",
       "app": "pygoat",
       "cvss": null,
@@ -2710,11 +2770,57 @@
       ]
     },
     {
-      "id": "pygoat:CVE-2026-112400:pillow:9.4.0",
+      "id": "pygoat:CVE-2026-112896:pillow:12.1.0",
+      "cve": "CVE-2026-112896",
+      "package": "pillow",
+      "ecosystem": "PyPI",
+      "installed_version": "12.1.0",
+      "fixed_version": "13.0.0",
+      "app": "pygoat",
+      "cvss": null,
+      "epss": 0.00291,
+      "in_kev": false,
+      "kev_date_added": null,
+      "priority_score": 0,
+      "priority_label": "low",
+      "summary": {
+        "en": "Pillow is a Python imaging library. Prior to 13.0.0, Pillow's TIFF encoder can read beyond a ColorMap buffer when retained TIFF metadata has a plane size inconsistent with BitsPerSample. A small TIFF can be opened normally and then retain a crafted ColorMap that is reused when the image is saved. An application that re-encodes the attacker's TIFF with libtiff can trigger the out-of-bounds read. This can disclose heap memory in the output or crash the process. This issue is fixed in version 13.0.0."
+      },
+      "references": [
+        "https://github.com/python-pillow/Pillow/commit/d03dc3c587a9b0bdc9e4304d70d59a635a87b742",
+        "https://github.com/python-pillow/Pillow/releases/tag/13.0.0",
+        "https://github.com/python-pillow/Pillow/security/advisories/GHSA-pchr-8j38-3x4p"
+      ]
+    },
+    {
+      "id": "pygoat:CVE-2026-112399:pillow:12.1.0",
+      "cve": "CVE-2026-112399",
+      "package": "pillow",
+      "ecosystem": "PyPI",
+      "installed_version": "12.1.0",
+      "fixed_version": "13.0.0",
+      "app": "pygoat",
+      "cvss": null,
+      "epss": 0.00291,
+      "in_kev": false,
+      "kev_date_added": null,
+      "priority_score": 0,
+      "priority_label": "low",
+      "summary": {
+        "en": "Pillow is a Python imaging library. From 8.1.0 until 13.0.0, Pillow can allocate an APNG disposal background at the full canvas size before applying the decompression-bomb check. A crafted APNG with a small first frame, a very large declared canvas, and background disposal or first-frame OP_PREVIOUS reaches PngImageFile._seek while Image.open() positions frame zero. The full-canvas allocation occurs inside Image.open() without requiring pixel loading or frame iteration. This can exhaust memory and deny service. This issue is fixed in version 13.0.0."
+      },
+      "references": [
+        "https://github.com/python-pillow/Pillow/commit/f1acfc54c53502948d0d14121872061df931db48",
+        "https://github.com/python-pillow/Pillow/releases/tag/13.0.0",
+        "https://github.com/python-pillow/Pillow/security/advisories/GHSA-5xm2-6676-qcp9"
+      ]
+    },
+    {
+      "id": "pygoat:CVE-2026-112400:pillow:12.1.0",
       "cve": "CVE-2026-112400",
       "package": "pillow",
       "ecosystem": "PyPI",
-      "installed_version": "9.4.0",
+      "installed_version": "12.1.0",
       "fixed_version": "13.0.0",
       "app": "pygoat",
       "cvss": null,
@@ -2733,11 +2839,103 @@
       ]
     },
     {
-      "id": "pygoat:CVE-2026-112895:pillow:9.4.0",
+      "id": "pygoat:CVE-2026-112897:pillow:12.1.0",
+      "cve": "CVE-2026-112897",
+      "package": "pillow",
+      "ecosystem": "PyPI",
+      "installed_version": "12.1.0",
+      "fixed_version": "13.0.0",
+      "app": "pygoat",
+      "cvss": null,
+      "epss": 0.00291,
+      "in_kev": false,
+      "kev_date_added": null,
+      "priority_score": 0,
+      "priority_label": "low",
+      "summary": {
+        "en": "Pillow is a Python imaging library. From 5.3.0 until 13.0.0, Pillow can return uninitialized memory as pixels when libtiff performs a short decode of JPEG-compressed or Group 4 fax TIFF data. The _decodeStrip and _decodeTile buffers can be larger than the bytes written by libtiff, but Pillow converts the expected rows without clearing the unwritten tail. The tile path is affected from 5.3.0 and the strip path from 6.0.0. An attacker can supply a crafted TIFF to an application that loads and returns or re-encodes its pixels. This can disclose stale heap contents without memory corruption or a process crash. This issue is fixed in version 13.0.0."
+      },
+      "references": [
+        "https://github.com/python-pillow/Pillow/commit/1d4773e6cea0c4a2814e6d4cdc099bbcf56da6ce",
+        "https://github.com/python-pillow/Pillow/releases/tag/13.0.0",
+        "https://github.com/python-pillow/Pillow/security/advisories/GHSA-q45j-58j2-45rg"
+      ]
+    },
+    {
+      "id": "pygoat:CVE-2026-112892:pillow:12.1.0",
+      "cve": "CVE-2026-112892",
+      "package": "pillow",
+      "ecosystem": "PyPI",
+      "installed_version": "12.1.0",
+      "fixed_version": "13.0.0",
+      "app": "pygoat",
+      "cvss": null,
+      "epss": 0.00291,
+      "in_kev": false,
+      "kev_date_added": null,
+      "priority_score": 0,
+      "priority_label": "low",
+      "summary": {
+        "en": "Pillow is a Python imaging library. From 4.1.0 until 13.0.0, Pillow's MSP RLE decoder can expand a small file into an unbounded in-memory buffer. The decoder writes run-length output to BytesIO without limiting expansion to the declared image size. An attacker can supply a crafted MSP image to an application that loads its pixels. This can exhaust memory and deny service even when the declared pixel count passes the decompression-bomb check. This issue is fixed in version 13.0.0."
+      },
+      "references": [
+        "https://github.com/python-pillow/Pillow/commit/5dcb630b9798efd91929cb873d677aeee6ed0bb3",
+        "https://github.com/python-pillow/Pillow/releases/tag/13.0.0",
+        "https://github.com/python-pillow/Pillow/security/advisories/GHSA-gg2r-wvfm-q9rx"
+      ]
+    },
+    {
+      "id": "pygoat:CVE-2026-112405:pillow:12.1.0",
+      "cve": "CVE-2026-112405",
+      "package": "pillow",
+      "ecosystem": "PyPI",
+      "installed_version": "12.1.0",
+      "fixed_version": "13.0.0",
+      "app": "pygoat",
+      "cvss": null,
+      "epss": 0.00291,
+      "in_kev": false,
+      "kev_date_added": null,
+      "priority_score": 0,
+      "priority_label": "low",
+      "summary": {
+        "en": "Pillow is a Python imaging library. From 12.0.0 until 13.0.0, Pillow's Image.merge() can dereference a null image8 plane. Validation skips the first input band, allowing a 32-bit integer or floating-point image backed by image32 storage to be merged as a narrower multiband image. A crafted IPTC file can reach this path when an application opens and loads it, or a caller can invoke Image.merge() directly with such a first band. This causes a native process crash. This issue is fixed in version 13.0.0."
+      },
+      "references": [
+        "https://github.com/python-pillow/Pillow/commit/b6ee66e8b2c2c0932bdf65f963268d9f2927ef86",
+        "https://github.com/python-pillow/Pillow/releases/tag/13.0.0",
+        "https://github.com/python-pillow/Pillow/security/advisories/GHSA-cp9v-662q-vvx9"
+      ]
+    },
+    {
+      "id": "pygoat:CVE-2026-112894:pillow:12.1.0",
+      "cve": "CVE-2026-112894",
+      "package": "pillow",
+      "ecosystem": "PyPI",
+      "installed_version": "12.1.0",
+      "fixed_version": "13.0.0",
+      "app": "pygoat",
+      "cvss": null,
+      "epss": 0.00291,
+      "in_kev": false,
+      "kev_date_added": null,
+      "priority_score": 0,
+      "priority_label": "low",
+      "summary": {
+        "en": "Pillow is a Python imaging library. From 5.1.0 until 13.0.0, Pillow takes quadratic time to reserve PDF object identifiers when saving many frames with save_all enabled. PdfParser.next_object_id() repeatedly rebuilds and scans all previously reserved identifiers for every object. An attacker can supply a multi-frame image, including a small APNG with a large declared frame count, to an application that converts it to a multipage PDF. This can consume excessive CPU and deny service. This issue is fixed in version 13.0.0."
+      },
+      "references": [
+        "https://github.com/python-pillow/Pillow/commit/f6a852555f1a1bdff7781abf25f1a3b8bd6ce6cb",
+        "https://github.com/python-pillow/Pillow/releases/tag/13.0.0",
+        "https://github.com/python-pillow/Pillow/security/advisories/GHSA-jg86-v3jv-hrpm"
+      ]
+    },
+    {
+      "id": "pygoat:CVE-2026-112895:pillow:12.1.0",
       "cve": "CVE-2026-112895",
       "package": "pillow",
       "ecosystem": "PyPI",
-      "installed_version": "9.4.0",
+      "installed_version": "12.1.0",
       "fixed_version": "13.0.0",
       "app": "pygoat",
       "cvss": null,
@@ -2756,11 +2954,11 @@
       ]
     },
     {
-      "id": "pygoat:CVE-2026-112897:pillow:9.4.0",
-      "cve": "CVE-2026-112897",
+      "id": "pygoat:CVE-2026-112406:pillow:12.1.0",
+      "cve": "CVE-2026-112406",
       "package": "pillow",
       "ecosystem": "PyPI",
-      "installed_version": "9.4.0",
+      "installed_version": "12.1.0",
       "fixed_version": "13.0.0",
       "app": "pygoat",
       "cvss": null,
@@ -2770,12 +2968,12 @@
       "priority_score": 0,
       "priority_label": "low",
       "summary": {
-        "en": "Pillow is a Python imaging library. From 5.3.0 until 13.0.0, Pillow can return uninitialized memory as pixels when libtiff performs a short decode of JPEG-compressed or Group 4 fax TIFF data. The _decodeStrip and _decodeTile buffers can be larger than the bytes written by libtiff, but Pillow converts the expected rows without clearing the unwritten tail. The tile path is affected from 5.3.0 and the strip path from 6.0.0. An attacker can supply a crafted TIFF to an application that loads and returns or re-encodes its pixels. This can disclose stale heap contents without memory corruption or a process crash. This issue is fixed in version 13.0.0."
+        "en": "Pillow is a Python imaging library. From 5.1.0 until 13.0.0, Pillow can enter an infinite loop while rewriting PDF pages. PdfParser.rewrite_pages() follows Parent relationships without detecting a cycle in the page tree. An attacker can supply a cyclic PDF to an application that appends an image to that PDF. This can hold the worker at full CPU and deny service. This issue is fixed in version 13.0.0."
       },
       "references": [
-        "https://github.com/python-pillow/Pillow/commit/1d4773e6cea0c4a2814e6d4cdc099bbcf56da6ce",
+        "https://github.com/python-pillow/Pillow/commit/b3ebf20c694f2f12537a629c30229a1d5a53f777",
         "https://github.com/python-pillow/Pillow/releases/tag/13.0.0",
-        "https://github.com/python-pillow/Pillow/security/advisories/GHSA-q45j-58j2-45rg"
+        "https://github.com/python-pillow/Pillow/security/advisories/GHSA-f2g6-542v-9j58"
       ]
     },
     {
@@ -2803,6 +3001,75 @@
       ]
     },
     {
+      "id": "pygoat:CVE-2026-112390:pillow:12.1.0",
+      "cve": "CVE-2026-112390",
+      "package": "pillow",
+      "ecosystem": "PyPI",
+      "installed_version": "12.1.0",
+      "fixed_version": "13.0.0",
+      "app": "pygoat",
+      "cvss": null,
+      "epss": 0.00291,
+      "in_kev": false,
+      "kev_date_added": null,
+      "priority_score": 0,
+      "priority_label": "low",
+      "summary": {
+        "en": "Pillow is a Python imaging library. From 7.2.0 until 13.0.0, Pillow can enter an infinite loop while determining the frame count of a MIC image. MicImageFile inherits TIFF frame traversal, but MicImageFile.tell reports the OLE stream index and its seek() resets TIFF frame state, so an embedded TIFF with at least three IFDs never advances. When an application with olefile installed reads n_frames or saves all frames from a crafted MIC file, the non-advancing traversal can hold a worker at full CPU indefinitely. This issue is fixed in version 13.0.0."
+      },
+      "references": [
+        "https://github.com/python-pillow/Pillow/commit/26cb3ed061173b817b9ee4b6f507cb0e1e293218",
+        "https://github.com/python-pillow/Pillow/releases/tag/13.0.0",
+        "https://github.com/python-pillow/Pillow/security/advisories/GHSA-22hg-r758-rrw9"
+      ]
+    },
+    {
+      "id": "pygoat:CVE-2026-112893:pillow:12.1.0",
+      "cve": "CVE-2026-112893",
+      "package": "pillow",
+      "ecosystem": "PyPI",
+      "installed_version": "12.1.0",
+      "fixed_version": "13.0.0",
+      "app": "pygoat",
+      "cvss": null,
+      "epss": 0.00291,
+      "in_kev": false,
+      "kev_date_added": null,
+      "priority_score": 0,
+      "priority_label": "low",
+      "summary": {
+        "en": "Pillow is a Python imaging library. From 10.0.0 until 13.0.0, Pillow can free an invalid glyph pointer during FreeType rendering with an active stroker. If FT_Load_Glyph fails, cleanup may call FT_Done_Glyph on an uninitialized or stale glyph variable. An attacker can supply a malformed font as untrusted bytes to an application that draws text with a nonzero stroke width, forcing the glyph-load failure path. This can corrupt memory or crash the process. This issue is fixed in version 13.0.0."
+      },
+      "references": [
+        "https://github.com/python-pillow/Pillow/commit/a7416de7f3a43128179d2cf68df3240ea8dafe13",
+        "https://github.com/python-pillow/Pillow/releases/tag/13.0.0",
+        "https://github.com/python-pillow/Pillow/security/advisories/GHSA-j4m9-6w36-pw47"
+      ]
+    },
+    {
+      "id": "pygoat:CVE-2026-112392:pillow:12.1.0",
+      "cve": "CVE-2026-112392",
+      "package": "pillow",
+      "ecosystem": "PyPI",
+      "installed_version": "12.1.0",
+      "fixed_version": "13.0.0",
+      "app": "pygoat",
+      "cvss": null,
+      "epss": 0.00291,
+      "in_kev": false,
+      "kev_date_added": null,
+      "priority_score": 0,
+      "priority_label": "low",
+      "summary": {
+        "en": "Pillow is a Python imaging library. Prior to 13.0.0, Pillow's rank-based filters can dereference invalid image storage for a zero-size image. ImagingExpand() allocates a non-empty output and then faults while replicating edges by reading the first pixel from empty input storage; ImagingRankFilter is never reached. An attacker can supply or cause creation of a zero-size image to an application that applies a rank, median, minimum, or maximum filter. This causes a native process crash. This issue is fixed in version 13.0.0."
+      },
+      "references": [
+        "https://github.com/python-pillow/Pillow/commit/443e3130a8c11594fd0e296afad497e11e678961",
+        "https://github.com/python-pillow/Pillow/releases/tag/13.0.0",
+        "https://github.com/python-pillow/Pillow/security/advisories/GHSA-27h8-gf7j-v5hc"
+      ]
+    },
+    {
       "id": "pygoat:CVE-2026-49265:oauthlib:3.2.2",
       "cve": "CVE-2026-49265",
       "package": "oauthlib",
@@ -2825,6 +3092,52 @@
         "https://github.com/oauthlib/oauthlib/releases/tag/v4.0.0",
         "https://github.com/oauthlib/oauthlib/security/advisories/GHSA-xpv3-w29h-x7cv",
         "https://github.com/pypa/advisory-database/tree/main/vulns/oauthlib/PYSEC-2026-4114.yaml"
+      ]
+    },
+    {
+      "id": "pygoat:CVE-2026-112401:pillow:12.1.0",
+      "cve": "CVE-2026-112401",
+      "package": "pillow",
+      "ecosystem": "PyPI",
+      "installed_version": "12.1.0",
+      "fixed_version": "13.0.0",
+      "app": "pygoat",
+      "cvss": null,
+      "epss": 0.00371,
+      "in_kev": false,
+      "kev_date_added": null,
+      "priority_score": 0,
+      "priority_label": "low",
+      "summary": {
+        "en": "Pillow is a Python imaging library. From 5.4.0 until 13.0.0, Pillow performs quadratic copying while parsing GIF comments. GifImageFile._seek() repeatedly appends immutable bytes for comment sub-blocks and multiple comment extensions, and frame zero is parsed during Image.open(). An attacker can submit a small-dimension GIF containing many comment extensions to any application that opens the file. This can consume excessive CPU and deny service before the application can inspect the image. This issue is fixed in version 13.0.0."
+      },
+      "references": [
+        "https://github.com/python-pillow/Pillow/commit/68a3fe957d8a4d552e8c69d96066d749f0614c7e",
+        "https://github.com/python-pillow/Pillow/releases/tag/13.0.0",
+        "https://github.com/python-pillow/Pillow/security/advisories/GHSA-74r2-7ff9-mjj2"
+      ]
+    },
+    {
+      "id": "pygoat:CVE-2026-112891:pillow:12.1.0",
+      "cve": "CVE-2026-112891",
+      "package": "pillow",
+      "ecosystem": "PyPI",
+      "installed_version": "12.1.0",
+      "fixed_version": "13.0.0",
+      "app": "pygoat",
+      "cvss": null,
+      "epss": 0.00371,
+      "in_kev": false,
+      "kev_date_added": null,
+      "priority_score": 0,
+      "priority_label": "low",
+      "summary": {
+        "en": "Pillow is a Python imaging library. From 9.2.0 until 13.0.0, Pillow performs quadratic copying when saving a GIF with a long comment. _get_global_header() repeatedly copies portions of comment data while assembling the global header, including comments retained from an untrusted input image. An attacker can supply an image with a large GIF comment to an application that saves it as GIF. This can consume excessive CPU and delay or deny service. This issue is fixed in version 13.0.0."
+      },
+      "references": [
+        "https://github.com/python-pillow/Pillow/commit/68a3fe957d8a4d552e8c69d96066d749f0614c7e",
+        "https://github.com/python-pillow/Pillow/releases/tag/13.0.0",
+        "https://github.com/python-pillow/Pillow/security/advisories/GHSA-fc9g-5qg7-mf45"
       ]
     },
     {
@@ -2894,6 +3207,30 @@
         "https://github.com/pallets/werkzeug/pull/3309",
         "https://github.com/pallets/werkzeug/releases/tag/3.1.9",
         "https://github.com/pallets/werkzeug/security/advisories/GHSA-g6x2-hccm-hh4m"
+      ]
+    },
+    {
+      "id": "pygoat:CVE-2026-59203:pillow:12.1.0",
+      "cve": "CVE-2026-59203",
+      "package": "pillow",
+      "ecosystem": "PyPI",
+      "installed_version": "12.1.0",
+      "fixed_version": "12.3.0",
+      "app": "pygoat",
+      "cvss": 5.3,
+      "epss": 0.00399,
+      "in_kev": false,
+      "kev_date_added": null,
+      "priority_score": 14,
+      "priority_label": "low",
+      "summary": {
+        "en": "Pillow is a Python imaging library. From 12.0.0 through 12.2.0, Pillow's EPS parser in PIL/EpsImagePlugin.py accepts a negative byte count in the %%BeginBinary directive, allowing a crafted EPS file to cause Image.open() to seek backwards to the same directive and parse it repeatedly in an infinite loop. This issue is fixed in version 12.3.0."
+      },
+      "references": [
+        "https://github.com/python-pillow/Pillow/commit/03992618118b4a76b6163cd72ab5ecd684133b83",
+        "https://github.com/python-pillow/Pillow/pull/9708",
+        "https://github.com/python-pillow/Pillow/releases/tag/12.3.0",
+        "https://github.com/python-pillow/Pillow/security/advisories/GHSA-pg7v-jwj7-p798"
       ]
     },
     {
@@ -3025,11 +3362,11 @@
       ]
     },
     {
-      "id": "pygoat:CVE-2026-59198:pillow:9.4.0",
+      "id": "pygoat:CVE-2026-59198:pillow:12.1.0",
       "cve": "CVE-2026-59198",
       "package": "pillow",
       "ecosystem": "PyPI",
-      "installed_version": "9.4.0",
+      "installed_version": "12.1.0",
       "fixed_version": "12.3.0",
       "app": "pygoat",
       "cvss": 6.5,
@@ -3072,6 +3409,31 @@
       ]
     },
     {
+      "id": "pygoat:CVE-2026-42311:pillow:12.1.0",
+      "cve": "CVE-2026-42311",
+      "package": "pillow",
+      "ecosystem": "PyPI",
+      "installed_version": "12.1.0",
+      "fixed_version": "12.2.0",
+      "app": "pygoat",
+      "cvss": 7.8,
+      "epss": 0.00217,
+      "in_kev": false,
+      "kev_date_added": null,
+      "priority_score": 20,
+      "priority_label": "medium",
+      "summary": {
+        "en": "Pillow is a Python imaging library. From version 10.3.0 to before version 12.2.0, processing a malicious PSD file could lead to memory corruption, potentially resulting in a crash or arbitrary code execution. This issue has been patched in version 12.2.0.",
+        "es": "Pillow es una biblioteca de im\u00e1genes de Python. Desde la versi\u00f3n 10.3.0 hasta antes de la versi\u00f3n 12.2.0, el procesamiento de un archivo PSD malicioso podr\u00eda llevar a una corrupci\u00f3n de memoria, lo que podr\u00eda resultar en un fallo o ejecuci\u00f3n de c\u00f3digo arbitrario. Este problema ha sido parcheado en la versi\u00f3n 12.2.0."
+      },
+      "references": [
+        "https://github.com/python-pillow/Pillow/commit/58f9a1d166dcb0c274807d4423522d205b0c35ea",
+        "https://github.com/python-pillow/Pillow/pull/9520",
+        "https://github.com/python-pillow/Pillow/releases/tag/12.2.0",
+        "https://github.com/python-pillow/Pillow/security/advisories/GHSA-pwv6-vv43-88gr"
+      ]
+    },
+    {
       "id": "pygoat:CVE-2026-49264:oauthlib:3.2.2",
       "cve": "CVE-2026-49264",
       "package": "oauthlib",
@@ -3093,6 +3455,98 @@
         "https://github.com/oauthlib/oauthlib/pull/951",
         "https://github.com/oauthlib/oauthlib/releases/tag/v4.0.0",
         "https://github.com/oauthlib/oauthlib/security/advisories/GHSA-hj66-6f7g-4r5v"
+      ]
+    },
+    {
+      "id": "pygoat:CVE-2026-112898:pillow:12.1.0",
+      "cve": "CVE-2026-112898",
+      "package": "pillow",
+      "ecosystem": "PyPI",
+      "installed_version": "12.1.0",
+      "fixed_version": "13.0.0",
+      "app": "pygoat",
+      "cvss": null,
+      "epss": 0.00291,
+      "in_kev": false,
+      "kev_date_added": null,
+      "priority_score": 0,
+      "priority_label": "low",
+      "summary": {
+        "en": "Pillow is a Python imaging library. From 9.1.0 until 13.0.0, Pillow can disclose uninitialized stack memory when Image.quantize() uses an empty palette. ImagingPaletteCacheUpdate() leaves a local cache array uninitialized when the palette has zero entries, and the conversion path emits those bytes as output pixel indices. An attacker who controls the palette image can obtain stack contents from a returned PNG or GIF. This can disclose addresses and stack-canary data without an out-of-bounds access, memory corruption, or process crash. This issue is fixed in version 13.0.0."
+      },
+      "references": [
+        "https://github.com/python-pillow/Pillow/commit/13943c8f857b22f073d30f0ef9b725a0d255f1a4",
+        "https://github.com/python-pillow/Pillow/releases/tag/13.0.0",
+        "https://github.com/python-pillow/Pillow/security/advisories/GHSA-rfgq-q3w2-pmv2"
+      ]
+    },
+    {
+      "id": "pygoat:CVE-2026-112901:pillow:12.1.0",
+      "cve": "CVE-2026-112901",
+      "package": "pillow",
+      "ecosystem": "PyPI",
+      "installed_version": "12.1.0",
+      "fixed_version": "13.0.0",
+      "app": "pygoat",
+      "cvss": null,
+      "epss": 0.00291,
+      "in_kev": false,
+      "kev_date_added": null,
+      "priority_score": 0,
+      "priority_label": "low",
+      "summary": {
+        "en": "Pillow is a Python imaging library. Prior to 13.0.0, Pillow's XBM header parser is vulnerable to regular-expression denial of service. In XbmImageFile._open, when an application calls Image.open() on a small crafted XBM file, XbmImagePlugin applies a backtracking expression to the attacker-controlled header before image dimensions are accepted, stalling a worker for minutes and denying service. This issue is fixed in version 13.0.0."
+      },
+      "references": [
+        "https://github.com/python-pillow/Pillow/commit/2852a3e3d568997ddec745fc800991f138878f4b",
+        "https://github.com/python-pillow/Pillow/releases/tag/13.0.0",
+        "https://github.com/python-pillow/Pillow/security/advisories/GHSA-xgh8-jp6q-p5x8"
+      ]
+    },
+    {
+      "id": "pygoat:CVE-2026-112391:pillow:12.1.0",
+      "cve": "CVE-2026-112391",
+      "package": "pillow",
+      "ecosystem": "PyPI",
+      "installed_version": "12.1.0",
+      "fixed_version": "13.0.0",
+      "app": "pygoat",
+      "cvss": null,
+      "epss": 0.00291,
+      "in_kev": false,
+      "kev_date_added": null,
+      "priority_score": 0,
+      "priority_label": "low",
+      "summary": {
+        "en": "Pillow is a Python imaging library. From 5.1.0 until 13.0.0, Pillow's PdfParser.get_value() can recurse without a limit while reading nested PDF objects. The parser follows attacker-controlled arrays and dictionaries when an existing PDF is opened for append. An attacker can provide a deeply nested PDF to an application that saves an image with PDF append enabled. This can raise an uncaught RecursionError or terminate the worker, causing denial of service. This issue is fixed in version 13.0.0."
+      },
+      "references": [
+        "https://github.com/python-pillow/Pillow/commit/94cb11c44ff7345414da17ebfea1598a529ad9cd",
+        "https://github.com/python-pillow/Pillow/releases/tag/13.0.0",
+        "https://github.com/python-pillow/Pillow/security/advisories/GHSA-254f-3936-288h"
+      ]
+    },
+    {
+      "id": "pygoat:CVE-2026-112394:pillow:12.1.0",
+      "cve": "CVE-2026-112394",
+      "package": "pillow",
+      "ecosystem": "PyPI",
+      "installed_version": "12.1.0",
+      "fixed_version": "13.0.0",
+      "app": "pygoat",
+      "cvss": null,
+      "epss": 0.00291,
+      "in_kev": false,
+      "kev_date_added": null,
+      "priority_score": 0,
+      "priority_label": "low",
+      "summary": {
+        "en": "Pillow is a Python imaging library. Prior to 13.0.0, Pillow's P;2L and P;4L raw decoders can read past the end of an input buffer. ImagingRawDecode calculates a packed-pixel row size, while the unpackers read separately padded bit planes. A caller can supply a buffer and image dimensions whose accepted size is smaller than the unpacker's actual footprint. This can disclose up to three adjacent heap bytes in output pixels or crash the process. This issue is fixed in version 13.0.0."
+      },
+      "references": [
+        "https://github.com/python-pillow/Pillow/commit/392ee6f0d19a4adb766a63e9a99f3c28193b8d31",
+        "https://github.com/python-pillow/Pillow/releases/tag/13.0.0",
+        "https://github.com/python-pillow/Pillow/security/advisories/GHSA-4558-3h8r-v8xp"
       ]
     },
     {
@@ -3144,11 +3598,11 @@
       ]
     },
     {
-      "id": "pygoat:CVE-2026-112395:pillow:9.4.0",
+      "id": "pygoat:CVE-2026-112395:pillow:12.1.0",
       "cve": "CVE-2026-112395",
       "package": "pillow",
       "ecosystem": "PyPI",
-      "installed_version": "9.4.0",
+      "installed_version": "12.1.0",
       "fixed_version": "13.0.0",
       "app": "pygoat",
       "cvss": 6.5,
@@ -3490,6 +3944,29 @@
       ]
     },
     {
+      "id": "pygoat:CVE-2026-42309:pillow:12.1.0",
+      "cve": "CVE-2026-42309",
+      "package": "pillow",
+      "ecosystem": "PyPI",
+      "installed_version": "12.1.0",
+      "fixed_version": "12.2.0",
+      "app": "pygoat",
+      "cvss": 5.5,
+      "epss": 0.00182,
+      "in_kev": false,
+      "kev_date_added": null,
+      "priority_score": 14,
+      "priority_label": "low",
+      "summary": {
+        "en": "Pillow is a Python imaging library. From version 11.2.1 to before version 12.2.0, passing nested lists as coordinates to APIs that accept coordinates such as ImagePath.Path, ImageDraw.ImageDraw.polygon and ImageDraw.ImageDraw.line could cause a heap buffer overflow, as nested lists were recursively unpacked beyond the allocated buffer. Coordinate lists are now validated to contain exactly two numeric coordinates. This issue has been patched in version 12.2.0.",
+        "es": "Pillow es una biblioteca de im\u00e1genes de Python. Desde la versi\u00f3n 11.2.1 hasta antes de la versi\u00f3n 12.2.0, pasar listas anidadas como coordenadas a APIs que aceptan coordenadas, como ImagePath.Path, ImageDraw.ImageDraw.polygon e ImageDraw.ImageDraw.line, podr\u00eda causar un desbordamiento de b\u00fafer de mont\u00f3n, ya que las listas anidadas se desempaquetaban recursivamente m\u00e1s all\u00e1 del b\u00fafer asignado. Las listas de coordenadas ahora se validan para que contengan exactamente dos coordenadas num\u00e9ricas. Este problema ha sido parcheado en la versi\u00f3n 12.2.0."
+      },
+      "references": [
+        "https://github.com/python-pillow/Pillow/releases/tag/12.2.0",
+        "https://github.com/python-pillow/Pillow/security/advisories/GHSA-5xmw-vc9v-4wf2"
+      ]
+    },
+    {
       "id": "pygoat:CVE-2026-102269:pyjwt:2.4.0",
       "cve": "CVE-2026-102269",
       "package": "pyjwt",
@@ -3513,11 +3990,11 @@
       ]
     },
     {
-      "id": "pygoat:CVE-2026-42310:pillow:9.4.0",
+      "id": "pygoat:CVE-2026-42310:pillow:12.1.0",
       "cve": "CVE-2026-42310",
       "package": "pillow",
       "ecosystem": "PyPI",
-      "installed_version": "9.4.0",
+      "installed_version": "12.1.0",
       "fixed_version": "12.2.0",
       "app": "pygoat",
       "cvss": 5.5,
@@ -3606,11 +4083,11 @@
       ]
     },
     {
-      "id": "pygoat:CVE-2026-55798:pillow:9.4.0",
+      "id": "pygoat:CVE-2026-55798:pillow:12.1.0",
       "cve": "CVE-2026-55798",
       "package": "pillow",
       "ecosystem": "PyPI",
-      "installed_version": "9.4.0",
+      "installed_version": "12.1.0",
       "fixed_version": "12.3.0",
       "app": "pygoat",
       "cvss": 4.5,
@@ -3654,11 +4131,11 @@
       ]
     },
     {
-      "id": "pygoat:CVE-2026-42308:pillow:9.4.0",
+      "id": "pygoat:CVE-2026-42308:pillow:12.1.0",
       "cve": "CVE-2026-42308",
       "package": "pillow",
       "ecosystem": "PyPI",
-      "installed_version": "9.4.0",
+      "installed_version": "12.1.0",
       "fixed_version": "12.2.0",
       "app": "pygoat",
       "cvss": 5.5,
@@ -3745,11 +4222,28 @@
       ]
     },
     {
-      "id": "pygoat:CVE-2026-112899:pillow:9.4.0",
+      "id": "pygoat:CVE-2026-112902:pillow:12.1.0",
+      "cve": "CVE-2026-112902",
+      "package": "pillow",
+      "ecosystem": "PyPI",
+      "installed_version": "12.1.0",
+      "fixed_version": "13.0.0",
+      "app": "pygoat",
+      "cvss": null,
+      "epss": null,
+      "in_kev": false,
+      "kev_date_added": null,
+      "priority_score": 0,
+      "priority_label": "low",
+      "summary": {},
+      "references": []
+    },
+    {
+      "id": "pygoat:CVE-2026-112899:pillow:12.1.0",
       "cve": "CVE-2026-112899",
       "package": "pillow",
       "ecosystem": "PyPI",
-      "installed_version": "9.4.0",
+      "installed_version": "12.1.0",
       "fixed_version": "13.0.0",
       "app": "pygoat",
       "cvss": null,
@@ -7260,6 +7754,33 @@
       ]
     },
     {
+      "id": "nodejs-goof:CVE-2021-4264:dustjs-linkedin:2.5.0",
+      "cve": "CVE-2021-4264",
+      "package": "dustjs-linkedin",
+      "ecosystem": "npm",
+      "installed_version": "2.5.0",
+      "fixed_version": "3.0.0",
+      "app": "nodejs-goof",
+      "cvss": 6.3,
+      "epss": 0.01153,
+      "in_kev": false,
+      "kev_date_added": null,
+      "priority_score": 17,
+      "priority_label": "low",
+      "summary": {
+        "en": "A vulnerability was found in LinkedIn dustjs up to 2.x and classified as problematic. Affected by this issue is some unknown functionality. The manipulation leads to improperly controlled modification of object prototype attributes ('prototype pollution'). The attack may be launched remotely. The exploit has been disclosed to the public and may be used. Upgrading to version 3.0.0 is able to address this issue. The name of the patch is ddb6523832465d38c9d80189e9de60519ac307c3. It is recommended to upgrade the affected component. The identifier of this vulnerability is VDB-216464.",
+        "es": "Una vulnerabilidad fue encontrada en LinkedIndustjs hasta 2.x y clasificada como problem\u00e1tica. Una funci\u00f3n desconocida es afectada por este problema. La manipulaci\u00f3n conduce a una modificaci\u00f3n controlada inadecuadamente de los atributos del prototipo del objeto (\"prototype pollution\"). El ataque puede lanzarse de forma remota. La explotaci\u00f3n ha sido divulgada al p\u00fablico y puede utilizarse. La actualizaci\u00f3n a la versi\u00f3n 3.0.0 puede solucionar este problema. El nombre del parche es ddb6523832465d38c9d80189e9de60519ac307c3. Se recomienda actualizar el componente afectado. El identificador de esta vulnerabilidad es VDB-216464."
+      },
+      "references": [
+        "https://github.com/linkedin/dustjs/commit/ddb6523832465d38c9d80189e9de60519ac307c3",
+        "https://github.com/linkedin/dustjs/issues/804",
+        "https://github.com/linkedin/dustjs/pull/805",
+        "https://github.com/linkedin/dustjs/releases/tag/v3.0.0",
+        "https://vuldb.com/?ctiid.216464",
+        "https://vuldb.com/?id.216464"
+      ]
+    },
+    {
       "id": "nodejs-goof:CVE-2021-3765:validator:13.5.2",
       "cve": "CVE-2021-3765",
       "package": "validator",
@@ -7304,33 +7825,6 @@
         "https://github.com/aheckmann/mpath/commit/89402d2880d4ea3518480a8c9847c541f2d824fc",
         "https://snyk.io/vuln/SNYK-JAVA-ORGWEBJARSNPM-1579548",
         "https://snyk.io/vuln/SNYK-JS-MPATH-1577289"
-      ]
-    },
-    {
-      "id": "nodejs-goof:CVE-2021-4264:dustjs-linkedin:2.5.0",
-      "cve": "CVE-2021-4264",
-      "package": "dustjs-linkedin",
-      "ecosystem": "npm",
-      "installed_version": "2.5.0",
-      "fixed_version": "3.0.0",
-      "app": "nodejs-goof",
-      "cvss": 6.3,
-      "epss": 0.01111,
-      "in_kev": false,
-      "kev_date_added": null,
-      "priority_score": 17,
-      "priority_label": "low",
-      "summary": {
-        "en": "A vulnerability was found in LinkedIn dustjs up to 2.x and classified as problematic. Affected by this issue is some unknown functionality. The manipulation leads to improperly controlled modification of object prototype attributes ('prototype pollution'). The attack may be launched remotely. The exploit has been disclosed to the public and may be used. Upgrading to version 3.0.0 is able to address this issue. The name of the patch is ddb6523832465d38c9d80189e9de60519ac307c3. It is recommended to upgrade the affected component. The identifier of this vulnerability is VDB-216464.",
-        "es": "Una vulnerabilidad fue encontrada en LinkedIndustjs hasta 2.x y clasificada como problem\u00e1tica. Una funci\u00f3n desconocida es afectada por este problema. La manipulaci\u00f3n conduce a una modificaci\u00f3n controlada inadecuadamente de los atributos del prototipo del objeto (\"prototype pollution\"). El ataque puede lanzarse de forma remota. La explotaci\u00f3n ha sido divulgada al p\u00fablico y puede utilizarse. La actualizaci\u00f3n a la versi\u00f3n 3.0.0 puede solucionar este problema. El nombre del parche es ddb6523832465d38c9d80189e9de60519ac307c3. Se recomienda actualizar el componente afectado. El identificador de esta vulnerabilidad es VDB-216464."
-      },
-      "references": [
-        "https://github.com/linkedin/dustjs/commit/ddb6523832465d38c9d80189e9de60519ac307c3",
-        "https://github.com/linkedin/dustjs/issues/804",
-        "https://github.com/linkedin/dustjs/pull/805",
-        "https://github.com/linkedin/dustjs/releases/tag/v3.0.0",
-        "https://vuldb.com/?ctiid.216464",
-        "https://vuldb.com/?id.216464"
       ]
     },
     {
@@ -9867,12 +10361,6 @@
   ],
   "history": [
     {
-      "date": "2026-09-22",
-      "findings_total": 312,
-      "critical": 4,
-      "high": 3
-    },
-    {
       "date": "2026-09-23",
       "findings_total": 312,
       "critical": 4,
@@ -10044,6 +10532,12 @@
       "date": "2026-10-21",
       "findings_total": 352,
       "critical": 4,
+      "high": 3
+    },
+    {
+      "date": "2026-10-22",
+      "findings_total": 373,
+      "critical": 3,
       "high": 3
     }
   ]

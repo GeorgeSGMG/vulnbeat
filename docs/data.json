@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-10-22T11:29:08.736584+00:00",
+  "generated_at": "2026-10-23T11:20:44.180873+00:00",
   "sources": {
     "kev": {
       "fetched": true,
@@ -7,11 +7,11 @@
     },
     "epss": {
       "fetched": true,
-      "entries": 311
+      "entries": 321
     },
     "nvd": {
       "fetched": true,
-      "entries": 313
+      "entries": 322
     }
   },
   "apps": [
@@ -1525,6 +1525,30 @@
       ]
     },
     {
+      "id": "pygoat:CVE-2026-96639:pillow:12.1.0",
+      "cve": "CVE-2026-96639",
+      "package": "pillow",
+      "ecosystem": "PyPI",
+      "installed_version": "12.1.0",
+      "fixed_version": "13.0.0",
+      "app": "pygoat",
+      "cvss": 9.8,
+      "epss": 0.00565,
+      "in_kev": false,
+      "kev_date_added": null,
+      "priority_score": 25,
+      "priority_label": "medium",
+      "summary": {
+        "en": "Pillow is a Python imaging library. From 11.0.0 until 13.0.0, multi-frame loaders can retain an ImagingCore allocation created for a narrow frame mode while a later frame of the same dimensions changes the logical mode and decoder tiles to wider RGB or CMYK data. ImageFile.load_prepare() reuses the stale native storage because _im is non-null without verifying that its mode and size still match. Crafted PSD, MPO, DCX, or MIC frame transitions can then write wider pixels into the narrow allocation, causing native out-of-bounds writes and crashes. The MPO path can also cause a native over-read and, in demonstrated runtime-specific profiles, command execution. This issue is fixed in version 13.0.0."
+      },
+      "references": [
+        "https://github.com/python-pillow/Pillow/commit/78d97d994579aef81aafe123773d525f40f2522a",
+        "https://github.com/python-pillow/Pillow/pull/10105",
+        "https://github.com/python-pillow/Pillow/releases/tag/13.0.0",
+        "https://github.com/python-pillow/Pillow/security/advisories/GHSA-v9pv-5gc8-w2m6"
+      ]
+    },
+    {
       "id": "pygoat:CVE-2024-41991:django:4.2",
       "cve": "CVE-2024-41991",
       "package": "django",
@@ -2077,6 +2101,30 @@
       ]
     },
     {
+      "id": "pygoat:CVE-2026-96640:pillow:12.1.0",
+      "cve": "CVE-2026-96640",
+      "package": "pillow",
+      "ecosystem": "PyPI",
+      "installed_version": "12.1.0",
+      "fixed_version": "13.0.0",
+      "app": "pygoat",
+      "cvss": null,
+      "epss": 0.00421,
+      "in_kev": false,
+      "kev_date_added": null,
+      "priority_score": 0,
+      "priority_label": "low",
+      "summary": {
+        "en": "Pillow is a Python imaging library. From 5.1.0 until 13.0.0, PdfParser.linearize_page_tree() in src/PIL/PdfParser.py treats a PDF /Pages graph as a tree without tracking duplicate indirect references. When Image.save(..., format=\"PDF\", append=True) processes an attacker-controlled existing PDF whose /Kids arrays repeatedly reference the same child /Pages node, Pillow expands the shared subtree as distinct pages. A compact malformed PDF can therefore create exponentially many page references and consume disproportionate CPU before the append completes. This issue is fixed in version 13.0.0."
+      },
+      "references": [
+        "https://github.com/python-pillow/Pillow/commit/6f0e7ee1f9c2fe227906f8a4b926e6622b702bc7",
+        "https://github.com/python-pillow/Pillow/pull/10093",
+        "https://github.com/python-pillow/Pillow/releases/tag/13.0.0",
+        "https://github.com/python-pillow/Pillow/security/advisories/GHSA-mrfp-p49p-3hf2"
+      ]
+    },
+    {
       "id": "pygoat:CVE-2025-14550:django:4.2",
       "cve": "CVE-2025-14550",
       "package": "django",
@@ -2231,29 +2279,6 @@
       ]
     },
     {
-      "id": "pygoat:CVE-2026-54060:pillow:12.1.0",
-      "cve": "CVE-2026-54060",
-      "package": "pillow",
-      "ecosystem": "PyPI",
-      "installed_version": "12.1.0",
-      "fixed_version": "12.3.0",
-      "app": "pygoat",
-      "cvss": 7.5,
-      "epss": 0.00418,
-      "in_kev": false,
-      "kev_date_added": null,
-      "priority_score": 19,
-      "priority_label": "low",
-      "summary": {
-        "en": "Pillow is a Python imaging library. Prior to 12.3.0, PIL/FontFile.py FontFile.compile() assembled per-glyph images into a combined bitmap with Image.new(\"1\", (xsize, ysize)) without calling Image._decompression_bomb_check(), allowing a font to trigger excessive allocation during conversion or saving. This issue is fixed in version 12.3.0."
-      },
-      "references": [
-        "https://github.com/python-pillow/Pillow/blob/main/docs/releasenotes/12.3.0.rst",
-        "https://github.com/python-pillow/Pillow/commit/0a263e6264aa5399988d9acd3bbfbca2ca3ec77d",
-        "https://github.com/python-pillow/Pillow/security/advisories/GHSA-5x94-69rx-g8h2"
-      ]
-    },
-    {
       "id": "pygoat:CVE-2026-55380:pillow:12.1.0",
       "cve": "CVE-2026-55380",
       "package": "pillow",
@@ -2274,6 +2299,29 @@
         "https://github.com/python-pillow/Pillow/blob/main/docs/releasenotes/12.3.0.rst",
         "https://github.com/python-pillow/Pillow/commit/f39b0ae6624eb2d7c5c5d651d9bb5fdbd96a8675",
         "https://github.com/python-pillow/Pillow/security/advisories/GHSA-phj9-mv4w-65pm"
+      ]
+    },
+    {
+      "id": "pygoat:CVE-2026-54060:pillow:12.1.0",
+      "cve": "CVE-2026-54060",
+      "package": "pillow",
+      "ecosystem": "PyPI",
+      "installed_version": "12.1.0",
+      "fixed_version": "12.3.0",
+      "app": "pygoat",
+      "cvss": 7.5,
+      "epss": 0.00418,
+      "in_kev": false,
+      "kev_date_added": null,
+      "priority_score": 19,
+      "priority_label": "low",
+      "summary": {
+        "en": "Pillow is a Python imaging library. Prior to 12.3.0, PIL/FontFile.py FontFile.compile() assembled per-glyph images into a combined bitmap with Image.new(\"1\", (xsize, ysize)) without calling Image._decompression_bomb_check(), allowing a font to trigger excessive allocation during conversion or saving. This issue is fixed in version 12.3.0."
+      },
+      "references": [
+        "https://github.com/python-pillow/Pillow/blob/main/docs/releasenotes/12.3.0.rst",
+        "https://github.com/python-pillow/Pillow/commit/0a263e6264aa5399988d9acd3bbfbca2ca3ec77d",
+        "https://github.com/python-pillow/Pillow/security/advisories/GHSA-5x94-69rx-g8h2"
       ]
     },
     {
@@ -2371,6 +2419,30 @@
       ]
     },
     {
+      "id": "pygoat:CVE-2026-96778:pillow:12.1.0",
+      "cve": "CVE-2026-96778",
+      "package": "pillow",
+      "ecosystem": "PyPI",
+      "installed_version": "12.1.0",
+      "fixed_version": "13.0.0",
+      "app": "pygoat",
+      "cvss": null,
+      "epss": 0.00401,
+      "in_kev": false,
+      "kev_date_added": null,
+      "priority_score": 0,
+      "priority_label": "low",
+      "summary": {
+        "en": "Pillow is a Python imaging library. From 9.4.0 until 13.0.0, ImagingJpegEncode() in src/libImaging/JpegEncode.c can call jpeg_write_marker() for a JPEG COM comment when an ICC profile has exactly filled the 65536-byte encoder buffer. libjpeg writes one byte before checking the exhausted free_in_buffer counter, which then wraps and permits the attacker-controlled comment and subsequent compressed image data to overwrite adjacent heap memory. Re-saving an untrusted image as JPEG while preserving its ICC profile and forwarded comment can crash the process and may enable code execution in suitable runtime and heap layouts. This issue is fixed in version 13.0.0."
+      },
+      "references": [
+        "https://github.com/python-pillow/Pillow/commit/02561b8dc6117d5670d4b469fecdd02c70854f9b",
+        "https://github.com/python-pillow/Pillow/pull/10124",
+        "https://github.com/python-pillow/Pillow/releases/tag/13.0.0",
+        "https://github.com/python-pillow/Pillow/security/advisories/GHSA-g7cr-3p24-7wf7"
+      ]
+    },
+    {
       "id": "pygoat:CVE-2023-45803:urllib3:1.26.9",
       "cve": "CVE-2023-45803",
       "package": "urllib3",
@@ -2422,6 +2494,30 @@
       ]
     },
     {
+      "id": "pygoat:CVE-2026-59205:pillow:12.1.0",
+      "cve": "CVE-2026-59205",
+      "package": "pillow",
+      "ecosystem": "PyPI",
+      "installed_version": "12.1.0",
+      "fixed_version": "12.3.0",
+      "app": "pygoat",
+      "cvss": 7.5,
+      "epss": 0.00385,
+      "in_kev": false,
+      "kev_date_added": null,
+      "priority_score": 19,
+      "priority_label": "low",
+      "summary": {
+        "en": "Pillow is a Python imaging library. Prior to 12.3.0, Pillow's ImageCms.ImageCmsTransform.apply(im, imOut) API can trigger controlled native heap corruption when the caller supplies an output image whose mode does not match the transform's declared output mode. This issue is fixed in version 12.3.0."
+      },
+      "references": [
+        "https://github.com/python-pillow/Pillow/commit/a9ffc42bedf4fc0a7ef8d6486e7f9e81e3397721",
+        "https://github.com/python-pillow/Pillow/pull/9715",
+        "https://github.com/python-pillow/Pillow/releases/tag/12.3.0",
+        "https://github.com/python-pillow/Pillow/security/advisories/GHSA-9hw9-ch79-4vh6"
+      ]
+    },
+    {
       "id": "pygoat:CVE-2026-59199:pillow:12.1.0",
       "cve": "CVE-2026-59199",
       "package": "pillow",
@@ -2467,30 +2563,6 @@
         "https://github.com/python-pillow/Pillow/pull/9718",
         "https://github.com/python-pillow/Pillow/releases/tag/12.3.0",
         "https://github.com/python-pillow/Pillow/security/advisories/GHSA-jjj6-mw9f-p565"
-      ]
-    },
-    {
-      "id": "pygoat:CVE-2026-59205:pillow:12.1.0",
-      "cve": "CVE-2026-59205",
-      "package": "pillow",
-      "ecosystem": "PyPI",
-      "installed_version": "12.1.0",
-      "fixed_version": "12.3.0",
-      "app": "pygoat",
-      "cvss": 7.5,
-      "epss": 0.00385,
-      "in_kev": false,
-      "kev_date_added": null,
-      "priority_score": 19,
-      "priority_label": "low",
-      "summary": {
-        "en": "Pillow is a Python imaging library. Prior to 12.3.0, Pillow's ImageCms.ImageCmsTransform.apply(im, imOut) API can trigger controlled native heap corruption when the caller supplies an output image whose mode does not match the transform's declared output mode. This issue is fixed in version 12.3.0."
-      },
-      "references": [
-        "https://github.com/python-pillow/Pillow/commit/a9ffc42bedf4fc0a7ef8d6486e7f9e81e3397721",
-        "https://github.com/python-pillow/Pillow/pull/9715",
-        "https://github.com/python-pillow/Pillow/releases/tag/12.3.0",
-        "https://github.com/python-pillow/Pillow/security/advisories/GHSA-9hw9-ch79-4vh6"
       ]
     },
     {
@@ -2725,6 +2797,102 @@
       ]
     },
     {
+      "id": "pygoat:CVE-2026-96637:pillow:12.1.0",
+      "cve": "CVE-2026-96637",
+      "package": "pillow",
+      "ecosystem": "PyPI",
+      "installed_version": "12.1.0",
+      "fixed_version": "13.0.0",
+      "app": "pygoat",
+      "cvss": null,
+      "epss": 0.00333,
+      "in_kev": false,
+      "kev_date_added": null,
+      "priority_score": 0,
+      "priority_label": "low",
+      "summary": {
+        "en": "Pillow is a Python imaging library. Prior to 13.0.0, SpiderImageFile.seek() in src/PIL/SpiderImagePlugin.py reparses a later SPIDER stack frame and replaces self._size without rerunning Image._decompression_bomb_check(). A tiny file can use a safe first frame to pass Image.open() and then declare very large dimensions in a later mode F frame. Loading that frame allocates approximately four bytes per attacker-declared pixel and can consume multiple gigabytes of memory. This issue is fixed in version 13.0.0."
+      },
+      "references": [
+        "https://github.com/python-pillow/Pillow/commit/7cb0e02389d8aac2a60896a490f572db0b07b841",
+        "https://github.com/python-pillow/Pillow/pull/10076",
+        "https://github.com/python-pillow/Pillow/releases/tag/13.0.0",
+        "https://github.com/python-pillow/Pillow/security/advisories/GHSA-g842-9rc4-69pw"
+      ]
+    },
+    {
+      "id": "pygoat:CVE-2026-96642:pillow:12.1.0",
+      "cve": "CVE-2026-96642",
+      "package": "pillow",
+      "ecosystem": "PyPI",
+      "installed_version": "12.1.0",
+      "fixed_version": "13.0.0",
+      "app": "pygoat",
+      "cvss": null,
+      "epss": 0.00333,
+      "in_kev": false,
+      "kev_date_added": null,
+      "priority_score": 0,
+      "priority_label": "low",
+      "summary": {
+        "en": "Pillow is a Python imaging library. Prior to 13.0.0, the TarIO initializer in src/PIL/TarIO.py accepts a negative octal member size and computes a backward seek that returns to the same 512-byte header. When the requested member name does not match, the parser repeatedly reads that header, consumes a full CPU core, and never returns. TarIO is reached only when an application directly uses PIL.TarIO.TarIO rather than the default Image.open() path. This issue is fixed in version 13.0.0."
+      },
+      "references": [
+        "https://github.com/python-pillow/Pillow/commit/19b695fdcc5eddc37374e2b1645fc4185edaf71d",
+        "https://github.com/python-pillow/Pillow/pull/10012",
+        "https://github.com/python-pillow/Pillow/releases/tag/13.0.0",
+        "https://github.com/python-pillow/Pillow/security/advisories/GHSA-3j72-p6qg-6xp7"
+      ]
+    },
+    {
+      "id": "pygoat:CVE-2026-96643:pillow:12.1.0",
+      "cve": "CVE-2026-96643",
+      "package": "pillow",
+      "ecosystem": "PyPI",
+      "installed_version": "12.1.0",
+      "fixed_version": "13.0.0",
+      "app": "pygoat",
+      "cvss": null,
+      "epss": 0.00333,
+      "in_kev": false,
+      "kev_date_added": null,
+      "priority_score": 0,
+      "priority_label": "low",
+      "summary": {
+        "en": "Pillow is a Python imaging library. From 11.0.0 until 13.0.0, Exif.load() in src/PIL/Image.py repeatedly slices the remaining EXIF data while it begins with the six-byte Exif header. src/PIL/PngImagePlugin.py accepts an uncapped PNG eXIf chunk, so a file filled with repeated headers causes a new shrinking copy on every iteration and quadratic CPU work. The condition is reachable through Image.getexif(), Image._getexif(), and ImageOps.exif_transpose(), including common photo-upload rotation workflows. This issue is fixed in version 13.0.0."
+      },
+      "references": [
+        "https://github.com/python-pillow/Pillow/commit/806e38381c781f32bbd22f4cd026678acd40fd6c",
+        "https://github.com/python-pillow/Pillow/pull/10073",
+        "https://github.com/python-pillow/Pillow/releases/tag/13.0.0",
+        "https://github.com/python-pillow/Pillow/security/advisories/GHSA-g4qv-2jxx-769h"
+      ]
+    },
+    {
+      "id": "pygoat:CVE-2026-96644:pillow:12.1.0",
+      "cve": "CVE-2026-96644",
+      "package": "pillow",
+      "ecosystem": "PyPI",
+      "installed_version": "12.1.0",
+      "fixed_version": "13.0.0",
+      "app": "pygoat",
+      "cvss": null,
+      "epss": 0.00333,
+      "in_kev": false,
+      "kev_date_added": null,
+      "priority_score": 0,
+      "priority_label": "low",
+      "summary": {
+        "en": "Pillow is a Python imaging library. Prior to 13.0.0 on Windows, src/PIL/WmfImagePlugin.py passes unchecked 32-bit WMF or EMF dimensions to the native drawwmf handler in src/display.c. The handler sizes a DIB allocation from 16-bit-truncated bcWidth and bcHeight fields but copies pixel data using the original full dimensions. A crafted wide, short metafile can pass the pixel-count decompression-bomb check and make the Windows-only renderer read beyond the heap buffer, potentially disclosing memory or crashing the process. This issue is fixed in version 13.0.0."
+      },
+      "references": [
+        "https://github.com/python-pillow/Pillow/commit/4cf46bee338304c5c8968fd7f132ba0d40c428b7",
+        "https://github.com/python-pillow/Pillow/pull/10120",
+        "https://github.com/python-pillow/Pillow/releases/tag/13.0.0",
+        "https://github.com/python-pillow/Pillow/security/advisories/GHSA-9v9v-9qvf-h2hj"
+      ]
+    },
+    {
       "id": "pygoat:CVE-2026-44431:urllib3:1.26.9",
       "cve": "CVE-2026-44431",
       "package": "urllib3",
@@ -2744,29 +2912,6 @@
       "references": [
         "https://github.com/urllib3/urllib3/security/advisories/GHSA-qccp-gfcp-xxvc",
         "https://lists.debian.org/debian-lts-announce/2026/06/msg00040.html"
-      ]
-    },
-    {
-      "id": "pygoat:CVE-2026-112404:pillow:12.1.0",
-      "cve": "CVE-2026-112404",
-      "package": "pillow",
-      "ecosystem": "PyPI",
-      "installed_version": "12.1.0",
-      "fixed_version": "13.0.0",
-      "app": "pygoat",
-      "cvss": null,
-      "epss": 0.00291,
-      "in_kev": false,
-      "kev_date_added": null,
-      "priority_score": 0,
-      "priority_label": "low",
-      "summary": {
-        "en": "Pillow is a Python imaging library. From 8.1.0 until 13.0.0, Pillow's TIFF tile and RGBA decode paths can read beyond row data produced by libtiff. In _decodeTile and the RGBA unpacker path, when Pillow and libtiff interpret duplicated PhotometricInterpretation or BitsPerSample tags differently, Pillow does not verify that the required input row fits inside the row libtiff produced, while the strip path has this validation. Loading pixels from such a crafted TIFF can expose adjacent heap data in output pixels or crash the process. This issue is fixed in version 13.0.0."
-      },
-      "references": [
-        "https://github.com/python-pillow/Pillow/commit/1d4773e6cea0c4a2814e6d4cdc099bbcf56da6ce",
-        "https://github.com/python-pillow/Pillow/releases/tag/13.0.0",
-        "https://github.com/python-pillow/Pillow/security/advisories/GHSA-c6hw-5grf-ff96"
       ]
     },
     {
@@ -2793,8 +2938,8 @@
       ]
     },
     {
-      "id": "pygoat:CVE-2026-112399:pillow:12.1.0",
-      "cve": "CVE-2026-112399",
+      "id": "pygoat:CVE-2026-112404:pillow:12.1.0",
+      "cve": "CVE-2026-112404",
       "package": "pillow",
       "ecosystem": "PyPI",
       "installed_version": "12.1.0",
@@ -2807,58 +2952,12 @@
       "priority_score": 0,
       "priority_label": "low",
       "summary": {
-        "en": "Pillow is a Python imaging library. From 8.1.0 until 13.0.0, Pillow can allocate an APNG disposal background at the full canvas size before applying the decompression-bomb check. A crafted APNG with a small first frame, a very large declared canvas, and background disposal or first-frame OP_PREVIOUS reaches PngImageFile._seek while Image.open() positions frame zero. The full-canvas allocation occurs inside Image.open() without requiring pixel loading or frame iteration. This can exhaust memory and deny service. This issue is fixed in version 13.0.0."
-      },
-      "references": [
-        "https://github.com/python-pillow/Pillow/commit/f1acfc54c53502948d0d14121872061df931db48",
-        "https://github.com/python-pillow/Pillow/releases/tag/13.0.0",
-        "https://github.com/python-pillow/Pillow/security/advisories/GHSA-5xm2-6676-qcp9"
-      ]
-    },
-    {
-      "id": "pygoat:CVE-2026-112400:pillow:12.1.0",
-      "cve": "CVE-2026-112400",
-      "package": "pillow",
-      "ecosystem": "PyPI",
-      "installed_version": "12.1.0",
-      "fixed_version": "13.0.0",
-      "app": "pygoat",
-      "cvss": null,
-      "epss": 0.00291,
-      "in_kev": false,
-      "kev_date_added": null,
-      "priority_score": 0,
-      "priority_label": "low",
-      "summary": {
-        "en": "Pillow is a Python imaging library. From 9.2.0 until 13.0.0, Pillow can retain a rejected GIF frame size after a decompression-bomb exception. In GifImageFile._seek, a crafted GIF can leave rejected dimensions stored after Image.DecompressionBombError; if an application catches that exception and continues processing the same image object, later seek or load operations allocate according to those dimensions and can exhaust memory, denying service. This issue is fixed in version 13.0.0."
-      },
-      "references": [
-        "https://github.com/python-pillow/Pillow/commit/6faed707cfb760a4cbd726ddc8406f576cf35bf7",
-        "https://github.com/python-pillow/Pillow/releases/tag/13.0.0",
-        "https://github.com/python-pillow/Pillow/security/advisories/GHSA-65qm-jvmh-6pqg"
-      ]
-    },
-    {
-      "id": "pygoat:CVE-2026-112897:pillow:12.1.0",
-      "cve": "CVE-2026-112897",
-      "package": "pillow",
-      "ecosystem": "PyPI",
-      "installed_version": "12.1.0",
-      "fixed_version": "13.0.0",
-      "app": "pygoat",
-      "cvss": null,
-      "epss": 0.00291,
-      "in_kev": false,
-      "kev_date_added": null,
-      "priority_score": 0,
-      "priority_label": "low",
-      "summary": {
-        "en": "Pillow is a Python imaging library. From 5.3.0 until 13.0.0, Pillow can return uninitialized memory as pixels when libtiff performs a short decode of JPEG-compressed or Group 4 fax TIFF data. The _decodeStrip and _decodeTile buffers can be larger than the bytes written by libtiff, but Pillow converts the expected rows without clearing the unwritten tail. The tile path is affected from 5.3.0 and the strip path from 6.0.0. An attacker can supply a crafted TIFF to an application that loads and returns or re-encodes its pixels. This can disclose stale heap contents without memory corruption or a process crash. This issue is fixed in version 13.0.0."
+        "en": "Pillow is a Python imaging library. From 8.1.0 until 13.0.0, Pillow's TIFF tile and RGBA decode paths can read beyond row data produced by libtiff. In _decodeTile and the RGBA unpacker path, when Pillow and libtiff interpret duplicated PhotometricInterpretation or BitsPerSample tags differently, Pillow does not verify that the required input row fits inside the row libtiff produced, while the strip path has this validation. Loading pixels from such a crafted TIFF can expose adjacent heap data in output pixels or crash the process. This issue is fixed in version 13.0.0."
       },
       "references": [
         "https://github.com/python-pillow/Pillow/commit/1d4773e6cea0c4a2814e6d4cdc099bbcf56da6ce",
         "https://github.com/python-pillow/Pillow/releases/tag/13.0.0",
-        "https://github.com/python-pillow/Pillow/security/advisories/GHSA-q45j-58j2-45rg"
+        "https://github.com/python-pillow/Pillow/security/advisories/GHSA-c6hw-5grf-ff96"
       ]
     },
     {
@@ -2885,29 +2984,6 @@
       ]
     },
     {
-      "id": "pygoat:CVE-2026-112405:pillow:12.1.0",
-      "cve": "CVE-2026-112405",
-      "package": "pillow",
-      "ecosystem": "PyPI",
-      "installed_version": "12.1.0",
-      "fixed_version": "13.0.0",
-      "app": "pygoat",
-      "cvss": null,
-      "epss": 0.00291,
-      "in_kev": false,
-      "kev_date_added": null,
-      "priority_score": 0,
-      "priority_label": "low",
-      "summary": {
-        "en": "Pillow is a Python imaging library. From 12.0.0 until 13.0.0, Pillow's Image.merge() can dereference a null image8 plane. Validation skips the first input band, allowing a 32-bit integer or floating-point image backed by image32 storage to be merged as a narrower multiband image. A crafted IPTC file can reach this path when an application opens and loads it, or a caller can invoke Image.merge() directly with such a first band. This causes a native process crash. This issue is fixed in version 13.0.0."
-      },
-      "references": [
-        "https://github.com/python-pillow/Pillow/commit/b6ee66e8b2c2c0932bdf65f963268d9f2927ef86",
-        "https://github.com/python-pillow/Pillow/releases/tag/13.0.0",
-        "https://github.com/python-pillow/Pillow/security/advisories/GHSA-cp9v-662q-vvx9"
-      ]
-    },
-    {
       "id": "pygoat:CVE-2026-112894:pillow:12.1.0",
       "cve": "CVE-2026-112894",
       "package": "pillow",
@@ -2928,29 +3004,6 @@
         "https://github.com/python-pillow/Pillow/commit/f6a852555f1a1bdff7781abf25f1a3b8bd6ce6cb",
         "https://github.com/python-pillow/Pillow/releases/tag/13.0.0",
         "https://github.com/python-pillow/Pillow/security/advisories/GHSA-jg86-v3jv-hrpm"
-      ]
-    },
-    {
-      "id": "pygoat:CVE-2026-112895:pillow:12.1.0",
-      "cve": "CVE-2026-112895",
-      "package": "pillow",
-      "ecosystem": "PyPI",
-      "installed_version": "12.1.0",
-      "fixed_version": "13.0.0",
-      "app": "pygoat",
-      "cvss": null,
-      "epss": 0.00291,
-      "in_kev": false,
-      "kev_date_added": null,
-      "priority_score": 0,
-      "priority_label": "low",
-      "summary": {
-        "en": "Pillow is a Python imaging library. From 5.1.0 until 13.0.0, Pillow can exhaust resources while parsing an existing PDF during an append operation. PdfParser follows page-tree child references without cycle or duplication tracking and follows previous-trailer chains with only an exact repeated-offset guard, so deep or cyclic page trees and long chains of unique trailer offsets can exhaust the Python stack. Repeated non-cyclic /Kids references can also cause super-linear CPU and memory use. An attacker can supply such a PDF to an application that calls Image.save with PDF append enabled. This can raise an uncaught RecursionError or consume excessive CPU and memory before output is written, causing denial of service. This issue is fixed in version 13.0.0."
-      },
-      "references": [
-        "https://github.com/python-pillow/Pillow/commit/e2ae7eacad6de68c37eb28b633a97bebacf2c5bf",
-        "https://github.com/python-pillow/Pillow/releases/tag/13.0.0",
-        "https://github.com/python-pillow/Pillow/security/advisories/GHSA-p4wg-p73j-c528"
       ]
     },
     {
@@ -2977,6 +3030,121 @@
       ]
     },
     {
+      "id": "pygoat:CVE-2026-112897:pillow:12.1.0",
+      "cve": "CVE-2026-112897",
+      "package": "pillow",
+      "ecosystem": "PyPI",
+      "installed_version": "12.1.0",
+      "fixed_version": "13.0.0",
+      "app": "pygoat",
+      "cvss": null,
+      "epss": 0.00291,
+      "in_kev": false,
+      "kev_date_added": null,
+      "priority_score": 0,
+      "priority_label": "low",
+      "summary": {
+        "en": "Pillow is a Python imaging library. From 5.3.0 until 13.0.0, Pillow can return uninitialized memory as pixels when libtiff performs a short decode of JPEG-compressed or Group 4 fax TIFF data. The _decodeStrip and _decodeTile buffers can be larger than the bytes written by libtiff, but Pillow converts the expected rows without clearing the unwritten tail. The tile path is affected from 5.3.0 and the strip path from 6.0.0. An attacker can supply a crafted TIFF to an application that loads and returns or re-encodes its pixels. This can disclose stale heap contents without memory corruption or a process crash. This issue is fixed in version 13.0.0."
+      },
+      "references": [
+        "https://github.com/python-pillow/Pillow/commit/1d4773e6cea0c4a2814e6d4cdc099bbcf56da6ce",
+        "https://github.com/python-pillow/Pillow/releases/tag/13.0.0",
+        "https://github.com/python-pillow/Pillow/security/advisories/GHSA-q45j-58j2-45rg"
+      ]
+    },
+    {
+      "id": "pygoat:CVE-2026-112400:pillow:12.1.0",
+      "cve": "CVE-2026-112400",
+      "package": "pillow",
+      "ecosystem": "PyPI",
+      "installed_version": "12.1.0",
+      "fixed_version": "13.0.0",
+      "app": "pygoat",
+      "cvss": null,
+      "epss": 0.00291,
+      "in_kev": false,
+      "kev_date_added": null,
+      "priority_score": 0,
+      "priority_label": "low",
+      "summary": {
+        "en": "Pillow is a Python imaging library. From 9.2.0 until 13.0.0, Pillow can retain a rejected GIF frame size after a decompression-bomb exception. In GifImageFile._seek, a crafted GIF can leave rejected dimensions stored after Image.DecompressionBombError; if an application catches that exception and continues processing the same image object, later seek or load operations allocate according to those dimensions and can exhaust memory, denying service. This issue is fixed in version 13.0.0."
+      },
+      "references": [
+        "https://github.com/python-pillow/Pillow/commit/6faed707cfb760a4cbd726ddc8406f576cf35bf7",
+        "https://github.com/python-pillow/Pillow/releases/tag/13.0.0",
+        "https://github.com/python-pillow/Pillow/security/advisories/GHSA-65qm-jvmh-6pqg"
+      ]
+    },
+    {
+      "id": "pygoat:CVE-2026-112405:pillow:12.1.0",
+      "cve": "CVE-2026-112405",
+      "package": "pillow",
+      "ecosystem": "PyPI",
+      "installed_version": "12.1.0",
+      "fixed_version": "13.0.0",
+      "app": "pygoat",
+      "cvss": null,
+      "epss": 0.00291,
+      "in_kev": false,
+      "kev_date_added": null,
+      "priority_score": 0,
+      "priority_label": "low",
+      "summary": {
+        "en": "Pillow is a Python imaging library. From 12.0.0 until 13.0.0, Pillow's Image.merge() can dereference a null image8 plane. Validation skips the first input band, allowing a 32-bit integer or floating-point image backed by image32 storage to be merged as a narrower multiband image. A crafted IPTC file can reach this path when an application opens and loads it, or a caller can invoke Image.merge() directly with such a first band. This causes a native process crash. This issue is fixed in version 13.0.0."
+      },
+      "references": [
+        "https://github.com/python-pillow/Pillow/commit/b6ee66e8b2c2c0932bdf65f963268d9f2927ef86",
+        "https://github.com/python-pillow/Pillow/releases/tag/13.0.0",
+        "https://github.com/python-pillow/Pillow/security/advisories/GHSA-cp9v-662q-vvx9"
+      ]
+    },
+    {
+      "id": "pygoat:CVE-2026-112895:pillow:12.1.0",
+      "cve": "CVE-2026-112895",
+      "package": "pillow",
+      "ecosystem": "PyPI",
+      "installed_version": "12.1.0",
+      "fixed_version": "13.0.0",
+      "app": "pygoat",
+      "cvss": null,
+      "epss": 0.00291,
+      "in_kev": false,
+      "kev_date_added": null,
+      "priority_score": 0,
+      "priority_label": "low",
+      "summary": {
+        "en": "Pillow is a Python imaging library. From 5.1.0 until 13.0.0, Pillow can exhaust resources while parsing an existing PDF during an append operation. PdfParser follows page-tree child references without cycle or duplication tracking and follows previous-trailer chains with only an exact repeated-offset guard, so deep or cyclic page trees and long chains of unique trailer offsets can exhaust the Python stack. Repeated non-cyclic /Kids references can also cause super-linear CPU and memory use. An attacker can supply such a PDF to an application that calls Image.save with PDF append enabled. This can raise an uncaught RecursionError or consume excessive CPU and memory before output is written, causing denial of service. This issue is fixed in version 13.0.0."
+      },
+      "references": [
+        "https://github.com/python-pillow/Pillow/commit/e2ae7eacad6de68c37eb28b633a97bebacf2c5bf",
+        "https://github.com/python-pillow/Pillow/releases/tag/13.0.0",
+        "https://github.com/python-pillow/Pillow/security/advisories/GHSA-p4wg-p73j-c528"
+      ]
+    },
+    {
+      "id": "pygoat:CVE-2026-112399:pillow:12.1.0",
+      "cve": "CVE-2026-112399",
+      "package": "pillow",
+      "ecosystem": "PyPI",
+      "installed_version": "12.1.0",
+      "fixed_version": "13.0.0",
+      "app": "pygoat",
+      "cvss": null,
+      "epss": 0.00291,
+      "in_kev": false,
+      "kev_date_added": null,
+      "priority_score": 0,
+      "priority_label": "low",
+      "summary": {
+        "en": "Pillow is a Python imaging library. From 8.1.0 until 13.0.0, Pillow can allocate an APNG disposal background at the full canvas size before applying the decompression-bomb check. A crafted APNG with a small first frame, a very large declared canvas, and background disposal or first-frame OP_PREVIOUS reaches PngImageFile._seek while Image.open() positions frame zero. The full-canvas allocation occurs inside Image.open() without requiring pixel loading or frame iteration. This can exhaust memory and deny service. This issue is fixed in version 13.0.0."
+      },
+      "references": [
+        "https://github.com/python-pillow/Pillow/commit/f1acfc54c53502948d0d14121872061df931db48",
+        "https://github.com/python-pillow/Pillow/releases/tag/13.0.0",
+        "https://github.com/python-pillow/Pillow/security/advisories/GHSA-5xm2-6676-qcp9"
+      ]
+    },
+    {
       "id": "pygoat:CVE-2025-13473:django:4.2",
       "cve": "CVE-2025-13473",
       "package": "django",
@@ -2998,29 +3166,6 @@
         "https://docs.djangoproject.com/en/dev/releases/security/",
         "https://groups.google.com/g/django-announce",
         "https://www.djangoproject.com/weblog/2026/feb/03/security-releases/"
-      ]
-    },
-    {
-      "id": "pygoat:CVE-2026-112390:pillow:12.1.0",
-      "cve": "CVE-2026-112390",
-      "package": "pillow",
-      "ecosystem": "PyPI",
-      "installed_version": "12.1.0",
-      "fixed_version": "13.0.0",
-      "app": "pygoat",
-      "cvss": null,
-      "epss": 0.00291,
-      "in_kev": false,
-      "kev_date_added": null,
-      "priority_score": 0,
-      "priority_label": "low",
-      "summary": {
-        "en": "Pillow is a Python imaging library. From 7.2.0 until 13.0.0, Pillow can enter an infinite loop while determining the frame count of a MIC image. MicImageFile inherits TIFF frame traversal, but MicImageFile.tell reports the OLE stream index and its seek() resets TIFF frame state, so an embedded TIFF with at least three IFDs never advances. When an application with olefile installed reads n_frames or saves all frames from a crafted MIC file, the non-advancing traversal can hold a worker at full CPU indefinitely. This issue is fixed in version 13.0.0."
-      },
-      "references": [
-        "https://github.com/python-pillow/Pillow/commit/26cb3ed061173b817b9ee4b6f507cb0e1e293218",
-        "https://github.com/python-pillow/Pillow/releases/tag/13.0.0",
-        "https://github.com/python-pillow/Pillow/security/advisories/GHSA-22hg-r758-rrw9"
       ]
     },
     {
@@ -3070,6 +3215,29 @@
       ]
     },
     {
+      "id": "pygoat:CVE-2026-112390:pillow:12.1.0",
+      "cve": "CVE-2026-112390",
+      "package": "pillow",
+      "ecosystem": "PyPI",
+      "installed_version": "12.1.0",
+      "fixed_version": "13.0.0",
+      "app": "pygoat",
+      "cvss": null,
+      "epss": 0.00291,
+      "in_kev": false,
+      "kev_date_added": null,
+      "priority_score": 0,
+      "priority_label": "low",
+      "summary": {
+        "en": "Pillow is a Python imaging library. From 7.2.0 until 13.0.0, Pillow can enter an infinite loop while determining the frame count of a MIC image. MicImageFile inherits TIFF frame traversal, but MicImageFile.tell reports the OLE stream index and its seek() resets TIFF frame state, so an embedded TIFF with at least three IFDs never advances. When an application with olefile installed reads n_frames or saves all frames from a crafted MIC file, the non-advancing traversal can hold a worker at full CPU indefinitely. This issue is fixed in version 13.0.0."
+      },
+      "references": [
+        "https://github.com/python-pillow/Pillow/commit/26cb3ed061173b817b9ee4b6f507cb0e1e293218",
+        "https://github.com/python-pillow/Pillow/releases/tag/13.0.0",
+        "https://github.com/python-pillow/Pillow/security/advisories/GHSA-22hg-r758-rrw9"
+      ]
+    },
+    {
       "id": "pygoat:CVE-2026-49265:oauthlib:3.2.2",
       "cve": "CVE-2026-49265",
       "package": "oauthlib",
@@ -3095,29 +3263,6 @@
       ]
     },
     {
-      "id": "pygoat:CVE-2026-112401:pillow:12.1.0",
-      "cve": "CVE-2026-112401",
-      "package": "pillow",
-      "ecosystem": "PyPI",
-      "installed_version": "12.1.0",
-      "fixed_version": "13.0.0",
-      "app": "pygoat",
-      "cvss": null,
-      "epss": 0.00371,
-      "in_kev": false,
-      "kev_date_added": null,
-      "priority_score": 0,
-      "priority_label": "low",
-      "summary": {
-        "en": "Pillow is a Python imaging library. From 5.4.0 until 13.0.0, Pillow performs quadratic copying while parsing GIF comments. GifImageFile._seek() repeatedly appends immutable bytes for comment sub-blocks and multiple comment extensions, and frame zero is parsed during Image.open(). An attacker can submit a small-dimension GIF containing many comment extensions to any application that opens the file. This can consume excessive CPU and deny service before the application can inspect the image. This issue is fixed in version 13.0.0."
-      },
-      "references": [
-        "https://github.com/python-pillow/Pillow/commit/68a3fe957d8a4d552e8c69d96066d749f0614c7e",
-        "https://github.com/python-pillow/Pillow/releases/tag/13.0.0",
-        "https://github.com/python-pillow/Pillow/security/advisories/GHSA-74r2-7ff9-mjj2"
-      ]
-    },
-    {
       "id": "pygoat:CVE-2026-112891:pillow:12.1.0",
       "cve": "CVE-2026-112891",
       "package": "pillow",
@@ -3138,6 +3283,29 @@
         "https://github.com/python-pillow/Pillow/commit/68a3fe957d8a4d552e8c69d96066d749f0614c7e",
         "https://github.com/python-pillow/Pillow/releases/tag/13.0.0",
         "https://github.com/python-pillow/Pillow/security/advisories/GHSA-fc9g-5qg7-mf45"
+      ]
+    },
+    {
+      "id": "pygoat:CVE-2026-112401:pillow:12.1.0",
+      "cve": "CVE-2026-112401",
+      "package": "pillow",
+      "ecosystem": "PyPI",
+      "installed_version": "12.1.0",
+      "fixed_version": "13.0.0",
+      "app": "pygoat",
+      "cvss": null,
+      "epss": 0.00371,
+      "in_kev": false,
+      "kev_date_added": null,
+      "priority_score": 0,
+      "priority_label": "low",
+      "summary": {
+        "en": "Pillow is a Python imaging library. From 5.4.0 until 13.0.0, Pillow performs quadratic copying while parsing GIF comments. GifImageFile._seek() repeatedly appends immutable bytes for comment sub-blocks and multiple comment extensions, and frame zero is parsed during Image.open(). An attacker can submit a small-dimension GIF containing many comment extensions to any application that opens the file. This can consume excessive CPU and deny service before the application can inspect the image. This issue is fixed in version 13.0.0."
+      },
+      "references": [
+        "https://github.com/python-pillow/Pillow/commit/68a3fe957d8a4d552e8c69d96066d749f0614c7e",
+        "https://github.com/python-pillow/Pillow/releases/tag/13.0.0",
+        "https://github.com/python-pillow/Pillow/security/advisories/GHSA-74r2-7ff9-mjj2"
       ]
     },
     {
@@ -3550,6 +3718,78 @@
       ]
     },
     {
+      "id": "pygoat:CVE-2026-96638:pillow:12.1.0",
+      "cve": "CVE-2026-96638",
+      "package": "pillow",
+      "ecosystem": "PyPI",
+      "installed_version": "12.1.0",
+      "fixed_version": "13.0.0",
+      "app": "pygoat",
+      "cvss": 6.5,
+      "epss": 0.0028,
+      "in_kev": false,
+      "kev_date_added": null,
+      "priority_score": 16,
+      "priority_label": "low",
+      "summary": {
+        "en": "Pillow is a Python imaging library. From 9.1.0 until 13.0.0, BmpRleDecoder.decode() in src/PIL/BmpImagePlugin.py permits crafted RLE BMP delta escapes and absolute-mode runs to append beyond the remaining dest_length without a per-branch cap. A delta can add roughly 255 image rows in one iteration, so a kilobyte-sized file with a large but permitted width can expand the data bytearray to hundreds of megabytes or more, causing memory-exhaustion denial of service. This issue is fixed in version 13.0.0."
+      },
+      "references": [
+        "https://github.com/python-pillow/Pillow/commit/e7794835e323ff2691d9b3a974cade1a44301b9a",
+        "https://github.com/python-pillow/Pillow/pull/10015",
+        "https://github.com/python-pillow/Pillow/releases/tag/13.0.0",
+        "https://github.com/python-pillow/Pillow/security/advisories/GHSA-24rc-8hj2-v98c"
+      ]
+    },
+    {
+      "id": "pygoat:CVE-2026-96636:pillow:12.1.0",
+      "cve": "CVE-2026-96636",
+      "package": "pillow",
+      "ecosystem": "PyPI",
+      "installed_version": "12.1.0",
+      "fixed_version": "13.0.0",
+      "app": "pygoat",
+      "cvss": 6.5,
+      "epss": 0.0028,
+      "in_kev": false,
+      "kev_date_added": null,
+      "priority_score": 16,
+      "priority_label": "low",
+      "summary": {
+        "en": "Pillow is a Python imaging library. Prior to 13.0.0, MpoImageFile.seek() and DcxImageFile.seek() reparse later MPO or DCX frames and replace self._size without rerunning Image._decompression_bomb_check(). A crafted multi-frame image can use a tiny first frame to pass Image.open() and then declare an over-limit later frame. Normal frame iteration through seek(), load(), or ImageSequence.Iterator can decode that frame and commit hundreds of megabytes or more, causing memory-exhaustion denial of service. This issue is fixed in version 13.0.0."
+      },
+      "references": [
+        "https://github.com/python-pillow/Pillow/commit/f1acfc54c53502948d0d14121872061df931db48",
+        "https://github.com/python-pillow/Pillow/pull/10011",
+        "https://github.com/python-pillow/Pillow/releases/tag/13.0.0",
+        "https://github.com/python-pillow/Pillow/security/advisories/GHSA-p8hx-v2p6-rp84"
+      ]
+    },
+    {
+      "id": "pygoat:CVE-2026-96641:pillow:12.1.0",
+      "cve": "CVE-2026-96641",
+      "package": "pillow",
+      "ecosystem": "PyPI",
+      "installed_version": "12.1.0",
+      "fixed_version": "13.0.0",
+      "app": "pygoat",
+      "cvss": 6.5,
+      "epss": 0.0028,
+      "in_kev": false,
+      "kev_date_added": null,
+      "priority_score": 16,
+      "priority_label": "low",
+      "summary": {
+        "en": "Pillow is a Python imaging library. Prior to 13.0.0, PILfont text-width accumulation in src/_imaging.c checks positive glyph advances against INT_MAX but does not check negative advances against INT_MIN. Repeating a signed 16-bit advance of -32768 can therefore execute a signed C integer overflow in xsize += dx, producing a large positive width from a negative mathematical result. Applications that use getlength(), getsize(), or derived layout, quota, serialization, or allocation calculations can experience logic-integrity errors or resource consumption, while the high-level mask path commonly retains a decompression-bomb check. This issue is fixed in version 13.0.0."
+      },
+      "references": [
+        "https://github.com/python-pillow/Pillow/commit/80de4be9e38d3a6148dd4d8491eb80cd12b760a4",
+        "https://github.com/python-pillow/Pillow/pull/10010",
+        "https://github.com/python-pillow/Pillow/releases/tag/13.0.0",
+        "https://github.com/python-pillow/Pillow/security/advisories/GHSA-4rm8-3hmm-39fg"
+      ]
+    },
+    {
       "id": "pygoat:CVE-2026-4277:django:4.2",
       "cve": "CVE-2026-4277",
       "package": "django",
@@ -3646,6 +3886,29 @@
       ]
     },
     {
+      "id": "pygoat:CVE-2026-27982:django-allauth:0.52.0",
+      "cve": "CVE-2026-27982",
+      "package": "django-allauth",
+      "ecosystem": "PyPI",
+      "installed_version": "0.52.0",
+      "fixed_version": "65.14.1",
+      "app": "pygoat",
+      "cvss": 6.1,
+      "epss": 0.00285,
+      "in_kev": false,
+      "kev_date_added": null,
+      "priority_score": 15,
+      "priority_label": "low",
+      "summary": {
+        "en": "An open redirect vulnerability exists in django-allauth versions prior to 65.14.1 when SAML IdP initiated SSO is enabled (it is disabled by default), which may allow an attacker to redirect users to an arbitrary external website via a crafted URL.",
+        "es": "Existe una vulnerabilidad de redirecci\u00f3n abierta en las versiones de django-allauth anteriores a la 65.14.1 cuando el SSO iniciado por el IdP de SAML est\u00e1 habilitado (est\u00e1 deshabilitado por defecto), lo que puede permitir a un atacante redirigir a los usuarios a un sitio web externo arbitrario a trav\u00e9s de una URL manipulada."
+      },
+      "references": [
+        "https://allauth.org/news/2026/02/django-allauth-65.14.1-released/",
+        "https://jvn.jp/en/jp/JVN23669411/"
+      ]
+    },
+    {
       "id": "pygoat:CVE-2024-5569:zipp:3.8.0",
       "cve": "CVE-2024-5569",
       "package": "zipp",
@@ -3669,29 +3932,6 @@
       ]
     },
     {
-      "id": "pygoat:CVE-2026-27982:django-allauth:0.52.0",
-      "cve": "CVE-2026-27982",
-      "package": "django-allauth",
-      "ecosystem": "PyPI",
-      "installed_version": "0.52.0",
-      "fixed_version": "65.14.1",
-      "app": "pygoat",
-      "cvss": 6.1,
-      "epss": 0.00279,
-      "in_kev": false,
-      "kev_date_added": null,
-      "priority_score": 15,
-      "priority_label": "low",
-      "summary": {
-        "en": "An open redirect vulnerability exists in django-allauth versions prior to 65.14.1 when SAML IdP initiated SSO is enabled (it is disabled by default), which may allow an attacker to redirect users to an arbitrary external website via a crafted URL.",
-        "es": "Existe una vulnerabilidad de redirecci\u00f3n abierta en las versiones de django-allauth anteriores a la 65.14.1 cuando el SSO iniciado por el IdP de SAML est\u00e1 habilitado (est\u00e1 deshabilitado por defecto), lo que puede permitir a un atacante redirigir a los usuarios a un sitio web externo arbitrario a trav\u00e9s de una URL manipulada."
-      },
-      "references": [
-        "https://allauth.org/news/2026/02/django-allauth-65.14.1-released/",
-        "https://jvn.jp/en/jp/JVN23669411/"
-      ]
-    },
-    {
       "id": "pygoat:CVE-2026-102271:pyjwt:2.4.0",
       "cve": "CVE-2026-102271",
       "package": "pyjwt",
@@ -3712,30 +3952,6 @@
         "https://github.com/jpadilla/pyjwt/commit/2798504fa2663364573cf2d1043d8d7fef389499",
         "https://github.com/jpadilla/pyjwt/releases/tag/2.14.0",
         "https://github.com/jpadilla/pyjwt/security/advisories/GHSA-p4g4-x82p-q773"
-      ]
-    },
-    {
-      "id": "pygoat:CVE-2026-48587:django:4.2",
-      "cve": "CVE-2026-48587",
-      "package": "django",
-      "ecosystem": "PyPI",
-      "installed_version": "4.2",
-      "fixed_version": "5.2.15",
-      "app": "pygoat",
-      "cvss": 3.1,
-      "epss": 0.00429,
-      "in_kev": false,
-      "kev_date_added": null,
-      "priority_score": 8,
-      "priority_label": "low",
-      "summary": {
-        "en": "An issue was discovered in Django 5.2 before 5.2.15 and 6.0 before 6.0.6.\n`django.utils.cache.has_vary_header()` in Django does not strip leading or trailing whitespace from `Vary` response header values before comparison, which allows remote attackers to read cached responses via requests to URLs whose responses contain whitespace-padded Vary header values.\nEarlier, unsupported Django series (such as 5.0.x, 4.1.x, and 3.2.x) were not evaluated and may also be affected.\nDjango would like to thank Navid Rezazadeh for reporting this issue.",
-        "es": "Se descubri\u00f3 un problema en Django 5.2 anterior a 5.2.15 y 6.0 anterior a 6.0.6.\n'django.utils.cache.has_vary_header()' en Django no elimina los espacios en blanco iniciales o finales de los valores del encabezado de respuesta 'Vary' antes de la comparaci\u00f3n, lo que permite a atacantes remotos leer respuestas en cach\u00e9 a trav\u00e9s de solicitudes a URL cuyas respuestas contienen valores de encabezado Vary rellenados con espacios en blanco.\nSeries de Django anteriores y no compatibles (como 5.0.x, 4.1.x y 3.2.x) no fueron evaluadas y tambi\u00e9n podr\u00edan estar afectadas.\nDjango desea agradecer a Navid Rezazadeh por informar sobre este problema."
-      },
-      "references": [
-        "https://docs.djangoproject.com/en/dev/releases/security/",
-        "https://groups.google.com/g/django-announce",
-        "https://www.djangoproject.com/weblog/2026/jun/03/security-releases/"
       ]
     },
     {
@@ -3778,6 +3994,30 @@
       "summary": {
         "en": "An issue was discovered in Django 5.2 before 5.2.15 and 6.0 before 6.0.6.\n`django.middleware.cache.UpdateCacheMiddleware` in Django does not match `Cache-Control` response directives case-insensitively, which allows remote attackers to read responses that were incorrectly cached because their `Cache-Control` directives used uppercase or mixed-case values.\nEarlier, unsupported Django series (such as 5.0.x, 4.1.x, and 3.2.x) were not evaluated and may also be affected.\nDjango would like to thank Ahmed Badawe for reporting this issue.",
         "es": "Se descubri\u00f3 un problema en Django 5.2 anterior a 5.2.15 y 6.0 anterior a 6.0.6.\n'django.middleware.cache.UpdateCacheMiddleware' en Django no compara las directivas de respuesta 'Cache-Control' sin distinguir entre may\u00fasculas y min\u00fasculas, lo que permite a atacantes remotos leer respuestas que fueron almacenadas en cach\u00e9 incorrectamente porque sus directivas 'Cache-Control' usaban valores en may\u00fasculas o con una combinaci\u00f3n de may\u00fasculas y min\u00fasculas.\nSeries de Django anteriores y no compatibles (como 5.0.x, 4.1.x y 3.2.x) no fueron evaluadas y tambi\u00e9n podr\u00edan estar afectadas.\nDjango desea agradecer a Ahmed Badawe por informar de este problema."
+      },
+      "references": [
+        "https://docs.djangoproject.com/en/dev/releases/security/",
+        "https://groups.google.com/g/django-announce",
+        "https://www.djangoproject.com/weblog/2026/jun/03/security-releases/"
+      ]
+    },
+    {
+      "id": "pygoat:CVE-2026-48587:django:4.2",
+      "cve": "CVE-2026-48587",
+      "package": "django",
+      "ecosystem": "PyPI",
+      "installed_version": "4.2",
+      "fixed_version": "5.2.15",
+      "app": "pygoat",
+      "cvss": 3.1,
+      "epss": 0.00429,
+      "in_kev": false,
+      "kev_date_added": null,
+      "priority_score": 8,
+      "priority_label": "low",
+      "summary": {
+        "en": "An issue was discovered in Django 5.2 before 5.2.15 and 6.0 before 6.0.6.\n`django.utils.cache.has_vary_header()` in Django does not strip leading or trailing whitespace from `Vary` response header values before comparison, which allows remote attackers to read cached responses via requests to URLs whose responses contain whitespace-padded Vary header values.\nEarlier, unsupported Django series (such as 5.0.x, 4.1.x, and 3.2.x) were not evaluated and may also be affected.\nDjango would like to thank Navid Rezazadeh for reporting this issue.",
+        "es": "Se descubri\u00f3 un problema en Django 5.2 anterior a 5.2.15 y 6.0 anterior a 6.0.6.\n'django.utils.cache.has_vary_header()' en Django no elimina los espacios en blanco iniciales o finales de los valores del encabezado de respuesta 'Vary' antes de la comparaci\u00f3n, lo que permite a atacantes remotos leer respuestas en cach\u00e9 a trav\u00e9s de solicitudes a URL cuyas respuestas contienen valores de encabezado Vary rellenados con espacios en blanco.\nSeries de Django anteriores y no compatibles (como 5.0.x, 4.1.x y 3.2.x) no fueron evaluadas y tambi\u00e9n podr\u00edan estar afectadas.\nDjango desea agradecer a Navid Rezazadeh por informar sobre este problema."
       },
       "references": [
         "https://docs.djangoproject.com/en/dev/releases/security/",
@@ -4023,7 +4263,7 @@
       "fixed_version": "2.33.0",
       "app": "pygoat",
       "cvss": 4.4,
-      "epss": 0.00185,
+      "epss": 0.00192,
       "in_kev": false,
       "kev_date_added": null,
       "priority_score": 11,
@@ -4220,6 +4460,23 @@
         "https://github.com/pyca/cryptography/security/advisories/GHSA-m959-cc7f-wv43",
         "https://www.kb.cert.org/vuls/id/948176"
       ]
+    },
+    {
+      "id": "pygoat:CVE-2026-114134:black:26.1.0",
+      "cve": "CVE-2026-114134",
+      "package": "black",
+      "ecosystem": "PyPI",
+      "installed_version": "26.1.0",
+      "fixed_version": "26.10.1",
+      "app": "pygoat",
+      "cvss": null,
+      "epss": null,
+      "in_kev": false,
+      "kev_date_added": null,
+      "priority_score": 0,
+      "priority_label": "low",
+      "summary": {},
+      "references": []
     },
     {
       "id": "pygoat:CVE-2026-112902:pillow:12.1.0",
@@ -5107,7 +5364,7 @@
       "fixed_version": "6.13.6",
       "app": "nodejs-goof",
       "cvss": 9.0,
-      "epss": 0.07284,
+      "epss": 0.07236,
       "in_kev": false,
       "kev_date_added": null,
       "priority_score": 28,
@@ -10361,12 +10618,6 @@
   ],
   "history": [
     {
-      "date": "2026-09-23",
-      "findings_total": 312,
-      "critical": 4,
-      "high": 3
-    },
-    {
       "date": "2026-09-24",
       "findings_total": 312,
       "critical": 4,
@@ -10537,6 +10788,12 @@
     {
       "date": "2026-10-22",
       "findings_total": 373,
+      "critical": 3,
+      "high": 3
+    },
+    {
+      "date": "2026-10-23",
+      "findings_total": 384,
       "critical": 3,
       "high": 3
     }

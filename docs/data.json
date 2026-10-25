@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-10-24T10:38:02.636249+00:00",
+  "generated_at": "2026-10-25T11:02:57.634171+00:00",
   "sources": {
     "kev": {
       "fetched": true,
@@ -7,11 +7,11 @@
     },
     "epss": {
       "fetched": true,
-      "entries": 321
+      "entries": 323
     },
     "nvd": {
       "fetched": true,
-      "entries": 322
+      "entries": 324
     }
   },
   "apps": [
@@ -1876,7 +1876,8 @@
       "priority_score": 23,
       "priority_label": "medium",
       "summary": {
-        "en": "Pillow is a Python imaging library. Prior to 12.3.0, when Pillow loads an uncompressed McIdas AREA image from a filename through the mmap raw codec path, attacker-controlled header words can set a row stride smaller than the natural row width, causing pixel access such as Image.tobytes(), getpixel, convert, or save to read beyond the mapped region and disclose adjacent process memory or fault. This issue is fixed in version 12.3.0."
+        "en": "Pillow is a Python imaging library. Prior to 12.3.0, when Pillow loads an uncompressed McIdas AREA image from a filename through the mmap raw codec path, attacker-controlled header words can set a row stride smaller than the natural row width, causing pixel access such as Image.tobytes(), getpixel, convert, or save to read beyond the mapped region and disclose adjacent process memory or fault. This issue is fixed in version 12.3.0.",
+        "es": "Pillow es una biblioteca de im\u00e1genes de Python. Antes de la versi\u00f3n 12.3.0, cuando Pillow carga una imagen McIdas AREA sin comprimir desde un nombre de archivo a trav\u00e9s de la ruta del c\u00f3dec mmap raw, palabras de encabezado controladas por el atacante pueden establecer un paso de fila menor que el ancho de fila natural, causando que el acceso a p\u00edxeles, como Image.tobytes(), getpixel, convert o save, lea m\u00e1s all\u00e1 de la regi\u00f3n mapeada y divulgue memoria de proceso adyacente o cause un fallo. Este problema est\u00e1 solucionado en la versi\u00f3n 12.3.0."
       },
       "references": [
         "https://github.com/python-pillow/Pillow/commit/6a8de891fb00968e5ea79bfa84368ed90b3cfc1d",
@@ -1980,29 +1981,6 @@
       ]
     },
     {
-      "id": "pygoat:CVE-2026-112397:pillow:12.1.0",
-      "cve": "CVE-2026-112397",
-      "package": "pillow",
-      "ecosystem": "PyPI",
-      "installed_version": "12.1.0",
-      "fixed_version": "13.0.0",
-      "app": "pygoat",
-      "cvss": null,
-      "epss": 0.00436,
-      "in_kev": false,
-      "kev_date_added": null,
-      "priority_score": 0,
-      "priority_label": "low",
-      "summary": {
-        "en": "Pillow is a Python imaging library. Prior to 13.0.0, Pillow's ImageMorph.MorphOp.apply() can access memory before a row buffer for a zero-width image. PPM and PGM input can create an image with width zero, and the native morphology routine indexes outrow[width - 1] without rejecting that geometry. An attacker can supply such an image to an application that applies a morphology operation. This can crash the process. This issue is fixed in version 13.0.0."
-      },
-      "references": [
-        "https://github.com/python-pillow/Pillow/commit/18f7c0dfee93063c51db6ed0ca8c4da2999dcb64",
-        "https://github.com/python-pillow/Pillow/releases/tag/13.0.0",
-        "https://github.com/python-pillow/Pillow/security/advisories/GHSA-58r4-6rv3-gfh8"
-      ]
-    },
-    {
       "id": "pygoat:CVE-2026-112402:pillow:12.1.0",
       "cve": "CVE-2026-112402",
       "package": "pillow",
@@ -2026,6 +2004,29 @@
       ]
     },
     {
+      "id": "pygoat:CVE-2026-112397:pillow:12.1.0",
+      "cve": "CVE-2026-112397",
+      "package": "pillow",
+      "ecosystem": "PyPI",
+      "installed_version": "12.1.0",
+      "fixed_version": "13.0.0",
+      "app": "pygoat",
+      "cvss": null,
+      "epss": 0.00436,
+      "in_kev": false,
+      "kev_date_added": null,
+      "priority_score": 0,
+      "priority_label": "low",
+      "summary": {
+        "en": "Pillow is a Python imaging library. Prior to 13.0.0, Pillow's ImageMorph.MorphOp.apply() can access memory before a row buffer for a zero-width image. PPM and PGM input can create an image with width zero, and the native morphology routine indexes outrow[width - 1] without rejecting that geometry. An attacker can supply such an image to an application that applies a morphology operation. This can crash the process. This issue is fixed in version 13.0.0."
+      },
+      "references": [
+        "https://github.com/python-pillow/Pillow/commit/18f7c0dfee93063c51db6ed0ca8c4da2999dcb64",
+        "https://github.com/python-pillow/Pillow/releases/tag/13.0.0",
+        "https://github.com/python-pillow/Pillow/security/advisories/GHSA-58r4-6rv3-gfh8"
+      ]
+    },
+    {
       "id": "pygoat:CVE-2026-59197:pillow:12.1.0",
       "cve": "CVE-2026-59197",
       "package": "pillow",
@@ -2040,7 +2041,8 @@
       "priority_score": 21,
       "priority_label": "medium",
       "summary": {
-        "en": "Pillow is a Python imaging library. Prior to 12.3.0, Pillow's public rank-filter API can trigger a native heap out-of-bounds write when given a very large odd filter size because ImageFilter.RankFilter.filter() calls image.expand(size // 2, size // 2) before rank-filter size validation and ImagingExpand() computes output dimensions with unchecked signed int arithmetic. This issue is fixed in version 12.3.0."
+        "en": "Pillow is a Python imaging library. Prior to 12.3.0, Pillow's public rank-filter API can trigger a native heap out-of-bounds write when given a very large odd filter size because ImageFilter.RankFilter.filter() calls image.expand(size // 2, size // 2) before rank-filter size validation and ImagingExpand() computes output dimensions with unchecked signed int arithmetic. This issue is fixed in version 12.3.0.",
+        "es": "Pillow es una biblioteca de procesamiento de im\u00e1genes de Python. Antes de la versi\u00f3n 12.3.0, la API p\u00fablica de filtro de rango de Pillow puede desencadenar una escritura fuera de l\u00edmites en el heap nativo cuando se le proporciona un tama\u00f1o de filtro impar muy grande porque ImageFilter.RankFilter.filter() llama a image.expand(size // 2, size // 2) antes de la validaci\u00f3n del tama\u00f1o del filtro de rango e ImagingExpand() calcula las dimensiones de salida con aritm\u00e9tica de enteros con signo sin verificar. Este problema est\u00e1 solucionado en la versi\u00f3n 12.3.0."
       },
       "references": [
         "https://github.com/python-pillow/Pillow/commit/cce3bdb867c77a3420261ed1bfdb6b0787ec8fc1",
@@ -2281,29 +2283,6 @@
       ]
     },
     {
-      "id": "pygoat:CVE-2026-55380:pillow:12.1.0",
-      "cve": "CVE-2026-55380",
-      "package": "pillow",
-      "ecosystem": "PyPI",
-      "installed_version": "12.1.0",
-      "fixed_version": "12.3.0",
-      "app": "pygoat",
-      "cvss": 7.5,
-      "epss": 0.00418,
-      "in_kev": false,
-      "kev_date_added": null,
-      "priority_score": 19,
-      "priority_label": "low",
-      "summary": {
-        "en": "Pillow is a Python imaging library. Prior to 12.3.0, PIL/GdImageFile.py GdImageFile._open() read image dimensions from the GD 2.x header and stored them in self._size without calling Image._decompression_bomb_check(), allowing a crafted .gd file to trigger excessive C-heap allocation when loaded. This issue is fixed in version 12.3.0."
-      },
-      "references": [
-        "https://github.com/python-pillow/Pillow/blob/main/docs/releasenotes/12.3.0.rst",
-        "https://github.com/python-pillow/Pillow/commit/f39b0ae6624eb2d7c5c5d651d9bb5fdbd96a8675",
-        "https://github.com/python-pillow/Pillow/security/advisories/GHSA-phj9-mv4w-65pm"
-      ]
-    },
-    {
       "id": "pygoat:CVE-2026-54060:pillow:12.1.0",
       "cve": "CVE-2026-54060",
       "package": "pillow",
@@ -2327,6 +2306,29 @@
       ]
     },
     {
+      "id": "pygoat:CVE-2026-55380:pillow:12.1.0",
+      "cve": "CVE-2026-55380",
+      "package": "pillow",
+      "ecosystem": "PyPI",
+      "installed_version": "12.1.0",
+      "fixed_version": "12.3.0",
+      "app": "pygoat",
+      "cvss": 7.5,
+      "epss": 0.00418,
+      "in_kev": false,
+      "kev_date_added": null,
+      "priority_score": 19,
+      "priority_label": "low",
+      "summary": {
+        "en": "Pillow is a Python imaging library. Prior to 12.3.0, PIL/GdImageFile.py GdImageFile._open() read image dimensions from the GD 2.x header and stored them in self._size without calling Image._decompression_bomb_check(), allowing a crafted .gd file to trigger excessive C-heap allocation when loaded. This issue is fixed in version 12.3.0."
+      },
+      "references": [
+        "https://github.com/python-pillow/Pillow/blob/main/docs/releasenotes/12.3.0.rst",
+        "https://github.com/python-pillow/Pillow/commit/f39b0ae6624eb2d7c5c5d651d9bb5fdbd96a8675",
+        "https://github.com/python-pillow/Pillow/security/advisories/GHSA-phj9-mv4w-65pm"
+      ]
+    },
+    {
       "id": "pygoat:CVE-2026-59204:pillow:12.1.0",
       "cve": "CVE-2026-59204",
       "package": "pillow",
@@ -2341,7 +2343,8 @@
       "priority_score": 19,
       "priority_label": "low",
       "summary": {
-        "en": "Pillow is a Python imaging library. From 8.2.0 through 12.2.0, src/libImaging/Jpeg2KDecode.c accumulates total_component_width across every tile in a JPEG2000 image instead of recomputing it per tile, allowing a crafted tiled JPEG2000 file to force substantially higher transient memory usage and trigger out-of-memory failures during decoding. This issue is fixed in version 12.3.0."
+        "en": "Pillow is a Python imaging library. From 8.2.0 through 12.2.0, src/libImaging/Jpeg2KDecode.c accumulates total_component_width across every tile in a JPEG2000 image instead of recomputing it per tile, allowing a crafted tiled JPEG2000 file to force substantially higher transient memory usage and trigger out-of-memory failures during decoding. This issue is fixed in version 12.3.0.",
+        "es": "Pillow es una biblioteca de procesamiento de im\u00e1genes de Python. Desde la versi\u00f3n 8.2.0 hasta la 12.2.0, src/libImaging/Jpeg2KDecode.c acumula total_component_width en cada mosaico de una imagen JPEG2000 en lugar de recalcularlo por mosaico, lo que permite que un archivo JPEG2000 en mosaico manipulado fuerce un uso de memoria transitoria sustancialmente mayor y desencadene fallos por falta de memoria durante la decodificaci\u00f3n. Este problema se ha solucionado en la versi\u00f3n 12.3.0."
       },
       "references": [
         "https://github.com/python-pillow/Pillow/commit/13ada41172142f2fd9f0906f615a00ea623a11ca",
@@ -2473,6 +2476,29 @@
       ]
     },
     {
+      "id": "pygoat:CVE-2026-112398:pillow:12.1.0",
+      "cve": "CVE-2026-112398",
+      "package": "pillow",
+      "ecosystem": "PyPI",
+      "installed_version": "12.1.0",
+      "fixed_version": "13.0.0",
+      "app": "pygoat",
+      "cvss": null,
+      "epss": 0.00321,
+      "in_kev": false,
+      "kev_date_added": null,
+      "priority_score": 0,
+      "priority_label": "low",
+      "summary": {
+        "en": "Pillow is a Python imaging library. Prior to 13.0.0, Pillow's FlashPix JPEG-tile decoder can write decoded scanlines beyond the allocated tile buffer. FlashPix (FPX) JPEG decoding selects raw mode LA with two bytes per pixel, while an unrecognized JPEG mode can be decoded as JCS_UNKNOWN with four components, causing ImagingJpegDecode to write four-component scanlines into the two-byte tile buffer. An attacker can supply a crafted OLE2 FlashPix file to an application with the optional olefile dependency installed that opens or thumbnails untrusted input. This can corrupt heap memory and may allow arbitrary code execution. This issue is fixed in version 13.0.0."
+      },
+      "references": [
+        "https://github.com/python-pillow/Pillow/commit/242a059aedc1935097d9aa1dc3f099750467ba75",
+        "https://github.com/python-pillow/Pillow/releases/tag/13.0.0",
+        "https://github.com/python-pillow/Pillow/security/advisories/GHSA-5x8w-8jj5-q52h"
+      ]
+    },
+    {
       "id": "pygoat:CVE-2026-112403:pillow:12.1.0",
       "cve": "CVE-2026-112403",
       "package": "pillow",
@@ -2510,7 +2536,8 @@
       "priority_score": 19,
       "priority_label": "low",
       "summary": {
-        "en": "Pillow is a Python imaging library. Prior to 12.3.0, Pillow's ImageCms.ImageCmsTransform.apply(im, imOut) API can trigger controlled native heap corruption when the caller supplies an output image whose mode does not match the transform's declared output mode. This issue is fixed in version 12.3.0."
+        "en": "Pillow is a Python imaging library. Prior to 12.3.0, Pillow's ImageCms.ImageCmsTransform.apply(im, imOut) API can trigger controlled native heap corruption when the caller supplies an output image whose mode does not match the transform's declared output mode. This issue is fixed in version 12.3.0.",
+        "es": "Pillow es una biblioteca de procesamiento de im\u00e1genes de Python. Antes de la versi\u00f3n 12.3.0, la API ImageCms.ImageCmsTransform.apply(im, imOut) de Pillow puede desencadenar una corrupci\u00f3n controlada del heap nativo cuando el llamador suministra una imagen de salida cuyo modo no coincide con el modo de salida declarado de la transformaci\u00f3n. Este problema se ha corregido en la versi\u00f3n 12.3.0."
       },
       "references": [
         "https://github.com/python-pillow/Pillow/commit/a9ffc42bedf4fc0a7ef8d6486e7f9e81e3397721",
@@ -2534,7 +2561,8 @@
       "priority_score": 19,
       "priority_label": "low",
       "summary": {
-        "en": "Pillow is a Python imaging library. Prior to 12.3.0, Pillow public image coordinate APIs can trigger a native heap out-of-bounds write when given coordinates near the signed 32-bit integer limits in Image.paste(), Image.crop(), or Image.alpha_composite(). This issue is fixed in version 12.3.0."
+        "en": "Pillow is a Python imaging library. Prior to 12.3.0, Pillow public image coordinate APIs can trigger a native heap out-of-bounds write when given coordinates near the signed 32-bit integer limits in Image.paste(), Image.crop(), or Image.alpha_composite(). This issue is fixed in version 12.3.0.",
+        "es": "Pillow es una biblioteca de procesamiento de im\u00e1genes de Python. Antes de la versi\u00f3n 12.3.0, las API p\u00fablicas de coordenadas de imagen de Pillow pueden desencadenar una escritura fuera de l\u00edmites en el heap nativo cuando se les dan coordenadas cercanas a los l\u00edmites de enteros con signo de 32 bits en Image.paste(), Image.crop() o Image.alpha_composite(). Este problema est\u00e1 solucionado en la versi\u00f3n 12.3.0."
       },
       "references": [
         "https://github.com/python-pillow/Pillow/commit/ceefc348eb3c3844c7f9796ef2cc3a7dd5fbba7b",
@@ -2558,7 +2586,8 @@
       "priority_score": 19,
       "priority_label": "low",
       "summary": {
-        "en": "Pillow is a Python imaging library. From 5.1.0 until 12.3.0, PdfParser.PdfStream.decode() in PIL/PdfParser.py calls zlib.decompress() with bufsize set to the PDF stream Length field without bounding the decompressed output size, allowing a crafted FlateDecode PDF stream to exhaust memory from a small file. This issue is fixed in version 12.3.0."
+        "en": "Pillow is a Python imaging library. From 5.1.0 until 12.3.0, PdfParser.PdfStream.decode() in PIL/PdfParser.py calls zlib.decompress() with bufsize set to the PDF stream Length field without bounding the decompressed output size, allowing a crafted FlateDecode PDF stream to exhaust memory from a small file. This issue is fixed in version 12.3.0.",
+        "es": "Pillow es una biblioteca de im\u00e1genes de Python. Desde la versi\u00f3n 5.1.0 hasta la 12.3.0, PdfParser.PdfStream.decode() en PIL/PdfParser.py llama a zlib.decompress() con bufsize establecido al campo Length del flujo PDF sin limitar el tama\u00f1o de salida descomprimido, permitiendo que un flujo PDF FlateDecode manipulado agote la memoria desde un archivo peque\u00f1o. Este problema est\u00e1 solucionado en la versi\u00f3n 12.3.0."
       },
       "references": [
         "https://github.com/python-pillow/Pillow/commit/f7a31ea75e460e108c37126da1f47812f21f6b09",
@@ -2614,6 +2643,29 @@
         "https://groups.google.com/g/django-announce",
         "https://www.djangoproject.com/weblog/2025/oct/01/security-releases/",
         "http://www.openwall.com/lists/oss-security/2025/10/01/3"
+      ]
+    },
+    {
+      "id": "pygoat:CVE-2026-112390:pillow:12.1.0",
+      "cve": "CVE-2026-112390",
+      "package": "pillow",
+      "ecosystem": "PyPI",
+      "installed_version": "12.1.0",
+      "fixed_version": "13.0.0",
+      "app": "pygoat",
+      "cvss": 7.5,
+      "epss": 0.00358,
+      "in_kev": false,
+      "kev_date_added": null,
+      "priority_score": 19,
+      "priority_label": "low",
+      "summary": {
+        "en": "Pillow is a Python imaging library. From 7.2.0 until 13.0.0, Pillow can enter an infinite loop while determining the frame count of a MIC image. MicImageFile inherits TIFF frame traversal, but MicImageFile.tell reports the OLE stream index and its seek() resets TIFF frame state, so an embedded TIFF with at least three IFDs never advances. When an application with olefile installed reads n_frames or saves all frames from a crafted MIC file, the non-advancing traversal can hold a worker at full CPU indefinitely. This issue is fixed in version 13.0.0."
+      },
+      "references": [
+        "https://github.com/python-pillow/Pillow/commit/26cb3ed061173b817b9ee4b6f507cb0e1e293218",
+        "https://github.com/python-pillow/Pillow/releases/tag/13.0.0",
+        "https://github.com/python-pillow/Pillow/security/advisories/GHSA-22hg-r758-rrw9"
       ]
     },
     {
@@ -2919,29 +2971,6 @@
       ]
     },
     {
-      "id": "pygoat:CVE-2026-112896:pillow:12.1.0",
-      "cve": "CVE-2026-112896",
-      "package": "pillow",
-      "ecosystem": "PyPI",
-      "installed_version": "12.1.0",
-      "fixed_version": "13.0.0",
-      "app": "pygoat",
-      "cvss": null,
-      "epss": 0.00291,
-      "in_kev": false,
-      "kev_date_added": null,
-      "priority_score": 0,
-      "priority_label": "low",
-      "summary": {
-        "en": "Pillow is a Python imaging library. Prior to 13.0.0, Pillow's TIFF encoder can read beyond a ColorMap buffer when retained TIFF metadata has a plane size inconsistent with BitsPerSample. A small TIFF can be opened normally and then retain a crafted ColorMap that is reused when the image is saved. An application that re-encodes the attacker's TIFF with libtiff can trigger the out-of-bounds read. This can disclose heap memory in the output or crash the process. This issue is fixed in version 13.0.0."
-      },
-      "references": [
-        "https://github.com/python-pillow/Pillow/commit/d03dc3c587a9b0bdc9e4304d70d59a635a87b742",
-        "https://github.com/python-pillow/Pillow/releases/tag/13.0.0",
-        "https://github.com/python-pillow/Pillow/security/advisories/GHSA-pchr-8j38-3x4p"
-      ]
-    },
-    {
       "id": "pygoat:CVE-2026-112404:pillow:12.1.0",
       "cve": "CVE-2026-112404",
       "package": "pillow",
@@ -2965,8 +2994,8 @@
       ]
     },
     {
-      "id": "pygoat:CVE-2026-112892:pillow:12.1.0",
-      "cve": "CVE-2026-112892",
+      "id": "pygoat:CVE-2026-112896:pillow:12.1.0",
+      "cve": "CVE-2026-112896",
       "package": "pillow",
       "ecosystem": "PyPI",
       "installed_version": "12.1.0",
@@ -2979,17 +3008,17 @@
       "priority_score": 0,
       "priority_label": "low",
       "summary": {
-        "en": "Pillow is a Python imaging library. From 4.1.0 until 13.0.0, Pillow's MSP RLE decoder can expand a small file into an unbounded in-memory buffer. The decoder writes run-length output to BytesIO without limiting expansion to the declared image size. An attacker can supply a crafted MSP image to an application that loads its pixels. This can exhaust memory and deny service even when the declared pixel count passes the decompression-bomb check. This issue is fixed in version 13.0.0."
+        "en": "Pillow is a Python imaging library. Prior to 13.0.0, Pillow's TIFF encoder can read beyond a ColorMap buffer when retained TIFF metadata has a plane size inconsistent with BitsPerSample. A small TIFF can be opened normally and then retain a crafted ColorMap that is reused when the image is saved. An application that re-encodes the attacker's TIFF with libtiff can trigger the out-of-bounds read. This can disclose heap memory in the output or crash the process. This issue is fixed in version 13.0.0."
       },
       "references": [
-        "https://github.com/python-pillow/Pillow/commit/5dcb630b9798efd91929cb873d677aeee6ed0bb3",
+        "https://github.com/python-pillow/Pillow/commit/d03dc3c587a9b0bdc9e4304d70d59a635a87b742",
         "https://github.com/python-pillow/Pillow/releases/tag/13.0.0",
-        "https://github.com/python-pillow/Pillow/security/advisories/GHSA-gg2r-wvfm-q9rx"
+        "https://github.com/python-pillow/Pillow/security/advisories/GHSA-pchr-8j38-3x4p"
       ]
     },
     {
-      "id": "pygoat:CVE-2026-112894:pillow:12.1.0",
-      "cve": "CVE-2026-112894",
+      "id": "pygoat:CVE-2026-112400:pillow:12.1.0",
+      "cve": "CVE-2026-112400",
       "package": "pillow",
       "ecosystem": "PyPI",
       "installed_version": "12.1.0",
@@ -3002,12 +3031,58 @@
       "priority_score": 0,
       "priority_label": "low",
       "summary": {
-        "en": "Pillow is a Python imaging library. From 5.1.0 until 13.0.0, Pillow takes quadratic time to reserve PDF object identifiers when saving many frames with save_all enabled. PdfParser.next_object_id() repeatedly rebuilds and scans all previously reserved identifiers for every object. An attacker can supply a multi-frame image, including a small APNG with a large declared frame count, to an application that converts it to a multipage PDF. This can consume excessive CPU and deny service. This issue is fixed in version 13.0.0."
+        "en": "Pillow is a Python imaging library. From 9.2.0 until 13.0.0, Pillow can retain a rejected GIF frame size after a decompression-bomb exception. In GifImageFile._seek, a crafted GIF can leave rejected dimensions stored after Image.DecompressionBombError; if an application catches that exception and continues processing the same image object, later seek or load operations allocate according to those dimensions and can exhaust memory, denying service. This issue is fixed in version 13.0.0."
       },
       "references": [
-        "https://github.com/python-pillow/Pillow/commit/f6a852555f1a1bdff7781abf25f1a3b8bd6ce6cb",
+        "https://github.com/python-pillow/Pillow/commit/6faed707cfb760a4cbd726ddc8406f576cf35bf7",
         "https://github.com/python-pillow/Pillow/releases/tag/13.0.0",
-        "https://github.com/python-pillow/Pillow/security/advisories/GHSA-jg86-v3jv-hrpm"
+        "https://github.com/python-pillow/Pillow/security/advisories/GHSA-65qm-jvmh-6pqg"
+      ]
+    },
+    {
+      "id": "pygoat:CVE-2026-112399:pillow:12.1.0",
+      "cve": "CVE-2026-112399",
+      "package": "pillow",
+      "ecosystem": "PyPI",
+      "installed_version": "12.1.0",
+      "fixed_version": "13.0.0",
+      "app": "pygoat",
+      "cvss": null,
+      "epss": 0.00291,
+      "in_kev": false,
+      "kev_date_added": null,
+      "priority_score": 0,
+      "priority_label": "low",
+      "summary": {
+        "en": "Pillow is a Python imaging library. From 8.1.0 until 13.0.0, Pillow can allocate an APNG disposal background at the full canvas size before applying the decompression-bomb check. A crafted APNG with a small first frame, a very large declared canvas, and background disposal or first-frame OP_PREVIOUS reaches PngImageFile._seek while Image.open() positions frame zero. The full-canvas allocation occurs inside Image.open() without requiring pixel loading or frame iteration. This can exhaust memory and deny service. This issue is fixed in version 13.0.0."
+      },
+      "references": [
+        "https://github.com/python-pillow/Pillow/commit/f1acfc54c53502948d0d14121872061df931db48",
+        "https://github.com/python-pillow/Pillow/releases/tag/13.0.0",
+        "https://github.com/python-pillow/Pillow/security/advisories/GHSA-5xm2-6676-qcp9"
+      ]
+    },
+    {
+      "id": "pygoat:CVE-2026-112405:pillow:12.1.0",
+      "cve": "CVE-2026-112405",
+      "package": "pillow",
+      "ecosystem": "PyPI",
+      "installed_version": "12.1.0",
+      "fixed_version": "13.0.0",
+      "app": "pygoat",
+      "cvss": null,
+      "epss": 0.00291,
+      "in_kev": false,
+      "kev_date_added": null,
+      "priority_score": 0,
+      "priority_label": "low",
+      "summary": {
+        "en": "Pillow is a Python imaging library. From 12.0.0 until 13.0.0, Pillow's Image.merge() can dereference a null image8 plane. Validation skips the first input band, allowing a 32-bit integer or floating-point image backed by image32 storage to be merged as a narrower multiband image. A crafted IPTC file can reach this path when an application opens and loads it, or a caller can invoke Image.merge() directly with such a first band. This causes a native process crash. This issue is fixed in version 13.0.0."
+      },
+      "references": [
+        "https://github.com/python-pillow/Pillow/commit/b6ee66e8b2c2c0932bdf65f963268d9f2927ef86",
+        "https://github.com/python-pillow/Pillow/releases/tag/13.0.0",
+        "https://github.com/python-pillow/Pillow/security/advisories/GHSA-cp9v-662q-vvx9"
       ]
     },
     {
@@ -3057,8 +3132,8 @@
       ]
     },
     {
-      "id": "pygoat:CVE-2026-112400:pillow:12.1.0",
-      "cve": "CVE-2026-112400",
+      "id": "pygoat:CVE-2026-112894:pillow:12.1.0",
+      "cve": "CVE-2026-112894",
       "package": "pillow",
       "ecosystem": "PyPI",
       "installed_version": "12.1.0",
@@ -3071,35 +3146,12 @@
       "priority_score": 0,
       "priority_label": "low",
       "summary": {
-        "en": "Pillow is a Python imaging library. From 9.2.0 until 13.0.0, Pillow can retain a rejected GIF frame size after a decompression-bomb exception. In GifImageFile._seek, a crafted GIF can leave rejected dimensions stored after Image.DecompressionBombError; if an application catches that exception and continues processing the same image object, later seek or load operations allocate according to those dimensions and can exhaust memory, denying service. This issue is fixed in version 13.0.0."
+        "en": "Pillow is a Python imaging library. From 5.1.0 until 13.0.0, Pillow takes quadratic time to reserve PDF object identifiers when saving many frames with save_all enabled. PdfParser.next_object_id() repeatedly rebuilds and scans all previously reserved identifiers for every object. An attacker can supply a multi-frame image, including a small APNG with a large declared frame count, to an application that converts it to a multipage PDF. This can consume excessive CPU and deny service. This issue is fixed in version 13.0.0."
       },
       "references": [
-        "https://github.com/python-pillow/Pillow/commit/6faed707cfb760a4cbd726ddc8406f576cf35bf7",
+        "https://github.com/python-pillow/Pillow/commit/f6a852555f1a1bdff7781abf25f1a3b8bd6ce6cb",
         "https://github.com/python-pillow/Pillow/releases/tag/13.0.0",
-        "https://github.com/python-pillow/Pillow/security/advisories/GHSA-65qm-jvmh-6pqg"
-      ]
-    },
-    {
-      "id": "pygoat:CVE-2026-112405:pillow:12.1.0",
-      "cve": "CVE-2026-112405",
-      "package": "pillow",
-      "ecosystem": "PyPI",
-      "installed_version": "12.1.0",
-      "fixed_version": "13.0.0",
-      "app": "pygoat",
-      "cvss": null,
-      "epss": 0.00291,
-      "in_kev": false,
-      "kev_date_added": null,
-      "priority_score": 0,
-      "priority_label": "low",
-      "summary": {
-        "en": "Pillow is a Python imaging library. From 12.0.0 until 13.0.0, Pillow's Image.merge() can dereference a null image8 plane. Validation skips the first input band, allowing a 32-bit integer or floating-point image backed by image32 storage to be merged as a narrower multiband image. A crafted IPTC file can reach this path when an application opens and loads it, or a caller can invoke Image.merge() directly with such a first band. This causes a native process crash. This issue is fixed in version 13.0.0."
-      },
-      "references": [
-        "https://github.com/python-pillow/Pillow/commit/b6ee66e8b2c2c0932bdf65f963268d9f2927ef86",
-        "https://github.com/python-pillow/Pillow/releases/tag/13.0.0",
-        "https://github.com/python-pillow/Pillow/security/advisories/GHSA-cp9v-662q-vvx9"
+        "https://github.com/python-pillow/Pillow/security/advisories/GHSA-jg86-v3jv-hrpm"
       ]
     },
     {
@@ -3126,8 +3178,8 @@
       ]
     },
     {
-      "id": "pygoat:CVE-2026-112399:pillow:12.1.0",
-      "cve": "CVE-2026-112399",
+      "id": "pygoat:CVE-2026-112892:pillow:12.1.0",
+      "cve": "CVE-2026-112892",
       "package": "pillow",
       "ecosystem": "PyPI",
       "installed_version": "12.1.0",
@@ -3140,12 +3192,12 @@
       "priority_score": 0,
       "priority_label": "low",
       "summary": {
-        "en": "Pillow is a Python imaging library. From 8.1.0 until 13.0.0, Pillow can allocate an APNG disposal background at the full canvas size before applying the decompression-bomb check. A crafted APNG with a small first frame, a very large declared canvas, and background disposal or first-frame OP_PREVIOUS reaches PngImageFile._seek while Image.open() positions frame zero. The full-canvas allocation occurs inside Image.open() without requiring pixel loading or frame iteration. This can exhaust memory and deny service. This issue is fixed in version 13.0.0."
+        "en": "Pillow is a Python imaging library. From 4.1.0 until 13.0.0, Pillow's MSP RLE decoder can expand a small file into an unbounded in-memory buffer. The decoder writes run-length output to BytesIO without limiting expansion to the declared image size. An attacker can supply a crafted MSP image to an application that loads its pixels. This can exhaust memory and deny service even when the declared pixel count passes the decompression-bomb check. This issue is fixed in version 13.0.0."
       },
       "references": [
-        "https://github.com/python-pillow/Pillow/commit/f1acfc54c53502948d0d14121872061df931db48",
+        "https://github.com/python-pillow/Pillow/commit/5dcb630b9798efd91929cb873d677aeee6ed0bb3",
         "https://github.com/python-pillow/Pillow/releases/tag/13.0.0",
-        "https://github.com/python-pillow/Pillow/security/advisories/GHSA-5xm2-6676-qcp9"
+        "https://github.com/python-pillow/Pillow/security/advisories/GHSA-gg2r-wvfm-q9rx"
       ]
     },
     {
@@ -3173,29 +3225,6 @@
       ]
     },
     {
-      "id": "pygoat:CVE-2026-112893:pillow:12.1.0",
-      "cve": "CVE-2026-112893",
-      "package": "pillow",
-      "ecosystem": "PyPI",
-      "installed_version": "12.1.0",
-      "fixed_version": "13.0.0",
-      "app": "pygoat",
-      "cvss": null,
-      "epss": 0.00291,
-      "in_kev": false,
-      "kev_date_added": null,
-      "priority_score": 0,
-      "priority_label": "low",
-      "summary": {
-        "en": "Pillow is a Python imaging library. From 10.0.0 until 13.0.0, Pillow can free an invalid glyph pointer during FreeType rendering with an active stroker. If FT_Load_Glyph fails, cleanup may call FT_Done_Glyph on an uninitialized or stale glyph variable. An attacker can supply a malformed font as untrusted bytes to an application that draws text with a nonzero stroke width, forcing the glyph-load failure path. This can corrupt memory or crash the process. This issue is fixed in version 13.0.0."
-      },
-      "references": [
-        "https://github.com/python-pillow/Pillow/commit/a7416de7f3a43128179d2cf68df3240ea8dafe13",
-        "https://github.com/python-pillow/Pillow/releases/tag/13.0.0",
-        "https://github.com/python-pillow/Pillow/security/advisories/GHSA-j4m9-6w36-pw47"
-      ]
-    },
-    {
       "id": "pygoat:CVE-2026-112392:pillow:12.1.0",
       "cve": "CVE-2026-112392",
       "package": "pillow",
@@ -3219,26 +3248,26 @@
       ]
     },
     {
-      "id": "pygoat:CVE-2026-112390:pillow:12.1.0",
-      "cve": "CVE-2026-112390",
+      "id": "pygoat:CVE-2026-112893:pillow:12.1.0",
+      "cve": "CVE-2026-112893",
       "package": "pillow",
       "ecosystem": "PyPI",
       "installed_version": "12.1.0",
       "fixed_version": "13.0.0",
       "app": "pygoat",
-      "cvss": 7.5,
+      "cvss": null,
       "epss": 0.00291,
       "in_kev": false,
       "kev_date_added": null,
-      "priority_score": 19,
+      "priority_score": 0,
       "priority_label": "low",
       "summary": {
-        "en": "Pillow is a Python imaging library. From 7.2.0 until 13.0.0, Pillow can enter an infinite loop while determining the frame count of a MIC image. MicImageFile inherits TIFF frame traversal, but MicImageFile.tell reports the OLE stream index and its seek() resets TIFF frame state, so an embedded TIFF with at least three IFDs never advances. When an application with olefile installed reads n_frames or saves all frames from a crafted MIC file, the non-advancing traversal can hold a worker at full CPU indefinitely. This issue is fixed in version 13.0.0."
+        "en": "Pillow is a Python imaging library. From 10.0.0 until 13.0.0, Pillow can free an invalid glyph pointer during FreeType rendering with an active stroker. If FT_Load_Glyph fails, cleanup may call FT_Done_Glyph on an uninitialized or stale glyph variable. An attacker can supply a malformed font as untrusted bytes to an application that draws text with a nonzero stroke width, forcing the glyph-load failure path. This can corrupt memory or crash the process. This issue is fixed in version 13.0.0."
       },
       "references": [
-        "https://github.com/python-pillow/Pillow/commit/26cb3ed061173b817b9ee4b6f507cb0e1e293218",
+        "https://github.com/python-pillow/Pillow/commit/a7416de7f3a43128179d2cf68df3240ea8dafe13",
         "https://github.com/python-pillow/Pillow/releases/tag/13.0.0",
-        "https://github.com/python-pillow/Pillow/security/advisories/GHSA-22hg-r758-rrw9"
+        "https://github.com/python-pillow/Pillow/security/advisories/GHSA-j4m9-6w36-pw47"
       ]
     },
     {
@@ -3267,6 +3296,29 @@
       ]
     },
     {
+      "id": "pygoat:CVE-2026-112401:pillow:12.1.0",
+      "cve": "CVE-2026-112401",
+      "package": "pillow",
+      "ecosystem": "PyPI",
+      "installed_version": "12.1.0",
+      "fixed_version": "13.0.0",
+      "app": "pygoat",
+      "cvss": null,
+      "epss": 0.00371,
+      "in_kev": false,
+      "kev_date_added": null,
+      "priority_score": 0,
+      "priority_label": "low",
+      "summary": {
+        "en": "Pillow is a Python imaging library. From 5.4.0 until 13.0.0, Pillow performs quadratic copying while parsing GIF comments. GifImageFile._seek() repeatedly appends immutable bytes for comment sub-blocks and multiple comment extensions, and frame zero is parsed during Image.open(). An attacker can submit a small-dimension GIF containing many comment extensions to any application that opens the file. This can consume excessive CPU and deny service before the application can inspect the image. This issue is fixed in version 13.0.0."
+      },
+      "references": [
+        "https://github.com/python-pillow/Pillow/commit/68a3fe957d8a4d552e8c69d96066d749f0614c7e",
+        "https://github.com/python-pillow/Pillow/releases/tag/13.0.0",
+        "https://github.com/python-pillow/Pillow/security/advisories/GHSA-74r2-7ff9-mjj2"
+      ]
+    },
+    {
       "id": "pygoat:CVE-2026-112891:pillow:12.1.0",
       "cve": "CVE-2026-112891",
       "package": "pillow",
@@ -3290,26 +3342,27 @@
       ]
     },
     {
-      "id": "pygoat:CVE-2026-112401:pillow:12.1.0",
-      "cve": "CVE-2026-112401",
+      "id": "pygoat:CVE-2026-114501:pillow:12.1.0",
+      "cve": "CVE-2026-114501",
       "package": "pillow",
       "ecosystem": "PyPI",
       "installed_version": "12.1.0",
       "fixed_version": "13.0.0",
       "app": "pygoat",
       "cvss": null,
-      "epss": 0.00371,
+      "epss": 0.00384,
       "in_kev": false,
       "kev_date_added": null,
       "priority_score": 0,
       "priority_label": "low",
       "summary": {
-        "en": "Pillow is a Python imaging library. From 5.4.0 until 13.0.0, Pillow performs quadratic copying while parsing GIF comments. GifImageFile._seek() repeatedly appends immutable bytes for comment sub-blocks and multiple comment extensions, and frame zero is parsed during Image.open(). An attacker can submit a small-dimension GIF containing many comment extensions to any application that opens the file. This can consume excessive CPU and deny service before the application can inspect the image. This issue is fixed in version 13.0.0."
+        "en": "Pillow is a Python imaging library. From 11.2.1 until 13.0.0, Arrow export assumes that an image's rows are tightly contiguous and exports from im->blocks[0].ptr even when PILLOW_ALIGNMENT makes aligned_linesize include row padding or an aligned offset before the first row. The resulting Arrow buffer can include uninitialized padding, bytes preceding the first row, or stale heap contents from previously freed images. Applications that configure alignment and export images to Arrow can therefore disclose one user's pixels or other process memory to another user. This issue is fixed in version 13.0.0."
       },
       "references": [
-        "https://github.com/python-pillow/Pillow/commit/68a3fe957d8a4d552e8c69d96066d749f0614c7e",
+        "https://github.com/python-pillow/Pillow/commit/19f64946eb247b973dd4560be7dea3bf979d2e6a",
+        "https://github.com/python-pillow/Pillow/pull/10172",
         "https://github.com/python-pillow/Pillow/releases/tag/13.0.0",
-        "https://github.com/python-pillow/Pillow/security/advisories/GHSA-74r2-7ff9-mjj2"
+        "https://github.com/python-pillow/Pillow/security/advisories/GHSA-654x-cwwv-5j9c"
       ]
     },
     {
@@ -3397,7 +3450,8 @@
       "priority_score": 14,
       "priority_label": "low",
       "summary": {
-        "en": "Pillow is a Python imaging library. From 12.0.0 through 12.2.0, Pillow's EPS parser in PIL/EpsImagePlugin.py accepts a negative byte count in the %%BeginBinary directive, allowing a crafted EPS file to cause Image.open() to seek backwards to the same directive and parse it repeatedly in an infinite loop. This issue is fixed in version 12.3.0."
+        "en": "Pillow is a Python imaging library. From 12.0.0 through 12.2.0, Pillow's EPS parser in PIL/EpsImagePlugin.py accepts a negative byte count in the %%BeginBinary directive, allowing a crafted EPS file to cause Image.open() to seek backwards to the same directive and parse it repeatedly in an infinite loop. This issue is fixed in version 12.3.0.",
+        "es": "Pillow es una biblioteca de im\u00e1genes de Python. Desde la versi\u00f3n 12.0.0 hasta la 12.2.0, el analizador EPS de Pillow en PIL/EpsImagePlugin.py acepta un recuento de bytes negativo en la directiva %%BeginBinary, lo que permite que un archivo EPS manipulado haga que Image.open() busque hacia atr\u00e1s a la misma directiva y la analice repetidamente en un bucle infinito. Este problema se corrigi\u00f3 en la versi\u00f3n 12.3.0."
       },
       "references": [
         "https://github.com/python-pillow/Pillow/commit/03992618118b4a76b6163cd72ab5ecd684133b83",
@@ -3460,6 +3514,29 @@
         "https://access.redhat.com/security/cve/CVE-2026-32597",
         "https://bugzilla.redhat.com/show_bug.cgi?id=2447194",
         "https://security.access.redhat.com/data/csaf/v2/vex/2026/cve-2026-32597.json"
+      ]
+    },
+    {
+      "id": "pygoat:CVE-2026-112391:pillow:12.1.0",
+      "cve": "CVE-2026-112391",
+      "package": "pillow",
+      "ecosystem": "PyPI",
+      "installed_version": "12.1.0",
+      "fixed_version": "13.0.0",
+      "app": "pygoat",
+      "cvss": 7.5,
+      "epss": 0.00358,
+      "in_kev": false,
+      "kev_date_added": null,
+      "priority_score": 19,
+      "priority_label": "low",
+      "summary": {
+        "en": "Pillow is a Python imaging library. From 5.1.0 until 13.0.0, Pillow's PdfParser.get_value() can recurse without a limit while reading nested PDF objects. The parser follows attacker-controlled arrays and dictionaries when an existing PDF is opened for append. An attacker can provide a deeply nested PDF to an application that saves an image with PDF append enabled. This can raise an uncaught RecursionError or terminate the worker, causing denial of service. This issue is fixed in version 13.0.0."
+      },
+      "references": [
+        "https://github.com/python-pillow/Pillow/commit/94cb11c44ff7345414da17ebfea1598a529ad9cd",
+        "https://github.com/python-pillow/Pillow/releases/tag/13.0.0",
+        "https://github.com/python-pillow/Pillow/security/advisories/GHSA-254f-3936-288h"
       ]
     },
     {
@@ -3549,7 +3626,8 @@
       "priority_score": 16,
       "priority_label": "low",
       "summary": {
-        "en": "Pillow is a Python imaging library. From 5.2.0 until 12.3.0, Pillow's TGA RLE encoder reads past its packed row buffer when saving a mode 1 image with TGA RLE compression, allowing adjacent process heap bytes to be copied into the generated TGA file. This issue is fixed in version 12.3.0."
+        "en": "Pillow is a Python imaging library. From 5.2.0 until 12.3.0, Pillow's TGA RLE encoder reads past its packed row buffer when saving a mode 1 image with TGA RLE compression, allowing adjacent process heap bytes to be copied into the generated TGA file. This issue is fixed in version 12.3.0.",
+        "es": "Pillow es una biblioteca de im\u00e1genes de Python. Desde 5.2.0 hasta 12.3.0, el codificador TGA RLE de Pillow lee m\u00e1s all\u00e1 de su b\u00fafer de fila empaquetada al guardar una imagen en modo 1 con compresi\u00f3n TGA RLE, permitiendo que bytes adyacentes del heap del proceso sean copiados al archivo TGA generado. Este problema est\u00e1 solucionado en la versi\u00f3n 12.3.0."
       },
       "references": [
         "https://github.com/python-pillow/Pillow/commit/eada3cbd7fb9963ee90673fb7b5270124a0d5f4b",
@@ -3631,29 +3709,6 @@
       ]
     },
     {
-      "id": "pygoat:CVE-2026-112898:pillow:12.1.0",
-      "cve": "CVE-2026-112898",
-      "package": "pillow",
-      "ecosystem": "PyPI",
-      "installed_version": "12.1.0",
-      "fixed_version": "13.0.0",
-      "app": "pygoat",
-      "cvss": null,
-      "epss": 0.00291,
-      "in_kev": false,
-      "kev_date_added": null,
-      "priority_score": 0,
-      "priority_label": "low",
-      "summary": {
-        "en": "Pillow is a Python imaging library. From 9.1.0 until 13.0.0, Pillow can disclose uninitialized stack memory when Image.quantize() uses an empty palette. ImagingPaletteCacheUpdate() leaves a local cache array uninitialized when the palette has zero entries, and the conversion path emits those bytes as output pixel indices. An attacker who controls the palette image can obtain stack contents from a returned PNG or GIF. This can disclose addresses and stack-canary data without an out-of-bounds access, memory corruption, or process crash. This issue is fixed in version 13.0.0."
-      },
-      "references": [
-        "https://github.com/python-pillow/Pillow/commit/13943c8f857b22f073d30f0ef9b725a0d255f1a4",
-        "https://github.com/python-pillow/Pillow/releases/tag/13.0.0",
-        "https://github.com/python-pillow/Pillow/security/advisories/GHSA-rfgq-q3w2-pmv2"
-      ]
-    },
-    {
       "id": "pygoat:CVE-2026-112901:pillow:12.1.0",
       "cve": "CVE-2026-112901",
       "package": "pillow",
@@ -3677,26 +3732,26 @@
       ]
     },
     {
-      "id": "pygoat:CVE-2026-112391:pillow:12.1.0",
-      "cve": "CVE-2026-112391",
+      "id": "pygoat:CVE-2026-112898:pillow:12.1.0",
+      "cve": "CVE-2026-112898",
       "package": "pillow",
       "ecosystem": "PyPI",
       "installed_version": "12.1.0",
       "fixed_version": "13.0.0",
       "app": "pygoat",
-      "cvss": 7.5,
+      "cvss": null,
       "epss": 0.00291,
       "in_kev": false,
       "kev_date_added": null,
-      "priority_score": 19,
+      "priority_score": 0,
       "priority_label": "low",
       "summary": {
-        "en": "Pillow is a Python imaging library. From 5.1.0 until 13.0.0, Pillow's PdfParser.get_value() can recurse without a limit while reading nested PDF objects. The parser follows attacker-controlled arrays and dictionaries when an existing PDF is opened for append. An attacker can provide a deeply nested PDF to an application that saves an image with PDF append enabled. This can raise an uncaught RecursionError or terminate the worker, causing denial of service. This issue is fixed in version 13.0.0."
+        "en": "Pillow is a Python imaging library. From 9.1.0 until 13.0.0, Pillow can disclose uninitialized stack memory when Image.quantize() uses an empty palette. ImagingPaletteCacheUpdate() leaves a local cache array uninitialized when the palette has zero entries, and the conversion path emits those bytes as output pixel indices. An attacker who controls the palette image can obtain stack contents from a returned PNG or GIF. This can disclose addresses and stack-canary data without an out-of-bounds access, memory corruption, or process crash. This issue is fixed in version 13.0.0."
       },
       "references": [
-        "https://github.com/python-pillow/Pillow/commit/94cb11c44ff7345414da17ebfea1598a529ad9cd",
+        "https://github.com/python-pillow/Pillow/commit/13943c8f857b22f073d30f0ef9b725a0d255f1a4",
         "https://github.com/python-pillow/Pillow/releases/tag/13.0.0",
-        "https://github.com/python-pillow/Pillow/security/advisories/GHSA-254f-3936-288h"
+        "https://github.com/python-pillow/Pillow/security/advisories/GHSA-rfgq-q3w2-pmv2"
       ]
     },
     {
@@ -3723,30 +3778,6 @@
       ]
     },
     {
-      "id": "pygoat:CVE-2026-96638:pillow:12.1.0",
-      "cve": "CVE-2026-96638",
-      "package": "pillow",
-      "ecosystem": "PyPI",
-      "installed_version": "12.1.0",
-      "fixed_version": "13.0.0",
-      "app": "pygoat",
-      "cvss": 6.5,
-      "epss": 0.0028,
-      "in_kev": false,
-      "kev_date_added": null,
-      "priority_score": 16,
-      "priority_label": "low",
-      "summary": {
-        "en": "Pillow is a Python imaging library. From 9.1.0 until 13.0.0, BmpRleDecoder.decode() in src/PIL/BmpImagePlugin.py permits crafted RLE BMP delta escapes and absolute-mode runs to append beyond the remaining dest_length without a per-branch cap. A delta can add roughly 255 image rows in one iteration, so a kilobyte-sized file with a large but permitted width can expand the data bytearray to hundreds of megabytes or more, causing memory-exhaustion denial of service. This issue is fixed in version 13.0.0."
-      },
-      "references": [
-        "https://github.com/python-pillow/Pillow/commit/e7794835e323ff2691d9b3a974cade1a44301b9a",
-        "https://github.com/python-pillow/Pillow/pull/10015",
-        "https://github.com/python-pillow/Pillow/releases/tag/13.0.0",
-        "https://github.com/python-pillow/Pillow/security/advisories/GHSA-24rc-8hj2-v98c"
-      ]
-    },
-    {
       "id": "pygoat:CVE-2026-96636:pillow:12.1.0",
       "cve": "CVE-2026-96636",
       "package": "pillow",
@@ -3768,6 +3799,30 @@
         "https://github.com/python-pillow/Pillow/pull/10011",
         "https://github.com/python-pillow/Pillow/releases/tag/13.0.0",
         "https://github.com/python-pillow/Pillow/security/advisories/GHSA-p8hx-v2p6-rp84"
+      ]
+    },
+    {
+      "id": "pygoat:CVE-2026-96638:pillow:12.1.0",
+      "cve": "CVE-2026-96638",
+      "package": "pillow",
+      "ecosystem": "PyPI",
+      "installed_version": "12.1.0",
+      "fixed_version": "13.0.0",
+      "app": "pygoat",
+      "cvss": 6.5,
+      "epss": 0.0028,
+      "in_kev": false,
+      "kev_date_added": null,
+      "priority_score": 16,
+      "priority_label": "low",
+      "summary": {
+        "en": "Pillow is a Python imaging library. From 9.1.0 until 13.0.0, BmpRleDecoder.decode() in src/PIL/BmpImagePlugin.py permits crafted RLE BMP delta escapes and absolute-mode runs to append beyond the remaining dest_length without a per-branch cap. A delta can add roughly 255 image rows in one iteration, so a kilobyte-sized file with a large but permitted width can expand the data bytearray to hundreds of megabytes or more, causing memory-exhaustion denial of service. This issue is fixed in version 13.0.0."
+      },
+      "references": [
+        "https://github.com/python-pillow/Pillow/commit/e7794835e323ff2691d9b3a974cade1a44301b9a",
+        "https://github.com/python-pillow/Pillow/pull/10015",
+        "https://github.com/python-pillow/Pillow/releases/tag/13.0.0",
+        "https://github.com/python-pillow/Pillow/security/advisories/GHSA-24rc-8hj2-v98c"
       ]
     },
     {
@@ -5466,7 +5521,7 @@
       "fixed_version": "4.3.2",
       "app": "nodejs-goof",
       "cvss": 7.5,
-      "epss": 0.06666,
+      "epss": 0.06887,
       "in_kev": false,
       "kev_date_added": null,
       "priority_score": 24,
@@ -6984,6 +7039,62 @@
       ]
     },
     {
+      "id": "nodejs-goof:CVE-2026-33937:handlebars:4.0.11",
+      "cve": "CVE-2026-33937",
+      "package": "handlebars",
+      "ecosystem": "npm",
+      "installed_version": "4.0.11",
+      "fixed_version": "4.7.9",
+      "app": "nodejs-goof",
+      "cvss": 9.8,
+      "epss": 0.01803,
+      "in_kev": false,
+      "kev_date_added": null,
+      "priority_score": 26,
+      "priority_label": "medium",
+      "summary": {
+        "en": "Handlebars provides the power necessary to let users build semantic templates. In versions 4.0.0 through 4.7.8, `Handlebars.compile()` accepts a pre-parsed AST object in addition to a template string. The `value` field of a `NumberLiteral` AST node is emitted directly into the generated JavaScript without quoting or sanitization. An attacker who can supply a crafted AST to `compile()` can therefore inject and execute arbitrary JavaScript, leading to Remote Code Execution on the server. Version 4.7.9 fixes the issue. Some workarounds are available. Validate input type before calling `Handlebars.compile()`; ensure the argument is always a  `string`, never a plain object or JSON-deserialized value. Use the Handlebars runtime-only build (`handlebars/runtime`) on the server if templates are pre-compiled at build time; `compile()` will be unavailable."
+      },
+      "references": [
+        "https://github.com/handlebars-lang/handlebars.js/commit/68d8df5a88e0a26fe9e6084c5c6aaebe67b07da2",
+        "https://github.com/handlebars-lang/handlebars.js/releases/tag/v4.7.9",
+        "https://github.com/handlebars-lang/handlebars.js/security/advisories/GHSA-2w6w-674q-4c4q",
+        "https://access.redhat.com/errata/RHSA-2026:10175",
+        "https://access.redhat.com/errata/RHSA-2026:34342",
+        "https://access.redhat.com/security/cve/CVE-2026-33937",
+        "https://bugzilla.redhat.com/show_bug.cgi?id=2452523",
+        "https://security.access.redhat.com/data/csaf/v2/vex/2026/cve-2026-33937.json"
+      ]
+    },
+    {
+      "id": "nodejs-goof:CVE-2026-33937:handlebars:4.0.14",
+      "cve": "CVE-2026-33937",
+      "package": "handlebars",
+      "ecosystem": "npm",
+      "installed_version": "4.0.14",
+      "fixed_version": "4.7.9",
+      "app": "nodejs-goof",
+      "cvss": 9.8,
+      "epss": 0.01803,
+      "in_kev": false,
+      "kev_date_added": null,
+      "priority_score": 26,
+      "priority_label": "medium",
+      "summary": {
+        "en": "Handlebars provides the power necessary to let users build semantic templates. In versions 4.0.0 through 4.7.8, `Handlebars.compile()` accepts a pre-parsed AST object in addition to a template string. The `value` field of a `NumberLiteral` AST node is emitted directly into the generated JavaScript without quoting or sanitization. An attacker who can supply a crafted AST to `compile()` can therefore inject and execute arbitrary JavaScript, leading to Remote Code Execution on the server. Version 4.7.9 fixes the issue. Some workarounds are available. Validate input type before calling `Handlebars.compile()`; ensure the argument is always a  `string`, never a plain object or JSON-deserialized value. Use the Handlebars runtime-only build (`handlebars/runtime`) on the server if templates are pre-compiled at build time; `compile()` will be unavailable."
+      },
+      "references": [
+        "https://github.com/handlebars-lang/handlebars.js/commit/68d8df5a88e0a26fe9e6084c5c6aaebe67b07da2",
+        "https://github.com/handlebars-lang/handlebars.js/releases/tag/v4.7.9",
+        "https://github.com/handlebars-lang/handlebars.js/security/advisories/GHSA-2w6w-674q-4c4q",
+        "https://access.redhat.com/errata/RHSA-2026:10175",
+        "https://access.redhat.com/errata/RHSA-2026:34342",
+        "https://access.redhat.com/security/cve/CVE-2026-33937",
+        "https://bugzilla.redhat.com/show_bug.cgi?id=2452523",
+        "https://security.access.redhat.com/data/csaf/v2/vex/2026/cve-2026-33937.json"
+      ]
+    },
+    {
       "id": "nodejs-goof:CVE-2025-7783:form-data:2.3.3",
       "cve": "CVE-2025-7783",
       "package": "form-data",
@@ -7059,62 +7170,6 @@
         "https://snyk.io/vuln/SNYK-JS-SETVALUE-1540541",
         "https://www.huntr.dev/bounties/2eae1159-01de-4f82-a177-7478a408c4a2/",
         "https://www.oracle.com/security-alerts/cpujan2022.html"
-      ]
-    },
-    {
-      "id": "nodejs-goof:CVE-2026-33937:handlebars:4.0.11",
-      "cve": "CVE-2026-33937",
-      "package": "handlebars",
-      "ecosystem": "npm",
-      "installed_version": "4.0.11",
-      "fixed_version": "4.7.9",
-      "app": "nodejs-goof",
-      "cvss": 9.8,
-      "epss": 0.01736,
-      "in_kev": false,
-      "kev_date_added": null,
-      "priority_score": 26,
-      "priority_label": "medium",
-      "summary": {
-        "en": "Handlebars provides the power necessary to let users build semantic templates. In versions 4.0.0 through 4.7.8, `Handlebars.compile()` accepts a pre-parsed AST object in addition to a template string. The `value` field of a `NumberLiteral` AST node is emitted directly into the generated JavaScript without quoting or sanitization. An attacker who can supply a crafted AST to `compile()` can therefore inject and execute arbitrary JavaScript, leading to Remote Code Execution on the server. Version 4.7.9 fixes the issue. Some workarounds are available. Validate input type before calling `Handlebars.compile()`; ensure the argument is always a  `string`, never a plain object or JSON-deserialized value. Use the Handlebars runtime-only build (`handlebars/runtime`) on the server if templates are pre-compiled at build time; `compile()` will be unavailable."
-      },
-      "references": [
-        "https://github.com/handlebars-lang/handlebars.js/commit/68d8df5a88e0a26fe9e6084c5c6aaebe67b07da2",
-        "https://github.com/handlebars-lang/handlebars.js/releases/tag/v4.7.9",
-        "https://github.com/handlebars-lang/handlebars.js/security/advisories/GHSA-2w6w-674q-4c4q",
-        "https://access.redhat.com/errata/RHSA-2026:10175",
-        "https://access.redhat.com/errata/RHSA-2026:34342",
-        "https://access.redhat.com/security/cve/CVE-2026-33937",
-        "https://bugzilla.redhat.com/show_bug.cgi?id=2452523",
-        "https://security.access.redhat.com/data/csaf/v2/vex/2026/cve-2026-33937.json"
-      ]
-    },
-    {
-      "id": "nodejs-goof:CVE-2026-33937:handlebars:4.0.14",
-      "cve": "CVE-2026-33937",
-      "package": "handlebars",
-      "ecosystem": "npm",
-      "installed_version": "4.0.14",
-      "fixed_version": "4.7.9",
-      "app": "nodejs-goof",
-      "cvss": 9.8,
-      "epss": 0.01736,
-      "in_kev": false,
-      "kev_date_added": null,
-      "priority_score": 26,
-      "priority_label": "medium",
-      "summary": {
-        "en": "Handlebars provides the power necessary to let users build semantic templates. In versions 4.0.0 through 4.7.8, `Handlebars.compile()` accepts a pre-parsed AST object in addition to a template string. The `value` field of a `NumberLiteral` AST node is emitted directly into the generated JavaScript without quoting or sanitization. An attacker who can supply a crafted AST to `compile()` can therefore inject and execute arbitrary JavaScript, leading to Remote Code Execution on the server. Version 4.7.9 fixes the issue. Some workarounds are available. Validate input type before calling `Handlebars.compile()`; ensure the argument is always a  `string`, never a plain object or JSON-deserialized value. Use the Handlebars runtime-only build (`handlebars/runtime`) on the server if templates are pre-compiled at build time; `compile()` will be unavailable."
-      },
-      "references": [
-        "https://github.com/handlebars-lang/handlebars.js/commit/68d8df5a88e0a26fe9e6084c5c6aaebe67b07da2",
-        "https://github.com/handlebars-lang/handlebars.js/releases/tag/v4.7.9",
-        "https://github.com/handlebars-lang/handlebars.js/security/advisories/GHSA-2w6w-674q-4c4q",
-        "https://access.redhat.com/errata/RHSA-2026:10175",
-        "https://access.redhat.com/errata/RHSA-2026:34342",
-        "https://access.redhat.com/security/cve/CVE-2026-33937",
-        "https://bugzilla.redhat.com/show_bug.cgi?id=2452523",
-        "https://security.access.redhat.com/data/csaf/v2/vex/2026/cve-2026-33937.json"
       ]
     },
     {
@@ -7288,29 +7343,6 @@
       ]
     },
     {
-      "id": "nodejs-goof:CVE-2020-8244:bl:2.2.0",
-      "cve": "CVE-2020-8244",
-      "package": "bl",
-      "ecosystem": "npm",
-      "installed_version": "2.2.0",
-      "fixed_version": "2.2.1",
-      "app": "nodejs-goof",
-      "cvss": 6.5,
-      "epss": 0.02183,
-      "in_kev": false,
-      "kev_date_added": null,
-      "priority_score": 18,
-      "priority_label": "low",
-      "summary": {
-        "en": "A buffer over-read vulnerability exists in bl <4.0.3, <3.0.1, <2.2.1, and <1.2.3 which could allow an attacker to supply user input (even typed) that if it ends up in consume() argument and can become negative, the BufferList state can be corrupted, tricking it into exposing uninitialized memory via regular .slice() calls.",
-        "es": "Se presenta una vulnerabilidad de lectura excesiva del b\u00fafer en bl versiones anteriores a 4.0.3, versiones anteriores a 3.0.1, versiones anteriores a 2.2.1 versiones anteriores a 1.2.3 que podr\u00eda permitir a un atacante suministrar informaci\u00f3n del usuario (incluso escrita) que si termina en el argumento de consume() y puede volverse negativa, el estado de BufferList puede estar corrupto, enga\u00f1\u00e1ndolo para que exponga la memoria no inicializada por medio de llamadas regulares de .slice()"
-      },
-      "references": [
-        "https://hackerone.com/reports/966347",
-        "https://lists.debian.org/debian-lts-announce/2021/06/msg00028.html"
-      ]
-    },
-    {
       "id": "nodejs-goof:CVE-2020-15366:ajv:6.10.2",
       "cve": "CVE-2020-15366",
       "package": "ajv",
@@ -7333,6 +7365,29 @@
         "https://github.com/ajv-validator/ajv/tags",
         "https://hackerone.com/bugs?subject=user&report_id=894259",
         "https://security.netapp.com/advisory/ntap-20240621-0007/"
+      ]
+    },
+    {
+      "id": "nodejs-goof:CVE-2020-8244:bl:2.2.0",
+      "cve": "CVE-2020-8244",
+      "package": "bl",
+      "ecosystem": "npm",
+      "installed_version": "2.2.0",
+      "fixed_version": "2.2.1",
+      "app": "nodejs-goof",
+      "cvss": 6.5,
+      "epss": 0.02097,
+      "in_kev": false,
+      "kev_date_added": null,
+      "priority_score": 18,
+      "priority_label": "low",
+      "summary": {
+        "en": "A buffer over-read vulnerability exists in bl <4.0.3, <3.0.1, <2.2.1, and <1.2.3 which could allow an attacker to supply user input (even typed) that if it ends up in consume() argument and can become negative, the BufferList state can be corrupted, tricking it into exposing uninitialized memory via regular .slice() calls.",
+        "es": "Se presenta una vulnerabilidad de lectura excesiva del b\u00fafer en bl versiones anteriores a 4.0.3, versiones anteriores a 3.0.1, versiones anteriores a 2.2.1 versiones anteriores a 1.2.3 que podr\u00eda permitir a un atacante suministrar informaci\u00f3n del usuario (incluso escrita) que si termina en el argumento de consume() y puede volverse negativa, el estado de BufferList puede estar corrupto, enga\u00f1\u00e1ndolo para que exponga la memoria no inicializada por medio de llamadas regulares de .slice()"
+      },
+      "references": [
+        "https://hackerone.com/reports/966347",
+        "https://lists.debian.org/debian-lts-announce/2021/06/msg00028.html"
       ]
     },
     {
@@ -8336,31 +8391,6 @@
       ]
     },
     {
-      "id": "nodejs-goof:CVE-2025-9288:sha.js:2.4.11",
-      "cve": "CVE-2025-9288",
-      "package": "sha.js",
-      "ecosystem": "npm",
-      "installed_version": "2.4.11",
-      "fixed_version": "2.4.12",
-      "app": "nodejs-goof",
-      "cvss": 9.1,
-      "epss": 0.00738,
-      "in_kev": false,
-      "kev_date_added": null,
-      "priority_score": 23,
-      "priority_label": "medium",
-      "summary": {
-        "en": "Improper Input Validation vulnerability in sha.js allows Input Data Manipulation.This issue affects sha.js: through 2.4.11.",
-        "es": "La vulnerabilidad de validaci\u00f3n de entrada incorrecta en sha.js permite la manipulaci\u00f3n de datos de entrada. Este problema afecta a sha.js: hasta 2.4.11."
-      },
-      "references": [
-        "https://github.com/browserify/sha.js/pull/78",
-        "https://github.com/browserify/sha.js/security/advisories/GHSA-95m3-7q98-8xr5",
-        "https://www.cve.org/CVERecord?id=CVE-2025-9287",
-        "https://lists.debian.org/debian-lts-announce/2025/09/msg00016.html"
-      ]
-    },
-    {
       "id": "nodejs-goof:CVE-2026-33938:handlebars:4.0.11",
       "cve": "CVE-2026-33938",
       "package": "handlebars",
@@ -8369,7 +8399,7 @@
       "fixed_version": "4.7.9",
       "app": "nodejs-goof",
       "cvss": 8.1,
-      "epss": 0.00843,
+      "epss": 0.00876,
       "in_kev": false,
       "kev_date_added": null,
       "priority_score": 21,
@@ -8397,7 +8427,7 @@
       "fixed_version": "4.7.9",
       "app": "nodejs-goof",
       "cvss": 8.1,
-      "epss": 0.00843,
+      "epss": 0.00876,
       "in_kev": false,
       "kev_date_added": null,
       "priority_score": 21,
@@ -8414,6 +8444,31 @@
         "https://access.redhat.com/security/cve/CVE-2026-33938",
         "https://bugzilla.redhat.com/show_bug.cgi?id=2452525",
         "https://security.access.redhat.com/data/csaf/v2/vex/2026/cve-2026-33938.json"
+      ]
+    },
+    {
+      "id": "nodejs-goof:CVE-2025-9288:sha.js:2.4.11",
+      "cve": "CVE-2025-9288",
+      "package": "sha.js",
+      "ecosystem": "npm",
+      "installed_version": "2.4.11",
+      "fixed_version": "2.4.12",
+      "app": "nodejs-goof",
+      "cvss": 9.1,
+      "epss": 0.00738,
+      "in_kev": false,
+      "kev_date_added": null,
+      "priority_score": 23,
+      "priority_label": "medium",
+      "summary": {
+        "en": "Improper Input Validation vulnerability in sha.js allows Input Data Manipulation.This issue affects sha.js: through 2.4.11.",
+        "es": "La vulnerabilidad de validaci\u00f3n de entrada incorrecta en sha.js permite la manipulaci\u00f3n de datos de entrada. Este problema afecta a sha.js: hasta 2.4.11."
+      },
+      "references": [
+        "https://github.com/browserify/sha.js/pull/78",
+        "https://github.com/browserify/sha.js/security/advisories/GHSA-95m3-7q98-8xr5",
+        "https://www.cve.org/CVERecord?id=CVE-2025-9287",
+        "https://lists.debian.org/debian-lts-announce/2025/09/msg00016.html"
       ]
     },
     {
@@ -8492,29 +8547,6 @@
       ]
     },
     {
-      "id": "nodejs-goof:CVE-2026-39244:adm-zip:0.4.7",
-      "cve": "CVE-2026-39244",
-      "package": "adm-zip",
-      "ecosystem": "npm",
-      "installed_version": "0.4.7",
-      "fixed_version": "0.6.0",
-      "app": "nodejs-goof",
-      "cvss": 7.5,
-      "epss": 0.00841,
-      "in_kev": false,
-      "kev_date_added": null,
-      "priority_score": 19,
-      "priority_label": "low",
-      "summary": {
-        "en": "adm-zip before 0.5.18 is vulnerable to denial of service via a crafted ZIP file with a manipulated uncompressed size header field. In zipEntry.js line 103, Buffer.alloc(_centralHeader.size) allocates memory based on the declared uncompressed size from the ZIP central directory header without validating it against the actual compressed data size or imposing any upper bound. The size value is read directly from the binary header at entryHeader.js line 266 with no bounds check. An attacker can craft a ~120-byte ZIP file that declares ~4GB uncompressed size, causing a memory allocation amplification ratio of over 33 million to 1. The allocation occurs before CRC validation, so the malicious payload cannot be rejected early. All extraction and read methods are affected: readFile(), readAsText(), extractEntryTo(), extractAllTo(), extractAllToAsync(), test(), and entry.getData(). Any application accepting untrusted ZIP files via adm-zip is vulnerable to immediate process crash."
-      },
-      "references": [
-        "https://github.com/cthackers/adm-zip",
-        "https://github.com/cthackers/adm-zip/issues/568",
-        "https://www.npmjs.com/package/adm-zip"
-      ]
-    },
-    {
       "id": "nodejs-goof:CVE-2026-33940:handlebars:4.0.11",
       "cve": "CVE-2026-33940",
       "package": "handlebars",
@@ -8523,7 +8555,7 @@
       "fixed_version": "4.7.9",
       "app": "nodejs-goof",
       "cvss": 8.1,
-      "epss": 0.00791,
+      "epss": 0.00822,
       "in_kev": false,
       "kev_date_added": null,
       "priority_score": 21,
@@ -8551,7 +8583,7 @@
       "fixed_version": "4.7.9",
       "app": "nodejs-goof",
       "cvss": 8.1,
-      "epss": 0.00791,
+      "epss": 0.00822,
       "in_kev": false,
       "kev_date_added": null,
       "priority_score": 21,
@@ -8568,6 +8600,29 @@
         "https://access.redhat.com/security/cve/CVE-2026-33940",
         "https://bugzilla.redhat.com/show_bug.cgi?id=2452521",
         "https://security.access.redhat.com/data/csaf/v2/vex/2026/cve-2026-33940.json"
+      ]
+    },
+    {
+      "id": "nodejs-goof:CVE-2026-39244:adm-zip:0.4.7",
+      "cve": "CVE-2026-39244",
+      "package": "adm-zip",
+      "ecosystem": "npm",
+      "installed_version": "0.4.7",
+      "fixed_version": "0.6.0",
+      "app": "nodejs-goof",
+      "cvss": 7.5,
+      "epss": 0.00841,
+      "in_kev": false,
+      "kev_date_added": null,
+      "priority_score": 19,
+      "priority_label": "low",
+      "summary": {
+        "en": "adm-zip before 0.5.18 is vulnerable to denial of service via a crafted ZIP file with a manipulated uncompressed size header field. In zipEntry.js line 103, Buffer.alloc(_centralHeader.size) allocates memory based on the declared uncompressed size from the ZIP central directory header without validating it against the actual compressed data size or imposing any upper bound. The size value is read directly from the binary header at entryHeader.js line 266 with no bounds check. An attacker can craft a ~120-byte ZIP file that declares ~4GB uncompressed size, causing a memory allocation amplification ratio of over 33 million to 1. The allocation occurs before CRC validation, so the malicious payload cannot be rejected early. All extraction and read methods are affected: readFile(), readAsText(), extractEntryTo(), extractAllTo(), extractAllToAsync(), test(), and entry.getData(). Any application accepting untrusted ZIP files via adm-zip is vulnerable to immediate process crash."
+      },
+      "references": [
+        "https://github.com/cthackers/adm-zip",
+        "https://github.com/cthackers/adm-zip/issues/568",
+        "https://www.npmjs.com/package/adm-zip"
       ]
     },
     {
@@ -8643,33 +8698,6 @@
       ]
     },
     {
-      "id": "nodejs-goof:CVE-2026-93687:braces:2.3.2",
-      "cve": "CVE-2026-93687",
-      "package": "braces",
-      "ecosystem": "npm",
-      "installed_version": "2.3.2",
-      "fixed_version": null,
-      "app": "nodejs-goof",
-      "cvss": 7.5,
-      "epss": 0.00757,
-      "in_kev": false,
-      "kev_date_added": null,
-      "priority_score": 19,
-      "priority_label": "low",
-      "summary": {
-        "en": "braces through 3.0.3 contains a stack overflow vulnerability in the recursive AST walkers that lack depth guards. Attackers can supply deeply nested brace patterns under the character limit to exhaust the call stack and terminate the Node.js process with an uncaught RangeError."
-      },
-      "references": [
-        "https://github.com/micromatch/braces",
-        "https://github.com/micromatch/braces/blob/3.0.3/lib/compile.js#L49-L53",
-        "https://github.com/micromatch/braces/blob/3.0.3/lib/expand.js#L102-L105",
-        "https://github.com/micromatch/braces/blob/3.0.3/lib/parse.js#L38-L40",
-        "https://github.com/micromatch/braces/issues/70",
-        "https://www.vulncheck.com/advisories/braces-through-3.0.3-stack-overflow-via-deeply-nested-patterns",
-        "https://github.com/micromatch/braces/issues/73#issuecomment-5996574974"
-      ]
-    },
-    {
       "id": "nodejs-goof:CVE-2026-33939:handlebars:4.0.11",
       "cve": "CVE-2026-33939",
       "package": "handlebars",
@@ -8678,7 +8706,7 @@
       "fixed_version": "4.7.9",
       "app": "nodejs-goof",
       "cvss": 7.5,
-      "epss": 0.00757,
+      "epss": 0.00786,
       "in_kev": false,
       "kev_date_added": null,
       "priority_score": 19,
@@ -8706,7 +8734,7 @@
       "fixed_version": "4.7.9",
       "app": "nodejs-goof",
       "cvss": 7.5,
-      "epss": 0.00757,
+      "epss": 0.00786,
       "in_kev": false,
       "kev_date_added": null,
       "priority_score": 19,
@@ -8961,6 +8989,28 @@
       ]
     },
     {
+      "id": "nodejs-goof:CVE-2026-27903:minimatch:3.0.4",
+      "cve": "CVE-2026-27903",
+      "package": "minimatch",
+      "ecosystem": "npm",
+      "installed_version": "3.0.4",
+      "fixed_version": "3.1.3",
+      "app": "nodejs-goof",
+      "cvss": 7.5,
+      "epss": 0.00665,
+      "in_kev": false,
+      "kev_date_added": null,
+      "priority_score": 19,
+      "priority_label": "low",
+      "summary": {
+        "en": "minimatch is a minimal matching utility for converting glob expressions into JavaScript RegExp objects. Prior to version 10.2.3, 9.0.7, 8.0.6, 7.4.8, 6.2.2, 5.1.8, 4.2.5, and 3.1.3, `matchOne()` performs unbounded recursive backtracking when a glob pattern contains multiple non-adjacent `**` (GLOBSTAR) segments and the input path does not match. The time complexity is O(C(n, k)) -- binomial -- where `n` is the number of path segments and `k` is the number of globstars. With k=11 and n=30, a call to the default `minimatch()` API stalls for roughly 5 seconds. With k=13, it exceeds 15 seconds. No memoization or call budget exists to bound this behavior. Any application where an attacker can influence the glob pattern passed to `minimatch()` is vulnerable. The realistic attack surface includes build tools and task runners that accept user-supplied glob arguments (ESLint, Webpack, Rollup config), multi-tenant systems where one tenant configures glob-based rules that run in a shared process, admin or developer interfaces that accept ignore-rule or filter configuration as globs, and CI/CD pipelines that evaluate user-submitted config files containing glob patterns. An attacker who can place a crafted pattern into any of these paths can stall the Node.js event loop for tens of seconds per invocation. The pattern is 56 bytes for a 5-second stall and does not require authentication in contexts where pattern input is part of the feature. Versions 10.2.3, 9.0.7, 8.0.6, 7.4.8, 6.2.2, 5.1.8, 4.2.5, and 3.1.3 fix the issue.",
+        "es": "minimatch es una utilidad de coincidencia m\u00ednima para convertir expresiones glob en objetos RegExp de JavaScript. Antes de las versiones 10.2.3, 9.0.7, 8.0.6, 7.4.8, 6.2.2, 5.1.8, 4.2.5 y 3.1.3, 'matchOne()' realiza un retroceso recursivo ilimitado cuando un patr\u00f3n glob contiene m\u00faltiples segmentos '**' (GLOBSTAR) no adyacentes y la ruta de entrada no coincide. La complejidad temporal es O(C(n, k)) -- binomial -- donde 'n' es el n\u00famero de segmentos de ruta y 'k' es el n\u00famero de globstars. Con k=11 y n=30, una llamada a la API predeterminada de 'minimatch()' se detiene durante aproximadamente 5 segundos. Con k=13, supera los 15 segundos. No existe memoizaci\u00f3n ni presupuesto de llamadas para limitar este comportamiento. Cualquier aplicaci\u00f3n donde un atacante pueda influir en el patr\u00f3n glob pasado a 'minimatch()' es vulnerable. La superficie de ataque realista incluye herramientas de compilaci\u00f3n y ejecutores de tareas que aceptan argumentos glob proporcionados por el usuario (configuraci\u00f3n de ESLint, Webpack, Rollup), sistemas multi-inquilino donde un inquilino configura reglas basadas en glob que se ejecutan en un proceso compartido, interfaces de administrador o desarrollador que aceptan configuraci\u00f3n de reglas de ignorar o de filtro como globs, y pipelines de CI/CD que eval\u00faan archivos de configuraci\u00f3n enviados por el usuario que contienen patrones glob. Un atacante que pueda colocar un patr\u00f3n dise\u00f1ado en cualquiera de estas rutas puede detener el bucle de eventos de Node.js durante decenas de segundos por invocaci\u00f3n. El patr\u00f3n es de 56 bytes para una detenci\u00f3n de 5 segundos y no requiere autenticaci\u00f3n en contextos donde la entrada del patr\u00f3n es parte de la caracter\u00edstica. Las versiones 10.2.3, 9.0.7, 8.0.6, 7.4.8, 6.2.2, 5.1.8, 4.2.5 y 3.1.3 solucionan el problema."
+      },
+      "references": [
+        "https://github.com/isaacs/minimatch/security/advisories/GHSA-7r86-cg39-jmmj"
+      ]
+    },
+    {
       "id": "nodejs-goof:CVE-2026-69152:brace-expansion:1.1.11",
       "cve": "CVE-2026-69152",
       "package": "brace-expansion",
@@ -9024,7 +9074,8 @@
       "priority_score": 19,
       "priority_label": "low",
       "summary": {
-        "en": "brace-expansion through 5.0.7 is vulnerable to denial of service via memory exhaustion. The expand() function limits the number of results with a max option (default 100,000) but does not bound the length of each result string. By chaining multiple brace groups, an attacker keeps the result count under the limit while making each result progressively longer, so total memory scales with both count and string length until the process hits a fatal, uncatchable out-of-memory error. About 7.5 KB of input ('{a,b}'.repeat(1500)) crashes a default Node.js process. Any application that passes attacker-influenced strings to brace-expansion.expand() - directly or transitively via minimatch / glob brace patterns - can be crashed by a small request. Fixed in 5.0.8 by adding a maxLength option (default 4,000,000) that bounds accumulated output and intermediate arrays."
+        "en": "brace-expansion through 5.0.7 is vulnerable to denial of service via memory exhaustion. The expand() function limits the number of results with a max option (default 100,000) but does not bound the length of each result string. By chaining multiple brace groups, an attacker keeps the result count under the limit while making each result progressively longer, so total memory scales with both count and string length until the process hits a fatal, uncatchable out-of-memory error. About 7.5 KB of input ('{a,b}'.repeat(1500)) crashes a default Node.js process. Any application that passes attacker-influenced strings to brace-expansion.expand() - directly or transitively via minimatch / glob brace patterns - can be crashed by a small request. Fixed in 5.0.8 by adding a maxLength option (default 4,000,000) that bounds accumulated output and intermediate arrays.",
+        "es": "brace-expansion hasta la 5.0.7 es vulnerable a denegaci\u00f3n de servicio por agotamiento de memoria. La funci\u00f3n expand() limita el n\u00famero de resultados con una opci\u00f3n max (predeterminado 100.000) pero no limita la longitud de cada cadena de resultado. Al encadenar m\u00faltiples grupos de llaves, un atacante mantiene el recuento de resultados por debajo del l\u00edmite mientras hace que cada resultado sea progresivamente m\u00e1s largo, por lo que la memoria total escala tanto con el recuento como con la longitud de la cadena hasta que el proceso alcanza un error fatal e inatrapable de falta de memoria. Aproximadamente 7,5 KB de entrada (\u2019{a,b}\u2019.repeat(1500)) bloquea un proceso predeterminado de Node.js. Cualquier aplicaci\u00f3n que pase cadenas influenciadas por el atacante a brace-expansion.expand() - directa o transitivamente a trav\u00e9s de patrones de llaves de minimatch / glob - puede ser bloqueada por una peque\u00f1a solicitud. Solucionado en la 5.0.8 al a\u00f1adir una opci\u00f3n maxLength (predeterminado 4.000.000) que limita la salida acumulada y los arrays intermedios."
       },
       "references": [
         "https://github.com/juliangruber/brace-expansion",
@@ -9130,28 +9181,6 @@
       ]
     },
     {
-      "id": "nodejs-goof:CVE-2026-27903:minimatch:3.0.4",
-      "cve": "CVE-2026-27903",
-      "package": "minimatch",
-      "ecosystem": "npm",
-      "installed_version": "3.0.4",
-      "fixed_version": "3.1.3",
-      "app": "nodejs-goof",
-      "cvss": 7.5,
-      "epss": 0.00608,
-      "in_kev": false,
-      "kev_date_added": null,
-      "priority_score": 19,
-      "priority_label": "low",
-      "summary": {
-        "en": "minimatch is a minimal matching utility for converting glob expressions into JavaScript RegExp objects. Prior to version 10.2.3, 9.0.7, 8.0.6, 7.4.8, 6.2.2, 5.1.8, 4.2.5, and 3.1.3, `matchOne()` performs unbounded recursive backtracking when a glob pattern contains multiple non-adjacent `**` (GLOBSTAR) segments and the input path does not match. The time complexity is O(C(n, k)) -- binomial -- where `n` is the number of path segments and `k` is the number of globstars. With k=11 and n=30, a call to the default `minimatch()` API stalls for roughly 5 seconds. With k=13, it exceeds 15 seconds. No memoization or call budget exists to bound this behavior. Any application where an attacker can influence the glob pattern passed to `minimatch()` is vulnerable. The realistic attack surface includes build tools and task runners that accept user-supplied glob arguments (ESLint, Webpack, Rollup config), multi-tenant systems where one tenant configures glob-based rules that run in a shared process, admin or developer interfaces that accept ignore-rule or filter configuration as globs, and CI/CD pipelines that evaluate user-submitted config files containing glob patterns. An attacker who can place a crafted pattern into any of these paths can stall the Node.js event loop for tens of seconds per invocation. The pattern is 56 bytes for a 5-second stall and does not require authentication in contexts where pattern input is part of the feature. Versions 10.2.3, 9.0.7, 8.0.6, 7.4.8, 6.2.2, 5.1.8, 4.2.5, and 3.1.3 fix the issue.",
-        "es": "minimatch es una utilidad de coincidencia m\u00ednima para convertir expresiones glob en objetos RegExp de JavaScript. Antes de las versiones 10.2.3, 9.0.7, 8.0.6, 7.4.8, 6.2.2, 5.1.8, 4.2.5 y 3.1.3, 'matchOne()' realiza un retroceso recursivo ilimitado cuando un patr\u00f3n glob contiene m\u00faltiples segmentos '**' (GLOBSTAR) no adyacentes y la ruta de entrada no coincide. La complejidad temporal es O(C(n, k)) -- binomial -- donde 'n' es el n\u00famero de segmentos de ruta y 'k' es el n\u00famero de globstars. Con k=11 y n=30, una llamada a la API predeterminada de 'minimatch()' se detiene durante aproximadamente 5 segundos. Con k=13, supera los 15 segundos. No existe memoizaci\u00f3n ni presupuesto de llamadas para limitar este comportamiento. Cualquier aplicaci\u00f3n donde un atacante pueda influir en el patr\u00f3n glob pasado a 'minimatch()' es vulnerable. La superficie de ataque realista incluye herramientas de compilaci\u00f3n y ejecutores de tareas que aceptan argumentos glob proporcionados por el usuario (configuraci\u00f3n de ESLint, Webpack, Rollup), sistemas multi-inquilino donde un inquilino configura reglas basadas en glob que se ejecutan en un proceso compartido, interfaces de administrador o desarrollador que aceptan configuraci\u00f3n de reglas de ignorar o de filtro como globs, y pipelines de CI/CD que eval\u00faan archivos de configuraci\u00f3n enviados por el usuario que contienen patrones glob. Un atacante que pueda colocar un patr\u00f3n dise\u00f1ado en cualquiera de estas rutas puede detener el bucle de eventos de Node.js durante decenas de segundos por invocaci\u00f3n. El patr\u00f3n es de 56 bytes para una detenci\u00f3n de 5 segundos y no requiere autenticaci\u00f3n en contextos donde la entrada del patr\u00f3n es parte de la caracter\u00edstica. Las versiones 10.2.3, 9.0.7, 8.0.6, 7.4.8, 6.2.2, 5.1.8, 4.2.5 y 3.1.3 solucionan el problema."
-      },
-      "references": [
-        "https://github.com/isaacs/minimatch/security/advisories/GHSA-7r86-cg39-jmmj"
-      ]
-    },
-    {
       "id": "nodejs-goof:CVE-2026-59869:js-yaml:3.13.1",
       "cve": "CVE-2026-59869",
       "package": "js-yaml",
@@ -9201,6 +9230,28 @@
         "https://github.com/expressjs/express/pull/5539",
         "https://github.com/expressjs/express/security/advisories/GHSA-rv95-896h-c2vc",
         "https://github.com/koajs/koa/issues/1800"
+      ]
+    },
+    {
+      "id": "nodejs-goof:CVE-2026-27904:minimatch:3.0.4",
+      "cve": "CVE-2026-27904",
+      "package": "minimatch",
+      "ecosystem": "npm",
+      "installed_version": "3.0.4",
+      "fixed_version": "3.1.4",
+      "app": "nodejs-goof",
+      "cvss": 7.5,
+      "epss": 0.00565,
+      "in_kev": false,
+      "kev_date_added": null,
+      "priority_score": 19,
+      "priority_label": "low",
+      "summary": {
+        "en": "minimatch is a minimal matching utility for converting glob expressions into JavaScript RegExp objects. Prior to version 10.2.3, 9.0.7, 8.0.6, 7.4.8, 6.2.2, 5.1.8, 4.2.5, and 3.1.4, nested `*()` extglobs produce regexps with nested unbounded quantifiers (e.g. `(?:(?:a|b)*)*`), which exhibit catastrophic backtracking in V8. With a 12-byte pattern `*(*(*(a|b)))` and an 18-byte non-matching input, `minimatch()` stalls for over 7 seconds. Adding a single nesting level or a few input characters pushes this to minutes. This is the most severe finding: it is triggered by the default `minimatch()` API with no special options, and the minimum viable pattern is only 12 bytes. The same issue affects `+()` extglobs equally. Versions 10.2.3, 9.0.7, 8.0.6, 7.4.8, 6.2.2, 5.1.8, 4.2.5, and 3.1.4 fix the issue.",
+        "es": "minimatch es una utilidad de coincidencia m\u00ednima para convertir expresiones glob en objetos RegExp de JavaScript. Antes de las versiones 10.2.3, 9.0.7, 8.0.6, 7.4.8, 6.2.2, 5.1.8, 4.2.5 y 3.1.4, los extglobs anidados '*( )' producen regexps con cuantificadores anidados ilimitados (por ejemplo, '(?:(?:a|b)*)*'), que exhiben retroceso catastr\u00f3fico en V8. Con un patr\u00f3n de 12 bytes '*(*(*(a|b)))' y una entrada no coincidente de 18 bytes, 'minimatch()' se detiene durante m\u00e1s de 7 segundos. A\u00f1adir un solo nivel de anidamiento o unos pocos caracteres de entrada eleva esto a minutos. Este es el hallazgo m\u00e1s grave: se activa por la API predeterminada de 'minimatch()' sin opciones especiales, y el patr\u00f3n m\u00ednimo viable es de solo 12 bytes. El mismo problema afecta a los extglobs '+()' por igual. Las versiones 10.2.3, 9.0.7, 8.0.6, 7.4.8, 6.2.2, 5.1.8, 4.2.5 y 3.1.4 solucionan el problema."
+      },
+      "references": [
+        "https://github.com/isaacs/minimatch/security/advisories/GHSA-23c5-xmqv-rm74"
       ]
     },
     {
@@ -9304,28 +9355,6 @@
       ]
     },
     {
-      "id": "nodejs-goof:CVE-2026-27904:minimatch:3.0.4",
-      "cve": "CVE-2026-27904",
-      "package": "minimatch",
-      "ecosystem": "npm",
-      "installed_version": "3.0.4",
-      "fixed_version": "3.1.4",
-      "app": "nodejs-goof",
-      "cvss": 7.5,
-      "epss": 0.00516,
-      "in_kev": false,
-      "kev_date_added": null,
-      "priority_score": 19,
-      "priority_label": "low",
-      "summary": {
-        "en": "minimatch is a minimal matching utility for converting glob expressions into JavaScript RegExp objects. Prior to version 10.2.3, 9.0.7, 8.0.6, 7.4.8, 6.2.2, 5.1.8, 4.2.5, and 3.1.4, nested `*()` extglobs produce regexps with nested unbounded quantifiers (e.g. `(?:(?:a|b)*)*`), which exhibit catastrophic backtracking in V8. With a 12-byte pattern `*(*(*(a|b)))` and an 18-byte non-matching input, `minimatch()` stalls for over 7 seconds. Adding a single nesting level or a few input characters pushes this to minutes. This is the most severe finding: it is triggered by the default `minimatch()` API with no special options, and the minimum viable pattern is only 12 bytes. The same issue affects `+()` extglobs equally. Versions 10.2.3, 9.0.7, 8.0.6, 7.4.8, 6.2.2, 5.1.8, 4.2.5, and 3.1.4 fix the issue.",
-        "es": "minimatch es una utilidad de coincidencia m\u00ednima para convertir expresiones glob en objetos RegExp de JavaScript. Antes de las versiones 10.2.3, 9.0.7, 8.0.6, 7.4.8, 6.2.2, 5.1.8, 4.2.5 y 3.1.4, los extglobs anidados '*( )' producen regexps con cuantificadores anidados ilimitados (por ejemplo, '(?:(?:a|b)*)*'), que exhiben retroceso catastr\u00f3fico en V8. Con un patr\u00f3n de 12 bytes '*(*(*(a|b)))' y una entrada no coincidente de 18 bytes, 'minimatch()' se detiene durante m\u00e1s de 7 segundos. A\u00f1adir un solo nivel de anidamiento o unos pocos caracteres de entrada eleva esto a minutos. Este es el hallazgo m\u00e1s grave: se activa por la API predeterminada de 'minimatch()' sin opciones especiales, y el patr\u00f3n m\u00ednimo viable es de solo 12 bytes. El mismo problema afecta a los extglobs '+()' por igual. Las versiones 10.2.3, 9.0.7, 8.0.6, 7.4.8, 6.2.2, 5.1.8, 4.2.5 y 3.1.4 solucionan el problema."
-      },
-      "references": [
-        "https://github.com/isaacs/minimatch/security/advisories/GHSA-23c5-xmqv-rm74"
-      ]
-    },
-    {
       "id": "nodejs-goof:CVE-2026-106445:handlebars:4.0.11",
       "cve": "CVE-2026-106445",
       "package": "handlebars",
@@ -9374,6 +9403,36 @@
       ]
     },
     {
+      "id": "nodejs-goof:CVE-2026-33750:brace-expansion:1.1.11",
+      "cve": "CVE-2026-33750",
+      "package": "brace-expansion",
+      "ecosystem": "npm",
+      "installed_version": "1.1.11",
+      "fixed_version": "1.1.13",
+      "app": "nodejs-goof",
+      "cvss": 6.5,
+      "epss": 0.00637,
+      "in_kev": false,
+      "kev_date_added": null,
+      "priority_score": 17,
+      "priority_label": "low",
+      "summary": {
+        "en": "The brace-expansion library generates arbitrary strings containing a common prefix and suffix. Prior to versions 5.0.5, 3.0.2, 2.0.3, and 1.1.13, a brace pattern with a zero step value (e.g., `{1..2..0}`) causes the sequence generation loop to run indefinitely, making the process hang for seconds and allocate heaps of memory. Versions 5.0.5, 3.0.2, 2.0.3, and 1.1.13 fix the issue. As a workaround, sanitize strings passed to `expand()` to ensure a step value of `0` is not used."
+      },
+      "references": [
+        "https://github.com/juliangruber/brace-expansion/blob/daa71bcb4a30a2df9bcb7f7b8daaf2ab30e5794a/src/index.ts#L107-L113",
+        "https://github.com/juliangruber/brace-expansion/blob/daa71bcb4a30a2df9bcb7f7b8daaf2ab30e5794a/src/index.ts#L184",
+        "https://github.com/juliangruber/brace-expansion/commit/311ac0d54994158c0a384e286a7d6cbb17ee8ed5",
+        "https://github.com/juliangruber/brace-expansion/commit/7fd684f89fdde3549563d0a6522226a9189472a2",
+        "https://github.com/juliangruber/brace-expansion/commit/b9cacd9e55e7a1fa588fe4b7bb1159d52f1d902a",
+        "https://github.com/juliangruber/brace-expansion/issues/98",
+        "https://github.com/juliangruber/brace-expansion/pull/95",
+        "https://github.com/juliangruber/brace-expansion/pull/96",
+        "https://github.com/juliangruber/brace-expansion/pull/97",
+        "https://github.com/juliangruber/brace-expansion/security/advisories/GHSA-f886-m6hf-6m8v"
+      ]
+    },
+    {
       "id": "nodejs-goof:CVE-2018-25110:marked:0.3.5",
       "cve": "CVE-2018-25110",
       "package": "marked",
@@ -9396,36 +9455,6 @@
         "https://github.com/markedjs/marked/commit/20bfc106013ed45713a21672ad4a34df94dcd485",
         "https://github.com/markedjs/marked/issues/1070",
         "https://github.com/markedjs/marked/pull/1083"
-      ]
-    },
-    {
-      "id": "nodejs-goof:CVE-2026-33750:brace-expansion:1.1.11",
-      "cve": "CVE-2026-33750",
-      "package": "brace-expansion",
-      "ecosystem": "npm",
-      "installed_version": "1.1.11",
-      "fixed_version": "1.1.13",
-      "app": "nodejs-goof",
-      "cvss": 6.5,
-      "epss": 0.00613,
-      "in_kev": false,
-      "kev_date_added": null,
-      "priority_score": 17,
-      "priority_label": "low",
-      "summary": {
-        "en": "The brace-expansion library generates arbitrary strings containing a common prefix and suffix. Prior to versions 5.0.5, 3.0.2, 2.0.3, and 1.1.13, a brace pattern with a zero step value (e.g., `{1..2..0}`) causes the sequence generation loop to run indefinitely, making the process hang for seconds and allocate heaps of memory. Versions 5.0.5, 3.0.2, 2.0.3, and 1.1.13 fix the issue. As a workaround, sanitize strings passed to `expand()` to ensure a step value of `0` is not used."
-      },
-      "references": [
-        "https://github.com/juliangruber/brace-expansion/blob/daa71bcb4a30a2df9bcb7f7b8daaf2ab30e5794a/src/index.ts#L107-L113",
-        "https://github.com/juliangruber/brace-expansion/blob/daa71bcb4a30a2df9bcb7f7b8daaf2ab30e5794a/src/index.ts#L184",
-        "https://github.com/juliangruber/brace-expansion/commit/311ac0d54994158c0a384e286a7d6cbb17ee8ed5",
-        "https://github.com/juliangruber/brace-expansion/commit/7fd684f89fdde3549563d0a6522226a9189472a2",
-        "https://github.com/juliangruber/brace-expansion/commit/b9cacd9e55e7a1fa588fe4b7bb1159d52f1d902a",
-        "https://github.com/juliangruber/brace-expansion/issues/98",
-        "https://github.com/juliangruber/brace-expansion/pull/95",
-        "https://github.com/juliangruber/brace-expansion/pull/96",
-        "https://github.com/juliangruber/brace-expansion/pull/97",
-        "https://github.com/juliangruber/brace-expansion/security/advisories/GHSA-f886-m6hf-6m8v"
       ]
     },
     {
@@ -9628,6 +9657,28 @@
       ]
     },
     {
+      "id": "nodejs-goof:CVE-2026-111181:body-parser:1.9.0",
+      "cve": "CVE-2026-111181",
+      "package": "body-parser",
+      "ecosystem": "npm",
+      "installed_version": "1.9.0",
+      "fixed_version": "1.20.9",
+      "app": "nodejs-goof",
+      "cvss": 7.5,
+      "epss": 0.00366,
+      "in_kev": false,
+      "kev_date_added": null,
+      "priority_score": 19,
+      "priority_label": "low",
+      "summary": {
+        "en": "body-parser is body parsing middleware for Node.js and Express. In versions before 1.20.9 and in versions from 2.0.0 before 2.4.0, a single request can crash any application using body-parser with default options. When a request carries a Content-Encoding such as gzip, body-parser pipes it into a decompression stream and, after reading the body, leaves that stream with no error listener. A payload of one valid compressed frame followed by trailing bytes decodes and the application responds normally, but the trailing bytes then reach the already-finished decoder, which emits an error that is re-thrown as an uncaught exception and terminates the process. No matching route is required because body parsing runs before routing, so any endpoint that parses a body is affected. The issue is fixed in body-parser 2.4.0 and 1.20.9, and users should upgrade to one of those versions or later. As a workaround, disable request-body inflation (set the body-parser inflate option to false) so encoded requests are rejected before any decompression stream is created."
+      },
+      "references": [
+        "https://cna.openjsf.org/security-advisories.html",
+        "https://github.com/expressjs/body-parser/security/advisories/GHSA-27r3-jxmh-p828"
+      ]
+    },
+    {
       "id": "nodejs-goof:CVE-2020-7608:yargs-parser:8.1.0",
       "cve": "CVE-2020-7608",
       "package": "yargs-parser",
@@ -9812,50 +9863,6 @@
       ]
     },
     {
-      "id": "nodejs-goof:CVE-2026-82417:qs:2.4.2",
-      "cve": "CVE-2026-82417",
-      "package": "qs",
-      "ecosystem": "npm",
-      "installed_version": "2.4.2",
-      "fixed_version": "6.16.0",
-      "app": "nodejs-goof",
-      "cvss": 5.3,
-      "epss": 0.00396,
-      "in_kev": false,
-      "kev_date_added": null,
-      "priority_score": 14,
-      "priority_label": "low",
-      "summary": {
-        "en": "### Summary\n\n\n\n`qs.stringify` throws a `TypeError` when it serializes an object whose own `constructor` property has a truthy, non-callable `isBuffer` member. `utils.isBuffer` duck-types buffers by calling `obj.constructor.isBuffer(obj)` after checking only that the property is truthy, so a value such as `{ constructor: { isBuffer: \"x\" } }` makes the call throw `TypeError: obj.constructor.isBuffer is not a function`.\n\n\n\n### Details\n\n\n\n`lib/stringify.js:127` calls `utils.isBuffer` on every non-primitive value it serializes. `utils.isBuffer` (`lib/utils.js:332`) reads `obj.constructor.isBuffer` and invokes it without verifying that it is a function. `constructor` and `isBuffer` are ordinary property names, so any object carrying them as own properties reaches the unchecked call.\n\n\n\nSuch an object can be built from untrusted input. `qs.parse(\"x[constructor][isBuffer]=y\", { plainObjects: true })` or `{ allowPrototypes: true }` keeps the `constructor` key as an own property (the default parse options drop it), and `JSON.parse(\"{\\\"a\\\":{\\\"constructor\\\":{\\\"isBuffer\\\":\\\"x\\\"}}}\")` produces the same shape with no qs option involved. Express 4 with its default `query parser` setting and body-parser with `extended: true` both call `qs.parse` with `allowPrototypes: true`, so on those stacks `req.query` and `req.body` can carry the shape directly.\n\n\n\n#### PoC\n\n\n\n```js\n\n\n\nvar qs = require(\"qs\");\n\n\n\nqs.stringify(qs.parse(\"x[constructor][isBuffer]=y\", { plainObjects: true }));\n\n\n\nqs.stringify(JSON.parse(\"{\\\"a\\\":{\\\"constructor\\\":{\\\"isBuffer\\\":\\\"x\\\"}}}\"));\n\n\n\n// TypeError: obj.constructor.isBuffer is not a function\n\n\n\n//     at Object.isBuffer (lib/utils.js:332:78)\n\n\n\n//     at stringify (lib/stringify.js:127:45)\n\n\n\n```\n\n\n\n#### Fix\n\n\n\n`lib/utils.js`, applied in e83d321 on `main` and released as v6.16.0:\n\n\n\n```diff\n\n\n\n- return !!(obj.constructor && obj.constructor.isBuffer && obj.constructor.isBuffer(obj));\n\n\n\n+ return !!(obj.constructor && typeof obj.constructor.isBuffer === \"function\" && obj.constructor.isBuffer(obj));\n\n\n\n```\n\n\n\nReal `Buffer`, `safer-buffer`, and browserify `buffer` polyfill instances serialize exactly as before; only the throw is removed.\n\n\n\n### Affected versions\n\n\n\n`>=2.2.5 <6.16.0`, fixed in v6.16.0.\n\n\n\nThe unguarded duck-type was introduced in 3768a75 and first shipped in v2.2.5 (September 2014). v2.2.4 and earlier used `Buffer.isBuffer` and are not affected. Every release from v2.2.5 through v6.15.3 contains the unguarded call.\n\n\n\n### Impact\n\n\n\nAn unauthenticated request can make any code path that re-serializes attacker-influenced data with `qs.stringify` (for example, rebuilding a query string from `req.query` for a redirect or an upstream request, or serializing a parsed JSON body) throw synchronously. In a typical Node.js HTTP framework the throw is caught by the framework error boundary and the affected request returns a 500; the process survives and other requests are unaffected. Where the call runs outside an error boundary, such as an `async` Express 4 handler (where the throw becomes an unhandled promise rejection) or a background job, the process exits, so the impact in that case depends on the application error handling rather than on qs."
-      },
-      "references": [
-        "https://github.com/ljharb/qs/commit/e83d321ffafb38cf210683ac31714fce6ce1c6c6",
-        "https://github.com/ljharb/qs/security/advisories/GHSA-4mjr-xmp4-gh2g"
-      ]
-    },
-    {
-      "id": "nodejs-goof:CVE-2026-82417:qs:6.5.2",
-      "cve": "CVE-2026-82417",
-      "package": "qs",
-      "ecosystem": "npm",
-      "installed_version": "6.5.2",
-      "fixed_version": "6.16.0",
-      "app": "nodejs-goof",
-      "cvss": 5.3,
-      "epss": 0.00396,
-      "in_kev": false,
-      "kev_date_added": null,
-      "priority_score": 14,
-      "priority_label": "low",
-      "summary": {
-        "en": "### Summary\n\n\n\n`qs.stringify` throws a `TypeError` when it serializes an object whose own `constructor` property has a truthy, non-callable `isBuffer` member. `utils.isBuffer` duck-types buffers by calling `obj.constructor.isBuffer(obj)` after checking only that the property is truthy, so a value such as `{ constructor: { isBuffer: \"x\" } }` makes the call throw `TypeError: obj.constructor.isBuffer is not a function`.\n\n\n\n### Details\n\n\n\n`lib/stringify.js:127` calls `utils.isBuffer` on every non-primitive value it serializes. `utils.isBuffer` (`lib/utils.js:332`) reads `obj.constructor.isBuffer` and invokes it without verifying that it is a function. `constructor` and `isBuffer` are ordinary property names, so any object carrying them as own properties reaches the unchecked call.\n\n\n\nSuch an object can be built from untrusted input. `qs.parse(\"x[constructor][isBuffer]=y\", { plainObjects: true })` or `{ allowPrototypes: true }` keeps the `constructor` key as an own property (the default parse options drop it), and `JSON.parse(\"{\\\"a\\\":{\\\"constructor\\\":{\\\"isBuffer\\\":\\\"x\\\"}}}\")` produces the same shape with no qs option involved. Express 4 with its default `query parser` setting and body-parser with `extended: true` both call `qs.parse` with `allowPrototypes: true`, so on those stacks `req.query` and `req.body` can carry the shape directly.\n\n\n\n#### PoC\n\n\n\n```js\n\n\n\nvar qs = require(\"qs\");\n\n\n\nqs.stringify(qs.parse(\"x[constructor][isBuffer]=y\", { plainObjects: true }));\n\n\n\nqs.stringify(JSON.parse(\"{\\\"a\\\":{\\\"constructor\\\":{\\\"isBuffer\\\":\\\"x\\\"}}}\"));\n\n\n\n// TypeError: obj.constructor.isBuffer is not a function\n\n\n\n//     at Object.isBuffer (lib/utils.js:332:78)\n\n\n\n//     at stringify (lib/stringify.js:127:45)\n\n\n\n```\n\n\n\n#### Fix\n\n\n\n`lib/utils.js`, applied in e83d321 on `main` and released as v6.16.0:\n\n\n\n```diff\n\n\n\n- return !!(obj.constructor && obj.constructor.isBuffer && obj.constructor.isBuffer(obj));\n\n\n\n+ return !!(obj.constructor && typeof obj.constructor.isBuffer === \"function\" && obj.constructor.isBuffer(obj));\n\n\n\n```\n\n\n\nReal `Buffer`, `safer-buffer`, and browserify `buffer` polyfill instances serialize exactly as before; only the throw is removed.\n\n\n\n### Affected versions\n\n\n\n`>=2.2.5 <6.16.0`, fixed in v6.16.0.\n\n\n\nThe unguarded duck-type was introduced in 3768a75 and first shipped in v2.2.5 (September 2014). v2.2.4 and earlier used `Buffer.isBuffer` and are not affected. Every release from v2.2.5 through v6.15.3 contains the unguarded call.\n\n\n\n### Impact\n\n\n\nAn unauthenticated request can make any code path that re-serializes attacker-influenced data with `qs.stringify` (for example, rebuilding a query string from `req.query` for a redirect or an upstream request, or serializing a parsed JSON body) throw synchronously. In a typical Node.js HTTP framework the throw is caught by the framework error boundary and the affected request returns a 500; the process survives and other requests are unaffected. Where the call runs outside an error boundary, such as an `async` Express 4 handler (where the throw becomes an unhandled promise rejection) or a background job, the process exits, so the impact in that case depends on the application error handling rather than on qs."
-      },
-      "references": [
-        "https://github.com/ljharb/qs/commit/e83d321ffafb38cf210683ac31714fce6ce1c6c6",
-        "https://github.com/ljharb/qs/security/advisories/GHSA-4mjr-xmp4-gh2g"
-      ]
-    },
-    {
       "id": "nodejs-goof:CVE-2025-15284:qs:2.2.4",
       "cve": "CVE-2025-15284",
       "package": "qs",
@@ -10020,6 +10027,50 @@
       ]
     },
     {
+      "id": "nodejs-goof:CVE-2026-82417:qs:2.4.2",
+      "cve": "CVE-2026-82417",
+      "package": "qs",
+      "ecosystem": "npm",
+      "installed_version": "2.4.2",
+      "fixed_version": "6.16.0",
+      "app": "nodejs-goof",
+      "cvss": 5.3,
+      "epss": 0.00396,
+      "in_kev": false,
+      "kev_date_added": null,
+      "priority_score": 14,
+      "priority_label": "low",
+      "summary": {
+        "en": "### Summary\n\n\n\n`qs.stringify` throws a `TypeError` when it serializes an object whose own `constructor` property has a truthy, non-callable `isBuffer` member. `utils.isBuffer` duck-types buffers by calling `obj.constructor.isBuffer(obj)` after checking only that the property is truthy, so a value such as `{ constructor: { isBuffer: \"x\" } }` makes the call throw `TypeError: obj.constructor.isBuffer is not a function`.\n\n\n\n### Details\n\n\n\n`lib/stringify.js:127` calls `utils.isBuffer` on every non-primitive value it serializes. `utils.isBuffer` (`lib/utils.js:332`) reads `obj.constructor.isBuffer` and invokes it without verifying that it is a function. `constructor` and `isBuffer` are ordinary property names, so any object carrying them as own properties reaches the unchecked call.\n\n\n\nSuch an object can be built from untrusted input. `qs.parse(\"x[constructor][isBuffer]=y\", { plainObjects: true })` or `{ allowPrototypes: true }` keeps the `constructor` key as an own property (the default parse options drop it), and `JSON.parse(\"{\\\"a\\\":{\\\"constructor\\\":{\\\"isBuffer\\\":\\\"x\\\"}}}\")` produces the same shape with no qs option involved. Express 4 with its default `query parser` setting and body-parser with `extended: true` both call `qs.parse` with `allowPrototypes: true`, so on those stacks `req.query` and `req.body` can carry the shape directly.\n\n\n\n#### PoC\n\n\n\n```js\n\n\n\nvar qs = require(\"qs\");\n\n\n\nqs.stringify(qs.parse(\"x[constructor][isBuffer]=y\", { plainObjects: true }));\n\n\n\nqs.stringify(JSON.parse(\"{\\\"a\\\":{\\\"constructor\\\":{\\\"isBuffer\\\":\\\"x\\\"}}}\"));\n\n\n\n// TypeError: obj.constructor.isBuffer is not a function\n\n\n\n//     at Object.isBuffer (lib/utils.js:332:78)\n\n\n\n//     at stringify (lib/stringify.js:127:45)\n\n\n\n```\n\n\n\n#### Fix\n\n\n\n`lib/utils.js`, applied in e83d321 on `main` and released as v6.16.0:\n\n\n\n```diff\n\n\n\n- return !!(obj.constructor && obj.constructor.isBuffer && obj.constructor.isBuffer(obj));\n\n\n\n+ return !!(obj.constructor && typeof obj.constructor.isBuffer === \"function\" && obj.constructor.isBuffer(obj));\n\n\n\n```\n\n\n\nReal `Buffer`, `safer-buffer`, and browserify `buffer` polyfill instances serialize exactly as before; only the throw is removed.\n\n\n\n### Affected versions\n\n\n\n`>=2.2.5 <6.16.0`, fixed in v6.16.0.\n\n\n\nThe unguarded duck-type was introduced in 3768a75 and first shipped in v2.2.5 (September 2014). v2.2.4 and earlier used `Buffer.isBuffer` and are not affected. Every release from v2.2.5 through v6.15.3 contains the unguarded call.\n\n\n\n### Impact\n\n\n\nAn unauthenticated request can make any code path that re-serializes attacker-influenced data with `qs.stringify` (for example, rebuilding a query string from `req.query` for a redirect or an upstream request, or serializing a parsed JSON body) throw synchronously. In a typical Node.js HTTP framework the throw is caught by the framework error boundary and the affected request returns a 500; the process survives and other requests are unaffected. Where the call runs outside an error boundary, such as an `async` Express 4 handler (where the throw becomes an unhandled promise rejection) or a background job, the process exits, so the impact in that case depends on the application error handling rather than on qs."
+      },
+      "references": [
+        "https://github.com/ljharb/qs/commit/e83d321ffafb38cf210683ac31714fce6ce1c6c6",
+        "https://github.com/ljharb/qs/security/advisories/GHSA-4mjr-xmp4-gh2g"
+      ]
+    },
+    {
+      "id": "nodejs-goof:CVE-2026-82417:qs:6.5.2",
+      "cve": "CVE-2026-82417",
+      "package": "qs",
+      "ecosystem": "npm",
+      "installed_version": "6.5.2",
+      "fixed_version": "6.16.0",
+      "app": "nodejs-goof",
+      "cvss": 5.3,
+      "epss": 0.00396,
+      "in_kev": false,
+      "kev_date_added": null,
+      "priority_score": 14,
+      "priority_label": "low",
+      "summary": {
+        "en": "### Summary\n\n\n\n`qs.stringify` throws a `TypeError` when it serializes an object whose own `constructor` property has a truthy, non-callable `isBuffer` member. `utils.isBuffer` duck-types buffers by calling `obj.constructor.isBuffer(obj)` after checking only that the property is truthy, so a value such as `{ constructor: { isBuffer: \"x\" } }` makes the call throw `TypeError: obj.constructor.isBuffer is not a function`.\n\n\n\n### Details\n\n\n\n`lib/stringify.js:127` calls `utils.isBuffer` on every non-primitive value it serializes. `utils.isBuffer` (`lib/utils.js:332`) reads `obj.constructor.isBuffer` and invokes it without verifying that it is a function. `constructor` and `isBuffer` are ordinary property names, so any object carrying them as own properties reaches the unchecked call.\n\n\n\nSuch an object can be built from untrusted input. `qs.parse(\"x[constructor][isBuffer]=y\", { plainObjects: true })` or `{ allowPrototypes: true }` keeps the `constructor` key as an own property (the default parse options drop it), and `JSON.parse(\"{\\\"a\\\":{\\\"constructor\\\":{\\\"isBuffer\\\":\\\"x\\\"}}}\")` produces the same shape with no qs option involved. Express 4 with its default `query parser` setting and body-parser with `extended: true` both call `qs.parse` with `allowPrototypes: true`, so on those stacks `req.query` and `req.body` can carry the shape directly.\n\n\n\n#### PoC\n\n\n\n```js\n\n\n\nvar qs = require(\"qs\");\n\n\n\nqs.stringify(qs.parse(\"x[constructor][isBuffer]=y\", { plainObjects: true }));\n\n\n\nqs.stringify(JSON.parse(\"{\\\"a\\\":{\\\"constructor\\\":{\\\"isBuffer\\\":\\\"x\\\"}}}\"));\n\n\n\n// TypeError: obj.constructor.isBuffer is not a function\n\n\n\n//     at Object.isBuffer (lib/utils.js:332:78)\n\n\n\n//     at stringify (lib/stringify.js:127:45)\n\n\n\n```\n\n\n\n#### Fix\n\n\n\n`lib/utils.js`, applied in e83d321 on `main` and released as v6.16.0:\n\n\n\n```diff\n\n\n\n- return !!(obj.constructor && obj.constructor.isBuffer && obj.constructor.isBuffer(obj));\n\n\n\n+ return !!(obj.constructor && typeof obj.constructor.isBuffer === \"function\" && obj.constructor.isBuffer(obj));\n\n\n\n```\n\n\n\nReal `Buffer`, `safer-buffer`, and browserify `buffer` polyfill instances serialize exactly as before; only the throw is removed.\n\n\n\n### Affected versions\n\n\n\n`>=2.2.5 <6.16.0`, fixed in v6.16.0.\n\n\n\nThe unguarded duck-type was introduced in 3768a75 and first shipped in v2.2.5 (September 2014). v2.2.4 and earlier used `Buffer.isBuffer` and are not affected. Every release from v2.2.5 through v6.15.3 contains the unguarded call.\n\n\n\n### Impact\n\n\n\nAn unauthenticated request can make any code path that re-serializes attacker-influenced data with `qs.stringify` (for example, rebuilding a query string from `req.query` for a redirect or an upstream request, or serializing a parsed JSON body) throw synchronously. In a typical Node.js HTTP framework the throw is caught by the framework error boundary and the affected request returns a 500; the process survives and other requests are unaffected. Where the call runs outside an error boundary, such as an `async` Express 4 handler (where the throw becomes an unhandled promise rejection) or a background job, the process exits, so the impact in that case depends on the application error handling rather than on qs."
+      },
+      "references": [
+        "https://github.com/ljharb/qs/commit/e83d321ffafb38cf210683ac31714fce6ce1c6c6",
+        "https://github.com/ljharb/qs/security/advisories/GHSA-4mjr-xmp4-gh2g"
+      ]
+    },
+    {
       "id": "nodejs-goof:CVE-2026-53550:js-yaml:3.13.1",
       "cve": "CVE-2026-53550",
       "package": "js-yaml",
@@ -10135,30 +10186,6 @@
       ]
     },
     {
-      "id": "nodejs-goof:CVE-2025-60542:typeorm:0.2.24",
-      "cve": "CVE-2025-60542",
-      "package": "typeorm",
-      "ecosystem": "npm",
-      "installed_version": "0.2.24",
-      "fixed_version": "0.3.26",
-      "app": "nodejs-goof",
-      "cvss": 6.5,
-      "epss": 0.00265,
-      "in_kev": false,
-      "kev_date_added": null,
-      "priority_score": 16,
-      "priority_label": "low",
-      "summary": {
-        "en": "SQL Injection vulnerability in TypeORM before 0.3.26 via crafted request to repository.save or repository.update due to the sqlstring call using stringifyObjects default to false."
-      },
-      "references": [
-        "https://github.com/typeorm/typeorm/pull/11574",
-        "https://github.com/typeorm/typeorm/releases/tag/0.3.26",
-        "https://github.com/typeorm/typeorm/releases?q=security&expanded=true",
-        "https://medium.com/@alizada.cavad/cve-2025-60542-typeorm-mysql-sqli-0-3-25-a1b32bc60453"
-      ]
-    },
-    {
       "id": "nodejs-goof:CVE-2026-33916:handlebars:4.0.11",
       "cve": "CVE-2026-33916",
       "package": "handlebars",
@@ -10167,7 +10194,7 @@
       "fixed_version": "4.7.9",
       "app": "nodejs-goof",
       "cvss": 4.7,
-      "epss": 0.00382,
+      "epss": 0.00426,
       "in_kev": false,
       "kev_date_added": null,
       "priority_score": 12,
@@ -10190,7 +10217,7 @@
       "fixed_version": "4.7.9",
       "app": "nodejs-goof",
       "cvss": 4.7,
-      "epss": 0.00382,
+      "epss": 0.00426,
       "in_kev": false,
       "kev_date_added": null,
       "priority_score": 12,
@@ -10202,6 +10229,30 @@
         "https://github.com/handlebars-lang/handlebars.js/commit/68d8df5a88e0a26fe9e6084c5c6aaebe67b07da2",
         "https://github.com/handlebars-lang/handlebars.js/releases/tag/v4.7.9",
         "https://github.com/handlebars-lang/handlebars.js/security/advisories/GHSA-2qvq-rjwj-gvw9"
+      ]
+    },
+    {
+      "id": "nodejs-goof:CVE-2025-60542:typeorm:0.2.24",
+      "cve": "CVE-2025-60542",
+      "package": "typeorm",
+      "ecosystem": "npm",
+      "installed_version": "0.2.24",
+      "fixed_version": "0.3.26",
+      "app": "nodejs-goof",
+      "cvss": 6.5,
+      "epss": 0.00265,
+      "in_kev": false,
+      "kev_date_added": null,
+      "priority_score": 16,
+      "priority_label": "low",
+      "summary": {
+        "en": "SQL Injection vulnerability in TypeORM before 0.3.26 via crafted request to repository.save or repository.update due to the sqlstring call using stringifyObjects default to false."
+      },
+      "references": [
+        "https://github.com/typeorm/typeorm/pull/11574",
+        "https://github.com/typeorm/typeorm/releases/tag/0.3.26",
+        "https://github.com/typeorm/typeorm/releases?q=security&expanded=true",
+        "https://medium.com/@alizada.cavad/cve-2025-60542-typeorm-mysql-sqli-0-3-25-a1b32bc60453"
       ]
     },
     {
@@ -10253,34 +10304,6 @@
       ]
     },
     {
-      "id": "nodejs-goof:CVE-2026-24001:diff:1.4.0",
-      "cve": "CVE-2026-24001",
-      "package": "diff",
-      "ecosystem": "npm",
-      "installed_version": "1.4.0",
-      "fixed_version": "3.5.1",
-      "app": "nodejs-goof",
-      "cvss": 7.5,
-      "epss": 0.00616,
-      "in_kev": false,
-      "kev_date_added": null,
-      "priority_score": 19,
-      "priority_label": "low",
-      "summary": {
-        "en": "jsdiff is a JavaScript text differencing implementation. Prior to versions 8.0.3, 5.2.2, 4.0.4, and 3.5.1, attempting to parse a patch whose filename headers contain the line break characters `\\r`, `\\u2028`, or `\\u2029` can cause the `parsePatch` method to enter an infinite loop. It then consumes memory without limit until the process crashes due to running out of memory. Applications are therefore likely to be vulnerable to a denial-of-service attack if they call `parsePatch` with a user-provided patch as input. A large payload is not needed to trigger the vulnerability, so size limits on user input do not provide any protection. Furthermore, some applications may be vulnerable even when calling `parsePatch` on a patch generated by the application itself if the user is nonetheless able to control the filename headers (e.g. by directly providing the filenames of the files to be diffed). The `applyPatch` method is similarly affected if (and only if) called with a string representation of a patch as an argument, since under the hood it parses that string using `parsePatch`. Other methods of the library are unaffected. Finally, a second and lesser interdependent bug - a ReDOS - also exhibits when those same line break characters are present in a patch's *patch* header (also known as its \"leading garbage\"). A maliciously-crafted patch header of length *n* can take `parsePatch` O(*n*\u00b3) time to parse. Versions 8.0.3, 5.2.2, 4.0.4, and 3.5.1 contain a fix. As a workaround, do not attempt to parse patches that contain any of these characters: `\\r`, `\\u2028`, or `\\u2029`.",
-        "es": "jsdiff es una implementaci\u00f3n de diferenciaci\u00f3n de texto en JavaScript. Antes de las versiones 8.0.3, 5.2.2, 4.0.4 y 3.5.1, intentar analizar un parche cuyos encabezados de nombre de archivo contienen los caracteres de salto de l\u00ednea `\\r`, `\\u2028` o `\\u2029` puede hacer que el m\u00e9todo `parsePatch` entre en un bucle infinito. Luego consume memoria sin l\u00edmite hasta que el proceso falla por falta de memoria. Por lo tanto, las aplicaciones son propensas a ser vulnerables a un ataque de denegaci\u00f3n de servicio si llaman a `parsePatch` con un parche proporcionado por el usuario como entrada. No se necesita una carga \u00fatil grande para activar la vulnerabilidad, por lo que los l\u00edmites de tama\u00f1o en la entrada del usuario no proporcionan ninguna protecci\u00f3n. Adem\u00e1s, algunas aplicaciones pueden ser vulnerables incluso al llamar a `parsePatch` en un parche generado por la propia aplicaci\u00f3n si el usuario, no obstante, puede controlar los encabezados de nombre de archivo (por ejemplo, proporcionando directamente los nombres de archivo de los archivos a diferenciar). El m\u00e9todo `applyPatch` se ve afectado de manera similar si (y solo si) se llama con una representaci\u00f3n de cadena de un parche como argumento, ya que internamente analiza esa cadena usando `parsePatch`. Otros m\u00e9todos de la librer\u00eda no se ven afectados. Finalmente, un segundo error menos interdependiente - un ReDOS - tambi\u00e9n se manifiesta cuando esos mismos caracteres de salto de l\u00ednea est\u00e1n presentes en el encabezado *patch* de un parche (tambi\u00e9n conocido como su 'leading garbage'). Un encabezado de parche maliciosamente elaborado de longitud *n* puede tomarle a `parsePatch` un tiempo de O(*n*\u00b3) para analizar. Las versiones 8.0.3, 5.2.2, 4.0.4 y 3.5.1 contienen una correcci\u00f3n. Como soluci\u00f3n alternativa, no intente analizar parches que contengan ninguno de estos caracteres: `\\r`, `\\u2028` o `\\u2029`."
-      },
-      "references": [
-        "https://github.com/kpdecker/jsdiff/commit/15a1585230748c8ae6f8274c202e0c87309142f5",
-        "https://github.com/kpdecker/jsdiff/issues/653",
-        "https://github.com/kpdecker/jsdiff/pull/649",
-        "https://github.com/kpdecker/jsdiff/security/advisories/GHSA-73rr-hh4g-fpgx",
-        "https://access.redhat.com/security/cve/CVE-2026-24001",
-        "https://bugzilla.redhat.com/show_bug.cgi?id=2431930",
-        "https://security.access.redhat.com/data/csaf/v2/vex/2026/cve-2026-24001.json"
-      ]
-    },
-    {
       "id": "nodejs-goof:CVE-2026-33941:handlebars:4.0.11",
       "cve": "CVE-2026-33941",
       "package": "handlebars",
@@ -10289,7 +10312,7 @@
       "fixed_version": "4.7.9",
       "app": "nodejs-goof",
       "cvss": 8.2,
-      "epss": 0.0022,
+      "epss": 0.00228,
       "in_kev": false,
       "kev_date_added": null,
       "priority_score": 21,
@@ -10317,7 +10340,7 @@
       "fixed_version": "4.7.9",
       "app": "nodejs-goof",
       "cvss": 8.2,
-      "epss": 0.0022,
+      "epss": 0.00228,
       "in_kev": false,
       "kev_date_added": null,
       "priority_score": 21,
@@ -10334,6 +10357,34 @@
         "https://access.redhat.com/security/cve/CVE-2026-33941",
         "https://bugzilla.redhat.com/show_bug.cgi?id=2452524",
         "https://security.access.redhat.com/data/csaf/v2/vex/2026/cve-2026-33941.json"
+      ]
+    },
+    {
+      "id": "nodejs-goof:CVE-2026-24001:diff:1.4.0",
+      "cve": "CVE-2026-24001",
+      "package": "diff",
+      "ecosystem": "npm",
+      "installed_version": "1.4.0",
+      "fixed_version": "3.5.1",
+      "app": "nodejs-goof",
+      "cvss": 7.5,
+      "epss": 0.00616,
+      "in_kev": false,
+      "kev_date_added": null,
+      "priority_score": 19,
+      "priority_label": "low",
+      "summary": {
+        "en": "jsdiff is a JavaScript text differencing implementation. Prior to versions 8.0.3, 5.2.2, 4.0.4, and 3.5.1, attempting to parse a patch whose filename headers contain the line break characters `\\r`, `\\u2028`, or `\\u2029` can cause the `parsePatch` method to enter an infinite loop. It then consumes memory without limit until the process crashes due to running out of memory. Applications are therefore likely to be vulnerable to a denial-of-service attack if they call `parsePatch` with a user-provided patch as input. A large payload is not needed to trigger the vulnerability, so size limits on user input do not provide any protection. Furthermore, some applications may be vulnerable even when calling `parsePatch` on a patch generated by the application itself if the user is nonetheless able to control the filename headers (e.g. by directly providing the filenames of the files to be diffed). The `applyPatch` method is similarly affected if (and only if) called with a string representation of a patch as an argument, since under the hood it parses that string using `parsePatch`. Other methods of the library are unaffected. Finally, a second and lesser interdependent bug - a ReDOS - also exhibits when those same line break characters are present in a patch's *patch* header (also known as its \"leading garbage\"). A maliciously-crafted patch header of length *n* can take `parsePatch` O(*n*\u00b3) time to parse. Versions 8.0.3, 5.2.2, 4.0.4, and 3.5.1 contain a fix. As a workaround, do not attempt to parse patches that contain any of these characters: `\\r`, `\\u2028`, or `\\u2029`.",
+        "es": "jsdiff es una implementaci\u00f3n de diferenciaci\u00f3n de texto en JavaScript. Antes de las versiones 8.0.3, 5.2.2, 4.0.4 y 3.5.1, intentar analizar un parche cuyos encabezados de nombre de archivo contienen los caracteres de salto de l\u00ednea `\\r`, `\\u2028` o `\\u2029` puede hacer que el m\u00e9todo `parsePatch` entre en un bucle infinito. Luego consume memoria sin l\u00edmite hasta que el proceso falla por falta de memoria. Por lo tanto, las aplicaciones son propensas a ser vulnerables a un ataque de denegaci\u00f3n de servicio si llaman a `parsePatch` con un parche proporcionado por el usuario como entrada. No se necesita una carga \u00fatil grande para activar la vulnerabilidad, por lo que los l\u00edmites de tama\u00f1o en la entrada del usuario no proporcionan ninguna protecci\u00f3n. Adem\u00e1s, algunas aplicaciones pueden ser vulnerables incluso al llamar a `parsePatch` en un parche generado por la propia aplicaci\u00f3n si el usuario, no obstante, puede controlar los encabezados de nombre de archivo (por ejemplo, proporcionando directamente los nombres de archivo de los archivos a diferenciar). El m\u00e9todo `applyPatch` se ve afectado de manera similar si (y solo si) se llama con una representaci\u00f3n de cadena de un parche como argumento, ya que internamente analiza esa cadena usando `parsePatch`. Otros m\u00e9todos de la librer\u00eda no se ven afectados. Finalmente, un segundo error menos interdependiente - un ReDOS - tambi\u00e9n se manifiesta cuando esos mismos caracteres de salto de l\u00ednea est\u00e1n presentes en el encabezado *patch* de un parche (tambi\u00e9n conocido como su 'leading garbage'). Un encabezado de parche maliciosamente elaborado de longitud *n* puede tomarle a `parsePatch` un tiempo de O(*n*\u00b3) para analizar. Las versiones 8.0.3, 5.2.2, 4.0.4 y 3.5.1 contienen una correcci\u00f3n. Como soluci\u00f3n alternativa, no intente analizar parches que contengan ninguno de estos caracteres: `\\r`, `\\u2028` o `\\u2029`."
+      },
+      "references": [
+        "https://github.com/kpdecker/jsdiff/commit/15a1585230748c8ae6f8274c202e0c87309142f5",
+        "https://github.com/kpdecker/jsdiff/issues/653",
+        "https://github.com/kpdecker/jsdiff/pull/649",
+        "https://github.com/kpdecker/jsdiff/security/advisories/GHSA-73rr-hh4g-fpgx",
+        "https://access.redhat.com/security/cve/CVE-2026-24001",
+        "https://bugzilla.redhat.com/show_bug.cgi?id=2431930",
+        "https://security.access.redhat.com/data/csaf/v2/vex/2026/cve-2026-24001.json"
       ]
     },
     {
@@ -10626,12 +10677,6 @@
   ],
   "history": [
     {
-      "date": "2026-09-25",
-      "findings_total": 312,
-      "critical": 4,
-      "high": 3
-    },
-    {
       "date": "2026-09-26",
       "findings_total": 312,
       "critical": 4,
@@ -10802,6 +10847,12 @@
     {
       "date": "2026-10-24",
       "findings_total": 384,
+      "critical": 3,
+      "high": 3
+    },
+    {
+      "date": "2026-10-25",
+      "findings_total": 386,
       "critical": 3,
       "high": 3
     }

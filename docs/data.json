@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-10-26T12:37:34.969289+00:00",
+  "generated_at": "2026-10-27T11:53:56.031379+00:00",
   "sources": {
     "kev": {
       "fetched": true,
@@ -1075,12 +1075,12 @@
       "installed_version": "12.1.0",
       "fixed_version": "13.0.0",
       "app": "pygoat",
-      "cvss": null,
+      "cvss": 9.8,
       "epss": 0.00818,
       "in_kev": false,
       "kev_date_added": null,
-      "priority_score": 1,
-      "priority_label": "low",
+      "priority_score": 25,
+      "priority_label": "medium",
       "summary": {
         "en": "Pillow is a Python imaging library. From 2.0.0 until 13.0.0, Pillow has a heap buffer overflow and stale-heap disclosure in _tiffWriteProc when saving compressed TIFF data through libtiff to a target without a usable fileno(), such as BytesIO. The callback sizes its allocation from the prior buffer size instead of the current write position, allowing an attacker-controlled out-of-line TIFF tag or retained ICC profile to be copied beyond the allocation after libtiff seeks forward. This overflow can crash the process and may allow code execution. Independently, unwritten alignment gaps in compressed TIFF output larger than 64 KiB can disclose stale heap bytes without a crafted tag. File paths and targets with real file descriptors are unaffected. This issue is fixed in version 13.0.0."
       },
@@ -1162,6 +1162,30 @@
         "https://www.djangoproject.com/weblog/2025/jan/14/security-releases/",
         "http://www.openwall.com/lists/oss-security/2025/01/14/2",
         "https://lists.debian.org/debian-lts-announce/2025/01/msg00024.html"
+      ]
+    },
+    {
+      "id": "pygoat:CVE-2023-46136:werkzeug:2.1.2",
+      "cve": "CVE-2023-46136",
+      "package": "werkzeug",
+      "ecosystem": "PyPI",
+      "installed_version": "2.1.2",
+      "fixed_version": "2.3.8",
+      "app": "pygoat",
+      "cvss": 8.0,
+      "epss": 0.01288,
+      "in_kev": false,
+      "kev_date_added": null,
+      "priority_score": 21,
+      "priority_label": "medium",
+      "summary": {
+        "en": "Werkzeug is a comprehensive WSGI web application library. In versions on the 3.x branch prior to 3.0.1 and on the 2.x branch prior to 2.3.8, if an upload of a file that starts with CR or LF and then is followed by megabytes of data without these characters: all of these bytes are appended chunk by chunk into internal bytearray and lookup for boundary is performed on growing buffer. This allows an attacker to cause a denial of service by sending crafted multipart data to an endpoint that will parse it. The amount of CPU time required can block worker processes from handling legitimate requests. This vulnerability has been patched in version 3.0.1 and 2.3.8.",
+        "es": "Werkzeug es una librer\u00eda completa de aplicaciones web WSGI. Si se carga un archivo que comienza con CR o LF y luego va seguido de megabytes de datos sin estos caracteres: todos estos bytes se agregan fragmento a fragmento en una matriz de bytes interna y la b\u00fasqueda de los l\u00edmites se realiza en un b\u00fafer en crecimiento. Esto permite a un atacante provocar una denegaci\u00f3n de servicio enviando datos multiparte manipulados a un endpoint que los analizar\u00e1. La cantidad de tiempo de CPU necesaria puede impedir que los procesos de trabajo manejen solicitudes leg\u00edtimas. Esta vulnerabilidad ha sido parcheada en la versi\u00f3n 3.0.1."
+      },
+      "references": [
+        "https://github.com/pallets/werkzeug/commit/f3c803b3ade485a45f12b6d6617595350c0f03e2",
+        "https://github.com/pallets/werkzeug/security/advisories/GHSA-hrfv-mqp8-q5rw",
+        "https://security.netapp.com/advisory/ntap-20231124-0008/"
       ]
     },
     {
@@ -1347,36 +1371,13 @@
       "priority_score": 19,
       "priority_label": "low",
       "summary": {
-        "en": "An issue was discovered in 6.0 before 6.0.4, 5.2 before 5.2.13, and 4.2 before 4.2.30.\nASGI requests with a missing or understated `Content-Length` header could\r\nbypass the `DATA_UPLOAD_MAX_MEMORY_SIZE` limit when reading\r\n`HttpRequest.body`, allowing remote attackers to load an unbounded request body into\r\nmemory.\nEarlier, unsupported Django series (such as 5.0.x, 4.1.x, and 3.2.x) were not evaluated and may also be affected.\nDjango would like to thank Superior for reporting this issue."
+        "en": "An issue was discovered in 6.0 before 6.0.4, 5.2 before 5.2.13, and 4.2 before 4.2.30.\nASGI requests with a missing or understated `Content-Length` header could\r\nbypass the `DATA_UPLOAD_MAX_MEMORY_SIZE` limit when reading\r\n`HttpRequest.body`, allowing remote attackers to load an unbounded request body into\r\nmemory.\nEarlier, unsupported Django series (such as 5.0.x, 4.1.x, and 3.2.x) were not evaluated and may also be affected.\nDjango would like to thank Superior for reporting this issue.",
+        "es": "Se descubri\u00f3 un problema en 6.0 anterior a 6.0.4, 5.2 anterior a 5.2.13 y 4.2 anterior a 4.2.30.\nLas solicitudes ASGI con un encabezado \u2019Content-Length\u2019 faltante o subestimado podr\u00edan eludir el l\u00edmite de \u2019DATA_UPLOAD_MAX_MEMORY_SIZE\u2019 al leer \u2019HttpRequest.body\u2019, permitiendo a atacantes remotos cargar un cuerpo de solicitud ilimitado en la memoria.\nLas series de Django anteriores y no compatibles (como 5.0.x, 4.1.x y 3.2.x) no fueron evaluadas y tambi\u00e9n podr\u00edan estar afectadas.\nDjango desea agradecer a Superior por reportar este problema."
       },
       "references": [
         "https://docs.djangoproject.com/en/dev/releases/security/",
         "https://groups.google.com/g/django-announce",
         "https://www.djangoproject.com/weblog/2026/apr/07/security-releases/"
-      ]
-    },
-    {
-      "id": "pygoat:CVE-2023-46136:werkzeug:2.1.2",
-      "cve": "CVE-2023-46136",
-      "package": "werkzeug",
-      "ecosystem": "PyPI",
-      "installed_version": "2.1.2",
-      "fixed_version": "2.3.8",
-      "app": "pygoat",
-      "cvss": 8.0,
-      "epss": 0.01072,
-      "in_kev": false,
-      "kev_date_added": null,
-      "priority_score": 21,
-      "priority_label": "medium",
-      "summary": {
-        "en": "Werkzeug is a comprehensive WSGI web application library. In versions on the 3.x branch prior to 3.0.1 and on the 2.x branch prior to 2.3.8, if an upload of a file that starts with CR or LF and then is followed by megabytes of data without these characters: all of these bytes are appended chunk by chunk into internal bytearray and lookup for boundary is performed on growing buffer. This allows an attacker to cause a denial of service by sending crafted multipart data to an endpoint that will parse it. The amount of CPU time required can block worker processes from handling legitimate requests. This vulnerability has been patched in version 3.0.1 and 2.3.8.",
-        "es": "Werkzeug es una librer\u00eda completa de aplicaciones web WSGI. Si se carga un archivo que comienza con CR o LF y luego va seguido de megabytes de datos sin estos caracteres: todos estos bytes se agregan fragmento a fragmento en una matriz de bytes interna y la b\u00fasqueda de los l\u00edmites se realiza en un b\u00fafer en crecimiento. Esto permite a un atacante provocar una denegaci\u00f3n de servicio enviando datos multiparte manipulados a un endpoint que los analizar\u00e1. La cantidad de tiempo de CPU necesaria puede impedir que los procesos de trabajo manejen solicitudes leg\u00edtimas. Esta vulnerabilidad ha sido parcheada en la versi\u00f3n 3.0.1."
-      },
-      "references": [
-        "https://github.com/pallets/werkzeug/commit/f3c803b3ade485a45f12b6d6617595350c0f03e2",
-        "https://github.com/pallets/werkzeug/security/advisories/GHSA-hrfv-mqp8-q5rw",
-        "https://security.netapp.com/advisory/ntap-20231124-0008/"
       ]
     },
     {
@@ -1570,7 +1571,8 @@
       "priority_score": 19,
       "priority_label": "low",
       "summary": {
-        "en": "Pillow is a Python imaging library. Versions 10.3.0 through 12.1.1 did not limit the amount of GZIP-compressed data read when decoding a FITS image, making them vulnerable to decompression bomb attacks. A specially crafted FITS file could cause unbounded memory consumption, leading to denial of service (OOM crash or severe performance degradation). If users are unable to immediately upgrade, they should only open specific image formats, excluding FITS, as a workaround."
+        "en": "Pillow is a Python imaging library. Versions 10.3.0 through 12.1.1 did not limit the amount of GZIP-compressed data read when decoding a FITS image, making them vulnerable to decompression bomb attacks. A specially crafted FITS file could cause unbounded memory consumption, leading to denial of service (OOM crash or severe performance degradation). If users are unable to immediately upgrade, they should only open specific image formats, excluding FITS, as a workaround.",
+        "es": "Pillow es una biblioteca de im\u00e1genes de Python. Las versiones 10.3.0 a 12.1.1 no limitaban la cantidad de datos comprimidos con GZIP le\u00eddos al decodificar una imagen FITS, lo que las hac\u00eda vulnerables a ataques de bomba de descompresi\u00f3n. Un archivo FITS especialmente dise\u00f1ado podr\u00eda causar un consumo de memoria ilimitado, lo que llevar\u00eda a una denegaci\u00f3n de servicio (fallo por OOM o degradaci\u00f3n severa del rendimiento). Si los usuarios no pueden actualizar de inmediato, deber\u00edan abrir solo formatos de imagen espec\u00edficos, excluyendo FITS, como soluci\u00f3n alternativa."
       },
       "references": [
         "https://github.com/python-pillow/Pillow/commit/3cb854e8b2bab43f40e342e665f9340d861aa628",
@@ -1648,7 +1650,8 @@
       "priority_score": 17,
       "priority_label": "low",
       "summary": {
-        "en": "An issue was discovered in 6.0 before 6.0.4, 5.2 before 5.2.13, and 4.2 before 4.2.30.\n`MultiPartParser` allows remote attackers to degrade performance by submitting multipart uploads with `Content-Transfer-Encoding: base64` including excessive whitespace.\nEarlier, unsupported Django series (such as 5.0.x, 4.1.x, and 3.2.x) were not evaluated and may also be affected.\nDjango would like to thank Seokchan Yoon for reporting this issue."
+        "en": "An issue was discovered in 6.0 before 6.0.4, 5.2 before 5.2.13, and 4.2 before 4.2.30.\n`MultiPartParser` allows remote attackers to degrade performance by submitting multipart uploads with `Content-Transfer-Encoding: base64` including excessive whitespace.\nEarlier, unsupported Django series (such as 5.0.x, 4.1.x, and 3.2.x) were not evaluated and may also be affected.\nDjango would like to thank Seokchan Yoon for reporting this issue.",
+        "es": "Se descubri\u00f3 un problema en 6.0 anterior a 6.0.4, 5.2 anterior a 5.2.13 y 4.2 anterior a 4.2.30.\n\u2019MultiPartParser\u2019 permite a atacantes remotos degradar el rendimiento mediante el env\u00edo de cargas multipart con \u2019Content-Transfer-Encoding: base64\u2019 que incluyen espacios en blanco excesivos.\nSeries de Django anteriores no compatibles (como 5.0.x, 4.1.x y 3.2.x) no fueron evaluadas y tambi\u00e9n podr\u00edan verse afectadas.\nDjango desea agradecer a Seokchan Yoon por informar sobre este problema."
       },
       "references": [
         "https://docs.djangoproject.com/en/dev/releases/security/",
@@ -2149,11 +2152,11 @@
       "installed_version": "12.1.0",
       "fixed_version": "13.0.0",
       "app": "pygoat",
-      "cvss": null,
+      "cvss": 7.5,
       "epss": 0.005,
       "in_kev": false,
       "kev_date_added": null,
-      "priority_score": 0,
+      "priority_score": 19,
       "priority_label": "low",
       "summary": {
         "en": "Pillow is a Python imaging library. Prior to 13.0.0, Pillow's rank-based filters can dereference invalid image storage for a zero-size image. ImagingExpand() allocates a non-empty output and then faults while replicating edges by reading the first pixel from empty input storage; ImagingRankFilter is never reached. An attacker can supply or cause creation of a zero-size image to an application that applies a rank, median, minimum, or maximum filter. This causes a native process crash. This issue is fixed in version 13.0.0."
@@ -2315,29 +2318,6 @@
       ]
     },
     {
-      "id": "pygoat:CVE-2026-112405:pillow:12.1.0",
-      "cve": "CVE-2026-112405",
-      "package": "pillow",
-      "ecosystem": "PyPI",
-      "installed_version": "12.1.0",
-      "fixed_version": "13.0.0",
-      "app": "pygoat",
-      "cvss": null,
-      "epss": 0.00417,
-      "in_kev": false,
-      "kev_date_added": null,
-      "priority_score": 0,
-      "priority_label": "low",
-      "summary": {
-        "en": "Pillow is a Python imaging library. From 12.0.0 until 13.0.0, Pillow's Image.merge() can dereference a null image8 plane. Validation skips the first input band, allowing a 32-bit integer or floating-point image backed by image32 storage to be merged as a narrower multiband image. A crafted IPTC file can reach this path when an application opens and loads it, or a caller can invoke Image.merge() directly with such a first band. This causes a native process crash. This issue is fixed in version 13.0.0."
-      },
-      "references": [
-        "https://github.com/python-pillow/Pillow/commit/b6ee66e8b2c2c0932bdf65f963268d9f2927ef86",
-        "https://github.com/python-pillow/Pillow/releases/tag/13.0.0",
-        "https://github.com/python-pillow/Pillow/security/advisories/GHSA-cp9v-662q-vvx9"
-      ]
-    },
-    {
       "id": "pygoat:CVE-2026-112895:pillow:12.1.0",
       "cve": "CVE-2026-112895",
       "package": "pillow",
@@ -2358,6 +2338,29 @@
         "https://github.com/python-pillow/Pillow/commit/e2ae7eacad6de68c37eb28b633a97bebacf2c5bf",
         "https://github.com/python-pillow/Pillow/releases/tag/13.0.0",
         "https://github.com/python-pillow/Pillow/security/advisories/GHSA-p4wg-p73j-c528"
+      ]
+    },
+    {
+      "id": "pygoat:CVE-2026-112405:pillow:12.1.0",
+      "cve": "CVE-2026-112405",
+      "package": "pillow",
+      "ecosystem": "PyPI",
+      "installed_version": "12.1.0",
+      "fixed_version": "13.0.0",
+      "app": "pygoat",
+      "cvss": null,
+      "epss": 0.00417,
+      "in_kev": false,
+      "kev_date_added": null,
+      "priority_score": 0,
+      "priority_label": "low",
+      "summary": {
+        "en": "Pillow is a Python imaging library. From 12.0.0 until 13.0.0, Pillow's Image.merge() can dereference a null image8 plane. Validation skips the first input band, allowing a 32-bit integer or floating-point image backed by image32 storage to be merged as a narrower multiband image. A crafted IPTC file can reach this path when an application opens and loads it, or a caller can invoke Image.merge() directly with such a first band. This causes a native process crash. This issue is fixed in version 13.0.0."
+      },
+      "references": [
+        "https://github.com/python-pillow/Pillow/commit/b6ee66e8b2c2c0932bdf65f963268d9f2927ef86",
+        "https://github.com/python-pillow/Pillow/releases/tag/13.0.0",
+        "https://github.com/python-pillow/Pillow/security/advisories/GHSA-cp9v-662q-vvx9"
       ]
     },
     {
@@ -2491,7 +2494,8 @@
       "priority_score": 19,
       "priority_label": "low",
       "summary": {
-        "en": "An issue was discovered in 6.0 before 6.0.4, 5.2 before 5.2.13, and 4.2 before 4.2.30.\n`ASGIRequest` allows a remote attacker to spoof headers by exploiting an ambiguous mapping of two header variants (with hyphens or with underscores) to a single version with underscores.\nEarlier, unsupported Django series (such as 5.0.x, 4.1.x, and 3.2.x) were not evaluated and may also be affected.\nDjango would like to thank Tarek Nakkouch for reporting this issue."
+        "en": "An issue was discovered in 6.0 before 6.0.4, 5.2 before 5.2.13, and 4.2 before 4.2.30.\n`ASGIRequest` allows a remote attacker to spoof headers by exploiting an ambiguous mapping of two header variants (with hyphens or with underscores) to a single version with underscores.\nEarlier, unsupported Django series (such as 5.0.x, 4.1.x, and 3.2.x) were not evaluated and may also be affected.\nDjango would like to thank Tarek Nakkouch for reporting this issue.",
+        "es": "Se descubri\u00f3 un problema en 6.0 anterior a 6.0.4, 5.2 anterior a 5.2.13 y 4.2 anterior a 4.2.30.\nASGIRequest permite a un atacante remoto suplantar encabezados al explotar un mapeo ambiguo de dos variantes de encabezado (con guiones o con guiones bajos) a una \u00fanica versi\u00f3n con guiones bajos.\nSeries de Django anteriores y no compatibles (como 5.0.x, 4.1.x y 3.2.x) no fueron evaluadas y tambi\u00e9n pueden verse afectadas.\nDjango desea agradecer a Tarek Nakkouch por informar sobre este problema."
       },
       "references": [
         "https://docs.djangoproject.com/en/dev/releases/security/",
@@ -2585,7 +2589,8 @@
       "priority_score": 19,
       "priority_label": "low",
       "summary": {
-        "en": "PyJWT is a JSON Web Token implementation in Python. Prior to 2.13.0, when the verifier is decoding JSON Web Tokens, while supporting both asymmetric and HMAC algorithms, the library does not validate use of JSON Web Keys in HMAC algorithm, allowing attacker to use the issuer public key as the secret key for HMAC algorithm. This vulnerability is fixed in 2.13.0."
+        "en": "PyJWT is a JSON Web Token implementation in Python. Prior to 2.13.0, when the verifier is decoding JSON Web Tokens, while supporting both asymmetric and HMAC algorithms, the library does not validate use of JSON Web Keys in HMAC algorithm, allowing attacker to use the issuer public key as the secret key for HMAC algorithm. This vulnerability is fixed in 2.13.0.",
+        "es": "PyJWT es una implementaci\u00f3n de JSON Web Token en Python. Antes de 2.13.0, cuando el verificador est\u00e1 decodificando JSON Web Tokens, mientras soporta tanto algoritmos asim\u00e9tricos como HMAC, la biblioteca no valida el uso de JSON Web Keys en el algoritmo HMAC, permitiendo al atacante usar la clave p\u00fablica del emisor como clave secreta para el algoritmo HMAC. Esta vulnerabilidad se corrige en 2.13.0."
       },
       "references": [
         "https://github.com/jpadilla/pyjwt/security/advisories/GHSA-xgmm-8j9v-c9wx",
@@ -3073,12 +3078,12 @@
       "installed_version": "12.1.0",
       "fixed_version": "13.0.0",
       "app": "pygoat",
-      "cvss": null,
+      "cvss": 8.2,
       "epss": 0.0051,
       "in_kev": false,
       "kev_date_added": null,
-      "priority_score": 0,
-      "priority_label": "low",
+      "priority_score": 21,
+      "priority_label": "medium",
       "summary": {
         "en": "Pillow is a Python imaging library. Prior to 13.0.0, Pillow's P;2L and P;4L raw decoders can read past the end of an input buffer. ImagingRawDecode calculates a packed-pixel row size, while the unpackers read separately padded bit planes. A caller can supply a buffer and image dimensions whose accepted size is smaller than the unpacker's actual footprint. This can disclose up to three adjacent heap bytes in output pixels or crash the process. This issue is fixed in version 13.0.0."
       },
@@ -3086,29 +3091,6 @@
         "https://github.com/python-pillow/Pillow/commit/392ee6f0d19a4adb766a63e9a99f3c28193b8d31",
         "https://github.com/python-pillow/Pillow/releases/tag/13.0.0",
         "https://github.com/python-pillow/Pillow/security/advisories/GHSA-4558-3h8r-v8xp"
-      ]
-    },
-    {
-      "id": "pygoat:CVE-2026-112401:pillow:12.1.0",
-      "cve": "CVE-2026-112401",
-      "package": "pillow",
-      "ecosystem": "PyPI",
-      "installed_version": "12.1.0",
-      "fixed_version": "13.0.0",
-      "app": "pygoat",
-      "cvss": null,
-      "epss": 0.00479,
-      "in_kev": false,
-      "kev_date_added": null,
-      "priority_score": 0,
-      "priority_label": "low",
-      "summary": {
-        "en": "Pillow is a Python imaging library. From 5.4.0 until 13.0.0, Pillow performs quadratic copying while parsing GIF comments. GifImageFile._seek() repeatedly appends immutable bytes for comment sub-blocks and multiple comment extensions, and frame zero is parsed during Image.open(). An attacker can submit a small-dimension GIF containing many comment extensions to any application that opens the file. This can consume excessive CPU and deny service before the application can inspect the image. This issue is fixed in version 13.0.0."
-      },
-      "references": [
-        "https://github.com/python-pillow/Pillow/commit/68a3fe957d8a4d552e8c69d96066d749f0614c7e",
-        "https://github.com/python-pillow/Pillow/releases/tag/13.0.0",
-        "https://github.com/python-pillow/Pillow/security/advisories/GHSA-74r2-7ff9-mjj2"
       ]
     },
     {
@@ -3132,6 +3114,29 @@
         "https://github.com/python-pillow/Pillow/commit/68a3fe957d8a4d552e8c69d96066d749f0614c7e",
         "https://github.com/python-pillow/Pillow/releases/tag/13.0.0",
         "https://github.com/python-pillow/Pillow/security/advisories/GHSA-fc9g-5qg7-mf45"
+      ]
+    },
+    {
+      "id": "pygoat:CVE-2026-112401:pillow:12.1.0",
+      "cve": "CVE-2026-112401",
+      "package": "pillow",
+      "ecosystem": "PyPI",
+      "installed_version": "12.1.0",
+      "fixed_version": "13.0.0",
+      "app": "pygoat",
+      "cvss": null,
+      "epss": 0.00479,
+      "in_kev": false,
+      "kev_date_added": null,
+      "priority_score": 0,
+      "priority_label": "low",
+      "summary": {
+        "en": "Pillow is a Python imaging library. From 5.4.0 until 13.0.0, Pillow performs quadratic copying while parsing GIF comments. GifImageFile._seek() repeatedly appends immutable bytes for comment sub-blocks and multiple comment extensions, and frame zero is parsed during Image.open(). An attacker can submit a small-dimension GIF containing many comment extensions to any application that opens the file. This can consume excessive CPU and deny service before the application can inspect the image. This issue is fixed in version 13.0.0."
+      },
+      "references": [
+        "https://github.com/python-pillow/Pillow/commit/68a3fe957d8a4d552e8c69d96066d749f0614c7e",
+        "https://github.com/python-pillow/Pillow/releases/tag/13.0.0",
+        "https://github.com/python-pillow/Pillow/security/advisories/GHSA-74r2-7ff9-mjj2"
       ]
     },
     {
@@ -3940,7 +3945,8 @@
       "priority_score": 10,
       "priority_label": "low",
       "summary": {
-        "en": "PyJWT is a JSON Web Token implementation in Python. Prior to 2.13.0, PyJWKClient.get_signing_key() forces a fresh HTTP request to the JWKS endpoint for every JWT with an unknown kid value, with no rate limiting. Since kid comes from the unverified token header, an attacker can trigger unlimited outbound requests. The vulnerability surfaces only when a JWKS fetch fails; an attacker can attempt to provoke that with sustained unknown-kid traffic, but the outcome depends on upstream JWKS-endpoint behavior (rate limiting, transient errors) which is beyond the attacker's control. This vulnerability is fixed in 2.13.0."
+        "en": "PyJWT is a JSON Web Token implementation in Python. Prior to 2.13.0, PyJWKClient.get_signing_key() forces a fresh HTTP request to the JWKS endpoint for every JWT with an unknown kid value, with no rate limiting. Since kid comes from the unverified token header, an attacker can trigger unlimited outbound requests. The vulnerability surfaces only when a JWKS fetch fails; an attacker can attempt to provoke that with sustained unknown-kid traffic, but the outcome depends on upstream JWKS-endpoint behavior (rate limiting, transient errors) which is beyond the attacker's control. This vulnerability is fixed in 2.13.0.",
+        "es": "PyJWT es una implementaci\u00f3n de JSON Web Token en Python. Antes de la versi\u00f3n 2.13.0, PyJWKClient.get_signing_key() fuerza una nueva solicitud HTTP al endpoint JWKS para cada JWT con un valor kid desconocido, sin limitaci\u00f3n de tasa. Dado que kid proviene del encabezado del token no verificado, un atacante puede desencadenar solicitudes salientes ilimitadas. La vulnerabilidad solo se manifiesta cuando una obtenci\u00f3n de JWKS falla; un atacante puede intentar provocar eso con tr\u00e1fico sostenido de kid desconocido, pero el resultado depende del comportamiento del endpoint JWKS ascendente (limitaci\u00f3n de tasa, errores transitorios) lo cual est\u00e1 fuera del control del atacante. Esta vulnerabilidad est\u00e1 corregida en la versi\u00f3n 2.13.0."
       },
       "references": [
         "https://github.com/jpadilla/pyjwt/security/advisories/GHSA-fhv5-28vv-h8m8"
@@ -4009,7 +4015,8 @@
       "priority_score": 25,
       "priority_label": "medium",
       "summary": {
-        "en": "An issue was discovered in 6.0 before 6.0.4, 5.2 before 5.2.13, and 4.2 before 4.2.30.\nAdd permissions on inline model instances were not validated on submission of\r\nforged `POST` data in `GenericInlineModelAdmin`.\nEarlier, unsupported Django series (such as 5.0.x, 4.1.x, and 3.2.x) were not evaluated and may also be affected.\nDjango would like to thank N05ec@LZU-DSLab for reporting this issue."
+        "en": "An issue was discovered in 6.0 before 6.0.4, 5.2 before 5.2.13, and 4.2 before 4.2.30.\nAdd permissions on inline model instances were not validated on submission of\r\nforged `POST` data in `GenericInlineModelAdmin`.\nEarlier, unsupported Django series (such as 5.0.x, 4.1.x, and 3.2.x) were not evaluated and may also be affected.\nDjango would like to thank N05ec@LZU-DSLab for reporting this issue.",
+        "es": "Se descubri\u00f3 un problema en 6.0 antes de 6.0.4, 5.2 antes de 5.2.13 y 4.2 antes de 4.2.30.\nLos permisos de adici\u00f3n en instancias de modelos en l\u00ednea no se validaron al enviar datos \u2019POST\u2019 falsificados en \u2019GenericInlineModelAdmin\u2019.\nSeries de Django anteriores no soportadas (como 5.0.x, 4.1.x y 3.2.x) no se evaluaron y tambi\u00e9n pueden estar afectadas.\nDjango desea agradecer a N05ec@LZU-DSLab por informar de este problema."
       },
       "references": [
         "https://docs.djangoproject.com/en/dev/releases/security/",
@@ -4174,7 +4181,8 @@
       "priority_score": 11,
       "priority_label": "low",
       "summary": {
-        "en": "PyJWT is a JSON Web Token implementation in Python. Prior to 2.13.0, PyJWKClient passes its uri argument directly to urllib.request.urlopen() which uses Python stdlib's default OpenerDirector registering HTTPHandler, HTTPSHandler, FTPHandler, FileHandler, and DataHandler. There is currently no documented option to restrict which schemes PyJWKClient will fetch. If an application's jku URL ingestion path accepts attacker-influenced URLs (e.g., from JWT header, configuration file, OAuth flow parameter), the attacker can cause PyJWKClient to read arbitrary local files via file:// (SSRF on local filesystem), cause PyJWKClient to attempt FTP / data-URI fetches (broader SSRF surface), or forge tokens that PyJWT verifies as valid. The library does not directly return non-HTTP(S) URI contents to the attacker; the chained \"plant a JWKS to forge tokens\" scenario described in the original report requires additional application-layer flaws (attacker write access to a filesystem path, untrusted jku derivation) that this fix does not address. This vulnerability is fixed in 2.13.0."
+        "en": "PyJWT is a JSON Web Token implementation in Python. Prior to 2.13.0, PyJWKClient passes its uri argument directly to urllib.request.urlopen() which uses Python stdlib's default OpenerDirector registering HTTPHandler, HTTPSHandler, FTPHandler, FileHandler, and DataHandler. There is currently no documented option to restrict which schemes PyJWKClient will fetch. If an application's jku URL ingestion path accepts attacker-influenced URLs (e.g., from JWT header, configuration file, OAuth flow parameter), the attacker can cause PyJWKClient to read arbitrary local files via file:// (SSRF on local filesystem), cause PyJWKClient to attempt FTP / data-URI fetches (broader SSRF surface), or forge tokens that PyJWT verifies as valid. The library does not directly return non-HTTP(S) URI contents to the attacker; the chained \"plant a JWKS to forge tokens\" scenario described in the original report requires additional application-layer flaws (attacker write access to a filesystem path, untrusted jku derivation) that this fix does not address. This vulnerability is fixed in 2.13.0.",
+        "es": "PyJWT es una implementaci\u00f3n de JSON Web Token en Python. Antes de la versi\u00f3n 2.13.0, PyJWKClient pasa su argumento uri directamente a urllib.request.urlopen(), que utiliza el OpenerDirector predeterminado de la biblioteca est\u00e1ndar de Python, registrando HTTPHandler, HTTPSHandler, FTPHandler, FileHandler y DataHandler. Actualmente no existe una opci\u00f3n documentada para restringir qu\u00e9 esquemas PyJWKClient recuperar\u00e1. Si la ruta de ingesta de URL jku de una aplicaci\u00f3n acepta URL influenciadas por el atacante (por ejemplo, desde el encabezado JWT, archivo de configuraci\u00f3n, par\u00e1metro de flujo OAuth), el atacante puede hacer que PyJWKClient lea archivos locales arbitrarios a trav\u00e9s de file: // (SSRF en el sistema de archivos local), hacer que PyJWKClient intente recuperaciones FTP / data-URI (superficie de SSRF m\u00e1s amplia), o falsificar tokens que PyJWT verifica como v\u00e1lidos. La biblioteca no devuelve directamente contenidos URI que no sean HTTP(S) al atacante; el escenario encadenado de \u2019plantar un JWKS para falsificar tokens\u2019 descrito en el informe original requiere fallas adicionales en la capa de aplicaci\u00f3n (acceso de escritura del atacante a una ruta del sistema de archivos, derivaci\u00f3n jku no confiable) que esta correcci\u00f3n no aborda. Esta vulnerabilidad se corrige en la versi\u00f3n 2.13.0."
       },
       "references": [
         "https://github.com/jpadilla/pyjwt/security/advisories/GHSA-993g-76c3-p5m4"
@@ -4360,7 +4368,8 @@
       "priority_score": 7,
       "priority_label": "low",
       "summary": {
-        "en": "An issue was discovered in 6.0 before 6.0.4, 5.2 before 5.2.13, and 4.2 before 4.2.30.\nAdmin changelist forms using `ModelAdmin.list_editable` incorrectly allowed new\r\ninstances to be created via forged `POST` data.\nEarlier, unsupported Django series (such as 5.0.x, 4.1.x, and 3.2.x) were not evaluated and may also be affected.\nDjango would like to thank Cantina for reporting this issue."
+        "en": "An issue was discovered in 6.0 before 6.0.4, 5.2 before 5.2.13, and 4.2 before 4.2.30.\nAdmin changelist forms using `ModelAdmin.list_editable` incorrectly allowed new\r\ninstances to be created via forged `POST` data.\nEarlier, unsupported Django series (such as 5.0.x, 4.1.x, and 3.2.x) were not evaluated and may also be affected.\nDjango would like to thank Cantina for reporting this issue.",
+        "es": "Se descubri\u00f3 un problema en 6.0 anterior a 6.0.4, 5.2 anterior a 5.2.13 y 4.2 anterior a 4.2.30.\nLos formularios de lista de cambios de administraci\u00f3n que utilizan \u2019ModelAdmin.list_editable\u2019 permitieron de forma incorrecta la creaci\u00f3n de nuevas instancias mediante datos \u2019POST\u2019 falsificados.\nSeries de Django anteriores no compatibles (como 5.0.x, 4.1.x y 3.2.x) no fueron evaluadas y tambi\u00e9n podr\u00edan verse afectadas.\nDjango desea agradecer a Cantina por reportar este problema."
       },
       "references": [
         "https://docs.djangoproject.com/en/dev/releases/security/",
@@ -6916,7 +6925,8 @@
       "priority_score": 26,
       "priority_label": "medium",
       "summary": {
-        "en": "Handlebars provides the power necessary to let users build semantic templates. In versions 4.0.0 through 4.7.8, `Handlebars.compile()` accepts a pre-parsed AST object in addition to a template string. The `value` field of a `NumberLiteral` AST node is emitted directly into the generated JavaScript without quoting or sanitization. An attacker who can supply a crafted AST to `compile()` can therefore inject and execute arbitrary JavaScript, leading to Remote Code Execution on the server. Version 4.7.9 fixes the issue. Some workarounds are available. Validate input type before calling `Handlebars.compile()`; ensure the argument is always a  `string`, never a plain object or JSON-deserialized value. Use the Handlebars runtime-only build (`handlebars/runtime`) on the server if templates are pre-compiled at build time; `compile()` will be unavailable."
+        "en": "Handlebars provides the power necessary to let users build semantic templates. In versions 4.0.0 through 4.7.8, `Handlebars.compile()` accepts a pre-parsed AST object in addition to a template string. The `value` field of a `NumberLiteral` AST node is emitted directly into the generated JavaScript without quoting or sanitization. An attacker who can supply a crafted AST to `compile()` can therefore inject and execute arbitrary JavaScript, leading to Remote Code Execution on the server. Version 4.7.9 fixes the issue. Some workarounds are available. Validate input type before calling `Handlebars.compile()`; ensure the argument is always a  `string`, never a plain object or JSON-deserialized value. Use the Handlebars runtime-only build (`handlebars/runtime`) on the server if templates are pre-compiled at build time; `compile()` will be unavailable.",
+        "es": "Handlebars proporciona la potencia necesaria para permitir a los usuarios construir plantillas sem\u00e1nticas. En las versiones 4.0.0 a 4.7.8, \u201cHandlebars.compile()\u201d acepta un objeto AST pre-parseado adem\u00e1s de una cadena de plantilla. El campo \u201cvalue\u201d de un nodo AST \u201cNumberLiteral\u201d se emite directamente en el JavaScript generado sin comillas ni sanitizaci\u00f3n. Un atacante que puede proporcionar un AST manipulado a \u201ccompile()\u201d puede, por lo tanto, inyectar y ejecutar JavaScript arbitrario, lo que lleva a la ejecuci\u00f3n remota de c\u00f3digo en el servidor. La versi\u00f3n 4.7.9 corrige el problema. Algunas soluciones alternativas est\u00e1n disponibles. Valide el tipo de entrada antes de llamar a \u201cHandlebars.compile()\u201d; aseg\u00farese de que el argumento sea siempre una cadena, nunca un objeto simple o un valor deserializado de JSON. Utilice la compilaci\u00f3n de solo tiempo de ejecuci\u00f3n de Handlebars (\u201chandlebars/runtime\u201d) en el servidor si las plantillas se pre-compilan en tiempo de compilaci\u00f3n; \u201ccompile()\u201d no estar\u00e1 disponible."
       },
       "references": [
         "https://github.com/handlebars-lang/handlebars.js/commit/68d8df5a88e0a26fe9e6084c5c6aaebe67b07da2",
@@ -6944,7 +6954,8 @@
       "priority_score": 26,
       "priority_label": "medium",
       "summary": {
-        "en": "Handlebars provides the power necessary to let users build semantic templates. In versions 4.0.0 through 4.7.8, `Handlebars.compile()` accepts a pre-parsed AST object in addition to a template string. The `value` field of a `NumberLiteral` AST node is emitted directly into the generated JavaScript without quoting or sanitization. An attacker who can supply a crafted AST to `compile()` can therefore inject and execute arbitrary JavaScript, leading to Remote Code Execution on the server. Version 4.7.9 fixes the issue. Some workarounds are available. Validate input type before calling `Handlebars.compile()`; ensure the argument is always a  `string`, never a plain object or JSON-deserialized value. Use the Handlebars runtime-only build (`handlebars/runtime`) on the server if templates are pre-compiled at build time; `compile()` will be unavailable."
+        "en": "Handlebars provides the power necessary to let users build semantic templates. In versions 4.0.0 through 4.7.8, `Handlebars.compile()` accepts a pre-parsed AST object in addition to a template string. The `value` field of a `NumberLiteral` AST node is emitted directly into the generated JavaScript without quoting or sanitization. An attacker who can supply a crafted AST to `compile()` can therefore inject and execute arbitrary JavaScript, leading to Remote Code Execution on the server. Version 4.7.9 fixes the issue. Some workarounds are available. Validate input type before calling `Handlebars.compile()`; ensure the argument is always a  `string`, never a plain object or JSON-deserialized value. Use the Handlebars runtime-only build (`handlebars/runtime`) on the server if templates are pre-compiled at build time; `compile()` will be unavailable.",
+        "es": "Handlebars proporciona la potencia necesaria para permitir a los usuarios construir plantillas sem\u00e1nticas. En las versiones 4.0.0 a 4.7.8, \u201cHandlebars.compile()\u201d acepta un objeto AST pre-parseado adem\u00e1s de una cadena de plantilla. El campo \u201cvalue\u201d de un nodo AST \u201cNumberLiteral\u201d se emite directamente en el JavaScript generado sin comillas ni sanitizaci\u00f3n. Un atacante que puede proporcionar un AST manipulado a \u201ccompile()\u201d puede, por lo tanto, inyectar y ejecutar JavaScript arbitrario, lo que lleva a la ejecuci\u00f3n remota de c\u00f3digo en el servidor. La versi\u00f3n 4.7.9 corrige el problema. Algunas soluciones alternativas est\u00e1n disponibles. Valide el tipo de entrada antes de llamar a \u201cHandlebars.compile()\u201d; aseg\u00farese de que el argumento sea siempre una cadena, nunca un objeto simple o un valor deserializado de JSON. Utilice la compilaci\u00f3n de solo tiempo de ejecuci\u00f3n de Handlebars (\u201chandlebars/runtime\u201d) en el servidor si las plantillas se pre-compilan en tiempo de compilaci\u00f3n; \u201ccompile()\u201d no estar\u00e1 disponible."
       },
       "references": [
         "https://github.com/handlebars-lang/handlebars.js/commit/68d8df5a88e0a26fe9e6084c5c6aaebe67b07da2",
@@ -8633,7 +8644,8 @@
       "priority_score": 21,
       "priority_label": "medium",
       "summary": {
-        "en": "Handlebars provides the power necessary to let users build semantic templates. In versions 4.0.0 through 4.7.8, the `@partial-block` special variable is stored in the template data context and is reachable and mutable from within a template via helpers that accept arbitrary objects. When a helper overwrites `@partial-block` with a crafted Handlebars AST, a subsequent invocation of `{{> @partial-block}}` compiles and executes that AST, enabling arbitrary JavaScript execution on the server. Version 4.7.9 fixes the issue. Some workarounds are available. First, use the runtime-only build (`require('handlebars/runtime')`). The `compile()` method is  absent, eliminating the vulnerable fallback path. Second, audit registered helpers for any that write arbitrary values to context objects. Helpers  should treat context data as read-only. Third, avoid registering helpers from third-party packages (such as `handlebars-helpers`) in  contexts where templates or context data can be influenced by untrusted input."
+        "en": "Handlebars provides the power necessary to let users build semantic templates. In versions 4.0.0 through 4.7.8, the `@partial-block` special variable is stored in the template data context and is reachable and mutable from within a template via helpers that accept arbitrary objects. When a helper overwrites `@partial-block` with a crafted Handlebars AST, a subsequent invocation of `{{> @partial-block}}` compiles and executes that AST, enabling arbitrary JavaScript execution on the server. Version 4.7.9 fixes the issue. Some workarounds are available. First, use the runtime-only build (`require('handlebars/runtime')`). The `compile()` method is  absent, eliminating the vulnerable fallback path. Second, audit registered helpers for any that write arbitrary values to context objects. Helpers  should treat context data as read-only. Third, avoid registering helpers from third-party packages (such as `handlebars-helpers`) in  contexts where templates or context data can be influenced by untrusted input.",
+        "es": "Handlebars proporciona la potencia necesaria para permitir a los usuarios construir plantillas sem\u00e1nticas. En las versiones 4.0.0 a 4.7.8, la variable especial \u201c@partial-block\u201d se almacena en el contexto de datos de la plantilla y es accesible y mutable desde dentro de una plantilla a trav\u00e9s de helpers que aceptan objetos arbitrarios. Cuando un helper sobrescribe \u201c@partial-block\u201d con un AST de Handlebars manipulado, una invocaci\u00f3n posterior de \u201c{{> @partial-block}}\u201d compila y ejecuta ese AST, permitiendo la ejecuci\u00f3n arbitraria de JavaScript en el servidor. La versi\u00f3n 4.7.9 corrige el problema. Hay algunas soluciones alternativas disponibles. Primero, use la compilaci\u00f3n solo en tiempo de ejecuci\u00f3n (\u201crequire(\u2019handlebars/runtime\u2019)\u201d). El m\u00e9todo \u201ccompile()\u201d est\u00e1 ausente, eliminando la ruta de reserva vulnerable. Segundo, audite los helpers registrados en busca de cualquiera que escriba valores arbitrarios en objetos de contexto. Los helpers deben tratar los datos de contexto como de solo lectura. Tercero, evite registrar helpers de paquetes de terceros (como \u201chandlebars-helpers\u201d) en contextos donde las plantillas o los datos de contexto puedan ser influenciados por entradas no confiables."
       },
       "references": [
         "https://github.com/handlebars-lang/handlebars.js/commit/68d8df5a88e0a26fe9e6084c5c6aaebe67b07da2",
@@ -8661,7 +8673,8 @@
       "priority_score": 21,
       "priority_label": "medium",
       "summary": {
-        "en": "Handlebars provides the power necessary to let users build semantic templates. In versions 4.0.0 through 4.7.8, the `@partial-block` special variable is stored in the template data context and is reachable and mutable from within a template via helpers that accept arbitrary objects. When a helper overwrites `@partial-block` with a crafted Handlebars AST, a subsequent invocation of `{{> @partial-block}}` compiles and executes that AST, enabling arbitrary JavaScript execution on the server. Version 4.7.9 fixes the issue. Some workarounds are available. First, use the runtime-only build (`require('handlebars/runtime')`). The `compile()` method is  absent, eliminating the vulnerable fallback path. Second, audit registered helpers for any that write arbitrary values to context objects. Helpers  should treat context data as read-only. Third, avoid registering helpers from third-party packages (such as `handlebars-helpers`) in  contexts where templates or context data can be influenced by untrusted input."
+        "en": "Handlebars provides the power necessary to let users build semantic templates. In versions 4.0.0 through 4.7.8, the `@partial-block` special variable is stored in the template data context and is reachable and mutable from within a template via helpers that accept arbitrary objects. When a helper overwrites `@partial-block` with a crafted Handlebars AST, a subsequent invocation of `{{> @partial-block}}` compiles and executes that AST, enabling arbitrary JavaScript execution on the server. Version 4.7.9 fixes the issue. Some workarounds are available. First, use the runtime-only build (`require('handlebars/runtime')`). The `compile()` method is  absent, eliminating the vulnerable fallback path. Second, audit registered helpers for any that write arbitrary values to context objects. Helpers  should treat context data as read-only. Third, avoid registering helpers from third-party packages (such as `handlebars-helpers`) in  contexts where templates or context data can be influenced by untrusted input.",
+        "es": "Handlebars proporciona la potencia necesaria para permitir a los usuarios construir plantillas sem\u00e1nticas. En las versiones 4.0.0 a 4.7.8, la variable especial \u201c@partial-block\u201d se almacena en el contexto de datos de la plantilla y es accesible y mutable desde dentro de una plantilla a trav\u00e9s de helpers que aceptan objetos arbitrarios. Cuando un helper sobrescribe \u201c@partial-block\u201d con un AST de Handlebars manipulado, una invocaci\u00f3n posterior de \u201c{{> @partial-block}}\u201d compila y ejecuta ese AST, permitiendo la ejecuci\u00f3n arbitraria de JavaScript en el servidor. La versi\u00f3n 4.7.9 corrige el problema. Hay algunas soluciones alternativas disponibles. Primero, use la compilaci\u00f3n solo en tiempo de ejecuci\u00f3n (\u201crequire(\u2019handlebars/runtime\u2019)\u201d). El m\u00e9todo \u201ccompile()\u201d est\u00e1 ausente, eliminando la ruta de reserva vulnerable. Segundo, audite los helpers registrados en busca de cualquiera que escriba valores arbitrarios en objetos de contexto. Los helpers deben tratar los datos de contexto como de solo lectura. Tercero, evite registrar helpers de paquetes de terceros (como \u201chandlebars-helpers\u201d) en contextos donde las plantillas o los datos de contexto puedan ser influenciados por entradas no confiables."
       },
       "references": [
         "https://github.com/handlebars-lang/handlebars.js/commit/68d8df5a88e0a26fe9e6084c5c6aaebe67b07da2",
@@ -8689,7 +8702,8 @@
       "priority_score": 21,
       "priority_label": "medium",
       "summary": {
-        "en": "Handlebars provides the power necessary to let users build semantic templates. In versions 4.0.0 through 4.7.8, a crafted object placed in the template context can bypass all conditional guards in `resolvePartial()` and cause `invokePartial()` to return `undefined`. The Handlebars runtime then treats the unresolved partial as a source that needs to be compiled, passing the crafted object to `env.compile()`. Because the object is a valid Handlebars AST containing injected code, the generated JavaScript executes arbitrary commands on the server. The attack requires the adversary to control a value that can be returned by a dynamic partial lookup. Version 4.7.9 fixes the issue. Some workarounds are available. First, use the runtime-only build (`require('handlebars/runtime')`). Without `compile()`,  the fallback compilation path in `invokePartial` is unreachable. Second, sanitize context data before rendering: Ensure no value in the context is a non-primitive  object that could be passed to a dynamic partial. Third, avoid dynamic partial lookups (`{{> (lookup ...)}}`) when context data is user-controlled."
+        "en": "Handlebars provides the power necessary to let users build semantic templates. In versions 4.0.0 through 4.7.8, a crafted object placed in the template context can bypass all conditional guards in `resolvePartial()` and cause `invokePartial()` to return `undefined`. The Handlebars runtime then treats the unresolved partial as a source that needs to be compiled, passing the crafted object to `env.compile()`. Because the object is a valid Handlebars AST containing injected code, the generated JavaScript executes arbitrary commands on the server. The attack requires the adversary to control a value that can be returned by a dynamic partial lookup. Version 4.7.9 fixes the issue. Some workarounds are available. First, use the runtime-only build (`require('handlebars/runtime')`). Without `compile()`,  the fallback compilation path in `invokePartial` is unreachable. Second, sanitize context data before rendering: Ensure no value in the context is a non-primitive  object that could be passed to a dynamic partial. Third, avoid dynamic partial lookups (`{{> (lookup ...)}}`) when context data is user-controlled.",
+        "es": "Handlebars proporciona la potencia necesaria para permitir a los usuarios construir plantillas sem\u00e1nticas. En las versiones 4.0.0 hasta la 4.7.8, un objeto especialmente dise\u00f1ado colocado en el contexto de la plantilla puede eludir todas las protecciones condicionales en \u2019resolvePartial()\u2019 y hacer que \u2019invokePartial()\u2019 devuelva \u2019undefined\u2019. El tiempo de ejecuci\u00f3n de Handlebars entonces trata el parcial no resuelto como una fuente que necesita ser compilada, pasando el objeto especialmente dise\u00f1ado a \u2019env.compile()\u2019. Debido a que el objeto es un AST de Handlebars v\u00e1lido que contiene c\u00f3digo inyectado, el JavaScript generado ejecuta comandos arbitrarios en el servidor. El ataque requiere que el adversario controle un valor que pueda ser devuelto por una b\u00fasqueda de parcial din\u00e1mico. La versi\u00f3n 4.7.9 corrige el problema. Algunas soluciones alternativas est\u00e1n disponibles. Primero, use la compilaci\u00f3n solo en tiempo de ejecuci\u00f3n (\u2019require(\u2019handlebars/runtime\u2019)\u2019). Sin \u2019compile()\u2019, la ruta de compilaci\u00f3n de respaldo en \u2019invokePartial\u2019 es inalcanzable. Segundo, sanee los datos del contexto antes de renderizar: Aseg\u00farese de que ning\u00fan valor en el contexto sea un objeto no primitivo que pueda ser pasado a un parcial din\u00e1mico. Tercero, evite las b\u00fasquedas de parciales din\u00e1micos (\u2019{{> (lookup ...)}}\u2019) cuando los datos del contexto son controlados por el usuario."
       },
       "references": [
         "https://github.com/handlebars-lang/handlebars.js/commit/68d8df5a88e0a26fe9e6084c5c6aaebe67b07da2",
@@ -8717,7 +8731,8 @@
       "priority_score": 21,
       "priority_label": "medium",
       "summary": {
-        "en": "Handlebars provides the power necessary to let users build semantic templates. In versions 4.0.0 through 4.7.8, a crafted object placed in the template context can bypass all conditional guards in `resolvePartial()` and cause `invokePartial()` to return `undefined`. The Handlebars runtime then treats the unresolved partial as a source that needs to be compiled, passing the crafted object to `env.compile()`. Because the object is a valid Handlebars AST containing injected code, the generated JavaScript executes arbitrary commands on the server. The attack requires the adversary to control a value that can be returned by a dynamic partial lookup. Version 4.7.9 fixes the issue. Some workarounds are available. First, use the runtime-only build (`require('handlebars/runtime')`). Without `compile()`,  the fallback compilation path in `invokePartial` is unreachable. Second, sanitize context data before rendering: Ensure no value in the context is a non-primitive  object that could be passed to a dynamic partial. Third, avoid dynamic partial lookups (`{{> (lookup ...)}}`) when context data is user-controlled."
+        "en": "Handlebars provides the power necessary to let users build semantic templates. In versions 4.0.0 through 4.7.8, a crafted object placed in the template context can bypass all conditional guards in `resolvePartial()` and cause `invokePartial()` to return `undefined`. The Handlebars runtime then treats the unresolved partial as a source that needs to be compiled, passing the crafted object to `env.compile()`. Because the object is a valid Handlebars AST containing injected code, the generated JavaScript executes arbitrary commands on the server. The attack requires the adversary to control a value that can be returned by a dynamic partial lookup. Version 4.7.9 fixes the issue. Some workarounds are available. First, use the runtime-only build (`require('handlebars/runtime')`). Without `compile()`,  the fallback compilation path in `invokePartial` is unreachable. Second, sanitize context data before rendering: Ensure no value in the context is a non-primitive  object that could be passed to a dynamic partial. Third, avoid dynamic partial lookups (`{{> (lookup ...)}}`) when context data is user-controlled.",
+        "es": "Handlebars proporciona la potencia necesaria para permitir a los usuarios construir plantillas sem\u00e1nticas. En las versiones 4.0.0 hasta la 4.7.8, un objeto especialmente dise\u00f1ado colocado en el contexto de la plantilla puede eludir todas las protecciones condicionales en \u2019resolvePartial()\u2019 y hacer que \u2019invokePartial()\u2019 devuelva \u2019undefined\u2019. El tiempo de ejecuci\u00f3n de Handlebars entonces trata el parcial no resuelto como una fuente que necesita ser compilada, pasando el objeto especialmente dise\u00f1ado a \u2019env.compile()\u2019. Debido a que el objeto es un AST de Handlebars v\u00e1lido que contiene c\u00f3digo inyectado, el JavaScript generado ejecuta comandos arbitrarios en el servidor. El ataque requiere que el adversario controle un valor que pueda ser devuelto por una b\u00fasqueda de parcial din\u00e1mico. La versi\u00f3n 4.7.9 corrige el problema. Algunas soluciones alternativas est\u00e1n disponibles. Primero, use la compilaci\u00f3n solo en tiempo de ejecuci\u00f3n (\u2019require(\u2019handlebars/runtime\u2019)\u2019). Sin \u2019compile()\u2019, la ruta de compilaci\u00f3n de respaldo en \u2019invokePartial\u2019 es inalcanzable. Segundo, sanee los datos del contexto antes de renderizar: Aseg\u00farese de que ning\u00fan valor en el contexto sea un objeto no primitivo que pueda ser pasado a un parcial din\u00e1mico. Tercero, evite las b\u00fasquedas de parciales din\u00e1micos (\u2019{{> (lookup ...)}}\u2019) cuando los datos del contexto son controlados por el usuario."
       },
       "references": [
         "https://github.com/handlebars-lang/handlebars.js/commit/68d8df5a88e0a26fe9e6084c5c6aaebe67b07da2",
@@ -9103,7 +9118,8 @@
       "priority_score": 19,
       "priority_label": "low",
       "summary": {
-        "en": "Handlebars provides the power necessary to let users build semantic templates. In versions 4.0.0 through 4.7.8, when a Handlebars template contains decorator syntax referencing an unregistered decorator (e.g. `{{*n}}`), the compiled template calls `lookupProperty(decorators, \"n\")`, which returns `undefined`. The runtime then immediately invokes the result as a function, causing an unhandled `TypeError: ... is not a function` that crashes the Node.js process. Any application that compiles user-supplied templates without wrapping the call in a `try/catch` is vulnerable to a single-request Denial of Service. Version 4.7.9 fixes the issue. Some workarounds are available. Wrap compilation and rendering in `try/catch`. Validate template input before passing it to `compile()`; reject templates containing  decorator syntax (`{{*...}}`) if decorators are not used in your application. Use the pre-compilation workflow; compile templates at build time and serve only pre-compiled  templates; do not call `compile()` at request time."
+        "en": "Handlebars provides the power necessary to let users build semantic templates. In versions 4.0.0 through 4.7.8, when a Handlebars template contains decorator syntax referencing an unregistered decorator (e.g. `{{*n}}`), the compiled template calls `lookupProperty(decorators, \"n\")`, which returns `undefined`. The runtime then immediately invokes the result as a function, causing an unhandled `TypeError: ... is not a function` that crashes the Node.js process. Any application that compiles user-supplied templates without wrapping the call in a `try/catch` is vulnerable to a single-request Denial of Service. Version 4.7.9 fixes the issue. Some workarounds are available. Wrap compilation and rendering in `try/catch`. Validate template input before passing it to `compile()`; reject templates containing  decorator syntax (`{{*...}}`) if decorators are not used in your application. Use the pre-compilation workflow; compile templates at build time and serve only pre-compiled  templates; do not call `compile()` at request time.",
+        "es": "Handlebars proporciona la potencia necesaria para permitir a los usuarios construir plantillas sem\u00e1nticas. En las versiones 4.0.0 a 4.7.8, cuando una plantilla de Handlebars contiene sintaxis de decorador que hace referencia a un decorador no registrado (por ejemplo, \u2019{{n}}\u2019), la plantilla compilada llama a \u2019lookupProperty(decorators, \u2019n\u2019)\u2019, lo que devuelve \u2019undefined\u2019. El tiempo de ejecuci\u00f3n invoca inmediatamente el resultado como una funci\u00f3n, causando un \u201cTypeError\u201d no manejado: \u2019... no es una funci\u00f3n\u2019 que bloquea el proceso de Node.js. Cualquier aplicaci\u00f3n que compile plantillas proporcionadas por el usuario sin envolver la llamada en un \u201ctry/catch\u201d es vulnerable a una denegaci\u00f3n de servicio de una sola solicitud. La versi\u00f3n 4.7.9 corrige el problema. Algunas soluciones alternativas est\u00e1n disponibles. Envuelva la compilaci\u00f3n y la renderizaci\u00f3n en \u201ctry/catch\u201d. Valide la entrada de la plantilla antes de pasarla a \u201ccompile()\u201d; rechace las plantillas que contengan sintaxis de decorador (\u2019{{*...}}\u2019) si los decoradores no se utilizan en su aplicaci\u00f3n. Utilice el flujo de trabajo de precompilaci\u00f3n; compile las plantillas en tiempo de compilaci\u00f3n y sirva solo plantillas precompiladas; no llame a \u201ccompile()\u201d en tiempo de solicitud."
       },
       "references": [
         "https://github.com/handlebars-lang/handlebars.js/commit/68d8df5a88e0a26fe9e6084c5c6aaebe67b07da2",
@@ -9131,7 +9147,8 @@
       "priority_score": 19,
       "priority_label": "low",
       "summary": {
-        "en": "Handlebars provides the power necessary to let users build semantic templates. In versions 4.0.0 through 4.7.8, when a Handlebars template contains decorator syntax referencing an unregistered decorator (e.g. `{{*n}}`), the compiled template calls `lookupProperty(decorators, \"n\")`, which returns `undefined`. The runtime then immediately invokes the result as a function, causing an unhandled `TypeError: ... is not a function` that crashes the Node.js process. Any application that compiles user-supplied templates without wrapping the call in a `try/catch` is vulnerable to a single-request Denial of Service. Version 4.7.9 fixes the issue. Some workarounds are available. Wrap compilation and rendering in `try/catch`. Validate template input before passing it to `compile()`; reject templates containing  decorator syntax (`{{*...}}`) if decorators are not used in your application. Use the pre-compilation workflow; compile templates at build time and serve only pre-compiled  templates; do not call `compile()` at request time."
+        "en": "Handlebars provides the power necessary to let users build semantic templates. In versions 4.0.0 through 4.7.8, when a Handlebars template contains decorator syntax referencing an unregistered decorator (e.g. `{{*n}}`), the compiled template calls `lookupProperty(decorators, \"n\")`, which returns `undefined`. The runtime then immediately invokes the result as a function, causing an unhandled `TypeError: ... is not a function` that crashes the Node.js process. Any application that compiles user-supplied templates without wrapping the call in a `try/catch` is vulnerable to a single-request Denial of Service. Version 4.7.9 fixes the issue. Some workarounds are available. Wrap compilation and rendering in `try/catch`. Validate template input before passing it to `compile()`; reject templates containing  decorator syntax (`{{*...}}`) if decorators are not used in your application. Use the pre-compilation workflow; compile templates at build time and serve only pre-compiled  templates; do not call `compile()` at request time.",
+        "es": "Handlebars proporciona la potencia necesaria para permitir a los usuarios construir plantillas sem\u00e1nticas. En las versiones 4.0.0 a 4.7.8, cuando una plantilla de Handlebars contiene sintaxis de decorador que hace referencia a un decorador no registrado (por ejemplo, \u2019{{n}}\u2019), la plantilla compilada llama a \u2019lookupProperty(decorators, \u2019n\u2019)\u2019, lo que devuelve \u2019undefined\u2019. El tiempo de ejecuci\u00f3n invoca inmediatamente el resultado como una funci\u00f3n, causando un \u201cTypeError\u201d no manejado: \u2019... no es una funci\u00f3n\u2019 que bloquea el proceso de Node.js. Cualquier aplicaci\u00f3n que compile plantillas proporcionadas por el usuario sin envolver la llamada en un \u201ctry/catch\u201d es vulnerable a una denegaci\u00f3n de servicio de una sola solicitud. La versi\u00f3n 4.7.9 corrige el problema. Algunas soluciones alternativas est\u00e1n disponibles. Envuelva la compilaci\u00f3n y la renderizaci\u00f3n en \u201ctry/catch\u201d. Valide la entrada de la plantilla antes de pasarla a \u201ccompile()\u201d; rechace las plantillas que contengan sintaxis de decorador (\u2019{{*...}}\u2019) si los decoradores no se utilizan en su aplicaci\u00f3n. Utilice el flujo de trabajo de precompilaci\u00f3n; compile las plantillas en tiempo de compilaci\u00f3n y sirva solo plantillas precompiladas; no llame a \u201ccompile()\u201d en tiempo de solicitud."
       },
       "references": [
         "https://github.com/handlebars-lang/handlebars.js/commit/68d8df5a88e0a26fe9e6084c5c6aaebe67b07da2",
@@ -9745,7 +9762,8 @@
       "priority_score": 17,
       "priority_label": "low",
       "summary": {
-        "en": "The brace-expansion library generates arbitrary strings containing a common prefix and suffix. Prior to versions 5.0.5, 3.0.2, 2.0.3, and 1.1.13, a brace pattern with a zero step value (e.g., `{1..2..0}`) causes the sequence generation loop to run indefinitely, making the process hang for seconds and allocate heaps of memory. Versions 5.0.5, 3.0.2, 2.0.3, and 1.1.13 fix the issue. As a workaround, sanitize strings passed to `expand()` to ensure a step value of `0` is not used."
+        "en": "The brace-expansion library generates arbitrary strings containing a common prefix and suffix. Prior to versions 5.0.5, 3.0.2, 2.0.3, and 1.1.13, a brace pattern with a zero step value (e.g., `{1..2..0}`) causes the sequence generation loop to run indefinitely, making the process hang for seconds and allocate heaps of memory. Versions 5.0.5, 3.0.2, 2.0.3, and 1.1.13 fix the issue. As a workaround, sanitize strings passed to `expand()` to ensure a step value of `0` is not used.",
+        "es": "La biblioteca brace-expansion genera cadenas arbitrarias que contienen un prefijo y un sufijo comunes. Antes de las versiones 5.0.5, 3.0.2, 2.0.3 y 1.1.13, un patr\u00f3n de corchetes con un valor de paso cero (por ejemplo, \u2019{1..2..0}\u2019) hace que el bucle de generaci\u00f3n de secuencia se ejecute indefinidamente, haciendo que el proceso se cuelgue por segundos y asigne montones de memoria. Las versiones 5.0.5, 3.0.2, 2.0.3 y 1.1.13 solucionan el problema. Como soluci\u00f3n alternativa, sanee las cadenas pasadas a expand() para asegurar que no se utilice un valor de paso de 0."
       },
       "references": [
         "https://github.com/juliangruber/brace-expansion/blob/daa71bcb4a30a2df9bcb7f7b8daaf2ab30e5794a/src/index.ts#L107-L113",
@@ -9798,7 +9816,8 @@
       "priority_score": 21,
       "priority_label": "medium",
       "summary": {
-        "en": "Handlebars provides the power necessary to let users build semantic templates. In versions 4.0.0 through 4.7.8, the Handlebars CLI precompiler (`bin/handlebars` / `lib/precompiler.js`) concatenates user-controlled strings \u2014 template file names and several CLI options \u2014 directly into the JavaScript it emits, without any escaping or sanitization. An attacker who can influence template filenames or CLI arguments can inject arbitrary JavaScript that executes when the generated bundle is loaded in Node.js or a browser. Version 4.7.9 fixes the issue. Some workarounds are available. First, validate all CLI inputs before invoking the precompiler. Reject filenames and option values  that contain characters with JavaScript string-escaping significance (`\"`, `'`, `;`, etc.). Second, use a fixed, trusted namespace string passed via a configuration file rather than  command-line arguments in automated pipelines. Third, run the precompiler in a sandboxed environment (container with no write access to sensitive  paths) to limit the impact of successful exploitation. Fourth, audit template filenames in any repository or package that is consumed by an automated  build pipeline."
+        "en": "Handlebars provides the power necessary to let users build semantic templates. In versions 4.0.0 through 4.7.8, the Handlebars CLI precompiler (`bin/handlebars` / `lib/precompiler.js`) concatenates user-controlled strings \u2014 template file names and several CLI options \u2014 directly into the JavaScript it emits, without any escaping or sanitization. An attacker who can influence template filenames or CLI arguments can inject arbitrary JavaScript that executes when the generated bundle is loaded in Node.js or a browser. Version 4.7.9 fixes the issue. Some workarounds are available. First, validate all CLI inputs before invoking the precompiler. Reject filenames and option values  that contain characters with JavaScript string-escaping significance (`\"`, `'`, `;`, etc.). Second, use a fixed, trusted namespace string passed via a configuration file rather than  command-line arguments in automated pipelines. Third, run the precompiler in a sandboxed environment (container with no write access to sensitive  paths) to limit the impact of successful exploitation. Fourth, audit template filenames in any repository or package that is consumed by an automated  build pipeline.",
+        "es": "Handlebars proporciona la potencia necesaria para permitir a los usuarios construir plantillas sem\u00e1nticas. En las versiones 4.0.0 a 4.7.8, el precompilador CLI de Handlebars (bin/handlebars / lib/precompiler.js) concatena cadenas controladas por el usuario - nombres de archivos de plantilla y varias opciones CLI - directamente en el JavaScript que emite, sin ning\u00fan escape o saneamiento. Un atacante que puede influir en los nombres de archivo de plantilla o los argumentos CLI puede inyectar JavaScript arbitrario que se ejecuta cuando el paquete generado se carga en Node.js o un navegador. La versi\u00f3n 4.7.9 corrige el problema. Algunas soluciones alternativas est\u00e1n disponibles. Primero, valide todas las entradas CLI antes de invocar el precompilador. Rechace los nombres de archivo y los valores de opci\u00f3n que contengan caracteres con significado de escape de cadena de JavaScript (\u201d, \u2019, ;, etc.). Segundo, utilice una cadena de espacio de nombres fija y de confianza pasada a trav\u00e9s de un archivo de configuraci\u00f3n en lugar de argumentos de l\u00ednea de comandos en pipelines automatizados. Tercero, ejecute el precompilador en un entorno aislado (contenedor sin acceso de escritura a rutas sensibles) para limitar el impacto de una explotaci\u00f3n exitosa. Cuarto, audite los nombres de archivo de plantilla en cualquier repositorio o paquete que sea consumido por un pipeline de compilaci\u00f3n automatizado."
       },
       "references": [
         "https://github.com/handlebars-lang/handlebars.js/commit/68d8df5a88e0a26fe9e6084c5c6aaebe67b07da2",
@@ -9826,7 +9845,8 @@
       "priority_score": 21,
       "priority_label": "medium",
       "summary": {
-        "en": "Handlebars provides the power necessary to let users build semantic templates. In versions 4.0.0 through 4.7.8, the Handlebars CLI precompiler (`bin/handlebars` / `lib/precompiler.js`) concatenates user-controlled strings \u2014 template file names and several CLI options \u2014 directly into the JavaScript it emits, without any escaping or sanitization. An attacker who can influence template filenames or CLI arguments can inject arbitrary JavaScript that executes when the generated bundle is loaded in Node.js or a browser. Version 4.7.9 fixes the issue. Some workarounds are available. First, validate all CLI inputs before invoking the precompiler. Reject filenames and option values  that contain characters with JavaScript string-escaping significance (`\"`, `'`, `;`, etc.). Second, use a fixed, trusted namespace string passed via a configuration file rather than  command-line arguments in automated pipelines. Third, run the precompiler in a sandboxed environment (container with no write access to sensitive  paths) to limit the impact of successful exploitation. Fourth, audit template filenames in any repository or package that is consumed by an automated  build pipeline."
+        "en": "Handlebars provides the power necessary to let users build semantic templates. In versions 4.0.0 through 4.7.8, the Handlebars CLI precompiler (`bin/handlebars` / `lib/precompiler.js`) concatenates user-controlled strings \u2014 template file names and several CLI options \u2014 directly into the JavaScript it emits, without any escaping or sanitization. An attacker who can influence template filenames or CLI arguments can inject arbitrary JavaScript that executes when the generated bundle is loaded in Node.js or a browser. Version 4.7.9 fixes the issue. Some workarounds are available. First, validate all CLI inputs before invoking the precompiler. Reject filenames and option values  that contain characters with JavaScript string-escaping significance (`\"`, `'`, `;`, etc.). Second, use a fixed, trusted namespace string passed via a configuration file rather than  command-line arguments in automated pipelines. Third, run the precompiler in a sandboxed environment (container with no write access to sensitive  paths) to limit the impact of successful exploitation. Fourth, audit template filenames in any repository or package that is consumed by an automated  build pipeline.",
+        "es": "Handlebars proporciona la potencia necesaria para permitir a los usuarios construir plantillas sem\u00e1nticas. En las versiones 4.0.0 a 4.7.8, el precompilador CLI de Handlebars (bin/handlebars / lib/precompiler.js) concatena cadenas controladas por el usuario - nombres de archivos de plantilla y varias opciones CLI - directamente en el JavaScript que emite, sin ning\u00fan escape o saneamiento. Un atacante que puede influir en los nombres de archivo de plantilla o los argumentos CLI puede inyectar JavaScript arbitrario que se ejecuta cuando el paquete generado se carga en Node.js o un navegador. La versi\u00f3n 4.7.9 corrige el problema. Algunas soluciones alternativas est\u00e1n disponibles. Primero, valide todas las entradas CLI antes de invocar el precompilador. Rechace los nombres de archivo y los valores de opci\u00f3n que contengan caracteres con significado de escape de cadena de JavaScript (\u201d, \u2019, ;, etc.). Segundo, utilice una cadena de espacio de nombres fija y de confianza pasada a trav\u00e9s de un archivo de configuraci\u00f3n en lugar de argumentos de l\u00ednea de comandos en pipelines automatizados. Tercero, ejecute el precompilador en un entorno aislado (contenedor sin acceso de escritura a rutas sensibles) para limitar el impacto de una explotaci\u00f3n exitosa. Cuarto, audite los nombres de archivo de plantilla en cualquier repositorio o paquete que sea consumido por un pipeline de compilaci\u00f3n automatizado."
       },
       "references": [
         "https://github.com/handlebars-lang/handlebars.js/commit/68d8df5a88e0a26fe9e6084c5c6aaebe67b07da2",
@@ -10159,7 +10179,8 @@
       "priority_score": 19,
       "priority_label": "low",
       "summary": {
-        "en": "uuid is for the creation of RFC9562 (formerly RFC4122) UUIDs. Prior to 14.0.0, v3, v5, and v6 accept external output buffers but do not reject out-of-range writes (small buf or large offset). This allows silent partial writes into caller-provided buffers. This vulnerability is fixed in 14.0.0."
+        "en": "uuid is for the creation of RFC9562 (formerly RFC4122) UUIDs. Prior to 14.0.0, v3, v5, and v6 accept external output buffers but do not reject out-of-range writes (small buf or large offset). This allows silent partial writes into caller-provided buffers. This vulnerability is fixed in 14.0.0.",
+        "es": "uuid es para la creaci\u00f3n de UUIDs RFC9562 (anteriormente RFC4122). Antes de la 14.0.0, v3, v5 y v6 aceptan b\u00faferes de salida externos pero no rechazan escrituras fuera de rango (b\u00fafer peque\u00f1o o desplazamiento grande). Esto permite escrituras parciales silenciosas en b\u00faferes proporcionados por el llamador. Esta vulnerabilidad est\u00e1 corregida en la 14.0.0."
       },
       "references": [
         "https://github.com/uuidjs/uuid/security/advisories/GHSA-w5hq-g745-h8pq"
@@ -10180,7 +10201,8 @@
       "priority_score": 19,
       "priority_label": "low",
       "summary": {
-        "en": "Mongoose is a MongoDB object modeling tool designed to work in an asynchronous environment. Prior to 6.13.9, 7.8.9, 8.22.1, and 9.1.6, a vulnerability allows bypassing Mongoose\u2019s sanitizeFilter query sanitization mechanism via the $nor operator. When sanitizeFilter is enabled, Mongoose wraps query operators in $eq to neutralize them. However, prior to the fix, $nor was not included in the set of logical operators that are recursively sanitized. Because $nor accepts an array (like $and and $or), and arrays do not trigger hasDollarKeys(), malicious operators such as $ne, $gt, or $regex could be injected inside a $nor clause without being sanitized. This vulnerability is fixed in 6.13.9, 7.8.9, 8.22.1, and 9.1.6."
+        "en": "Mongoose is a MongoDB object modeling tool designed to work in an asynchronous environment. Prior to 6.13.9, 7.8.9, 8.22.1, and 9.1.6, a vulnerability allows bypassing Mongoose\u2019s sanitizeFilter query sanitization mechanism via the $nor operator. When sanitizeFilter is enabled, Mongoose wraps query operators in $eq to neutralize them. However, prior to the fix, $nor was not included in the set of logical operators that are recursively sanitized. Because $nor accepts an array (like $and and $or), and arrays do not trigger hasDollarKeys(), malicious operators such as $ne, $gt, or $regex could be injected inside a $nor clause without being sanitized. This vulnerability is fixed in 6.13.9, 7.8.9, 8.22.1, and 9.1.6.",
+        "es": "Mongoose es una herramienta de modelado de objetos de MongoDB dise\u00f1ada para funcionar en un entorno as\u00edncrono. Antes de las versiones 6.13.9, 7.8.9, 8.22.1 y 9.1.6, una vulnerabilidad permite eludir el mecanismo de saneamiento de consultas sanitizeFilter de Mongoose a trav\u00e9s del operador $nor. Cuando sanitizeFilter est\u00e1 habilitado, Mongoose envuelve los operadores de consulta en $eq para neutralizarlos. Sin embargo, antes de la correcci\u00f3n, $nor no estaba incluido en el conjunto de operadores l\u00f3gicos que son saneados recursivamente. Debido a que $nor acepta un array (como $and y $or), y los arrays no activan hasDollarKeys(), operadores maliciosos como $ne, $gt o $regex podr\u00edan ser inyectados dentro de una cl\u00e1usula $nor sin ser saneados. Esta vulnerabilidad est\u00e1 corregida en las versiones 6.13.9, 7.8.9, 8.22.1 y 9.1.6."
       },
       "references": [
         "https://github.com/Automattic/mongoose/security/advisories/GHSA-wpg9-53fq-2r8h"
@@ -10558,7 +10580,8 @@
       "priority_score": 12,
       "priority_label": "low",
       "summary": {
-        "en": "Handlebars provides the power necessary to let users build semantic templates. In versions 4.0.0 through 4.7.8, `resolvePartial()` in the Handlebars runtime resolves partial names via a plain property lookup on `options.partials` without guarding against prototype-chain traversal. When `Object.prototype` has been polluted with a string value whose key matches a partial reference in a template, the polluted string is used as the partial body and rendered without HTML escaping, resulting in reflected or stored XSS. Version 4.7.9 fixes the issue. Some workarounds are available. Apply `Object.freeze(Object.prototype)` early in application startup to prevent prototype  pollution. Note: this may break other libraries, and/or use the Handlebars runtime-only build (`handlebars/runtime`), which does not compile templates  and reduces the attack surface."
+        "en": "Handlebars provides the power necessary to let users build semantic templates. In versions 4.0.0 through 4.7.8, `resolvePartial()` in the Handlebars runtime resolves partial names via a plain property lookup on `options.partials` without guarding against prototype-chain traversal. When `Object.prototype` has been polluted with a string value whose key matches a partial reference in a template, the polluted string is used as the partial body and rendered without HTML escaping, resulting in reflected or stored XSS. Version 4.7.9 fixes the issue. Some workarounds are available. Apply `Object.freeze(Object.prototype)` early in application startup to prevent prototype  pollution. Note: this may break other libraries, and/or use the Handlebars runtime-only build (`handlebars/runtime`), which does not compile templates  and reduces the attack surface.",
+        "es": "Handlebars proporciona la potencia necesaria para permitir a los usuarios construir plantillas sem\u00e1nticas. En las versiones 4.0.0 a 4.7.8, \u201cresolvePartial()\u201d en el tiempo de ejecuci\u00f3n de Handlebars resuelve nombres de parciales a trav\u00e9s de una b\u00fasqueda de propiedad simple en \u201coptions.partials\u201d sin proteger contra el recorrido de la cadena de prototipos. Cuando \u201cObject.prototype\u201d ha sido contaminado con un valor de cadena cuya clave coincide con una referencia de parcial en una plantilla, la cadena contaminada se utiliza como cuerpo del parcial y se renderiza sin escape HTML, lo que resulta en XSS reflejado o almacenado. La versi\u00f3n 4.7.9 corrige el problema. Algunas soluciones alternativas est\u00e1n disponibles. Aplique \u201cObject.freeze(Object.prototype)\u201d al principio del inicio de la aplicaci\u00f3n para evitar la contaminaci\u00f3n de prototipos. Nota: esto puede romper otras bibliotecas, y/o use la compilaci\u00f3n solo en tiempo de ejecuci\u00f3n de Handlebars (\u201chandlebars/runtime\u201d), que no compila plantillas y reduce la superficie de ataque."
       },
       "references": [
         "https://github.com/handlebars-lang/handlebars.js/commit/68d8df5a88e0a26fe9e6084c5c6aaebe67b07da2",
@@ -10581,7 +10604,8 @@
       "priority_score": 12,
       "priority_label": "low",
       "summary": {
-        "en": "Handlebars provides the power necessary to let users build semantic templates. In versions 4.0.0 through 4.7.8, `resolvePartial()` in the Handlebars runtime resolves partial names via a plain property lookup on `options.partials` without guarding against prototype-chain traversal. When `Object.prototype` has been polluted with a string value whose key matches a partial reference in a template, the polluted string is used as the partial body and rendered without HTML escaping, resulting in reflected or stored XSS. Version 4.7.9 fixes the issue. Some workarounds are available. Apply `Object.freeze(Object.prototype)` early in application startup to prevent prototype  pollution. Note: this may break other libraries, and/or use the Handlebars runtime-only build (`handlebars/runtime`), which does not compile templates  and reduces the attack surface."
+        "en": "Handlebars provides the power necessary to let users build semantic templates. In versions 4.0.0 through 4.7.8, `resolvePartial()` in the Handlebars runtime resolves partial names via a plain property lookup on `options.partials` without guarding against prototype-chain traversal. When `Object.prototype` has been polluted with a string value whose key matches a partial reference in a template, the polluted string is used as the partial body and rendered without HTML escaping, resulting in reflected or stored XSS. Version 4.7.9 fixes the issue. Some workarounds are available. Apply `Object.freeze(Object.prototype)` early in application startup to prevent prototype  pollution. Note: this may break other libraries, and/or use the Handlebars runtime-only build (`handlebars/runtime`), which does not compile templates  and reduces the attack surface.",
+        "es": "Handlebars proporciona la potencia necesaria para permitir a los usuarios construir plantillas sem\u00e1nticas. En las versiones 4.0.0 a 4.7.8, \u201cresolvePartial()\u201d en el tiempo de ejecuci\u00f3n de Handlebars resuelve nombres de parciales a trav\u00e9s de una b\u00fasqueda de propiedad simple en \u201coptions.partials\u201d sin proteger contra el recorrido de la cadena de prototipos. Cuando \u201cObject.prototype\u201d ha sido contaminado con un valor de cadena cuya clave coincide con una referencia de parcial en una plantilla, la cadena contaminada se utiliza como cuerpo del parcial y se renderiza sin escape HTML, lo que resulta en XSS reflejado o almacenado. La versi\u00f3n 4.7.9 corrige el problema. Algunas soluciones alternativas est\u00e1n disponibles. Aplique \u201cObject.freeze(Object.prototype)\u201d al principio del inicio de la aplicaci\u00f3n para evitar la contaminaci\u00f3n de prototipos. Nota: esto puede romper otras bibliotecas, y/o use la compilaci\u00f3n solo en tiempo de ejecuci\u00f3n de Handlebars (\u201chandlebars/runtime\u201d), que no compila plantillas y reduce la superficie de ataque."
       },
       "references": [
         "https://github.com/handlebars-lang/handlebars.js/commit/68d8df5a88e0a26fe9e6084c5c6aaebe67b07da2",
@@ -10688,12 +10712,6 @@
     }
   ],
   "history": [
-    {
-      "date": "2026-09-27",
-      "findings_total": 312,
-      "critical": 4,
-      "high": 3
-    },
     {
       "date": "2026-09-28",
       "findings_total": 312,
@@ -10864,6 +10882,12 @@
     },
     {
       "date": "2026-10-26",
+      "findings_total": 386,
+      "critical": 3,
+      "high": 3
+    },
+    {
+      "date": "2026-10-27",
       "findings_total": 386,
       "critical": 3,
       "high": 3

@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-10-29T12:36:52.395696+00:00",
+  "generated_at": "2026-10-30T12:27:48.776317+00:00",
   "sources": {
     "kev": {
       "fetched": true,
@@ -7,11 +7,11 @@
     },
     "epss": {
       "fetched": true,
-      "entries": 323
+      "entries": 324
     },
     "nvd": {
       "fetched": true,
-      "entries": 324
+      "entries": 325
     }
   },
   "apps": [
@@ -1300,6 +1300,33 @@
       ]
     },
     {
+      "id": "pygoat:CVE-2026-25673:django:4.2",
+      "cve": "CVE-2026-25673",
+      "package": "django",
+      "ecosystem": "PyPI",
+      "installed_version": "4.2",
+      "fixed_version": "4.2.29",
+      "app": "pygoat",
+      "cvss": 7.5,
+      "epss": 0.00842,
+      "in_kev": false,
+      "kev_date_added": null,
+      "priority_score": 19,
+      "priority_label": "low",
+      "summary": {
+        "en": "An issue was discovered in 6.0 before 6.0.3, 5.2 before 5.2.12, and 4.2 before 4.2.29.\n`URLField.to_python()` in Django calls `urllib.parse.urlsplit()`, which performs NFKC normalization on Windows that is disproportionately slow for certain Unicode characters, allowing a remote attacker to cause denial of service via large URL inputs containing these characters.\nEarlier, unsupported Django series (such as 5.0.x, 4.1.x, and 3.2.x) were not evaluated and may also be affected.\nDjango would like to thank Seokchan Yoon for reporting this issue.",
+        "es": "Se descubri\u00f3 un problema en 6.0 anterior a 6.0.3, 5.2 anterior a 5.2.12, y 4.2 anterior a 4.2.29.\n`URLField.to_python()` en Django llama a `urllib.parse.urlsplit()`, que realiza la normalizaci\u00f3n NFKC en Windows, la cual es desproporcionadamente lenta para ciertos caracteres Unicode, permitiendo a un atacante remoto causar denegaci\u00f3n de servicio a trav\u00e9s de grandes entradas de URL que contienen estos caracteres.\nSeries de Django anteriores y no compatibles (como 5.0.x, 4.1.x y 3.2.x) no fueron evaluadas y tambi\u00e9n podr\u00edan estar afectadas.\nDjango desea agradecer a Seokchan Yoon por informar sobre este problema."
+      },
+      "references": [
+        "https://docs.djangoproject.com/en/dev/releases/security/",
+        "https://groups.google.com/g/django-announce",
+        "https://www.djangoproject.com/weblog/2026/mar/03/security-releases/",
+        "https://access.redhat.com/security/cve/CVE-2026-25673",
+        "https://bugzilla.redhat.com/show_bug.cgi?id=2444115",
+        "https://security.access.redhat.com/data/csaf/v2/vex/2026/cve-2026-25673.json"
+      ]
+    },
+    {
       "id": "pygoat:CVE-2024-26130:cryptography:39.0.1",
       "cve": "CVE-2024-26130",
       "package": "cryptography",
@@ -1401,33 +1428,6 @@
         "https://docs.djangoproject.com/en/dev/releases/security/",
         "https://groups.google.com/g/django-announce",
         "https://www.djangoproject.com/weblog/2026/apr/07/security-releases/"
-      ]
-    },
-    {
-      "id": "pygoat:CVE-2026-25673:django:4.2",
-      "cve": "CVE-2026-25673",
-      "package": "django",
-      "ecosystem": "PyPI",
-      "installed_version": "4.2",
-      "fixed_version": "4.2.29",
-      "app": "pygoat",
-      "cvss": 7.5,
-      "epss": 0.00764,
-      "in_kev": false,
-      "kev_date_added": null,
-      "priority_score": 19,
-      "priority_label": "low",
-      "summary": {
-        "en": "An issue was discovered in 6.0 before 6.0.3, 5.2 before 5.2.12, and 4.2 before 4.2.29.\n`URLField.to_python()` in Django calls `urllib.parse.urlsplit()`, which performs NFKC normalization on Windows that is disproportionately slow for certain Unicode characters, allowing a remote attacker to cause denial of service via large URL inputs containing these characters.\nEarlier, unsupported Django series (such as 5.0.x, 4.1.x, and 3.2.x) were not evaluated and may also be affected.\nDjango would like to thank Seokchan Yoon for reporting this issue.",
-        "es": "Se descubri\u00f3 un problema en 6.0 anterior a 6.0.3, 5.2 anterior a 5.2.12, y 4.2 anterior a 4.2.29.\n`URLField.to_python()` en Django llama a `urllib.parse.urlsplit()`, que realiza la normalizaci\u00f3n NFKC en Windows, la cual es desproporcionadamente lenta para ciertos caracteres Unicode, permitiendo a un atacante remoto causar denegaci\u00f3n de servicio a trav\u00e9s de grandes entradas de URL que contienen estos caracteres.\nSeries de Django anteriores y no compatibles (como 5.0.x, 4.1.x y 3.2.x) no fueron evaluadas y tambi\u00e9n podr\u00edan estar afectadas.\nDjango desea agradecer a Seokchan Yoon por informar sobre este problema."
-      },
-      "references": [
-        "https://docs.djangoproject.com/en/dev/releases/security/",
-        "https://groups.google.com/g/django-announce",
-        "https://www.djangoproject.com/weblog/2026/mar/03/security-releases/",
-        "https://access.redhat.com/security/cve/CVE-2026-25673",
-        "https://bugzilla.redhat.com/show_bug.cgi?id=2444115",
-        "https://security.access.redhat.com/data/csaf/v2/vex/2026/cve-2026-25673.json"
       ]
     },
     {
@@ -1691,6 +1691,40 @@
       ]
     },
     {
+      "id": "pygoat:CVE-2026-32274:black:26.1.0",
+      "cve": "CVE-2026-32274",
+      "package": "black",
+      "ecosystem": "PyPI",
+      "installed_version": "26.1.0",
+      "fixed_version": "26.3.1",
+      "app": "pygoat",
+      "cvss": 7.5,
+      "epss": 0.00646,
+      "in_kev": false,
+      "kev_date_added": null,
+      "priority_score": 19,
+      "priority_label": "low",
+      "summary": {
+        "en": "Black is the uncompromising Python code formatter. Starting in version 24.3.0 and prior to version 26.3.1, Black writes a cache file, the name of which is computed from various formatting options. The value of the --python-cell-magics option was placed in the filename without sanitization, which allowed an attacker who controls the value of this argument to write cache files to arbitrary file system locations. Fixed in Black 26.3.1.",
+        "es": "Black es el formateador de c\u00f3digo Python intransigente. Antes de la versi\u00f3n 26.3.1, Black escribe un archivo de cach\u00e9, cuyo nombre se calcula a partir de varias opciones de formato. El valor de la opci\u00f3n --python-cell-magics se colocaba en el nombre del archivo sin sanitizaci\u00f3n, lo que permit\u00eda a un atacante que controla el valor de este argumento escribir archivos de cach\u00e9 en ubicaciones arbitrarias del sistema de archivos. Corregido en Black 26.3.1."
+      },
+      "references": [
+        "https://access.redhat.com/errata/RHSA-2026:10184",
+        "https://access.redhat.com/errata/RHSA-2026:13545",
+        "https://access.redhat.com/errata/RHSA-2026:13553",
+        "https://access.redhat.com/security/cve/CVE-2026-32274",
+        "https://bugzilla.redhat.com/show_bug.cgi?id=2447111",
+        "https://github.com/psf/black/commit/4937fe6cf241139ddbfc16b0bdbb5b422798909d",
+        "https://github.com/psf/black/commit/ed770ba4dd50c419148a0fca2b43937a7447e1f9",
+        "https://github.com/psf/black/pull/4176",
+        "https://github.com/psf/black/pull/5038",
+        "https://github.com/psf/black/releases/tag/26.3.1",
+        "https://github.com/psf/black/security/advisories/GHSA-3936-cmfr-pm3m",
+        "https://github.com/pypa/advisory-database/tree/main/vulns/black/PYSEC-2026-2121.yaml",
+        "https://security.access.redhat.com/data/csaf/v2/vex/2026/cve-2026-32274.json"
+      ]
+    },
+    {
       "id": "pygoat:CVE-2024-39329:django:4.2",
       "cve": "CVE-2024-39329",
       "package": "django",
@@ -1716,37 +1750,26 @@
       ]
     },
     {
-      "id": "pygoat:CVE-2026-32274:black:26.1.0",
-      "cve": "CVE-2026-32274",
-      "package": "black",
+      "id": "pygoat:CVE-2026-112895:pillow:12.1.0",
+      "cve": "CVE-2026-112895",
+      "package": "pillow",
       "ecosystem": "PyPI",
-      "installed_version": "26.1.0",
-      "fixed_version": "26.3.1",
+      "installed_version": "12.1.0",
+      "fixed_version": "13.0.0",
       "app": "pygoat",
       "cvss": 7.5,
-      "epss": 0.00632,
+      "epss": 0.00594,
       "in_kev": false,
       "kev_date_added": null,
       "priority_score": 19,
       "priority_label": "low",
       "summary": {
-        "en": "Black is the uncompromising Python code formatter. Starting in version 24.3.0 and prior to version 26.3.1, Black writes a cache file, the name of which is computed from various formatting options. The value of the --python-cell-magics option was placed in the filename without sanitization, which allowed an attacker who controls the value of this argument to write cache files to arbitrary file system locations. Fixed in Black 26.3.1.",
-        "es": "Black es el formateador de c\u00f3digo Python intransigente. Antes de la versi\u00f3n 26.3.1, Black escribe un archivo de cach\u00e9, cuyo nombre se calcula a partir de varias opciones de formato. El valor de la opci\u00f3n --python-cell-magics se colocaba en el nombre del archivo sin sanitizaci\u00f3n, lo que permit\u00eda a un atacante que controla el valor de este argumento escribir archivos de cach\u00e9 en ubicaciones arbitrarias del sistema de archivos. Corregido en Black 26.3.1."
+        "en": "Pillow is a Python imaging library. From 5.1.0 until 13.0.0, Pillow can exhaust resources while parsing an existing PDF during an append operation. PdfParser follows page-tree child references without cycle or duplication tracking and follows previous-trailer chains with only an exact repeated-offset guard, so deep or cyclic page trees and long chains of unique trailer offsets can exhaust the Python stack. Repeated non-cyclic /Kids references can also cause super-linear CPU and memory use. An attacker can supply such a PDF to an application that calls Image.save with PDF append enabled. This can raise an uncaught RecursionError or consume excessive CPU and memory before output is written, causing denial of service. This issue is fixed in version 13.0.0."
       },
       "references": [
-        "https://access.redhat.com/errata/RHSA-2026:10184",
-        "https://access.redhat.com/errata/RHSA-2026:13545",
-        "https://access.redhat.com/errata/RHSA-2026:13553",
-        "https://access.redhat.com/security/cve/CVE-2026-32274",
-        "https://bugzilla.redhat.com/show_bug.cgi?id=2447111",
-        "https://github.com/psf/black/commit/4937fe6cf241139ddbfc16b0bdbb5b422798909d",
-        "https://github.com/psf/black/commit/ed770ba4dd50c419148a0fca2b43937a7447e1f9",
-        "https://github.com/psf/black/pull/4176",
-        "https://github.com/psf/black/pull/5038",
-        "https://github.com/psf/black/releases/tag/26.3.1",
-        "https://github.com/psf/black/security/advisories/GHSA-3936-cmfr-pm3m",
-        "https://github.com/pypa/advisory-database/tree/main/vulns/black/PYSEC-2026-2121.yaml",
-        "https://security.access.redhat.com/data/csaf/v2/vex/2026/cve-2026-32274.json"
+        "https://github.com/python-pillow/Pillow/commit/e2ae7eacad6de68c37eb28b633a97bebacf2c5bf",
+        "https://github.com/python-pillow/Pillow/releases/tag/13.0.0",
+        "https://github.com/python-pillow/Pillow/security/advisories/GHSA-p4wg-p73j-c528"
       ]
     },
     {
@@ -1793,29 +1816,6 @@
         "https://github.com/python-pillow/Pillow/commit/aafa6c75f7cdabb9f409a8aac7c780bea31d08d9",
         "https://github.com/python-pillow/Pillow/releases/tag/13.0.0",
         "https://github.com/python-pillow/Pillow/security/advisories/GHSA-7mwm-ghpf-9vrm"
-      ]
-    },
-    {
-      "id": "pygoat:CVE-2026-112895:pillow:12.1.0",
-      "cve": "CVE-2026-112895",
-      "package": "pillow",
-      "ecosystem": "PyPI",
-      "installed_version": "12.1.0",
-      "fixed_version": "13.0.0",
-      "app": "pygoat",
-      "cvss": 7.5,
-      "epss": 0.00594,
-      "in_kev": false,
-      "kev_date_added": null,
-      "priority_score": 19,
-      "priority_label": "low",
-      "summary": {
-        "en": "Pillow is a Python imaging library. From 5.1.0 until 13.0.0, Pillow can exhaust resources while parsing an existing PDF during an append operation. PdfParser follows page-tree child references without cycle or duplication tracking and follows previous-trailer chains with only an exact repeated-offset guard, so deep or cyclic page trees and long chains of unique trailer offsets can exhaust the Python stack. Repeated non-cyclic /Kids references can also cause super-linear CPU and memory use. An attacker can supply such a PDF to an application that calls Image.save with PDF append enabled. This can raise an uncaught RecursionError or consume excessive CPU and memory before output is written, causing denial of service. This issue is fixed in version 13.0.0."
-      },
-      "references": [
-        "https://github.com/python-pillow/Pillow/commit/e2ae7eacad6de68c37eb28b633a97bebacf2c5bf",
-        "https://github.com/python-pillow/Pillow/releases/tag/13.0.0",
-        "https://github.com/python-pillow/Pillow/security/advisories/GHSA-p4wg-p73j-c528"
       ]
     },
     {
@@ -1949,29 +1949,6 @@
       ]
     },
     {
-      "id": "pygoat:CVE-2026-112397:pillow:12.1.0",
-      "cve": "CVE-2026-112397",
-      "package": "pillow",
-      "ecosystem": "PyPI",
-      "installed_version": "12.1.0",
-      "fixed_version": "13.0.0",
-      "app": "pygoat",
-      "cvss": 7.5,
-      "epss": 0.00573,
-      "in_kev": false,
-      "kev_date_added": null,
-      "priority_score": 19,
-      "priority_label": "low",
-      "summary": {
-        "en": "Pillow is a Python imaging library. Prior to 13.0.0, Pillow's ImageMorph.MorphOp.apply() can access memory before a row buffer for a zero-width image. PPM and PGM input can create an image with width zero, and the native morphology routine indexes outrow[width - 1] without rejecting that geometry. An attacker can supply such an image to an application that applies a morphology operation. This can crash the process. This issue is fixed in version 13.0.0."
-      },
-      "references": [
-        "https://github.com/python-pillow/Pillow/commit/18f7c0dfee93063c51db6ed0ca8c4da2999dcb64",
-        "https://github.com/python-pillow/Pillow/releases/tag/13.0.0",
-        "https://github.com/python-pillow/Pillow/security/advisories/GHSA-58r4-6rv3-gfh8"
-      ]
-    },
-    {
       "id": "pygoat:CVE-2026-112406:pillow:12.1.0",
       "cve": "CVE-2026-112406",
       "package": "pillow",
@@ -1992,6 +1969,29 @@
         "https://github.com/python-pillow/Pillow/commit/b3ebf20c694f2f12537a629c30229a1d5a53f777",
         "https://github.com/python-pillow/Pillow/releases/tag/13.0.0",
         "https://github.com/python-pillow/Pillow/security/advisories/GHSA-f2g6-542v-9j58"
+      ]
+    },
+    {
+      "id": "pygoat:CVE-2026-112397:pillow:12.1.0",
+      "cve": "CVE-2026-112397",
+      "package": "pillow",
+      "ecosystem": "PyPI",
+      "installed_version": "12.1.0",
+      "fixed_version": "13.0.0",
+      "app": "pygoat",
+      "cvss": 7.5,
+      "epss": 0.00573,
+      "in_kev": false,
+      "kev_date_added": null,
+      "priority_score": 19,
+      "priority_label": "low",
+      "summary": {
+        "en": "Pillow is a Python imaging library. Prior to 13.0.0, Pillow's ImageMorph.MorphOp.apply() can access memory before a row buffer for a zero-width image. PPM and PGM input can create an image with width zero, and the native morphology routine indexes outrow[width - 1] without rejecting that geometry. An attacker can supply such an image to an application that applies a morphology operation. This can crash the process. This issue is fixed in version 13.0.0."
+      },
+      "references": [
+        "https://github.com/python-pillow/Pillow/commit/18f7c0dfee93063c51db6ed0ca8c4da2999dcb64",
+        "https://github.com/python-pillow/Pillow/releases/tag/13.0.0",
+        "https://github.com/python-pillow/Pillow/security/advisories/GHSA-58r4-6rv3-gfh8"
       ]
     },
     {
@@ -3511,6 +3511,62 @@
       ]
     },
     {
+      "id": "pygoat:CVE-2026-32597:pyjwt:2.4.0",
+      "cve": "CVE-2026-32597",
+      "package": "pyjwt",
+      "ecosystem": "PyPI",
+      "installed_version": "2.4.0",
+      "fixed_version": "2.12.0",
+      "app": "pygoat",
+      "cvss": 7.5,
+      "epss": 0.00279,
+      "in_kev": false,
+      "kev_date_added": null,
+      "priority_score": 19,
+      "priority_label": "low",
+      "summary": {
+        "en": "PyJWT is a JSON Web Token implementation in Python. Prior to 2.12.0, PyJWT does not validate the crit (Critical) Header Parameter defined in RFC 7515 \u00a74.1.11. When a JWS token contains a crit array listing extensions that PyJWT does not understand, the library accepts the token instead of rejecting it. This violates the MUST requirement in the RFC. This vulnerability is fixed in 2.12.0.",
+        "es": "PyJWT es una implementaci\u00f3n de JSON Web Token en Python. Antes de la 2.12.0, PyJWT no valida el par\u00e1metro de encabezado crit (Cr\u00edtico) definido en la RFC 7515 \u00a74.1.11. Cuando un token JWS contiene un array crit que lista extensiones que PyJWT no entiende, la biblioteca acepta el token en lugar de rechazarlo. Esto viola el requisito MUST en la RFC. Esta vulnerabilidad est\u00e1 corregida en la 2.12.0."
+      },
+      "references": [
+        "https://github.com/jpadilla/pyjwt/security/advisories/GHSA-752w-5fwx-jx9f",
+        "https://lists.debian.org/debian-lts-announce/2026/05/msg00008.html",
+        "https://access.redhat.com/errata/RHSA-2026:10140",
+        "https://access.redhat.com/errata/RHSA-2026:10141",
+        "https://access.redhat.com/errata/RHSA-2026:10184",
+        "https://access.redhat.com/errata/RHSA-2026:12176",
+        "https://access.redhat.com/errata/RHSA-2026:13508",
+        "https://access.redhat.com/errata/RHSA-2026:13512",
+        "https://access.redhat.com/errata/RHSA-2026:13545",
+        "https://access.redhat.com/errata/RHSA-2026:13553",
+        "https://access.redhat.com/errata/RHSA-2026:13672",
+        "https://access.redhat.com/errata/RHSA-2026:13916",
+        "https://access.redhat.com/errata/RHSA-2026:17083",
+        "https://access.redhat.com/errata/RHSA-2026:19138",
+        "https://access.redhat.com/errata/RHSA-2026:19355",
+        "https://access.redhat.com/errata/RHSA-2026:19375",
+        "https://access.redhat.com/errata/RHSA-2026:19712",
+        "https://access.redhat.com/errata/RHSA-2026:21431",
+        "https://access.redhat.com/errata/RHSA-2026:21517",
+        "https://access.redhat.com/errata/RHSA-2026:22330",
+        "https://access.redhat.com/errata/RHSA-2026:24977",
+        "https://access.redhat.com/errata/RHSA-2026:26226",
+        "https://access.redhat.com/errata/RHSA-2026:37275",
+        "https://access.redhat.com/errata/RHSA-2026:42644",
+        "https://access.redhat.com/errata/RHSA-2026:6568",
+        "https://access.redhat.com/errata/RHSA-2026:6720",
+        "https://access.redhat.com/errata/RHSA-2026:6912",
+        "https://access.redhat.com/errata/RHSA-2026:6926",
+        "https://access.redhat.com/errata/RHSA-2026:8437",
+        "https://access.redhat.com/errata/RHSA-2026:8746",
+        "https://access.redhat.com/errata/RHSA-2026:8747",
+        "https://access.redhat.com/errata/RHSA-2026:8748",
+        "https://access.redhat.com/security/cve/CVE-2026-32597",
+        "https://bugzilla.redhat.com/show_bug.cgi?id=2447194",
+        "https://security.access.redhat.com/data/csaf/v2/vex/2026/cve-2026-32597.json"
+      ]
+    },
+    {
       "id": "pygoat:CVE-2026-102598:werkzeug:2.1.2",
       "cve": "CVE-2026-102598",
       "package": "werkzeug",
@@ -3581,62 +3637,6 @@
         "https://github.com/python-pillow/Pillow/pull/9708",
         "https://github.com/python-pillow/Pillow/releases/tag/12.3.0",
         "https://github.com/python-pillow/Pillow/security/advisories/GHSA-pg7v-jwj7-p798"
-      ]
-    },
-    {
-      "id": "pygoat:CVE-2026-32597:pyjwt:2.4.0",
-      "cve": "CVE-2026-32597",
-      "package": "pyjwt",
-      "ecosystem": "PyPI",
-      "installed_version": "2.4.0",
-      "fixed_version": "2.12.0",
-      "app": "pygoat",
-      "cvss": 7.5,
-      "epss": 0.00273,
-      "in_kev": false,
-      "kev_date_added": null,
-      "priority_score": 19,
-      "priority_label": "low",
-      "summary": {
-        "en": "PyJWT is a JSON Web Token implementation in Python. Prior to 2.12.0, PyJWT does not validate the crit (Critical) Header Parameter defined in RFC 7515 \u00a74.1.11. When a JWS token contains a crit array listing extensions that PyJWT does not understand, the library accepts the token instead of rejecting it. This violates the MUST requirement in the RFC. This vulnerability is fixed in 2.12.0.",
-        "es": "PyJWT es una implementaci\u00f3n de JSON Web Token en Python. Antes de la 2.12.0, PyJWT no valida el par\u00e1metro de encabezado crit (Cr\u00edtico) definido en la RFC 7515 \u00a74.1.11. Cuando un token JWS contiene un array crit que lista extensiones que PyJWT no entiende, la biblioteca acepta el token en lugar de rechazarlo. Esto viola el requisito MUST en la RFC. Esta vulnerabilidad est\u00e1 corregida en la 2.12.0."
-      },
-      "references": [
-        "https://github.com/jpadilla/pyjwt/security/advisories/GHSA-752w-5fwx-jx9f",
-        "https://lists.debian.org/debian-lts-announce/2026/05/msg00008.html",
-        "https://access.redhat.com/errata/RHSA-2026:10140",
-        "https://access.redhat.com/errata/RHSA-2026:10141",
-        "https://access.redhat.com/errata/RHSA-2026:10184",
-        "https://access.redhat.com/errata/RHSA-2026:12176",
-        "https://access.redhat.com/errata/RHSA-2026:13508",
-        "https://access.redhat.com/errata/RHSA-2026:13512",
-        "https://access.redhat.com/errata/RHSA-2026:13545",
-        "https://access.redhat.com/errata/RHSA-2026:13553",
-        "https://access.redhat.com/errata/RHSA-2026:13672",
-        "https://access.redhat.com/errata/RHSA-2026:13916",
-        "https://access.redhat.com/errata/RHSA-2026:17083",
-        "https://access.redhat.com/errata/RHSA-2026:19138",
-        "https://access.redhat.com/errata/RHSA-2026:19355",
-        "https://access.redhat.com/errata/RHSA-2026:19375",
-        "https://access.redhat.com/errata/RHSA-2026:19712",
-        "https://access.redhat.com/errata/RHSA-2026:21431",
-        "https://access.redhat.com/errata/RHSA-2026:21517",
-        "https://access.redhat.com/errata/RHSA-2026:22330",
-        "https://access.redhat.com/errata/RHSA-2026:24977",
-        "https://access.redhat.com/errata/RHSA-2026:26226",
-        "https://access.redhat.com/errata/RHSA-2026:37275",
-        "https://access.redhat.com/errata/RHSA-2026:42644",
-        "https://access.redhat.com/errata/RHSA-2026:6568",
-        "https://access.redhat.com/errata/RHSA-2026:6720",
-        "https://access.redhat.com/errata/RHSA-2026:6912",
-        "https://access.redhat.com/errata/RHSA-2026:6926",
-        "https://access.redhat.com/errata/RHSA-2026:8437",
-        "https://access.redhat.com/errata/RHSA-2026:8746",
-        "https://access.redhat.com/errata/RHSA-2026:8747",
-        "https://access.redhat.com/errata/RHSA-2026:8748",
-        "https://access.redhat.com/security/cve/CVE-2026-32597",
-        "https://bugzilla.redhat.com/show_bug.cgi?id=2447194",
-        "https://security.access.redhat.com/data/csaf/v2/vex/2026/cve-2026-32597.json"
       ]
     },
     {
@@ -3977,6 +3977,30 @@
       ]
     },
     {
+      "id": "pygoat:CVE-2026-25674:django:4.2",
+      "cve": "CVE-2026-25674",
+      "package": "django",
+      "ecosystem": "PyPI",
+      "installed_version": "4.2",
+      "fixed_version": "4.2.29",
+      "app": "pygoat",
+      "cvss": 3.7,
+      "epss": 0.00373,
+      "in_kev": false,
+      "kev_date_added": null,
+      "priority_score": 10,
+      "priority_label": "low",
+      "summary": {
+        "en": "An issue was discovered in 6.0 before 6.0.3, 5.2 before 5.2.12, and 4.2 before 4.2.29.\nRace condition in file-system storage and file-based cache backends in Django allows an attacker to cause file system objects to be created with incorrect permissions via concurrent requests, where one thread's temporary `umask` change affects other threads in multi-threaded environments.\nEarlier, unsupported Django series (such as 5.0.x, 4.1.x, and 3.2.x) were not evaluated and may also be affected.\nDjango would like to thank Tarek Nakkouch for reporting this issue.",
+        "es": "Se descubri\u00f3 un problema en 6.0 anterior a 6.0.3, 5.2 anterior a 5.2.12 y 4.2 anterior a 4.2.29.\nUna condici\u00f3n de carrera en el almacenamiento del sistema de archivos y los backends de cach\u00e9 basados en archivos en Django permite a un atacante provocar que los objetos del sistema de archivos se creen con permisos incorrectos a trav\u00e9s de solicitudes concurrentes, donde el cambio temporal de 'umask' de un hilo afecta a otros hilos en entornos multihilo.\nSeries de Django anteriores y no compatibles (como 5.0.x, 4.1.x y 3.2.x) no fueron evaluadas y tambi\u00e9n pueden verse afectadas.\nDjango desea agradecer a Tarek Nakkouch por informar sobre este problema."
+      },
+      "references": [
+        "https://docs.djangoproject.com/en/dev/releases/security/",
+        "https://groups.google.com/g/django-announce",
+        "https://www.djangoproject.com/weblog/2026/mar/03/security-releases/"
+      ]
+    },
+    {
       "id": "pygoat:CVE-2026-48588:django:4.2",
       "cve": "CVE-2026-48588",
       "package": "django",
@@ -4047,30 +4071,6 @@
         "https://github.com/python-pillow/Pillow/pull/9520",
         "https://github.com/python-pillow/Pillow/releases/tag/12.2.0",
         "https://github.com/python-pillow/Pillow/security/advisories/GHSA-pwv6-vv43-88gr"
-      ]
-    },
-    {
-      "id": "pygoat:CVE-2026-25674:django:4.2",
-      "cve": "CVE-2026-25674",
-      "package": "django",
-      "ecosystem": "PyPI",
-      "installed_version": "4.2",
-      "fixed_version": "4.2.29",
-      "app": "pygoat",
-      "cvss": 3.7,
-      "epss": 0.00355,
-      "in_kev": false,
-      "kev_date_added": null,
-      "priority_score": 10,
-      "priority_label": "low",
-      "summary": {
-        "en": "An issue was discovered in 6.0 before 6.0.3, 5.2 before 5.2.12, and 4.2 before 4.2.29.\nRace condition in file-system storage and file-based cache backends in Django allows an attacker to cause file system objects to be created with incorrect permissions via concurrent requests, where one thread's temporary `umask` change affects other threads in multi-threaded environments.\nEarlier, unsupported Django series (such as 5.0.x, 4.1.x, and 3.2.x) were not evaluated and may also be affected.\nDjango would like to thank Tarek Nakkouch for reporting this issue.",
-        "es": "Se descubri\u00f3 un problema en 6.0 anterior a 6.0.3, 5.2 anterior a 5.2.12 y 4.2 anterior a 4.2.29.\nUna condici\u00f3n de carrera en el almacenamiento del sistema de archivos y los backends de cach\u00e9 basados en archivos en Django permite a un atacante provocar que los objetos del sistema de archivos se creen con permisos incorrectos a trav\u00e9s de solicitudes concurrentes, donde el cambio temporal de 'umask' de un hilo afecta a otros hilos en entornos multihilo.\nSeries de Django anteriores y no compatibles (como 5.0.x, 4.1.x y 3.2.x) no fueron evaluadas y tambi\u00e9n pueden verse afectadas.\nDjango desea agradecer a Tarek Nakkouch por informar sobre este problema."
-      },
-      "references": [
-        "https://docs.djangoproject.com/en/dev/releases/security/",
-        "https://groups.google.com/g/django-announce",
-        "https://www.djangoproject.com/weblog/2026/mar/03/security-releases/"
       ]
     },
     {
@@ -8235,6 +8235,30 @@
       ]
     },
     {
+      "id": "nodejs-goof:CVE-2026-27601:underscore:1.9.1",
+      "cve": "CVE-2026-27601",
+      "package": "underscore",
+      "ecosystem": "npm",
+      "installed_version": "1.9.1",
+      "fixed_version": "1.13.8",
+      "app": "nodejs-goof",
+      "cvss": 5.9,
+      "epss": 0.01063,
+      "in_kev": false,
+      "kev_date_added": null,
+      "priority_score": 16,
+      "priority_label": "low",
+      "summary": {
+        "en": "Underscore.js is a utility-belt library for JavaScript. Prior to 1.13.8, the _.flatten and _.isEqual functions use recursion without a depth limit. Under very specific conditions, detailed below, an attacker could exploit this in a Denial of Service (DoS) attack by triggering a stack overflow. Untrusted input must be used to create a recursive datastructure, for example using JSON.parse, with no enforced depth limit. The datastructure thus created must be passed to _.flatten or _.isEqual. In the case of _.flatten, the vulnerability can only be exploited if it is possible for a remote client to prepare a datastructure that consists of arrays at all levels AND if no finite depth limit is passed as the second argument to _.flatten. In the case of _.isEqual, the vulnerability can only be exploited if there exists a code path in which two distinct datastructures that were submitted by the same remote client are compared using _.isEqual. For example, if a client submits data that are stored in a database, and the same client can later submit another datastructure that is then compared to the data that were saved in the database previously, OR if a client submits a single request, but its data are parsed twice, creating two non-identical but equivalent datastructures that are then compared. Exceptions originating from the call to _.flatten or _.isEqual, as a result of a stack overflow, are not being caught. This vulnerability is fixed in 1.13.8.",
+        "es": "Underscore.js es una librer\u00eda de utilidades para JavaScript. Antes de la versi\u00f3n 1.13.8, las funciones _.flatten y _.isEqual usan recursi\u00f3n sin un l\u00edmite de profundidad. Bajo condiciones muy espec\u00edficas, detalladas a continuaci\u00f3n, un atacante podr\u00eda explotar esto en un ataque de denegaci\u00f3n de servicio (DoS) al desencadenar un desbordamiento de pila. Se debe usar entrada no confiable para crear una estructura de datos recursiva, por ejemplo, usando JSON.parse, sin un l\u00edmite de profundidad impuesto. La estructura de datos as\u00ed creada debe pasarse a _.flatten o _.isEqual. En el caso de _.flatten, la vulnerabilidad solo puede ser explotada si es posible para un cliente remoto preparar una estructura de datos que consista en arrays en todos los niveles Y si no se pasa un l\u00edmite de profundidad finito como segundo argumento a _.flatten. En el caso de _.isEqual, la vulnerabilidad solo puede ser explotada si existe una ruta de c\u00f3digo en la que dos estructuras de datos distintas que fueron enviadas por el mismo cliente remoto se comparan usando _.isEqual. Por ejemplo, si un cliente env\u00eda datos que se almacenan en una base de datos, y el mismo cliente puede luego enviar otra estructura de datos que luego se compara con los datos que se guardaron en la base de datos previamente, O si un cliente env\u00eda una \u00fanica solicitud, pero sus datos se analizan dos veces, creando dos estructuras de datos no id\u00e9nticas pero equivalentes que luego se comparan. Las excepciones que se originan de la llamada a _.flatten o _.isEqual, como resultado de un desbordamiento de pila, no est\u00e1n siendo capturadas. Esta vulnerabilidad est\u00e1 corregida en la versi\u00f3n 1.13.8."
+      },
+      "references": [
+        "https://github.com/jashkenas/underscore/commit/411e222eb0ca5d570cc4f6315c02c05b830ed2b4",
+        "https://github.com/jashkenas/underscore/commit/a6e23ae9647461ec33ad9f92a2ecfc220eea0a84",
+        "https://github.com/jashkenas/underscore/security/advisories/GHSA-qpx9-hpmf-5gmw"
+      ]
+    },
+    {
       "id": "nodejs-goof:CVE-2026-106446:handlebars:4.0.11",
       "cve": "CVE-2026-106446",
       "package": "handlebars",
@@ -8385,30 +8409,6 @@
         "https://github.com/pillarjs/path-to-regexp/commit/60f2121e9b66b7b622cc01080df0aabda9eedee6",
         "https://github.com/pillarjs/path-to-regexp/security/advisories/GHSA-9wv6-86v2-598j",
         "https://security.netapp.com/advisory/ntap-20250124-0001/"
-      ]
-    },
-    {
-      "id": "nodejs-goof:CVE-2026-27601:underscore:1.9.1",
-      "cve": "CVE-2026-27601",
-      "package": "underscore",
-      "ecosystem": "npm",
-      "installed_version": "1.9.1",
-      "fixed_version": "1.13.8",
-      "app": "nodejs-goof",
-      "cvss": 5.9,
-      "epss": 0.00962,
-      "in_kev": false,
-      "kev_date_added": null,
-      "priority_score": 15,
-      "priority_label": "low",
-      "summary": {
-        "en": "Underscore.js is a utility-belt library for JavaScript. Prior to 1.13.8, the _.flatten and _.isEqual functions use recursion without a depth limit. Under very specific conditions, detailed below, an attacker could exploit this in a Denial of Service (DoS) attack by triggering a stack overflow. Untrusted input must be used to create a recursive datastructure, for example using JSON.parse, with no enforced depth limit. The datastructure thus created must be passed to _.flatten or _.isEqual. In the case of _.flatten, the vulnerability can only be exploited if it is possible for a remote client to prepare a datastructure that consists of arrays at all levels AND if no finite depth limit is passed as the second argument to _.flatten. In the case of _.isEqual, the vulnerability can only be exploited if there exists a code path in which two distinct datastructures that were submitted by the same remote client are compared using _.isEqual. For example, if a client submits data that are stored in a database, and the same client can later submit another datastructure that is then compared to the data that were saved in the database previously, OR if a client submits a single request, but its data are parsed twice, creating two non-identical but equivalent datastructures that are then compared. Exceptions originating from the call to _.flatten or _.isEqual, as a result of a stack overflow, are not being caught. This vulnerability is fixed in 1.13.8.",
-        "es": "Underscore.js es una librer\u00eda de utilidades para JavaScript. Antes de la versi\u00f3n 1.13.8, las funciones _.flatten y _.isEqual usan recursi\u00f3n sin un l\u00edmite de profundidad. Bajo condiciones muy espec\u00edficas, detalladas a continuaci\u00f3n, un atacante podr\u00eda explotar esto en un ataque de denegaci\u00f3n de servicio (DoS) al desencadenar un desbordamiento de pila. Se debe usar entrada no confiable para crear una estructura de datos recursiva, por ejemplo, usando JSON.parse, sin un l\u00edmite de profundidad impuesto. La estructura de datos as\u00ed creada debe pasarse a _.flatten o _.isEqual. En el caso de _.flatten, la vulnerabilidad solo puede ser explotada si es posible para un cliente remoto preparar una estructura de datos que consista en arrays en todos los niveles Y si no se pasa un l\u00edmite de profundidad finito como segundo argumento a _.flatten. En el caso de _.isEqual, la vulnerabilidad solo puede ser explotada si existe una ruta de c\u00f3digo en la que dos estructuras de datos distintas que fueron enviadas por el mismo cliente remoto se comparan usando _.isEqual. Por ejemplo, si un cliente env\u00eda datos que se almacenan en una base de datos, y el mismo cliente puede luego enviar otra estructura de datos que luego se compara con los datos que se guardaron en la base de datos previamente, O si un cliente env\u00eda una \u00fanica solicitud, pero sus datos se analizan dos veces, creando dos estructuras de datos no id\u00e9nticas pero equivalentes que luego se comparan. Las excepciones que se originan de la llamada a _.flatten o _.isEqual, como resultado de un desbordamiento de pila, no est\u00e1n siendo capturadas. Esta vulnerabilidad est\u00e1 corregida en la versi\u00f3n 1.13.8."
-      },
-      "references": [
-        "https://github.com/jashkenas/underscore/commit/411e222eb0ca5d570cc4f6315c02c05b830ed2b4",
-        "https://github.com/jashkenas/underscore/commit/a6e23ae9647461ec33ad9f92a2ecfc220eea0a84",
-        "https://github.com/jashkenas/underscore/security/advisories/GHSA-qpx9-hpmf-5gmw"
       ]
     },
     {
@@ -9802,6 +9802,29 @@
       ]
     },
     {
+      "id": "nodejs-goof:CVE-2026-118664:decode-uri-component:0.2.0",
+      "cve": "CVE-2026-118664",
+      "package": "decode-uri-component",
+      "ecosystem": "npm",
+      "installed_version": "0.2.0",
+      "fixed_version": "0.5.1",
+      "app": "nodejs-goof",
+      "cvss": null,
+      "epss": 0.00318,
+      "in_kev": false,
+      "kev_date_added": null,
+      "priority_score": 0,
+      "priority_label": "low",
+      "summary": {
+        "en": "decode-uri-component provides a more robust alternative to decodeURIComponent. Prior to 0.5.1, decodeUriComponent in index.js falls back to customDecodeURIComponent after native decoding throws, and the fallback collects every distinct percent-encoded run before performing a full-string regular-expression replacement for each entry. Malformed input containing many distinct runs can therefore make both the number of replacements and the scanned input length grow together, causing quadratic CPU consumption and blocking the Node.js event loop; request-body inputs can reach the demonstrated size, while ordinary URL header limits reduce the practical delay. This issue is fixed in version 0.5.1."
+      },
+      "references": [
+        "https://github.com/SamVerschueren/decode-uri-component/commit/fad01d65b93bd3f2f0dc32dfd8d57a38b57bc608",
+        "https://github.com/SamVerschueren/decode-uri-component/releases/tag/v0.5.1",
+        "https://github.com/SamVerschueren/decode-uri-component/security/advisories/GHSA-qr28-fpjm-wq7f"
+      ]
+    },
+    {
       "id": "nodejs-goof:CVE-2026-33941:handlebars:4.0.11",
       "cve": "CVE-2026-33941",
       "package": "handlebars",
@@ -10714,12 +10737,6 @@
   ],
   "history": [
     {
-      "date": "2026-09-30",
-      "findings_total": 324,
-      "critical": 4,
-      "high": 3
-    },
-    {
       "date": "2026-10-01",
       "findings_total": 333,
       "critical": 4,
@@ -10890,6 +10907,12 @@
     {
       "date": "2026-10-29",
       "findings_total": 386,
+      "critical": 3,
+      "high": 3
+    },
+    {
+      "date": "2026-10-30",
+      "findings_total": 387,
       "critical": 3,
       "high": 3
     }

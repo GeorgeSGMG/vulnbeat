@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-10-30T12:27:48.776317+00:00",
+  "generated_at": "2026-10-31T11:58:03.737294+00:00",
   "sources": {
     "kev": {
       "fetched": true,
@@ -7,11 +7,11 @@
     },
     "epss": {
       "fetched": true,
-      "entries": 324
+      "entries": 326
     },
     "nvd": {
       "fetched": true,
-      "entries": 325
+      "entries": 327
     }
   },
   "apps": [
@@ -1216,6 +1216,31 @@
       ]
     },
     {
+      "id": "pygoat:CVE-2024-41989:django:4.2",
+      "cve": "CVE-2024-41989",
+      "package": "django",
+      "ecosystem": "PyPI",
+      "installed_version": "4.2",
+      "fixed_version": "4.2.15",
+      "app": "pygoat",
+      "cvss": 7.5,
+      "epss": 0.012,
+      "in_kev": false,
+      "kev_date_added": null,
+      "priority_score": 20,
+      "priority_label": "medium",
+      "summary": {
+        "en": "An issue was discovered in Django 5.0 before 5.0.8 and 4.2 before 4.2.15. The floatformat template filter is subject to significant memory consumption when given a string representation of a number in scientific notation with a large exponent.",
+        "es": "Se descubri\u00f3 un problema en Django 5.0 anterior a 5.0.8 y 4.2 anterior a 4.2.15. El filtro de plantilla de formato flotante est\u00e1 sujeto a un consumo de memoria significativo cuando se le proporciona una representaci\u00f3n de cadena de un n\u00famero en notaci\u00f3n cient\u00edfica con un exponente grande."
+      },
+      "references": [
+        "https://docs.djangoproject.com/en/dev/releases/security/",
+        "https://groups.google.com/forum/#%21forum/django-announce",
+        "https://www.djangoproject.com/weblog/2024/aug/06/security-releases/",
+        "https://security.netapp.com/advisory/ntap-20240905-0007/"
+      ]
+    },
+    {
       "id": "pygoat:CVE-2026-1287:django:4.2",
       "cve": "CVE-2026-1287",
       "package": "django",
@@ -1224,7 +1249,7 @@
       "fixed_version": "4.2.28",
       "app": "pygoat",
       "cvss": 5.4,
-      "epss": 0.00856,
+      "epss": 0.00843,
       "in_kev": false,
       "kev_date_added": null,
       "priority_score": 14,
@@ -1249,31 +1274,6 @@
         "https://access.redhat.com/security/cve/CVE-2026-1287",
         "https://bugzilla.redhat.com/show_bug.cgi?id=2436339",
         "https://security.access.redhat.com/data/csaf/v2/vex/2026/cve-2026-1287.json"
-      ]
-    },
-    {
-      "id": "pygoat:CVE-2024-41989:django:4.2",
-      "cve": "CVE-2024-41989",
-      "package": "django",
-      "ecosystem": "PyPI",
-      "installed_version": "4.2",
-      "fixed_version": "4.2.15",
-      "app": "pygoat",
-      "cvss": 7.5,
-      "epss": 0.012,
-      "in_kev": false,
-      "kev_date_added": null,
-      "priority_score": 20,
-      "priority_label": "medium",
-      "summary": {
-        "en": "An issue was discovered in Django 5.0 before 5.0.8 and 4.2 before 4.2.15. The floatformat template filter is subject to significant memory consumption when given a string representation of a number in scientific notation with a large exponent.",
-        "es": "Se descubri\u00f3 un problema en Django 5.0 anterior a 5.0.8 y 4.2 anterior a 4.2.15. El filtro de plantilla de formato flotante est\u00e1 sujeto a un consumo de memoria significativo cuando se le proporciona una representaci\u00f3n de cadena de un n\u00famero en notaci\u00f3n cient\u00edfica con un exponente grande."
-      },
-      "references": [
-        "https://docs.djangoproject.com/en/dev/releases/security/",
-        "https://groups.google.com/forum/#%21forum/django-announce",
-        "https://www.djangoproject.com/weblog/2024/aug/06/security-releases/",
-        "https://security.netapp.com/advisory/ntap-20240905-0007/"
       ]
     },
     {
@@ -1750,29 +1750,6 @@
       ]
     },
     {
-      "id": "pygoat:CVE-2026-112895:pillow:12.1.0",
-      "cve": "CVE-2026-112895",
-      "package": "pillow",
-      "ecosystem": "PyPI",
-      "installed_version": "12.1.0",
-      "fixed_version": "13.0.0",
-      "app": "pygoat",
-      "cvss": 7.5,
-      "epss": 0.00594,
-      "in_kev": false,
-      "kev_date_added": null,
-      "priority_score": 19,
-      "priority_label": "low",
-      "summary": {
-        "en": "Pillow is a Python imaging library. From 5.1.0 until 13.0.0, Pillow can exhaust resources while parsing an existing PDF during an append operation. PdfParser follows page-tree child references without cycle or duplication tracking and follows previous-trailer chains with only an exact repeated-offset guard, so deep or cyclic page trees and long chains of unique trailer offsets can exhaust the Python stack. Repeated non-cyclic /Kids references can also cause super-linear CPU and memory use. An attacker can supply such a PDF to an application that calls Image.save with PDF append enabled. This can raise an uncaught RecursionError or consume excessive CPU and memory before output is written, causing denial of service. This issue is fixed in version 13.0.0."
-      },
-      "references": [
-        "https://github.com/python-pillow/Pillow/commit/e2ae7eacad6de68c37eb28b633a97bebacf2c5bf",
-        "https://github.com/python-pillow/Pillow/releases/tag/13.0.0",
-        "https://github.com/python-pillow/Pillow/security/advisories/GHSA-p4wg-p73j-c528"
-      ]
-    },
-    {
       "id": "pygoat:CVE-2026-112400:pillow:12.1.0",
       "cve": "CVE-2026-112400",
       "package": "pillow",
@@ -1842,39 +1819,73 @@
       ]
     },
     {
-      "id": "pygoat:CVE-2026-1312:django:4.2",
-      "cve": "CVE-2026-1312",
-      "package": "django",
+      "id": "pygoat:CVE-2026-112895:pillow:12.1.0",
+      "cve": "CVE-2026-112895",
+      "package": "pillow",
       "ecosystem": "PyPI",
-      "installed_version": "4.2",
-      "fixed_version": "4.2.28",
+      "installed_version": "12.1.0",
+      "fixed_version": "13.0.0",
       "app": "pygoat",
-      "cvss": 5.4,
-      "epss": 0.0091,
+      "cvss": 7.5,
+      "epss": 0.00594,
       "in_kev": false,
       "kev_date_added": null,
-      "priority_score": 14,
+      "priority_score": 19,
       "priority_label": "low",
       "summary": {
-        "en": "An issue was discovered in 6.0 before 6.0.2, 5.2 before 5.2.11, and 4.2 before 4.2.28.\n`.QuerySet.order_by()` is subject to SQL injection in column aliases containing periods when the same alias is, using a suitably crafted dictionary, with dictionary expansion, used in `FilteredRelation`.\nEarlier, unsupported Django series (such as 5.0.x, 4.1.x, and 3.2.x) were not evaluated and may also be affected.\nDjango would like to thank Solomon Kebede for reporting this issue.",
-        "es": "Se descubri\u00f3 un problema en 6.0 anterior a 6.0.2, 5.2 anterior a 5.2.11 y 4.2 anterior a 4.2.28.\n.QuerySet.order_by() est\u00e1 sujeto a inyecci\u00f3n SQL en alias de columna que contienen puntos cuando el mismo alias es, utilizando un diccionario adecuadamente dise\u00f1ado, con expansi\u00f3n de diccionario, usado en FilteredRelation.\nSeries de Django anteriores y no compatibles (como 5.0.x, 4.1.x y 3.2.x) no fueron evaluadas y tambi\u00e9n pueden verse afectadas.\nDjango desea agradecer a Solomon Kebede por informar de este problema."
+        "en": "Pillow is a Python imaging library. From 5.1.0 until 13.0.0, Pillow can exhaust resources while parsing an existing PDF during an append operation. PdfParser follows page-tree child references without cycle or duplication tracking and follows previous-trailer chains with only an exact repeated-offset guard, so deep or cyclic page trees and long chains of unique trailer offsets can exhaust the Python stack. Repeated non-cyclic /Kids references can also cause super-linear CPU and memory use. An attacker can supply such a PDF to an application that calls Image.save with PDF append enabled. This can raise an uncaught RecursionError or consume excessive CPU and memory before output is written, causing denial of service. This issue is fixed in version 13.0.0."
       },
       "references": [
-        "https://docs.djangoproject.com/en/dev/releases/security/",
-        "https://groups.google.com/g/django-announce",
-        "https://www.djangoproject.com/weblog/2026/feb/03/security-releases/",
-        "https://access.redhat.com/errata/RHSA-2026:14835",
-        "https://access.redhat.com/errata/RHSA-2026:2694",
-        "https://access.redhat.com/errata/RHSA-2026:3958",
-        "https://access.redhat.com/errata/RHSA-2026:3959",
-        "https://access.redhat.com/errata/RHSA-2026:3960",
-        "https://access.redhat.com/errata/RHSA-2026:3962",
-        "https://access.redhat.com/errata/RHSA-2026:5970",
-        "https://access.redhat.com/errata/RHSA-2026:5971",
-        "https://access.redhat.com/errata/RHSA-2026:6291",
-        "https://access.redhat.com/security/cve/CVE-2026-1312",
-        "https://bugzilla.redhat.com/show_bug.cgi?id=2436342",
-        "https://security.access.redhat.com/data/csaf/v2/vex/2026/cve-2026-1312.json"
+        "https://github.com/python-pillow/Pillow/commit/e2ae7eacad6de68c37eb28b633a97bebacf2c5bf",
+        "https://github.com/python-pillow/Pillow/releases/tag/13.0.0",
+        "https://github.com/python-pillow/Pillow/security/advisories/GHSA-p4wg-p73j-c528"
+      ]
+    },
+    {
+      "id": "pygoat:CVE-2026-112405:pillow:12.1.0",
+      "cve": "CVE-2026-112405",
+      "package": "pillow",
+      "ecosystem": "PyPI",
+      "installed_version": "12.1.0",
+      "fixed_version": "13.0.0",
+      "app": "pygoat",
+      "cvss": 7.5,
+      "epss": 0.00594,
+      "in_kev": false,
+      "kev_date_added": null,
+      "priority_score": 19,
+      "priority_label": "low",
+      "summary": {
+        "en": "Pillow is a Python imaging library. From 12.0.0 until 13.0.0, Pillow's Image.merge() can dereference a null image8 plane. Validation skips the first input band, allowing a 32-bit integer or floating-point image backed by image32 storage to be merged as a narrower multiband image. A crafted IPTC file can reach this path when an application opens and loads it, or a caller can invoke Image.merge() directly with such a first band. This causes a native process crash. This issue is fixed in version 13.0.0."
+      },
+      "references": [
+        "https://github.com/python-pillow/Pillow/commit/b6ee66e8b2c2c0932bdf65f963268d9f2927ef86",
+        "https://github.com/python-pillow/Pillow/releases/tag/13.0.0",
+        "https://github.com/python-pillow/Pillow/security/advisories/GHSA-cp9v-662q-vvx9"
+      ]
+    },
+    {
+      "id": "pygoat:CVE-2026-96640:pillow:12.1.0",
+      "cve": "CVE-2026-96640",
+      "package": "pillow",
+      "ecosystem": "PyPI",
+      "installed_version": "12.1.0",
+      "fixed_version": "13.0.0",
+      "app": "pygoat",
+      "cvss": 7.5,
+      "epss": 0.00604,
+      "in_kev": false,
+      "kev_date_added": null,
+      "priority_score": 19,
+      "priority_label": "low",
+      "summary": {
+        "en": "Pillow is a Python imaging library. From 5.1.0 until 13.0.0, PdfParser.linearize_page_tree() in src/PIL/PdfParser.py treats a PDF /Pages graph as a tree without tracking duplicate indirect references. When Image.save(..., format=\"PDF\", append=True) processes an attacker-controlled existing PDF whose /Kids arrays repeatedly reference the same child /Pages node, Pillow expands the shared subtree as distinct pages. A compact malformed PDF can therefore create exponentially many page references and consume disproportionate CPU before the append completes. This issue is fixed in version 13.0.0."
+      },
+      "references": [
+        "https://github.com/python-pillow/Pillow/commit/6f0e7ee1f9c2fe227906f8a4b926e6622b702bc7",
+        "https://github.com/python-pillow/Pillow/pull/10093",
+        "https://github.com/python-pillow/Pillow/releases/tag/13.0.0",
+        "https://github.com/python-pillow/Pillow/security/advisories/GHSA-mrfp-p49p-3hf2"
       ]
     },
     {
@@ -1900,6 +1911,42 @@
         "https://groups.google.com/g/django-announce",
         "https://www.djangoproject.com/weblog/2025/oct/01/security-releases/",
         "http://www.openwall.com/lists/oss-security/2025/10/01/3"
+      ]
+    },
+    {
+      "id": "pygoat:CVE-2026-1312:django:4.2",
+      "cve": "CVE-2026-1312",
+      "package": "django",
+      "ecosystem": "PyPI",
+      "installed_version": "4.2",
+      "fixed_version": "4.2.28",
+      "app": "pygoat",
+      "cvss": 5.4,
+      "epss": 0.00897,
+      "in_kev": false,
+      "kev_date_added": null,
+      "priority_score": 14,
+      "priority_label": "low",
+      "summary": {
+        "en": "An issue was discovered in 6.0 before 6.0.2, 5.2 before 5.2.11, and 4.2 before 4.2.28.\n`.QuerySet.order_by()` is subject to SQL injection in column aliases containing periods when the same alias is, using a suitably crafted dictionary, with dictionary expansion, used in `FilteredRelation`.\nEarlier, unsupported Django series (such as 5.0.x, 4.1.x, and 3.2.x) were not evaluated and may also be affected.\nDjango would like to thank Solomon Kebede for reporting this issue.",
+        "es": "Se descubri\u00f3 un problema en 6.0 anterior a 6.0.2, 5.2 anterior a 5.2.11 y 4.2 anterior a 4.2.28.\n.QuerySet.order_by() est\u00e1 sujeto a inyecci\u00f3n SQL en alias de columna que contienen puntos cuando el mismo alias es, utilizando un diccionario adecuadamente dise\u00f1ado, con expansi\u00f3n de diccionario, usado en FilteredRelation.\nSeries de Django anteriores y no compatibles (como 5.0.x, 4.1.x y 3.2.x) no fueron evaluadas y tambi\u00e9n pueden verse afectadas.\nDjango desea agradecer a Solomon Kebede por informar de este problema."
+      },
+      "references": [
+        "https://docs.djangoproject.com/en/dev/releases/security/",
+        "https://groups.google.com/g/django-announce",
+        "https://www.djangoproject.com/weblog/2026/feb/03/security-releases/",
+        "https://access.redhat.com/errata/RHSA-2026:14835",
+        "https://access.redhat.com/errata/RHSA-2026:2694",
+        "https://access.redhat.com/errata/RHSA-2026:3958",
+        "https://access.redhat.com/errata/RHSA-2026:3959",
+        "https://access.redhat.com/errata/RHSA-2026:3960",
+        "https://access.redhat.com/errata/RHSA-2026:3962",
+        "https://access.redhat.com/errata/RHSA-2026:5970",
+        "https://access.redhat.com/errata/RHSA-2026:5971",
+        "https://access.redhat.com/errata/RHSA-2026:6291",
+        "https://access.redhat.com/security/cve/CVE-2026-1312",
+        "https://bugzilla.redhat.com/show_bug.cgi?id=2436342",
+        "https://security.access.redhat.com/data/csaf/v2/vex/2026/cve-2026-1312.json"
       ]
     },
     {
@@ -1949,29 +1996,6 @@
       ]
     },
     {
-      "id": "pygoat:CVE-2026-112406:pillow:12.1.0",
-      "cve": "CVE-2026-112406",
-      "package": "pillow",
-      "ecosystem": "PyPI",
-      "installed_version": "12.1.0",
-      "fixed_version": "13.0.0",
-      "app": "pygoat",
-      "cvss": 7.5,
-      "epss": 0.00573,
-      "in_kev": false,
-      "kev_date_added": null,
-      "priority_score": 19,
-      "priority_label": "low",
-      "summary": {
-        "en": "Pillow is a Python imaging library. From 5.1.0 until 13.0.0, Pillow can enter an infinite loop while rewriting PDF pages. PdfParser.rewrite_pages() follows Parent relationships without detecting a cycle in the page tree. An attacker can supply a cyclic PDF to an application that appends an image to that PDF. This can hold the worker at full CPU and deny service. This issue is fixed in version 13.0.0."
-      },
-      "references": [
-        "https://github.com/python-pillow/Pillow/commit/b3ebf20c694f2f12537a629c30229a1d5a53f777",
-        "https://github.com/python-pillow/Pillow/releases/tag/13.0.0",
-        "https://github.com/python-pillow/Pillow/security/advisories/GHSA-f2g6-542v-9j58"
-      ]
-    },
-    {
       "id": "pygoat:CVE-2026-112397:pillow:12.1.0",
       "cve": "CVE-2026-112397",
       "package": "pillow",
@@ -1995,27 +2019,26 @@
       ]
     },
     {
-      "id": "pygoat:CVE-2026-96640:pillow:12.1.0",
-      "cve": "CVE-2026-96640",
+      "id": "pygoat:CVE-2026-112406:pillow:12.1.0",
+      "cve": "CVE-2026-112406",
       "package": "pillow",
       "ecosystem": "PyPI",
       "installed_version": "12.1.0",
       "fixed_version": "13.0.0",
       "app": "pygoat",
       "cvss": 7.5,
-      "epss": 0.00581,
+      "epss": 0.00573,
       "in_kev": false,
       "kev_date_added": null,
       "priority_score": 19,
       "priority_label": "low",
       "summary": {
-        "en": "Pillow is a Python imaging library. From 5.1.0 until 13.0.0, PdfParser.linearize_page_tree() in src/PIL/PdfParser.py treats a PDF /Pages graph as a tree without tracking duplicate indirect references. When Image.save(..., format=\"PDF\", append=True) processes an attacker-controlled existing PDF whose /Kids arrays repeatedly reference the same child /Pages node, Pillow expands the shared subtree as distinct pages. A compact malformed PDF can therefore create exponentially many page references and consume disproportionate CPU before the append completes. This issue is fixed in version 13.0.0."
+        "en": "Pillow is a Python imaging library. From 5.1.0 until 13.0.0, Pillow can enter an infinite loop while rewriting PDF pages. PdfParser.rewrite_pages() follows Parent relationships without detecting a cycle in the page tree. An attacker can supply a cyclic PDF to an application that appends an image to that PDF. This can hold the worker at full CPU and deny service. This issue is fixed in version 13.0.0."
       },
       "references": [
-        "https://github.com/python-pillow/Pillow/commit/6f0e7ee1f9c2fe227906f8a4b926e6622b702bc7",
-        "https://github.com/python-pillow/Pillow/pull/10093",
+        "https://github.com/python-pillow/Pillow/commit/b3ebf20c694f2f12537a629c30229a1d5a53f777",
         "https://github.com/python-pillow/Pillow/releases/tag/13.0.0",
-        "https://github.com/python-pillow/Pillow/security/advisories/GHSA-mrfp-p49p-3hf2"
+        "https://github.com/python-pillow/Pillow/security/advisories/GHSA-f2g6-542v-9j58"
       ]
     },
     {
@@ -2064,29 +2087,6 @@
         "https://github.com/python-pillow/Pillow/commit/a7416de7f3a43128179d2cf68df3240ea8dafe13",
         "https://github.com/python-pillow/Pillow/releases/tag/13.0.0",
         "https://github.com/python-pillow/Pillow/security/advisories/GHSA-j4m9-6w36-pw47"
-      ]
-    },
-    {
-      "id": "pygoat:CVE-2026-112405:pillow:12.1.0",
-      "cve": "CVE-2026-112405",
-      "package": "pillow",
-      "ecosystem": "PyPI",
-      "installed_version": "12.1.0",
-      "fixed_version": "13.0.0",
-      "app": "pygoat",
-      "cvss": 7.5,
-      "epss": 0.00532,
-      "in_kev": false,
-      "kev_date_added": null,
-      "priority_score": 19,
-      "priority_label": "low",
-      "summary": {
-        "en": "Pillow is a Python imaging library. From 12.0.0 until 13.0.0, Pillow's Image.merge() can dereference a null image8 plane. Validation skips the first input band, allowing a 32-bit integer or floating-point image backed by image32 storage to be merged as a narrower multiband image. A crafted IPTC file can reach this path when an application opens and loads it, or a caller can invoke Image.merge() directly with such a first band. This causes a native process crash. This issue is fixed in version 13.0.0."
-      },
-      "references": [
-        "https://github.com/python-pillow/Pillow/commit/b6ee66e8b2c2c0932bdf65f963268d9f2927ef86",
-        "https://github.com/python-pillow/Pillow/releases/tag/13.0.0",
-        "https://github.com/python-pillow/Pillow/security/advisories/GHSA-cp9v-662q-vvx9"
       ]
     },
     {
@@ -2642,54 +2642,6 @@
       ]
     },
     {
-      "id": "pygoat:CVE-2025-14550:django:4.2",
-      "cve": "CVE-2025-14550",
-      "package": "django",
-      "ecosystem": "PyPI",
-      "installed_version": "4.2",
-      "fixed_version": "4.2.28",
-      "app": "pygoat",
-      "cvss": 7.5,
-      "epss": 0.01128,
-      "in_kev": false,
-      "kev_date_added": null,
-      "priority_score": 20,
-      "priority_label": "medium",
-      "summary": {
-        "en": "An issue was discovered in 6.0 before 6.0.2, 5.2 before 5.2.11, and 4.2 before 4.2.28.\n`ASGIRequest` allows a remote attacker to cause a potential denial-of-service via a crafted request with multiple duplicate headers.\nEarlier, unsupported Django series (such as 5.0.x, 4.1.x, and 3.2.x) were not evaluated and may also be affected.\nDjango would like to thank Jiyong Yang for reporting this issue.",
-        "es": "Se descubri\u00f3 un problema en 6.0 anterior a 6.0.2, 5.2 anterior a 5.2.11 y 4.2 anterior a 4.2.28.\n'ASGIRequest' permite a un atacante remoto causar una posible denegaci\u00f3n de servicio mediante una solicitud manipulada con m\u00faltiples encabezados duplicados.\nSeries de Django anteriores y no compatibles (como 5.0.x, 4.1.x y 3.2.x) no fueron evaluadas y tambi\u00e9n podr\u00edan verse afectadas.\nDjango desea agradecer a Jiyong Yang por informar sobre este problema."
-      },
-      "references": [
-        "https://docs.djangoproject.com/en/dev/releases/security/",
-        "https://groups.google.com/g/django-announce",
-        "https://www.djangoproject.com/weblog/2026/feb/03/security-releases/"
-      ]
-    },
-    {
-      "id": "pygoat:CVE-2026-1285:django:4.2",
-      "cve": "CVE-2026-1285",
-      "package": "django",
-      "ecosystem": "PyPI",
-      "installed_version": "4.2",
-      "fixed_version": "4.2.28",
-      "app": "pygoat",
-      "cvss": 7.5,
-      "epss": 0.01128,
-      "in_kev": false,
-      "kev_date_added": null,
-      "priority_score": 20,
-      "priority_label": "medium",
-      "summary": {
-        "en": "An issue was discovered in 6.0 before 6.0.2, 5.2 before 5.2.11, and 4.2 before 4.2.28.\n`django.utils.text.Truncator.chars()` and `Truncator.words()` methods (with `html=True`) and the `truncatechars_html` and `truncatewords_html` template filters allow a remote attacker to cause a potential denial-of-service via crafted inputs containing a large number of unmatched HTML end tags.\nEarlier, unsupported Django series (such as 5.0.x, 4.1.x, and 3.2.x) were not evaluated and may also be affected.\nDjango would like to thank Seokchan Yoon for reporting this issue.",
-        "es": "Se descubri\u00f3 un problema en 6.0 anterior a 6.0.2, 5.2 anterior a 5.2.11 y 4.2 anterior a 4.2.28.\nLos m\u00e9todos 'django.utils.text.Truncator.chars()' y 'Truncator.words()' (con 'html=True') y los filtros de plantilla 'truncatechars_html' y 'truncatewords_html' permiten a un atacante remoto causar una potencial denegaci\u00f3n de servicio mediante entradas manipuladas que contienen un gran n\u00famero de etiquetas de cierre HTML no coincidentes.\nSeries de Django anteriores y sin soporte (como 5.0.x, 4.1.x y 3.2.x) no fueron evaluadas y tambi\u00e9n pueden verse afectadas.\nDjango desea agradecer a Seokchan Yoon por informar de este problema."
-      },
-      "references": [
-        "https://docs.djangoproject.com/en/dev/releases/security/",
-        "https://groups.google.com/g/django-announce",
-        "https://www.djangoproject.com/weblog/2026/feb/03/security-releases/"
-      ]
-    },
-    {
       "id": "pygoat:CVE-2026-48526:pyjwt:2.4.0",
       "cve": "CVE-2026-48526",
       "package": "pyjwt",
@@ -2746,6 +2698,54 @@
         "https://access.redhat.com/security/cve/CVE-2026-48526",
         "https://bugzilla.redhat.com/show_bug.cgi?id=2482734",
         "https://security.access.redhat.com/data/csaf/v2/vex/2026/cve-2026-48526.json"
+      ]
+    },
+    {
+      "id": "pygoat:CVE-2025-14550:django:4.2",
+      "cve": "CVE-2025-14550",
+      "package": "django",
+      "ecosystem": "PyPI",
+      "installed_version": "4.2",
+      "fixed_version": "4.2.28",
+      "app": "pygoat",
+      "cvss": 7.5,
+      "epss": 0.01112,
+      "in_kev": false,
+      "kev_date_added": null,
+      "priority_score": 20,
+      "priority_label": "medium",
+      "summary": {
+        "en": "An issue was discovered in 6.0 before 6.0.2, 5.2 before 5.2.11, and 4.2 before 4.2.28.\n`ASGIRequest` allows a remote attacker to cause a potential denial-of-service via a crafted request with multiple duplicate headers.\nEarlier, unsupported Django series (such as 5.0.x, 4.1.x, and 3.2.x) were not evaluated and may also be affected.\nDjango would like to thank Jiyong Yang for reporting this issue.",
+        "es": "Se descubri\u00f3 un problema en 6.0 anterior a 6.0.2, 5.2 anterior a 5.2.11 y 4.2 anterior a 4.2.28.\n'ASGIRequest' permite a un atacante remoto causar una posible denegaci\u00f3n de servicio mediante una solicitud manipulada con m\u00faltiples encabezados duplicados.\nSeries de Django anteriores y no compatibles (como 5.0.x, 4.1.x y 3.2.x) no fueron evaluadas y tambi\u00e9n podr\u00edan verse afectadas.\nDjango desea agradecer a Jiyong Yang por informar sobre este problema."
+      },
+      "references": [
+        "https://docs.djangoproject.com/en/dev/releases/security/",
+        "https://groups.google.com/g/django-announce",
+        "https://www.djangoproject.com/weblog/2026/feb/03/security-releases/"
+      ]
+    },
+    {
+      "id": "pygoat:CVE-2026-1285:django:4.2",
+      "cve": "CVE-2026-1285",
+      "package": "django",
+      "ecosystem": "PyPI",
+      "installed_version": "4.2",
+      "fixed_version": "4.2.28",
+      "app": "pygoat",
+      "cvss": 7.5,
+      "epss": 0.01112,
+      "in_kev": false,
+      "kev_date_added": null,
+      "priority_score": 20,
+      "priority_label": "medium",
+      "summary": {
+        "en": "An issue was discovered in 6.0 before 6.0.2, 5.2 before 5.2.11, and 4.2 before 4.2.28.\n`django.utils.text.Truncator.chars()` and `Truncator.words()` methods (with `html=True`) and the `truncatechars_html` and `truncatewords_html` template filters allow a remote attacker to cause a potential denial-of-service via crafted inputs containing a large number of unmatched HTML end tags.\nEarlier, unsupported Django series (such as 5.0.x, 4.1.x, and 3.2.x) were not evaluated and may also be affected.\nDjango would like to thank Seokchan Yoon for reporting this issue.",
+        "es": "Se descubri\u00f3 un problema en 6.0 anterior a 6.0.2, 5.2 anterior a 5.2.11 y 4.2 anterior a 4.2.28.\nLos m\u00e9todos 'django.utils.text.Truncator.chars()' y 'Truncator.words()' (con 'html=True') y los filtros de plantilla 'truncatechars_html' y 'truncatewords_html' permiten a un atacante remoto causar una potencial denegaci\u00f3n de servicio mediante entradas manipuladas que contienen un gran n\u00famero de etiquetas de cierre HTML no coincidentes.\nSeries de Django anteriores y sin soporte (como 5.0.x, 4.1.x y 3.2.x) no fueron evaluadas y tambi\u00e9n pueden verse afectadas.\nDjango desea agradecer a Seokchan Yoon por informar de este problema."
+      },
+      "references": [
+        "https://docs.djangoproject.com/en/dev/releases/security/",
+        "https://groups.google.com/g/django-announce",
+        "https://www.djangoproject.com/weblog/2026/feb/03/security-releases/"
       ]
     },
     {
@@ -2866,6 +2866,30 @@
         "https://github.com/python-pillow/Pillow/pull/9704",
         "https://github.com/python-pillow/Pillow/releases/tag/12.3.0",
         "https://github.com/python-pillow/Pillow/security/advisories/GHSA-vjc4-5qp5-m44j"
+      ]
+    },
+    {
+      "id": "pygoat:CVE-2025-66221:werkzeug:2.1.2",
+      "cve": "CVE-2025-66221",
+      "package": "werkzeug",
+      "ecosystem": "PyPI",
+      "installed_version": "2.1.2",
+      "fixed_version": "3.1.4",
+      "app": "pygoat",
+      "cvss": 5.3,
+      "epss": 0.00547,
+      "in_kev": false,
+      "kev_date_added": null,
+      "priority_score": 14,
+      "priority_label": "low",
+      "summary": {
+        "en": "Werkzeug is a comprehensive WSGI web application library. Prior to version 3.1.4, Werkzeug's safe_join function allows path segments with Windows device names. On Windows, there are special device names such as CON, AUX, etc that are implicitly present and readable in every directory. send_from_directory uses safe_join to safely serve files at user-specified paths under a directory. If the application is running on Windows, and the requested path ends with a special device name, the file will be opened successfully, but reading will hang indefinitely. This issue has been patched in version 3.1.4.",
+        "es": "Werkzeug es una completa biblioteca de aplicaciones web WSGI. Antes de la versi\u00f3n 3.1.4, la funci\u00f3n safe_join de Werkzeug permite segmentos de ruta con nombres de dispositivos de Windows. En Windows, existen nombres de dispositivos especiales como CON, AUX, etc. que est\u00e1n impl\u00edcitamente presentes y son legibles en cada directorio. send_from_directory utiliza safe_join para servir archivos de forma segura en rutas especificadas por el usuario bajo un directorio. Si la aplicaci\u00f3n se est\u00e1 ejecutando en Windows, y la ruta solicitada termina con un nombre de dispositivo especial, el archivo se abrir\u00e1 correctamente, pero la lectura se colgar\u00e1 indefinidamente. Este problema ha sido parcheado en la versi\u00f3n 3.1.4."
+      },
+      "references": [
+        "https://github.com/pallets/werkzeug/commit/4b833376a45c323a189cd11d2362bcffdb1c0c13",
+        "https://github.com/pallets/werkzeug/releases/tag/3.1.4",
+        "https://github.com/pallets/werkzeug/security/advisories/GHSA-hgf8-39gv-g3f2"
       ]
     },
     {
@@ -3063,30 +3087,6 @@
         "https://github.com/python-pillow/Pillow/pull/9715",
         "https://github.com/python-pillow/Pillow/releases/tag/12.3.0",
         "https://github.com/python-pillow/Pillow/security/advisories/GHSA-9hw9-ch79-4vh6"
-      ]
-    },
-    {
-      "id": "pygoat:CVE-2025-66221:werkzeug:2.1.2",
-      "cve": "CVE-2025-66221",
-      "package": "werkzeug",
-      "ecosystem": "PyPI",
-      "installed_version": "2.1.2",
-      "fixed_version": "3.1.4",
-      "app": "pygoat",
-      "cvss": 5.3,
-      "epss": 0.00511,
-      "in_kev": false,
-      "kev_date_added": null,
-      "priority_score": 14,
-      "priority_label": "low",
-      "summary": {
-        "en": "Werkzeug is a comprehensive WSGI web application library. Prior to version 3.1.4, Werkzeug's safe_join function allows path segments with Windows device names. On Windows, there are special device names such as CON, AUX, etc that are implicitly present and readable in every directory. send_from_directory uses safe_join to safely serve files at user-specified paths under a directory. If the application is running on Windows, and the requested path ends with a special device name, the file will be opened successfully, but reading will hang indefinitely. This issue has been patched in version 3.1.4.",
-        "es": "Werkzeug es una completa biblioteca de aplicaciones web WSGI. Antes de la versi\u00f3n 3.1.4, la funci\u00f3n safe_join de Werkzeug permite segmentos de ruta con nombres de dispositivos de Windows. En Windows, existen nombres de dispositivos especiales como CON, AUX, etc. que est\u00e1n impl\u00edcitamente presentes y son legibles en cada directorio. send_from_directory utiliza safe_join para servir archivos de forma segura en rutas especificadas por el usuario bajo un directorio. Si la aplicaci\u00f3n se est\u00e1 ejecutando en Windows, y la ruta solicitada termina con un nombre de dispositivo especial, el archivo se abrir\u00e1 correctamente, pero la lectura se colgar\u00e1 indefinidamente. Este problema ha sido parcheado en la versi\u00f3n 3.1.4."
-      },
-      "references": [
-        "https://github.com/pallets/werkzeug/commit/4b833376a45c323a189cd11d2362bcffdb1c0c13",
-        "https://github.com/pallets/werkzeug/releases/tag/3.1.4",
-        "https://github.com/pallets/werkzeug/security/advisories/GHSA-hgf8-39gv-g3f2"
       ]
     },
     {
@@ -3327,6 +3327,30 @@
       ]
     },
     {
+      "id": "pygoat:CVE-2026-118669:oauthlib:3.2.2",
+      "cve": "CVE-2026-118669",
+      "package": "oauthlib",
+      "ecosystem": "PyPI",
+      "installed_version": "3.2.2",
+      "fixed_version": "4.0.0",
+      "app": "pygoat",
+      "cvss": null,
+      "epss": 0.00312,
+      "in_kev": false,
+      "kev_date_added": null,
+      "priority_score": 0,
+      "priority_label": "low",
+      "summary": {
+        "en": "OAuthLib is an implementation of the OAuth request-signing logic for Python 3.6+. Prior to 4.0.0, the client_credentials and Resource Owner Password Credentials token grant handlers can authenticate request.client as one confidential client while retaining an attacker-supplied request.client_id for validate_grant_type and validate_scopes. A lower-privilege authenticated client can therefore cause grant and scope authorization to use another client's identity when an application validator relies on the documented client_id argument, potentially issuing tokens with unauthorized grants or scopes. Validators that authorize exclusively from request.client may not be affected. This issue is fixed in version 4.0.0."
+      },
+      "references": [
+        "https://github.com/oauthlib/oauthlib/commit/c951a1d09f99f14e3240973fa83c4f4287d4753d",
+        "https://github.com/oauthlib/oauthlib/pull/920",
+        "https://github.com/oauthlib/oauthlib/releases/tag/v4.0.0",
+        "https://github.com/oauthlib/oauthlib/security/advisories/GHSA-7984-qgvg-3j9c"
+      ]
+    },
+    {
       "id": "pygoat:CVE-2025-50181:urllib3:1.26.9",
       "cve": "CVE-2025-50181",
       "package": "urllib3",
@@ -3381,7 +3405,7 @@
       "fixed_version": "4.2.28",
       "app": "pygoat",
       "cvss": 5.3,
-      "epss": 0.0081,
+      "epss": 0.00798,
       "in_kev": false,
       "kev_date_added": null,
       "priority_score": 14,
@@ -3663,6 +3687,30 @@
       ]
     },
     {
+      "id": "pygoat:CVE-2026-96641:pillow:12.1.0",
+      "cve": "CVE-2026-96641",
+      "package": "pillow",
+      "ecosystem": "PyPI",
+      "installed_version": "12.1.0",
+      "fixed_version": "13.0.0",
+      "app": "pygoat",
+      "cvss": 6.5,
+      "epss": 0.00345,
+      "in_kev": false,
+      "kev_date_added": null,
+      "priority_score": 17,
+      "priority_label": "low",
+      "summary": {
+        "en": "Pillow is a Python imaging library. Prior to 13.0.0, PILfont text-width accumulation in src/_imaging.c checks positive glyph advances against INT_MAX but does not check negative advances against INT_MIN. Repeating a signed 16-bit advance of -32768 can therefore execute a signed C integer overflow in xsize += dx, producing a large positive width from a negative mathematical result. Applications that use getlength(), getsize(), or derived layout, quota, serialization, or allocation calculations can experience logic-integrity errors or resource consumption, while the high-level mask path commonly retains a decompression-bomb check. This issue is fixed in version 13.0.0."
+      },
+      "references": [
+        "https://github.com/python-pillow/Pillow/commit/80de4be9e38d3a6148dd4d8491eb80cd12b760a4",
+        "https://github.com/python-pillow/Pillow/pull/10010",
+        "https://github.com/python-pillow/Pillow/releases/tag/13.0.0",
+        "https://github.com/python-pillow/Pillow/security/advisories/GHSA-4rm8-3hmm-39fg"
+      ]
+    },
+    {
       "id": "pygoat:CVE-2026-96636:pillow:12.1.0",
       "cve": "CVE-2026-96636",
       "package": "pillow",
@@ -3708,30 +3756,6 @@
         "https://github.com/python-pillow/Pillow/pull/10015",
         "https://github.com/python-pillow/Pillow/releases/tag/13.0.0",
         "https://github.com/python-pillow/Pillow/security/advisories/GHSA-24rc-8hj2-v98c"
-      ]
-    },
-    {
-      "id": "pygoat:CVE-2026-96641:pillow:12.1.0",
-      "cve": "CVE-2026-96641",
-      "package": "pillow",
-      "ecosystem": "PyPI",
-      "installed_version": "12.1.0",
-      "fixed_version": "13.0.0",
-      "app": "pygoat",
-      "cvss": 6.5,
-      "epss": 0.00345,
-      "in_kev": false,
-      "kev_date_added": null,
-      "priority_score": 17,
-      "priority_label": "low",
-      "summary": {
-        "en": "Pillow is a Python imaging library. Prior to 13.0.0, PILfont text-width accumulation in src/_imaging.c checks positive glyph advances against INT_MAX but does not check negative advances against INT_MIN. Repeating a signed 16-bit advance of -32768 can therefore execute a signed C integer overflow in xsize += dx, producing a large positive width from a negative mathematical result. Applications that use getlength(), getsize(), or derived layout, quota, serialization, or allocation calculations can experience logic-integrity errors or resource consumption, while the high-level mask path commonly retains a decompression-bomb check. This issue is fixed in version 13.0.0."
-      },
-      "references": [
-        "https://github.com/python-pillow/Pillow/commit/80de4be9e38d3a6148dd4d8491eb80cd12b760a4",
-        "https://github.com/python-pillow/Pillow/pull/10010",
-        "https://github.com/python-pillow/Pillow/releases/tag/13.0.0",
-        "https://github.com/python-pillow/Pillow/security/advisories/GHSA-4rm8-3hmm-39fg"
       ]
     },
     {
@@ -9452,6 +9476,30 @@
       ]
     },
     {
+      "id": "nodejs-goof:CVE-2026-102278:brace-expansion:1.1.11",
+      "cve": "CVE-2026-102278",
+      "package": "brace-expansion",
+      "ecosystem": "npm",
+      "installed_version": "1.1.11",
+      "fixed_version": "1.1.20",
+      "app": "nodejs-goof",
+      "cvss": 7.5,
+      "epss": 0.00491,
+      "in_kev": false,
+      "kev_date_added": null,
+      "priority_score": 19,
+      "priority_label": "low",
+      "summary": {
+        "en": "The brace-expansion library generates arbitrary strings containing a common prefix and suffix. Prior to 1.1.20, 2.1.6, 3.0.8, and 5.0.11, deeply nested brace groups cause expand_() to recurse once per nesting level at comma-member and single-set expansion sites, exhausting the native stack before output limits can apply and potentially terminating the Node.js process. expand_ performs uncontrolled recursion for nested brace alternatives and single-part sets. deeply nested brace groups supplied as an untrusted pattern. expand_ is affected. expand is affected. Comma members is affected. Single set is affected. native stack exhaustion during nested sub-expansion. process-terminating denial of service. This issue is fixed in versions 1.1.20, 2.1.6, 3.0.8, and 5.0.11."
+      },
+      "references": [
+        "https://github.com/juliangruber/brace-expansion/commit/1efee7c397c191da6287a78ec19512476a966a7b",
+        "https://github.com/juliangruber/brace-expansion/commit/935d78f32f335b2ff76578e5c5e877d31ae9888c",
+        "https://github.com/juliangruber/brace-expansion/commit/de84f144e9816f30e25fc8179e2e1249ab6df0db",
+        "https://github.com/juliangruber/brace-expansion/security/advisories/GHSA-qhr7-859c-m2p7"
+      ]
+    },
+    {
       "id": "nodejs-goof:CVE-2018-25110:marked:0.3.5",
       "cve": "CVE-2018-25110",
       "package": "marked",
@@ -9499,30 +9547,6 @@
         "https://github.com/juliangruber/brace-expansion/commit/5171e681c0922b7ae8bfaf9a331e309107be6edc",
         "https://github.com/juliangruber/brace-expansion/commit/6735c94873ca570bcdd6a0690033bdd3126379d3",
         "https://github.com/juliangruber/brace-expansion/security/advisories/GHSA-6j4f-fj2g-mc7p"
-      ]
-    },
-    {
-      "id": "nodejs-goof:CVE-2026-102278:brace-expansion:1.1.11",
-      "cve": "CVE-2026-102278",
-      "package": "brace-expansion",
-      "ecosystem": "npm",
-      "installed_version": "1.1.11",
-      "fixed_version": "1.1.20",
-      "app": "nodejs-goof",
-      "cvss": 7.5,
-      "epss": 0.00455,
-      "in_kev": false,
-      "kev_date_added": null,
-      "priority_score": 19,
-      "priority_label": "low",
-      "summary": {
-        "en": "The brace-expansion library generates arbitrary strings containing a common prefix and suffix. Prior to 1.1.20, 2.1.6, 3.0.8, and 5.0.11, deeply nested brace groups cause expand_() to recurse once per nesting level at comma-member and single-set expansion sites, exhausting the native stack before output limits can apply and potentially terminating the Node.js process. expand_ performs uncontrolled recursion for nested brace alternatives and single-part sets. deeply nested brace groups supplied as an untrusted pattern. expand_ is affected. expand is affected. Comma members is affected. Single set is affected. native stack exhaustion during nested sub-expansion. process-terminating denial of service. This issue is fixed in versions 1.1.20, 2.1.6, 3.0.8, and 5.0.11."
-      },
-      "references": [
-        "https://github.com/juliangruber/brace-expansion/commit/1efee7c397c191da6287a78ec19512476a966a7b",
-        "https://github.com/juliangruber/brace-expansion/commit/935d78f32f335b2ff76578e5c5e877d31ae9888c",
-        "https://github.com/juliangruber/brace-expansion/commit/de84f144e9816f30e25fc8179e2e1249ab6df0db",
-        "https://github.com/juliangruber/brace-expansion/security/advisories/GHSA-qhr7-859c-m2p7"
       ]
     },
     {
@@ -10000,6 +10024,31 @@
       ]
     },
     {
+      "id": "nodejs-goof:CVE-2026-102277:brace-expansion:1.1.11",
+      "cve": "CVE-2026-102277",
+      "package": "brace-expansion",
+      "ecosystem": "npm",
+      "installed_version": "1.1.11",
+      "fixed_version": "1.1.21",
+      "app": "nodejs-goof",
+      "cvss": 5.3,
+      "epss": 0.00428,
+      "in_kev": false,
+      "kev_date_added": null,
+      "priority_score": 14,
+      "priority_label": "low",
+      "summary": {
+        "en": "The brace-expansion library generates arbitrary strings containing a common prefix and suffix. Prior to 1.1.21, 2.1.7, 3.0.9, and 5.0.12, the expand function handles untrusted {a},b}-shaped patterns with many trailing closing braces by restarting its scan once for each trailing closing brace. The successive full-input rescans with linear working-string growth cause quadratic CPU time and memory pressure that can block the Node.js event loop. The process eventually recovers, making the impact a recoverable CPU denial of service. This issue is fixed in versions 1.1.21, 2.1.7, 3.0.9, and 5.0.12."
+      },
+      "references": [
+        "https://github.com/juliangruber/brace-expansion/commit/33a5ef17b8d800bbfa8c52b14c39043b6aac1a96",
+        "https://github.com/juliangruber/brace-expansion/commit/bdff773f98e5988616b7039cc9b508df5d640b22",
+        "https://github.com/juliangruber/brace-expansion/commit/c55e67d8d8b1c56a2474afff15c2891166b2d364",
+        "https://github.com/juliangruber/brace-expansion/commit/ffdfa3e3806bed17c0874b8f1439b084de354a7e",
+        "https://github.com/juliangruber/brace-expansion/security/advisories/GHSA-q2hr-2g5m-vwhr"
+      ]
+    },
+    {
       "id": "nodejs-goof:CVE-2025-64718:js-yaml:3.13.1",
       "cve": "CVE-2025-64718",
       "package": "js-yaml",
@@ -10023,31 +10072,6 @@
         "https://github.com/nodeca/js-yaml/issues/730#issuecomment-3549635876",
         "https://github.com/nodeca/js-yaml/security/advisories/GHSA-mh29-5h37-fv8m",
         "https://github.com/advisories/GHSA-mh29-5h37-fv8m"
-      ]
-    },
-    {
-      "id": "nodejs-goof:CVE-2026-102277:brace-expansion:1.1.11",
-      "cve": "CVE-2026-102277",
-      "package": "brace-expansion",
-      "ecosystem": "npm",
-      "installed_version": "1.1.11",
-      "fixed_version": "1.1.21",
-      "app": "nodejs-goof",
-      "cvss": 5.3,
-      "epss": 0.0042,
-      "in_kev": false,
-      "kev_date_added": null,
-      "priority_score": 14,
-      "priority_label": "low",
-      "summary": {
-        "en": "The brace-expansion library generates arbitrary strings containing a common prefix and suffix. Prior to 1.1.21, 2.1.7, 3.0.9, and 5.0.12, the expand function handles untrusted {a},b}-shaped patterns with many trailing closing braces by restarting its scan once for each trailing closing brace. The successive full-input rescans with linear working-string growth cause quadratic CPU time and memory pressure that can block the Node.js event loop. The process eventually recovers, making the impact a recoverable CPU denial of service. This issue is fixed in versions 1.1.21, 2.1.7, 3.0.9, and 5.0.12."
-      },
-      "references": [
-        "https://github.com/juliangruber/brace-expansion/commit/33a5ef17b8d800bbfa8c52b14c39043b6aac1a96",
-        "https://github.com/juliangruber/brace-expansion/commit/bdff773f98e5988616b7039cc9b508df5d640b22",
-        "https://github.com/juliangruber/brace-expansion/commit/c55e67d8d8b1c56a2474afff15c2891166b2d364",
-        "https://github.com/juliangruber/brace-expansion/commit/ffdfa3e3806bed17c0874b8f1439b084de354a7e",
-        "https://github.com/juliangruber/brace-expansion/security/advisories/GHSA-q2hr-2g5m-vwhr"
       ]
     },
     {
@@ -10424,6 +10448,29 @@
       ]
     },
     {
+      "id": "nodejs-goof:CVE-2026-118764:minimatch:3.0.4",
+      "cve": "CVE-2026-118764",
+      "package": "minimatch",
+      "ecosystem": "npm",
+      "installed_version": "3.0.4",
+      "fixed_version": "11.0.1",
+      "app": "nodejs-goof",
+      "cvss": null,
+      "epss": 0.00291,
+      "in_kev": false,
+      "kev_date_added": null,
+      "priority_score": 0,
+      "priority_label": "low",
+      "summary": {
+        "en": "minimatch is a minimal matching utility for converting glob expressions into JavaScript RegExp objects. Prior to 11.0.1, src/index.ts implements firstPhasePreProcess() so that, at optimizationLevel 2 or higher, it repeatedly expands attacker-controlled **/.. pattern segments inside a fixpoint loop, allowing generated globParts entries to be processed and expanded again. secondPhasePreProcess() then compares the expanded entries pairwise, so a short malicious glob can cause excessive CPU and memory consumption during pattern compilation. This issue is fixed in version 11.0.1."
+      },
+      "references": [
+        "https://github.com/isaacs/minimatch/commit/77a0f5c4b80bdc641c3c930a1d9edf5ad2db57f8",
+        "https://github.com/isaacs/minimatch/releases/tag/v11.0.1",
+        "https://github.com/isaacs/minimatch/security/advisories/GHSA-g3hv-75wg-m249"
+      ]
+    },
+    {
       "id": "nodejs-goof:CVE-2026-5078:morgan:1.10.0",
       "cve": "CVE-2026-5078",
       "package": "morgan",
@@ -10737,12 +10784,6 @@
   ],
   "history": [
     {
-      "date": "2026-10-01",
-      "findings_total": 333,
-      "critical": 4,
-      "high": 3
-    },
-    {
       "date": "2026-10-02",
       "findings_total": 333,
       "critical": 4,
@@ -10913,6 +10954,12 @@
     {
       "date": "2026-10-30",
       "findings_total": 387,
+      "critical": 3,
+      "high": 3
+    },
+    {
+      "date": "2026-10-31",
+      "findings_total": 389,
       "critical": 3,
       "high": 3
     }

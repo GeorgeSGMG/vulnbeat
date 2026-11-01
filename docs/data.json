@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-10-31T11:58:03.737294+00:00",
+  "generated_at": "2026-11-01T12:57:31.466494+00:00",
   "sources": {
     "kev": {
       "fetched": true,
@@ -1431,29 +1431,6 @@
       ]
     },
     {
-      "id": "pygoat:CVE-2025-66471:urllib3:1.26.9",
-      "cve": "CVE-2025-66471",
-      "package": "urllib3",
-      "ecosystem": "PyPI",
-      "installed_version": "1.26.9",
-      "fixed_version": "2.6.0",
-      "app": "pygoat",
-      "cvss": 7.5,
-      "epss": 0.00682,
-      "in_kev": false,
-      "kev_date_added": null,
-      "priority_score": 19,
-      "priority_label": "low",
-      "summary": {
-        "en": "urllib3 is a user-friendly HTTP client library for Python. Starting in version 1.0 and prior to 2.6.0, the Streaming API improperly handles highly compressed data. urllib3's streaming API is designed for the efficient handling of large HTTP responses by reading the content in chunks, rather than loading the entire response body into memory at once. When streaming a compressed response, urllib3 can perform decoding or decompression based on the HTTP Content-Encoding header (e.g., gzip, deflate, br, or zstd). The library must read compressed data from the network and decompress it until the requested chunk size is met. Any resulting decompressed data that exceeds the requested amount is held in an internal buffer for the next read operation. The decompression logic could cause urllib3 to fully decode a small amount of highly compressed data in a single operation. This can result in excessive resource consumption (high CPU usage and massive memory allocation for the decompressed data.",
-        "es": "urllib3 es una biblioteca cliente HTTP f\u00e1cil de usar para Python. A partir de la versi\u00f3n 1.0 y versiones anteriores a la 2.6.0, la API de Streaming maneja incorrectamente los datos altamente comprimidos. La API de streaming de urllib3 est\u00e1 dise\u00f1ada para el manejo eficiente de grandes respuestas HTTP leyendo el contenido en fragmentos, en lugar de cargar todo el cuerpo de la respuesta en la memoria de una sola vez. Al transmitir una respuesta comprimida, urllib3 puede realizar la decodificaci\u00f3n o descompresi\u00f3n bas\u00e1ndose en el encabezado HTTP Content-Encoding (por ejemplo, gzip, deflate, br o zstd). La biblioteca debe leer datos comprimidos de la red y descomprimirlos hasta que se alcance el tama\u00f1o de fragmento solicitado. Cualquier dato descomprimido resultante que exceda la cantidad solicitada se mantiene en un b\u00fafer interno para la siguiente operaci\u00f3n de lectura. La l\u00f3gica de descompresi\u00f3n podr\u00eda hacer que urllib3 decodifique completamente una peque\u00f1a cantidad de datos altamente comprimidos en una sola operaci\u00f3n. Esto puede resultar en un consumo excesivo de recursos (alto uso de CPU y asignaci\u00f3n masiva de memoria para los datos descomprimidos)."
-      },
-      "references": [
-        "https://github.com/urllib3/urllib3/commit/c19571de34c47de3a766541b041637ba5f716ed7",
-        "https://github.com/urllib3/urllib3/security/advisories/GHSA-2xpw-w6gg-jr37"
-      ]
-    },
-    {
       "id": "pygoat:CVE-2025-66418:urllib3:1.26.9",
       "cve": "CVE-2025-66418",
       "package": "urllib3",
@@ -1474,6 +1451,29 @@
       "references": [
         "https://github.com/urllib3/urllib3/commit/24d7b67eac89f94e11003424bcf0d8f7b72222a8",
         "https://github.com/urllib3/urllib3/security/advisories/GHSA-gm62-xv2j-4w53"
+      ]
+    },
+    {
+      "id": "pygoat:CVE-2025-66471:urllib3:1.26.9",
+      "cve": "CVE-2025-66471",
+      "package": "urllib3",
+      "ecosystem": "PyPI",
+      "installed_version": "1.26.9",
+      "fixed_version": "2.6.0",
+      "app": "pygoat",
+      "cvss": 7.5,
+      "epss": 0.00682,
+      "in_kev": false,
+      "kev_date_added": null,
+      "priority_score": 19,
+      "priority_label": "low",
+      "summary": {
+        "en": "urllib3 is a user-friendly HTTP client library for Python. Starting in version 1.0 and prior to 2.6.0, the Streaming API improperly handles highly compressed data. urllib3's streaming API is designed for the efficient handling of large HTTP responses by reading the content in chunks, rather than loading the entire response body into memory at once. When streaming a compressed response, urllib3 can perform decoding or decompression based on the HTTP Content-Encoding header (e.g., gzip, deflate, br, or zstd). The library must read compressed data from the network and decompress it until the requested chunk size is met. Any resulting decompressed data that exceeds the requested amount is held in an internal buffer for the next read operation. The decompression logic could cause urllib3 to fully decode a small amount of highly compressed data in a single operation. This can result in excessive resource consumption (high CPU usage and massive memory allocation for the decompressed data.",
+        "es": "urllib3 es una biblioteca cliente HTTP f\u00e1cil de usar para Python. A partir de la versi\u00f3n 1.0 y versiones anteriores a la 2.6.0, la API de Streaming maneja incorrectamente los datos altamente comprimidos. La API de streaming de urllib3 est\u00e1 dise\u00f1ada para el manejo eficiente de grandes respuestas HTTP leyendo el contenido en fragmentos, en lugar de cargar todo el cuerpo de la respuesta en la memoria de una sola vez. Al transmitir una respuesta comprimida, urllib3 puede realizar la decodificaci\u00f3n o descompresi\u00f3n bas\u00e1ndose en el encabezado HTTP Content-Encoding (por ejemplo, gzip, deflate, br o zstd). La biblioteca debe leer datos comprimidos de la red y descomprimirlos hasta que se alcance el tama\u00f1o de fragmento solicitado. Cualquier dato descomprimido resultante que exceda la cantidad solicitada se mantiene en un b\u00fafer interno para la siguiente operaci\u00f3n de lectura. La l\u00f3gica de descompresi\u00f3n podr\u00eda hacer que urllib3 decodifique completamente una peque\u00f1a cantidad de datos altamente comprimidos en una sola operaci\u00f3n. Esto puede resultar en un consumo excesivo de recursos (alto uso de CPU y asignaci\u00f3n masiva de memoria para los datos descomprimidos)."
+      },
+      "references": [
+        "https://github.com/urllib3/urllib3/commit/c19571de34c47de3a766541b041637ba5f716ed7",
+        "https://github.com/urllib3/urllib3/security/advisories/GHSA-2xpw-w6gg-jr37"
       ]
     },
     {
@@ -1773,8 +1773,8 @@
       ]
     },
     {
-      "id": "pygoat:CVE-2026-112402:pillow:12.1.0",
-      "cve": "CVE-2026-112402",
+      "id": "pygoat:CVE-2026-112405:pillow:12.1.0",
+      "cve": "CVE-2026-112405",
       "package": "pillow",
       "ecosystem": "PyPI",
       "installed_version": "12.1.0",
@@ -1787,12 +1787,12 @@
       "priority_score": 19,
       "priority_label": "low",
       "summary": {
-        "en": "Pillow is a Python imaging library. Prior to 13.0.0, Pillow can double free image memory when ImagingScaleAffine encounters a selective allocation failure. The affected fast path handles Transform.EXTENT or pure scale-and-translate Transform.AFFINE operations with the default NEAREST resampling. The output image allocation must succeed while the additional per-column lookup allocation fails, after which the error path deletes image storage that later cleanup releases again. An attacker who can drive such a large Image.transform() operation under memory pressure may trigger the failure. This can crash the process and may corrupt memory. This issue is fixed in version 13.0.0."
+        "en": "Pillow is a Python imaging library. From 12.0.0 until 13.0.0, Pillow's Image.merge() can dereference a null image8 plane. Validation skips the first input band, allowing a 32-bit integer or floating-point image backed by image32 storage to be merged as a narrower multiband image. A crafted IPTC file can reach this path when an application opens and loads it, or a caller can invoke Image.merge() directly with such a first band. This causes a native process crash. This issue is fixed in version 13.0.0."
       },
       "references": [
-        "https://github.com/python-pillow/Pillow/commit/aafa6c75f7cdabb9f409a8aac7c780bea31d08d9",
+        "https://github.com/python-pillow/Pillow/commit/b6ee66e8b2c2c0932bdf65f963268d9f2927ef86",
         "https://github.com/python-pillow/Pillow/releases/tag/13.0.0",
-        "https://github.com/python-pillow/Pillow/security/advisories/GHSA-7mwm-ghpf-9vrm"
+        "https://github.com/python-pillow/Pillow/security/advisories/GHSA-cp9v-662q-vvx9"
       ]
     },
     {
@@ -1842,8 +1842,8 @@
       ]
     },
     {
-      "id": "pygoat:CVE-2026-112405:pillow:12.1.0",
-      "cve": "CVE-2026-112405",
+      "id": "pygoat:CVE-2026-112402:pillow:12.1.0",
+      "cve": "CVE-2026-112402",
       "package": "pillow",
       "ecosystem": "PyPI",
       "installed_version": "12.1.0",
@@ -1856,12 +1856,12 @@
       "priority_score": 19,
       "priority_label": "low",
       "summary": {
-        "en": "Pillow is a Python imaging library. From 12.0.0 until 13.0.0, Pillow's Image.merge() can dereference a null image8 plane. Validation skips the first input band, allowing a 32-bit integer or floating-point image backed by image32 storage to be merged as a narrower multiband image. A crafted IPTC file can reach this path when an application opens and loads it, or a caller can invoke Image.merge() directly with such a first band. This causes a native process crash. This issue is fixed in version 13.0.0."
+        "en": "Pillow is a Python imaging library. Prior to 13.0.0, Pillow can double free image memory when ImagingScaleAffine encounters a selective allocation failure. The affected fast path handles Transform.EXTENT or pure scale-and-translate Transform.AFFINE operations with the default NEAREST resampling. The output image allocation must succeed while the additional per-column lookup allocation fails, after which the error path deletes image storage that later cleanup releases again. An attacker who can drive such a large Image.transform() operation under memory pressure may trigger the failure. This can crash the process and may corrupt memory. This issue is fixed in version 13.0.0."
       },
       "references": [
-        "https://github.com/python-pillow/Pillow/commit/b6ee66e8b2c2c0932bdf65f963268d9f2927ef86",
+        "https://github.com/python-pillow/Pillow/commit/aafa6c75f7cdabb9f409a8aac7c780bea31d08d9",
         "https://github.com/python-pillow/Pillow/releases/tag/13.0.0",
-        "https://github.com/python-pillow/Pillow/security/advisories/GHSA-cp9v-662q-vvx9"
+        "https://github.com/python-pillow/Pillow/security/advisories/GHSA-7mwm-ghpf-9vrm"
       ]
     },
     {
@@ -1950,29 +1950,6 @@
       ]
     },
     {
-      "id": "pygoat:CVE-2026-112390:pillow:12.1.0",
-      "cve": "CVE-2026-112390",
-      "package": "pillow",
-      "ecosystem": "PyPI",
-      "installed_version": "12.1.0",
-      "fixed_version": "13.0.0",
-      "app": "pygoat",
-      "cvss": 7.5,
-      "epss": 0.00593,
-      "in_kev": false,
-      "kev_date_added": null,
-      "priority_score": 19,
-      "priority_label": "low",
-      "summary": {
-        "en": "Pillow is a Python imaging library. From 7.2.0 until 13.0.0, Pillow can enter an infinite loop while determining the frame count of a MIC image. MicImageFile inherits TIFF frame traversal, but MicImageFile.tell reports the OLE stream index and its seek() resets TIFF frame state, so an embedded TIFF with at least three IFDs never advances. When an application with olefile installed reads n_frames or saves all frames from a crafted MIC file, the non-advancing traversal can hold a worker at full CPU indefinitely. This issue is fixed in version 13.0.0."
-      },
-      "references": [
-        "https://github.com/python-pillow/Pillow/commit/26cb3ed061173b817b9ee4b6f507cb0e1e293218",
-        "https://github.com/python-pillow/Pillow/releases/tag/13.0.0",
-        "https://github.com/python-pillow/Pillow/security/advisories/GHSA-22hg-r758-rrw9"
-      ]
-    },
-    {
       "id": "pygoat:CVE-2026-112392:pillow:12.1.0",
       "cve": "CVE-2026-112392",
       "package": "pillow",
@@ -1993,6 +1970,29 @@
         "https://github.com/python-pillow/Pillow/commit/443e3130a8c11594fd0e296afad497e11e678961",
         "https://github.com/python-pillow/Pillow/releases/tag/13.0.0",
         "https://github.com/python-pillow/Pillow/security/advisories/GHSA-27h8-gf7j-v5hc"
+      ]
+    },
+    {
+      "id": "pygoat:CVE-2026-112390:pillow:12.1.0",
+      "cve": "CVE-2026-112390",
+      "package": "pillow",
+      "ecosystem": "PyPI",
+      "installed_version": "12.1.0",
+      "fixed_version": "13.0.0",
+      "app": "pygoat",
+      "cvss": 7.5,
+      "epss": 0.00593,
+      "in_kev": false,
+      "kev_date_added": null,
+      "priority_score": 19,
+      "priority_label": "low",
+      "summary": {
+        "en": "Pillow is a Python imaging library. From 7.2.0 until 13.0.0, Pillow can enter an infinite loop while determining the frame count of a MIC image. MicImageFile inherits TIFF frame traversal, but MicImageFile.tell reports the OLE stream index and its seek() resets TIFF frame state, so an embedded TIFF with at least three IFDs never advances. When an application with olefile installed reads n_frames or saves all frames from a crafted MIC file, the non-advancing traversal can hold a worker at full CPU indefinitely. This issue is fixed in version 13.0.0."
+      },
+      "references": [
+        "https://github.com/python-pillow/Pillow/commit/26cb3ed061173b817b9ee4b6f507cb0e1e293218",
+        "https://github.com/python-pillow/Pillow/releases/tag/13.0.0",
+        "https://github.com/python-pillow/Pillow/security/advisories/GHSA-22hg-r758-rrw9"
       ]
     },
     {
@@ -3015,31 +3015,6 @@
       ]
     },
     {
-      "id": "pygoat:CVE-2026-59199:pillow:12.1.0",
-      "cve": "CVE-2026-59199",
-      "package": "pillow",
-      "ecosystem": "PyPI",
-      "installed_version": "12.1.0",
-      "fixed_version": "12.3.0",
-      "app": "pygoat",
-      "cvss": 7.5,
-      "epss": 0.00385,
-      "in_kev": false,
-      "kev_date_added": null,
-      "priority_score": 19,
-      "priority_label": "low",
-      "summary": {
-        "en": "Pillow is a Python imaging library. Prior to 12.3.0, Pillow public image coordinate APIs can trigger a native heap out-of-bounds write when given coordinates near the signed 32-bit integer limits in Image.paste(), Image.crop(), or Image.alpha_composite(). This issue is fixed in version 12.3.0.",
-        "es": "Pillow es una biblioteca de procesamiento de im\u00e1genes de Python. Antes de la versi\u00f3n 12.3.0, las API p\u00fablicas de coordenadas de imagen de Pillow pueden desencadenar una escritura fuera de l\u00edmites en el heap nativo cuando se les dan coordenadas cercanas a los l\u00edmites de enteros con signo de 32 bits en Image.paste(), Image.crop() o Image.alpha_composite(). Este problema est\u00e1 solucionado en la versi\u00f3n 12.3.0."
-      },
-      "references": [
-        "https://github.com/python-pillow/Pillow/commit/ceefc348eb3c3844c7f9796ef2cc3a7dd5fbba7b",
-        "https://github.com/python-pillow/Pillow/pull/9703",
-        "https://github.com/python-pillow/Pillow/releases/tag/12.3.0",
-        "https://github.com/python-pillow/Pillow/security/advisories/GHSA-6r8x-57c9-28j4"
-      ]
-    },
-    {
       "id": "pygoat:CVE-2026-59200:pillow:12.1.0",
       "cve": "CVE-2026-59200",
       "package": "pillow",
@@ -3087,6 +3062,31 @@
         "https://github.com/python-pillow/Pillow/pull/9715",
         "https://github.com/python-pillow/Pillow/releases/tag/12.3.0",
         "https://github.com/python-pillow/Pillow/security/advisories/GHSA-9hw9-ch79-4vh6"
+      ]
+    },
+    {
+      "id": "pygoat:CVE-2026-59199:pillow:12.1.0",
+      "cve": "CVE-2026-59199",
+      "package": "pillow",
+      "ecosystem": "PyPI",
+      "installed_version": "12.1.0",
+      "fixed_version": "12.3.0",
+      "app": "pygoat",
+      "cvss": 7.5,
+      "epss": 0.00385,
+      "in_kev": false,
+      "kev_date_added": null,
+      "priority_score": 19,
+      "priority_label": "low",
+      "summary": {
+        "en": "Pillow is a Python imaging library. Prior to 12.3.0, Pillow public image coordinate APIs can trigger a native heap out-of-bounds write when given coordinates near the signed 32-bit integer limits in Image.paste(), Image.crop(), or Image.alpha_composite(). This issue is fixed in version 12.3.0.",
+        "es": "Pillow es una biblioteca de procesamiento de im\u00e1genes de Python. Antes de la versi\u00f3n 12.3.0, las API p\u00fablicas de coordenadas de imagen de Pillow pueden desencadenar una escritura fuera de l\u00edmites en el heap nativo cuando se les dan coordenadas cercanas a los l\u00edmites de enteros con signo de 32 bits en Image.paste(), Image.crop() o Image.alpha_composite(). Este problema est\u00e1 solucionado en la versi\u00f3n 12.3.0."
+      },
+      "references": [
+        "https://github.com/python-pillow/Pillow/commit/ceefc348eb3c3844c7f9796ef2cc3a7dd5fbba7b",
+        "https://github.com/python-pillow/Pillow/pull/9703",
+        "https://github.com/python-pillow/Pillow/releases/tag/12.3.0",
+        "https://github.com/python-pillow/Pillow/security/advisories/GHSA-6r8x-57c9-28j4"
       ]
     },
     {
@@ -3687,30 +3687,6 @@
       ]
     },
     {
-      "id": "pygoat:CVE-2026-96641:pillow:12.1.0",
-      "cve": "CVE-2026-96641",
-      "package": "pillow",
-      "ecosystem": "PyPI",
-      "installed_version": "12.1.0",
-      "fixed_version": "13.0.0",
-      "app": "pygoat",
-      "cvss": 6.5,
-      "epss": 0.00345,
-      "in_kev": false,
-      "kev_date_added": null,
-      "priority_score": 17,
-      "priority_label": "low",
-      "summary": {
-        "en": "Pillow is a Python imaging library. Prior to 13.0.0, PILfont text-width accumulation in src/_imaging.c checks positive glyph advances against INT_MAX but does not check negative advances against INT_MIN. Repeating a signed 16-bit advance of -32768 can therefore execute a signed C integer overflow in xsize += dx, producing a large positive width from a negative mathematical result. Applications that use getlength(), getsize(), or derived layout, quota, serialization, or allocation calculations can experience logic-integrity errors or resource consumption, while the high-level mask path commonly retains a decompression-bomb check. This issue is fixed in version 13.0.0."
-      },
-      "references": [
-        "https://github.com/python-pillow/Pillow/commit/80de4be9e38d3a6148dd4d8491eb80cd12b760a4",
-        "https://github.com/python-pillow/Pillow/pull/10010",
-        "https://github.com/python-pillow/Pillow/releases/tag/13.0.0",
-        "https://github.com/python-pillow/Pillow/security/advisories/GHSA-4rm8-3hmm-39fg"
-      ]
-    },
-    {
       "id": "pygoat:CVE-2026-96636:pillow:12.1.0",
       "cve": "CVE-2026-96636",
       "package": "pillow",
@@ -3732,6 +3708,30 @@
         "https://github.com/python-pillow/Pillow/pull/10011",
         "https://github.com/python-pillow/Pillow/releases/tag/13.0.0",
         "https://github.com/python-pillow/Pillow/security/advisories/GHSA-p8hx-v2p6-rp84"
+      ]
+    },
+    {
+      "id": "pygoat:CVE-2026-96641:pillow:12.1.0",
+      "cve": "CVE-2026-96641",
+      "package": "pillow",
+      "ecosystem": "PyPI",
+      "installed_version": "12.1.0",
+      "fixed_version": "13.0.0",
+      "app": "pygoat",
+      "cvss": 6.5,
+      "epss": 0.00345,
+      "in_kev": false,
+      "kev_date_added": null,
+      "priority_score": 17,
+      "priority_label": "low",
+      "summary": {
+        "en": "Pillow is a Python imaging library. Prior to 13.0.0, PILfont text-width accumulation in src/_imaging.c checks positive glyph advances against INT_MAX but does not check negative advances against INT_MIN. Repeating a signed 16-bit advance of -32768 can therefore execute a signed C integer overflow in xsize += dx, producing a large positive width from a negative mathematical result. Applications that use getlength(), getsize(), or derived layout, quota, serialization, or allocation calculations can experience logic-integrity errors or resource consumption, while the high-level mask path commonly retains a decompression-bomb check. This issue is fixed in version 13.0.0."
+      },
+      "references": [
+        "https://github.com/python-pillow/Pillow/commit/80de4be9e38d3a6148dd4d8491eb80cd12b760a4",
+        "https://github.com/python-pillow/Pillow/pull/10010",
+        "https://github.com/python-pillow/Pillow/releases/tag/13.0.0",
+        "https://github.com/python-pillow/Pillow/security/advisories/GHSA-4rm8-3hmm-39fg"
       ]
     },
     {
@@ -4259,6 +4259,29 @@
       ]
     },
     {
+      "id": "pygoat:CVE-2026-27982:django-allauth:0.52.0",
+      "cve": "CVE-2026-27982",
+      "package": "django-allauth",
+      "ecosystem": "PyPI",
+      "installed_version": "0.52.0",
+      "fixed_version": "65.14.1",
+      "app": "pygoat",
+      "cvss": 6.1,
+      "epss": 0.00188,
+      "in_kev": false,
+      "kev_date_added": null,
+      "priority_score": 15,
+      "priority_label": "low",
+      "summary": {
+        "en": "An open redirect vulnerability exists in django-allauth versions prior to 65.14.1 when SAML IdP initiated SSO is enabled (it is disabled by default), which may allow an attacker to redirect users to an arbitrary external website via a crafted URL.",
+        "es": "Existe una vulnerabilidad de redirecci\u00f3n abierta en las versiones de django-allauth anteriores a la 65.14.1 cuando el SSO iniciado por el IdP de SAML est\u00e1 habilitado (est\u00e1 deshabilitado por defecto), lo que puede permitir a un atacante redirigir a los usuarios a un sitio web externo arbitrario a trav\u00e9s de una URL manipulada."
+      },
+      "references": [
+        "https://allauth.org/news/2026/02/django-allauth-65.14.1-released/",
+        "https://jvn.jp/en/jp/JVN23669411/"
+      ]
+    },
+    {
       "id": "pygoat:CVE-2026-25645:requests:2.28.2",
       "cve": "CVE-2026-25645",
       "package": "requests",
@@ -4399,29 +4422,6 @@
         "https://docs.djangoproject.com/en/dev/releases/security/",
         "https://groups.google.com/g/django-announce",
         "https://www.djangoproject.com/weblog/2026/apr/07/security-releases/"
-      ]
-    },
-    {
-      "id": "pygoat:CVE-2026-27982:django-allauth:0.52.0",
-      "cve": "CVE-2026-27982",
-      "package": "django-allauth",
-      "ecosystem": "PyPI",
-      "installed_version": "0.52.0",
-      "fixed_version": "65.14.1",
-      "app": "pygoat",
-      "cvss": 6.1,
-      "epss": 0.00166,
-      "in_kev": false,
-      "kev_date_added": null,
-      "priority_score": 15,
-      "priority_label": "low",
-      "summary": {
-        "en": "An open redirect vulnerability exists in django-allauth versions prior to 65.14.1 when SAML IdP initiated SSO is enabled (it is disabled by default), which may allow an attacker to redirect users to an arbitrary external website via a crafted URL.",
-        "es": "Existe una vulnerabilidad de redirecci\u00f3n abierta en las versiones de django-allauth anteriores a la 65.14.1 cuando el SSO iniciado por el IdP de SAML est\u00e1 habilitado (est\u00e1 deshabilitado por defecto), lo que puede permitir a un atacante redirigir a los usuarios a un sitio web externo arbitrario a trav\u00e9s de una URL manipulada."
-      },
-      "references": [
-        "https://allauth.org/news/2026/02/django-allauth-65.14.1-released/",
-        "https://jvn.jp/en/jp/JVN23669411/"
       ]
     },
     {
@@ -8150,7 +8150,7 @@
       "fixed_version": "13.7.0",
       "app": "nodejs-goof",
       "cvss": 7.5,
-      "epss": 0.01777,
+      "epss": 0.01792,
       "in_kev": false,
       "kev_date_added": null,
       "priority_score": 20,
@@ -9006,28 +9006,6 @@
       ]
     },
     {
-      "id": "nodejs-goof:CVE-2021-32822:hbs:4.0.4",
-      "cve": "CVE-2021-32822",
-      "package": "hbs",
-      "ecosystem": "npm",
-      "installed_version": "4.0.4",
-      "fixed_version": null,
-      "app": "nodejs-goof",
-      "cvss": 4.0,
-      "epss": 0.01131,
-      "in_kev": false,
-      "kev_date_added": null,
-      "priority_score": 11,
-      "priority_label": "low",
-      "summary": {
-        "en": "The npm hbs package is an Express view engine wrapper for Handlebars. Depending on usage, users of hbs may be vulnerable to a file disclosure vulnerability. There is currently no patch for this vulnerability. hbs mixes pure template data with engine configuration options through the Express render API. By overwriting internal configuration options a file disclosure vulnerability may be triggered in downstream applications. For an example PoC see the referenced GHSL-2021-020.",
-        "es": "El paquete npm hbs es una envoltura del motor de visualizaci\u00f3n Express para Handlebars. Dependiendo del uso, los usuarios de hbs pueden ser vulnerables a una vulnerabilidad de divulgaci\u00f3n de archivos. Actualmente no se presenta ning\u00fan parche para esta vulnerabilidad. hbs mezcla datos puros de plantillas con opciones de configuraci\u00f3n del motor mediante la API de renderizado Express. Al sobrescribir las opciones de configuraci\u00f3n internas, se puede desencadenar una vulnerabilidad de divulgaci\u00f3n de archivos en las aplicaciones posteriores. Para un ejemplo de PoC vea el GHSL-2021-020 referenciado."
-      },
-      "references": [
-        "https://securitylab.github.com/advisories/GHSL-2021-020-pillarjs-hbs/"
-      ]
-    },
-    {
       "id": "nodejs-goof:CVE-2026-69152:brace-expansion:1.1.11",
       "cve": "CVE-2026-69152",
       "package": "brace-expansion",
@@ -9229,6 +9207,28 @@
         "https://github.com/cthackers/adm-zip/commit/491600683dacb6cb9fe0718a0eeb9cb5eb49afa6",
         "https://github.com/cthackers/adm-zip/releases/tag/v0.6.1",
         "https://github.com/cthackers/adm-zip/security/advisories/GHSA-7q85-xj36-vmfc"
+      ]
+    },
+    {
+      "id": "nodejs-goof:CVE-2021-32822:hbs:4.0.4",
+      "cve": "CVE-2021-32822",
+      "package": "hbs",
+      "ecosystem": "npm",
+      "installed_version": "4.0.4",
+      "fixed_version": null,
+      "app": "nodejs-goof",
+      "cvss": 4.0,
+      "epss": 0.00982,
+      "in_kev": false,
+      "kev_date_added": null,
+      "priority_score": 11,
+      "priority_label": "low",
+      "summary": {
+        "en": "The npm hbs package is an Express view engine wrapper for Handlebars. Depending on usage, users of hbs may be vulnerable to a file disclosure vulnerability. There is currently no patch for this vulnerability. hbs mixes pure template data with engine configuration options through the Express render API. By overwriting internal configuration options a file disclosure vulnerability may be triggered in downstream applications. For an example PoC see the referenced GHSL-2021-020.",
+        "es": "El paquete npm hbs es una envoltura del motor de visualizaci\u00f3n Express para Handlebars. Dependiendo del uso, los usuarios de hbs pueden ser vulnerables a una vulnerabilidad de divulgaci\u00f3n de archivos. Actualmente no se presenta ning\u00fan parche para esta vulnerabilidad. hbs mezcla datos puros de plantillas con opciones de configuraci\u00f3n del motor mediante la API de renderizado Express. Al sobrescribir las opciones de configuraci\u00f3n internas, se puede desencadenar una vulnerabilidad de divulgaci\u00f3n de archivos en las aplicaciones posteriores. Para un ejemplo de PoC vea el GHSL-2021-020 referenciado."
+      },
+      "references": [
+        "https://securitylab.github.com/advisories/GHSL-2021-020-pillarjs-hbs/"
       ]
     },
     {
@@ -10784,12 +10784,6 @@
   ],
   "history": [
     {
-      "date": "2026-10-02",
-      "findings_total": 333,
-      "critical": 4,
-      "high": 3
-    },
-    {
       "date": "2026-10-03",
       "findings_total": 335,
       "critical": 4,
@@ -10959,6 +10953,12 @@
     },
     {
       "date": "2026-10-31",
+      "findings_total": 389,
+      "critical": 3,
+      "high": 3
+    },
+    {
+      "date": "2026-11-01",
       "findings_total": 389,
       "critical": 3,
       "high": 3

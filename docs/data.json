@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-11-01T12:57:31.466494+00:00",
+  "generated_at": "2026-11-02T15:08:09.643497+00:00",
   "sources": {
     "kev": {
       "fetched": true,
@@ -47,10 +47,10 @@
       "fixed_version": "4.2.7",
       "app": "pygoat",
       "cvss": 7.5,
-      "epss": 0.49774,
+      "epss": 0.53447,
       "in_kev": false,
       "kev_date_added": null,
-      "priority_score": 56,
+      "priority_score": 59,
       "priority_label": "high",
       "summary": {
         "en": "An issue was discovered in Django 3.2 before 3.2.23, 4.1 before 4.1.13, and 4.2 before 4.2.7. The NFKC normalization is slow on Windows. As a consequence, django.contrib.auth.forms.UsernameField is subject to a potential DoS (denial of service) attack via certain inputs with a very large number of Unicode characters.",
@@ -697,7 +697,7 @@
       "fixed_version": "4.2.27",
       "app": "pygoat",
       "cvss": 7.5,
-      "epss": 0.02085,
+      "epss": 0.02162,
       "in_kev": false,
       "kev_date_added": null,
       "priority_score": 20,
@@ -1750,6 +1750,52 @@
       ]
     },
     {
+      "id": "pygoat:CVE-2026-112402:pillow:12.1.0",
+      "cve": "CVE-2026-112402",
+      "package": "pillow",
+      "ecosystem": "PyPI",
+      "installed_version": "12.1.0",
+      "fixed_version": "13.0.0",
+      "app": "pygoat",
+      "cvss": 7.5,
+      "epss": 0.00594,
+      "in_kev": false,
+      "kev_date_added": null,
+      "priority_score": 19,
+      "priority_label": "low",
+      "summary": {
+        "en": "Pillow is a Python imaging library. Prior to 13.0.0, Pillow can double free image memory when ImagingScaleAffine encounters a selective allocation failure. The affected fast path handles Transform.EXTENT or pure scale-and-translate Transform.AFFINE operations with the default NEAREST resampling. The output image allocation must succeed while the additional per-column lookup allocation fails, after which the error path deletes image storage that later cleanup releases again. An attacker who can drive such a large Image.transform() operation under memory pressure may trigger the failure. This can crash the process and may corrupt memory. This issue is fixed in version 13.0.0."
+      },
+      "references": [
+        "https://github.com/python-pillow/Pillow/commit/aafa6c75f7cdabb9f409a8aac7c780bea31d08d9",
+        "https://github.com/python-pillow/Pillow/releases/tag/13.0.0",
+        "https://github.com/python-pillow/Pillow/security/advisories/GHSA-7mwm-ghpf-9vrm"
+      ]
+    },
+    {
+      "id": "pygoat:CVE-2026-112894:pillow:12.1.0",
+      "cve": "CVE-2026-112894",
+      "package": "pillow",
+      "ecosystem": "PyPI",
+      "installed_version": "12.1.0",
+      "fixed_version": "13.0.0",
+      "app": "pygoat",
+      "cvss": 7.5,
+      "epss": 0.00594,
+      "in_kev": false,
+      "kev_date_added": null,
+      "priority_score": 19,
+      "priority_label": "low",
+      "summary": {
+        "en": "Pillow is a Python imaging library. From 5.1.0 until 13.0.0, Pillow takes quadratic time to reserve PDF object identifiers when saving many frames with save_all enabled. PdfParser.next_object_id() repeatedly rebuilds and scans all previously reserved identifiers for every object. An attacker can supply a multi-frame image, including a small APNG with a large declared frame count, to an application that converts it to a multipage PDF. This can consume excessive CPU and deny service. This issue is fixed in version 13.0.0."
+      },
+      "references": [
+        "https://github.com/python-pillow/Pillow/commit/f6a852555f1a1bdff7781abf25f1a3b8bd6ce6cb",
+        "https://github.com/python-pillow/Pillow/releases/tag/13.0.0",
+        "https://github.com/python-pillow/Pillow/security/advisories/GHSA-jg86-v3jv-hrpm"
+      ]
+    },
+    {
       "id": "pygoat:CVE-2026-112400:pillow:12.1.0",
       "cve": "CVE-2026-112400",
       "package": "pillow",
@@ -1796,29 +1842,6 @@
       ]
     },
     {
-      "id": "pygoat:CVE-2026-112894:pillow:12.1.0",
-      "cve": "CVE-2026-112894",
-      "package": "pillow",
-      "ecosystem": "PyPI",
-      "installed_version": "12.1.0",
-      "fixed_version": "13.0.0",
-      "app": "pygoat",
-      "cvss": 7.5,
-      "epss": 0.00594,
-      "in_kev": false,
-      "kev_date_added": null,
-      "priority_score": 19,
-      "priority_label": "low",
-      "summary": {
-        "en": "Pillow is a Python imaging library. From 5.1.0 until 13.0.0, Pillow takes quadratic time to reserve PDF object identifiers when saving many frames with save_all enabled. PdfParser.next_object_id() repeatedly rebuilds and scans all previously reserved identifiers for every object. An attacker can supply a multi-frame image, including a small APNG with a large declared frame count, to an application that converts it to a multipage PDF. This can consume excessive CPU and deny service. This issue is fixed in version 13.0.0."
-      },
-      "references": [
-        "https://github.com/python-pillow/Pillow/commit/f6a852555f1a1bdff7781abf25f1a3b8bd6ce6cb",
-        "https://github.com/python-pillow/Pillow/releases/tag/13.0.0",
-        "https://github.com/python-pillow/Pillow/security/advisories/GHSA-jg86-v3jv-hrpm"
-      ]
-    },
-    {
       "id": "pygoat:CVE-2026-112895:pillow:12.1.0",
       "cve": "CVE-2026-112895",
       "package": "pillow",
@@ -1839,29 +1862,6 @@
         "https://github.com/python-pillow/Pillow/commit/e2ae7eacad6de68c37eb28b633a97bebacf2c5bf",
         "https://github.com/python-pillow/Pillow/releases/tag/13.0.0",
         "https://github.com/python-pillow/Pillow/security/advisories/GHSA-p4wg-p73j-c528"
-      ]
-    },
-    {
-      "id": "pygoat:CVE-2026-112402:pillow:12.1.0",
-      "cve": "CVE-2026-112402",
-      "package": "pillow",
-      "ecosystem": "PyPI",
-      "installed_version": "12.1.0",
-      "fixed_version": "13.0.0",
-      "app": "pygoat",
-      "cvss": 7.5,
-      "epss": 0.00594,
-      "in_kev": false,
-      "kev_date_added": null,
-      "priority_score": 19,
-      "priority_label": "low",
-      "summary": {
-        "en": "Pillow is a Python imaging library. Prior to 13.0.0, Pillow can double free image memory when ImagingScaleAffine encounters a selective allocation failure. The affected fast path handles Transform.EXTENT or pure scale-and-translate Transform.AFFINE operations with the default NEAREST resampling. The output image allocation must succeed while the additional per-column lookup allocation fails, after which the error path deletes image storage that later cleanup releases again. An attacker who can drive such a large Image.transform() operation under memory pressure may trigger the failure. This can crash the process and may corrupt memory. This issue is fixed in version 13.0.0."
-      },
-      "references": [
-        "https://github.com/python-pillow/Pillow/commit/aafa6c75f7cdabb9f409a8aac7c780bea31d08d9",
-        "https://github.com/python-pillow/Pillow/releases/tag/13.0.0",
-        "https://github.com/python-pillow/Pillow/security/advisories/GHSA-7mwm-ghpf-9vrm"
       ]
     },
     {
@@ -1950,29 +1950,6 @@
       ]
     },
     {
-      "id": "pygoat:CVE-2026-112392:pillow:12.1.0",
-      "cve": "CVE-2026-112392",
-      "package": "pillow",
-      "ecosystem": "PyPI",
-      "installed_version": "12.1.0",
-      "fixed_version": "13.0.0",
-      "app": "pygoat",
-      "cvss": 7.5,
-      "epss": 0.00593,
-      "in_kev": false,
-      "kev_date_added": null,
-      "priority_score": 19,
-      "priority_label": "low",
-      "summary": {
-        "en": "Pillow is a Python imaging library. Prior to 13.0.0, Pillow's rank-based filters can dereference invalid image storage for a zero-size image. ImagingExpand() allocates a non-empty output and then faults while replicating edges by reading the first pixel from empty input storage; ImagingRankFilter is never reached. An attacker can supply or cause creation of a zero-size image to an application that applies a rank, median, minimum, or maximum filter. This causes a native process crash. This issue is fixed in version 13.0.0."
-      },
-      "references": [
-        "https://github.com/python-pillow/Pillow/commit/443e3130a8c11594fd0e296afad497e11e678961",
-        "https://github.com/python-pillow/Pillow/releases/tag/13.0.0",
-        "https://github.com/python-pillow/Pillow/security/advisories/GHSA-27h8-gf7j-v5hc"
-      ]
-    },
-    {
       "id": "pygoat:CVE-2026-112390:pillow:12.1.0",
       "cve": "CVE-2026-112390",
       "package": "pillow",
@@ -1996,26 +1973,26 @@
       ]
     },
     {
-      "id": "pygoat:CVE-2026-112397:pillow:12.1.0",
-      "cve": "CVE-2026-112397",
+      "id": "pygoat:CVE-2026-112392:pillow:12.1.0",
+      "cve": "CVE-2026-112392",
       "package": "pillow",
       "ecosystem": "PyPI",
       "installed_version": "12.1.0",
       "fixed_version": "13.0.0",
       "app": "pygoat",
       "cvss": 7.5,
-      "epss": 0.00573,
+      "epss": 0.00593,
       "in_kev": false,
       "kev_date_added": null,
       "priority_score": 19,
       "priority_label": "low",
       "summary": {
-        "en": "Pillow is a Python imaging library. Prior to 13.0.0, Pillow's ImageMorph.MorphOp.apply() can access memory before a row buffer for a zero-width image. PPM and PGM input can create an image with width zero, and the native morphology routine indexes outrow[width - 1] without rejecting that geometry. An attacker can supply such an image to an application that applies a morphology operation. This can crash the process. This issue is fixed in version 13.0.0."
+        "en": "Pillow is a Python imaging library. Prior to 13.0.0, Pillow's rank-based filters can dereference invalid image storage for a zero-size image. ImagingExpand() allocates a non-empty output and then faults while replicating edges by reading the first pixel from empty input storage; ImagingRankFilter is never reached. An attacker can supply or cause creation of a zero-size image to an application that applies a rank, median, minimum, or maximum filter. This causes a native process crash. This issue is fixed in version 13.0.0."
       },
       "references": [
-        "https://github.com/python-pillow/Pillow/commit/18f7c0dfee93063c51db6ed0ca8c4da2999dcb64",
+        "https://github.com/python-pillow/Pillow/commit/443e3130a8c11594fd0e296afad497e11e678961",
         "https://github.com/python-pillow/Pillow/releases/tag/13.0.0",
-        "https://github.com/python-pillow/Pillow/security/advisories/GHSA-58r4-6rv3-gfh8"
+        "https://github.com/python-pillow/Pillow/security/advisories/GHSA-27h8-gf7j-v5hc"
       ]
     },
     {
@@ -2039,6 +2016,29 @@
         "https://github.com/python-pillow/Pillow/commit/b3ebf20c694f2f12537a629c30229a1d5a53f777",
         "https://github.com/python-pillow/Pillow/releases/tag/13.0.0",
         "https://github.com/python-pillow/Pillow/security/advisories/GHSA-f2g6-542v-9j58"
+      ]
+    },
+    {
+      "id": "pygoat:CVE-2026-112397:pillow:12.1.0",
+      "cve": "CVE-2026-112397",
+      "package": "pillow",
+      "ecosystem": "PyPI",
+      "installed_version": "12.1.0",
+      "fixed_version": "13.0.0",
+      "app": "pygoat",
+      "cvss": 7.5,
+      "epss": 0.00573,
+      "in_kev": false,
+      "kev_date_added": null,
+      "priority_score": 19,
+      "priority_label": "low",
+      "summary": {
+        "en": "Pillow is a Python imaging library. Prior to 13.0.0, Pillow's ImageMorph.MorphOp.apply() can access memory before a row buffer for a zero-width image. PPM and PGM input can create an image with width zero, and the native morphology routine indexes outrow[width - 1] without rejecting that geometry. An attacker can supply such an image to an application that applies a morphology operation. This can crash the process. This issue is fixed in version 13.0.0."
+      },
+      "references": [
+        "https://github.com/python-pillow/Pillow/commit/18f7c0dfee93063c51db6ed0ca8c4da2999dcb64",
+        "https://github.com/python-pillow/Pillow/releases/tag/13.0.0",
+        "https://github.com/python-pillow/Pillow/security/advisories/GHSA-58r4-6rv3-gfh8"
       ]
     },
     {
@@ -2098,7 +2098,7 @@
       "fixed_version": "4.2.27",
       "app": "pygoat",
       "cvss": 4.3,
-      "epss": 0.00923,
+      "epss": 0.00926,
       "in_kev": false,
       "kev_date_added": null,
       "priority_score": 11,
@@ -2400,6 +2400,35 @@
       ]
     },
     {
+      "id": "pygoat:CVE-2025-48432:django:4.2",
+      "cve": "CVE-2025-48432",
+      "package": "django",
+      "ecosystem": "PyPI",
+      "installed_version": "4.2",
+      "fixed_version": "4.2.22",
+      "app": "pygoat",
+      "cvss": 4.0,
+      "epss": 0.00807,
+      "in_kev": false,
+      "kev_date_added": null,
+      "priority_score": 11,
+      "priority_label": "low",
+      "summary": {
+        "en": "An issue was discovered in Django 5.2 before 5.2.3, 5.1 before 5.1.11, and 4.2 before 4.2.23. Internal HTTP response logging does not escape request.path, which allows remote attackers to potentially manipulate log output via crafted URLs. This may lead to log injection or forgery when logs are viewed in terminals or processed by external systems.",
+        "es": "Se descubri\u00f3 un problema en Django 5.2 (anterior a la 5.2.2), 5.1 (anterior a la 5.1.10) y 4.2 (anterior a la 4.2.22). El registro interno de respuestas HTTP no escapa a request.path, lo que permite a atacantes remotos manipular la salida del registro mediante URL manipuladas. Esto puede provocar la inyecci\u00f3n o falsificaci\u00f3n de registros cuando estos se visualizan en terminales o son procesados por sistemas externos."
+      },
+      "references": [
+        "https://docs.djangoproject.com/en/dev/releases/security/",
+        "https://groups.google.com/g/django-announce",
+        "https://www.djangoproject.com/weblog/2025/jun/04/security-releases/",
+        "https://www.djangoproject.com/weblog/2025/jun/10/bugfix-releases/",
+        "http://www.openwall.com/lists/oss-security/2025/06/04/5",
+        "http://www.openwall.com/lists/oss-security/2025/06/10/2",
+        "http://www.openwall.com/lists/oss-security/2025/06/10/3",
+        "http://www.openwall.com/lists/oss-security/2025/06/10/4"
+      ]
+    },
+    {
       "id": "pygoat:CVE-2026-112404:pillow:12.1.0",
       "cve": "CVE-2026-112404",
       "package": "pillow",
@@ -2493,35 +2522,6 @@
         "https://github.com/python-pillow/Pillow/pull/10124",
         "https://github.com/python-pillow/Pillow/releases/tag/13.0.0",
         "https://github.com/python-pillow/Pillow/security/advisories/GHSA-g7cr-3p24-7wf7"
-      ]
-    },
-    {
-      "id": "pygoat:CVE-2025-48432:django:4.2",
-      "cve": "CVE-2025-48432",
-      "package": "django",
-      "ecosystem": "PyPI",
-      "installed_version": "4.2",
-      "fixed_version": "4.2.22",
-      "app": "pygoat",
-      "cvss": 4.0,
-      "epss": 0.00751,
-      "in_kev": false,
-      "kev_date_added": null,
-      "priority_score": 11,
-      "priority_label": "low",
-      "summary": {
-        "en": "An issue was discovered in Django 5.2 before 5.2.3, 5.1 before 5.1.11, and 4.2 before 4.2.23. Internal HTTP response logging does not escape request.path, which allows remote attackers to potentially manipulate log output via crafted URLs. This may lead to log injection or forgery when logs are viewed in terminals or processed by external systems.",
-        "es": "Se descubri\u00f3 un problema en Django 5.2 (anterior a la 5.2.2), 5.1 (anterior a la 5.1.10) y 4.2 (anterior a la 4.2.22). El registro interno de respuestas HTTP no escapa a request.path, lo que permite a atacantes remotos manipular la salida del registro mediante URL manipuladas. Esto puede provocar la inyecci\u00f3n o falsificaci\u00f3n de registros cuando estos se visualizan en terminales o son procesados por sistemas externos."
-      },
-      "references": [
-        "https://docs.djangoproject.com/en/dev/releases/security/",
-        "https://groups.google.com/g/django-announce",
-        "https://www.djangoproject.com/weblog/2025/jun/04/security-releases/",
-        "https://www.djangoproject.com/weblog/2025/jun/10/bugfix-releases/",
-        "http://www.openwall.com/lists/oss-security/2025/06/04/5",
-        "http://www.openwall.com/lists/oss-security/2025/06/10/2",
-        "http://www.openwall.com/lists/oss-security/2025/06/10/3",
-        "http://www.openwall.com/lists/oss-security/2025/06/10/4"
       ]
     },
     {
@@ -3711,30 +3711,6 @@
       ]
     },
     {
-      "id": "pygoat:CVE-2026-96641:pillow:12.1.0",
-      "cve": "CVE-2026-96641",
-      "package": "pillow",
-      "ecosystem": "PyPI",
-      "installed_version": "12.1.0",
-      "fixed_version": "13.0.0",
-      "app": "pygoat",
-      "cvss": 6.5,
-      "epss": 0.00345,
-      "in_kev": false,
-      "kev_date_added": null,
-      "priority_score": 17,
-      "priority_label": "low",
-      "summary": {
-        "en": "Pillow is a Python imaging library. Prior to 13.0.0, PILfont text-width accumulation in src/_imaging.c checks positive glyph advances against INT_MAX but does not check negative advances against INT_MIN. Repeating a signed 16-bit advance of -32768 can therefore execute a signed C integer overflow in xsize += dx, producing a large positive width from a negative mathematical result. Applications that use getlength(), getsize(), or derived layout, quota, serialization, or allocation calculations can experience logic-integrity errors or resource consumption, while the high-level mask path commonly retains a decompression-bomb check. This issue is fixed in version 13.0.0."
-      },
-      "references": [
-        "https://github.com/python-pillow/Pillow/commit/80de4be9e38d3a6148dd4d8491eb80cd12b760a4",
-        "https://github.com/python-pillow/Pillow/pull/10010",
-        "https://github.com/python-pillow/Pillow/releases/tag/13.0.0",
-        "https://github.com/python-pillow/Pillow/security/advisories/GHSA-4rm8-3hmm-39fg"
-      ]
-    },
-    {
       "id": "pygoat:CVE-2026-96638:pillow:12.1.0",
       "cve": "CVE-2026-96638",
       "package": "pillow",
@@ -3756,6 +3732,30 @@
         "https://github.com/python-pillow/Pillow/pull/10015",
         "https://github.com/python-pillow/Pillow/releases/tag/13.0.0",
         "https://github.com/python-pillow/Pillow/security/advisories/GHSA-24rc-8hj2-v98c"
+      ]
+    },
+    {
+      "id": "pygoat:CVE-2026-96641:pillow:12.1.0",
+      "cve": "CVE-2026-96641",
+      "package": "pillow",
+      "ecosystem": "PyPI",
+      "installed_version": "12.1.0",
+      "fixed_version": "13.0.0",
+      "app": "pygoat",
+      "cvss": 6.5,
+      "epss": 0.00345,
+      "in_kev": false,
+      "kev_date_added": null,
+      "priority_score": 17,
+      "priority_label": "low",
+      "summary": {
+        "en": "Pillow is a Python imaging library. Prior to 13.0.0, PILfont text-width accumulation in src/_imaging.c checks positive glyph advances against INT_MAX but does not check negative advances against INT_MIN. Repeating a signed 16-bit advance of -32768 can therefore execute a signed C integer overflow in xsize += dx, producing a large positive width from a negative mathematical result. Applications that use getlength(), getsize(), or derived layout, quota, serialization, or allocation calculations can experience logic-integrity errors or resource consumption, while the high-level mask path commonly retains a decompression-bomb check. This issue is fixed in version 13.0.0."
+      },
+      "references": [
+        "https://github.com/python-pillow/Pillow/commit/80de4be9e38d3a6148dd4d8491eb80cd12b760a4",
+        "https://github.com/python-pillow/Pillow/pull/10010",
+        "https://github.com/python-pillow/Pillow/releases/tag/13.0.0",
+        "https://github.com/python-pillow/Pillow/security/advisories/GHSA-4rm8-3hmm-39fg"
       ]
     },
     {
@@ -5230,10 +5230,10 @@
       "fixed_version": "6.2.4",
       "app": "nodejs-goof",
       "cvss": 7.5,
-      "epss": 0.15622,
+      "epss": 0.15695,
       "in_kev": false,
       "kev_date_added": null,
-      "priority_score": 30,
+      "priority_score": 31,
       "priority_label": "medium",
       "summary": {
         "en": "qs before 6.10.3, as used in Express before 4.17.3 and other products, allows attackers to cause a Node process hang for an Express application because an __ proto__ key can be used. In many typical Express use cases, an unauthenticated remote attacker can place the attack payload in the query string of the URL that is used to visit the application, such as a[__proto__]=b&a[__proto__]&a[length]=100000000. The fix was backported to qs 6.9.7, 6.8.3, 6.7.3, 6.6.1, 6.5.3, 6.4.1, 6.3.3, and 6.2.4 (and therefore Express 4.17.3, which has \"deps: qs@6.9.7\" in its release description, is not vulnerable).",
@@ -5256,10 +5256,10 @@
       "fixed_version": "6.2.4",
       "app": "nodejs-goof",
       "cvss": 7.5,
-      "epss": 0.15622,
+      "epss": 0.15695,
       "in_kev": false,
       "kev_date_added": null,
-      "priority_score": 30,
+      "priority_score": 31,
       "priority_label": "medium",
       "summary": {
         "en": "qs before 6.10.3, as used in Express before 4.17.3 and other products, allows attackers to cause a Node process hang for an Express application because an __ proto__ key can be used. In many typical Express use cases, an unauthenticated remote attacker can place the attack payload in the query string of the URL that is used to visit the application, such as a[__proto__]=b&a[__proto__]&a[length]=100000000. The fix was backported to qs 6.9.7, 6.8.3, 6.7.3, 6.6.1, 6.5.3, 6.4.1, 6.3.3, and 6.2.4 (and therefore Express 4.17.3, which has \"deps: qs@6.9.7\" in its release description, is not vulnerable).",
@@ -5282,10 +5282,10 @@
       "fixed_version": "6.5.3",
       "app": "nodejs-goof",
       "cvss": 7.5,
-      "epss": 0.15622,
+      "epss": 0.15695,
       "in_kev": false,
       "kev_date_added": null,
-      "priority_score": 30,
+      "priority_score": 31,
       "priority_label": "medium",
       "summary": {
         "en": "qs before 6.10.3, as used in Express before 4.17.3 and other products, allows attackers to cause a Node process hang for an Express application because an __ proto__ key can be used. In many typical Express use cases, an unauthenticated remote attacker can place the attack payload in the query string of the URL that is used to visit the application, such as a[__proto__]=b&a[__proto__]&a[length]=100000000. The fix was backported to qs 6.9.7, 6.8.3, 6.7.3, 6.6.1, 6.5.3, 6.4.1, 6.3.3, and 6.2.4 (and therefore Express 4.17.3, which has \"deps: qs@6.9.7\" in its release description, is not vulnerable).",
@@ -5491,7 +5491,7 @@
       "fixed_version": "2.5.5",
       "app": "nodejs-goof",
       "cvss": 9.8,
-      "epss": 0.06328,
+      "epss": 0.0638,
       "in_kev": false,
       "kev_date_added": null,
       "priority_score": 29,
@@ -5514,7 +5514,7 @@
       "fixed_version": "2.5.5",
       "app": "nodejs-goof",
       "cvss": 9.8,
-      "epss": 0.06328,
+      "epss": 0.0638,
       "in_kev": false,
       "kev_date_added": null,
       "priority_score": 29,
@@ -7442,7 +7442,7 @@
       "fixed_version": "0.5.2",
       "app": "nodejs-goof",
       "cvss": 7.5,
-      "epss": 0.0156,
+      "epss": 0.01573,
       "in_kev": false,
       "kev_date_added": null,
       "priority_score": 20,
@@ -10784,12 +10784,6 @@
   ],
   "history": [
     {
-      "date": "2026-10-03",
-      "findings_total": 335,
-      "critical": 4,
-      "high": 3
-    },
-    {
       "date": "2026-10-04",
       "findings_total": 335,
       "critical": 4,
@@ -10959,6 +10953,12 @@
     },
     {
       "date": "2026-11-01",
+      "findings_total": 389,
+      "critical": 3,
+      "high": 3
+    },
+    {
+      "date": "2026-11-02",
       "findings_total": 389,
       "critical": 3,
       "high": 3

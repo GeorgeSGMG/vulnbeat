@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-11-02T15:08:09.643497+00:00",
+  "generated_at": "2026-11-03T13:56:00.548287+00:00",
   "sources": {
     "kev": {
       "fetched": true,
@@ -666,29 +666,6 @@
       ]
     },
     {
-      "id": "pygoat:CVE-2026-112900:pillow:12.1.0",
-      "cve": "CVE-2026-112900",
-      "package": "pillow",
-      "ecosystem": "PyPI",
-      "installed_version": "12.1.0",
-      "fixed_version": "13.0.0",
-      "app": "pygoat",
-      "cvss": 9.8,
-      "epss": 0.01303,
-      "in_kev": false,
-      "kev_date_added": null,
-      "priority_score": 25,
-      "priority_label": "medium",
-      "summary": {
-        "en": "Pillow is a Python imaging library. From 2.6.0 until 13.0.0, Pillow is vulnerable to argument injection when invoking Ghostscript for EPS input. EpsImagePlugin.Ghostscript passes a caller-controlled input filename after -f without converting it to a safe absolute path, so a name beginning with a hyphen can be interpreted as a Ghostscript option. An attacker who controls the filename can inject Ghostscript arguments. Arbitrary command execution specifically requires a leading @ argument-file filename and control of the referenced text file containing additional Ghostscript arguments; the reported chain reproduces with the default -dSAFER invocation. This issue is fixed in version 13.0.0."
-      },
-      "references": [
-        "https://github.com/python-pillow/Pillow/commit/a2c363141da31a265dd536c945677db4b64f3ec9",
-        "https://github.com/python-pillow/Pillow/releases/tag/13.0.0",
-        "https://github.com/python-pillow/Pillow/security/advisories/GHSA-w889-685w-c8fh"
-      ]
-    },
-    {
       "id": "pygoat:CVE-2025-64460:django:4.2",
       "cve": "CVE-2025-64460",
       "package": "django",
@@ -710,6 +687,29 @@
         "https://docs.djangoproject.com/en/dev/releases/security/",
         "https://groups.google.com/g/django-announce",
         "https://www.djangoproject.com/weblog/2025/dec/02/security-releases/"
+      ]
+    },
+    {
+      "id": "pygoat:CVE-2026-112900:pillow:12.1.0",
+      "cve": "CVE-2026-112900",
+      "package": "pillow",
+      "ecosystem": "PyPI",
+      "installed_version": "12.1.0",
+      "fixed_version": "13.0.0",
+      "app": "pygoat",
+      "cvss": 9.8,
+      "epss": 0.01303,
+      "in_kev": false,
+      "kev_date_added": null,
+      "priority_score": 25,
+      "priority_label": "medium",
+      "summary": {
+        "en": "Pillow is a Python imaging library. From 2.6.0 until 13.0.0, Pillow is vulnerable to argument injection when invoking Ghostscript for EPS input. EpsImagePlugin.Ghostscript passes a caller-controlled input filename after -f without converting it to a safe absolute path, so a name beginning with a hyphen can be interpreted as a Ghostscript option. An attacker who controls the filename can inject Ghostscript arguments. Arbitrary command execution specifically requires a leading @ argument-file filename and control of the referenced text file containing additional Ghostscript arguments; the reported chain reproduces with the default -dSAFER invocation. This issue is fixed in version 13.0.0."
+      },
+      "references": [
+        "https://github.com/python-pillow/Pillow/commit/a2c363141da31a265dd536c945677db4b64f3ec9",
+        "https://github.com/python-pillow/Pillow/releases/tag/13.0.0",
+        "https://github.com/python-pillow/Pillow/security/advisories/GHSA-w889-685w-c8fh"
       ]
     },
     {
@@ -1796,6 +1796,29 @@
       ]
     },
     {
+      "id": "pygoat:CVE-2026-112895:pillow:12.1.0",
+      "cve": "CVE-2026-112895",
+      "package": "pillow",
+      "ecosystem": "PyPI",
+      "installed_version": "12.1.0",
+      "fixed_version": "13.0.0",
+      "app": "pygoat",
+      "cvss": 7.5,
+      "epss": 0.00594,
+      "in_kev": false,
+      "kev_date_added": null,
+      "priority_score": 19,
+      "priority_label": "low",
+      "summary": {
+        "en": "Pillow is a Python imaging library. From 5.1.0 until 13.0.0, Pillow can exhaust resources while parsing an existing PDF during an append operation. PdfParser follows page-tree child references without cycle or duplication tracking and follows previous-trailer chains with only an exact repeated-offset guard, so deep or cyclic page trees and long chains of unique trailer offsets can exhaust the Python stack. Repeated non-cyclic /Kids references can also cause super-linear CPU and memory use. An attacker can supply such a PDF to an application that calls Image.save with PDF append enabled. This can raise an uncaught RecursionError or consume excessive CPU and memory before output is written, causing denial of service. This issue is fixed in version 13.0.0."
+      },
+      "references": [
+        "https://github.com/python-pillow/Pillow/commit/e2ae7eacad6de68c37eb28b633a97bebacf2c5bf",
+        "https://github.com/python-pillow/Pillow/releases/tag/13.0.0",
+        "https://github.com/python-pillow/Pillow/security/advisories/GHSA-p4wg-p73j-c528"
+      ]
+    },
+    {
       "id": "pygoat:CVE-2026-112400:pillow:12.1.0",
       "cve": "CVE-2026-112400",
       "package": "pillow",
@@ -1839,29 +1862,6 @@
         "https://github.com/python-pillow/Pillow/commit/b6ee66e8b2c2c0932bdf65f963268d9f2927ef86",
         "https://github.com/python-pillow/Pillow/releases/tag/13.0.0",
         "https://github.com/python-pillow/Pillow/security/advisories/GHSA-cp9v-662q-vvx9"
-      ]
-    },
-    {
-      "id": "pygoat:CVE-2026-112895:pillow:12.1.0",
-      "cve": "CVE-2026-112895",
-      "package": "pillow",
-      "ecosystem": "PyPI",
-      "installed_version": "12.1.0",
-      "fixed_version": "13.0.0",
-      "app": "pygoat",
-      "cvss": 7.5,
-      "epss": 0.00594,
-      "in_kev": false,
-      "kev_date_added": null,
-      "priority_score": 19,
-      "priority_label": "low",
-      "summary": {
-        "en": "Pillow is a Python imaging library. From 5.1.0 until 13.0.0, Pillow can exhaust resources while parsing an existing PDF during an append operation. PdfParser follows page-tree child references without cycle or duplication tracking and follows previous-trailer chains with only an exact repeated-offset guard, so deep or cyclic page trees and long chains of unique trailer offsets can exhaust the Python stack. Repeated non-cyclic /Kids references can also cause super-linear CPU and memory use. An attacker can supply such a PDF to an application that calls Image.save with PDF append enabled. This can raise an uncaught RecursionError or consume excessive CPU and memory before output is written, causing denial of service. This issue is fixed in version 13.0.0."
-      },
-      "references": [
-        "https://github.com/python-pillow/Pillow/commit/e2ae7eacad6de68c37eb28b633a97bebacf2c5bf",
-        "https://github.com/python-pillow/Pillow/releases/tag/13.0.0",
-        "https://github.com/python-pillow/Pillow/security/advisories/GHSA-p4wg-p73j-c528"
       ]
     },
     {
@@ -1996,29 +1996,6 @@
       ]
     },
     {
-      "id": "pygoat:CVE-2026-112406:pillow:12.1.0",
-      "cve": "CVE-2026-112406",
-      "package": "pillow",
-      "ecosystem": "PyPI",
-      "installed_version": "12.1.0",
-      "fixed_version": "13.0.0",
-      "app": "pygoat",
-      "cvss": 7.5,
-      "epss": 0.00573,
-      "in_kev": false,
-      "kev_date_added": null,
-      "priority_score": 19,
-      "priority_label": "low",
-      "summary": {
-        "en": "Pillow is a Python imaging library. From 5.1.0 until 13.0.0, Pillow can enter an infinite loop while rewriting PDF pages. PdfParser.rewrite_pages() follows Parent relationships without detecting a cycle in the page tree. An attacker can supply a cyclic PDF to an application that appends an image to that PDF. This can hold the worker at full CPU and deny service. This issue is fixed in version 13.0.0."
-      },
-      "references": [
-        "https://github.com/python-pillow/Pillow/commit/b3ebf20c694f2f12537a629c30229a1d5a53f777",
-        "https://github.com/python-pillow/Pillow/releases/tag/13.0.0",
-        "https://github.com/python-pillow/Pillow/security/advisories/GHSA-f2g6-542v-9j58"
-      ]
-    },
-    {
       "id": "pygoat:CVE-2026-112397:pillow:12.1.0",
       "cve": "CVE-2026-112397",
       "package": "pillow",
@@ -2039,6 +2016,29 @@
         "https://github.com/python-pillow/Pillow/commit/18f7c0dfee93063c51db6ed0ca8c4da2999dcb64",
         "https://github.com/python-pillow/Pillow/releases/tag/13.0.0",
         "https://github.com/python-pillow/Pillow/security/advisories/GHSA-58r4-6rv3-gfh8"
+      ]
+    },
+    {
+      "id": "pygoat:CVE-2026-112406:pillow:12.1.0",
+      "cve": "CVE-2026-112406",
+      "package": "pillow",
+      "ecosystem": "PyPI",
+      "installed_version": "12.1.0",
+      "fixed_version": "13.0.0",
+      "app": "pygoat",
+      "cvss": 7.5,
+      "epss": 0.00573,
+      "in_kev": false,
+      "kev_date_added": null,
+      "priority_score": 19,
+      "priority_label": "low",
+      "summary": {
+        "en": "Pillow is a Python imaging library. From 5.1.0 until 13.0.0, Pillow can enter an infinite loop while rewriting PDF pages. PdfParser.rewrite_pages() follows Parent relationships without detecting a cycle in the page tree. An attacker can supply a cyclic PDF to an application that appends an image to that PDF. This can hold the worker at full CPU and deny service. This issue is fixed in version 13.0.0."
+      },
+      "references": [
+        "https://github.com/python-pillow/Pillow/commit/b3ebf20c694f2f12537a629c30229a1d5a53f777",
+        "https://github.com/python-pillow/Pillow/releases/tag/13.0.0",
+        "https://github.com/python-pillow/Pillow/security/advisories/GHSA-f2g6-542v-9j58"
       ]
     },
     {
@@ -3015,6 +3015,31 @@
       ]
     },
     {
+      "id": "pygoat:CVE-2026-59199:pillow:12.1.0",
+      "cve": "CVE-2026-59199",
+      "package": "pillow",
+      "ecosystem": "PyPI",
+      "installed_version": "12.1.0",
+      "fixed_version": "12.3.0",
+      "app": "pygoat",
+      "cvss": 7.5,
+      "epss": 0.00385,
+      "in_kev": false,
+      "kev_date_added": null,
+      "priority_score": 19,
+      "priority_label": "low",
+      "summary": {
+        "en": "Pillow is a Python imaging library. Prior to 12.3.0, Pillow public image coordinate APIs can trigger a native heap out-of-bounds write when given coordinates near the signed 32-bit integer limits in Image.paste(), Image.crop(), or Image.alpha_composite(). This issue is fixed in version 12.3.0.",
+        "es": "Pillow es una biblioteca de procesamiento de im\u00e1genes de Python. Antes de la versi\u00f3n 12.3.0, las API p\u00fablicas de coordenadas de imagen de Pillow pueden desencadenar una escritura fuera de l\u00edmites en el heap nativo cuando se les dan coordenadas cercanas a los l\u00edmites de enteros con signo de 32 bits en Image.paste(), Image.crop() o Image.alpha_composite(). Este problema est\u00e1 solucionado en la versi\u00f3n 12.3.0."
+      },
+      "references": [
+        "https://github.com/python-pillow/Pillow/commit/ceefc348eb3c3844c7f9796ef2cc3a7dd5fbba7b",
+        "https://github.com/python-pillow/Pillow/pull/9703",
+        "https://github.com/python-pillow/Pillow/releases/tag/12.3.0",
+        "https://github.com/python-pillow/Pillow/security/advisories/GHSA-6r8x-57c9-28j4"
+      ]
+    },
+    {
       "id": "pygoat:CVE-2026-59200:pillow:12.1.0",
       "cve": "CVE-2026-59200",
       "package": "pillow",
@@ -3062,31 +3087,6 @@
         "https://github.com/python-pillow/Pillow/pull/9715",
         "https://github.com/python-pillow/Pillow/releases/tag/12.3.0",
         "https://github.com/python-pillow/Pillow/security/advisories/GHSA-9hw9-ch79-4vh6"
-      ]
-    },
-    {
-      "id": "pygoat:CVE-2026-59199:pillow:12.1.0",
-      "cve": "CVE-2026-59199",
-      "package": "pillow",
-      "ecosystem": "PyPI",
-      "installed_version": "12.1.0",
-      "fixed_version": "12.3.0",
-      "app": "pygoat",
-      "cvss": 7.5,
-      "epss": 0.00385,
-      "in_kev": false,
-      "kev_date_added": null,
-      "priority_score": 19,
-      "priority_label": "low",
-      "summary": {
-        "en": "Pillow is a Python imaging library. Prior to 12.3.0, Pillow public image coordinate APIs can trigger a native heap out-of-bounds write when given coordinates near the signed 32-bit integer limits in Image.paste(), Image.crop(), or Image.alpha_composite(). This issue is fixed in version 12.3.0.",
-        "es": "Pillow es una biblioteca de procesamiento de im\u00e1genes de Python. Antes de la versi\u00f3n 12.3.0, las API p\u00fablicas de coordenadas de imagen de Pillow pueden desencadenar una escritura fuera de l\u00edmites en el heap nativo cuando se les dan coordenadas cercanas a los l\u00edmites de enteros con signo de 32 bits en Image.paste(), Image.crop() o Image.alpha_composite(). Este problema est\u00e1 solucionado en la versi\u00f3n 12.3.0."
-      },
-      "references": [
-        "https://github.com/python-pillow/Pillow/commit/ceefc348eb3c3844c7f9796ef2cc3a7dd5fbba7b",
-        "https://github.com/python-pillow/Pillow/pull/9703",
-        "https://github.com/python-pillow/Pillow/releases/tag/12.3.0",
-        "https://github.com/python-pillow/Pillow/security/advisories/GHSA-6r8x-57c9-28j4"
       ]
     },
     {
@@ -3687,30 +3687,6 @@
       ]
     },
     {
-      "id": "pygoat:CVE-2026-96636:pillow:12.1.0",
-      "cve": "CVE-2026-96636",
-      "package": "pillow",
-      "ecosystem": "PyPI",
-      "installed_version": "12.1.0",
-      "fixed_version": "13.0.0",
-      "app": "pygoat",
-      "cvss": 6.5,
-      "epss": 0.00345,
-      "in_kev": false,
-      "kev_date_added": null,
-      "priority_score": 17,
-      "priority_label": "low",
-      "summary": {
-        "en": "Pillow is a Python imaging library. Prior to 13.0.0, MpoImageFile.seek() and DcxImageFile.seek() reparse later MPO or DCX frames and replace self._size without rerunning Image._decompression_bomb_check(). A crafted multi-frame image can use a tiny first frame to pass Image.open() and then declare an over-limit later frame. Normal frame iteration through seek(), load(), or ImageSequence.Iterator can decode that frame and commit hundreds of megabytes or more, causing memory-exhaustion denial of service. This issue is fixed in version 13.0.0."
-      },
-      "references": [
-        "https://github.com/python-pillow/Pillow/commit/f1acfc54c53502948d0d14121872061df931db48",
-        "https://github.com/python-pillow/Pillow/pull/10011",
-        "https://github.com/python-pillow/Pillow/releases/tag/13.0.0",
-        "https://github.com/python-pillow/Pillow/security/advisories/GHSA-p8hx-v2p6-rp84"
-      ]
-    },
-    {
       "id": "pygoat:CVE-2026-96638:pillow:12.1.0",
       "cve": "CVE-2026-96638",
       "package": "pillow",
@@ -3732,6 +3708,30 @@
         "https://github.com/python-pillow/Pillow/pull/10015",
         "https://github.com/python-pillow/Pillow/releases/tag/13.0.0",
         "https://github.com/python-pillow/Pillow/security/advisories/GHSA-24rc-8hj2-v98c"
+      ]
+    },
+    {
+      "id": "pygoat:CVE-2026-96636:pillow:12.1.0",
+      "cve": "CVE-2026-96636",
+      "package": "pillow",
+      "ecosystem": "PyPI",
+      "installed_version": "12.1.0",
+      "fixed_version": "13.0.0",
+      "app": "pygoat",
+      "cvss": 6.5,
+      "epss": 0.00345,
+      "in_kev": false,
+      "kev_date_added": null,
+      "priority_score": 17,
+      "priority_label": "low",
+      "summary": {
+        "en": "Pillow is a Python imaging library. Prior to 13.0.0, MpoImageFile.seek() and DcxImageFile.seek() reparse later MPO or DCX frames and replace self._size without rerunning Image._decompression_bomb_check(). A crafted multi-frame image can use a tiny first frame to pass Image.open() and then declare an over-limit later frame. Normal frame iteration through seek(), load(), or ImageSequence.Iterator can decode that frame and commit hundreds of megabytes or more, causing memory-exhaustion denial of service. This issue is fixed in version 13.0.0."
+      },
+      "references": [
+        "https://github.com/python-pillow/Pillow/commit/f1acfc54c53502948d0d14121872061df931db48",
+        "https://github.com/python-pillow/Pillow/pull/10011",
+        "https://github.com/python-pillow/Pillow/releases/tag/13.0.0",
+        "https://github.com/python-pillow/Pillow/security/advisories/GHSA-p8hx-v2p6-rp84"
       ]
     },
     {
@@ -10784,12 +10784,6 @@
   ],
   "history": [
     {
-      "date": "2026-10-04",
-      "findings_total": 335,
-      "critical": 4,
-      "high": 3
-    },
-    {
       "date": "2026-10-05",
       "findings_total": 335,
       "critical": 4,
@@ -10959,6 +10953,12 @@
     },
     {
       "date": "2026-11-02",
+      "findings_total": 389,
+      "critical": 3,
+      "high": 3
+    },
+    {
+      "date": "2026-11-03",
       "findings_total": 389,
       "critical": 3,
       "high": 3

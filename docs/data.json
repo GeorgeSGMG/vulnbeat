@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-11-03T13:56:00.548287+00:00",
+  "generated_at": "2026-11-04T14:02:52.148525+00:00",
   "sources": {
     "kev": {
       "fetched": true,
@@ -7,11 +7,11 @@
     },
     "epss": {
       "fetched": true,
-      "entries": 326
+      "entries": 325
     },
     "nvd": {
       "fetched": true,
-      "entries": 327
+      "entries": 326
     }
   },
   "apps": [
@@ -97,10 +97,10 @@
       "fixed_version": "4.2.24",
       "app": "pygoat",
       "cvss": 7.1,
-      "epss": 0.26106,
+      "epss": 0.28271,
       "in_kev": false,
       "kev_date_added": null,
-      "priority_score": 37,
+      "priority_score": 39,
       "priority_label": "medium",
       "summary": {
         "en": "An issue was discovered in Django 4.2 before 4.2.24, 5.1 before 5.1.12, and 5.2 before 5.2.6. FilteredRelation is subject to SQL injection in column aliases, using a suitably crafted dictionary, with dictionary expansion, as the **kwargs passed QuerySet.annotate() or QuerySet.alias()."
@@ -1750,8 +1750,8 @@
       ]
     },
     {
-      "id": "pygoat:CVE-2026-112402:pillow:12.1.0",
-      "cve": "CVE-2026-112402",
+      "id": "pygoat:CVE-2026-112400:pillow:12.1.0",
+      "cve": "CVE-2026-112400",
       "package": "pillow",
       "ecosystem": "PyPI",
       "installed_version": "12.1.0",
@@ -1764,12 +1764,35 @@
       "priority_score": 19,
       "priority_label": "low",
       "summary": {
-        "en": "Pillow is a Python imaging library. Prior to 13.0.0, Pillow can double free image memory when ImagingScaleAffine encounters a selective allocation failure. The affected fast path handles Transform.EXTENT or pure scale-and-translate Transform.AFFINE operations with the default NEAREST resampling. The output image allocation must succeed while the additional per-column lookup allocation fails, after which the error path deletes image storage that later cleanup releases again. An attacker who can drive such a large Image.transform() operation under memory pressure may trigger the failure. This can crash the process and may corrupt memory. This issue is fixed in version 13.0.0."
+        "en": "Pillow is a Python imaging library. From 9.2.0 until 13.0.0, Pillow can retain a rejected GIF frame size after a decompression-bomb exception. In GifImageFile._seek, a crafted GIF can leave rejected dimensions stored after Image.DecompressionBombError; if an application catches that exception and continues processing the same image object, later seek or load operations allocate according to those dimensions and can exhaust memory, denying service. This issue is fixed in version 13.0.0."
       },
       "references": [
-        "https://github.com/python-pillow/Pillow/commit/aafa6c75f7cdabb9f409a8aac7c780bea31d08d9",
+        "https://github.com/python-pillow/Pillow/commit/6faed707cfb760a4cbd726ddc8406f576cf35bf7",
         "https://github.com/python-pillow/Pillow/releases/tag/13.0.0",
-        "https://github.com/python-pillow/Pillow/security/advisories/GHSA-7mwm-ghpf-9vrm"
+        "https://github.com/python-pillow/Pillow/security/advisories/GHSA-65qm-jvmh-6pqg"
+      ]
+    },
+    {
+      "id": "pygoat:CVE-2026-112405:pillow:12.1.0",
+      "cve": "CVE-2026-112405",
+      "package": "pillow",
+      "ecosystem": "PyPI",
+      "installed_version": "12.1.0",
+      "fixed_version": "13.0.0",
+      "app": "pygoat",
+      "cvss": 7.5,
+      "epss": 0.00594,
+      "in_kev": false,
+      "kev_date_added": null,
+      "priority_score": 19,
+      "priority_label": "low",
+      "summary": {
+        "en": "Pillow is a Python imaging library. From 12.0.0 until 13.0.0, Pillow's Image.merge() can dereference a null image8 plane. Validation skips the first input band, allowing a 32-bit integer or floating-point image backed by image32 storage to be merged as a narrower multiband image. A crafted IPTC file can reach this path when an application opens and loads it, or a caller can invoke Image.merge() directly with such a first band. This causes a native process crash. This issue is fixed in version 13.0.0."
+      },
+      "references": [
+        "https://github.com/python-pillow/Pillow/commit/b6ee66e8b2c2c0932bdf65f963268d9f2927ef86",
+        "https://github.com/python-pillow/Pillow/releases/tag/13.0.0",
+        "https://github.com/python-pillow/Pillow/security/advisories/GHSA-cp9v-662q-vvx9"
       ]
     },
     {
@@ -1819,8 +1842,8 @@
       ]
     },
     {
-      "id": "pygoat:CVE-2026-112400:pillow:12.1.0",
-      "cve": "CVE-2026-112400",
+      "id": "pygoat:CVE-2026-112402:pillow:12.1.0",
+      "cve": "CVE-2026-112402",
       "package": "pillow",
       "ecosystem": "PyPI",
       "installed_version": "12.1.0",
@@ -1833,35 +1856,12 @@
       "priority_score": 19,
       "priority_label": "low",
       "summary": {
-        "en": "Pillow is a Python imaging library. From 9.2.0 until 13.0.0, Pillow can retain a rejected GIF frame size after a decompression-bomb exception. In GifImageFile._seek, a crafted GIF can leave rejected dimensions stored after Image.DecompressionBombError; if an application catches that exception and continues processing the same image object, later seek or load operations allocate according to those dimensions and can exhaust memory, denying service. This issue is fixed in version 13.0.0."
+        "en": "Pillow is a Python imaging library. Prior to 13.0.0, Pillow can double free image memory when ImagingScaleAffine encounters a selective allocation failure. The affected fast path handles Transform.EXTENT or pure scale-and-translate Transform.AFFINE operations with the default NEAREST resampling. The output image allocation must succeed while the additional per-column lookup allocation fails, after which the error path deletes image storage that later cleanup releases again. An attacker who can drive such a large Image.transform() operation under memory pressure may trigger the failure. This can crash the process and may corrupt memory. This issue is fixed in version 13.0.0."
       },
       "references": [
-        "https://github.com/python-pillow/Pillow/commit/6faed707cfb760a4cbd726ddc8406f576cf35bf7",
+        "https://github.com/python-pillow/Pillow/commit/aafa6c75f7cdabb9f409a8aac7c780bea31d08d9",
         "https://github.com/python-pillow/Pillow/releases/tag/13.0.0",
-        "https://github.com/python-pillow/Pillow/security/advisories/GHSA-65qm-jvmh-6pqg"
-      ]
-    },
-    {
-      "id": "pygoat:CVE-2026-112405:pillow:12.1.0",
-      "cve": "CVE-2026-112405",
-      "package": "pillow",
-      "ecosystem": "PyPI",
-      "installed_version": "12.1.0",
-      "fixed_version": "13.0.0",
-      "app": "pygoat",
-      "cvss": 7.5,
-      "epss": 0.00594,
-      "in_kev": false,
-      "kev_date_added": null,
-      "priority_score": 19,
-      "priority_label": "low",
-      "summary": {
-        "en": "Pillow is a Python imaging library. From 12.0.0 until 13.0.0, Pillow's Image.merge() can dereference a null image8 plane. Validation skips the first input band, allowing a 32-bit integer or floating-point image backed by image32 storage to be merged as a narrower multiband image. A crafted IPTC file can reach this path when an application opens and loads it, or a caller can invoke Image.merge() directly with such a first band. This causes a native process crash. This issue is fixed in version 13.0.0."
-      },
-      "references": [
-        "https://github.com/python-pillow/Pillow/commit/b6ee66e8b2c2c0932bdf65f963268d9f2927ef86",
-        "https://github.com/python-pillow/Pillow/releases/tag/13.0.0",
-        "https://github.com/python-pillow/Pillow/security/advisories/GHSA-cp9v-662q-vvx9"
+        "https://github.com/python-pillow/Pillow/security/advisories/GHSA-7mwm-ghpf-9vrm"
       ]
     },
     {
@@ -3687,30 +3687,6 @@
       ]
     },
     {
-      "id": "pygoat:CVE-2026-96638:pillow:12.1.0",
-      "cve": "CVE-2026-96638",
-      "package": "pillow",
-      "ecosystem": "PyPI",
-      "installed_version": "12.1.0",
-      "fixed_version": "13.0.0",
-      "app": "pygoat",
-      "cvss": 6.5,
-      "epss": 0.00345,
-      "in_kev": false,
-      "kev_date_added": null,
-      "priority_score": 17,
-      "priority_label": "low",
-      "summary": {
-        "en": "Pillow is a Python imaging library. From 9.1.0 until 13.0.0, BmpRleDecoder.decode() in src/PIL/BmpImagePlugin.py permits crafted RLE BMP delta escapes and absolute-mode runs to append beyond the remaining dest_length without a per-branch cap. A delta can add roughly 255 image rows in one iteration, so a kilobyte-sized file with a large but permitted width can expand the data bytearray to hundreds of megabytes or more, causing memory-exhaustion denial of service. This issue is fixed in version 13.0.0."
-      },
-      "references": [
-        "https://github.com/python-pillow/Pillow/commit/e7794835e323ff2691d9b3a974cade1a44301b9a",
-        "https://github.com/python-pillow/Pillow/pull/10015",
-        "https://github.com/python-pillow/Pillow/releases/tag/13.0.0",
-        "https://github.com/python-pillow/Pillow/security/advisories/GHSA-24rc-8hj2-v98c"
-      ]
-    },
-    {
       "id": "pygoat:CVE-2026-96636:pillow:12.1.0",
       "cve": "CVE-2026-96636",
       "package": "pillow",
@@ -3732,6 +3708,30 @@
         "https://github.com/python-pillow/Pillow/pull/10011",
         "https://github.com/python-pillow/Pillow/releases/tag/13.0.0",
         "https://github.com/python-pillow/Pillow/security/advisories/GHSA-p8hx-v2p6-rp84"
+      ]
+    },
+    {
+      "id": "pygoat:CVE-2026-96638:pillow:12.1.0",
+      "cve": "CVE-2026-96638",
+      "package": "pillow",
+      "ecosystem": "PyPI",
+      "installed_version": "12.1.0",
+      "fixed_version": "13.0.0",
+      "app": "pygoat",
+      "cvss": 6.5,
+      "epss": 0.00345,
+      "in_kev": false,
+      "kev_date_added": null,
+      "priority_score": 17,
+      "priority_label": "low",
+      "summary": {
+        "en": "Pillow is a Python imaging library. From 9.1.0 until 13.0.0, BmpRleDecoder.decode() in src/PIL/BmpImagePlugin.py permits crafted RLE BMP delta escapes and absolute-mode runs to append beyond the remaining dest_length without a per-branch cap. A delta can add roughly 255 image rows in one iteration, so a kilobyte-sized file with a large but permitted width can expand the data bytearray to hundreds of megabytes or more, causing memory-exhaustion denial of service. This issue is fixed in version 13.0.0."
+      },
+      "references": [
+        "https://github.com/python-pillow/Pillow/commit/e7794835e323ff2691d9b3a974cade1a44301b9a",
+        "https://github.com/python-pillow/Pillow/pull/10015",
+        "https://github.com/python-pillow/Pillow/releases/tag/13.0.0",
+        "https://github.com/python-pillow/Pillow/security/advisories/GHSA-24rc-8hj2-v98c"
       ]
     },
     {
@@ -10303,75 +10303,6 @@
       ]
     },
     {
-      "id": "nodejs-goof:CVE-2026-2950:lodash:4.17.10",
-      "cve": "CVE-2026-2950",
-      "package": "lodash",
-      "ecosystem": "npm",
-      "installed_version": "4.17.10",
-      "fixed_version": "4.18.0",
-      "app": "nodejs-goof",
-      "cvss": 6.5,
-      "epss": 0.00337,
-      "in_kev": false,
-      "kev_date_added": null,
-      "priority_score": 17,
-      "priority_label": "low",
-      "summary": {
-        "en": "The _.unset and _.omit functions in Lodash are vulnerable to prototype pollution. The fix for CVE-2025-13465 only guards against string key members, so an attacker can bypass the check by passing array-wrapped path segments. This allows deletion of properties from built-in prototypes such as Object.prototype, Number.prototype, and String.prototype. The issue permits deletion of prototype properties but does not allow overwriting their original behavior. The issue is patched from 4.18.0 to 4.18.1 depending on the package: lodash, lodash-es, and lodash-amd in 4.18.1, and the standalone lodash.unset and lodash.omit packages in 4.18.0.",
-        "es": "Impacto:\n\nLas versiones de Lodash 4.17.23 y anteriores son vulnerables a la contaminaci\u00f3n de prototipos en las funciones _.unset y _.omit. La soluci\u00f3n para (CVE-2025-13465: https://github.com/lodash/lodash/security/advisories/GHSA-xxjr-mmjv-4gpg) solo protege contra miembros de clave de tipo cadena, por lo que un atacante puede eludir la verificaci\u00f3n pasando segmentos de ruta envueltos en arrays. Esto permite la eliminaci\u00f3n de propiedades de prototipos incorporados como Object.prototype, Number.prototype y String.prototype.\n\nEl problema permite la eliminaci\u00f3n de propiedades de prototipo, pero no permite sobrescribir su comportamiento original.\n\nParches:\n\nEste problema est\u00e1 parcheado en 4.18.0.\n\nSoluciones alternativas:\n\nNinguna. Actualice a la versi\u00f3n parcheada."
-      },
-      "references": [
-        "https://cna.openjsf.org/security-advisories.html",
-        "https://github.com/lodash/lodash/security/advisories/GHSA-f23m-r3pf-42rh"
-      ]
-    },
-    {
-      "id": "nodejs-goof:CVE-2026-2950:lodash:4.17.21",
-      "cve": "CVE-2026-2950",
-      "package": "lodash",
-      "ecosystem": "npm",
-      "installed_version": "4.17.21",
-      "fixed_version": "4.18.0",
-      "app": "nodejs-goof",
-      "cvss": 6.5,
-      "epss": 0.00337,
-      "in_kev": false,
-      "kev_date_added": null,
-      "priority_score": 17,
-      "priority_label": "low",
-      "summary": {
-        "en": "The _.unset and _.omit functions in Lodash are vulnerable to prototype pollution. The fix for CVE-2025-13465 only guards against string key members, so an attacker can bypass the check by passing array-wrapped path segments. This allows deletion of properties from built-in prototypes such as Object.prototype, Number.prototype, and String.prototype. The issue permits deletion of prototype properties but does not allow overwriting their original behavior. The issue is patched from 4.18.0 to 4.18.1 depending on the package: lodash, lodash-es, and lodash-amd in 4.18.1, and the standalone lodash.unset and lodash.omit packages in 4.18.0.",
-        "es": "Impacto:\n\nLas versiones de Lodash 4.17.23 y anteriores son vulnerables a la contaminaci\u00f3n de prototipos en las funciones _.unset y _.omit. La soluci\u00f3n para (CVE-2025-13465: https://github.com/lodash/lodash/security/advisories/GHSA-xxjr-mmjv-4gpg) solo protege contra miembros de clave de tipo cadena, por lo que un atacante puede eludir la verificaci\u00f3n pasando segmentos de ruta envueltos en arrays. Esto permite la eliminaci\u00f3n de propiedades de prototipos incorporados como Object.prototype, Number.prototype y String.prototype.\n\nEl problema permite la eliminaci\u00f3n de propiedades de prototipo, pero no permite sobrescribir su comportamiento original.\n\nParches:\n\nEste problema est\u00e1 parcheado en 4.18.0.\n\nSoluciones alternativas:\n\nNinguna. Actualice a la versi\u00f3n parcheada."
-      },
-      "references": [
-        "https://cna.openjsf.org/security-advisories.html",
-        "https://github.com/lodash/lodash/security/advisories/GHSA-f23m-r3pf-42rh"
-      ]
-    },
-    {
-      "id": "nodejs-goof:CVE-2026-2950:lodash:4.17.4",
-      "cve": "CVE-2026-2950",
-      "package": "lodash",
-      "ecosystem": "npm",
-      "installed_version": "4.17.4",
-      "fixed_version": "4.18.0",
-      "app": "nodejs-goof",
-      "cvss": 6.5,
-      "epss": 0.00337,
-      "in_kev": false,
-      "kev_date_added": null,
-      "priority_score": 17,
-      "priority_label": "low",
-      "summary": {
-        "en": "The _.unset and _.omit functions in Lodash are vulnerable to prototype pollution. The fix for CVE-2025-13465 only guards against string key members, so an attacker can bypass the check by passing array-wrapped path segments. This allows deletion of properties from built-in prototypes such as Object.prototype, Number.prototype, and String.prototype. The issue permits deletion of prototype properties but does not allow overwriting their original behavior. The issue is patched from 4.18.0 to 4.18.1 depending on the package: lodash, lodash-es, and lodash-amd in 4.18.1, and the standalone lodash.unset and lodash.omit packages in 4.18.0.",
-        "es": "Impacto:\n\nLas versiones de Lodash 4.17.23 y anteriores son vulnerables a la contaminaci\u00f3n de prototipos en las funciones _.unset y _.omit. La soluci\u00f3n para (CVE-2025-13465: https://github.com/lodash/lodash/security/advisories/GHSA-xxjr-mmjv-4gpg) solo protege contra miembros de clave de tipo cadena, por lo que un atacante puede eludir la verificaci\u00f3n pasando segmentos de ruta envueltos en arrays. Esto permite la eliminaci\u00f3n de propiedades de prototipos incorporados como Object.prototype, Number.prototype y String.prototype.\n\nEl problema permite la eliminaci\u00f3n de propiedades de prototipo, pero no permite sobrescribir su comportamiento original.\n\nParches:\n\nEste problema est\u00e1 parcheado en 4.18.0.\n\nSoluciones alternativas:\n\nNinguna. Actualice a la versi\u00f3n parcheada."
-      },
-      "references": [
-        "https://cna.openjsf.org/security-advisories.html",
-        "https://github.com/lodash/lodash/security/advisories/GHSA-f23m-r3pf-42rh"
-      ]
-    },
-    {
       "id": "nodejs-goof:CVE-2024-43799:send:0.12.3",
       "cve": "CVE-2024-43799",
       "package": "send",
@@ -10462,10 +10393,12 @@
       "priority_score": 0,
       "priority_label": "low",
       "summary": {
-        "en": "minimatch is a minimal matching utility for converting glob expressions into JavaScript RegExp objects. Prior to 11.0.1, src/index.ts implements firstPhasePreProcess() so that, at optimizationLevel 2 or higher, it repeatedly expands attacker-controlled **/.. pattern segments inside a fixpoint loop, allowing generated globParts entries to be processed and expanded again. secondPhasePreProcess() then compares the expanded entries pairwise, so a short malicious glob can cause excessive CPU and memory consumption during pattern compilation. This issue is fixed in version 11.0.1."
+        "en": "minimatch is a minimal matching utility for converting glob expressions into JavaScript RegExp objects. Starting in 7.0.0 and prior to 11.0.1, src/index.ts implements firstPhasePreProcess() so that, at optimizationLevel 2 or higher, it repeatedly expands attacker-controlled **/.. pattern segments inside a fixpoint loop, allowing generated globParts entries to be processed and expanded again. secondPhasePreProcess() then compares the expanded entries pairwise, so a short malicious glob can cause excessive CPU and memory consumption during pattern compilation. This issue is fixed in version 11.0.1."
       },
       "references": [
+        "https://github.com/isaacs/minimatch/commit/297b6c1a01f2410b3ba1ebed14ba222d0c3c1033",
         "https://github.com/isaacs/minimatch/commit/77a0f5c4b80bdc641c3c930a1d9edf5ad2db57f8",
+        "https://github.com/isaacs/minimatch/commit/fd0b3ab9cbc5bf1aff1c99f1f46e413c2b3340da",
         "https://github.com/isaacs/minimatch/releases/tag/v11.0.1",
         "https://github.com/isaacs/minimatch/security/advisories/GHSA-g3hv-75wg-m249"
       ]
@@ -10784,12 +10717,6 @@
   ],
   "history": [
     {
-      "date": "2026-10-05",
-      "findings_total": 335,
-      "critical": 4,
-      "high": 3
-    },
-    {
       "date": "2026-10-06",
       "findings_total": 338,
       "critical": 4,
@@ -10960,6 +10887,12 @@
     {
       "date": "2026-11-03",
       "findings_total": 389,
+      "critical": 3,
+      "high": 3
+    },
+    {
+      "date": "2026-11-04",
+      "findings_total": 386,
       "critical": 3,
       "high": 3
     }

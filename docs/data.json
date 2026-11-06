@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-11-04T14:02:52.148525+00:00",
+  "generated_at": "2026-11-06T14:02:51.119492+00:00",
   "sources": {
     "kev": {
       "fetched": true,
@@ -7,11 +7,11 @@
     },
     "epss": {
       "fetched": true,
-      "entries": 325
+      "entries": 324
     },
     "nvd": {
       "fetched": true,
-      "entries": 326
+      "entries": 328
     }
   },
   "apps": [
@@ -233,7 +233,7 @@
       "fixed_version": "5.4",
       "app": "pygoat",
       "cvss": 9.8,
-      "epss": 0.05984,
+      "epss": 0.0624,
       "in_kev": false,
       "kev_date_added": null,
       "priority_score": 29,
@@ -1407,30 +1407,6 @@
       ]
     },
     {
-      "id": "pygoat:CVE-2026-33034:django:4.2",
-      "cve": "CVE-2026-33034",
-      "package": "django",
-      "ecosystem": "PyPI",
-      "installed_version": "4.2",
-      "fixed_version": "4.2.30",
-      "app": "pygoat",
-      "cvss": 7.5,
-      "epss": 0.00769,
-      "in_kev": false,
-      "kev_date_added": null,
-      "priority_score": 19,
-      "priority_label": "low",
-      "summary": {
-        "en": "An issue was discovered in 6.0 before 6.0.4, 5.2 before 5.2.13, and 4.2 before 4.2.30.\nASGI requests with a missing or understated `Content-Length` header could\r\nbypass the `DATA_UPLOAD_MAX_MEMORY_SIZE` limit when reading\r\n`HttpRequest.body`, allowing remote attackers to load an unbounded request body into\r\nmemory.\nEarlier, unsupported Django series (such as 5.0.x, 4.1.x, and 3.2.x) were not evaluated and may also be affected.\nDjango would like to thank Superior for reporting this issue.",
-        "es": "Se descubri\u00f3 un problema en 6.0 anterior a 6.0.4, 5.2 anterior a 5.2.13 y 4.2 anterior a 4.2.30.\nLas solicitudes ASGI con un encabezado \u2019Content-Length\u2019 faltante o subestimado podr\u00edan eludir el l\u00edmite de \u2019DATA_UPLOAD_MAX_MEMORY_SIZE\u2019 al leer \u2019HttpRequest.body\u2019, permitiendo a atacantes remotos cargar un cuerpo de solicitud ilimitado en la memoria.\nLas series de Django anteriores y no compatibles (como 5.0.x, 4.1.x y 3.2.x) no fueron evaluadas y tambi\u00e9n podr\u00edan estar afectadas.\nDjango desea agradecer a Superior por reportar este problema."
-      },
-      "references": [
-        "https://docs.djangoproject.com/en/dev/releases/security/",
-        "https://groups.google.com/g/django-announce",
-        "https://www.djangoproject.com/weblog/2026/apr/07/security-releases/"
-      ]
-    },
-    {
       "id": "pygoat:CVE-2025-66418:urllib3:1.26.9",
       "cve": "CVE-2025-66418",
       "package": "urllib3",
@@ -1439,7 +1415,7 @@
       "fixed_version": "2.6.0",
       "app": "pygoat",
       "cvss": 7.5,
-      "epss": 0.00682,
+      "epss": 0.00731,
       "in_kev": false,
       "kev_date_added": null,
       "priority_score": 19,
@@ -1462,7 +1438,7 @@
       "fixed_version": "2.6.0",
       "app": "pygoat",
       "cvss": 7.5,
-      "epss": 0.00682,
+      "epss": 0.00731,
       "in_kev": false,
       "kev_date_added": null,
       "priority_score": 19,
@@ -1474,6 +1450,30 @@
       "references": [
         "https://github.com/urllib3/urllib3/commit/c19571de34c47de3a766541b041637ba5f716ed7",
         "https://github.com/urllib3/urllib3/security/advisories/GHSA-2xpw-w6gg-jr37"
+      ]
+    },
+    {
+      "id": "pygoat:CVE-2026-33034:django:4.2",
+      "cve": "CVE-2026-33034",
+      "package": "django",
+      "ecosystem": "PyPI",
+      "installed_version": "4.2",
+      "fixed_version": "4.2.30",
+      "app": "pygoat",
+      "cvss": 7.5,
+      "epss": 0.00799,
+      "in_kev": false,
+      "kev_date_added": null,
+      "priority_score": 19,
+      "priority_label": "low",
+      "summary": {
+        "en": "An issue was discovered in 6.0 before 6.0.4, 5.2 before 5.2.13, and 4.2 before 4.2.30.\nASGI requests with a missing or understated `Content-Length` header could\r\nbypass the `DATA_UPLOAD_MAX_MEMORY_SIZE` limit when reading\r\n`HttpRequest.body`, allowing remote attackers to load an unbounded request body into\r\nmemory.\nEarlier, unsupported Django series (such as 5.0.x, 4.1.x, and 3.2.x) were not evaluated and may also be affected.\nDjango would like to thank Superior for reporting this issue.",
+        "es": "Se descubri\u00f3 un problema en 6.0 anterior a 6.0.4, 5.2 anterior a 5.2.13 y 4.2 anterior a 4.2.30.\nLas solicitudes ASGI con un encabezado \u2019Content-Length\u2019 faltante o subestimado podr\u00edan eludir el l\u00edmite de \u2019DATA_UPLOAD_MAX_MEMORY_SIZE\u2019 al leer \u2019HttpRequest.body\u2019, permitiendo a atacantes remotos cargar un cuerpo de solicitud ilimitado en la memoria.\nLas series de Django anteriores y no compatibles (como 5.0.x, 4.1.x y 3.2.x) no fueron evaluadas y tambi\u00e9n podr\u00edan estar afectadas.\nDjango desea agradecer a Superior por reportar este problema."
+      },
+      "references": [
+        "https://docs.djangoproject.com/en/dev/releases/security/",
+        "https://groups.google.com/g/django-announce",
+        "https://www.djangoproject.com/weblog/2026/apr/07/security-releases/"
       ]
     },
     {
@@ -1580,6 +1580,61 @@
       ]
     },
     {
+      "id": "pygoat:CVE-2024-47081:requests:2.28.2",
+      "cve": "CVE-2024-47081",
+      "package": "requests",
+      "ecosystem": "PyPI",
+      "installed_version": "2.28.2",
+      "fixed_version": "2.32.4",
+      "app": "pygoat",
+      "cvss": 5.3,
+      "epss": 0.01022,
+      "in_kev": false,
+      "kev_date_added": null,
+      "priority_score": 14,
+      "priority_label": "low",
+      "summary": {
+        "en": "Requests is a HTTP library. Due to a URL parsing issue, Requests releases prior to 2.32.4 may leak .netrc credentials to third parties for specific maliciously-crafted URLs. Users should upgrade to version 2.32.4 to receive a fix. For older versions of Requests, use of the .netrc file can be disabled with `trust_env=False` on one's Requests Session.",
+        "es": "Requests es una librer\u00eda HTTP. Debido a un problema de an\u00e1lisis de URL, las versiones de Requests anteriores a la 2.32.4 pueden filtrar credenciales .netrc a terceros para URL espec\u00edficas manipuladas con fines maliciosos. Los usuarios deben actualizar a la versi\u00f3n 2.32.4 para obtener una soluci\u00f3n. En versiones anteriores de Requests, el uso del archivo .netrc se puede desactivar con `trust_env=False` en la sesi\u00f3n de Requests."
+      },
+      "references": [
+        "https://github.com/psf/requests/commit/96ba401c1296ab1dda74a2365ef36d88f7d144ef",
+        "https://github.com/psf/requests/pull/6965",
+        "https://github.com/psf/requests/security/advisories/GHSA-9hjg-9r4m-mvj7",
+        "https://requests.readthedocs.io/en/latest/api/#requests.Session.trust_env",
+        "https://seclists.org/fulldisclosure/2025/Jun/2",
+        "http://seclists.org/fulldisclosure/2025/Jun/2",
+        "http://www.openwall.com/lists/oss-security/2025/06/03/11",
+        "http://www.openwall.com/lists/oss-security/2025/06/03/9",
+        "http://www.openwall.com/lists/oss-security/2025/06/04/1",
+        "http://www.openwall.com/lists/oss-security/2025/06/04/6"
+      ]
+    },
+    {
+      "id": "pygoat:CVE-2026-33033:django:4.2",
+      "cve": "CVE-2026-33033",
+      "package": "django",
+      "ecosystem": "PyPI",
+      "installed_version": "4.2",
+      "fixed_version": "4.2.30",
+      "app": "pygoat",
+      "cvss": 6.5,
+      "epss": 0.00913,
+      "in_kev": false,
+      "kev_date_added": null,
+      "priority_score": 17,
+      "priority_label": "low",
+      "summary": {
+        "en": "An issue was discovered in 6.0 before 6.0.4, 5.2 before 5.2.13, and 4.2 before 4.2.30.\n`MultiPartParser` allows remote attackers to degrade performance by submitting multipart uploads with `Content-Transfer-Encoding: base64` including excessive whitespace.\nEarlier, unsupported Django series (such as 5.0.x, 4.1.x, and 3.2.x) were not evaluated and may also be affected.\nDjango would like to thank Seokchan Yoon for reporting this issue.",
+        "es": "Se descubri\u00f3 un problema en 6.0 anterior a 6.0.4, 5.2 anterior a 5.2.13 y 4.2 anterior a 4.2.30.\n\u2019MultiPartParser\u2019 permite a atacantes remotos degradar el rendimiento mediante el env\u00edo de cargas multipart con \u2019Content-Transfer-Encoding: base64\u2019 que incluyen espacios en blanco excesivos.\nSeries de Django anteriores no compatibles (como 5.0.x, 4.1.x y 3.2.x) no fueron evaluadas y tambi\u00e9n podr\u00edan verse afectadas.\nDjango desea agradecer a Seokchan Yoon por informar sobre este problema."
+      },
+      "references": [
+        "https://docs.djangoproject.com/en/dev/releases/security/",
+        "https://groups.google.com/g/django-announce",
+        "https://www.djangoproject.com/weblog/2026/apr/07/security-releases/"
+      ]
+    },
+    {
       "id": "pygoat:CVE-2026-40192:pillow:12.1.0",
       "cve": "CVE-2026-40192",
       "package": "pillow",
@@ -1633,61 +1688,6 @@
         "https://access.redhat.com/security/cve/CVE-2026-40192",
         "https://bugzilla.redhat.com/show_bug.cgi?id=2458856",
         "https://security.access.redhat.com/data/csaf/v2/vex/2026/cve-2026-40192.json"
-      ]
-    },
-    {
-      "id": "pygoat:CVE-2026-33033:django:4.2",
-      "cve": "CVE-2026-33033",
-      "package": "django",
-      "ecosystem": "PyPI",
-      "installed_version": "4.2",
-      "fixed_version": "4.2.30",
-      "app": "pygoat",
-      "cvss": 6.5,
-      "epss": 0.00879,
-      "in_kev": false,
-      "kev_date_added": null,
-      "priority_score": 17,
-      "priority_label": "low",
-      "summary": {
-        "en": "An issue was discovered in 6.0 before 6.0.4, 5.2 before 5.2.13, and 4.2 before 4.2.30.\n`MultiPartParser` allows remote attackers to degrade performance by submitting multipart uploads with `Content-Transfer-Encoding: base64` including excessive whitespace.\nEarlier, unsupported Django series (such as 5.0.x, 4.1.x, and 3.2.x) were not evaluated and may also be affected.\nDjango would like to thank Seokchan Yoon for reporting this issue.",
-        "es": "Se descubri\u00f3 un problema en 6.0 anterior a 6.0.4, 5.2 anterior a 5.2.13 y 4.2 anterior a 4.2.30.\n\u2019MultiPartParser\u2019 permite a atacantes remotos degradar el rendimiento mediante el env\u00edo de cargas multipart con \u2019Content-Transfer-Encoding: base64\u2019 que incluyen espacios en blanco excesivos.\nSeries de Django anteriores no compatibles (como 5.0.x, 4.1.x y 3.2.x) no fueron evaluadas y tambi\u00e9n podr\u00edan verse afectadas.\nDjango desea agradecer a Seokchan Yoon por informar sobre este problema."
-      },
-      "references": [
-        "https://docs.djangoproject.com/en/dev/releases/security/",
-        "https://groups.google.com/g/django-announce",
-        "https://www.djangoproject.com/weblog/2026/apr/07/security-releases/"
-      ]
-    },
-    {
-      "id": "pygoat:CVE-2024-47081:requests:2.28.2",
-      "cve": "CVE-2024-47081",
-      "package": "requests",
-      "ecosystem": "PyPI",
-      "installed_version": "2.28.2",
-      "fixed_version": "2.32.4",
-      "app": "pygoat",
-      "cvss": 5.3,
-      "epss": 0.0098,
-      "in_kev": false,
-      "kev_date_added": null,
-      "priority_score": 14,
-      "priority_label": "low",
-      "summary": {
-        "en": "Requests is a HTTP library. Due to a URL parsing issue, Requests releases prior to 2.32.4 may leak .netrc credentials to third parties for specific maliciously-crafted URLs. Users should upgrade to version 2.32.4 to receive a fix. For older versions of Requests, use of the .netrc file can be disabled with `trust_env=False` on one's Requests Session.",
-        "es": "Requests es una librer\u00eda HTTP. Debido a un problema de an\u00e1lisis de URL, las versiones de Requests anteriores a la 2.32.4 pueden filtrar credenciales .netrc a terceros para URL espec\u00edficas manipuladas con fines maliciosos. Los usuarios deben actualizar a la versi\u00f3n 2.32.4 para obtener una soluci\u00f3n. En versiones anteriores de Requests, el uso del archivo .netrc se puede desactivar con `trust_env=False` en la sesi\u00f3n de Requests."
-      },
-      "references": [
-        "https://github.com/psf/requests/commit/96ba401c1296ab1dda74a2365ef36d88f7d144ef",
-        "https://github.com/psf/requests/pull/6965",
-        "https://github.com/psf/requests/security/advisories/GHSA-9hjg-9r4m-mvj7",
-        "https://requests.readthedocs.io/en/latest/api/#requests.Session.trust_env",
-        "https://seclists.org/fulldisclosure/2025/Jun/2",
-        "http://seclists.org/fulldisclosure/2025/Jun/2",
-        "http://www.openwall.com/lists/oss-security/2025/06/03/11",
-        "http://www.openwall.com/lists/oss-security/2025/06/03/9",
-        "http://www.openwall.com/lists/oss-security/2025/06/04/1",
-        "http://www.openwall.com/lists/oss-security/2025/06/04/6"
       ]
     },
     {
@@ -1773,8 +1773,8 @@
       ]
     },
     {
-      "id": "pygoat:CVE-2026-112405:pillow:12.1.0",
-      "cve": "CVE-2026-112405",
+      "id": "pygoat:CVE-2026-112402:pillow:12.1.0",
+      "cve": "CVE-2026-112402",
       "package": "pillow",
       "ecosystem": "PyPI",
       "installed_version": "12.1.0",
@@ -1787,12 +1787,12 @@
       "priority_score": 19,
       "priority_label": "low",
       "summary": {
-        "en": "Pillow is a Python imaging library. From 12.0.0 until 13.0.0, Pillow's Image.merge() can dereference a null image8 plane. Validation skips the first input band, allowing a 32-bit integer or floating-point image backed by image32 storage to be merged as a narrower multiband image. A crafted IPTC file can reach this path when an application opens and loads it, or a caller can invoke Image.merge() directly with such a first band. This causes a native process crash. This issue is fixed in version 13.0.0."
+        "en": "Pillow is a Python imaging library. Prior to 13.0.0, Pillow can double free image memory when ImagingScaleAffine encounters a selective allocation failure. The affected fast path handles Transform.EXTENT or pure scale-and-translate Transform.AFFINE operations with the default NEAREST resampling. The output image allocation must succeed while the additional per-column lookup allocation fails, after which the error path deletes image storage that later cleanup releases again. An attacker who can drive such a large Image.transform() operation under memory pressure may trigger the failure. This can crash the process and may corrupt memory. This issue is fixed in version 13.0.0."
       },
       "references": [
-        "https://github.com/python-pillow/Pillow/commit/b6ee66e8b2c2c0932bdf65f963268d9f2927ef86",
+        "https://github.com/python-pillow/Pillow/commit/aafa6c75f7cdabb9f409a8aac7c780bea31d08d9",
         "https://github.com/python-pillow/Pillow/releases/tag/13.0.0",
-        "https://github.com/python-pillow/Pillow/security/advisories/GHSA-cp9v-662q-vvx9"
+        "https://github.com/python-pillow/Pillow/security/advisories/GHSA-7mwm-ghpf-9vrm"
       ]
     },
     {
@@ -1842,8 +1842,8 @@
       ]
     },
     {
-      "id": "pygoat:CVE-2026-112402:pillow:12.1.0",
-      "cve": "CVE-2026-112402",
+      "id": "pygoat:CVE-2026-112405:pillow:12.1.0",
+      "cve": "CVE-2026-112405",
       "package": "pillow",
       "ecosystem": "PyPI",
       "installed_version": "12.1.0",
@@ -1856,12 +1856,12 @@
       "priority_score": 19,
       "priority_label": "low",
       "summary": {
-        "en": "Pillow is a Python imaging library. Prior to 13.0.0, Pillow can double free image memory when ImagingScaleAffine encounters a selective allocation failure. The affected fast path handles Transform.EXTENT or pure scale-and-translate Transform.AFFINE operations with the default NEAREST resampling. The output image allocation must succeed while the additional per-column lookup allocation fails, after which the error path deletes image storage that later cleanup releases again. An attacker who can drive such a large Image.transform() operation under memory pressure may trigger the failure. This can crash the process and may corrupt memory. This issue is fixed in version 13.0.0."
+        "en": "Pillow is a Python imaging library. From 12.0.0 until 13.0.0, Pillow's Image.merge() can dereference a null image8 plane. Validation skips the first input band, allowing a 32-bit integer or floating-point image backed by image32 storage to be merged as a narrower multiband image. A crafted IPTC file can reach this path when an application opens and loads it, or a caller can invoke Image.merge() directly with such a first band. This causes a native process crash. This issue is fixed in version 13.0.0."
       },
       "references": [
-        "https://github.com/python-pillow/Pillow/commit/aafa6c75f7cdabb9f409a8aac7c780bea31d08d9",
+        "https://github.com/python-pillow/Pillow/commit/b6ee66e8b2c2c0932bdf65f963268d9f2927ef86",
         "https://github.com/python-pillow/Pillow/releases/tag/13.0.0",
-        "https://github.com/python-pillow/Pillow/security/advisories/GHSA-7mwm-ghpf-9vrm"
+        "https://github.com/python-pillow/Pillow/security/advisories/GHSA-cp9v-662q-vvx9"
       ]
     },
     {
@@ -2525,6 +2525,30 @@
       ]
     },
     {
+      "id": "pygoat:CVE-2026-3902:django:4.2",
+      "cve": "CVE-2026-3902",
+      "package": "django",
+      "ecosystem": "PyPI",
+      "installed_version": "4.2",
+      "fixed_version": "4.2.30",
+      "app": "pygoat",
+      "cvss": 7.5,
+      "epss": 0.00443,
+      "in_kev": false,
+      "kev_date_added": null,
+      "priority_score": 19,
+      "priority_label": "low",
+      "summary": {
+        "en": "An issue was discovered in 6.0 before 6.0.4, 5.2 before 5.2.13, and 4.2 before 4.2.30.\n`ASGIRequest` allows a remote attacker to spoof headers by exploiting an ambiguous mapping of two header variants (with hyphens or with underscores) to a single version with underscores.\nEarlier, unsupported Django series (such as 5.0.x, 4.1.x, and 3.2.x) were not evaluated and may also be affected.\nDjango would like to thank Tarek Nakkouch for reporting this issue.",
+        "es": "Se descubri\u00f3 un problema en 6.0 anterior a 6.0.4, 5.2 anterior a 5.2.13 y 4.2 anterior a 4.2.30.\nASGIRequest permite a un atacante remoto suplantar encabezados al explotar un mapeo ambiguo de dos variantes de encabezado (con guiones o con guiones bajos) a una \u00fanica versi\u00f3n con guiones bajos.\nSeries de Django anteriores y no compatibles (como 5.0.x, 4.1.x y 3.2.x) no fueron evaluadas y tambi\u00e9n pueden verse afectadas.\nDjango desea agradecer a Tarek Nakkouch por informar sobre este problema."
+      },
+      "references": [
+        "https://docs.djangoproject.com/en/dev/releases/security/",
+        "https://groups.google.com/g/django-announce",
+        "https://www.djangoproject.com/weblog/2026/apr/07/security-releases/"
+      ]
+    },
+    {
       "id": "pygoat:CVE-2026-25990:pillow:12.1.0",
       "cve": "CVE-2026-25990",
       "package": "pillow",
@@ -2592,30 +2616,6 @@
         "https://github.com/python-pillow/Pillow/commit/94cb11c44ff7345414da17ebfea1598a529ad9cd",
         "https://github.com/python-pillow/Pillow/releases/tag/13.0.0",
         "https://github.com/python-pillow/Pillow/security/advisories/GHSA-254f-3936-288h"
-      ]
-    },
-    {
-      "id": "pygoat:CVE-2026-3902:django:4.2",
-      "cve": "CVE-2026-3902",
-      "package": "django",
-      "ecosystem": "PyPI",
-      "installed_version": "4.2",
-      "fixed_version": "4.2.30",
-      "app": "pygoat",
-      "cvss": 7.5,
-      "epss": 0.00436,
-      "in_kev": false,
-      "kev_date_added": null,
-      "priority_score": 19,
-      "priority_label": "low",
-      "summary": {
-        "en": "An issue was discovered in 6.0 before 6.0.4, 5.2 before 5.2.13, and 4.2 before 4.2.30.\n`ASGIRequest` allows a remote attacker to spoof headers by exploiting an ambiguous mapping of two header variants (with hyphens or with underscores) to a single version with underscores.\nEarlier, unsupported Django series (such as 5.0.x, 4.1.x, and 3.2.x) were not evaluated and may also be affected.\nDjango would like to thank Tarek Nakkouch for reporting this issue.",
-        "es": "Se descubri\u00f3 un problema en 6.0 anterior a 6.0.4, 5.2 anterior a 5.2.13 y 4.2 anterior a 4.2.30.\nASGIRequest permite a un atacante remoto suplantar encabezados al explotar un mapeo ambiguo de dos variantes de encabezado (con guiones o con guiones bajos) a una \u00fanica versi\u00f3n con guiones bajos.\nSeries de Django anteriores y no compatibles (como 5.0.x, 4.1.x y 3.2.x) no fueron evaluadas y tambi\u00e9n pueden verse afectadas.\nDjango desea agradecer a Tarek Nakkouch por informar sobre este problema."
-      },
-      "references": [
-        "https://docs.djangoproject.com/en/dev/releases/security/",
-        "https://groups.google.com/g/django-announce",
-        "https://www.djangoproject.com/weblog/2026/apr/07/security-releases/"
       ]
     },
     {
@@ -3015,6 +3015,31 @@
       ]
     },
     {
+      "id": "pygoat:CVE-2026-59205:pillow:12.1.0",
+      "cve": "CVE-2026-59205",
+      "package": "pillow",
+      "ecosystem": "PyPI",
+      "installed_version": "12.1.0",
+      "fixed_version": "12.3.0",
+      "app": "pygoat",
+      "cvss": 7.5,
+      "epss": 0.00385,
+      "in_kev": false,
+      "kev_date_added": null,
+      "priority_score": 19,
+      "priority_label": "low",
+      "summary": {
+        "en": "Pillow is a Python imaging library. Prior to 12.3.0, Pillow's ImageCms.ImageCmsTransform.apply(im, imOut) API can trigger controlled native heap corruption when the caller supplies an output image whose mode does not match the transform's declared output mode. This issue is fixed in version 12.3.0.",
+        "es": "Pillow es una biblioteca de procesamiento de im\u00e1genes de Python. Antes de la versi\u00f3n 12.3.0, la API ImageCms.ImageCmsTransform.apply(im, imOut) de Pillow puede desencadenar una corrupci\u00f3n controlada del heap nativo cuando el llamador suministra una imagen de salida cuyo modo no coincide con el modo de salida declarado de la transformaci\u00f3n. Este problema se ha corregido en la versi\u00f3n 12.3.0."
+      },
+      "references": [
+        "https://github.com/python-pillow/Pillow/commit/a9ffc42bedf4fc0a7ef8d6486e7f9e81e3397721",
+        "https://github.com/python-pillow/Pillow/pull/9715",
+        "https://github.com/python-pillow/Pillow/releases/tag/12.3.0",
+        "https://github.com/python-pillow/Pillow/security/advisories/GHSA-9hw9-ch79-4vh6"
+      ]
+    },
+    {
       "id": "pygoat:CVE-2026-59199:pillow:12.1.0",
       "cve": "CVE-2026-59199",
       "package": "pillow",
@@ -3062,31 +3087,6 @@
         "https://github.com/python-pillow/Pillow/pull/9718",
         "https://github.com/python-pillow/Pillow/releases/tag/12.3.0",
         "https://github.com/python-pillow/Pillow/security/advisories/GHSA-jjj6-mw9f-p565"
-      ]
-    },
-    {
-      "id": "pygoat:CVE-2026-59205:pillow:12.1.0",
-      "cve": "CVE-2026-59205",
-      "package": "pillow",
-      "ecosystem": "PyPI",
-      "installed_version": "12.1.0",
-      "fixed_version": "12.3.0",
-      "app": "pygoat",
-      "cvss": 7.5,
-      "epss": 0.00385,
-      "in_kev": false,
-      "kev_date_added": null,
-      "priority_score": 19,
-      "priority_label": "low",
-      "summary": {
-        "en": "Pillow is a Python imaging library. Prior to 12.3.0, Pillow's ImageCms.ImageCmsTransform.apply(im, imOut) API can trigger controlled native heap corruption when the caller supplies an output image whose mode does not match the transform's declared output mode. This issue is fixed in version 12.3.0.",
-        "es": "Pillow es una biblioteca de procesamiento de im\u00e1genes de Python. Antes de la versi\u00f3n 12.3.0, la API ImageCms.ImageCmsTransform.apply(im, imOut) de Pillow puede desencadenar una corrupci\u00f3n controlada del heap nativo cuando el llamador suministra una imagen de salida cuyo modo no coincide con el modo de salida declarado de la transformaci\u00f3n. Este problema se ha corregido en la versi\u00f3n 12.3.0."
-      },
-      "references": [
-        "https://github.com/python-pillow/Pillow/commit/a9ffc42bedf4fc0a7ef8d6486e7f9e81e3397721",
-        "https://github.com/python-pillow/Pillow/pull/9715",
-        "https://github.com/python-pillow/Pillow/releases/tag/12.3.0",
-        "https://github.com/python-pillow/Pillow/security/advisories/GHSA-9hw9-ch79-4vh6"
       ]
     },
     {
@@ -4025,6 +4025,30 @@
       ]
     },
     {
+      "id": "pygoat:CVE-2026-4277:django:4.2",
+      "cve": "CVE-2026-4277",
+      "package": "django",
+      "ecosystem": "PyPI",
+      "installed_version": "4.2",
+      "fixed_version": "4.2.30",
+      "app": "pygoat",
+      "cvss": 9.8,
+      "epss": 0.00466,
+      "in_kev": false,
+      "kev_date_added": null,
+      "priority_score": 25,
+      "priority_label": "medium",
+      "summary": {
+        "en": "An issue was discovered in 6.0 before 6.0.4, 5.2 before 5.2.13, and 4.2 before 4.2.30.\nAdd permissions on inline model instances were not validated on submission of\r\nforged `POST` data in `GenericInlineModelAdmin`.\nEarlier, unsupported Django series (such as 5.0.x, 4.1.x, and 3.2.x) were not evaluated and may also be affected.\nDjango would like to thank N05ec@LZU-DSLab for reporting this issue.",
+        "es": "Se descubri\u00f3 un problema en 6.0 antes de 6.0.4, 5.2 antes de 5.2.13 y 4.2 antes de 4.2.30.\nLos permisos de adici\u00f3n en instancias de modelos en l\u00ednea no se validaron al enviar datos \u2019POST\u2019 falsificados en \u2019GenericInlineModelAdmin\u2019.\nSeries de Django anteriores no soportadas (como 5.0.x, 4.1.x y 3.2.x) no se evaluaron y tambi\u00e9n pueden estar afectadas.\nDjango desea agradecer a N05ec@LZU-DSLab por informar de este problema."
+      },
+      "references": [
+        "https://docs.djangoproject.com/en/dev/releases/security/",
+        "https://groups.google.com/g/django-announce",
+        "https://www.djangoproject.com/weblog/2026/apr/07/security-releases/"
+      ]
+    },
+    {
       "id": "pygoat:CVE-2026-48588:django:4.2",
       "cve": "CVE-2026-48588",
       "package": "django",
@@ -4046,30 +4070,6 @@
         "https://docs.djangoproject.com/en/dev/releases/security/",
         "https://groups.google.com/g/django-announce",
         "https://www.djangoproject.com/weblog/2026/jul/07/security-releases/"
-      ]
-    },
-    {
-      "id": "pygoat:CVE-2026-4277:django:4.2",
-      "cve": "CVE-2026-4277",
-      "package": "django",
-      "ecosystem": "PyPI",
-      "installed_version": "4.2",
-      "fixed_version": "4.2.30",
-      "app": "pygoat",
-      "cvss": 9.8,
-      "epss": 0.00458,
-      "in_kev": false,
-      "kev_date_added": null,
-      "priority_score": 25,
-      "priority_label": "medium",
-      "summary": {
-        "en": "An issue was discovered in 6.0 before 6.0.4, 5.2 before 5.2.13, and 4.2 before 4.2.30.\nAdd permissions on inline model instances were not validated on submission of\r\nforged `POST` data in `GenericInlineModelAdmin`.\nEarlier, unsupported Django series (such as 5.0.x, 4.1.x, and 3.2.x) were not evaluated and may also be affected.\nDjango would like to thank N05ec@LZU-DSLab for reporting this issue.",
-        "es": "Se descubri\u00f3 un problema en 6.0 antes de 6.0.4, 5.2 antes de 5.2.13 y 4.2 antes de 4.2.30.\nLos permisos de adici\u00f3n en instancias de modelos en l\u00ednea no se validaron al enviar datos \u2019POST\u2019 falsificados en \u2019GenericInlineModelAdmin\u2019.\nSeries de Django anteriores no soportadas (como 5.0.x, 4.1.x y 3.2.x) no se evaluaron y tambi\u00e9n pueden estar afectadas.\nDjango desea agradecer a N05ec@LZU-DSLab por informar de este problema."
-      },
-      "references": [
-        "https://docs.djangoproject.com/en/dev/releases/security/",
-        "https://groups.google.com/g/django-announce",
-        "https://www.djangoproject.com/weblog/2026/apr/07/security-releases/"
       ]
     },
     {
@@ -4331,6 +4331,30 @@
       ]
     },
     {
+      "id": "pygoat:CVE-2026-4292:django:4.2",
+      "cve": "CVE-2026-4292",
+      "package": "django",
+      "ecosystem": "PyPI",
+      "installed_version": "4.2",
+      "fixed_version": "4.2.30",
+      "app": "pygoat",
+      "cvss": 2.7,
+      "epss": 0.00305,
+      "in_kev": false,
+      "kev_date_added": null,
+      "priority_score": 7,
+      "priority_label": "low",
+      "summary": {
+        "en": "An issue was discovered in 6.0 before 6.0.4, 5.2 before 5.2.13, and 4.2 before 4.2.30.\nAdmin changelist forms using `ModelAdmin.list_editable` incorrectly allowed new\r\ninstances to be created via forged `POST` data.\nEarlier, unsupported Django series (such as 5.0.x, 4.1.x, and 3.2.x) were not evaluated and may also be affected.\nDjango would like to thank Cantina for reporting this issue.",
+        "es": "Se descubri\u00f3 un problema en 6.0 anterior a 6.0.4, 5.2 anterior a 5.2.13 y 4.2 anterior a 4.2.30.\nLos formularios de lista de cambios de administraci\u00f3n que utilizan \u2019ModelAdmin.list_editable\u2019 permitieron de forma incorrecta la creaci\u00f3n de nuevas instancias mediante datos \u2019POST\u2019 falsificados.\nSeries de Django anteriores no compatibles (como 5.0.x, 4.1.x y 3.2.x) no fueron evaluadas y tambi\u00e9n podr\u00edan verse afectadas.\nDjango desea agradecer a Cantina por reportar este problema."
+      },
+      "references": [
+        "https://docs.djangoproject.com/en/dev/releases/security/",
+        "https://groups.google.com/g/django-announce",
+        "https://www.djangoproject.com/weblog/2026/apr/07/security-releases/"
+      ]
+    },
+    {
       "id": "pygoat:CVE-2025-65430:django-allauth:0.52.0",
       "cve": "CVE-2025-65430",
       "package": "django-allauth",
@@ -4398,30 +4422,6 @@
         "https://github.com/python-pillow/Pillow/commit/88194166691b7b603529b8b036ab3ab9cedd2de4",
         "https://github.com/python-pillow/Pillow/commit/b0e06caa64c1405aa3da0bb1d2bd9a77ca22de7f",
         "https://github.com/python-pillow/Pillow/security/advisories/GHSA-4x4j-2g7c-83w6"
-      ]
-    },
-    {
-      "id": "pygoat:CVE-2026-4292:django:4.2",
-      "cve": "CVE-2026-4292",
-      "package": "django",
-      "ecosystem": "PyPI",
-      "installed_version": "4.2",
-      "fixed_version": "4.2.30",
-      "app": "pygoat",
-      "cvss": 2.7,
-      "epss": 0.00294,
-      "in_kev": false,
-      "kev_date_added": null,
-      "priority_score": 7,
-      "priority_label": "low",
-      "summary": {
-        "en": "An issue was discovered in 6.0 before 6.0.4, 5.2 before 5.2.13, and 4.2 before 4.2.30.\nAdmin changelist forms using `ModelAdmin.list_editable` incorrectly allowed new\r\ninstances to be created via forged `POST` data.\nEarlier, unsupported Django series (such as 5.0.x, 4.1.x, and 3.2.x) were not evaluated and may also be affected.\nDjango would like to thank Cantina for reporting this issue.",
-        "es": "Se descubri\u00f3 un problema en 6.0 anterior a 6.0.4, 5.2 anterior a 5.2.13 y 4.2 anterior a 4.2.30.\nLos formularios de lista de cambios de administraci\u00f3n que utilizan \u2019ModelAdmin.list_editable\u2019 permitieron de forma incorrecta la creaci\u00f3n de nuevas instancias mediante datos \u2019POST\u2019 falsificados.\nSeries de Django anteriores no compatibles (como 5.0.x, 4.1.x y 3.2.x) no fueron evaluadas y tambi\u00e9n podr\u00edan verse afectadas.\nDjango desea agradecer a Cantina por reportar este problema."
-      },
-      "references": [
-        "https://docs.djangoproject.com/en/dev/releases/security/",
-        "https://groups.google.com/g/django-announce",
-        "https://www.djangoproject.com/weblog/2026/apr/07/security-releases/"
       ]
     },
     {
@@ -4577,8 +4577,14 @@
       "kev_date_added": null,
       "priority_score": 0,
       "priority_label": "low",
-      "summary": {},
-      "references": []
+      "summary": {
+        "en": "Black is the uncompromising Python code formatter. Prior to 26.10.1, the Black GitHub Action with use_pyproject: true accepts tool.black.required-version from pyproject.toml without validating that it is a released Black version specifier. An attacker who can submit a pull request can change that field to a direct reference to attacker-controlled code, causing the workflow to install and execute the code in the victim repository's GitHub Actions context. This issue is fixed in version 26.10.1."
+      },
+      "references": [
+        "https://github.com/psf/black/commit/ac1f71563aeccf73cf13ece00f231d9d6c66a514",
+        "https://github.com/psf/black/pull/5510",
+        "https://github.com/psf/black/security/advisories/GHSA-cg8m-r9f2-5wm2"
+      ]
     },
     {
       "id": "pygoat:CVE-2026-112902:pillow:12.1.0",
@@ -4594,8 +4600,15 @@
       "kev_date_added": null,
       "priority_score": 0,
       "priority_label": "low",
-      "summary": {},
-      "references": []
+      "summary": {
+        "en": "Pillow is a Python imaging library. In versions through 12.3.0, the libtiff TIFF encoder can pass arguments to \u00a0TIFFSetField()\u00a0 that do not match libtiff\u2019s definition of the corresponding tag. When an application saves attacker-controlled image metadata through this encoder, crafted tag values can cause invalid memory reads, copying process memory into the encoded output or crashing the process. Applications that return the encoded output to an attacker can disclose that memory. The issue is reachable when re-saving compressed TIFF images and through certain conversions that preserve EXIF metadata into compressed TIFF output. This vulnerability is fixed in version 13.0.0."
+      },
+      "references": [
+        "https://github.com/python-pillow/Pillow/commit/570df030c0d30c2bf5336b2ab59f3902d8ab0b6d",
+        "https://github.com/python-pillow/Pillow/pull/10227",
+        "https://github.com/python-pillow/Pillow/releases/tag/13.0.0",
+        "https://github.com/python-pillow/Pillow/security/advisories/GHSA-xvh5-g6gv-559v"
+      ]
     },
     {
       "id": "pygoat:CVE-2026-112899:pillow:12.1.0",
@@ -4611,8 +4624,15 @@
       "kev_date_added": null,
       "priority_score": 0,
       "priority_label": "low",
-      "summary": {},
-      "references": []
+      "summary": {
+        "en": "Pillow is a Python imaging library. In versions 2.3.0 through 12.3.0, EPS rendering does not validate the scaled image dimensions before invoking Ghostscript. Applications that process untrusted EPS or PostScript files using an application-selected scale greater than one can incur excessive Ghostscript CPU and temporary disk consumption. In versions with decompression-bomb protection, the scaled output is checked only after Ghostscript has completed rendering, allowing resource consumption beyond the configured pixel limit. The amplification depends on the scale selected by the application, not an attacker-controlled scale value. This issue is fixed in version 13.0.0."
+      },
+      "references": [
+        "https://github.com/python-pillow/Pillow/commit/3e8cc105588d1dfe062fcada0b6058c1b5f14b65",
+        "https://github.com/python-pillow/Pillow/pull/10112",
+        "https://github.com/python-pillow/Pillow/releases/tag/13.0.0",
+        "https://github.com/python-pillow/Pillow/security/advisories/GHSA-vx6w-vv9f-6gvg"
+      ]
     },
     {
       "id": "nodejs-goof:CVE-2020-11023:jquery:2.2.4",
@@ -6256,32 +6276,6 @@
       ]
     },
     {
-      "id": "nodejs-goof:CVE-2022-24434:dicer:0.3.0",
-      "cve": "CVE-2022-24434",
-      "package": "dicer",
-      "ecosystem": "npm",
-      "installed_version": "0.3.0",
-      "fixed_version": null,
-      "app": "nodejs-goof",
-      "cvss": 7.5,
-      "epss": 0.03478,
-      "in_kev": false,
-      "kev_date_added": null,
-      "priority_score": 21,
-      "priority_label": "medium",
-      "summary": {
-        "en": "This affects all versions of package dicer. A malicious attacker can send a modified form to server, and crash the nodejs service. An attacker could sent the payload again and again so that the service continuously crashes.",
-        "es": "Esto afecta a todas las versiones de package dicer. Un atacante malicioso puede enviar un formulario modificado al servidor, y colapsar el servicio nodejs. Un atacante podr\u00eda enviar la carga \u00fatil una y otra vez para que el servicio sea bloqueado continuamente"
-      },
-      "references": [
-        "https://github.com/mscdex/busboy/issues/250",
-        "https://github.com/mscdex/dicer/pull/22",
-        "https://github.com/mscdex/dicer/pull/22/commits/b7fca2e93e8e9d4439d8acc5c02f5e54a0112dac",
-        "https://snyk.io/vuln/SNYK-JAVA-ORGWEBJARSNPM-2838865",
-        "https://snyk.io/vuln/SNYK-JS-DICER-2311764"
-      ]
-    },
-    {
       "id": "nodejs-goof:CVE-2021-43138:async:2.6.3",
       "cve": "CVE-2021-43138",
       "package": "async",
@@ -6310,6 +6304,32 @@
         "https://lists.fedoraproject.org/archives/list/package-announce%40lists.fedoraproject.org/message/MTEUUTNIEBHGKUKKLNUZSV7IEP6IP3Q3/",
         "https://lists.fedoraproject.org/archives/list/package-announce%40lists.fedoraproject.org/message/UM6XJ73Q3NAM5KSGCOKJ2ZIA6GUWUJLK/",
         "https://security.netapp.com/advisory/ntap-20240621-0006/"
+      ]
+    },
+    {
+      "id": "nodejs-goof:CVE-2022-24434:dicer:0.3.0",
+      "cve": "CVE-2022-24434",
+      "package": "dicer",
+      "ecosystem": "npm",
+      "installed_version": "0.3.0",
+      "fixed_version": null,
+      "app": "nodejs-goof",
+      "cvss": 7.5,
+      "epss": 0.03384,
+      "in_kev": false,
+      "kev_date_added": null,
+      "priority_score": 21,
+      "priority_label": "medium",
+      "summary": {
+        "en": "This affects all versions of package dicer. A malicious attacker can send a modified form to server, and crash the nodejs service. An attacker could sent the payload again and again so that the service continuously crashes.",
+        "es": "Esto afecta a todas las versiones de package dicer. Un atacante malicioso puede enviar un formulario modificado al servidor, y colapsar el servicio nodejs. Un atacante podr\u00eda enviar la carga \u00fatil una y otra vez para que el servicio sea bloqueado continuamente"
+      },
+      "references": [
+        "https://github.com/mscdex/busboy/issues/250",
+        "https://github.com/mscdex/dicer/pull/22",
+        "https://github.com/mscdex/dicer/pull/22/commits/b7fca2e93e8e9d4439d8acc5c02f5e54a0112dac",
+        "https://snyk.io/vuln/SNYK-JAVA-ORGWEBJARSNPM-2838865",
+        "https://snyk.io/vuln/SNYK-JS-DICER-2311764"
       ]
     },
     {
@@ -6714,31 +6734,6 @@
       ]
     },
     {
-      "id": "nodejs-goof:CVE-2022-21680:marked:0.3.5",
-      "cve": "CVE-2022-21680",
-      "package": "marked",
-      "ecosystem": "npm",
-      "installed_version": "0.3.5",
-      "fixed_version": "4.0.10",
-      "app": "nodejs-goof",
-      "cvss": 7.5,
-      "epss": 0.02852,
-      "in_kev": false,
-      "kev_date_added": null,
-      "priority_score": 21,
-      "priority_label": "medium",
-      "summary": {
-        "en": "Marked is a markdown parser and compiler. Prior to version 4.0.10, the regular expression `block.def` may cause catastrophic backtracking against some strings and lead to a regular expression denial of service (ReDoS). Anyone who runs untrusted markdown through a vulnerable version of marked and does not use a worker with a time limit may be affected. This issue is patched in version 4.0.10. As a workaround, avoid running untrusted markdown through marked or run marked on a worker thread and set a reasonable time limit to prevent draining resources.",
-        "es": "Marked es un analizador y compilador de markdown. En versiones anteriores a 4.0.10, la expresi\u00f3n regular \"block.def\" pod\u00eda causar un retroceso catastr\u00f3fico contra algunas cadenas y conllevar a una denegaci\u00f3n de servicio por expresi\u00f3n regular (ReDoS). Cualquiera que ejecute markdown no confiable mediante una versi\u00f3n vulnerable de marked y no use un trabajador con l\u00edmite de tiempo puede verse afectado. Este problema est\u00e1 parcheado en la versi\u00f3n 4.0.10. Como medida de mitigaci\u00f3n, evite ejecutar markdown no confiable mediante marked o ejecute marked en un hilo de trabajo y establezca un l\u00edmite de tiempo razonable para evitar el agotamiento de los recursos"
-      },
-      "references": [
-        "https://github.com/markedjs/marked/commit/c4a3ccd344b6929afa8a1d50ac54a721e57012c0",
-        "https://github.com/markedjs/marked/releases/tag/v4.0.10",
-        "https://github.com/markedjs/marked/security/advisories/GHSA-rrrm-qjm4-v8hf",
-        "https://lists.fedoraproject.org/archives/list/package-announce%40lists.fedoraproject.org/message/AIXDMC3CSHYW3YWVSQOXAWLUYQHAO5UX/"
-      ]
-    },
-    {
       "id": "nodejs-goof:CVE-2020-7610:bson:0.4.23",
       "cve": "CVE-2020-7610",
       "package": "bson",
@@ -6761,26 +6756,27 @@
       ]
     },
     {
-      "id": "nodejs-goof:CVE-2022-21681:marked:0.3.5",
-      "cve": "CVE-2022-21681",
+      "id": "nodejs-goof:CVE-2022-21680:marked:0.3.5",
+      "cve": "CVE-2022-21680",
       "package": "marked",
       "ecosystem": "npm",
       "installed_version": "0.3.5",
       "fixed_version": "4.0.10",
       "app": "nodejs-goof",
       "cvss": 7.5,
-      "epss": 0.02766,
+      "epss": 0.02774,
       "in_kev": false,
       "kev_date_added": null,
       "priority_score": 21,
       "priority_label": "medium",
       "summary": {
-        "en": "Marked is a markdown parser and compiler. Prior to version 4.0.10, the regular expression `inline.reflinkSearch` may cause catastrophic backtracking against some strings and lead to a denial of service (DoS). Anyone who runs untrusted markdown through a vulnerable version of marked and does not use a worker with a time limit may be affected. This issue is patched in version 4.0.10. As a workaround, avoid running untrusted markdown through marked or run marked on a worker thread and set a reasonable time limit to prevent draining resources.",
-        "es": "Marked es un analizador y compilador de markdown. En versiones anteriores a 4.0.10, la expresi\u00f3n regular \"inline.reflinkSearch\" pod\u00eda causar un retroceso catastr\u00f3fico contra algunas cadenas y conllevar a una denegaci\u00f3n de servicio (DoS). Cualquiera que ejecute markdown no confiable mediante una versi\u00f3n vulnerable de marked y no use un trabajador con l\u00edmite de tiempo puede verse afectado. Este problema est\u00e1 parcheado en la versi\u00f3n 4.0.10. Como medida de mitigaci\u00f3n, evite ejecutar markdown no confiable mediante marked o ejecute marked en un hilo de trabajo y establezca un l\u00edmite de tiempo razonable para evitar el agotamiento de los recursos"
+        "en": "Marked is a markdown parser and compiler. Prior to version 4.0.10, the regular expression `block.def` may cause catastrophic backtracking against some strings and lead to a regular expression denial of service (ReDoS). Anyone who runs untrusted markdown through a vulnerable version of marked and does not use a worker with a time limit may be affected. This issue is patched in version 4.0.10. As a workaround, avoid running untrusted markdown through marked or run marked on a worker thread and set a reasonable time limit to prevent draining resources.",
+        "es": "Marked es un analizador y compilador de markdown. En versiones anteriores a 4.0.10, la expresi\u00f3n regular \"block.def\" pod\u00eda causar un retroceso catastr\u00f3fico contra algunas cadenas y conllevar a una denegaci\u00f3n de servicio por expresi\u00f3n regular (ReDoS). Cualquiera que ejecute markdown no confiable mediante una versi\u00f3n vulnerable de marked y no use un trabajador con l\u00edmite de tiempo puede verse afectado. Este problema est\u00e1 parcheado en la versi\u00f3n 4.0.10. Como medida de mitigaci\u00f3n, evite ejecutar markdown no confiable mediante marked o ejecute marked en un hilo de trabajo y establezca un l\u00edmite de tiempo razonable para evitar el agotamiento de los recursos"
       },
       "references": [
-        "https://github.com/markedjs/marked/commit/8f806573a3f6c6b7a39b8cdb66ab5ebb8d55a5f5",
-        "https://github.com/markedjs/marked/security/advisories/GHSA-5v2h-r2cx-5xgj",
+        "https://github.com/markedjs/marked/commit/c4a3ccd344b6929afa8a1d50ac54a721e57012c0",
+        "https://github.com/markedjs/marked/releases/tag/v4.0.10",
+        "https://github.com/markedjs/marked/security/advisories/GHSA-rrrm-qjm4-v8hf",
         "https://lists.fedoraproject.org/archives/list/package-announce%40lists.fedoraproject.org/message/AIXDMC3CSHYW3YWVSQOXAWLUYQHAO5UX/"
       ]
     },
@@ -6836,6 +6832,30 @@
         "https://github.com/npm/node-semver/pull/564",
         "https://security.snyk.io/vuln/SNYK-JS-SEMVER-3247795",
         "https://security.netapp.com/advisory/ntap-20241025-0004/"
+      ]
+    },
+    {
+      "id": "nodejs-goof:CVE-2022-21681:marked:0.3.5",
+      "cve": "CVE-2022-21681",
+      "package": "marked",
+      "ecosystem": "npm",
+      "installed_version": "0.3.5",
+      "fixed_version": "4.0.10",
+      "app": "nodejs-goof",
+      "cvss": 7.5,
+      "epss": 0.02691,
+      "in_kev": false,
+      "kev_date_added": null,
+      "priority_score": 21,
+      "priority_label": "medium",
+      "summary": {
+        "en": "Marked is a markdown parser and compiler. Prior to version 4.0.10, the regular expression `inline.reflinkSearch` may cause catastrophic backtracking against some strings and lead to a denial of service (DoS). Anyone who runs untrusted markdown through a vulnerable version of marked and does not use a worker with a time limit may be affected. This issue is patched in version 4.0.10. As a workaround, avoid running untrusted markdown through marked or run marked on a worker thread and set a reasonable time limit to prevent draining resources.",
+        "es": "Marked es un analizador y compilador de markdown. En versiones anteriores a 4.0.10, la expresi\u00f3n regular \"inline.reflinkSearch\" pod\u00eda causar un retroceso catastr\u00f3fico contra algunas cadenas y conllevar a una denegaci\u00f3n de servicio (DoS). Cualquiera que ejecute markdown no confiable mediante una versi\u00f3n vulnerable de marked y no use un trabajador con l\u00edmite de tiempo puede verse afectado. Este problema est\u00e1 parcheado en la versi\u00f3n 4.0.10. Como medida de mitigaci\u00f3n, evite ejecutar markdown no confiable mediante marked o ejecute marked en un hilo de trabajo y establezca un l\u00edmite de tiempo razonable para evitar el agotamiento de los recursos"
+      },
+      "references": [
+        "https://github.com/markedjs/marked/commit/8f806573a3f6c6b7a39b8cdb66ab5ebb8d55a5f5",
+        "https://github.com/markedjs/marked/security/advisories/GHSA-5v2h-r2cx-5xgj",
+        "https://lists.fedoraproject.org/archives/list/package-announce%40lists.fedoraproject.org/message/AIXDMC3CSHYW3YWVSQOXAWLUYQHAO5UX/"
       ]
     },
     {
@@ -8360,30 +8380,6 @@
       ]
     },
     {
-      "id": "nodejs-goof:CVE-2023-0842:xml2js:0.4.23",
-      "cve": "CVE-2023-0842",
-      "package": "xml2js",
-      "ecosystem": "npm",
-      "installed_version": "0.4.23",
-      "fixed_version": "0.5.0",
-      "app": "nodejs-goof",
-      "cvss": 5.3,
-      "epss": 0.01404,
-      "in_kev": false,
-      "kev_date_added": null,
-      "priority_score": 14,
-      "priority_label": "low",
-      "summary": {
-        "en": "xml2js version 0.4.23 allows an external attacker to edit or add new properties to an object. This is possible because the application does not properly validate incoming JSON keys, thus allowing the __proto__ property to be edited."
-      },
-      "references": [
-        "https://fluidattacks.com/advisories/myers/",
-        "https://github.com/Leonidas-from-XIV/node-xml2js/",
-        "https://github.com/Leonidas-from-XIV/node-xml2js/releases/tag/0.6.2",
-        "https://lists.debian.org/debian-lts-announce/2024/03/msg00013.html"
-      ]
-    },
-    {
       "id": "nodejs-goof:CVE-2020-26237:highlight.js:9.18.1",
       "cve": "CVE-2020-26237",
       "package": "highlight.js",
@@ -8408,6 +8404,30 @@
         "https://lists.debian.org/debian-lts-announce/2020/12/msg00041.html",
         "https://www.npmjs.com/package/highlight.js",
         "https://www.oracle.com/security-alerts/cpujul2022.html"
+      ]
+    },
+    {
+      "id": "nodejs-goof:CVE-2023-0842:xml2js:0.4.23",
+      "cve": "CVE-2023-0842",
+      "package": "xml2js",
+      "ecosystem": "npm",
+      "installed_version": "0.4.23",
+      "fixed_version": "0.5.0",
+      "app": "nodejs-goof",
+      "cvss": 5.3,
+      "epss": 0.01392,
+      "in_kev": false,
+      "kev_date_added": null,
+      "priority_score": 14,
+      "priority_label": "low",
+      "summary": {
+        "en": "xml2js version 0.4.23 allows an external attacker to edit or add new properties to an object. This is possible because the application does not properly validate incoming JSON keys, thus allowing the __proto__ property to be edited."
+      },
+      "references": [
+        "https://fluidattacks.com/advisories/myers/",
+        "https://github.com/Leonidas-from-XIV/node-xml2js/",
+        "https://github.com/Leonidas-from-XIV/node-xml2js/releases/tag/0.6.2",
+        "https://lists.debian.org/debian-lts-announce/2024/03/msg00013.html"
       ]
     },
     {
@@ -8770,6 +8790,87 @@
       ]
     },
     {
+      "id": "nodejs-goof:CVE-2017-20162:ms:0.6.2",
+      "cve": "CVE-2017-20162",
+      "package": "ms",
+      "ecosystem": "npm",
+      "installed_version": "0.6.2",
+      "fixed_version": "2.0.0",
+      "app": "nodejs-goof",
+      "cvss": 4.3,
+      "epss": 0.01056,
+      "in_kev": false,
+      "kev_date_added": null,
+      "priority_score": 12,
+      "priority_label": "low",
+      "summary": {
+        "en": "A vulnerability, which was classified as problematic, has been found in vercel ms up to 1.x. This issue affects the function parse of the file index.js. The manipulation of the argument str leads to inefficient regular expression complexity. The attack may be initiated remotely. The exploit has been disclosed to the public and may be used. Upgrading to version 2.0.0 is able to address this issue. The patch is named caae2988ba2a37765d055c4eee63d383320ee662. It is recommended to upgrade the affected component. The associated identifier of this vulnerability is VDB-217451.",
+        "es": "Se ha encontrado una vulnerabilidad clasificada como problem\u00e1tica en vercel ms hasta 1.x. Este problema afecta la funci\u00f3n de an\u00e1lisis del archivo index.js. La manipulaci\u00f3n del argumento str conduce a una complejidad de expresi\u00f3n regular ineficiente. El ataque puede iniciarse de forma remota. El exploit ha sido divulgado al p\u00fablico y puede utilizarse. La actualizaci\u00f3n a la versi\u00f3n 2.0.0 puede solucionar este problema. El parche se llama caae2988ba2a37765d055c4eee63d383320ee662. Se recomienda actualizar el componente afectado. El identificador asociado de esta vulnerabilidad es VDB-217451."
+      },
+      "references": [
+        "https://github.com/vercel/ms/commit/caae2988ba2a37765d055c4eee63d383320ee662",
+        "https://github.com/vercel/ms/pull/89",
+        "https://github.com/vercel/ms/releases/tag/2.0.0",
+        "https://vuldb.com/?ctiid.217451",
+        "https://vuldb.com/?id.217451",
+        "https://security.netapp.com/advisory/ntap-20241108-0002/"
+      ]
+    },
+    {
+      "id": "nodejs-goof:CVE-2017-20162:ms:0.7.1",
+      "cve": "CVE-2017-20162",
+      "package": "ms",
+      "ecosystem": "npm",
+      "installed_version": "0.7.1",
+      "fixed_version": "2.0.0",
+      "app": "nodejs-goof",
+      "cvss": 4.3,
+      "epss": 0.01056,
+      "in_kev": false,
+      "kev_date_added": null,
+      "priority_score": 12,
+      "priority_label": "low",
+      "summary": {
+        "en": "A vulnerability, which was classified as problematic, has been found in vercel ms up to 1.x. This issue affects the function parse of the file index.js. The manipulation of the argument str leads to inefficient regular expression complexity. The attack may be initiated remotely. The exploit has been disclosed to the public and may be used. Upgrading to version 2.0.0 is able to address this issue. The patch is named caae2988ba2a37765d055c4eee63d383320ee662. It is recommended to upgrade the affected component. The associated identifier of this vulnerability is VDB-217451.",
+        "es": "Se ha encontrado una vulnerabilidad clasificada como problem\u00e1tica en vercel ms hasta 1.x. Este problema afecta la funci\u00f3n de an\u00e1lisis del archivo index.js. La manipulaci\u00f3n del argumento str conduce a una complejidad de expresi\u00f3n regular ineficiente. El ataque puede iniciarse de forma remota. El exploit ha sido divulgado al p\u00fablico y puede utilizarse. La actualizaci\u00f3n a la versi\u00f3n 2.0.0 puede solucionar este problema. El parche se llama caae2988ba2a37765d055c4eee63d383320ee662. Se recomienda actualizar el componente afectado. El identificador asociado de esta vulnerabilidad es VDB-217451."
+      },
+      "references": [
+        "https://github.com/vercel/ms/commit/caae2988ba2a37765d055c4eee63d383320ee662",
+        "https://github.com/vercel/ms/pull/89",
+        "https://github.com/vercel/ms/releases/tag/2.0.0",
+        "https://vuldb.com/?ctiid.217451",
+        "https://vuldb.com/?id.217451",
+        "https://security.netapp.com/advisory/ntap-20241108-0002/"
+      ]
+    },
+    {
+      "id": "nodejs-goof:CVE-2017-20162:ms:0.7.3",
+      "cve": "CVE-2017-20162",
+      "package": "ms",
+      "ecosystem": "npm",
+      "installed_version": "0.7.3",
+      "fixed_version": "2.0.0",
+      "app": "nodejs-goof",
+      "cvss": 4.3,
+      "epss": 0.01056,
+      "in_kev": false,
+      "kev_date_added": null,
+      "priority_score": 12,
+      "priority_label": "low",
+      "summary": {
+        "en": "A vulnerability, which was classified as problematic, has been found in vercel ms up to 1.x. This issue affects the function parse of the file index.js. The manipulation of the argument str leads to inefficient regular expression complexity. The attack may be initiated remotely. The exploit has been disclosed to the public and may be used. Upgrading to version 2.0.0 is able to address this issue. The patch is named caae2988ba2a37765d055c4eee63d383320ee662. It is recommended to upgrade the affected component. The associated identifier of this vulnerability is VDB-217451.",
+        "es": "Se ha encontrado una vulnerabilidad clasificada como problem\u00e1tica en vercel ms hasta 1.x. Este problema afecta la funci\u00f3n de an\u00e1lisis del archivo index.js. La manipulaci\u00f3n del argumento str conduce a una complejidad de expresi\u00f3n regular ineficiente. El ataque puede iniciarse de forma remota. El exploit ha sido divulgado al p\u00fablico y puede utilizarse. La actualizaci\u00f3n a la versi\u00f3n 2.0.0 puede solucionar este problema. El parche se llama caae2988ba2a37765d055c4eee63d383320ee662. Se recomienda actualizar el componente afectado. El identificador asociado de esta vulnerabilidad es VDB-217451."
+      },
+      "references": [
+        "https://github.com/vercel/ms/commit/caae2988ba2a37765d055c4eee63d383320ee662",
+        "https://github.com/vercel/ms/pull/89",
+        "https://github.com/vercel/ms/releases/tag/2.0.0",
+        "https://vuldb.com/?ctiid.217451",
+        "https://vuldb.com/?id.217451",
+        "https://security.netapp.com/advisory/ntap-20241108-0002/"
+      ]
+    },
+    {
       "id": "nodejs-goof:CVE-2020-35149:mquery:1.6.3",
       "cve": "CVE-2020-35149",
       "package": "mquery",
@@ -8837,87 +8938,6 @@
         "https://github.com/handlebars-lang/handlebars.js/pull/2185",
         "https://github.com/handlebars-lang/handlebars.js/releases/tag/v4.7.10",
         "https://github.com/handlebars-lang/handlebars.js/security/advisories/GHSA-p8wg-vrv2-v86f"
-      ]
-    },
-    {
-      "id": "nodejs-goof:CVE-2017-20162:ms:0.6.2",
-      "cve": "CVE-2017-20162",
-      "package": "ms",
-      "ecosystem": "npm",
-      "installed_version": "0.6.2",
-      "fixed_version": "2.0.0",
-      "app": "nodejs-goof",
-      "cvss": 4.3,
-      "epss": 0.01018,
-      "in_kev": false,
-      "kev_date_added": null,
-      "priority_score": 12,
-      "priority_label": "low",
-      "summary": {
-        "en": "A vulnerability, which was classified as problematic, has been found in vercel ms up to 1.x. This issue affects the function parse of the file index.js. The manipulation of the argument str leads to inefficient regular expression complexity. The attack may be initiated remotely. The exploit has been disclosed to the public and may be used. Upgrading to version 2.0.0 is able to address this issue. The patch is named caae2988ba2a37765d055c4eee63d383320ee662. It is recommended to upgrade the affected component. The associated identifier of this vulnerability is VDB-217451.",
-        "es": "Se ha encontrado una vulnerabilidad clasificada como problem\u00e1tica en vercel ms hasta 1.x. Este problema afecta la funci\u00f3n de an\u00e1lisis del archivo index.js. La manipulaci\u00f3n del argumento str conduce a una complejidad de expresi\u00f3n regular ineficiente. El ataque puede iniciarse de forma remota. El exploit ha sido divulgado al p\u00fablico y puede utilizarse. La actualizaci\u00f3n a la versi\u00f3n 2.0.0 puede solucionar este problema. El parche se llama caae2988ba2a37765d055c4eee63d383320ee662. Se recomienda actualizar el componente afectado. El identificador asociado de esta vulnerabilidad es VDB-217451."
-      },
-      "references": [
-        "https://github.com/vercel/ms/commit/caae2988ba2a37765d055c4eee63d383320ee662",
-        "https://github.com/vercel/ms/pull/89",
-        "https://github.com/vercel/ms/releases/tag/2.0.0",
-        "https://vuldb.com/?ctiid.217451",
-        "https://vuldb.com/?id.217451",
-        "https://security.netapp.com/advisory/ntap-20241108-0002/"
-      ]
-    },
-    {
-      "id": "nodejs-goof:CVE-2017-20162:ms:0.7.1",
-      "cve": "CVE-2017-20162",
-      "package": "ms",
-      "ecosystem": "npm",
-      "installed_version": "0.7.1",
-      "fixed_version": "2.0.0",
-      "app": "nodejs-goof",
-      "cvss": 4.3,
-      "epss": 0.01018,
-      "in_kev": false,
-      "kev_date_added": null,
-      "priority_score": 12,
-      "priority_label": "low",
-      "summary": {
-        "en": "A vulnerability, which was classified as problematic, has been found in vercel ms up to 1.x. This issue affects the function parse of the file index.js. The manipulation of the argument str leads to inefficient regular expression complexity. The attack may be initiated remotely. The exploit has been disclosed to the public and may be used. Upgrading to version 2.0.0 is able to address this issue. The patch is named caae2988ba2a37765d055c4eee63d383320ee662. It is recommended to upgrade the affected component. The associated identifier of this vulnerability is VDB-217451.",
-        "es": "Se ha encontrado una vulnerabilidad clasificada como problem\u00e1tica en vercel ms hasta 1.x. Este problema afecta la funci\u00f3n de an\u00e1lisis del archivo index.js. La manipulaci\u00f3n del argumento str conduce a una complejidad de expresi\u00f3n regular ineficiente. El ataque puede iniciarse de forma remota. El exploit ha sido divulgado al p\u00fablico y puede utilizarse. La actualizaci\u00f3n a la versi\u00f3n 2.0.0 puede solucionar este problema. El parche se llama caae2988ba2a37765d055c4eee63d383320ee662. Se recomienda actualizar el componente afectado. El identificador asociado de esta vulnerabilidad es VDB-217451."
-      },
-      "references": [
-        "https://github.com/vercel/ms/commit/caae2988ba2a37765d055c4eee63d383320ee662",
-        "https://github.com/vercel/ms/pull/89",
-        "https://github.com/vercel/ms/releases/tag/2.0.0",
-        "https://vuldb.com/?ctiid.217451",
-        "https://vuldb.com/?id.217451",
-        "https://security.netapp.com/advisory/ntap-20241108-0002/"
-      ]
-    },
-    {
-      "id": "nodejs-goof:CVE-2017-20162:ms:0.7.3",
-      "cve": "CVE-2017-20162",
-      "package": "ms",
-      "ecosystem": "npm",
-      "installed_version": "0.7.3",
-      "fixed_version": "2.0.0",
-      "app": "nodejs-goof",
-      "cvss": 4.3,
-      "epss": 0.01018,
-      "in_kev": false,
-      "kev_date_added": null,
-      "priority_score": 12,
-      "priority_label": "low",
-      "summary": {
-        "en": "A vulnerability, which was classified as problematic, has been found in vercel ms up to 1.x. This issue affects the function parse of the file index.js. The manipulation of the argument str leads to inefficient regular expression complexity. The attack may be initiated remotely. The exploit has been disclosed to the public and may be used. Upgrading to version 2.0.0 is able to address this issue. The patch is named caae2988ba2a37765d055c4eee63d383320ee662. It is recommended to upgrade the affected component. The associated identifier of this vulnerability is VDB-217451.",
-        "es": "Se ha encontrado una vulnerabilidad clasificada como problem\u00e1tica en vercel ms hasta 1.x. Este problema afecta la funci\u00f3n de an\u00e1lisis del archivo index.js. La manipulaci\u00f3n del argumento str conduce a una complejidad de expresi\u00f3n regular ineficiente. El ataque puede iniciarse de forma remota. El exploit ha sido divulgado al p\u00fablico y puede utilizarse. La actualizaci\u00f3n a la versi\u00f3n 2.0.0 puede solucionar este problema. El parche se llama caae2988ba2a37765d055c4eee63d383320ee662. Se recomienda actualizar el componente afectado. El identificador asociado de esta vulnerabilidad es VDB-217451."
-      },
-      "references": [
-        "https://github.com/vercel/ms/commit/caae2988ba2a37765d055c4eee63d383320ee662",
-        "https://github.com/vercel/ms/pull/89",
-        "https://github.com/vercel/ms/releases/tag/2.0.0",
-        "https://vuldb.com/?ctiid.217451",
-        "https://vuldb.com/?id.217451",
-        "https://security.netapp.com/advisory/ntap-20241108-0002/"
       ]
     },
     {
@@ -10379,31 +10399,6 @@
       ]
     },
     {
-      "id": "nodejs-goof:CVE-2026-118764:minimatch:3.0.4",
-      "cve": "CVE-2026-118764",
-      "package": "minimatch",
-      "ecosystem": "npm",
-      "installed_version": "3.0.4",
-      "fixed_version": "11.0.1",
-      "app": "nodejs-goof",
-      "cvss": null,
-      "epss": 0.00291,
-      "in_kev": false,
-      "kev_date_added": null,
-      "priority_score": 0,
-      "priority_label": "low",
-      "summary": {
-        "en": "minimatch is a minimal matching utility for converting glob expressions into JavaScript RegExp objects. Starting in 7.0.0 and prior to 11.0.1, src/index.ts implements firstPhasePreProcess() so that, at optimizationLevel 2 or higher, it repeatedly expands attacker-controlled **/.. pattern segments inside a fixpoint loop, allowing generated globParts entries to be processed and expanded again. secondPhasePreProcess() then compares the expanded entries pairwise, so a short malicious glob can cause excessive CPU and memory consumption during pattern compilation. This issue is fixed in version 11.0.1."
-      },
-      "references": [
-        "https://github.com/isaacs/minimatch/commit/297b6c1a01f2410b3ba1ebed14ba222d0c3c1033",
-        "https://github.com/isaacs/minimatch/commit/77a0f5c4b80bdc641c3c930a1d9edf5ad2db57f8",
-        "https://github.com/isaacs/minimatch/commit/fd0b3ab9cbc5bf1aff1c99f1f46e413c2b3340da",
-        "https://github.com/isaacs/minimatch/releases/tag/v11.0.1",
-        "https://github.com/isaacs/minimatch/security/advisories/GHSA-g3hv-75wg-m249"
-      ]
-    },
-    {
       "id": "nodejs-goof:CVE-2026-5078:morgan:1.10.0",
       "cve": "CVE-2026-5078",
       "package": "morgan",
@@ -10458,7 +10453,7 @@
       "fixed_version": "1.1.12",
       "app": "nodejs-goof",
       "cvss": 3.1,
-      "epss": 0.00586,
+      "epss": 0.00611,
       "in_kev": false,
       "kev_date_added": null,
       "priority_score": 8,
@@ -10717,12 +10712,6 @@
   ],
   "history": [
     {
-      "date": "2026-10-06",
-      "findings_total": 338,
-      "critical": 4,
-      "high": 3
-    },
-    {
       "date": "2026-10-07",
       "findings_total": 338,
       "critical": 4,
@@ -10893,6 +10882,12 @@
     {
       "date": "2026-11-04",
       "findings_total": 386,
+      "critical": 3,
+      "high": 3
+    },
+    {
+      "date": "2026-11-06",
+      "findings_total": 385,
       "critical": 3,
       "high": 3
     }

@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-11-07T12:44:49.353622+00:00",
+  "generated_at": "2026-11-08T13:02:16.915390+00:00",
   "sources": {
     "kev": {
       "fetched": true,
@@ -1407,29 +1407,6 @@
       ]
     },
     {
-      "id": "pygoat:CVE-2025-66418:urllib3:1.26.9",
-      "cve": "CVE-2025-66418",
-      "package": "urllib3",
-      "ecosystem": "PyPI",
-      "installed_version": "1.26.9",
-      "fixed_version": "2.6.0",
-      "app": "pygoat",
-      "cvss": 7.5,
-      "epss": 0.00731,
-      "in_kev": false,
-      "kev_date_added": null,
-      "priority_score": 19,
-      "priority_label": "low",
-      "summary": {
-        "en": "urllib3 is a user-friendly HTTP client library for Python. Starting in version 1.24 and prior to 2.6.0, the number of links in the decompression chain was unbounded allowing a malicious server to insert a virtually unlimited number of compression steps leading to high CPU usage and massive memory allocation for the decompressed data. This vulnerability is fixed in 2.6.0.",
-        "es": "urllib3 es una biblioteca cliente HTTP f\u00e1cil de usar para Python. A partir de la versi\u00f3n 1.24 y en versiones anteriores a la 2.6.0, el n\u00famero de enlaces en la cadena de descompresi\u00f3n era ilimitado, lo que permit\u00eda a un servidor malicioso insertar un n\u00famero pr\u00e1cticamente ilimitado de pasos de compresi\u00f3n, lo que provocaba un alto uso de CPU y una asignaci\u00f3n masiva de memoria para los datos descomprimidos. Esta vulnerabilidad se corrigi\u00f3 en la versi\u00f3n 2.6.0."
-      },
-      "references": [
-        "https://github.com/urllib3/urllib3/commit/24d7b67eac89f94e11003424bcf0d8f7b72222a8",
-        "https://github.com/urllib3/urllib3/security/advisories/GHSA-gm62-xv2j-4w53"
-      ]
-    },
-    {
       "id": "pygoat:CVE-2025-66471:urllib3:1.26.9",
       "cve": "CVE-2025-66471",
       "package": "urllib3",
@@ -1450,6 +1427,29 @@
       "references": [
         "https://github.com/urllib3/urllib3/commit/c19571de34c47de3a766541b041637ba5f716ed7",
         "https://github.com/urllib3/urllib3/security/advisories/GHSA-2xpw-w6gg-jr37"
+      ]
+    },
+    {
+      "id": "pygoat:CVE-2025-66418:urllib3:1.26.9",
+      "cve": "CVE-2025-66418",
+      "package": "urllib3",
+      "ecosystem": "PyPI",
+      "installed_version": "1.26.9",
+      "fixed_version": "2.6.0",
+      "app": "pygoat",
+      "cvss": 7.5,
+      "epss": 0.00731,
+      "in_kev": false,
+      "kev_date_added": null,
+      "priority_score": 19,
+      "priority_label": "low",
+      "summary": {
+        "en": "urllib3 is a user-friendly HTTP client library for Python. Starting in version 1.24 and prior to 2.6.0, the number of links in the decompression chain was unbounded allowing a malicious server to insert a virtually unlimited number of compression steps leading to high CPU usage and massive memory allocation for the decompressed data. This vulnerability is fixed in 2.6.0.",
+        "es": "urllib3 es una biblioteca cliente HTTP f\u00e1cil de usar para Python. A partir de la versi\u00f3n 1.24 y en versiones anteriores a la 2.6.0, el n\u00famero de enlaces en la cadena de descompresi\u00f3n era ilimitado, lo que permit\u00eda a un servidor malicioso insertar un n\u00famero pr\u00e1cticamente ilimitado de pasos de compresi\u00f3n, lo que provocaba un alto uso de CPU y una asignaci\u00f3n masiva de memoria para los datos descomprimidos. Esta vulnerabilidad se corrigi\u00f3 en la versi\u00f3n 2.6.0."
+      },
+      "references": [
+        "https://github.com/urllib3/urllib3/commit/24d7b67eac89f94e11003424bcf0d8f7b72222a8",
+        "https://github.com/urllib3/urllib3/security/advisories/GHSA-gm62-xv2j-4w53"
       ]
     },
     {
@@ -1500,6 +1500,40 @@
         "https://lists.debian.org/debian-lts-announce/2023/05/msg00017.html",
         "https://owasp.org/www-community/attacks/Regular_expression_Denial_of_Service_-_ReDoS",
         "https://lists.debian.org/debian-lts-announce/2024/12/msg00022.html"
+      ]
+    },
+    {
+      "id": "pygoat:CVE-2026-32274:black:26.1.0",
+      "cve": "CVE-2026-32274",
+      "package": "black",
+      "ecosystem": "PyPI",
+      "installed_version": "26.1.0",
+      "fixed_version": "26.3.1",
+      "app": "pygoat",
+      "cvss": 7.5,
+      "epss": 0.00691,
+      "in_kev": false,
+      "kev_date_added": null,
+      "priority_score": 19,
+      "priority_label": "low",
+      "summary": {
+        "en": "Black is the uncompromising Python code formatter. Starting in version 24.3.0 and prior to version 26.3.1, Black writes a cache file, the name of which is computed from various formatting options. The value of the --python-cell-magics option was placed in the filename without sanitization, which allowed an attacker who controls the value of this argument to write cache files to arbitrary file system locations. Fixed in Black 26.3.1.",
+        "es": "Black es el formateador de c\u00f3digo Python intransigente. Antes de la versi\u00f3n 26.3.1, Black escribe un archivo de cach\u00e9, cuyo nombre se calcula a partir de varias opciones de formato. El valor de la opci\u00f3n --python-cell-magics se colocaba en el nombre del archivo sin sanitizaci\u00f3n, lo que permit\u00eda a un atacante que controla el valor de este argumento escribir archivos de cach\u00e9 en ubicaciones arbitrarias del sistema de archivos. Corregido en Black 26.3.1."
+      },
+      "references": [
+        "https://access.redhat.com/errata/RHSA-2026:10184",
+        "https://access.redhat.com/errata/RHSA-2026:13545",
+        "https://access.redhat.com/errata/RHSA-2026:13553",
+        "https://access.redhat.com/security/cve/CVE-2026-32274",
+        "https://bugzilla.redhat.com/show_bug.cgi?id=2447111",
+        "https://github.com/psf/black/commit/4937fe6cf241139ddbfc16b0bdbb5b422798909d",
+        "https://github.com/psf/black/commit/ed770ba4dd50c419148a0fca2b43937a7447e1f9",
+        "https://github.com/psf/black/pull/4176",
+        "https://github.com/psf/black/pull/5038",
+        "https://github.com/psf/black/releases/tag/26.3.1",
+        "https://github.com/psf/black/security/advisories/GHSA-3936-cmfr-pm3m",
+        "https://github.com/pypa/advisory-database/tree/main/vulns/black/PYSEC-2026-2121.yaml",
+        "https://security.access.redhat.com/data/csaf/v2/vex/2026/cve-2026-32274.json"
       ]
     },
     {
@@ -1691,40 +1725,6 @@
       ]
     },
     {
-      "id": "pygoat:CVE-2026-32274:black:26.1.0",
-      "cve": "CVE-2026-32274",
-      "package": "black",
-      "ecosystem": "PyPI",
-      "installed_version": "26.1.0",
-      "fixed_version": "26.3.1",
-      "app": "pygoat",
-      "cvss": 7.5,
-      "epss": 0.00646,
-      "in_kev": false,
-      "kev_date_added": null,
-      "priority_score": 19,
-      "priority_label": "low",
-      "summary": {
-        "en": "Black is the uncompromising Python code formatter. Starting in version 24.3.0 and prior to version 26.3.1, Black writes a cache file, the name of which is computed from various formatting options. The value of the --python-cell-magics option was placed in the filename without sanitization, which allowed an attacker who controls the value of this argument to write cache files to arbitrary file system locations. Fixed in Black 26.3.1.",
-        "es": "Black es el formateador de c\u00f3digo Python intransigente. Antes de la versi\u00f3n 26.3.1, Black escribe un archivo de cach\u00e9, cuyo nombre se calcula a partir de varias opciones de formato. El valor de la opci\u00f3n --python-cell-magics se colocaba en el nombre del archivo sin sanitizaci\u00f3n, lo que permit\u00eda a un atacante que controla el valor de este argumento escribir archivos de cach\u00e9 en ubicaciones arbitrarias del sistema de archivos. Corregido en Black 26.3.1."
-      },
-      "references": [
-        "https://access.redhat.com/errata/RHSA-2026:10184",
-        "https://access.redhat.com/errata/RHSA-2026:13545",
-        "https://access.redhat.com/errata/RHSA-2026:13553",
-        "https://access.redhat.com/security/cve/CVE-2026-32274",
-        "https://bugzilla.redhat.com/show_bug.cgi?id=2447111",
-        "https://github.com/psf/black/commit/4937fe6cf241139ddbfc16b0bdbb5b422798909d",
-        "https://github.com/psf/black/commit/ed770ba4dd50c419148a0fca2b43937a7447e1f9",
-        "https://github.com/psf/black/pull/4176",
-        "https://github.com/psf/black/pull/5038",
-        "https://github.com/psf/black/releases/tag/26.3.1",
-        "https://github.com/psf/black/security/advisories/GHSA-3936-cmfr-pm3m",
-        "https://github.com/pypa/advisory-database/tree/main/vulns/black/PYSEC-2026-2121.yaml",
-        "https://security.access.redhat.com/data/csaf/v2/vex/2026/cve-2026-32274.json"
-      ]
-    },
-    {
       "id": "pygoat:CVE-2024-39329:django:4.2",
       "cve": "CVE-2024-39329",
       "package": "django",
@@ -1750,8 +1750,8 @@
       ]
     },
     {
-      "id": "pygoat:CVE-2026-112402:pillow:12.1.0",
-      "cve": "CVE-2026-112402",
+      "id": "pygoat:CVE-2026-112405:pillow:12.1.0",
+      "cve": "CVE-2026-112405",
       "package": "pillow",
       "ecosystem": "PyPI",
       "installed_version": "12.1.0",
@@ -1764,35 +1764,12 @@
       "priority_score": 19,
       "priority_label": "low",
       "summary": {
-        "en": "Pillow is a Python imaging library. Prior to 13.0.0, Pillow can double free image memory when ImagingScaleAffine encounters a selective allocation failure. The affected fast path handles Transform.EXTENT or pure scale-and-translate Transform.AFFINE operations with the default NEAREST resampling. The output image allocation must succeed while the additional per-column lookup allocation fails, after which the error path deletes image storage that later cleanup releases again. An attacker who can drive such a large Image.transform() operation under memory pressure may trigger the failure. This can crash the process and may corrupt memory. This issue is fixed in version 13.0.0."
+        "en": "Pillow is a Python imaging library. From 12.0.0 until 13.0.0, Pillow's Image.merge() can dereference a null image8 plane. Validation skips the first input band, allowing a 32-bit integer or floating-point image backed by image32 storage to be merged as a narrower multiband image. A crafted IPTC file can reach this path when an application opens and loads it, or a caller can invoke Image.merge() directly with such a first band. This causes a native process crash. This issue is fixed in version 13.0.0."
       },
       "references": [
-        "https://github.com/python-pillow/Pillow/commit/aafa6c75f7cdabb9f409a8aac7c780bea31d08d9",
+        "https://github.com/python-pillow/Pillow/commit/b6ee66e8b2c2c0932bdf65f963268d9f2927ef86",
         "https://github.com/python-pillow/Pillow/releases/tag/13.0.0",
-        "https://github.com/python-pillow/Pillow/security/advisories/GHSA-7mwm-ghpf-9vrm"
-      ]
-    },
-    {
-      "id": "pygoat:CVE-2026-112894:pillow:12.1.0",
-      "cve": "CVE-2026-112894",
-      "package": "pillow",
-      "ecosystem": "PyPI",
-      "installed_version": "12.1.0",
-      "fixed_version": "13.0.0",
-      "app": "pygoat",
-      "cvss": 7.5,
-      "epss": 0.00594,
-      "in_kev": false,
-      "kev_date_added": null,
-      "priority_score": 19,
-      "priority_label": "low",
-      "summary": {
-        "en": "Pillow is a Python imaging library. From 5.1.0 until 13.0.0, Pillow takes quadratic time to reserve PDF object identifiers when saving many frames with save_all enabled. PdfParser.next_object_id() repeatedly rebuilds and scans all previously reserved identifiers for every object. An attacker can supply a multi-frame image, including a small APNG with a large declared frame count, to an application that converts it to a multipage PDF. This can consume excessive CPU and deny service. This issue is fixed in version 13.0.0."
-      },
-      "references": [
-        "https://github.com/python-pillow/Pillow/commit/f6a852555f1a1bdff7781abf25f1a3b8bd6ce6cb",
-        "https://github.com/python-pillow/Pillow/releases/tag/13.0.0",
-        "https://github.com/python-pillow/Pillow/security/advisories/GHSA-jg86-v3jv-hrpm"
+        "https://github.com/python-pillow/Pillow/security/advisories/GHSA-cp9v-662q-vvx9"
       ]
     },
     {
@@ -1842,8 +1819,8 @@
       ]
     },
     {
-      "id": "pygoat:CVE-2026-112405:pillow:12.1.0",
-      "cve": "CVE-2026-112405",
+      "id": "pygoat:CVE-2026-112402:pillow:12.1.0",
+      "cve": "CVE-2026-112402",
       "package": "pillow",
       "ecosystem": "PyPI",
       "installed_version": "12.1.0",
@@ -1856,12 +1833,35 @@
       "priority_score": 19,
       "priority_label": "low",
       "summary": {
-        "en": "Pillow is a Python imaging library. From 12.0.0 until 13.0.0, Pillow's Image.merge() can dereference a null image8 plane. Validation skips the first input band, allowing a 32-bit integer or floating-point image backed by image32 storage to be merged as a narrower multiband image. A crafted IPTC file can reach this path when an application opens and loads it, or a caller can invoke Image.merge() directly with such a first band. This causes a native process crash. This issue is fixed in version 13.0.0."
+        "en": "Pillow is a Python imaging library. Prior to 13.0.0, Pillow can double free image memory when ImagingScaleAffine encounters a selective allocation failure. The affected fast path handles Transform.EXTENT or pure scale-and-translate Transform.AFFINE operations with the default NEAREST resampling. The output image allocation must succeed while the additional per-column lookup allocation fails, after which the error path deletes image storage that later cleanup releases again. An attacker who can drive such a large Image.transform() operation under memory pressure may trigger the failure. This can crash the process and may corrupt memory. This issue is fixed in version 13.0.0."
       },
       "references": [
-        "https://github.com/python-pillow/Pillow/commit/b6ee66e8b2c2c0932bdf65f963268d9f2927ef86",
+        "https://github.com/python-pillow/Pillow/commit/aafa6c75f7cdabb9f409a8aac7c780bea31d08d9",
         "https://github.com/python-pillow/Pillow/releases/tag/13.0.0",
-        "https://github.com/python-pillow/Pillow/security/advisories/GHSA-cp9v-662q-vvx9"
+        "https://github.com/python-pillow/Pillow/security/advisories/GHSA-7mwm-ghpf-9vrm"
+      ]
+    },
+    {
+      "id": "pygoat:CVE-2026-112894:pillow:12.1.0",
+      "cve": "CVE-2026-112894",
+      "package": "pillow",
+      "ecosystem": "PyPI",
+      "installed_version": "12.1.0",
+      "fixed_version": "13.0.0",
+      "app": "pygoat",
+      "cvss": 7.5,
+      "epss": 0.00594,
+      "in_kev": false,
+      "kev_date_added": null,
+      "priority_score": 19,
+      "priority_label": "low",
+      "summary": {
+        "en": "Pillow is a Python imaging library. From 5.1.0 until 13.0.0, Pillow takes quadratic time to reserve PDF object identifiers when saving many frames with save_all enabled. PdfParser.next_object_id() repeatedly rebuilds and scans all previously reserved identifiers for every object. An attacker can supply a multi-frame image, including a small APNG with a large declared frame count, to an application that converts it to a multipage PDF. This can consume excessive CPU and deny service. This issue is fixed in version 13.0.0."
+      },
+      "references": [
+        "https://github.com/python-pillow/Pillow/commit/f6a852555f1a1bdff7781abf25f1a3b8bd6ce6cb",
+        "https://github.com/python-pillow/Pillow/releases/tag/13.0.0",
+        "https://github.com/python-pillow/Pillow/security/advisories/GHSA-jg86-v3jv-hrpm"
       ]
     },
     {
@@ -2573,53 +2573,6 @@
       ]
     },
     {
-      "id": "pygoat:CVE-2026-25990:pillow:12.1.0",
-      "cve": "CVE-2026-25990",
-      "package": "pillow",
-      "ecosystem": "PyPI",
-      "installed_version": "12.1.0",
-      "fixed_version": "12.1.1",
-      "app": "pygoat",
-      "cvss": 7.5,
-      "epss": 0.00409,
-      "in_kev": false,
-      "kev_date_added": null,
-      "priority_score": 19,
-      "priority_label": "low",
-      "summary": {
-        "en": "Pillow is a Python imaging library. From 10.3.0 to before 12.1.1, an out-of-bounds write may be triggered when loading a specially crafted PSD image. This vulnerability is fixed in 12.1.1.",
-        "es": "Pillow es una librer\u00eda de procesamiento de im\u00e1genes de Python. Desde la versi\u00f3n 10.3.0 hasta antes de la 12.1.1, una escritura fuera de l\u00edmites puede ser activada al cargar una imagen PSD especialmente manipulada. Esta vulnerabilidad est\u00e1 corregida en la versi\u00f3n 12.1.1."
-      },
-      "references": [
-        "https://github.com/python-pillow/Pillow/commit/9000313cc5d4a31bdcdd6d7f0781101abab553aa",
-        "https://github.com/python-pillow/Pillow/security/advisories/GHSA-cfh3-3jmp-rvhc",
-        "http://www.openwall.com/lists/oss-security/2026/02/12/1",
-        "https://access.redhat.com/errata/RHSA-2026:10184",
-        "https://access.redhat.com/errata/RHSA-2026:14873",
-        "https://access.redhat.com/errata/RHSA-2026:14874",
-        "https://access.redhat.com/errata/RHSA-2026:16174",
-        "https://access.redhat.com/errata/RHSA-2026:19712",
-        "https://access.redhat.com/errata/RHSA-2026:28385",
-        "https://access.redhat.com/errata/RHSA-2026:3461",
-        "https://access.redhat.com/errata/RHSA-2026:3462",
-        "https://access.redhat.com/errata/RHSA-2026:4128",
-        "https://access.redhat.com/errata/RHSA-2026:42644",
-        "https://access.redhat.com/errata/RHSA-2026:4942",
-        "https://access.redhat.com/errata/RHSA-2026:5168",
-        "https://access.redhat.com/errata/RHSA-2026:5665",
-        "https://access.redhat.com/errata/RHSA-2026:6277",
-        "https://access.redhat.com/errata/RHSA-2026:6278",
-        "https://access.redhat.com/errata/RHSA-2026:6308",
-        "https://access.redhat.com/errata/RHSA-2026:6309",
-        "https://access.redhat.com/errata/RHSA-2026:6497",
-        "https://access.redhat.com/errata/RHSA-2026:6567",
-        "https://access.redhat.com/errata/RHSA-2026:6568",
-        "https://access.redhat.com/security/cve/CVE-2026-25990",
-        "https://bugzilla.redhat.com/show_bug.cgi?id=2439170",
-        "https://security.access.redhat.com/data/csaf/v2/vex/2026/cve-2026-25990.json"
-      ]
-    },
-    {
       "id": "pygoat:CVE-2026-112391:pillow:12.1.0",
       "cve": "CVE-2026-112391",
       "package": "pillow",
@@ -2686,6 +2639,53 @@
         "https://github.com/python-pillow/Pillow/commit/68a3fe957d8a4d552e8c69d96066d749f0614c7e",
         "https://github.com/python-pillow/Pillow/releases/tag/13.0.0",
         "https://github.com/python-pillow/Pillow/security/advisories/GHSA-fc9g-5qg7-mf45"
+      ]
+    },
+    {
+      "id": "pygoat:CVE-2026-25990:pillow:12.1.0",
+      "cve": "CVE-2026-25990",
+      "package": "pillow",
+      "ecosystem": "PyPI",
+      "installed_version": "12.1.0",
+      "fixed_version": "12.1.1",
+      "app": "pygoat",
+      "cvss": 7.5,
+      "epss": 0.00403,
+      "in_kev": false,
+      "kev_date_added": null,
+      "priority_score": 19,
+      "priority_label": "low",
+      "summary": {
+        "en": "Pillow is a Python imaging library. From 10.3.0 to before 12.1.1, an out-of-bounds write may be triggered when loading a specially crafted PSD image. This vulnerability is fixed in 12.1.1.",
+        "es": "Pillow es una librer\u00eda de procesamiento de im\u00e1genes de Python. Desde la versi\u00f3n 10.3.0 hasta antes de la 12.1.1, una escritura fuera de l\u00edmites puede ser activada al cargar una imagen PSD especialmente manipulada. Esta vulnerabilidad est\u00e1 corregida en la versi\u00f3n 12.1.1."
+      },
+      "references": [
+        "https://github.com/python-pillow/Pillow/commit/9000313cc5d4a31bdcdd6d7f0781101abab553aa",
+        "https://github.com/python-pillow/Pillow/security/advisories/GHSA-cfh3-3jmp-rvhc",
+        "http://www.openwall.com/lists/oss-security/2026/02/12/1",
+        "https://access.redhat.com/errata/RHSA-2026:10184",
+        "https://access.redhat.com/errata/RHSA-2026:14873",
+        "https://access.redhat.com/errata/RHSA-2026:14874",
+        "https://access.redhat.com/errata/RHSA-2026:16174",
+        "https://access.redhat.com/errata/RHSA-2026:19712",
+        "https://access.redhat.com/errata/RHSA-2026:28385",
+        "https://access.redhat.com/errata/RHSA-2026:3461",
+        "https://access.redhat.com/errata/RHSA-2026:3462",
+        "https://access.redhat.com/errata/RHSA-2026:4128",
+        "https://access.redhat.com/errata/RHSA-2026:42644",
+        "https://access.redhat.com/errata/RHSA-2026:4942",
+        "https://access.redhat.com/errata/RHSA-2026:5168",
+        "https://access.redhat.com/errata/RHSA-2026:5665",
+        "https://access.redhat.com/errata/RHSA-2026:6277",
+        "https://access.redhat.com/errata/RHSA-2026:6278",
+        "https://access.redhat.com/errata/RHSA-2026:6308",
+        "https://access.redhat.com/errata/RHSA-2026:6309",
+        "https://access.redhat.com/errata/RHSA-2026:6497",
+        "https://access.redhat.com/errata/RHSA-2026:6567",
+        "https://access.redhat.com/errata/RHSA-2026:6568",
+        "https://access.redhat.com/security/cve/CVE-2026-25990",
+        "https://bugzilla.redhat.com/show_bug.cgi?id=2439170",
+        "https://security.access.redhat.com/data/csaf/v2/vex/2026/cve-2026-25990.json"
       ]
     },
     {
@@ -3086,31 +3086,6 @@
       ]
     },
     {
-      "id": "pygoat:CVE-2026-59200:pillow:12.1.0",
-      "cve": "CVE-2026-59200",
-      "package": "pillow",
-      "ecosystem": "PyPI",
-      "installed_version": "12.1.0",
-      "fixed_version": "12.3.0",
-      "app": "pygoat",
-      "cvss": 7.5,
-      "epss": 0.00385,
-      "in_kev": false,
-      "kev_date_added": null,
-      "priority_score": 19,
-      "priority_label": "low",
-      "summary": {
-        "en": "Pillow is a Python imaging library. From 5.1.0 until 12.3.0, PdfParser.PdfStream.decode() in PIL/PdfParser.py calls zlib.decompress() with bufsize set to the PDF stream Length field without bounding the decompressed output size, allowing a crafted FlateDecode PDF stream to exhaust memory from a small file. This issue is fixed in version 12.3.0.",
-        "es": "Pillow es una biblioteca de im\u00e1genes de Python. Desde la versi\u00f3n 5.1.0 hasta la 12.3.0, PdfParser.PdfStream.decode() en PIL/PdfParser.py llama a zlib.decompress() con bufsize establecido al campo Length del flujo PDF sin limitar el tama\u00f1o de salida descomprimido, permitiendo que un flujo PDF FlateDecode manipulado agote la memoria desde un archivo peque\u00f1o. Este problema est\u00e1 solucionado en la versi\u00f3n 12.3.0."
-      },
-      "references": [
-        "https://github.com/python-pillow/Pillow/commit/f7a31ea75e460e108c37126da1f47812f21f6b09",
-        "https://github.com/python-pillow/Pillow/pull/9718",
-        "https://github.com/python-pillow/Pillow/releases/tag/12.3.0",
-        "https://github.com/python-pillow/Pillow/security/advisories/GHSA-jjj6-mw9f-p565"
-      ]
-    },
-    {
       "id": "pygoat:CVE-2026-59205:pillow:12.1.0",
       "cve": "CVE-2026-59205",
       "package": "pillow",
@@ -3133,6 +3108,31 @@
         "https://github.com/python-pillow/Pillow/pull/9715",
         "https://github.com/python-pillow/Pillow/releases/tag/12.3.0",
         "https://github.com/python-pillow/Pillow/security/advisories/GHSA-9hw9-ch79-4vh6"
+      ]
+    },
+    {
+      "id": "pygoat:CVE-2026-59200:pillow:12.1.0",
+      "cve": "CVE-2026-59200",
+      "package": "pillow",
+      "ecosystem": "PyPI",
+      "installed_version": "12.1.0",
+      "fixed_version": "12.3.0",
+      "app": "pygoat",
+      "cvss": 7.5,
+      "epss": 0.00385,
+      "in_kev": false,
+      "kev_date_added": null,
+      "priority_score": 19,
+      "priority_label": "low",
+      "summary": {
+        "en": "Pillow is a Python imaging library. From 5.1.0 until 12.3.0, PdfParser.PdfStream.decode() in PIL/PdfParser.py calls zlib.decompress() with bufsize set to the PDF stream Length field without bounding the decompressed output size, allowing a crafted FlateDecode PDF stream to exhaust memory from a small file. This issue is fixed in version 12.3.0.",
+        "es": "Pillow es una biblioteca de im\u00e1genes de Python. Desde la versi\u00f3n 5.1.0 hasta la 12.3.0, PdfParser.PdfStream.decode() en PIL/PdfParser.py llama a zlib.decompress() con bufsize establecido al campo Length del flujo PDF sin limitar el tama\u00f1o de salida descomprimido, permitiendo que un flujo PDF FlateDecode manipulado agote la memoria desde un archivo peque\u00f1o. Este problema est\u00e1 solucionado en la versi\u00f3n 12.3.0."
+      },
+      "references": [
+        "https://github.com/python-pillow/Pillow/commit/f7a31ea75e460e108c37126da1f47812f21f6b09",
+        "https://github.com/python-pillow/Pillow/pull/9718",
+        "https://github.com/python-pillow/Pillow/releases/tag/12.3.0",
+        "https://github.com/python-pillow/Pillow/security/advisories/GHSA-jjj6-mw9f-p565"
       ]
     },
     {
@@ -3257,30 +3257,6 @@
       ]
     },
     {
-      "id": "pygoat:CVE-2026-96637:pillow:12.1.0",
-      "cve": "CVE-2026-96637",
-      "package": "pillow",
-      "ecosystem": "PyPI",
-      "installed_version": "12.1.0",
-      "fixed_version": "13.0.0",
-      "app": "pygoat",
-      "cvss": 6.5,
-      "epss": 0.00373,
-      "in_kev": false,
-      "kev_date_added": null,
-      "priority_score": 17,
-      "priority_label": "low",
-      "summary": {
-        "en": "Pillow is a Python imaging library. Prior to 13.0.0, SpiderImageFile.seek() in src/PIL/SpiderImagePlugin.py reparses a later SPIDER stack frame and replaces self._size without rerunning Image._decompression_bomb_check(). A tiny file can use a safe first frame to pass Image.open() and then declare very large dimensions in a later mode F frame. Loading that frame allocates approximately four bytes per attacker-declared pixel and can consume multiple gigabytes of memory. This issue is fixed in version 13.0.0."
-      },
-      "references": [
-        "https://github.com/python-pillow/Pillow/commit/7cb0e02389d8aac2a60896a490f572db0b07b841",
-        "https://github.com/python-pillow/Pillow/pull/10076",
-        "https://github.com/python-pillow/Pillow/releases/tag/13.0.0",
-        "https://github.com/python-pillow/Pillow/security/advisories/GHSA-g842-9rc4-69pw"
-      ]
-    },
-    {
       "id": "pygoat:CVE-2026-96643:pillow:12.1.0",
       "cve": "CVE-2026-96643",
       "package": "pillow",
@@ -3302,6 +3278,30 @@
         "https://github.com/python-pillow/Pillow/pull/10073",
         "https://github.com/python-pillow/Pillow/releases/tag/13.0.0",
         "https://github.com/python-pillow/Pillow/security/advisories/GHSA-g4qv-2jxx-769h"
+      ]
+    },
+    {
+      "id": "pygoat:CVE-2026-96637:pillow:12.1.0",
+      "cve": "CVE-2026-96637",
+      "package": "pillow",
+      "ecosystem": "PyPI",
+      "installed_version": "12.1.0",
+      "fixed_version": "13.0.0",
+      "app": "pygoat",
+      "cvss": 6.5,
+      "epss": 0.00373,
+      "in_kev": false,
+      "kev_date_added": null,
+      "priority_score": 17,
+      "priority_label": "low",
+      "summary": {
+        "en": "Pillow is a Python imaging library. Prior to 13.0.0, SpiderImageFile.seek() in src/PIL/SpiderImagePlugin.py reparses a later SPIDER stack frame and replaces self._size without rerunning Image._decompression_bomb_check(). A tiny file can use a safe first frame to pass Image.open() and then declare very large dimensions in a later mode F frame. Loading that frame allocates approximately four bytes per attacker-declared pixel and can consume multiple gigabytes of memory. This issue is fixed in version 13.0.0."
+      },
+      "references": [
+        "https://github.com/python-pillow/Pillow/commit/7cb0e02389d8aac2a60896a490f572db0b07b841",
+        "https://github.com/python-pillow/Pillow/pull/10076",
+        "https://github.com/python-pillow/Pillow/releases/tag/13.0.0",
+        "https://github.com/python-pillow/Pillow/security/advisories/GHSA-g842-9rc4-69pw"
       ]
     },
     {
@@ -3514,6 +3514,62 @@
       ]
     },
     {
+      "id": "pygoat:CVE-2026-32597:pyjwt:2.4.0",
+      "cve": "CVE-2026-32597",
+      "package": "pyjwt",
+      "ecosystem": "PyPI",
+      "installed_version": "2.4.0",
+      "fixed_version": "2.12.0",
+      "app": "pygoat",
+      "cvss": 7.5,
+      "epss": 0.00299,
+      "in_kev": false,
+      "kev_date_added": null,
+      "priority_score": 19,
+      "priority_label": "low",
+      "summary": {
+        "en": "PyJWT is a JSON Web Token implementation in Python. Prior to 2.12.0, PyJWT does not validate the crit (Critical) Header Parameter defined in RFC 7515 \u00a74.1.11. When a JWS token contains a crit array listing extensions that PyJWT does not understand, the library accepts the token instead of rejecting it. This violates the MUST requirement in the RFC. This vulnerability is fixed in 2.12.0.",
+        "es": "PyJWT es una implementaci\u00f3n de JSON Web Token en Python. Antes de la 2.12.0, PyJWT no valida el par\u00e1metro de encabezado crit (Cr\u00edtico) definido en la RFC 7515 \u00a74.1.11. Cuando un token JWS contiene un array crit que lista extensiones que PyJWT no entiende, la biblioteca acepta el token en lugar de rechazarlo. Esto viola el requisito MUST en la RFC. Esta vulnerabilidad est\u00e1 corregida en la 2.12.0."
+      },
+      "references": [
+        "https://github.com/jpadilla/pyjwt/security/advisories/GHSA-752w-5fwx-jx9f",
+        "https://lists.debian.org/debian-lts-announce/2026/05/msg00008.html",
+        "https://access.redhat.com/errata/RHSA-2026:10140",
+        "https://access.redhat.com/errata/RHSA-2026:10141",
+        "https://access.redhat.com/errata/RHSA-2026:10184",
+        "https://access.redhat.com/errata/RHSA-2026:12176",
+        "https://access.redhat.com/errata/RHSA-2026:13508",
+        "https://access.redhat.com/errata/RHSA-2026:13512",
+        "https://access.redhat.com/errata/RHSA-2026:13545",
+        "https://access.redhat.com/errata/RHSA-2026:13553",
+        "https://access.redhat.com/errata/RHSA-2026:13672",
+        "https://access.redhat.com/errata/RHSA-2026:13916",
+        "https://access.redhat.com/errata/RHSA-2026:17083",
+        "https://access.redhat.com/errata/RHSA-2026:19138",
+        "https://access.redhat.com/errata/RHSA-2026:19355",
+        "https://access.redhat.com/errata/RHSA-2026:19375",
+        "https://access.redhat.com/errata/RHSA-2026:19712",
+        "https://access.redhat.com/errata/RHSA-2026:21431",
+        "https://access.redhat.com/errata/RHSA-2026:21517",
+        "https://access.redhat.com/errata/RHSA-2026:22330",
+        "https://access.redhat.com/errata/RHSA-2026:24977",
+        "https://access.redhat.com/errata/RHSA-2026:26226",
+        "https://access.redhat.com/errata/RHSA-2026:37275",
+        "https://access.redhat.com/errata/RHSA-2026:42644",
+        "https://access.redhat.com/errata/RHSA-2026:6568",
+        "https://access.redhat.com/errata/RHSA-2026:6720",
+        "https://access.redhat.com/errata/RHSA-2026:6912",
+        "https://access.redhat.com/errata/RHSA-2026:6926",
+        "https://access.redhat.com/errata/RHSA-2026:8437",
+        "https://access.redhat.com/errata/RHSA-2026:8746",
+        "https://access.redhat.com/errata/RHSA-2026:8747",
+        "https://access.redhat.com/errata/RHSA-2026:8748",
+        "https://access.redhat.com/security/cve/CVE-2026-32597",
+        "https://bugzilla.redhat.com/show_bug.cgi?id=2447194",
+        "https://security.access.redhat.com/data/csaf/v2/vex/2026/cve-2026-32597.json"
+      ]
+    },
+    {
       "id": "pygoat:CVE-2026-101917:pyjwt:2.4.0",
       "cve": "CVE-2026-101917",
       "package": "pyjwt",
@@ -3603,62 +3659,6 @@
         "https://github.com/jpadilla/pyjwt/commit/5fde08a6cf906aa7698de2d6391d88b73006b17b",
         "https://github.com/jpadilla/pyjwt/releases/tag/2.15.0",
         "https://github.com/jpadilla/pyjwt/security/advisories/GHSA-42vr-xj54-vc7v"
-      ]
-    },
-    {
-      "id": "pygoat:CVE-2026-32597:pyjwt:2.4.0",
-      "cve": "CVE-2026-32597",
-      "package": "pyjwt",
-      "ecosystem": "PyPI",
-      "installed_version": "2.4.0",
-      "fixed_version": "2.12.0",
-      "app": "pygoat",
-      "cvss": 7.5,
-      "epss": 0.00279,
-      "in_kev": false,
-      "kev_date_added": null,
-      "priority_score": 19,
-      "priority_label": "low",
-      "summary": {
-        "en": "PyJWT is a JSON Web Token implementation in Python. Prior to 2.12.0, PyJWT does not validate the crit (Critical) Header Parameter defined in RFC 7515 \u00a74.1.11. When a JWS token contains a crit array listing extensions that PyJWT does not understand, the library accepts the token instead of rejecting it. This violates the MUST requirement in the RFC. This vulnerability is fixed in 2.12.0.",
-        "es": "PyJWT es una implementaci\u00f3n de JSON Web Token en Python. Antes de la 2.12.0, PyJWT no valida el par\u00e1metro de encabezado crit (Cr\u00edtico) definido en la RFC 7515 \u00a74.1.11. Cuando un token JWS contiene un array crit que lista extensiones que PyJWT no entiende, la biblioteca acepta el token en lugar de rechazarlo. Esto viola el requisito MUST en la RFC. Esta vulnerabilidad est\u00e1 corregida en la 2.12.0."
-      },
-      "references": [
-        "https://github.com/jpadilla/pyjwt/security/advisories/GHSA-752w-5fwx-jx9f",
-        "https://lists.debian.org/debian-lts-announce/2026/05/msg00008.html",
-        "https://access.redhat.com/errata/RHSA-2026:10140",
-        "https://access.redhat.com/errata/RHSA-2026:10141",
-        "https://access.redhat.com/errata/RHSA-2026:10184",
-        "https://access.redhat.com/errata/RHSA-2026:12176",
-        "https://access.redhat.com/errata/RHSA-2026:13508",
-        "https://access.redhat.com/errata/RHSA-2026:13512",
-        "https://access.redhat.com/errata/RHSA-2026:13545",
-        "https://access.redhat.com/errata/RHSA-2026:13553",
-        "https://access.redhat.com/errata/RHSA-2026:13672",
-        "https://access.redhat.com/errata/RHSA-2026:13916",
-        "https://access.redhat.com/errata/RHSA-2026:17083",
-        "https://access.redhat.com/errata/RHSA-2026:19138",
-        "https://access.redhat.com/errata/RHSA-2026:19355",
-        "https://access.redhat.com/errata/RHSA-2026:19375",
-        "https://access.redhat.com/errata/RHSA-2026:19712",
-        "https://access.redhat.com/errata/RHSA-2026:21431",
-        "https://access.redhat.com/errata/RHSA-2026:21517",
-        "https://access.redhat.com/errata/RHSA-2026:22330",
-        "https://access.redhat.com/errata/RHSA-2026:24977",
-        "https://access.redhat.com/errata/RHSA-2026:26226",
-        "https://access.redhat.com/errata/RHSA-2026:37275",
-        "https://access.redhat.com/errata/RHSA-2026:42644",
-        "https://access.redhat.com/errata/RHSA-2026:6568",
-        "https://access.redhat.com/errata/RHSA-2026:6720",
-        "https://access.redhat.com/errata/RHSA-2026:6912",
-        "https://access.redhat.com/errata/RHSA-2026:6926",
-        "https://access.redhat.com/errata/RHSA-2026:8437",
-        "https://access.redhat.com/errata/RHSA-2026:8746",
-        "https://access.redhat.com/errata/RHSA-2026:8747",
-        "https://access.redhat.com/errata/RHSA-2026:8748",
-        "https://access.redhat.com/security/cve/CVE-2026-32597",
-        "https://bugzilla.redhat.com/show_bug.cgi?id=2447194",
-        "https://security.access.redhat.com/data/csaf/v2/vex/2026/cve-2026-32597.json"
       ]
     },
     {
@@ -6431,6 +6431,31 @@
       ]
     },
     {
+      "id": "nodejs-goof:CVE-2022-21680:marked:0.3.5",
+      "cve": "CVE-2022-21680",
+      "package": "marked",
+      "ecosystem": "npm",
+      "installed_version": "0.3.5",
+      "fixed_version": "4.0.10",
+      "app": "nodejs-goof",
+      "cvss": 7.5,
+      "epss": 0.02983,
+      "in_kev": false,
+      "kev_date_added": null,
+      "priority_score": 21,
+      "priority_label": "medium",
+      "summary": {
+        "en": "Marked is a markdown parser and compiler. Prior to version 4.0.10, the regular expression `block.def` may cause catastrophic backtracking against some strings and lead to a regular expression denial of service (ReDoS). Anyone who runs untrusted markdown through a vulnerable version of marked and does not use a worker with a time limit may be affected. This issue is patched in version 4.0.10. As a workaround, avoid running untrusted markdown through marked or run marked on a worker thread and set a reasonable time limit to prevent draining resources.",
+        "es": "Marked es un analizador y compilador de markdown. En versiones anteriores a 4.0.10, la expresi\u00f3n regular \"block.def\" pod\u00eda causar un retroceso catastr\u00f3fico contra algunas cadenas y conllevar a una denegaci\u00f3n de servicio por expresi\u00f3n regular (ReDoS). Cualquiera que ejecute markdown no confiable mediante una versi\u00f3n vulnerable de marked y no use un trabajador con l\u00edmite de tiempo puede verse afectado. Este problema est\u00e1 parcheado en la versi\u00f3n 4.0.10. Como medida de mitigaci\u00f3n, evite ejecutar markdown no confiable mediante marked o ejecute marked en un hilo de trabajo y establezca un l\u00edmite de tiempo razonable para evitar el agotamiento de los recursos"
+      },
+      "references": [
+        "https://github.com/markedjs/marked/commit/c4a3ccd344b6929afa8a1d50ac54a721e57012c0",
+        "https://github.com/markedjs/marked/releases/tag/v4.0.10",
+        "https://github.com/markedjs/marked/security/advisories/GHSA-rrrm-qjm4-v8hf",
+        "https://lists.fedoraproject.org/archives/list/package-announce%40lists.fedoraproject.org/message/AIXDMC3CSHYW3YWVSQOXAWLUYQHAO5UX/"
+      ]
+    },
+    {
       "id": "nodejs-goof:CVE-2026-4800:lodash:4.17.10",
       "cve": "CVE-2026-4800",
       "package": "lodash",
@@ -6734,6 +6759,30 @@
       ]
     },
     {
+      "id": "nodejs-goof:CVE-2022-21681:marked:0.3.5",
+      "cve": "CVE-2022-21681",
+      "package": "marked",
+      "ecosystem": "npm",
+      "installed_version": "0.3.5",
+      "fixed_version": "4.0.10",
+      "app": "nodejs-goof",
+      "cvss": 7.5,
+      "epss": 0.02893,
+      "in_kev": false,
+      "kev_date_added": null,
+      "priority_score": 21,
+      "priority_label": "medium",
+      "summary": {
+        "en": "Marked is a markdown parser and compiler. Prior to version 4.0.10, the regular expression `inline.reflinkSearch` may cause catastrophic backtracking against some strings and lead to a denial of service (DoS). Anyone who runs untrusted markdown through a vulnerable version of marked and does not use a worker with a time limit may be affected. This issue is patched in version 4.0.10. As a workaround, avoid running untrusted markdown through marked or run marked on a worker thread and set a reasonable time limit to prevent draining resources.",
+        "es": "Marked es un analizador y compilador de markdown. En versiones anteriores a 4.0.10, la expresi\u00f3n regular \"inline.reflinkSearch\" pod\u00eda causar un retroceso catastr\u00f3fico contra algunas cadenas y conllevar a una denegaci\u00f3n de servicio (DoS). Cualquiera que ejecute markdown no confiable mediante una versi\u00f3n vulnerable de marked y no use un trabajador con l\u00edmite de tiempo puede verse afectado. Este problema est\u00e1 parcheado en la versi\u00f3n 4.0.10. Como medida de mitigaci\u00f3n, evite ejecutar markdown no confiable mediante marked o ejecute marked en un hilo de trabajo y establezca un l\u00edmite de tiempo razonable para evitar el agotamiento de los recursos"
+      },
+      "references": [
+        "https://github.com/markedjs/marked/commit/8f806573a3f6c6b7a39b8cdb66ab5ebb8d55a5f5",
+        "https://github.com/markedjs/marked/security/advisories/GHSA-5v2h-r2cx-5xgj",
+        "https://lists.fedoraproject.org/archives/list/package-announce%40lists.fedoraproject.org/message/AIXDMC3CSHYW3YWVSQOXAWLUYQHAO5UX/"
+      ]
+    },
+    {
       "id": "nodejs-goof:CVE-2020-7610:bson:0.4.23",
       "cve": "CVE-2020-7610",
       "package": "bson",
@@ -6753,31 +6802,6 @@
       },
       "references": [
         "https://snyk.io/vuln/SNYK-JS-BSON-561052"
-      ]
-    },
-    {
-      "id": "nodejs-goof:CVE-2022-21680:marked:0.3.5",
-      "cve": "CVE-2022-21680",
-      "package": "marked",
-      "ecosystem": "npm",
-      "installed_version": "0.3.5",
-      "fixed_version": "4.0.10",
-      "app": "nodejs-goof",
-      "cvss": 7.5,
-      "epss": 0.02774,
-      "in_kev": false,
-      "kev_date_added": null,
-      "priority_score": 21,
-      "priority_label": "medium",
-      "summary": {
-        "en": "Marked is a markdown parser and compiler. Prior to version 4.0.10, the regular expression `block.def` may cause catastrophic backtracking against some strings and lead to a regular expression denial of service (ReDoS). Anyone who runs untrusted markdown through a vulnerable version of marked and does not use a worker with a time limit may be affected. This issue is patched in version 4.0.10. As a workaround, avoid running untrusted markdown through marked or run marked on a worker thread and set a reasonable time limit to prevent draining resources.",
-        "es": "Marked es un analizador y compilador de markdown. En versiones anteriores a 4.0.10, la expresi\u00f3n regular \"block.def\" pod\u00eda causar un retroceso catastr\u00f3fico contra algunas cadenas y conllevar a una denegaci\u00f3n de servicio por expresi\u00f3n regular (ReDoS). Cualquiera que ejecute markdown no confiable mediante una versi\u00f3n vulnerable de marked y no use un trabajador con l\u00edmite de tiempo puede verse afectado. Este problema est\u00e1 parcheado en la versi\u00f3n 4.0.10. Como medida de mitigaci\u00f3n, evite ejecutar markdown no confiable mediante marked o ejecute marked en un hilo de trabajo y establezca un l\u00edmite de tiempo razonable para evitar el agotamiento de los recursos"
-      },
-      "references": [
-        "https://github.com/markedjs/marked/commit/c4a3ccd344b6929afa8a1d50ac54a721e57012c0",
-        "https://github.com/markedjs/marked/releases/tag/v4.0.10",
-        "https://github.com/markedjs/marked/security/advisories/GHSA-rrrm-qjm4-v8hf",
-        "https://lists.fedoraproject.org/archives/list/package-announce%40lists.fedoraproject.org/message/AIXDMC3CSHYW3YWVSQOXAWLUYQHAO5UX/"
       ]
     },
     {
@@ -6832,30 +6856,6 @@
         "https://github.com/npm/node-semver/pull/564",
         "https://security.snyk.io/vuln/SNYK-JS-SEMVER-3247795",
         "https://security.netapp.com/advisory/ntap-20241025-0004/"
-      ]
-    },
-    {
-      "id": "nodejs-goof:CVE-2022-21681:marked:0.3.5",
-      "cve": "CVE-2022-21681",
-      "package": "marked",
-      "ecosystem": "npm",
-      "installed_version": "0.3.5",
-      "fixed_version": "4.0.10",
-      "app": "nodejs-goof",
-      "cvss": 7.5,
-      "epss": 0.02691,
-      "in_kev": false,
-      "kev_date_added": null,
-      "priority_score": 21,
-      "priority_label": "medium",
-      "summary": {
-        "en": "Marked is a markdown parser and compiler. Prior to version 4.0.10, the regular expression `inline.reflinkSearch` may cause catastrophic backtracking against some strings and lead to a denial of service (DoS). Anyone who runs untrusted markdown through a vulnerable version of marked and does not use a worker with a time limit may be affected. This issue is patched in version 4.0.10. As a workaround, avoid running untrusted markdown through marked or run marked on a worker thread and set a reasonable time limit to prevent draining resources.",
-        "es": "Marked es un analizador y compilador de markdown. En versiones anteriores a 4.0.10, la expresi\u00f3n regular \"inline.reflinkSearch\" pod\u00eda causar un retroceso catastr\u00f3fico contra algunas cadenas y conllevar a una denegaci\u00f3n de servicio (DoS). Cualquiera que ejecute markdown no confiable mediante una versi\u00f3n vulnerable de marked y no use un trabajador con l\u00edmite de tiempo puede verse afectado. Este problema est\u00e1 parcheado en la versi\u00f3n 4.0.10. Como medida de mitigaci\u00f3n, evite ejecutar markdown no confiable mediante marked o ejecute marked en un hilo de trabajo y establezca un l\u00edmite de tiempo razonable para evitar el agotamiento de los recursos"
-      },
-      "references": [
-        "https://github.com/markedjs/marked/commit/8f806573a3f6c6b7a39b8cdb66ab5ebb8d55a5f5",
-        "https://github.com/markedjs/marked/security/advisories/GHSA-5v2h-r2cx-5xgj",
-        "https://lists.fedoraproject.org/archives/list/package-announce%40lists.fedoraproject.org/message/AIXDMC3CSHYW3YWVSQOXAWLUYQHAO5UX/"
       ]
     },
     {
@@ -7044,10 +7044,10 @@
       "fixed_version": "4.17.11",
       "app": "nodejs-goof",
       "cvss": 6.5,
-      "epss": 0.03038,
+      "epss": 0.02982,
       "in_kev": false,
       "kev_date_added": null,
-      "priority_score": 19,
+      "priority_score": 18,
       "priority_label": "low",
       "summary": {
         "en": "lodash prior to 4.17.11 is affected by: CWE-400: Uncontrolled Resource Consumption. The impact is: Denial of service. The component is: Date handler. The attack vector is: Attacker provides very long strings, which the library attempts to match using a regular expression. The fixed version is: 4.17.11.",
@@ -7069,10 +7069,10 @@
       "fixed_version": "4.17.11",
       "app": "nodejs-goof",
       "cvss": 6.5,
-      "epss": 0.03038,
+      "epss": 0.02982,
       "in_kev": false,
       "kev_date_added": null,
-      "priority_score": 19,
+      "priority_score": 18,
       "priority_label": "low",
       "summary": {
         "en": "lodash prior to 4.17.11 is affected by: CWE-400: Uncontrolled Resource Consumption. The impact is: Denial of service. The component is: Date handler. The attack vector is: Attacker provides very long strings, which the library attempts to match using a regular expression. The fixed version is: 4.17.11.",
@@ -9698,7 +9698,7 @@
       "fixed_version": "6.14.0",
       "app": "nodejs-goof",
       "cvss": 2.9,
-      "epss": 0.00547,
+      "epss": 0.00539,
       "in_kev": false,
       "kev_date_added": null,
       "priority_score": 8,
@@ -10621,7 +10621,7 @@
       "fixed_version": "1.1.0",
       "app": "nodejs-goof",
       "cvss": 3.4,
-      "epss": 0.00208,
+      "epss": 0.00206,
       "in_kev": false,
       "kev_date_added": null,
       "priority_score": 9,
@@ -10711,12 +10711,6 @@
     }
   ],
   "history": [
-    {
-      "date": "2026-10-08",
-      "findings_total": 338,
-      "critical": 4,
-      "high": 3
-    },
     {
       "date": "2026-10-09",
       "findings_total": 344,
@@ -10887,6 +10881,12 @@
     },
     {
       "date": "2026-11-07",
+      "findings_total": 385,
+      "critical": 3,
+      "high": 3
+    },
+    {
+      "date": "2026-11-08",
       "findings_total": 385,
       "critical": 3,
       "high": 3

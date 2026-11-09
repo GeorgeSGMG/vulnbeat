@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-11-08T13:02:16.915390+00:00",
+  "generated_at": "2026-11-09T15:38:34.942783+00:00",
   "sources": {
     "kev": {
       "fetched": true,
@@ -1897,7 +1897,7 @@
       "fixed_version": "4.2.25",
       "app": "pygoat",
       "cvss": 7.1,
-      "epss": 0.00639,
+      "epss": 0.00662,
       "in_kev": false,
       "kev_date_added": null,
       "priority_score": 18,
@@ -3169,7 +3169,7 @@
       "fixed_version": "4.2.25",
       "app": "pygoat",
       "cvss": 3.1,
-      "epss": 0.00932,
+      "epss": 0.00966,
       "in_kev": false,
       "kev_date_added": null,
       "priority_score": 8,
@@ -5095,7 +5095,7 @@
       "fixed_version": "0.2.1",
       "app": "nodejs-goof",
       "cvss": 7.5,
-      "epss": 0.2361,
+      "epss": 0.22539,
       "in_kev": false,
       "kev_date_added": null,
       "priority_score": 36,
@@ -7290,7 +7290,7 @@
       "fixed_version": "2.6.9",
       "app": "nodejs-goof",
       "cvss": 3.5,
-      "epss": 0.02105,
+      "epss": 0.02187,
       "in_kev": false,
       "kev_date_added": null,
       "priority_score": 10,
@@ -7933,7 +7933,7 @@
       "fixed_version": "0.6.1",
       "app": "nodejs-goof",
       "cvss": 7.5,
-      "epss": 0.01389,
+      "epss": 0.01363,
       "in_kev": false,
       "kev_date_added": null,
       "priority_score": 20,
@@ -7955,7 +7955,7 @@
       "fixed_version": "0.6.1",
       "app": "nodejs-goof",
       "cvss": 7.5,
-      "epss": 0.01389,
+      "epss": 0.01363,
       "in_kev": false,
       "kev_date_added": null,
       "priority_score": 20,
@@ -7977,7 +7977,7 @@
       "fixed_version": "0.6.1",
       "app": "nodejs-goof",
       "cvss": 7.5,
-      "epss": 0.01389,
+      "epss": 0.01363,
       "in_kev": false,
       "kev_date_added": null,
       "priority_score": 20,
@@ -8263,7 +8263,7 @@
       "fixed_version": "0.3.6",
       "app": "nodejs-goof",
       "cvss": 6.1,
-      "epss": 0.0144,
+      "epss": 0.01413,
       "in_kev": false,
       "kev_date_added": null,
       "priority_score": 16,
@@ -10712,12 +10712,6 @@
   ],
   "history": [
     {
-      "date": "2026-10-09",
-      "findings_total": 344,
-      "critical": 4,
-      "high": 3
-    },
-    {
       "date": "2026-10-10",
       "findings_total": 344,
       "critical": 4,
@@ -10887,6 +10881,12 @@
     },
     {
       "date": "2026-11-08",
+      "findings_total": 385,
+      "critical": 3,
+      "high": 3
+    },
+    {
+      "date": "2026-11-09",
       "findings_total": 385,
       "critical": 3,
       "high": 3

@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-11-09T15:38:34.942783+00:00",
+  "generated_at": "2026-11-10T14:38:13.392960+00:00",
   "sources": {
     "kev": {
       "fetched": true,
@@ -7,11 +7,11 @@
     },
     "epss": {
       "fetched": true,
-      "entries": 327
+      "entries": 328
     },
     "nvd": {
       "fetched": true,
-      "entries": 328
+      "entries": 329
     }
   },
   "apps": [
@@ -640,6 +640,30 @@
       ]
     },
     {
+      "id": "pygoat:CVE-2024-53908:django:4.2",
+      "cve": "CVE-2024-53908",
+      "package": "django",
+      "ecosystem": "PyPI",
+      "installed_version": "4.2",
+      "fixed_version": "4.2.17",
+      "app": "pygoat",
+      "cvss": 9.8,
+      "epss": 0.01415,
+      "in_kev": false,
+      "kev_date_added": null,
+      "priority_score": 26,
+      "priority_label": "medium",
+      "summary": {
+        "en": "An issue was discovered in Django 5.1 before 5.1.4, 5.0 before 5.0.10, and 4.2 before 4.2.17. Direct usage of the django.db.models.fields.json.HasKey lookup, when an Oracle database is used, is subject to SQL injection if untrusted data is used as an lhs value. (Applications that use the jsonfield.has_key lookup via __ are unaffected.)",
+        "es": "Se descubri\u00f3 un problema en Django 5.1 anterior a 5.1.4, 5.0 anterior a 5.0.10 y 4.2 anterior a 4.2.17. El uso directo de la b\u00fasqueda django.db.models.fields.json.HasKey, cuando se utiliza una base de datos Oracle, est\u00e1 sujeto a inyecci\u00f3n SQL si se utilizan datos no confiables como valor de lhs. (Las aplicaciones que utilizan la b\u00fasqueda jsonfield.has_key mediante __ no se ven afectadas)."
+      },
+      "references": [
+        "https://docs.djangoproject.com/en/dev/releases/security/",
+        "https://groups.google.com/g/django-announce",
+        "https://www.openwall.com/lists/oss-security/2024/12/04/3"
+      ]
+    },
+    {
       "id": "pygoat:CVE-2023-31047:django:4.2",
       "cve": "CVE-2023-31047",
       "package": "django",
@@ -742,30 +766,6 @@
       ]
     },
     {
-      "id": "pygoat:CVE-2024-53908:django:4.2",
-      "cve": "CVE-2024-53908",
-      "package": "django",
-      "ecosystem": "PyPI",
-      "installed_version": "4.2",
-      "fixed_version": "4.2.17",
-      "app": "pygoat",
-      "cvss": 9.8,
-      "epss": 0.01415,
-      "in_kev": false,
-      "kev_date_added": null,
-      "priority_score": 26,
-      "priority_label": "medium",
-      "summary": {
-        "en": "An issue was discovered in Django 5.1 before 5.1.4, 5.0 before 5.0.10, and 4.2 before 4.2.17. Direct usage of the django.db.models.fields.json.HasKey lookup, when an Oracle database is used, is subject to SQL injection if untrusted data is used as an lhs value. (Applications that use the jsonfield.has_key lookup via __ are unaffected.)",
-        "es": "Se descubri\u00f3 un problema en Django 5.1 anterior a 5.1.4, 5.0 anterior a 5.0.10 y 4.2 anterior a 4.2.17. El uso directo de la b\u00fasqueda django.db.models.fields.json.HasKey, cuando se utiliza una base de datos Oracle, est\u00e1 sujeto a inyecci\u00f3n SQL si se utilizan datos no confiables como valor de lhs. (Las aplicaciones que utilizan la b\u00fasqueda jsonfield.has_key mediante __ no se ven afectadas)."
-      },
-      "references": [
-        "https://docs.djangoproject.com/en/dev/releases/security/",
-        "https://groups.google.com/g/django-announce",
-        "https://www.openwall.com/lists/oss-security/2024/12/04/3"
-      ]
-    },
-    {
       "id": "pygoat:CVE-2023-43665:django:4.2",
       "cve": "CVE-2023-43665",
       "package": "django",
@@ -820,6 +820,31 @@
       ]
     },
     {
+      "id": "pygoat:CVE-2024-53907:django:4.2",
+      "cve": "CVE-2024-53907",
+      "package": "django",
+      "ecosystem": "PyPI",
+      "installed_version": "4.2",
+      "fixed_version": "4.2.17",
+      "app": "pygoat",
+      "cvss": 7.5,
+      "epss": 0.01388,
+      "in_kev": false,
+      "kev_date_added": null,
+      "priority_score": 20,
+      "priority_label": "medium",
+      "summary": {
+        "en": "An issue was discovered in Django 5.1 before 5.1.4, 5.0 before 5.0.10, and 4.2 before 4.2.17. The strip_tags() method and striptags template filter are subject to a potential denial-of-service attack via certain inputs containing large sequences of nested incomplete HTML entities.",
+        "es": "Se descubri\u00f3 un problema en Django 5.1 anterior a 5.1.4, 5.0 anterior a 5.0.10 y 4.2 anterior a 4.2.17. El m\u00e9todo strip_tags() y el filtro de plantilla striptags est\u00e1n sujetos a un posible ataque de denegaci\u00f3n de servicio a trav\u00e9s de ciertas entradas que contienen secuencias grandes de entidades HTML incompletas anidadas."
+      },
+      "references": [
+        "https://docs.djangoproject.com/en/dev/releases/security/",
+        "https://groups.google.com/g/django-announce",
+        "https://www.openwall.com/lists/oss-security/2024/12/04/3",
+        "https://lists.debian.org/debian-lts-announce/2024/12/msg00028.html"
+      ]
+    },
+    {
       "id": "pygoat:CVE-2023-43804:urllib3:1.26.9",
       "cve": "CVE-2023-43804",
       "package": "urllib3",
@@ -848,6 +873,40 @@
         "https://lists.debian.org/debian-lts-announce/2024/12/msg00020.html",
         "https://security.netapp.com/advisory/ntap-20241213-0007/",
         "https://www.vicarius.io/vsociety/posts/cve-2023-43804-urllib3-vulnerability-3"
+      ]
+    },
+    {
+      "id": "pygoat:CVE-2024-27351:django:4.2",
+      "cve": "CVE-2024-27351",
+      "package": "django",
+      "ecosystem": "PyPI",
+      "installed_version": "4.2",
+      "fixed_version": "3.2.25",
+      "app": "pygoat",
+      "cvss": 5.3,
+      "epss": 0.01854,
+      "in_kev": false,
+      "kev_date_added": null,
+      "priority_score": 15,
+      "priority_label": "low",
+      "summary": {
+        "en": "In Django 3.2 before 3.2.25, 4.2 before 4.2.11, and 5.0 before 5.0.3, the django.utils.text.Truncator.words() method (with html=True) and the truncatewords_html template filter are subject to a potential regular expression denial-of-service attack via a crafted string. NOTE: this issue exists because of an incomplete fix for CVE-2019-14232 and CVE-2023-43665.",
+        "es": "En Django 3.2 anterior a 3.2.25, 4.2 anterior a 4.2.11 y 5.0 anterior a 5.0.3, el m\u00e9todo django.utils.text.Truncator.words() (con html=True) y el filtro de plantilla truncatewords_html est\u00e1n sujetos a un potencial Ataque de denegaci\u00f3n de servicio de expresi\u00f3n regular a trav\u00e9s de una cadena manipulada. NOTA: este problema existe debido a una soluci\u00f3n incompleta para CVE-2019-14232 y CVE-2023-43665."
+      },
+      "references": [
+        "http://www.openwall.com/lists/oss-security/2024/03/04/1",
+        "https://docs.djangoproject.com/en/5.0/releases/security/",
+        "https://groups.google.com/forum/#%21forum/django-announce",
+        "https://lists.fedoraproject.org/archives/list/package-announce%40lists.fedoraproject.org/message/D2JIRXEDP4ZET5KFMAPPYSK663Q52NEX/",
+        "https://lists.fedoraproject.org/archives/list/package-announce%40lists.fedoraproject.org/message/SN2PLJGYSAAG5KUVIUFJYKD3BLQ4OSN6/",
+        "https://lists.fedoraproject.org/archives/list/package-announce%40lists.fedoraproject.org/message/ZQJOMNRMVPCN5WMIZ7YSX5LQ7IR2NY4D/",
+        "https://www.djangoproject.com/weblog/2024/mar/04/security-releases/",
+        "https://github.com/django/django/commit/072963e4c4d0b3a7a8c5412bc0c7d27d1a9c3521",
+        "https://github.com/django/django/commit/3394fc6132436eca89e997083bae9985fb7e761e",
+        "https://github.com/django/django/commit/3c9a2771cc80821e041b16eb36c1c37af5349d4a",
+        "https://lists.fedoraproject.org/archives/list/package-announce@lists.fedoraproject.org/message/D2JIRXEDP4ZET5KFMAPPYSK663Q52NEX/",
+        "https://lists.fedoraproject.org/archives/list/package-announce@lists.fedoraproject.org/message/SN2PLJGYSAAG5KUVIUFJYKD3BLQ4OSN6/",
+        "https://lists.fedoraproject.org/archives/list/package-announce@lists.fedoraproject.org/message/ZQJOMNRMVPCN5WMIZ7YSX5LQ7IR2NY4D/"
       ]
     },
     {
@@ -961,27 +1020,29 @@
       ]
     },
     {
-      "id": "pygoat:CVE-2023-50782:cryptography:39.0.1",
-      "cve": "CVE-2023-50782",
-      "package": "cryptography",
+      "id": "pygoat:CVE-2024-56374:django:4.2",
+      "cve": "CVE-2024-56374",
+      "package": "django",
       "ecosystem": "PyPI",
-      "installed_version": "39.0.1",
-      "fixed_version": "42.0.0",
+      "installed_version": "4.2",
+      "fixed_version": "4.2.18",
       "app": "pygoat",
-      "cvss": 7.5,
-      "epss": 0.01118,
+      "cvss": 5.8,
+      "epss": 0.01277,
       "in_kev": false,
       "kev_date_added": null,
-      "priority_score": 20,
-      "priority_label": "medium",
+      "priority_score": 15,
+      "priority_label": "low",
       "summary": {
-        "en": "A flaw was found in the python-cryptography package. This issue may allow a remote attacker to decrypt captured messages in TLS servers that use RSA key exchanges, which may lead to exposure of confidential or sensitive data.",
-        "es": "Se encontr\u00f3 una falla en el paquete python-cryptography. Este problema puede permitir que un atacante remoto descifre mensajes capturados en servidores TLS que utilizan intercambios de claves RSA, lo que puede provocar la exposici\u00f3n de datos confidenciales o sensibles."
+        "en": "An issue was discovered in Django 5.1 before 5.1.5, 5.0 before 5.0.11, and 4.2 before 4.2.18. Lack of upper-bound limit enforcement in strings passed when performing IPv6 validation could lead to a potential denial-of-service attack. The undocumented and private functions clean_ipv6_address and is_valid_ipv6_address are vulnerable, as is the django.forms.GenericIPAddressField form field. (The django.db.models.GenericIPAddressField model field is not affected.)",
+        "es": "Se descubri\u00f3 un problema en Django 5.1 antes de 5.1.5, 5.0 antes de 5.0.11 y 4.2 antes de 4.2.18. La falta de aplicaci\u00f3n de un l\u00edmite superior en las cadenas que se pasan al realizar la validaci\u00f3n de IPv6 podr\u00eda provocar un posible ataque de denegaci\u00f3n de servicio. Las funciones privadas y no documentadas clean_ipv6_address e is_valid_ipv6_address son vulnerables, al igual que el campo de formulario django.forms.GenericIPAddressField. (El campo de modelo django.db.models.GenericIPAddressField no se ve afectado)."
       },
       "references": [
-        "https://access.redhat.com/security/cve/CVE-2023-50782",
-        "https://bugzilla.redhat.com/show_bug.cgi?id=2254432",
-        "https://www.couchbase.com/alerts/"
+        "https://docs.djangoproject.com/en/dev/releases/security/",
+        "https://groups.google.com/g/django-announce",
+        "https://www.djangoproject.com/weblog/2025/jan/14/security-releases/",
+        "http://www.openwall.com/lists/oss-security/2025/01/14/2",
+        "https://lists.debian.org/debian-lts-announce/2025/01/msg00024.html"
       ]
     },
     {
@@ -1005,6 +1066,30 @@
         "https://github.com/python-pillow/Pillow/commit/242a059aedc1935097d9aa1dc3f099750467ba75",
         "https://github.com/python-pillow/Pillow/releases/tag/13.0.0",
         "https://github.com/python-pillow/Pillow/security/advisories/GHSA-8g5g-8vmr-9782"
+      ]
+    },
+    {
+      "id": "pygoat:CVE-2023-50782:cryptography:39.0.1",
+      "cve": "CVE-2023-50782",
+      "package": "cryptography",
+      "ecosystem": "PyPI",
+      "installed_version": "39.0.1",
+      "fixed_version": "42.0.0",
+      "app": "pygoat",
+      "cvss": 7.5,
+      "epss": 0.01118,
+      "in_kev": false,
+      "kev_date_added": null,
+      "priority_score": 20,
+      "priority_label": "medium",
+      "summary": {
+        "en": "A flaw was found in the python-cryptography package. This issue may allow a remote attacker to decrypt captured messages in TLS servers that use RSA key exchanges, which may lead to exposure of confidential or sensitive data.",
+        "es": "Se encontr\u00f3 una falla en el paquete python-cryptography. Este problema puede permitir que un atacante remoto descifre mensajes capturados en servidores TLS que utilizan intercambios de claves RSA, lo que puede provocar la exposici\u00f3n de datos confidenciales o sensibles."
+      },
+      "references": [
+        "https://access.redhat.com/security/cve/CVE-2023-50782",
+        "https://bugzilla.redhat.com/show_bug.cgi?id=2254432",
+        "https://www.couchbase.com/alerts/"
       ]
     },
     {
@@ -1033,31 +1118,6 @@
         "https://security.netapp.com/advisory/ntap-20231214-0002/",
         "https://www.djangoproject.com/weblog/2023/sep/04/security-releases/",
         "https://lists.fedoraproject.org/archives/list/package-announce@lists.fedoraproject.org/message/ZQJOMNRMVPCN5WMIZ7YSX5LQ7IR2NY4D/"
-      ]
-    },
-    {
-      "id": "pygoat:CVE-2024-53907:django:4.2",
-      "cve": "CVE-2024-53907",
-      "package": "django",
-      "ecosystem": "PyPI",
-      "installed_version": "4.2",
-      "fixed_version": "4.2.17",
-      "app": "pygoat",
-      "cvss": 7.5,
-      "epss": 0.01388,
-      "in_kev": false,
-      "kev_date_added": null,
-      "priority_score": 20,
-      "priority_label": "medium",
-      "summary": {
-        "en": "An issue was discovered in Django 5.1 before 5.1.4, 5.0 before 5.0.10, and 4.2 before 4.2.17. The strip_tags() method and striptags template filter are subject to a potential denial-of-service attack via certain inputs containing large sequences of nested incomplete HTML entities.",
-        "es": "Se descubri\u00f3 un problema en Django 5.1 anterior a 5.1.4, 5.0 anterior a 5.0.10 y 4.2 anterior a 4.2.17. El m\u00e9todo strip_tags() y el filtro de plantilla striptags est\u00e1n sujetos a un posible ataque de denegaci\u00f3n de servicio a trav\u00e9s de ciertas entradas que contienen secuencias grandes de entidades HTML incompletas anidadas."
-      },
-      "references": [
-        "https://docs.djangoproject.com/en/dev/releases/security/",
-        "https://groups.google.com/g/django-announce",
-        "https://www.openwall.com/lists/oss-security/2024/12/04/3",
-        "https://lists.debian.org/debian-lts-announce/2024/12/msg00028.html"
       ]
     },
     {
@@ -1114,6 +1174,32 @@
       ]
     },
     {
+      "id": "pygoat:CVE-2023-49083:cryptography:39.0.1",
+      "cve": "CVE-2023-49083",
+      "package": "cryptography",
+      "ecosystem": "PyPI",
+      "installed_version": "39.0.1",
+      "fixed_version": "41.0.6",
+      "app": "pygoat",
+      "cvss": 5.9,
+      "epss": 0.00985,
+      "in_kev": false,
+      "kev_date_added": null,
+      "priority_score": 15,
+      "priority_label": "low",
+      "summary": {
+        "en": "cryptography is a package designed to expose cryptographic primitives and recipes to Python developers. Calling `load_pem_pkcs7_certificates` or `load_der_pkcs7_certificates` could lead to a NULL-pointer dereference and segfault. Exploitation of this vulnerability poses a serious risk of Denial of Service (DoS) for any application attempting to deserialize a PKCS7 blob/certificate. The consequences extend to potential disruptions in system availability and stability. This vulnerability has been patched in version 41.0.6.",
+        "es": "cryptography es un paquete dise\u00f1ado para exponer recetas y primitivas criptogr\u00e1ficas a los desarrolladores de Python. Llamar a `load_pem_pkcs7_certificates` o `load_der_pkcs7_certificates` podr\u00eda provocar una desreferencia de puntero NULL y un error de segmentaci\u00f3n. La explotaci\u00f3n de esta vulnerabilidad plantea un grave riesgo de Denegaci\u00f3n de Servicio (DoS) para cualquier aplicaci\u00f3n que intente deserializar un blob/certificado PKCS7. Las consecuencias se extienden a posibles interrupciones en la disponibilidad y estabilidad del sistema. Esta vulnerabilidad ha sido parcheada en la versi\u00f3n 41.0.6."
+      },
+      "references": [
+        "https://github.com/pyca/cryptography/commit/f09c261ca10a31fe41b1262306db7f8f1da0e48a",
+        "https://github.com/pyca/cryptography/pull/9926",
+        "https://github.com/pyca/cryptography/security/advisories/GHSA-jfhm-5ghh-2f97",
+        "https://lists.fedoraproject.org/archives/list/package-announce@lists.fedoraproject.org/message/QMNTYMUGFJSDBYBU22FUYBHFRZODRKXV/",
+        "https://lists.debian.org/debian-lts-announce/2024/10/msg00012.html"
+      ]
+    },
+    {
       "id": "pygoat:CVE-2024-41990:django:4.2",
       "cve": "CVE-2024-41990",
       "package": "django",
@@ -1136,32 +1222,6 @@
         "https://groups.google.com/forum/#%21forum/django-announce",
         "https://www.djangoproject.com/weblog/2024/aug/06/security-releases/",
         "https://security.netapp.com/advisory/ntap-20240905-0007/"
-      ]
-    },
-    {
-      "id": "pygoat:CVE-2024-56374:django:4.2",
-      "cve": "CVE-2024-56374",
-      "package": "django",
-      "ecosystem": "PyPI",
-      "installed_version": "4.2",
-      "fixed_version": "4.2.18",
-      "app": "pygoat",
-      "cvss": 5.8,
-      "epss": 0.01277,
-      "in_kev": false,
-      "kev_date_added": null,
-      "priority_score": 15,
-      "priority_label": "low",
-      "summary": {
-        "en": "An issue was discovered in Django 5.1 before 5.1.5, 5.0 before 5.0.11, and 4.2 before 4.2.18. Lack of upper-bound limit enforcement in strings passed when performing IPv6 validation could lead to a potential denial-of-service attack. The undocumented and private functions clean_ipv6_address and is_valid_ipv6_address are vulnerable, as is the django.forms.GenericIPAddressField form field. (The django.db.models.GenericIPAddressField model field is not affected.)",
-        "es": "Se descubri\u00f3 un problema en Django 5.1 antes de 5.1.5, 5.0 antes de 5.0.11 y 4.2 antes de 4.2.18. La falta de aplicaci\u00f3n de un l\u00edmite superior en las cadenas que se pasan al realizar la validaci\u00f3n de IPv6 podr\u00eda provocar un posible ataque de denegaci\u00f3n de servicio. Las funciones privadas y no documentadas clean_ipv6_address e is_valid_ipv6_address son vulnerables, al igual que el campo de formulario django.forms.GenericIPAddressField. (El campo de modelo django.db.models.GenericIPAddressField no se ve afectado)."
-      },
-      "references": [
-        "https://docs.djangoproject.com/en/dev/releases/security/",
-        "https://groups.google.com/g/django-announce",
-        "https://www.djangoproject.com/weblog/2025/jan/14/security-releases/",
-        "http://www.openwall.com/lists/oss-security/2025/01/14/2",
-        "https://lists.debian.org/debian-lts-announce/2025/01/msg00024.html"
       ]
     },
     {
@@ -1407,29 +1467,6 @@
       ]
     },
     {
-      "id": "pygoat:CVE-2025-66471:urllib3:1.26.9",
-      "cve": "CVE-2025-66471",
-      "package": "urllib3",
-      "ecosystem": "PyPI",
-      "installed_version": "1.26.9",
-      "fixed_version": "2.6.0",
-      "app": "pygoat",
-      "cvss": 7.5,
-      "epss": 0.00731,
-      "in_kev": false,
-      "kev_date_added": null,
-      "priority_score": 19,
-      "priority_label": "low",
-      "summary": {
-        "en": "urllib3 is a user-friendly HTTP client library for Python. Starting in version 1.0 and prior to 2.6.0, the Streaming API improperly handles highly compressed data. urllib3's streaming API is designed for the efficient handling of large HTTP responses by reading the content in chunks, rather than loading the entire response body into memory at once. When streaming a compressed response, urllib3 can perform decoding or decompression based on the HTTP Content-Encoding header (e.g., gzip, deflate, br, or zstd). The library must read compressed data from the network and decompress it until the requested chunk size is met. Any resulting decompressed data that exceeds the requested amount is held in an internal buffer for the next read operation. The decompression logic could cause urllib3 to fully decode a small amount of highly compressed data in a single operation. This can result in excessive resource consumption (high CPU usage and massive memory allocation for the decompressed data.",
-        "es": "urllib3 es una biblioteca cliente HTTP f\u00e1cil de usar para Python. A partir de la versi\u00f3n 1.0 y versiones anteriores a la 2.6.0, la API de Streaming maneja incorrectamente los datos altamente comprimidos. La API de streaming de urllib3 est\u00e1 dise\u00f1ada para el manejo eficiente de grandes respuestas HTTP leyendo el contenido en fragmentos, en lugar de cargar todo el cuerpo de la respuesta en la memoria de una sola vez. Al transmitir una respuesta comprimida, urllib3 puede realizar la decodificaci\u00f3n o descompresi\u00f3n bas\u00e1ndose en el encabezado HTTP Content-Encoding (por ejemplo, gzip, deflate, br o zstd). La biblioteca debe leer datos comprimidos de la red y descomprimirlos hasta que se alcance el tama\u00f1o de fragmento solicitado. Cualquier dato descomprimido resultante que exceda la cantidad solicitada se mantiene en un b\u00fafer interno para la siguiente operaci\u00f3n de lectura. La l\u00f3gica de descompresi\u00f3n podr\u00eda hacer que urllib3 decodifique completamente una peque\u00f1a cantidad de datos altamente comprimidos en una sola operaci\u00f3n. Esto puede resultar en un consumo excesivo de recursos (alto uso de CPU y asignaci\u00f3n masiva de memoria para los datos descomprimidos)."
-      },
-      "references": [
-        "https://github.com/urllib3/urllib3/commit/c19571de34c47de3a766541b041637ba5f716ed7",
-        "https://github.com/urllib3/urllib3/security/advisories/GHSA-2xpw-w6gg-jr37"
-      ]
-    },
-    {
       "id": "pygoat:CVE-2025-66418:urllib3:1.26.9",
       "cve": "CVE-2025-66418",
       "package": "urllib3",
@@ -1450,6 +1487,29 @@
       "references": [
         "https://github.com/urllib3/urllib3/commit/24d7b67eac89f94e11003424bcf0d8f7b72222a8",
         "https://github.com/urllib3/urllib3/security/advisories/GHSA-gm62-xv2j-4w53"
+      ]
+    },
+    {
+      "id": "pygoat:CVE-2025-66471:urllib3:1.26.9",
+      "cve": "CVE-2025-66471",
+      "package": "urllib3",
+      "ecosystem": "PyPI",
+      "installed_version": "1.26.9",
+      "fixed_version": "2.6.0",
+      "app": "pygoat",
+      "cvss": 7.5,
+      "epss": 0.00731,
+      "in_kev": false,
+      "kev_date_added": null,
+      "priority_score": 19,
+      "priority_label": "low",
+      "summary": {
+        "en": "urllib3 is a user-friendly HTTP client library for Python. Starting in version 1.0 and prior to 2.6.0, the Streaming API improperly handles highly compressed data. urllib3's streaming API is designed for the efficient handling of large HTTP responses by reading the content in chunks, rather than loading the entire response body into memory at once. When streaming a compressed response, urllib3 can perform decoding or decompression based on the HTTP Content-Encoding header (e.g., gzip, deflate, br, or zstd). The library must read compressed data from the network and decompress it until the requested chunk size is met. Any resulting decompressed data that exceeds the requested amount is held in an internal buffer for the next read operation. The decompression logic could cause urllib3 to fully decode a small amount of highly compressed data in a single operation. This can result in excessive resource consumption (high CPU usage and massive memory allocation for the decompressed data.",
+        "es": "urllib3 es una biblioteca cliente HTTP f\u00e1cil de usar para Python. A partir de la versi\u00f3n 1.0 y versiones anteriores a la 2.6.0, la API de Streaming maneja incorrectamente los datos altamente comprimidos. La API de streaming de urllib3 est\u00e1 dise\u00f1ada para el manejo eficiente de grandes respuestas HTTP leyendo el contenido en fragmentos, en lugar de cargar todo el cuerpo de la respuesta en la memoria de una sola vez. Al transmitir una respuesta comprimida, urllib3 puede realizar la decodificaci\u00f3n o descompresi\u00f3n bas\u00e1ndose en el encabezado HTTP Content-Encoding (por ejemplo, gzip, deflate, br o zstd). La biblioteca debe leer datos comprimidos de la red y descomprimirlos hasta que se alcance el tama\u00f1o de fragmento solicitado. Cualquier dato descomprimido resultante que exceda la cantidad solicitada se mantiene en un b\u00fafer interno para la siguiente operaci\u00f3n de lectura. La l\u00f3gica de descompresi\u00f3n podr\u00eda hacer que urllib3 decodifique completamente una peque\u00f1a cantidad de datos altamente comprimidos en una sola operaci\u00f3n. Esto puede resultar en un consumo excesivo de recursos (alto uso de CPU y asignaci\u00f3n masiva de memoria para los datos descomprimidos)."
+      },
+      "references": [
+        "https://github.com/urllib3/urllib3/commit/c19571de34c47de3a766541b041637ba5f716ed7",
+        "https://github.com/urllib3/urllib3/security/advisories/GHSA-2xpw-w6gg-jr37"
       ]
     },
     {
@@ -1474,6 +1534,32 @@
         "https://docs.djangoproject.com/en/dev/releases/security/",
         "https://groups.google.com/g/django-announce",
         "https://www.djangoproject.com/weblog/2026/apr/07/security-releases/"
+      ]
+    },
+    {
+      "id": "pygoat:CVE-2025-26699:django:4.2",
+      "cve": "CVE-2025-26699",
+      "package": "django",
+      "ecosystem": "PyPI",
+      "installed_version": "4.2",
+      "fixed_version": "4.2.20",
+      "app": "pygoat",
+      "cvss": 5.0,
+      "epss": 0.0083,
+      "in_kev": false,
+      "kev_date_added": null,
+      "priority_score": 13,
+      "priority_label": "low",
+      "summary": {
+        "en": "An issue was discovered in Django 5.1 before 5.1.7, 5.0 before 5.0.13, and 4.2 before 4.2.20. The django.utils.text.wrap() method and wordwrap template filter are subject to a potential denial-of-service attack when used with very long strings.",
+        "es": "Se descubri\u00f3 un problema en Django 5.1 anterior a 5.1.7, 5.0 anterior a 5.0.13 y 4.2 anterior a 4.2.20. El m\u00e9todo django.utils.text.wrap() y el filtro de plantilla wordwrap est\u00e1n sujetos a un posible ataque de denegaci\u00f3n de servicio cuando se utilizan con cadenas muy largas. "
+      },
+      "references": [
+        "https://docs.djangoproject.com/en/dev/releases/security/",
+        "https://groups.google.com/g/django-announce",
+        "https://www.djangoproject.com/weblog/2025/mar/06/security-releases/",
+        "http://www.openwall.com/lists/oss-security/2025/03/06/12",
+        "https://lists.debian.org/debian-lts-announce/2025/03/msg00012.html"
       ]
     },
     {
@@ -1534,32 +1620,6 @@
         "https://github.com/psf/black/security/advisories/GHSA-3936-cmfr-pm3m",
         "https://github.com/pypa/advisory-database/tree/main/vulns/black/PYSEC-2026-2121.yaml",
         "https://security.access.redhat.com/data/csaf/v2/vex/2026/cve-2026-32274.json"
-      ]
-    },
-    {
-      "id": "pygoat:CVE-2023-49083:cryptography:39.0.1",
-      "cve": "CVE-2023-49083",
-      "package": "cryptography",
-      "ecosystem": "PyPI",
-      "installed_version": "39.0.1",
-      "fixed_version": "41.0.6",
-      "app": "pygoat",
-      "cvss": 5.9,
-      "epss": 0.00985,
-      "in_kev": false,
-      "kev_date_added": null,
-      "priority_score": 15,
-      "priority_label": "low",
-      "summary": {
-        "en": "cryptography is a package designed to expose cryptographic primitives and recipes to Python developers. Calling `load_pem_pkcs7_certificates` or `load_der_pkcs7_certificates` could lead to a NULL-pointer dereference and segfault. Exploitation of this vulnerability poses a serious risk of Denial of Service (DoS) for any application attempting to deserialize a PKCS7 blob/certificate. The consequences extend to potential disruptions in system availability and stability. This vulnerability has been patched in version 41.0.6.",
-        "es": "cryptography es un paquete dise\u00f1ado para exponer recetas y primitivas criptogr\u00e1ficas a los desarrolladores de Python. Llamar a `load_pem_pkcs7_certificates` o `load_der_pkcs7_certificates` podr\u00eda provocar una desreferencia de puntero NULL y un error de segmentaci\u00f3n. La explotaci\u00f3n de esta vulnerabilidad plantea un grave riesgo de Denegaci\u00f3n de Servicio (DoS) para cualquier aplicaci\u00f3n que intente deserializar un blob/certificado PKCS7. Las consecuencias se extienden a posibles interrupciones en la disponibilidad y estabilidad del sistema. Esta vulnerabilidad ha sido parcheada en la versi\u00f3n 41.0.6."
-      },
-      "references": [
-        "https://github.com/pyca/cryptography/commit/f09c261ca10a31fe41b1262306db7f8f1da0e48a",
-        "https://github.com/pyca/cryptography/pull/9926",
-        "https://github.com/pyca/cryptography/security/advisories/GHSA-jfhm-5ghh-2f97",
-        "https://lists.fedoraproject.org/archives/list/package-announce@lists.fedoraproject.org/message/QMNTYMUGFJSDBYBU22FUYBHFRZODRKXV/",
-        "https://lists.debian.org/debian-lts-announce/2024/10/msg00012.html"
       ]
     },
     {
@@ -1750,49 +1810,51 @@
       ]
     },
     {
-      "id": "pygoat:CVE-2026-112405:pillow:12.1.0",
-      "cve": "CVE-2026-112405",
+      "id": "pygoat:CVE-2026-112396:pillow:12.1.0",
+      "cve": "CVE-2026-112396",
       "package": "pillow",
       "ecosystem": "PyPI",
       "installed_version": "12.1.0",
       "fixed_version": "13.0.0",
       "app": "pygoat",
-      "cvss": 7.5,
-      "epss": 0.00594,
+      "cvss": 5.9,
+      "epss": 0.00694,
       "in_kev": false,
       "kev_date_added": null,
-      "priority_score": 19,
+      "priority_score": 15,
       "priority_label": "low",
       "summary": {
-        "en": "Pillow is a Python imaging library. From 12.0.0 until 13.0.0, Pillow's Image.merge() can dereference a null image8 plane. Validation skips the first input band, allowing a 32-bit integer or floating-point image backed by image32 storage to be merged as a narrower multiband image. A crafted IPTC file can reach this path when an application opens and loads it, or a caller can invoke Image.merge() directly with such a first band. This causes a native process crash. This issue is fixed in version 13.0.0."
+        "en": "Pillow is a Python imaging library. From 11.3.0 until 13.0.0, Pillow has a heap use-after-free when libtiff rejects a tag while encoding TIFF data to an in-memory buffer. When an application saves attacker-influenced TIFF tags to BytesIO, libtiff can reject a tag during encoding in ImagingLibTiffEncode; the error path then frees the output buffer without closing or clearing the TIFF handle, and later cleanup flushes through the write callback into freed memory, which can crash the process and may enable code execution. This issue is fixed in version 13.0.0."
       },
       "references": [
-        "https://github.com/python-pillow/Pillow/commit/b6ee66e8b2c2c0932bdf65f963268d9f2927ef86",
+        "https://github.com/python-pillow/Pillow/commit/dc95da20207827a062cfbf551ee9f6031465a8bb",
         "https://github.com/python-pillow/Pillow/releases/tag/13.0.0",
-        "https://github.com/python-pillow/Pillow/security/advisories/GHSA-cp9v-662q-vvx9"
+        "https://github.com/python-pillow/Pillow/security/advisories/GHSA-4rr5-89j8-mwwm"
       ]
     },
     {
-      "id": "pygoat:CVE-2026-112895:pillow:12.1.0",
-      "cve": "CVE-2026-112895",
-      "package": "pillow",
+      "id": "pygoat:CVE-2025-59681:django:4.2",
+      "cve": "CVE-2025-59681",
+      "package": "django",
       "ecosystem": "PyPI",
-      "installed_version": "12.1.0",
-      "fixed_version": "13.0.0",
+      "installed_version": "4.2",
+      "fixed_version": "4.2.25",
       "app": "pygoat",
-      "cvss": 7.5,
-      "epss": 0.00594,
+      "cvss": 7.1,
+      "epss": 0.00662,
       "in_kev": false,
       "kev_date_added": null,
-      "priority_score": 19,
+      "priority_score": 18,
       "priority_label": "low",
       "summary": {
-        "en": "Pillow is a Python imaging library. From 5.1.0 until 13.0.0, Pillow can exhaust resources while parsing an existing PDF during an append operation. PdfParser follows page-tree child references without cycle or duplication tracking and follows previous-trailer chains with only an exact repeated-offset guard, so deep or cyclic page trees and long chains of unique trailer offsets can exhaust the Python stack. Repeated non-cyclic /Kids references can also cause super-linear CPU and memory use. An attacker can supply such a PDF to an application that calls Image.save with PDF append enabled. This can raise an uncaught RecursionError or consume excessive CPU and memory before output is written, causing denial of service. This issue is fixed in version 13.0.0."
+        "en": "An issue was discovered in Django 4.2 before 4.2.25, 5.1 before 5.1.13, and 5.2 before 5.2.7. QuerySet.annotate(), QuerySet.alias(), QuerySet.aggregate(), and QuerySet.extra() are subject to SQL injection in column aliases, when using a suitably crafted dictionary, with dictionary expansion, as the **kwargs passed to these methods (on MySQL and MariaDB).",
+        "es": "Se descubri\u00f3 un problema en Django 4.2 anterior a 4.2.25, 5.1 anterior a 5.1.13 y 5.2 anterior a 5.2.7. QuerySet.annotate(), QuerySet.alias(), QuerySet.aggregate() y QuerySet.extra() est\u00e1n sujetos a inyecci\u00f3n SQL en los alias de columna, al usar un diccionario adecuadamente dise\u00f1ado, con expansi\u00f3n de diccionario, como los kwargs pasados a estos m\u00e9todos (en MySQL y MariaDB)."
       },
       "references": [
-        "https://github.com/python-pillow/Pillow/commit/e2ae7eacad6de68c37eb28b633a97bebacf2c5bf",
-        "https://github.com/python-pillow/Pillow/releases/tag/13.0.0",
-        "https://github.com/python-pillow/Pillow/security/advisories/GHSA-p4wg-p73j-c528"
+        "https://docs.djangoproject.com/en/dev/releases/security/",
+        "https://groups.google.com/g/django-announce",
+        "https://www.djangoproject.com/weblog/2025/oct/01/security-releases/",
+        "http://www.openwall.com/lists/oss-security/2025/10/01/3"
       ]
     },
     {
@@ -1842,6 +1904,52 @@
       ]
     },
     {
+      "id": "pygoat:CVE-2026-112895:pillow:12.1.0",
+      "cve": "CVE-2026-112895",
+      "package": "pillow",
+      "ecosystem": "PyPI",
+      "installed_version": "12.1.0",
+      "fixed_version": "13.0.0",
+      "app": "pygoat",
+      "cvss": 7.5,
+      "epss": 0.00594,
+      "in_kev": false,
+      "kev_date_added": null,
+      "priority_score": 19,
+      "priority_label": "low",
+      "summary": {
+        "en": "Pillow is a Python imaging library. From 5.1.0 until 13.0.0, Pillow can exhaust resources while parsing an existing PDF during an append operation. PdfParser follows page-tree child references without cycle or duplication tracking and follows previous-trailer chains with only an exact repeated-offset guard, so deep or cyclic page trees and long chains of unique trailer offsets can exhaust the Python stack. Repeated non-cyclic /Kids references can also cause super-linear CPU and memory use. An attacker can supply such a PDF to an application that calls Image.save with PDF append enabled. This can raise an uncaught RecursionError or consume excessive CPU and memory before output is written, causing denial of service. This issue is fixed in version 13.0.0."
+      },
+      "references": [
+        "https://github.com/python-pillow/Pillow/commit/e2ae7eacad6de68c37eb28b633a97bebacf2c5bf",
+        "https://github.com/python-pillow/Pillow/releases/tag/13.0.0",
+        "https://github.com/python-pillow/Pillow/security/advisories/GHSA-p4wg-p73j-c528"
+      ]
+    },
+    {
+      "id": "pygoat:CVE-2026-112405:pillow:12.1.0",
+      "cve": "CVE-2026-112405",
+      "package": "pillow",
+      "ecosystem": "PyPI",
+      "installed_version": "12.1.0",
+      "fixed_version": "13.0.0",
+      "app": "pygoat",
+      "cvss": 7.5,
+      "epss": 0.00594,
+      "in_kev": false,
+      "kev_date_added": null,
+      "priority_score": 19,
+      "priority_label": "low",
+      "summary": {
+        "en": "Pillow is a Python imaging library. From 12.0.0 until 13.0.0, Pillow's Image.merge() can dereference a null image8 plane. Validation skips the first input band, allowing a 32-bit integer or floating-point image backed by image32 storage to be merged as a narrower multiband image. A crafted IPTC file can reach this path when an application opens and loads it, or a caller can invoke Image.merge() directly with such a first band. This causes a native process crash. This issue is fixed in version 13.0.0."
+      },
+      "references": [
+        "https://github.com/python-pillow/Pillow/commit/b6ee66e8b2c2c0932bdf65f963268d9f2927ef86",
+        "https://github.com/python-pillow/Pillow/releases/tag/13.0.0",
+        "https://github.com/python-pillow/Pillow/security/advisories/GHSA-cp9v-662q-vvx9"
+      ]
+    },
+    {
       "id": "pygoat:CVE-2026-112894:pillow:12.1.0",
       "cve": "CVE-2026-112894",
       "package": "pillow",
@@ -1862,6 +1970,29 @@
         "https://github.com/python-pillow/Pillow/commit/f6a852555f1a1bdff7781abf25f1a3b8bd6ce6cb",
         "https://github.com/python-pillow/Pillow/releases/tag/13.0.0",
         "https://github.com/python-pillow/Pillow/security/advisories/GHSA-jg86-v3jv-hrpm"
+      ]
+    },
+    {
+      "id": "pygoat:CVE-2026-112401:pillow:12.1.0",
+      "cve": "CVE-2026-112401",
+      "package": "pillow",
+      "ecosystem": "PyPI",
+      "installed_version": "12.1.0",
+      "fixed_version": "13.0.0",
+      "app": "pygoat",
+      "cvss": 7.5,
+      "epss": 0.00649,
+      "in_kev": false,
+      "kev_date_added": null,
+      "priority_score": 19,
+      "priority_label": "low",
+      "summary": {
+        "en": "Pillow is a Python imaging library. From 5.4.0 until 13.0.0, Pillow performs quadratic copying while parsing GIF comments. GifImageFile._seek() repeatedly appends immutable bytes for comment sub-blocks and multiple comment extensions, and frame zero is parsed during Image.open(). An attacker can submit a small-dimension GIF containing many comment extensions to any application that opens the file. This can consume excessive CPU and deny service before the application can inspect the image. This issue is fixed in version 13.0.0."
+      },
+      "references": [
+        "https://github.com/python-pillow/Pillow/commit/68a3fe957d8a4d552e8c69d96066d749f0614c7e",
+        "https://github.com/python-pillow/Pillow/releases/tag/13.0.0",
+        "https://github.com/python-pillow/Pillow/security/advisories/GHSA-74r2-7ff9-mjj2"
       ]
     },
     {
@@ -1886,31 +2017,6 @@
         "https://github.com/python-pillow/Pillow/pull/10093",
         "https://github.com/python-pillow/Pillow/releases/tag/13.0.0",
         "https://github.com/python-pillow/Pillow/security/advisories/GHSA-mrfp-p49p-3hf2"
-      ]
-    },
-    {
-      "id": "pygoat:CVE-2025-59681:django:4.2",
-      "cve": "CVE-2025-59681",
-      "package": "django",
-      "ecosystem": "PyPI",
-      "installed_version": "4.2",
-      "fixed_version": "4.2.25",
-      "app": "pygoat",
-      "cvss": 7.1,
-      "epss": 0.00662,
-      "in_kev": false,
-      "kev_date_added": null,
-      "priority_score": 18,
-      "priority_label": "low",
-      "summary": {
-        "en": "An issue was discovered in Django 4.2 before 4.2.25, 5.1 before 5.1.13, and 5.2 before 5.2.7. QuerySet.annotate(), QuerySet.alias(), QuerySet.aggregate(), and QuerySet.extra() are subject to SQL injection in column aliases, when using a suitably crafted dictionary, with dictionary expansion, as the **kwargs passed to these methods (on MySQL and MariaDB).",
-        "es": "Se descubri\u00f3 un problema en Django 4.2 anterior a 4.2.25, 5.1 anterior a 5.1.13 y 5.2 anterior a 5.2.7. QuerySet.annotate(), QuerySet.alias(), QuerySet.aggregate() y QuerySet.extra() est\u00e1n sujetos a inyecci\u00f3n SQL en los alias de columna, al usar un diccionario adecuadamente dise\u00f1ado, con expansi\u00f3n de diccionario, como los kwargs pasados a estos m\u00e9todos (en MySQL y MariaDB)."
-      },
-      "references": [
-        "https://docs.djangoproject.com/en/dev/releases/security/",
-        "https://groups.google.com/g/django-announce",
-        "https://www.djangoproject.com/weblog/2025/oct/01/security-releases/",
-        "http://www.openwall.com/lists/oss-security/2025/10/01/3"
       ]
     },
     {
@@ -1996,6 +2102,29 @@
       ]
     },
     {
+      "id": "pygoat:CVE-2026-112406:pillow:12.1.0",
+      "cve": "CVE-2026-112406",
+      "package": "pillow",
+      "ecosystem": "PyPI",
+      "installed_version": "12.1.0",
+      "fixed_version": "13.0.0",
+      "app": "pygoat",
+      "cvss": 7.5,
+      "epss": 0.00573,
+      "in_kev": false,
+      "kev_date_added": null,
+      "priority_score": 19,
+      "priority_label": "low",
+      "summary": {
+        "en": "Pillow is a Python imaging library. From 5.1.0 until 13.0.0, Pillow can enter an infinite loop while rewriting PDF pages. PdfParser.rewrite_pages() follows Parent relationships without detecting a cycle in the page tree. An attacker can supply a cyclic PDF to an application that appends an image to that PDF. This can hold the worker at full CPU and deny service. This issue is fixed in version 13.0.0."
+      },
+      "references": [
+        "https://github.com/python-pillow/Pillow/commit/b3ebf20c694f2f12537a629c30229a1d5a53f777",
+        "https://github.com/python-pillow/Pillow/releases/tag/13.0.0",
+        "https://github.com/python-pillow/Pillow/security/advisories/GHSA-f2g6-542v-9j58"
+      ]
+    },
+    {
       "id": "pygoat:CVE-2026-112397:pillow:12.1.0",
       "cve": "CVE-2026-112397",
       "package": "pillow",
@@ -2019,26 +2148,28 @@
       ]
     },
     {
-      "id": "pygoat:CVE-2026-112406:pillow:12.1.0",
-      "cve": "CVE-2026-112406",
+      "id": "pygoat:CVE-2026-54058:pillow:12.1.0",
+      "cve": "CVE-2026-54058",
       "package": "pillow",
       "ecosystem": "PyPI",
       "installed_version": "12.1.0",
-      "fixed_version": "13.0.0",
+      "fixed_version": "12.3.0",
       "app": "pygoat",
-      "cvss": 7.5,
-      "epss": 0.00573,
+      "cvss": 9.1,
+      "epss": 0.00521,
       "in_kev": false,
       "kev_date_added": null,
-      "priority_score": 19,
-      "priority_label": "low",
+      "priority_score": 23,
+      "priority_label": "medium",
       "summary": {
-        "en": "Pillow is a Python imaging library. From 5.1.0 until 13.0.0, Pillow can enter an infinite loop while rewriting PDF pages. PdfParser.rewrite_pages() follows Parent relationships without detecting a cycle in the page tree. An attacker can supply a cyclic PDF to an application that appends an image to that PDF. This can hold the worker at full CPU and deny service. This issue is fixed in version 13.0.0."
+        "en": "Pillow is a Python imaging library. Prior to 12.3.0, when Pillow loads an uncompressed McIdas AREA image from a filename through the mmap raw codec path, attacker-controlled header words can set a row stride smaller than the natural row width, causing pixel access such as Image.tobytes(), getpixel, convert, or save to read beyond the mapped region and disclose adjacent process memory or fault. This issue is fixed in version 12.3.0.",
+        "es": "Pillow es una biblioteca de im\u00e1genes de Python. Antes de la versi\u00f3n 12.3.0, cuando Pillow carga una imagen McIdas AREA sin comprimir desde un nombre de archivo a trav\u00e9s de la ruta del c\u00f3dec mmap raw, palabras de encabezado controladas por el atacante pueden establecer un paso de fila menor que el ancho de fila natural, causando que el acceso a p\u00edxeles, como Image.tobytes(), getpixel, convert o save, lea m\u00e1s all\u00e1 de la regi\u00f3n mapeada y divulgue memoria de proceso adyacente o cause un fallo. Este problema est\u00e1 solucionado en la versi\u00f3n 12.3.0."
       },
       "references": [
-        "https://github.com/python-pillow/Pillow/commit/b3ebf20c694f2f12537a629c30229a1d5a53f777",
-        "https://github.com/python-pillow/Pillow/releases/tag/13.0.0",
-        "https://github.com/python-pillow/Pillow/security/advisories/GHSA-f2g6-542v-9j58"
+        "https://github.com/python-pillow/Pillow/commit/6a8de891fb00968e5ea79bfa84368ed90b3cfc1d",
+        "https://github.com/python-pillow/Pillow/pull/9719",
+        "https://github.com/python-pillow/Pillow/releases/tag/12.3.0",
+        "https://github.com/python-pillow/Pillow/security/advisories/GHSA-62p4-gmf7-7g93"
       ]
     },
     {
@@ -2162,54 +2293,49 @@
       ]
     },
     {
-      "id": "pygoat:CVE-2025-26699:django:4.2",
-      "cve": "CVE-2025-26699",
-      "package": "django",
-      "ecosystem": "PyPI",
-      "installed_version": "4.2",
-      "fixed_version": "4.2.20",
-      "app": "pygoat",
-      "cvss": 5.0,
-      "epss": 0.0083,
-      "in_kev": false,
-      "kev_date_added": null,
-      "priority_score": 13,
-      "priority_label": "low",
-      "summary": {
-        "en": "An issue was discovered in Django 5.1 before 5.1.7, 5.0 before 5.0.13, and 4.2 before 4.2.20. The django.utils.text.wrap() method and wordwrap template filter are subject to a potential denial-of-service attack when used with very long strings.",
-        "es": "Se descubri\u00f3 un problema en Django 5.1 anterior a 5.1.7, 5.0 anterior a 5.0.13 y 4.2 anterior a 4.2.20. El m\u00e9todo django.utils.text.wrap() y el filtro de plantilla wordwrap est\u00e1n sujetos a un posible ataque de denegaci\u00f3n de servicio cuando se utilizan con cadenas muy largas. "
-      },
-      "references": [
-        "https://docs.djangoproject.com/en/dev/releases/security/",
-        "https://groups.google.com/g/django-announce",
-        "https://www.djangoproject.com/weblog/2025/mar/06/security-releases/",
-        "http://www.openwall.com/lists/oss-security/2025/03/06/12",
-        "https://lists.debian.org/debian-lts-announce/2025/03/msg00012.html"
-      ]
-    },
-    {
-      "id": "pygoat:CVE-2026-54058:pillow:12.1.0",
-      "cve": "CVE-2026-54058",
+      "id": "pygoat:CVE-2026-112391:pillow:12.1.0",
+      "cve": "CVE-2026-112391",
       "package": "pillow",
       "ecosystem": "PyPI",
       "installed_version": "12.1.0",
-      "fixed_version": "12.3.0",
+      "fixed_version": "13.0.0",
       "app": "pygoat",
-      "cvss": 9.1,
-      "epss": 0.00521,
+      "cvss": 7.5,
+      "epss": 0.00581,
       "in_kev": false,
       "kev_date_added": null,
-      "priority_score": 23,
-      "priority_label": "medium",
+      "priority_score": 19,
+      "priority_label": "low",
       "summary": {
-        "en": "Pillow is a Python imaging library. Prior to 12.3.0, when Pillow loads an uncompressed McIdas AREA image from a filename through the mmap raw codec path, attacker-controlled header words can set a row stride smaller than the natural row width, causing pixel access such as Image.tobytes(), getpixel, convert, or save to read beyond the mapped region and disclose adjacent process memory or fault. This issue is fixed in version 12.3.0.",
-        "es": "Pillow es una biblioteca de im\u00e1genes de Python. Antes de la versi\u00f3n 12.3.0, cuando Pillow carga una imagen McIdas AREA sin comprimir desde un nombre de archivo a trav\u00e9s de la ruta del c\u00f3dec mmap raw, palabras de encabezado controladas por el atacante pueden establecer un paso de fila menor que el ancho de fila natural, causando que el acceso a p\u00edxeles, como Image.tobytes(), getpixel, convert o save, lea m\u00e1s all\u00e1 de la regi\u00f3n mapeada y divulgue memoria de proceso adyacente o cause un fallo. Este problema est\u00e1 solucionado en la versi\u00f3n 12.3.0."
+        "en": "Pillow is a Python imaging library. From 5.1.0 until 13.0.0, Pillow's PdfParser.get_value() can recurse without a limit while reading nested PDF objects. The parser follows attacker-controlled arrays and dictionaries when an existing PDF is opened for append. An attacker can provide a deeply nested PDF to an application that saves an image with PDF append enabled. This can raise an uncaught RecursionError or terminate the worker, causing denial of service. This issue is fixed in version 13.0.0."
       },
       "references": [
-        "https://github.com/python-pillow/Pillow/commit/6a8de891fb00968e5ea79bfa84368ed90b3cfc1d",
-        "https://github.com/python-pillow/Pillow/pull/9719",
-        "https://github.com/python-pillow/Pillow/releases/tag/12.3.0",
-        "https://github.com/python-pillow/Pillow/security/advisories/GHSA-62p4-gmf7-7g93"
+        "https://github.com/python-pillow/Pillow/commit/94cb11c44ff7345414da17ebfea1598a529ad9cd",
+        "https://github.com/python-pillow/Pillow/releases/tag/13.0.0",
+        "https://github.com/python-pillow/Pillow/security/advisories/GHSA-254f-3936-288h"
+      ]
+    },
+    {
+      "id": "pygoat:CVE-2026-112394:pillow:12.1.0",
+      "cve": "CVE-2026-112394",
+      "package": "pillow",
+      "ecosystem": "PyPI",
+      "installed_version": "12.1.0",
+      "fixed_version": "13.0.0",
+      "app": "pygoat",
+      "cvss": 8.2,
+      "epss": 0.00555,
+      "in_kev": false,
+      "kev_date_added": null,
+      "priority_score": 21,
+      "priority_label": "medium",
+      "summary": {
+        "en": "Pillow is a Python imaging library. Prior to 13.0.0, Pillow's P;2L and P;4L raw decoders can read past the end of an input buffer. ImagingRawDecode calculates a packed-pixel row size, while the unpackers read separately padded bit planes. A caller can supply a buffer and image dimensions whose accepted size is smaller than the unpacker's actual footprint. This can disclose up to three adjacent heap bytes in output pixels or crash the process. This issue is fixed in version 13.0.0."
+      },
+      "references": [
+        "https://github.com/python-pillow/Pillow/commit/392ee6f0d19a4adb766a63e9a99f3c28193b8d31",
+        "https://github.com/python-pillow/Pillow/releases/tag/13.0.0",
+        "https://github.com/python-pillow/Pillow/security/advisories/GHSA-4558-3h8r-v8xp"
       ]
     },
     {
@@ -2233,6 +2359,29 @@
         "https://github.com/python-pillow/Pillow/commit/5dcb630b9798efd91929cb873d677aeee6ed0bb3",
         "https://github.com/python-pillow/Pillow/releases/tag/13.0.0",
         "https://github.com/python-pillow/Pillow/security/advisories/GHSA-gg2r-wvfm-q9rx"
+      ]
+    },
+    {
+      "id": "pygoat:CVE-2026-112891:pillow:12.1.0",
+      "cve": "CVE-2026-112891",
+      "package": "pillow",
+      "ecosystem": "PyPI",
+      "installed_version": "12.1.0",
+      "fixed_version": "13.0.0",
+      "app": "pygoat",
+      "cvss": 7.5,
+      "epss": 0.00549,
+      "in_kev": false,
+      "kev_date_added": null,
+      "priority_score": 19,
+      "priority_label": "low",
+      "summary": {
+        "en": "Pillow is a Python imaging library. From 9.2.0 until 13.0.0, Pillow performs quadratic copying when saving a GIF with a long comment. _get_global_header() repeatedly copies portions of comment data while assembling the global header, including comments retained from an untrusted input image. An attacker can supply an image with a large GIF comment to an application that saves it as GIF. This can consume excessive CPU and delay or deny service. This issue is fixed in version 13.0.0."
+      },
+      "references": [
+        "https://github.com/python-pillow/Pillow/commit/68a3fe957d8a4d552e8c69d96066d749f0614c7e",
+        "https://github.com/python-pillow/Pillow/releases/tag/13.0.0",
+        "https://github.com/python-pillow/Pillow/security/advisories/GHSA-fc9g-5qg7-mf45"
       ]
     },
     {
@@ -2308,6 +2457,58 @@
       ]
     },
     {
+      "id": "pygoat:CVE-2026-112901:pillow:12.1.0",
+      "cve": "CVE-2026-112901",
+      "package": "pillow",
+      "ecosystem": "PyPI",
+      "installed_version": "12.1.0",
+      "fixed_version": "13.0.0",
+      "app": "pygoat",
+      "cvss": 7.5,
+      "epss": 0.00532,
+      "in_kev": false,
+      "kev_date_added": null,
+      "priority_score": 19,
+      "priority_label": "low",
+      "summary": {
+        "en": "Pillow is a Python imaging library. Prior to 13.0.0, Pillow's XBM header parser is vulnerable to regular-expression denial of service. In XbmImageFile._open, when an application calls Image.open() on a small crafted XBM file, XbmImagePlugin applies a backtracking expression to the attacker-controlled header before image dimensions are accepted, stalling a worker for minutes and denying service. This issue is fixed in version 13.0.0."
+      },
+      "references": [
+        "https://github.com/python-pillow/Pillow/commit/2852a3e3d568997ddec745fc800991f138878f4b",
+        "https://github.com/python-pillow/Pillow/releases/tag/13.0.0",
+        "https://github.com/python-pillow/Pillow/security/advisories/GHSA-xgh8-jp6q-p5x8"
+      ]
+    },
+    {
+      "id": "pygoat:CVE-2025-48432:django:4.2",
+      "cve": "CVE-2025-48432",
+      "package": "django",
+      "ecosystem": "PyPI",
+      "installed_version": "4.2",
+      "fixed_version": "4.2.23",
+      "app": "pygoat",
+      "cvss": 4.0,
+      "epss": 0.00807,
+      "in_kev": false,
+      "kev_date_added": null,
+      "priority_score": 11,
+      "priority_label": "low",
+      "summary": {
+        "en": "An issue was discovered in Django 5.2 before 5.2.3, 5.1 before 5.1.11, and 4.2 before 4.2.23. Internal HTTP response logging does not escape request.path, which allows remote attackers to potentially manipulate log output via crafted URLs. This may lead to log injection or forgery when logs are viewed in terminals or processed by external systems.",
+        "es": "Se descubri\u00f3 un problema en Django 5.2 (anterior a la 5.2.2), 5.1 (anterior a la 5.1.10) y 4.2 (anterior a la 4.2.22). El registro interno de respuestas HTTP no escapa a request.path, lo que permite a atacantes remotos manipular la salida del registro mediante URL manipuladas. Esto puede provocar la inyecci\u00f3n o falsificaci\u00f3n de registros cuando estos se visualizan en terminales o son procesados por sistemas externos."
+      },
+      "references": [
+        "https://docs.djangoproject.com/en/dev/releases/security/",
+        "https://groups.google.com/g/django-announce",
+        "https://www.djangoproject.com/weblog/2025/jun/04/security-releases/",
+        "https://www.djangoproject.com/weblog/2025/jun/10/bugfix-releases/",
+        "http://www.openwall.com/lists/oss-security/2025/06/04/5",
+        "http://www.openwall.com/lists/oss-security/2025/06/10/2",
+        "http://www.openwall.com/lists/oss-security/2025/06/10/3",
+        "http://www.openwall.com/lists/oss-security/2025/06/10/4"
+      ]
+    },
+    {
       "id": "pygoat:CVE-2026-55380:pillow:12.1.0",
       "cve": "CVE-2026-55380",
       "package": "pillow",
@@ -2378,49 +2579,26 @@
       ]
     },
     {
-      "id": "pygoat:CVE-2026-112401:pillow:12.1.0",
-      "cve": "CVE-2026-112401",
+      "id": "pygoat:CVE-2026-112395:pillow:12.1.0",
+      "cve": "CVE-2026-112395",
       "package": "pillow",
       "ecosystem": "PyPI",
       "installed_version": "12.1.0",
       "fixed_version": "13.0.0",
       "app": "pygoat",
-      "cvss": 7.5,
-      "epss": 0.00649,
+      "cvss": 6.5,
+      "epss": 0.00514,
       "in_kev": false,
       "kev_date_added": null,
-      "priority_score": 19,
+      "priority_score": 17,
       "priority_label": "low",
       "summary": {
-        "en": "Pillow is a Python imaging library. From 5.4.0 until 13.0.0, Pillow performs quadratic copying while parsing GIF comments. GifImageFile._seek() repeatedly appends immutable bytes for comment sub-blocks and multiple comment extensions, and frame zero is parsed during Image.open(). An attacker can submit a small-dimension GIF containing many comment extensions to any application that opens the file. This can consume excessive CPU and deny service before the application can inspect the image. This issue is fixed in version 13.0.0."
+        "en": "Pillow is a Python imaging library. From 8.2.0 until 13.0.0, Pillow's tiled-TIFF decoder can read past the tile buffer while copying four-byte pixels. In _decodeTile, libtiff can return a tile allocation smaller than the required row stride multiplied by the tile length, and Pillow's stride-and-copy loop walks beyond that allocation. An attacker can supply a crafted tiled TIFF to an application that loads it. This can expose adjacent heap data in pixels or crash the process. This issue is fixed in version 13.0.0."
       },
       "references": [
-        "https://github.com/python-pillow/Pillow/commit/68a3fe957d8a4d552e8c69d96066d749f0614c7e",
+        "https://github.com/python-pillow/Pillow/commit/76869efdbbf2ad7dccd7536520fb61b7a00ab61e",
         "https://github.com/python-pillow/Pillow/releases/tag/13.0.0",
-        "https://github.com/python-pillow/Pillow/security/advisories/GHSA-74r2-7ff9-mjj2"
-      ]
-    },
-    {
-      "id": "pygoat:CVE-2026-112396:pillow:12.1.0",
-      "cve": "CVE-2026-112396",
-      "package": "pillow",
-      "ecosystem": "PyPI",
-      "installed_version": "12.1.0",
-      "fixed_version": "13.0.0",
-      "app": "pygoat",
-      "cvss": 5.9,
-      "epss": 0.00694,
-      "in_kev": false,
-      "kev_date_added": null,
-      "priority_score": 15,
-      "priority_label": "low",
-      "summary": {
-        "en": "Pillow is a Python imaging library. From 11.3.0 until 13.0.0, Pillow has a heap use-after-free when libtiff rejects a tag while encoding TIFF data to an in-memory buffer. When an application saves attacker-influenced TIFF tags to BytesIO, libtiff can reject a tag during encoding in ImagingLibTiffEncode; the error path then frees the output buffer without closing or clearing the TIFF handle, and later cleanup flushes through the write callback into freed memory, which can crash the process and may enable code execution. This issue is fixed in version 13.0.0."
-      },
-      "references": [
-        "https://github.com/python-pillow/Pillow/commit/dc95da20207827a062cfbf551ee9f6031465a8bb",
-        "https://github.com/python-pillow/Pillow/releases/tag/13.0.0",
-        "https://github.com/python-pillow/Pillow/security/advisories/GHSA-4rr5-89j8-mwwm"
+        "https://github.com/python-pillow/Pillow/security/advisories/GHSA-462x-pgg6-55fp"
       ]
     },
     {
@@ -2476,6 +2654,30 @@
       ]
     },
     {
+      "id": "pygoat:CVE-2026-96778:pillow:12.1.0",
+      "cve": "CVE-2026-96778",
+      "package": "pillow",
+      "ecosystem": "PyPI",
+      "installed_version": "12.1.0",
+      "fixed_version": "13.0.0",
+      "app": "pygoat",
+      "cvss": 8.8,
+      "epss": 0.00454,
+      "in_kev": false,
+      "kev_date_added": null,
+      "priority_score": 22,
+      "priority_label": "medium",
+      "summary": {
+        "en": "Pillow is a Python imaging library. From 9.4.0 until 13.0.0, ImagingJpegEncode() in src/libImaging/JpegEncode.c can call jpeg_write_marker() for a JPEG COM comment when an ICC profile has exactly filled the 65536-byte encoder buffer. libjpeg writes one byte before checking the exhausted free_in_buffer counter, which then wraps and permits the attacker-controlled comment and subsequent compressed image data to overwrite adjacent heap memory. Re-saving an untrusted image as JPEG while preserving its ICC profile and forwarded comment can crash the process and may enable code execution in suitable runtime and heap layouts. This issue is fixed in version 13.0.0."
+      },
+      "references": [
+        "https://github.com/python-pillow/Pillow/commit/02561b8dc6117d5670d4b469fecdd02c70854f9b",
+        "https://github.com/python-pillow/Pillow/pull/10124",
+        "https://github.com/python-pillow/Pillow/releases/tag/13.0.0",
+        "https://github.com/python-pillow/Pillow/security/advisories/GHSA-g7cr-3p24-7wf7"
+      ]
+    },
+    {
       "id": "pygoat:CVE-2026-27199:werkzeug:2.1.2",
       "cve": "CVE-2026-27199",
       "package": "werkzeug",
@@ -2525,30 +2727,6 @@
       ]
     },
     {
-      "id": "pygoat:CVE-2026-96778:pillow:12.1.0",
-      "cve": "CVE-2026-96778",
-      "package": "pillow",
-      "ecosystem": "PyPI",
-      "installed_version": "12.1.0",
-      "fixed_version": "13.0.0",
-      "app": "pygoat",
-      "cvss": 8.8,
-      "epss": 0.00454,
-      "in_kev": false,
-      "kev_date_added": null,
-      "priority_score": 22,
-      "priority_label": "medium",
-      "summary": {
-        "en": "Pillow is a Python imaging library. From 9.4.0 until 13.0.0, ImagingJpegEncode() in src/libImaging/JpegEncode.c can call jpeg_write_marker() for a JPEG COM comment when an ICC profile has exactly filled the 65536-byte encoder buffer. libjpeg writes one byte before checking the exhausted free_in_buffer counter, which then wraps and permits the attacker-controlled comment and subsequent compressed image data to overwrite adjacent heap memory. Re-saving an untrusted image as JPEG while preserving its ICC profile and forwarded comment can crash the process and may enable code execution in suitable runtime and heap layouts. This issue is fixed in version 13.0.0."
-      },
-      "references": [
-        "https://github.com/python-pillow/Pillow/commit/02561b8dc6117d5670d4b469fecdd02c70854f9b",
-        "https://github.com/python-pillow/Pillow/pull/10124",
-        "https://github.com/python-pillow/Pillow/releases/tag/13.0.0",
-        "https://github.com/python-pillow/Pillow/security/advisories/GHSA-g7cr-3p24-7wf7"
-      ]
-    },
-    {
       "id": "pygoat:CVE-2026-3902:django:4.2",
       "cve": "CVE-2026-3902",
       "package": "django",
@@ -2573,29 +2751,6 @@
       ]
     },
     {
-      "id": "pygoat:CVE-2026-112391:pillow:12.1.0",
-      "cve": "CVE-2026-112391",
-      "package": "pillow",
-      "ecosystem": "PyPI",
-      "installed_version": "12.1.0",
-      "fixed_version": "13.0.0",
-      "app": "pygoat",
-      "cvss": 7.5,
-      "epss": 0.00581,
-      "in_kev": false,
-      "kev_date_added": null,
-      "priority_score": 19,
-      "priority_label": "low",
-      "summary": {
-        "en": "Pillow is a Python imaging library. From 5.1.0 until 13.0.0, Pillow's PdfParser.get_value() can recurse without a limit while reading nested PDF objects. The parser follows attacker-controlled arrays and dictionaries when an existing PDF is opened for append. An attacker can provide a deeply nested PDF to an application that saves an image with PDF append enabled. This can raise an uncaught RecursionError or terminate the worker, causing denial of service. This issue is fixed in version 13.0.0."
-      },
-      "references": [
-        "https://github.com/python-pillow/Pillow/commit/94cb11c44ff7345414da17ebfea1598a529ad9cd",
-        "https://github.com/python-pillow/Pillow/releases/tag/13.0.0",
-        "https://github.com/python-pillow/Pillow/security/advisories/GHSA-254f-3936-288h"
-      ]
-    },
-    {
       "id": "pygoat:CVE-2026-114134:black:26.1.0",
       "cve": "CVE-2026-114134",
       "package": "black",
@@ -2616,29 +2771,6 @@
         "https://github.com/psf/black/commit/ac1f71563aeccf73cf13ece00f231d9d6c66a514",
         "https://github.com/psf/black/pull/5510",
         "https://github.com/psf/black/security/advisories/GHSA-cg8m-r9f2-5wm2"
-      ]
-    },
-    {
-      "id": "pygoat:CVE-2026-112891:pillow:12.1.0",
-      "cve": "CVE-2026-112891",
-      "package": "pillow",
-      "ecosystem": "PyPI",
-      "installed_version": "12.1.0",
-      "fixed_version": "13.0.0",
-      "app": "pygoat",
-      "cvss": 7.5,
-      "epss": 0.00549,
-      "in_kev": false,
-      "kev_date_added": null,
-      "priority_score": 19,
-      "priority_label": "low",
-      "summary": {
-        "en": "Pillow is a Python imaging library. From 9.2.0 until 13.0.0, Pillow performs quadratic copying when saving a GIF with a long comment. _get_global_header() repeatedly copies portions of comment data while assembling the global header, including comments retained from an untrusted input image. An attacker can supply an image with a large GIF comment to an application that saves it as GIF. This can consume excessive CPU and delay or deny service. This issue is fixed in version 13.0.0."
-      },
-      "references": [
-        "https://github.com/python-pillow/Pillow/commit/68a3fe957d8a4d552e8c69d96066d749f0614c7e",
-        "https://github.com/python-pillow/Pillow/releases/tag/13.0.0",
-        "https://github.com/python-pillow/Pillow/security/advisories/GHSA-fc9g-5qg7-mf45"
       ]
     },
     {
@@ -2820,29 +2952,6 @@
       ]
     },
     {
-      "id": "pygoat:CVE-2026-112901:pillow:12.1.0",
-      "cve": "CVE-2026-112901",
-      "package": "pillow",
-      "ecosystem": "PyPI",
-      "installed_version": "12.1.0",
-      "fixed_version": "13.0.0",
-      "app": "pygoat",
-      "cvss": 7.5,
-      "epss": 0.00532,
-      "in_kev": false,
-      "kev_date_added": null,
-      "priority_score": 19,
-      "priority_label": "low",
-      "summary": {
-        "en": "Pillow is a Python imaging library. Prior to 13.0.0, Pillow's XBM header parser is vulnerable to regular-expression denial of service. In XbmImageFile._open, when an application calls Image.open() on a small crafted XBM file, XbmImagePlugin applies a backtracking expression to the attacker-controlled header before image dimensions are accepted, stalling a worker for minutes and denying service. This issue is fixed in version 13.0.0."
-      },
-      "references": [
-        "https://github.com/python-pillow/Pillow/commit/2852a3e3d568997ddec745fc800991f138878f4b",
-        "https://github.com/python-pillow/Pillow/releases/tag/13.0.0",
-        "https://github.com/python-pillow/Pillow/security/advisories/GHSA-xgh8-jp6q-p5x8"
-      ]
-    },
-    {
       "id": "pygoat:CVE-2024-39689:certifi:2022.12.7",
       "cve": "CVE-2024-39689",
       "package": "certifi",
@@ -2865,29 +2974,6 @@
         "https://github.com/certifi/python-certifi/security/advisories/GHSA-248v-346w-9cwc",
         "https://groups.google.com/a/mozilla.org/g/dev-security-policy/c/XpknYMPO8dI",
         "https://security.netapp.com/advisory/ntap-20241206-0001/"
-      ]
-    },
-    {
-      "id": "pygoat:CVE-2026-112394:pillow:12.1.0",
-      "cve": "CVE-2026-112394",
-      "package": "pillow",
-      "ecosystem": "PyPI",
-      "installed_version": "12.1.0",
-      "fixed_version": "13.0.0",
-      "app": "pygoat",
-      "cvss": 8.2,
-      "epss": 0.00555,
-      "in_kev": false,
-      "kev_date_added": null,
-      "priority_score": 21,
-      "priority_label": "medium",
-      "summary": {
-        "en": "Pillow is a Python imaging library. Prior to 13.0.0, Pillow's P;2L and P;4L raw decoders can read past the end of an input buffer. ImagingRawDecode calculates a packed-pixel row size, while the unpackers read separately padded bit planes. A caller can supply a buffer and image dimensions whose accepted size is smaller than the unpacker's actual footprint. This can disclose up to three adjacent heap bytes in output pixels or crash the process. This issue is fixed in version 13.0.0."
-      },
-      "references": [
-        "https://github.com/python-pillow/Pillow/commit/392ee6f0d19a4adb766a63e9a99f3c28193b8d31",
-        "https://github.com/python-pillow/Pillow/releases/tag/13.0.0",
-        "https://github.com/python-pillow/Pillow/security/advisories/GHSA-4558-3h8r-v8xp"
       ]
     },
     {
@@ -3035,29 +3121,6 @@
       ]
     },
     {
-      "id": "pygoat:CVE-2026-112395:pillow:12.1.0",
-      "cve": "CVE-2026-112395",
-      "package": "pillow",
-      "ecosystem": "PyPI",
-      "installed_version": "12.1.0",
-      "fixed_version": "13.0.0",
-      "app": "pygoat",
-      "cvss": 6.5,
-      "epss": 0.00514,
-      "in_kev": false,
-      "kev_date_added": null,
-      "priority_score": 17,
-      "priority_label": "low",
-      "summary": {
-        "en": "Pillow is a Python imaging library. From 8.2.0 until 13.0.0, Pillow's tiled-TIFF decoder can read past the tile buffer while copying four-byte pixels. In _decodeTile, libtiff can return a tile allocation smaller than the required row stride multiplied by the tile length, and Pillow's stride-and-copy loop walks beyond that allocation. An attacker can supply a crafted tiled TIFF to an application that loads it. This can expose adjacent heap data in pixels or crash the process. This issue is fixed in version 13.0.0."
-      },
-      "references": [
-        "https://github.com/python-pillow/Pillow/commit/76869efdbbf2ad7dccd7536520fb61b7a00ab61e",
-        "https://github.com/python-pillow/Pillow/releases/tag/13.0.0",
-        "https://github.com/python-pillow/Pillow/security/advisories/GHSA-462x-pgg6-55fp"
-      ]
-    },
-    {
       "id": "pygoat:CVE-2023-45803:urllib3:1.26.9",
       "cve": "CVE-2023-45803",
       "package": "urllib3",
@@ -3083,81 +3146,6 @@
         "https://lists.fedoraproject.org/archives/list/package-announce@lists.fedoraproject.org/message/PPDPLM6UUMN55ESPQWJFLLIZY4ZKCNRX/",
         "https://www.rfc-editor.org/rfc/rfc9110.html#name-get",
         "https://lists.debian.org/debian-lts-announce/2024/12/msg00020.html"
-      ]
-    },
-    {
-      "id": "pygoat:CVE-2026-59205:pillow:12.1.0",
-      "cve": "CVE-2026-59205",
-      "package": "pillow",
-      "ecosystem": "PyPI",
-      "installed_version": "12.1.0",
-      "fixed_version": "12.3.0",
-      "app": "pygoat",
-      "cvss": 7.5,
-      "epss": 0.00385,
-      "in_kev": false,
-      "kev_date_added": null,
-      "priority_score": 19,
-      "priority_label": "low",
-      "summary": {
-        "en": "Pillow is a Python imaging library. Prior to 12.3.0, Pillow's ImageCms.ImageCmsTransform.apply(im, imOut) API can trigger controlled native heap corruption when the caller supplies an output image whose mode does not match the transform's declared output mode. This issue is fixed in version 12.3.0.",
-        "es": "Pillow es una biblioteca de procesamiento de im\u00e1genes de Python. Antes de la versi\u00f3n 12.3.0, la API ImageCms.ImageCmsTransform.apply(im, imOut) de Pillow puede desencadenar una corrupci\u00f3n controlada del heap nativo cuando el llamador suministra una imagen de salida cuyo modo no coincide con el modo de salida declarado de la transformaci\u00f3n. Este problema se ha corregido en la versi\u00f3n 12.3.0."
-      },
-      "references": [
-        "https://github.com/python-pillow/Pillow/commit/a9ffc42bedf4fc0a7ef8d6486e7f9e81e3397721",
-        "https://github.com/python-pillow/Pillow/pull/9715",
-        "https://github.com/python-pillow/Pillow/releases/tag/12.3.0",
-        "https://github.com/python-pillow/Pillow/security/advisories/GHSA-9hw9-ch79-4vh6"
-      ]
-    },
-    {
-      "id": "pygoat:CVE-2026-59200:pillow:12.1.0",
-      "cve": "CVE-2026-59200",
-      "package": "pillow",
-      "ecosystem": "PyPI",
-      "installed_version": "12.1.0",
-      "fixed_version": "12.3.0",
-      "app": "pygoat",
-      "cvss": 7.5,
-      "epss": 0.00385,
-      "in_kev": false,
-      "kev_date_added": null,
-      "priority_score": 19,
-      "priority_label": "low",
-      "summary": {
-        "en": "Pillow is a Python imaging library. From 5.1.0 until 12.3.0, PdfParser.PdfStream.decode() in PIL/PdfParser.py calls zlib.decompress() with bufsize set to the PDF stream Length field without bounding the decompressed output size, allowing a crafted FlateDecode PDF stream to exhaust memory from a small file. This issue is fixed in version 12.3.0.",
-        "es": "Pillow es una biblioteca de im\u00e1genes de Python. Desde la versi\u00f3n 5.1.0 hasta la 12.3.0, PdfParser.PdfStream.decode() en PIL/PdfParser.py llama a zlib.decompress() con bufsize establecido al campo Length del flujo PDF sin limitar el tama\u00f1o de salida descomprimido, permitiendo que un flujo PDF FlateDecode manipulado agote la memoria desde un archivo peque\u00f1o. Este problema est\u00e1 solucionado en la versi\u00f3n 12.3.0."
-      },
-      "references": [
-        "https://github.com/python-pillow/Pillow/commit/f7a31ea75e460e108c37126da1f47812f21f6b09",
-        "https://github.com/python-pillow/Pillow/pull/9718",
-        "https://github.com/python-pillow/Pillow/releases/tag/12.3.0",
-        "https://github.com/python-pillow/Pillow/security/advisories/GHSA-jjj6-mw9f-p565"
-      ]
-    },
-    {
-      "id": "pygoat:CVE-2026-59199:pillow:12.1.0",
-      "cve": "CVE-2026-59199",
-      "package": "pillow",
-      "ecosystem": "PyPI",
-      "installed_version": "12.1.0",
-      "fixed_version": "12.3.0",
-      "app": "pygoat",
-      "cvss": 7.5,
-      "epss": 0.00385,
-      "in_kev": false,
-      "kev_date_added": null,
-      "priority_score": 19,
-      "priority_label": "low",
-      "summary": {
-        "en": "Pillow is a Python imaging library. Prior to 12.3.0, Pillow public image coordinate APIs can trigger a native heap out-of-bounds write when given coordinates near the signed 32-bit integer limits in Image.paste(), Image.crop(), or Image.alpha_composite(). This issue is fixed in version 12.3.0.",
-        "es": "Pillow es una biblioteca de procesamiento de im\u00e1genes de Python. Antes de la versi\u00f3n 12.3.0, las API p\u00fablicas de coordenadas de imagen de Pillow pueden desencadenar una escritura fuera de l\u00edmites en el heap nativo cuando se les dan coordenadas cercanas a los l\u00edmites de enteros con signo de 32 bits en Image.paste(), Image.crop() o Image.alpha_composite(). Este problema est\u00e1 solucionado en la versi\u00f3n 12.3.0."
-      },
-      "references": [
-        "https://github.com/python-pillow/Pillow/commit/ceefc348eb3c3844c7f9796ef2cc3a7dd5fbba7b",
-        "https://github.com/python-pillow/Pillow/pull/9703",
-        "https://github.com/python-pillow/Pillow/releases/tag/12.3.0",
-        "https://github.com/python-pillow/Pillow/security/advisories/GHSA-6r8x-57c9-28j4"
       ]
     },
     {
@@ -3210,6 +3198,81 @@
       ]
     },
     {
+      "id": "pygoat:CVE-2026-59205:pillow:12.1.0",
+      "cve": "CVE-2026-59205",
+      "package": "pillow",
+      "ecosystem": "PyPI",
+      "installed_version": "12.1.0",
+      "fixed_version": "12.3.0",
+      "app": "pygoat",
+      "cvss": 7.5,
+      "epss": 0.00385,
+      "in_kev": false,
+      "kev_date_added": null,
+      "priority_score": 19,
+      "priority_label": "low",
+      "summary": {
+        "en": "Pillow is a Python imaging library. Prior to 12.3.0, Pillow's ImageCms.ImageCmsTransform.apply(im, imOut) API can trigger controlled native heap corruption when the caller supplies an output image whose mode does not match the transform's declared output mode. This issue is fixed in version 12.3.0.",
+        "es": "Pillow es una biblioteca de procesamiento de im\u00e1genes de Python. Antes de la versi\u00f3n 12.3.0, la API ImageCms.ImageCmsTransform.apply(im, imOut) de Pillow puede desencadenar una corrupci\u00f3n controlada del heap nativo cuando el llamador suministra una imagen de salida cuyo modo no coincide con el modo de salida declarado de la transformaci\u00f3n. Este problema se ha corregido en la versi\u00f3n 12.3.0."
+      },
+      "references": [
+        "https://github.com/python-pillow/Pillow/commit/a9ffc42bedf4fc0a7ef8d6486e7f9e81e3397721",
+        "https://github.com/python-pillow/Pillow/pull/9715",
+        "https://github.com/python-pillow/Pillow/releases/tag/12.3.0",
+        "https://github.com/python-pillow/Pillow/security/advisories/GHSA-9hw9-ch79-4vh6"
+      ]
+    },
+    {
+      "id": "pygoat:CVE-2026-59199:pillow:12.1.0",
+      "cve": "CVE-2026-59199",
+      "package": "pillow",
+      "ecosystem": "PyPI",
+      "installed_version": "12.1.0",
+      "fixed_version": "12.3.0",
+      "app": "pygoat",
+      "cvss": 7.5,
+      "epss": 0.00385,
+      "in_kev": false,
+      "kev_date_added": null,
+      "priority_score": 19,
+      "priority_label": "low",
+      "summary": {
+        "en": "Pillow is a Python imaging library. Prior to 12.3.0, Pillow public image coordinate APIs can trigger a native heap out-of-bounds write when given coordinates near the signed 32-bit integer limits in Image.paste(), Image.crop(), or Image.alpha_composite(). This issue is fixed in version 12.3.0.",
+        "es": "Pillow es una biblioteca de procesamiento de im\u00e1genes de Python. Antes de la versi\u00f3n 12.3.0, las API p\u00fablicas de coordenadas de imagen de Pillow pueden desencadenar una escritura fuera de l\u00edmites en el heap nativo cuando se les dan coordenadas cercanas a los l\u00edmites de enteros con signo de 32 bits en Image.paste(), Image.crop() o Image.alpha_composite(). Este problema est\u00e1 solucionado en la versi\u00f3n 12.3.0."
+      },
+      "references": [
+        "https://github.com/python-pillow/Pillow/commit/ceefc348eb3c3844c7f9796ef2cc3a7dd5fbba7b",
+        "https://github.com/python-pillow/Pillow/pull/9703",
+        "https://github.com/python-pillow/Pillow/releases/tag/12.3.0",
+        "https://github.com/python-pillow/Pillow/security/advisories/GHSA-6r8x-57c9-28j4"
+      ]
+    },
+    {
+      "id": "pygoat:CVE-2026-59200:pillow:12.1.0",
+      "cve": "CVE-2026-59200",
+      "package": "pillow",
+      "ecosystem": "PyPI",
+      "installed_version": "12.1.0",
+      "fixed_version": "12.3.0",
+      "app": "pygoat",
+      "cvss": 7.5,
+      "epss": 0.00385,
+      "in_kev": false,
+      "kev_date_added": null,
+      "priority_score": 19,
+      "priority_label": "low",
+      "summary": {
+        "en": "Pillow is a Python imaging library. From 5.1.0 until 12.3.0, PdfParser.PdfStream.decode() in PIL/PdfParser.py calls zlib.decompress() with bufsize set to the PDF stream Length field without bounding the decompressed output size, allowing a crafted FlateDecode PDF stream to exhaust memory from a small file. This issue is fixed in version 12.3.0.",
+        "es": "Pillow es una biblioteca de im\u00e1genes de Python. Desde la versi\u00f3n 5.1.0 hasta la 12.3.0, PdfParser.PdfStream.decode() en PIL/PdfParser.py llama a zlib.decompress() con bufsize establecido al campo Length del flujo PDF sin limitar el tama\u00f1o de salida descomprimido, permitiendo que un flujo PDF FlateDecode manipulado agote la memoria desde un archivo peque\u00f1o. Este problema est\u00e1 solucionado en la versi\u00f3n 12.3.0."
+      },
+      "references": [
+        "https://github.com/python-pillow/Pillow/commit/f7a31ea75e460e108c37126da1f47812f21f6b09",
+        "https://github.com/python-pillow/Pillow/pull/9718",
+        "https://github.com/python-pillow/Pillow/releases/tag/12.3.0",
+        "https://github.com/python-pillow/Pillow/security/advisories/GHSA-jjj6-mw9f-p565"
+      ]
+    },
+    {
       "id": "pygoat:CVE-2026-53877:django:4.2",
       "cve": "CVE-2026-53877",
       "package": "django",
@@ -3257,30 +3320,6 @@
       ]
     },
     {
-      "id": "pygoat:CVE-2026-96643:pillow:12.1.0",
-      "cve": "CVE-2026-96643",
-      "package": "pillow",
-      "ecosystem": "PyPI",
-      "installed_version": "12.1.0",
-      "fixed_version": "13.0.0",
-      "app": "pygoat",
-      "cvss": 6.5,
-      "epss": 0.00373,
-      "in_kev": false,
-      "kev_date_added": null,
-      "priority_score": 17,
-      "priority_label": "low",
-      "summary": {
-        "en": "Pillow is a Python imaging library. From 11.0.0 until 13.0.0, Exif.load() in src/PIL/Image.py repeatedly slices the remaining EXIF data while it begins with the six-byte Exif header. src/PIL/PngImagePlugin.py accepts an uncapped PNG eXIf chunk, so a file filled with repeated headers causes a new shrinking copy on every iteration and quadratic CPU work. The condition is reachable through Image.getexif(), Image._getexif(), and ImageOps.exif_transpose(), including common photo-upload rotation workflows. This issue is fixed in version 13.0.0."
-      },
-      "references": [
-        "https://github.com/python-pillow/Pillow/commit/806e38381c781f32bbd22f4cd026678acd40fd6c",
-        "https://github.com/python-pillow/Pillow/pull/10073",
-        "https://github.com/python-pillow/Pillow/releases/tag/13.0.0",
-        "https://github.com/python-pillow/Pillow/security/advisories/GHSA-g4qv-2jxx-769h"
-      ]
-    },
-    {
       "id": "pygoat:CVE-2026-96637:pillow:12.1.0",
       "cve": "CVE-2026-96637",
       "package": "pillow",
@@ -3302,6 +3341,30 @@
         "https://github.com/python-pillow/Pillow/pull/10076",
         "https://github.com/python-pillow/Pillow/releases/tag/13.0.0",
         "https://github.com/python-pillow/Pillow/security/advisories/GHSA-g842-9rc4-69pw"
+      ]
+    },
+    {
+      "id": "pygoat:CVE-2026-96643:pillow:12.1.0",
+      "cve": "CVE-2026-96643",
+      "package": "pillow",
+      "ecosystem": "PyPI",
+      "installed_version": "12.1.0",
+      "fixed_version": "13.0.0",
+      "app": "pygoat",
+      "cvss": 6.5,
+      "epss": 0.00373,
+      "in_kev": false,
+      "kev_date_added": null,
+      "priority_score": 17,
+      "priority_label": "low",
+      "summary": {
+        "en": "Pillow is a Python imaging library. From 11.0.0 until 13.0.0, Exif.load() in src/PIL/Image.py repeatedly slices the remaining EXIF data while it begins with the six-byte Exif header. src/PIL/PngImagePlugin.py accepts an uncapped PNG eXIf chunk, so a file filled with repeated headers causes a new shrinking copy on every iteration and quadratic CPU work. The condition is reachable through Image.getexif(), Image._getexif(), and ImageOps.exif_transpose(), including common photo-upload rotation workflows. This issue is fixed in version 13.0.0."
+      },
+      "references": [
+        "https://github.com/python-pillow/Pillow/commit/806e38381c781f32bbd22f4cd026678acd40fd6c",
+        "https://github.com/python-pillow/Pillow/pull/10073",
+        "https://github.com/python-pillow/Pillow/releases/tag/13.0.0",
+        "https://github.com/python-pillow/Pillow/security/advisories/GHSA-g4qv-2jxx-769h"
       ]
     },
     {
@@ -3953,6 +4016,30 @@
       ]
     },
     {
+      "id": "pygoat:CVE-2026-69248:cryptography:39.0.1",
+      "cve": "CVE-2026-69248",
+      "package": "cryptography",
+      "ecosystem": "PyPI",
+      "installed_version": "39.0.1",
+      "fixed_version": "49.0.0",
+      "app": "pygoat",
+      "cvss": null,
+      "epss": 0.00244,
+      "in_kev": false,
+      "kev_date_added": null,
+      "priority_score": 0,
+      "priority_label": "low",
+      "summary": {
+        "en": "cryptography is a package designed to expose cryptographic primitives and recipes to Python developers. In versions 45.0.0 through 48.0.0, if an intermediate constrained CA permits the DNS name foo.example.com, and the leaf certificate has a wildcard in its DNS SAN of *.example.com, python-cryptography's verifier accepts which allows escaping outside of the permitted names. The core issue is in DNSConstraint::matches, where a wildcard pattern was treated as matching a more-specific permitted constraint even though *.example.com can expand to sibling names such as bar.example.com outside foo.example.com. This allows acceptance of an invalid certificate chain. This issue is fixed in 49.0.0.",
+        "es": "criptograf\u00eda es un paquete dise\u00f1ado para exponer primitivas y recetas criptogr\u00e1ficas a los desarrolladores de Python. Antes de 49.0.0, si una CA intermedia restringida permite el nombre DNS foo.example.com, y el certificado hoja tiene un comod\u00edn en su SAN DNS de *.example.com, el verificador de python-cryptography lo acepta, lo que permite escapar fuera de los nombres permitidos. El problema principal est\u00e1 en DNSConstraint::matches, donde un patr\u00f3n de comod\u00edn fue tratado como coincidente con una restricci\u00f3n permitida m\u00e1s espec\u00edfica, a pesar de que *.example.com puede expandirse a nombres hermanos como bar.example.com fuera de foo.example.com. Esto permite la aceptaci\u00f3n de una cadena de certificados no v\u00e1lida. Este problema est\u00e1 solucionado en 49.0.0."
+      },
+      "references": [
+        "https://github.com/pyca/cryptography/commit/4d035a4225965edeffd312079a510ef25fcfdcb2",
+        "https://github.com/pyca/cryptography/pull/14888",
+        "https://github.com/pyca/cryptography/security/advisories/GHSA-m2h6-j472-rp4c"
+      ]
+    },
+    {
       "id": "pygoat:CVE-2026-49265:oauthlib:3.2.2",
       "cve": "CVE-2026-49265",
       "package": "oauthlib",
@@ -4284,6 +4371,29 @@
       ]
     },
     {
+      "id": "pygoat:CVE-2026-34073:cryptography:39.0.1",
+      "cve": "CVE-2026-34073",
+      "package": "cryptography",
+      "ecosystem": "PyPI",
+      "installed_version": "39.0.1",
+      "fixed_version": "46.0.6",
+      "app": "pygoat",
+      "cvss": 5.3,
+      "epss": 0.00227,
+      "in_kev": false,
+      "kev_date_added": null,
+      "priority_score": 13,
+      "priority_label": "low",
+      "summary": {
+        "en": "cryptography is a package designed to expose cryptographic primitives and recipes to Python developers. Prior to version 46.0.6, DNS name constraints were only validated against SANs within child certificates, and not the \"peer name\" presented during each validation. Consequently, cryptography would allow a peer named bar.example.com to validate against a wildcard leaf certificate for *.example.com, even if the leaf's parent certificate (or upwards) contained an excluded subtree constraint for bar.example.com. This issue has been patched in version 46.0.6.",
+        "es": "cryptography es un paquete dise\u00f1ado para exponer primitivas criptogr\u00e1ficas y recetas a los desarrolladores de Python. Antes de la versi\u00f3n 46.0.6, las restricciones de nombre DNS solo se validaban contra los SANs dentro de los certificados secundarios, y no contra el 'nombre del par' presentado durante cada validaci\u00f3n. En consecuencia, cryptography permitir\u00eda que un par llamado bar.example.com se validara contra un certificado hoja comod\u00edn para *.example.com, incluso si el certificado padre de la hoja (o superior) conten\u00eda una restricci\u00f3n de sub\u00e1rbol excluido para bar.example.com. Este problema ha sido parcheado en la versi\u00f3n 46.0.6."
+      },
+      "references": [
+        "https://github.com/pyca/cryptography/security/advisories/GHSA-m959-cc7f-wv43",
+        "https://www.kb.cert.org/vuls/id/948176"
+      ]
+    },
+    {
       "id": "pygoat:CVE-2026-102275:pyjwt:2.4.0",
       "cve": "CVE-2026-102275",
       "package": "pyjwt",
@@ -4517,29 +4627,6 @@
         "https://docs.djangoproject.com/en/dev/releases/security/",
         "https://groups.google.com/g/django-announce",
         "https://www.djangoproject.com/weblog/2026/jun/03/security-releases/"
-      ]
-    },
-    {
-      "id": "pygoat:CVE-2026-34073:cryptography:39.0.1",
-      "cve": "CVE-2026-34073",
-      "package": "cryptography",
-      "ecosystem": "PyPI",
-      "installed_version": "39.0.1",
-      "fixed_version": "46.0.6",
-      "app": "pygoat",
-      "cvss": 5.3,
-      "epss": 0.00227,
-      "in_kev": false,
-      "kev_date_added": null,
-      "priority_score": 13,
-      "priority_label": "low",
-      "summary": {
-        "en": "cryptography is a package designed to expose cryptographic primitives and recipes to Python developers. Prior to version 46.0.6, DNS name constraints were only validated against SANs within child certificates, and not the \"peer name\" presented during each validation. Consequently, cryptography would allow a peer named bar.example.com to validate against a wildcard leaf certificate for *.example.com, even if the leaf's parent certificate (or upwards) contained an excluded subtree constraint for bar.example.com. This issue has been patched in version 46.0.6.",
-        "es": "cryptography es un paquete dise\u00f1ado para exponer primitivas criptogr\u00e1ficas y recetas a los desarrolladores de Python. Antes de la versi\u00f3n 46.0.6, las restricciones de nombre DNS solo se validaban contra los SANs dentro de los certificados secundarios, y no contra el 'nombre del par' presentado durante cada validaci\u00f3n. En consecuencia, cryptography permitir\u00eda que un par llamado bar.example.com se validara contra un certificado hoja comod\u00edn para *.example.com, incluso si el certificado padre de la hoja (o superior) conten\u00eda una restricci\u00f3n de sub\u00e1rbol excluido para bar.example.com. Este problema ha sido parcheado en la versi\u00f3n 46.0.6."
-      },
-      "references": [
-        "https://github.com/pyca/cryptography/security/advisories/GHSA-m959-cc7f-wv43",
-        "https://www.kb.cert.org/vuls/id/948176"
       ]
     },
     {
@@ -5182,10 +5269,10 @@
       "fixed_version": "4.17.21",
       "app": "nodejs-goof",
       "cvss": 7.2,
-      "epss": 0.21333,
+      "epss": 0.20158,
       "in_kev": false,
       "kev_date_added": null,
-      "priority_score": 34,
+      "priority_score": 33,
       "priority_label": "medium",
       "summary": {
         "en": "Lodash versions prior to 4.17.21 are vulnerable to Command Injection via the template function.",
@@ -5216,10 +5303,10 @@
       "fixed_version": "4.17.21",
       "app": "nodejs-goof",
       "cvss": 7.2,
-      "epss": 0.21333,
+      "epss": 0.20158,
       "in_kev": false,
       "kev_date_added": null,
-      "priority_score": 34,
+      "priority_score": 33,
       "priority_label": "medium",
       "summary": {
         "en": "Lodash versions prior to 4.17.21 are vulnerable to Command Injection via the template function.",
@@ -5943,7 +6030,7 @@
       "fixed_version": "4.17.21",
       "app": "nodejs-goof",
       "cvss": 5.3,
-      "epss": 0.07336,
+      "epss": 0.07424,
       "in_kev": false,
       "kev_date_added": null,
       "priority_score": 19,
@@ -5978,7 +6065,7 @@
       "fixed_version": "4.17.21",
       "app": "nodejs-goof",
       "cvss": 5.3,
-      "epss": 0.07336,
+      "epss": 0.07424,
       "in_kev": false,
       "kev_date_added": null,
       "priority_score": 19,
@@ -7182,6 +7269,32 @@
       ]
     },
     {
+      "id": "nodejs-goof:CVE-2017-20165:debug:2.2.0",
+      "cve": "CVE-2017-20165",
+      "package": "debug",
+      "ecosystem": "npm",
+      "installed_version": "2.2.0",
+      "fixed_version": "2.6.9",
+      "app": "nodejs-goof",
+      "cvss": 3.5,
+      "epss": 0.02187,
+      "in_kev": false,
+      "kev_date_added": null,
+      "priority_score": 10,
+      "priority_label": "low",
+      "summary": {
+        "en": "A vulnerability classified as problematic has been found in debug-js debug up to 3.0.x. This affects the function useColors of the file src/node.js. The manipulation of the argument str leads to inefficient regular expression complexity. Upgrading to version 3.1.0 is able to address this issue. The identifier of the patch is c38a0166c266a679c8de012d4eaccec3f944e685. It is recommended to upgrade the affected component. The identifier VDB-217665 was assigned to this vulnerability.",
+        "es": "Se ha encontrado una vulnerabilidad en debug-js debug hasta 3.0.x y ha sido clasificada como problem\u00e1tica. Esto afecta la funci\u00f3n useColors del archivo src/node.js. La manipulaci\u00f3n del argumento str conduce a una complejidad de expresi\u00f3n regular ineficiente. La actualizaci\u00f3n a la versi\u00f3n 3.1.0 puede solucionar este problema. El identificador del parche es c38a0166c266a679c8de012d4eaccec3f944e685. Se recomienda actualizar el componente afectado. A esta vulnerabilidad se le asign\u00f3 el identificador VDB-217665."
+      },
+      "references": [
+        "https://github.com/debug-js/debug/commit/c38a0166c266a679c8de012d4eaccec3f944e685",
+        "https://github.com/debug-js/debug/pull/504",
+        "https://github.com/debug-js/debug/releases/tag/3.1.0",
+        "https://vuldb.com/?ctiid.217665",
+        "https://vuldb.com/?id.217665"
+      ]
+    },
+    {
       "id": "nodejs-goof:CVE-2021-23440:set-value:0.4.3",
       "cve": "CVE-2021-23440",
       "package": "set-value",
@@ -7279,32 +7392,6 @@
       "references": [
         "https://github.com/broofa/node-mime/issues/167",
         "https://nodesecurity.io/advisories/535"
-      ]
-    },
-    {
-      "id": "nodejs-goof:CVE-2017-20165:debug:2.2.0",
-      "cve": "CVE-2017-20165",
-      "package": "debug",
-      "ecosystem": "npm",
-      "installed_version": "2.2.0",
-      "fixed_version": "2.6.9",
-      "app": "nodejs-goof",
-      "cvss": 3.5,
-      "epss": 0.02187,
-      "in_kev": false,
-      "kev_date_added": null,
-      "priority_score": 10,
-      "priority_label": "low",
-      "summary": {
-        "en": "A vulnerability classified as problematic has been found in debug-js debug up to 3.0.x. This affects the function useColors of the file src/node.js. The manipulation of the argument str leads to inefficient regular expression complexity. Upgrading to version 3.1.0 is able to address this issue. The identifier of the patch is c38a0166c266a679c8de012d4eaccec3f944e685. It is recommended to upgrade the affected component. The identifier VDB-217665 was assigned to this vulnerability.",
-        "es": "Se ha encontrado una vulnerabilidad en debug-js debug hasta 3.0.x y ha sido clasificada como problem\u00e1tica. Esto afecta la funci\u00f3n useColors del archivo src/node.js. La manipulaci\u00f3n del argumento str conduce a una complejidad de expresi\u00f3n regular ineficiente. La actualizaci\u00f3n a la versi\u00f3n 3.1.0 puede solucionar este problema. El identificador del parche es c38a0166c266a679c8de012d4eaccec3f944e685. Se recomienda actualizar el componente afectado. A esta vulnerabilidad se le asign\u00f3 el identificador VDB-217665."
-      },
-      "references": [
-        "https://github.com/debug-js/debug/commit/c38a0166c266a679c8de012d4eaccec3f944e685",
-        "https://github.com/debug-js/debug/pull/504",
-        "https://github.com/debug-js/debug/releases/tag/3.1.0",
-        "https://vuldb.com/?ctiid.217665",
-        "https://vuldb.com/?id.217665"
       ]
     },
     {
@@ -7925,72 +8012,6 @@
       ]
     },
     {
-      "id": "nodejs-goof:CVE-2016-10539:negotiator:0.2.8",
-      "cve": "CVE-2016-10539",
-      "package": "negotiator",
-      "ecosystem": "npm",
-      "installed_version": "0.2.8",
-      "fixed_version": "0.6.1",
-      "app": "nodejs-goof",
-      "cvss": 7.5,
-      "epss": 0.01363,
-      "in_kev": false,
-      "kev_date_added": null,
-      "priority_score": 20,
-      "priority_label": "medium",
-      "summary": {
-        "en": "negotiator is an HTTP content negotiator for Node.js and is used by many modules and frameworks including Express and Koa. The header for \"Accept-Language\", when parsed by negotiator 0.6.0 and earlier is vulnerable to Regular Expression Denial of Service via a specially crafted string.",
-        "es": "negotiator es un negociador de contenido HTTP para Node.js y es empleado por muchos m\u00f3dulos y frameworks, incluyendo Express y Koa. La cabecera para \"Accept-Language\", cuando es analizada por negotiator en versiones 0.6.0 y anteriores es vulnerable a una denegaci\u00f3n de servicio con expresiones regulares (ReDoS) mediante una cadena especialmente manipulada."
-      },
-      "references": [
-        "https://nodesecurity.io/advisories/106"
-      ]
-    },
-    {
-      "id": "nodejs-goof:CVE-2016-10539:negotiator:0.4.9",
-      "cve": "CVE-2016-10539",
-      "package": "negotiator",
-      "ecosystem": "npm",
-      "installed_version": "0.4.9",
-      "fixed_version": "0.6.1",
-      "app": "nodejs-goof",
-      "cvss": 7.5,
-      "epss": 0.01363,
-      "in_kev": false,
-      "kev_date_added": null,
-      "priority_score": 20,
-      "priority_label": "medium",
-      "summary": {
-        "en": "negotiator is an HTTP content negotiator for Node.js and is used by many modules and frameworks including Express and Koa. The header for \"Accept-Language\", when parsed by negotiator 0.6.0 and earlier is vulnerable to Regular Expression Denial of Service via a specially crafted string.",
-        "es": "negotiator es un negociador de contenido HTTP para Node.js y es empleado por muchos m\u00f3dulos y frameworks, incluyendo Express y Koa. La cabecera para \"Accept-Language\", cuando es analizada por negotiator en versiones 0.6.0 y anteriores es vulnerable a una denegaci\u00f3n de servicio con expresiones regulares (ReDoS) mediante una cadena especialmente manipulada."
-      },
-      "references": [
-        "https://nodesecurity.io/advisories/106"
-      ]
-    },
-    {
-      "id": "nodejs-goof:CVE-2016-10539:negotiator:0.5.3",
-      "cve": "CVE-2016-10539",
-      "package": "negotiator",
-      "ecosystem": "npm",
-      "installed_version": "0.5.3",
-      "fixed_version": "0.6.1",
-      "app": "nodejs-goof",
-      "cvss": 7.5,
-      "epss": 0.01363,
-      "in_kev": false,
-      "kev_date_added": null,
-      "priority_score": 20,
-      "priority_label": "medium",
-      "summary": {
-        "en": "negotiator is an HTTP content negotiator for Node.js and is used by many modules and frameworks including Express and Koa. The header for \"Accept-Language\", when parsed by negotiator 0.6.0 and earlier is vulnerable to Regular Expression Denial of Service via a specially crafted string.",
-        "es": "negotiator es un negociador de contenido HTTP para Node.js y es empleado por muchos m\u00f3dulos y frameworks, incluyendo Express y Koa. La cabecera para \"Accept-Language\", cuando es analizada por negotiator en versiones 0.6.0 y anteriores es vulnerable a una denegaci\u00f3n de servicio con expresiones regulares (ReDoS) mediante una cadena especialmente manipulada."
-      },
-      "references": [
-        "https://nodesecurity.io/advisories/106"
-      ]
-    },
-    {
       "id": "nodejs-goof:CVE-2022-27261:express-fileupload:0.0.5",
       "cve": "CVE-2022-27261",
       "package": "express-fileupload",
@@ -8080,6 +8101,72 @@
       "references": [
         "http://lists.opensuse.org/opensuse-security-announce/2020-06/msg00024.html",
         "https://snyk.io/vuln/SNYK-JS-MINIMIST-559764"
+      ]
+    },
+    {
+      "id": "nodejs-goof:CVE-2016-10539:negotiator:0.2.8",
+      "cve": "CVE-2016-10539",
+      "package": "negotiator",
+      "ecosystem": "npm",
+      "installed_version": "0.2.8",
+      "fixed_version": "0.6.1",
+      "app": "nodejs-goof",
+      "cvss": 7.5,
+      "epss": 0.01363,
+      "in_kev": false,
+      "kev_date_added": null,
+      "priority_score": 20,
+      "priority_label": "medium",
+      "summary": {
+        "en": "negotiator is an HTTP content negotiator for Node.js and is used by many modules and frameworks including Express and Koa. The header for \"Accept-Language\", when parsed by negotiator 0.6.0 and earlier is vulnerable to Regular Expression Denial of Service via a specially crafted string.",
+        "es": "negotiator es un negociador de contenido HTTP para Node.js y es empleado por muchos m\u00f3dulos y frameworks, incluyendo Express y Koa. La cabecera para \"Accept-Language\", cuando es analizada por negotiator en versiones 0.6.0 y anteriores es vulnerable a una denegaci\u00f3n de servicio con expresiones regulares (ReDoS) mediante una cadena especialmente manipulada."
+      },
+      "references": [
+        "https://nodesecurity.io/advisories/106"
+      ]
+    },
+    {
+      "id": "nodejs-goof:CVE-2016-10539:negotiator:0.4.9",
+      "cve": "CVE-2016-10539",
+      "package": "negotiator",
+      "ecosystem": "npm",
+      "installed_version": "0.4.9",
+      "fixed_version": "0.6.1",
+      "app": "nodejs-goof",
+      "cvss": 7.5,
+      "epss": 0.01363,
+      "in_kev": false,
+      "kev_date_added": null,
+      "priority_score": 20,
+      "priority_label": "medium",
+      "summary": {
+        "en": "negotiator is an HTTP content negotiator for Node.js and is used by many modules and frameworks including Express and Koa. The header for \"Accept-Language\", when parsed by negotiator 0.6.0 and earlier is vulnerable to Regular Expression Denial of Service via a specially crafted string.",
+        "es": "negotiator es un negociador de contenido HTTP para Node.js y es empleado por muchos m\u00f3dulos y frameworks, incluyendo Express y Koa. La cabecera para \"Accept-Language\", cuando es analizada por negotiator en versiones 0.6.0 y anteriores es vulnerable a una denegaci\u00f3n de servicio con expresiones regulares (ReDoS) mediante una cadena especialmente manipulada."
+      },
+      "references": [
+        "https://nodesecurity.io/advisories/106"
+      ]
+    },
+    {
+      "id": "nodejs-goof:CVE-2016-10539:negotiator:0.5.3",
+      "cve": "CVE-2016-10539",
+      "package": "negotiator",
+      "ecosystem": "npm",
+      "installed_version": "0.5.3",
+      "fixed_version": "0.6.1",
+      "app": "nodejs-goof",
+      "cvss": 7.5,
+      "epss": 0.01363,
+      "in_kev": false,
+      "kev_date_added": null,
+      "priority_score": 20,
+      "priority_label": "medium",
+      "summary": {
+        "en": "negotiator is an HTTP content negotiator for Node.js and is used by many modules and frameworks including Express and Koa. The header for \"Accept-Language\", when parsed by negotiator 0.6.0 and earlier is vulnerable to Regular Expression Denial of Service via a specially crafted string.",
+        "es": "negotiator es un negociador de contenido HTTP para Node.js y es empleado por muchos m\u00f3dulos y frameworks, incluyendo Express y Koa. La cabecera para \"Accept-Language\", cuando es analizada por negotiator en versiones 0.6.0 y anteriores es vulnerable a una denegaci\u00f3n de servicio con expresiones regulares (ReDoS) mediante una cadena especialmente manipulada."
+      },
+      "references": [
+        "https://nodesecurity.io/advisories/106"
       ]
     },
     {
@@ -8510,7 +8597,7 @@
       "fixed_version": "2.4.12",
       "app": "nodejs-goof",
       "cvss": 9.1,
-      "epss": 0.00738,
+      "epss": 0.00783,
       "in_kev": false,
       "kev_date_added": null,
       "priority_score": 23,
@@ -10712,12 +10799,6 @@
   ],
   "history": [
     {
-      "date": "2026-10-10",
-      "findings_total": 344,
-      "critical": 4,
-      "high": 3
-    },
-    {
       "date": "2026-10-11",
       "findings_total": 344,
       "critical": 4,
@@ -10888,6 +10969,12 @@
     {
       "date": "2026-11-09",
       "findings_total": 385,
+      "critical": 3,
+      "high": 3
+    },
+    {
+      "date": "2026-11-10",
+      "findings_total": 388,
       "critical": 3,
       "high": 3
     }

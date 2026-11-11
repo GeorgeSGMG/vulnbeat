@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-11-10T14:38:13.392960+00:00",
+  "generated_at": "2026-11-11T13:55:52.610959+00:00",
   "sources": {
     "kev": {
       "fetched": true,
@@ -7,11 +7,11 @@
     },
     "epss": {
       "fetched": true,
-      "entries": 328
+      "entries": 332
     },
     "nvd": {
       "fetched": true,
-      "entries": 329
+      "entries": 333
     }
   },
   "apps": [
@@ -881,7 +881,7 @@
       "package": "django",
       "ecosystem": "PyPI",
       "installed_version": "4.2",
-      "fixed_version": "3.2.25",
+      "fixed_version": "4.2.11",
       "app": "pygoat",
       "cvss": 5.3,
       "epss": 0.01854,
@@ -915,7 +915,7 @@
       "package": "django",
       "ecosystem": "PyPI",
       "installed_version": "4.2",
-      "fixed_version": "4.2.11",
+      "fixed_version": "3.2.25",
       "app": "pygoat",
       "cvss": 5.3,
       "epss": 0.01854,
@@ -1904,29 +1904,6 @@
       ]
     },
     {
-      "id": "pygoat:CVE-2026-112895:pillow:12.1.0",
-      "cve": "CVE-2026-112895",
-      "package": "pillow",
-      "ecosystem": "PyPI",
-      "installed_version": "12.1.0",
-      "fixed_version": "13.0.0",
-      "app": "pygoat",
-      "cvss": 7.5,
-      "epss": 0.00594,
-      "in_kev": false,
-      "kev_date_added": null,
-      "priority_score": 19,
-      "priority_label": "low",
-      "summary": {
-        "en": "Pillow is a Python imaging library. From 5.1.0 until 13.0.0, Pillow can exhaust resources while parsing an existing PDF during an append operation. PdfParser follows page-tree child references without cycle or duplication tracking and follows previous-trailer chains with only an exact repeated-offset guard, so deep or cyclic page trees and long chains of unique trailer offsets can exhaust the Python stack. Repeated non-cyclic /Kids references can also cause super-linear CPU and memory use. An attacker can supply such a PDF to an application that calls Image.save with PDF append enabled. This can raise an uncaught RecursionError or consume excessive CPU and memory before output is written, causing denial of service. This issue is fixed in version 13.0.0."
-      },
-      "references": [
-        "https://github.com/python-pillow/Pillow/commit/e2ae7eacad6de68c37eb28b633a97bebacf2c5bf",
-        "https://github.com/python-pillow/Pillow/releases/tag/13.0.0",
-        "https://github.com/python-pillow/Pillow/security/advisories/GHSA-p4wg-p73j-c528"
-      ]
-    },
-    {
       "id": "pygoat:CVE-2026-112405:pillow:12.1.0",
       "cve": "CVE-2026-112405",
       "package": "pillow",
@@ -1970,6 +1947,29 @@
         "https://github.com/python-pillow/Pillow/commit/f6a852555f1a1bdff7781abf25f1a3b8bd6ce6cb",
         "https://github.com/python-pillow/Pillow/releases/tag/13.0.0",
         "https://github.com/python-pillow/Pillow/security/advisories/GHSA-jg86-v3jv-hrpm"
+      ]
+    },
+    {
+      "id": "pygoat:CVE-2026-112895:pillow:12.1.0",
+      "cve": "CVE-2026-112895",
+      "package": "pillow",
+      "ecosystem": "PyPI",
+      "installed_version": "12.1.0",
+      "fixed_version": "13.0.0",
+      "app": "pygoat",
+      "cvss": 7.5,
+      "epss": 0.00594,
+      "in_kev": false,
+      "kev_date_added": null,
+      "priority_score": 19,
+      "priority_label": "low",
+      "summary": {
+        "en": "Pillow is a Python imaging library. From 5.1.0 until 13.0.0, Pillow can exhaust resources while parsing an existing PDF during an append operation. PdfParser follows page-tree child references without cycle or duplication tracking and follows previous-trailer chains with only an exact repeated-offset guard, so deep or cyclic page trees and long chains of unique trailer offsets can exhaust the Python stack. Repeated non-cyclic /Kids references can also cause super-linear CPU and memory use. An attacker can supply such a PDF to an application that calls Image.save with PDF append enabled. This can raise an uncaught RecursionError or consume excessive CPU and memory before output is written, causing denial of service. This issue is fixed in version 13.0.0."
+      },
+      "references": [
+        "https://github.com/python-pillow/Pillow/commit/e2ae7eacad6de68c37eb28b633a97bebacf2c5bf",
+        "https://github.com/python-pillow/Pillow/releases/tag/13.0.0",
+        "https://github.com/python-pillow/Pillow/security/advisories/GHSA-p4wg-p73j-c528"
       ]
     },
     {
@@ -2392,12 +2392,12 @@
       "installed_version": "12.1.0",
       "fixed_version": "13.0.0",
       "app": "pygoat",
-      "cvss": null,
+      "cvss": 9.1,
       "epss": 0.00495,
       "in_kev": false,
       "kev_date_added": null,
-      "priority_score": 0,
-      "priority_label": "low",
+      "priority_score": 23,
+      "priority_label": "medium",
       "summary": {
         "en": "Pillow is a Python imaging library. In versions through 12.3.0, the libtiff TIFF encoder can pass arguments to \u00a0TIFFSetField()\u00a0 that do not match libtiff\u2019s definition of the corresponding tag. When an application saves attacker-controlled image metadata through this encoder, crafted tag values can cause invalid memory reads, copying process memory into the encoded output or crashing the process. Applications that return the encoded output to an attacker can disclose that memory. The issue is reachable when re-saving compressed TIFF images and through certain conversions that preserve EXIF metadata into compressed TIFF output. This vulnerability is fixed in version 13.0.0."
       },
@@ -2828,11 +2828,11 @@
       "installed_version": "12.1.0",
       "fixed_version": "13.0.0",
       "app": "pygoat",
-      "cvss": null,
+      "cvss": 5.3,
       "epss": 0.00538,
       "in_kev": false,
       "kev_date_added": null,
-      "priority_score": 0,
+      "priority_score": 14,
       "priority_label": "low",
       "summary": {
         "en": "Pillow is a Python imaging library. In versions 2.3.0 through 12.3.0, EPS rendering does not validate the scaled image dimensions before invoking Ghostscript. Applications that process untrusted EPS or PostScript files using an application-selected scale greater than one can incur excessive Ghostscript CPU and temporary disk consumption. In versions with decompression-bomb protection, the scaled output is checked only after Ghostscript has completed rendering, allowing resource consumption beyond the configured pixel limit. The amplification depends on the scale selected by the application, not an attacker-controlled scale value. This issue is fixed in version 13.0.0."
@@ -3198,8 +3198,8 @@
       ]
     },
     {
-      "id": "pygoat:CVE-2026-59205:pillow:12.1.0",
-      "cve": "CVE-2026-59205",
+      "id": "pygoat:CVE-2026-59200:pillow:12.1.0",
+      "cve": "CVE-2026-59200",
       "package": "pillow",
       "ecosystem": "PyPI",
       "installed_version": "12.1.0",
@@ -3212,14 +3212,14 @@
       "priority_score": 19,
       "priority_label": "low",
       "summary": {
-        "en": "Pillow is a Python imaging library. Prior to 12.3.0, Pillow's ImageCms.ImageCmsTransform.apply(im, imOut) API can trigger controlled native heap corruption when the caller supplies an output image whose mode does not match the transform's declared output mode. This issue is fixed in version 12.3.0.",
-        "es": "Pillow es una biblioteca de procesamiento de im\u00e1genes de Python. Antes de la versi\u00f3n 12.3.0, la API ImageCms.ImageCmsTransform.apply(im, imOut) de Pillow puede desencadenar una corrupci\u00f3n controlada del heap nativo cuando el llamador suministra una imagen de salida cuyo modo no coincide con el modo de salida declarado de la transformaci\u00f3n. Este problema se ha corregido en la versi\u00f3n 12.3.0."
+        "en": "Pillow is a Python imaging library. From 5.1.0 until 12.3.0, PdfParser.PdfStream.decode() in PIL/PdfParser.py calls zlib.decompress() with bufsize set to the PDF stream Length field without bounding the decompressed output size, allowing a crafted FlateDecode PDF stream to exhaust memory from a small file. This issue is fixed in version 12.3.0.",
+        "es": "Pillow es una biblioteca de im\u00e1genes de Python. Desde la versi\u00f3n 5.1.0 hasta la 12.3.0, PdfParser.PdfStream.decode() en PIL/PdfParser.py llama a zlib.decompress() con bufsize establecido al campo Length del flujo PDF sin limitar el tama\u00f1o de salida descomprimido, permitiendo que un flujo PDF FlateDecode manipulado agote la memoria desde un archivo peque\u00f1o. Este problema est\u00e1 solucionado en la versi\u00f3n 12.3.0."
       },
       "references": [
-        "https://github.com/python-pillow/Pillow/commit/a9ffc42bedf4fc0a7ef8d6486e7f9e81e3397721",
-        "https://github.com/python-pillow/Pillow/pull/9715",
+        "https://github.com/python-pillow/Pillow/commit/f7a31ea75e460e108c37126da1f47812f21f6b09",
+        "https://github.com/python-pillow/Pillow/pull/9718",
         "https://github.com/python-pillow/Pillow/releases/tag/12.3.0",
-        "https://github.com/python-pillow/Pillow/security/advisories/GHSA-9hw9-ch79-4vh6"
+        "https://github.com/python-pillow/Pillow/security/advisories/GHSA-jjj6-mw9f-p565"
       ]
     },
     {
@@ -3248,8 +3248,8 @@
       ]
     },
     {
-      "id": "pygoat:CVE-2026-59200:pillow:12.1.0",
-      "cve": "CVE-2026-59200",
+      "id": "pygoat:CVE-2026-59205:pillow:12.1.0",
+      "cve": "CVE-2026-59205",
       "package": "pillow",
       "ecosystem": "PyPI",
       "installed_version": "12.1.0",
@@ -3262,14 +3262,14 @@
       "priority_score": 19,
       "priority_label": "low",
       "summary": {
-        "en": "Pillow is a Python imaging library. From 5.1.0 until 12.3.0, PdfParser.PdfStream.decode() in PIL/PdfParser.py calls zlib.decompress() with bufsize set to the PDF stream Length field without bounding the decompressed output size, allowing a crafted FlateDecode PDF stream to exhaust memory from a small file. This issue is fixed in version 12.3.0.",
-        "es": "Pillow es una biblioteca de im\u00e1genes de Python. Desde la versi\u00f3n 5.1.0 hasta la 12.3.0, PdfParser.PdfStream.decode() en PIL/PdfParser.py llama a zlib.decompress() con bufsize establecido al campo Length del flujo PDF sin limitar el tama\u00f1o de salida descomprimido, permitiendo que un flujo PDF FlateDecode manipulado agote la memoria desde un archivo peque\u00f1o. Este problema est\u00e1 solucionado en la versi\u00f3n 12.3.0."
+        "en": "Pillow is a Python imaging library. Prior to 12.3.0, Pillow's ImageCms.ImageCmsTransform.apply(im, imOut) API can trigger controlled native heap corruption when the caller supplies an output image whose mode does not match the transform's declared output mode. This issue is fixed in version 12.3.0.",
+        "es": "Pillow es una biblioteca de procesamiento de im\u00e1genes de Python. Antes de la versi\u00f3n 12.3.0, la API ImageCms.ImageCmsTransform.apply(im, imOut) de Pillow puede desencadenar una corrupci\u00f3n controlada del heap nativo cuando el llamador suministra una imagen de salida cuyo modo no coincide con el modo de salida declarado de la transformaci\u00f3n. Este problema se ha corregido en la versi\u00f3n 12.3.0."
       },
       "references": [
-        "https://github.com/python-pillow/Pillow/commit/f7a31ea75e460e108c37126da1f47812f21f6b09",
-        "https://github.com/python-pillow/Pillow/pull/9718",
+        "https://github.com/python-pillow/Pillow/commit/a9ffc42bedf4fc0a7ef8d6486e7f9e81e3397721",
+        "https://github.com/python-pillow/Pillow/pull/9715",
         "https://github.com/python-pillow/Pillow/releases/tag/12.3.0",
-        "https://github.com/python-pillow/Pillow/security/advisories/GHSA-jjj6-mw9f-p565"
+        "https://github.com/python-pillow/Pillow/security/advisories/GHSA-9hw9-ch79-4vh6"
       ]
     },
     {
@@ -3845,30 +3845,6 @@
       ]
     },
     {
-      "id": "pygoat:CVE-2026-96638:pillow:12.1.0",
-      "cve": "CVE-2026-96638",
-      "package": "pillow",
-      "ecosystem": "PyPI",
-      "installed_version": "12.1.0",
-      "fixed_version": "13.0.0",
-      "app": "pygoat",
-      "cvss": 6.5,
-      "epss": 0.00345,
-      "in_kev": false,
-      "kev_date_added": null,
-      "priority_score": 17,
-      "priority_label": "low",
-      "summary": {
-        "en": "Pillow is a Python imaging library. From 9.1.0 until 13.0.0, BmpRleDecoder.decode() in src/PIL/BmpImagePlugin.py permits crafted RLE BMP delta escapes and absolute-mode runs to append beyond the remaining dest_length without a per-branch cap. A delta can add roughly 255 image rows in one iteration, so a kilobyte-sized file with a large but permitted width can expand the data bytearray to hundreds of megabytes or more, causing memory-exhaustion denial of service. This issue is fixed in version 13.0.0."
-      },
-      "references": [
-        "https://github.com/python-pillow/Pillow/commit/e7794835e323ff2691d9b3a974cade1a44301b9a",
-        "https://github.com/python-pillow/Pillow/pull/10015",
-        "https://github.com/python-pillow/Pillow/releases/tag/13.0.0",
-        "https://github.com/python-pillow/Pillow/security/advisories/GHSA-24rc-8hj2-v98c"
-      ]
-    },
-    {
       "id": "pygoat:CVE-2026-96641:pillow:12.1.0",
       "cve": "CVE-2026-96641",
       "package": "pillow",
@@ -3890,6 +3866,30 @@
         "https://github.com/python-pillow/Pillow/pull/10010",
         "https://github.com/python-pillow/Pillow/releases/tag/13.0.0",
         "https://github.com/python-pillow/Pillow/security/advisories/GHSA-4rm8-3hmm-39fg"
+      ]
+    },
+    {
+      "id": "pygoat:CVE-2026-96638:pillow:12.1.0",
+      "cve": "CVE-2026-96638",
+      "package": "pillow",
+      "ecosystem": "PyPI",
+      "installed_version": "12.1.0",
+      "fixed_version": "13.0.0",
+      "app": "pygoat",
+      "cvss": 6.5,
+      "epss": 0.00345,
+      "in_kev": false,
+      "kev_date_added": null,
+      "priority_score": 17,
+      "priority_label": "low",
+      "summary": {
+        "en": "Pillow is a Python imaging library. From 9.1.0 until 13.0.0, BmpRleDecoder.decode() in src/PIL/BmpImagePlugin.py permits crafted RLE BMP delta escapes and absolute-mode runs to append beyond the remaining dest_length without a per-branch cap. A delta can add roughly 255 image rows in one iteration, so a kilobyte-sized file with a large but permitted width can expand the data bytearray to hundreds of megabytes or more, causing memory-exhaustion denial of service. This issue is fixed in version 13.0.0."
+      },
+      "references": [
+        "https://github.com/python-pillow/Pillow/commit/e7794835e323ff2691d9b3a974cade1a44301b9a",
+        "https://github.com/python-pillow/Pillow/pull/10015",
+        "https://github.com/python-pillow/Pillow/releases/tag/13.0.0",
+        "https://github.com/python-pillow/Pillow/security/advisories/GHSA-24rc-8hj2-v98c"
       ]
     },
     {
@@ -8518,6 +8518,31 @@
       ]
     },
     {
+      "id": "nodejs-goof:CVE-2025-9288:sha.js:2.4.11",
+      "cve": "CVE-2025-9288",
+      "package": "sha.js",
+      "ecosystem": "npm",
+      "installed_version": "2.4.11",
+      "fixed_version": "2.4.12",
+      "app": "nodejs-goof",
+      "cvss": 9.1,
+      "epss": 0.00783,
+      "in_kev": false,
+      "kev_date_added": null,
+      "priority_score": 23,
+      "priority_label": "medium",
+      "summary": {
+        "en": "Improper Input Validation vulnerability in sha.js allows Input Data Manipulation.This issue affects sha.js: through 2.4.11.",
+        "es": "La vulnerabilidad de validaci\u00f3n de entrada incorrecta en sha.js permite la manipulaci\u00f3n de datos de entrada. Este problema afecta a sha.js: hasta 2.4.11."
+      },
+      "references": [
+        "https://github.com/browserify/sha.js/pull/78",
+        "https://github.com/browserify/sha.js/security/advisories/GHSA-95m3-7q98-8xr5",
+        "https://www.cve.org/CVERecord?id=CVE-2025-9287",
+        "https://lists.debian.org/debian-lts-announce/2025/09/msg00016.html"
+      ]
+    },
+    {
       "id": "nodejs-goof:CVE-2024-45296:path-to-regexp:0.1.3",
       "cve": "CVE-2024-45296",
       "package": "path-to-regexp",
@@ -8586,31 +8611,6 @@
       "references": [
         "http://www.securityfocus.com/bid/101889",
         "https://github.com/mde/ejs/commit/49264e0037e313a0a3e033450b5c184112516d8f"
-      ]
-    },
-    {
-      "id": "nodejs-goof:CVE-2025-9288:sha.js:2.4.11",
-      "cve": "CVE-2025-9288",
-      "package": "sha.js",
-      "ecosystem": "npm",
-      "installed_version": "2.4.11",
-      "fixed_version": "2.4.12",
-      "app": "nodejs-goof",
-      "cvss": 9.1,
-      "epss": 0.00783,
-      "in_kev": false,
-      "kev_date_added": null,
-      "priority_score": 23,
-      "priority_label": "medium",
-      "summary": {
-        "en": "Improper Input Validation vulnerability in sha.js allows Input Data Manipulation.This issue affects sha.js: through 2.4.11.",
-        "es": "La vulnerabilidad de validaci\u00f3n de entrada incorrecta en sha.js permite la manipulaci\u00f3n de datos de entrada. Este problema afecta a sha.js: hasta 2.4.11."
-      },
-      "references": [
-        "https://github.com/browserify/sha.js/pull/78",
-        "https://github.com/browserify/sha.js/security/advisories/GHSA-95m3-7q98-8xr5",
-        "https://www.cve.org/CVERecord?id=CVE-2025-9287",
-        "https://lists.debian.org/debian-lts-announce/2025/09/msg00016.html"
       ]
     },
     {
@@ -9028,6 +9028,35 @@
       ]
     },
     {
+      "id": "nodejs-goof:CVE-2026-125120:mongoose:4.2.4",
+      "cve": "CVE-2026-125120",
+      "package": "mongoose",
+      "ecosystem": "npm",
+      "installed_version": "4.2.4",
+      "fixed_version": "6.13.11",
+      "app": "nodejs-goof",
+      "cvss": 9.8,
+      "epss": 0.00566,
+      "in_kev": false,
+      "kev_date_added": null,
+      "priority_score": 25,
+      "priority_label": "medium",
+      "summary": {
+        "en": "Mongoose is a MongoDB object modeling tool designed to work in an asynchronous environment. Prior to 6.13.11, 7.8.12, 8.24.3, and 9.9.2, Mongoose countDocuments() does not apply the configured sanitizeFilter query selector injection defense. An application that enables sanitizeFilter and passes attacker-controlled filter values to countDocuments() can therefore process query operator objects as operators rather than literal values, causing the count to include documents that should not match and potentially undermining authorization or application logic based on that count. This issue is fixed in versions 6.13.11, 7.8.12, 8.24.3, and 9.9.2."
+      },
+      "references": [
+        "https://github.com/Automattic/mongoose/commit/7e912af3fac52cb0eea4cd71e24d65318916831a",
+        "https://github.com/Automattic/mongoose/commit/8b10d5760bb181f5bf5d01495cde161c8aed0557",
+        "https://github.com/Automattic/mongoose/commit/b1df045aab076b740fdaec14a15a44c694b85b7d",
+        "https://github.com/Automattic/mongoose/commit/b5003d3915db1cf9209c38a4b93cf3a92cddd710",
+        "https://github.com/Automattic/mongoose/releases/tag/6.13.11",
+        "https://github.com/Automattic/mongoose/releases/tag/7.8.12",
+        "https://github.com/Automattic/mongoose/releases/tag/8.24.3",
+        "https://github.com/Automattic/mongoose/releases/tag/9.9.2",
+        "https://github.com/Automattic/mongoose/security/advisories/GHSA-pcrw-h46h-c93h"
+      ]
+    },
+    {
       "id": "nodejs-goof:CVE-2026-12143:form-data:2.3.3",
       "cve": "CVE-2026-12143",
       "package": "form-data",
@@ -9291,6 +9320,37 @@
       "references": [
         "https://github.com/isaacs/minimatch/commit/2e111f3a79abc00fa73110195de2c0f2351904f5",
         "https://github.com/isaacs/minimatch/security/advisories/GHSA-3ppc-4f35-3m26"
+      ]
+    },
+    {
+      "id": "nodejs-goof:CVE-2026-125117:mongoose:4.2.4",
+      "cve": "CVE-2026-125117",
+      "package": "mongoose",
+      "ecosystem": "npm",
+      "installed_version": "4.2.4",
+      "fixed_version": "6.13.12",
+      "app": "nodejs-goof",
+      "cvss": 8.2,
+      "epss": 0.00584,
+      "in_kev": false,
+      "kev_date_added": null,
+      "priority_score": 21,
+      "priority_label": "medium",
+      "summary": {
+        "en": "Mongoose is a MongoDB object modeling tool designed to work in an asynchronous environment. Prior to 6.13.12, 7.8.13, 8.24.7, and 9.11.4, Mongoose can descend into inherited properties while loading database documents in init(), setting dotted paths in $__set, and merging update documents in utils.mergeClone. Attacker-controlled keys such as toString or valueOf can therefore cause Mongoose to write into shared built-in functions instead of an own property. A crafted document, Mixed path, non-strict document or subdocument, findOneAndReplace() replacement, chained update, or Query.prototype.merge() source can overwrite Object.prototype.toString.call, causing later queries on unrelated models to fail until the process restarts. Separately, when an attacker controls the dotted path passed to doc.set(path, value) for a subdocument configured with strict: false, descent through $__set can reach $__schema and alter shared validators or schema options for later documents. Mongoose already blocks __proto__, constructor, and prototype, so this issue overwrites properties on reachable shared objects rather than adding new properties directly to Object.prototype. This issue is fixed in versions 6.13.12, 7.8.13, 8.24.7, and 9.11.4."
+      },
+      "references": [
+        "https://github.com/Automattic/mongoose/commit/18b5513dd463731a2caf0d3395ef1d9eb0735f50",
+        "https://github.com/Automattic/mongoose/commit/2a195d19a4dd240f039a0a226614d5804e8187ee",
+        "https://github.com/Automattic/mongoose/commit/3cb702b8d079c3e267f0b10f41673a1590f703c8",
+        "https://github.com/Automattic/mongoose/commit/85cf897105edfeb5f56be42a18a68704434cac82",
+        "https://github.com/Automattic/mongoose/commit/8cee51beead554df1f3d05645edb439c69eb2a9b",
+        "https://github.com/Automattic/mongoose/commit/8eb74cb4a550cbe0225963b07aebacbd999d4b74",
+        "https://github.com/Automattic/mongoose/releases/tag/6.13.12",
+        "https://github.com/Automattic/mongoose/releases/tag/7.8.13",
+        "https://github.com/Automattic/mongoose/releases/tag/8.24.7",
+        "https://github.com/Automattic/mongoose/releases/tag/9.11.4",
+        "https://github.com/Automattic/mongoose/security/advisories/GHSA-8332-j7wj-wjw4"
       ]
     },
     {
@@ -10014,6 +10074,35 @@
       ]
     },
     {
+      "id": "nodejs-goof:CVE-2026-125118:mongoose:4.2.4",
+      "cve": "CVE-2026-125118",
+      "package": "mongoose",
+      "ecosystem": "npm",
+      "installed_version": "4.2.4",
+      "fixed_version": "6.13.12",
+      "app": "nodejs-goof",
+      "cvss": 6.5,
+      "epss": 0.004,
+      "in_kev": false,
+      "kev_date_added": null,
+      "priority_score": 17,
+      "priority_label": "low",
+      "summary": {
+        "en": "Mongoose is a MongoDB object modeling tool designed to work in an asynchronous environment. Prior to 6.13.12, 7.8.13, 8.24.7, and 9.11.4, Schema.prototype.virtual() builds nested virtual paths without applying the special-property validation already used by Schema.path() and Schema.add(). An attacker who can influence virtual field names in dynamic schemas, content-management form builders, or schema-as-code systems can supply path segments such as __proto__, constructor, or prototype, causing the virtual-path reducer to write enumerable properties to Object.prototype or Function.prototype. The resulting prototype pollution can spoof inherited property checks such as authorization flags and can provide function-prototype gadget state to other server-side JavaScript code. This issue is fixed in versions 6.13.12, 7.8.13, 8.24.7, and 9.11.4."
+      },
+      "references": [
+        "https://github.com/Automattic/mongoose/commit/318f7e09dd363a1dfddb8180878488dccd2796d1",
+        "https://github.com/Automattic/mongoose/commit/74df7769b5a8d89c4413b764029911ee915ea467",
+        "https://github.com/Automattic/mongoose/commit/7a2a6567abbb72c0430c8cc5b7942141844fecff",
+        "https://github.com/Automattic/mongoose/commit/fb467e6d33174293dc0360649f20ce68d99117a9",
+        "https://github.com/Automattic/mongoose/releases/tag/6.13.12",
+        "https://github.com/Automattic/mongoose/releases/tag/7.8.13",
+        "https://github.com/Automattic/mongoose/releases/tag/8.24.7",
+        "https://github.com/Automattic/mongoose/releases/tag/9.11.4",
+        "https://github.com/Automattic/mongoose/security/advisories/GHSA-6972-9mcm-vhwj"
+      ]
+    },
+    {
       "id": "nodejs-goof:CVE-2025-15284:qs:2.2.4",
       "cve": "CVE-2025-15284",
       "package": "qs",
@@ -10509,6 +10598,37 @@
       ]
     },
     {
+      "id": "nodejs-goof:CVE-2026-125116:mongoose:4.2.4",
+      "cve": "CVE-2026-125116",
+      "package": "mongoose",
+      "ecosystem": "npm",
+      "installed_version": "4.2.4",
+      "fixed_version": "6.13.12",
+      "app": "nodejs-goof",
+      "cvss": 4.8,
+      "epss": 0.00339,
+      "in_kev": false,
+      "kev_date_added": null,
+      "priority_score": 12,
+      "priority_label": "low",
+      "summary": {
+        "en": "Mongoose is a MongoDB object modeling tool designed to work in an asynchronous environment. Prior to 6.13.12, 7.8.13, 8.24.7, and 9.11.4, Mongoose uses attacker-controlled discriminator key values, including the default __t field, to index plain-object registries such as Model.discriminators and schema.discriminators without requiring an own property. Values such as constructor, toString, or hasOwnProperty can therefore resolve to inherited built-in functions instead of a registered discriminator, causing type confusion in model construction, document creation, hydration, query and update casting, embedded discriminators, and populate operations. In the bulkWrite() insertOne path with skipValidation enabled, a constructor value can cause a raw input object to be stored without schema casting or strict filtering, and a stored poisoned document can make every query that hydrates it fail until the document is removed. The weakness reads inherited properties but does not modify Object.prototype and is not prototype pollution. This issue is fixed in versions 6.13.12, 7.8.13, 8.24.7, and 9.11.4."
+      },
+      "references": [
+        "https://github.com/Automattic/mongoose/commit/0ecd8040d9b446f36535d79938c130c800f91766",
+        "https://github.com/Automattic/mongoose/commit/18afab75bea861f625b7c5b54635c84567ec566c",
+        "https://github.com/Automattic/mongoose/commit/390453c8ce1b36b6cfd1e63432a910da1f3d81d5",
+        "https://github.com/Automattic/mongoose/commit/8cee51beead554df1f3d05645edb439c69eb2a9b",
+        "https://github.com/Automattic/mongoose/commit/b26c43554233134ea978c5852babe13be858b2cf",
+        "https://github.com/Automattic/mongoose/commit/b68f90734b50cd22c89a669c8ca1469d7234b296",
+        "https://github.com/Automattic/mongoose/releases/tag/6.13.12",
+        "https://github.com/Automattic/mongoose/releases/tag/7.8.13",
+        "https://github.com/Automattic/mongoose/releases/tag/8.24.7",
+        "https://github.com/Automattic/mongoose/releases/tag/9.11.4",
+        "https://github.com/Automattic/mongoose/security/advisories/GHSA-wr5m-5jph-8m96"
+      ]
+    },
+    {
       "id": "nodejs-goof:CVE-2024-43796:express:4.12.4",
       "cve": "CVE-2024-43796",
       "package": "express",
@@ -10799,12 +10919,6 @@
   ],
   "history": [
     {
-      "date": "2026-10-11",
-      "findings_total": 344,
-      "critical": 4,
-      "high": 3
-    },
-    {
       "date": "2026-10-12",
       "findings_total": 344,
       "critical": 4,
@@ -10975,6 +11089,12 @@
     {
       "date": "2026-11-10",
       "findings_total": 388,
+      "critical": 3,
+      "high": 3
+    },
+    {
+      "date": "2026-11-11",
+      "findings_total": 392,
       "critical": 3,
       "high": 3
     }

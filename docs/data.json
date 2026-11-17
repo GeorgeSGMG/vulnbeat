@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-11-16T15:15:56.705948+00:00",
+  "generated_at": "2026-11-17T15:46:37.455274+00:00",
   "sources": {
     "kev": {
       "fetched": true,
@@ -1928,29 +1928,6 @@
       ]
     },
     {
-      "id": "pygoat:CVE-2026-112894:pillow:12.1.0",
-      "cve": "CVE-2026-112894",
-      "package": "pillow",
-      "ecosystem": "PyPI",
-      "installed_version": "12.1.0",
-      "fixed_version": "13.0.0",
-      "app": "pygoat",
-      "cvss": 7.5,
-      "epss": 0.00594,
-      "in_kev": false,
-      "kev_date_added": null,
-      "priority_score": 19,
-      "priority_label": "low",
-      "summary": {
-        "en": "Pillow is a Python imaging library. From 5.1.0 until 13.0.0, Pillow takes quadratic time to reserve PDF object identifiers when saving many frames with save_all enabled. PdfParser.next_object_id() repeatedly rebuilds and scans all previously reserved identifiers for every object. An attacker can supply a multi-frame image, including a small APNG with a large declared frame count, to an application that converts it to a multipage PDF. This can consume excessive CPU and deny service. This issue is fixed in version 13.0.0."
-      },
-      "references": [
-        "https://github.com/python-pillow/Pillow/commit/f6a852555f1a1bdff7781abf25f1a3b8bd6ce6cb",
-        "https://github.com/python-pillow/Pillow/releases/tag/13.0.0",
-        "https://github.com/python-pillow/Pillow/security/advisories/GHSA-jg86-v3jv-hrpm"
-      ]
-    },
-    {
       "id": "pygoat:CVE-2026-112402:pillow:12.1.0",
       "cve": "CVE-2026-112402",
       "package": "pillow",
@@ -1994,6 +1971,29 @@
         "https://github.com/python-pillow/Pillow/commit/b6ee66e8b2c2c0932bdf65f963268d9f2927ef86",
         "https://github.com/python-pillow/Pillow/releases/tag/13.0.0",
         "https://github.com/python-pillow/Pillow/security/advisories/GHSA-cp9v-662q-vvx9"
+      ]
+    },
+    {
+      "id": "pygoat:CVE-2026-112894:pillow:12.1.0",
+      "cve": "CVE-2026-112894",
+      "package": "pillow",
+      "ecosystem": "PyPI",
+      "installed_version": "12.1.0",
+      "fixed_version": "13.0.0",
+      "app": "pygoat",
+      "cvss": 7.5,
+      "epss": 0.00594,
+      "in_kev": false,
+      "kev_date_added": null,
+      "priority_score": 19,
+      "priority_label": "low",
+      "summary": {
+        "en": "Pillow is a Python imaging library. From 5.1.0 until 13.0.0, Pillow takes quadratic time to reserve PDF object identifiers when saving many frames with save_all enabled. PdfParser.next_object_id() repeatedly rebuilds and scans all previously reserved identifiers for every object. An attacker can supply a multi-frame image, including a small APNG with a large declared frame count, to an application that converts it to a multipage PDF. This can consume excessive CPU and deny service. This issue is fixed in version 13.0.0."
+      },
+      "references": [
+        "https://github.com/python-pillow/Pillow/commit/f6a852555f1a1bdff7781abf25f1a3b8bd6ce6cb",
+        "https://github.com/python-pillow/Pillow/releases/tag/13.0.0",
+        "https://github.com/python-pillow/Pillow/security/advisories/GHSA-jg86-v3jv-hrpm"
       ]
     },
     {
@@ -2149,29 +2149,6 @@
       ]
     },
     {
-      "id": "pygoat:CVE-2026-112397:pillow:12.1.0",
-      "cve": "CVE-2026-112397",
-      "package": "pillow",
-      "ecosystem": "PyPI",
-      "installed_version": "12.1.0",
-      "fixed_version": "13.0.0",
-      "app": "pygoat",
-      "cvss": 7.5,
-      "epss": 0.00573,
-      "in_kev": false,
-      "kev_date_added": null,
-      "priority_score": 19,
-      "priority_label": "low",
-      "summary": {
-        "en": "Pillow is a Python imaging library. Prior to 13.0.0, Pillow's ImageMorph.MorphOp.apply() can access memory before a row buffer for a zero-width image. PPM and PGM input can create an image with width zero, and the native morphology routine indexes outrow[width - 1] without rejecting that geometry. An attacker can supply such an image to an application that applies a morphology operation. This can crash the process. This issue is fixed in version 13.0.0."
-      },
-      "references": [
-        "https://github.com/python-pillow/Pillow/commit/18f7c0dfee93063c51db6ed0ca8c4da2999dcb64",
-        "https://github.com/python-pillow/Pillow/releases/tag/13.0.0",
-        "https://github.com/python-pillow/Pillow/security/advisories/GHSA-58r4-6rv3-gfh8"
-      ]
-    },
-    {
       "id": "pygoat:CVE-2026-112406:pillow:12.1.0",
       "cve": "CVE-2026-112406",
       "package": "pillow",
@@ -2192,6 +2169,29 @@
         "https://github.com/python-pillow/Pillow/commit/b3ebf20c694f2f12537a629c30229a1d5a53f777",
         "https://github.com/python-pillow/Pillow/releases/tag/13.0.0",
         "https://github.com/python-pillow/Pillow/security/advisories/GHSA-f2g6-542v-9j58"
+      ]
+    },
+    {
+      "id": "pygoat:CVE-2026-112397:pillow:12.1.0",
+      "cve": "CVE-2026-112397",
+      "package": "pillow",
+      "ecosystem": "PyPI",
+      "installed_version": "12.1.0",
+      "fixed_version": "13.0.0",
+      "app": "pygoat",
+      "cvss": 7.5,
+      "epss": 0.00573,
+      "in_kev": false,
+      "kev_date_added": null,
+      "priority_score": 19,
+      "priority_label": "low",
+      "summary": {
+        "en": "Pillow is a Python imaging library. Prior to 13.0.0, Pillow's ImageMorph.MorphOp.apply() can access memory before a row buffer for a zero-width image. PPM and PGM input can create an image with width zero, and the native morphology routine indexes outrow[width - 1] without rejecting that geometry. An attacker can supply such an image to an application that applies a morphology operation. This can crash the process. This issue is fixed in version 13.0.0."
+      },
+      "references": [
+        "https://github.com/python-pillow/Pillow/commit/18f7c0dfee93063c51db6ed0ca8c4da2999dcb64",
+        "https://github.com/python-pillow/Pillow/releases/tag/13.0.0",
+        "https://github.com/python-pillow/Pillow/security/advisories/GHSA-58r4-6rv3-gfh8"
       ]
     },
     {
@@ -2710,7 +2710,7 @@
       "fixed_version": "3.1.6",
       "app": "pygoat",
       "cvss": 5.3,
-      "epss": 0.00631,
+      "epss": 0.00622,
       "in_kev": false,
       "kev_date_added": null,
       "priority_score": 14,
@@ -2928,30 +2928,6 @@
       ]
     },
     {
-      "id": "pygoat:CVE-2025-14550:django:4.2",
-      "cve": "CVE-2025-14550",
-      "package": "django",
-      "ecosystem": "PyPI",
-      "installed_version": "4.2",
-      "fixed_version": "4.2.28",
-      "app": "pygoat",
-      "cvss": 7.5,
-      "epss": 0.01112,
-      "in_kev": false,
-      "kev_date_added": null,
-      "priority_score": 20,
-      "priority_label": "medium",
-      "summary": {
-        "en": "An issue was discovered in 6.0 before 6.0.2, 5.2 before 5.2.11, and 4.2 before 4.2.28.\n`ASGIRequest` allows a remote attacker to cause a potential denial-of-service via a crafted request with multiple duplicate headers.\nEarlier, unsupported Django series (such as 5.0.x, 4.1.x, and 3.2.x) were not evaluated and may also be affected.\nDjango would like to thank Jiyong Yang for reporting this issue.",
-        "es": "Se descubri\u00f3 un problema en 6.0 anterior a 6.0.2, 5.2 anterior a 5.2.11 y 4.2 anterior a 4.2.28.\n'ASGIRequest' permite a un atacante remoto causar una posible denegaci\u00f3n de servicio mediante una solicitud manipulada con m\u00faltiples encabezados duplicados.\nSeries de Django anteriores y no compatibles (como 5.0.x, 4.1.x y 3.2.x) no fueron evaluadas y tambi\u00e9n podr\u00edan verse afectadas.\nDjango desea agradecer a Jiyong Yang por informar sobre este problema."
-      },
-      "references": [
-        "https://docs.djangoproject.com/en/dev/releases/security/",
-        "https://groups.google.com/g/django-announce",
-        "https://www.djangoproject.com/weblog/2026/feb/03/security-releases/"
-      ]
-    },
-    {
       "id": "pygoat:CVE-2026-1285:django:4.2",
       "cve": "CVE-2026-1285",
       "package": "django",
@@ -2968,6 +2944,30 @@
       "summary": {
         "en": "An issue was discovered in 6.0 before 6.0.2, 5.2 before 5.2.11, and 4.2 before 4.2.28.\n`django.utils.text.Truncator.chars()` and `Truncator.words()` methods (with `html=True`) and the `truncatechars_html` and `truncatewords_html` template filters allow a remote attacker to cause a potential denial-of-service via crafted inputs containing a large number of unmatched HTML end tags.\nEarlier, unsupported Django series (such as 5.0.x, 4.1.x, and 3.2.x) were not evaluated and may also be affected.\nDjango would like to thank Seokchan Yoon for reporting this issue.",
         "es": "Se descubri\u00f3 un problema en 6.0 anterior a 6.0.2, 5.2 anterior a 5.2.11 y 4.2 anterior a 4.2.28.\nLos m\u00e9todos 'django.utils.text.Truncator.chars()' y 'Truncator.words()' (con 'html=True') y los filtros de plantilla 'truncatechars_html' y 'truncatewords_html' permiten a un atacante remoto causar una potencial denegaci\u00f3n de servicio mediante entradas manipuladas que contienen un gran n\u00famero de etiquetas de cierre HTML no coincidentes.\nSeries de Django anteriores y sin soporte (como 5.0.x, 4.1.x y 3.2.x) no fueron evaluadas y tambi\u00e9n pueden verse afectadas.\nDjango desea agradecer a Seokchan Yoon por informar de este problema."
+      },
+      "references": [
+        "https://docs.djangoproject.com/en/dev/releases/security/",
+        "https://groups.google.com/g/django-announce",
+        "https://www.djangoproject.com/weblog/2026/feb/03/security-releases/"
+      ]
+    },
+    {
+      "id": "pygoat:CVE-2025-14550:django:4.2",
+      "cve": "CVE-2025-14550",
+      "package": "django",
+      "ecosystem": "PyPI",
+      "installed_version": "4.2",
+      "fixed_version": "4.2.28",
+      "app": "pygoat",
+      "cvss": 7.5,
+      "epss": 0.01112,
+      "in_kev": false,
+      "kev_date_added": null,
+      "priority_score": 20,
+      "priority_label": "medium",
+      "summary": {
+        "en": "An issue was discovered in 6.0 before 6.0.2, 5.2 before 5.2.11, and 4.2 before 4.2.28.\n`ASGIRequest` allows a remote attacker to cause a potential denial-of-service via a crafted request with multiple duplicate headers.\nEarlier, unsupported Django series (such as 5.0.x, 4.1.x, and 3.2.x) were not evaluated and may also be affected.\nDjango would like to thank Jiyong Yang for reporting this issue.",
+        "es": "Se descubri\u00f3 un problema en 6.0 anterior a 6.0.2, 5.2 anterior a 5.2.11 y 4.2 anterior a 4.2.28.\n'ASGIRequest' permite a un atacante remoto causar una posible denegaci\u00f3n de servicio mediante una solicitud manipulada con m\u00faltiples encabezados duplicados.\nSeries de Django anteriores y no compatibles (como 5.0.x, 4.1.x y 3.2.x) no fueron evaluadas y tambi\u00e9n podr\u00edan verse afectadas.\nDjango desea agradecer a Jiyong Yang por informar sobre este problema."
       },
       "references": [
         "https://docs.djangoproject.com/en/dev/releases/security/",
@@ -3222,31 +3222,6 @@
       ]
     },
     {
-      "id": "pygoat:CVE-2026-59200:pillow:12.1.0",
-      "cve": "CVE-2026-59200",
-      "package": "pillow",
-      "ecosystem": "PyPI",
-      "installed_version": "12.1.0",
-      "fixed_version": "12.3.0",
-      "app": "pygoat",
-      "cvss": 7.5,
-      "epss": 0.00385,
-      "in_kev": false,
-      "kev_date_added": null,
-      "priority_score": 19,
-      "priority_label": "low",
-      "summary": {
-        "en": "Pillow is a Python imaging library. From 5.1.0 until 12.3.0, PdfParser.PdfStream.decode() in PIL/PdfParser.py calls zlib.decompress() with bufsize set to the PDF stream Length field without bounding the decompressed output size, allowing a crafted FlateDecode PDF stream to exhaust memory from a small file. This issue is fixed in version 12.3.0.",
-        "es": "Pillow es una biblioteca de im\u00e1genes de Python. Desde la versi\u00f3n 5.1.0 hasta la 12.3.0, PdfParser.PdfStream.decode() en PIL/PdfParser.py llama a zlib.decompress() con bufsize establecido al campo Length del flujo PDF sin limitar el tama\u00f1o de salida descomprimido, permitiendo que un flujo PDF FlateDecode manipulado agote la memoria desde un archivo peque\u00f1o. Este problema est\u00e1 solucionado en la versi\u00f3n 12.3.0."
-      },
-      "references": [
-        "https://github.com/python-pillow/Pillow/commit/f7a31ea75e460e108c37126da1f47812f21f6b09",
-        "https://github.com/python-pillow/Pillow/pull/9718",
-        "https://github.com/python-pillow/Pillow/releases/tag/12.3.0",
-        "https://github.com/python-pillow/Pillow/security/advisories/GHSA-jjj6-mw9f-p565"
-      ]
-    },
-    {
       "id": "pygoat:CVE-2026-59205:pillow:12.1.0",
       "cve": "CVE-2026-59205",
       "package": "pillow",
@@ -3297,6 +3272,31 @@
       ]
     },
     {
+      "id": "pygoat:CVE-2026-59200:pillow:12.1.0",
+      "cve": "CVE-2026-59200",
+      "package": "pillow",
+      "ecosystem": "PyPI",
+      "installed_version": "12.1.0",
+      "fixed_version": "12.3.0",
+      "app": "pygoat",
+      "cvss": 7.5,
+      "epss": 0.00385,
+      "in_kev": false,
+      "kev_date_added": null,
+      "priority_score": 19,
+      "priority_label": "low",
+      "summary": {
+        "en": "Pillow is a Python imaging library. From 5.1.0 until 12.3.0, PdfParser.PdfStream.decode() in PIL/PdfParser.py calls zlib.decompress() with bufsize set to the PDF stream Length field without bounding the decompressed output size, allowing a crafted FlateDecode PDF stream to exhaust memory from a small file. This issue is fixed in version 12.3.0.",
+        "es": "Pillow es una biblioteca de im\u00e1genes de Python. Desde la versi\u00f3n 5.1.0 hasta la 12.3.0, PdfParser.PdfStream.decode() en PIL/PdfParser.py llama a zlib.decompress() con bufsize establecido al campo Length del flujo PDF sin limitar el tama\u00f1o de salida descomprimido, permitiendo que un flujo PDF FlateDecode manipulado agote la memoria desde un archivo peque\u00f1o. Este problema est\u00e1 solucionado en la versi\u00f3n 12.3.0."
+      },
+      "references": [
+        "https://github.com/python-pillow/Pillow/commit/f7a31ea75e460e108c37126da1f47812f21f6b09",
+        "https://github.com/python-pillow/Pillow/pull/9718",
+        "https://github.com/python-pillow/Pillow/releases/tag/12.3.0",
+        "https://github.com/python-pillow/Pillow/security/advisories/GHSA-jjj6-mw9f-p565"
+      ]
+    },
+    {
       "id": "pygoat:CVE-2026-53877:django:4.2",
       "cve": "CVE-2026-53877",
       "package": "django",
@@ -3344,30 +3344,6 @@
       ]
     },
     {
-      "id": "pygoat:CVE-2026-96643:pillow:12.1.0",
-      "cve": "CVE-2026-96643",
-      "package": "pillow",
-      "ecosystem": "PyPI",
-      "installed_version": "12.1.0",
-      "fixed_version": "13.0.0",
-      "app": "pygoat",
-      "cvss": 6.5,
-      "epss": 0.00373,
-      "in_kev": false,
-      "kev_date_added": null,
-      "priority_score": 17,
-      "priority_label": "low",
-      "summary": {
-        "en": "Pillow is a Python imaging library. From 11.0.0 until 13.0.0, Exif.load() in src/PIL/Image.py repeatedly slices the remaining EXIF data while it begins with the six-byte Exif header. src/PIL/PngImagePlugin.py accepts an uncapped PNG eXIf chunk, so a file filled with repeated headers causes a new shrinking copy on every iteration and quadratic CPU work. The condition is reachable through Image.getexif(), Image._getexif(), and ImageOps.exif_transpose(), including common photo-upload rotation workflows. This issue is fixed in version 13.0.0."
-      },
-      "references": [
-        "https://github.com/python-pillow/Pillow/commit/806e38381c781f32bbd22f4cd026678acd40fd6c",
-        "https://github.com/python-pillow/Pillow/pull/10073",
-        "https://github.com/python-pillow/Pillow/releases/tag/13.0.0",
-        "https://github.com/python-pillow/Pillow/security/advisories/GHSA-g4qv-2jxx-769h"
-      ]
-    },
-    {
       "id": "pygoat:CVE-2026-96637:pillow:12.1.0",
       "cve": "CVE-2026-96637",
       "package": "pillow",
@@ -3389,6 +3365,30 @@
         "https://github.com/python-pillow/Pillow/pull/10076",
         "https://github.com/python-pillow/Pillow/releases/tag/13.0.0",
         "https://github.com/python-pillow/Pillow/security/advisories/GHSA-g842-9rc4-69pw"
+      ]
+    },
+    {
+      "id": "pygoat:CVE-2026-96643:pillow:12.1.0",
+      "cve": "CVE-2026-96643",
+      "package": "pillow",
+      "ecosystem": "PyPI",
+      "installed_version": "12.1.0",
+      "fixed_version": "13.0.0",
+      "app": "pygoat",
+      "cvss": 6.5,
+      "epss": 0.00373,
+      "in_kev": false,
+      "kev_date_added": null,
+      "priority_score": 17,
+      "priority_label": "low",
+      "summary": {
+        "en": "Pillow is a Python imaging library. From 11.0.0 until 13.0.0, Exif.load() in src/PIL/Image.py repeatedly slices the remaining EXIF data while it begins with the six-byte Exif header. src/PIL/PngImagePlugin.py accepts an uncapped PNG eXIf chunk, so a file filled with repeated headers causes a new shrinking copy on every iteration and quadratic CPU work. The condition is reachable through Image.getexif(), Image._getexif(), and ImageOps.exif_transpose(), including common photo-upload rotation workflows. This issue is fixed in version 13.0.0."
+      },
+      "references": [
+        "https://github.com/python-pillow/Pillow/commit/806e38381c781f32bbd22f4cd026678acd40fd6c",
+        "https://github.com/python-pillow/Pillow/pull/10073",
+        "https://github.com/python-pillow/Pillow/releases/tag/13.0.0",
+        "https://github.com/python-pillow/Pillow/security/advisories/GHSA-g4qv-2jxx-769h"
       ]
     },
     {
@@ -3774,30 +3774,6 @@
       ]
     },
     {
-      "id": "pygoat:CVE-2026-96641:pillow:12.1.0",
-      "cve": "CVE-2026-96641",
-      "package": "pillow",
-      "ecosystem": "PyPI",
-      "installed_version": "12.1.0",
-      "fixed_version": "13.0.0",
-      "app": "pygoat",
-      "cvss": 6.5,
-      "epss": 0.00364,
-      "in_kev": false,
-      "kev_date_added": null,
-      "priority_score": 17,
-      "priority_label": "low",
-      "summary": {
-        "en": "Pillow is a Python imaging library. Prior to 13.0.0, PILfont text-width accumulation in src/_imaging.c checks positive glyph advances against INT_MAX but does not check negative advances against INT_MIN. Repeating a signed 16-bit advance of -32768 can therefore execute a signed C integer overflow in xsize += dx, producing a large positive width from a negative mathematical result. Applications that use getlength(), getsize(), or derived layout, quota, serialization, or allocation calculations can experience logic-integrity errors or resource consumption, while the high-level mask path commonly retains a decompression-bomb check. This issue is fixed in version 13.0.0."
-      },
-      "references": [
-        "https://github.com/python-pillow/Pillow/commit/80de4be9e38d3a6148dd4d8491eb80cd12b760a4",
-        "https://github.com/python-pillow/Pillow/pull/10010",
-        "https://github.com/python-pillow/Pillow/releases/tag/13.0.0",
-        "https://github.com/python-pillow/Pillow/security/advisories/GHSA-4rm8-3hmm-39fg"
-      ]
-    },
-    {
       "id": "pygoat:CVE-2026-96638:pillow:12.1.0",
       "cve": "CVE-2026-96638",
       "package": "pillow",
@@ -3819,6 +3795,30 @@
         "https://github.com/python-pillow/Pillow/pull/10015",
         "https://github.com/python-pillow/Pillow/releases/tag/13.0.0",
         "https://github.com/python-pillow/Pillow/security/advisories/GHSA-24rc-8hj2-v98c"
+      ]
+    },
+    {
+      "id": "pygoat:CVE-2026-96641:pillow:12.1.0",
+      "cve": "CVE-2026-96641",
+      "package": "pillow",
+      "ecosystem": "PyPI",
+      "installed_version": "12.1.0",
+      "fixed_version": "13.0.0",
+      "app": "pygoat",
+      "cvss": 6.5,
+      "epss": 0.00364,
+      "in_kev": false,
+      "kev_date_added": null,
+      "priority_score": 17,
+      "priority_label": "low",
+      "summary": {
+        "en": "Pillow is a Python imaging library. Prior to 13.0.0, PILfont text-width accumulation in src/_imaging.c checks positive glyph advances against INT_MAX but does not check negative advances against INT_MIN. Repeating a signed 16-bit advance of -32768 can therefore execute a signed C integer overflow in xsize += dx, producing a large positive width from a negative mathematical result. Applications that use getlength(), getsize(), or derived layout, quota, serialization, or allocation calculations can experience logic-integrity errors or resource consumption, while the high-level mask path commonly retains a decompression-bomb check. This issue is fixed in version 13.0.0."
+      },
+      "references": [
+        "https://github.com/python-pillow/Pillow/commit/80de4be9e38d3a6148dd4d8491eb80cd12b760a4",
+        "https://github.com/python-pillow/Pillow/pull/10010",
+        "https://github.com/python-pillow/Pillow/releases/tag/13.0.0",
+        "https://github.com/python-pillow/Pillow/security/advisories/GHSA-4rm8-3hmm-39fg"
       ]
     },
     {
@@ -6600,7 +6600,7 @@
       "fixed_version": "4.18.0",
       "app": "nodejs-goof",
       "cvss": 8.1,
-      "epss": 0.02808,
+      "epss": 0.0287,
       "in_kev": false,
       "kev_date_added": null,
       "priority_score": 22,
@@ -6701,7 +6701,7 @@
       "fixed_version": "4.18.0",
       "app": "nodejs-goof",
       "cvss": 8.1,
-      "epss": 0.02808,
+      "epss": 0.0287,
       "in_kev": false,
       "kev_date_added": null,
       "priority_score": 22,
@@ -6802,7 +6802,7 @@
       "fixed_version": "4.18.0",
       "app": "nodejs-goof",
       "cvss": 8.1,
-      "epss": 0.02808,
+      "epss": 0.0287,
       "in_kev": false,
       "kev_date_added": null,
       "priority_score": 22,
@@ -8219,6 +8219,33 @@
       ]
     },
     {
+      "id": "nodejs-goof:CVE-2021-4264:dustjs-linkedin:2.5.0",
+      "cve": "CVE-2021-4264",
+      "package": "dustjs-linkedin",
+      "ecosystem": "npm",
+      "installed_version": "2.5.0",
+      "fixed_version": "3.0.0",
+      "app": "nodejs-goof",
+      "cvss": 6.3,
+      "epss": 0.01153,
+      "in_kev": false,
+      "kev_date_added": null,
+      "priority_score": 17,
+      "priority_label": "low",
+      "summary": {
+        "en": "A vulnerability was found in LinkedIn dustjs up to 2.x and classified as problematic. Affected by this issue is some unknown functionality. The manipulation leads to improperly controlled modification of object prototype attributes ('prototype pollution'). The attack may be launched remotely. The exploit has been disclosed to the public and may be used. Upgrading to version 3.0.0 is able to address this issue. The name of the patch is ddb6523832465d38c9d80189e9de60519ac307c3. It is recommended to upgrade the affected component. The identifier of this vulnerability is VDB-216464.",
+        "es": "Una vulnerabilidad fue encontrada en LinkedIndustjs hasta 2.x y clasificada como problem\u00e1tica. Una funci\u00f3n desconocida es afectada por este problema. La manipulaci\u00f3n conduce a una modificaci\u00f3n controlada inadecuadamente de los atributos del prototipo del objeto (\"prototype pollution\"). El ataque puede lanzarse de forma remota. La explotaci\u00f3n ha sido divulgada al p\u00fablico y puede utilizarse. La actualizaci\u00f3n a la versi\u00f3n 3.0.0 puede solucionar este problema. El nombre del parche es ddb6523832465d38c9d80189e9de60519ac307c3. Se recomienda actualizar el componente afectado. El identificador de esta vulnerabilidad es VDB-216464."
+      },
+      "references": [
+        "https://github.com/linkedin/dustjs/commit/ddb6523832465d38c9d80189e9de60519ac307c3",
+        "https://github.com/linkedin/dustjs/issues/804",
+        "https://github.com/linkedin/dustjs/pull/805",
+        "https://github.com/linkedin/dustjs/releases/tag/v3.0.0",
+        "https://vuldb.com/?ctiid.216464",
+        "https://vuldb.com/?id.216464"
+      ]
+    },
+    {
       "id": "nodejs-goof:CVE-2017-16137:debug:2.2.0",
       "cve": "CVE-2017-16137",
       "package": "debug",
@@ -8268,33 +8295,6 @@
         "https://lists.apache.org/thread.html/r8ba4c628fba7181af58817d452119481adce4ba92e889c643e4c7dd3%40%3Ccommits.netbeans.apache.org%3E",
         "https://lists.apache.org/thread.html/rb5ac16fad337d1f3bb7079549f97d8166d0ef3082629417c39f12d63%40%3Cnotifications.netbeans.apache.org%3E",
         "https://nodesecurity.io/advisories/534"
-      ]
-    },
-    {
-      "id": "nodejs-goof:CVE-2021-4264:dustjs-linkedin:2.5.0",
-      "cve": "CVE-2021-4264",
-      "package": "dustjs-linkedin",
-      "ecosystem": "npm",
-      "installed_version": "2.5.0",
-      "fixed_version": "3.0.0",
-      "app": "nodejs-goof",
-      "cvss": 6.3,
-      "epss": 0.01153,
-      "in_kev": false,
-      "kev_date_added": null,
-      "priority_score": 17,
-      "priority_label": "low",
-      "summary": {
-        "en": "A vulnerability was found in LinkedIn dustjs up to 2.x and classified as problematic. Affected by this issue is some unknown functionality. The manipulation leads to improperly controlled modification of object prototype attributes ('prototype pollution'). The attack may be launched remotely. The exploit has been disclosed to the public and may be used. Upgrading to version 3.0.0 is able to address this issue. The name of the patch is ddb6523832465d38c9d80189e9de60519ac307c3. It is recommended to upgrade the affected component. The identifier of this vulnerability is VDB-216464.",
-        "es": "Una vulnerabilidad fue encontrada en LinkedIndustjs hasta 2.x y clasificada como problem\u00e1tica. Una funci\u00f3n desconocida es afectada por este problema. La manipulaci\u00f3n conduce a una modificaci\u00f3n controlada inadecuadamente de los atributos del prototipo del objeto (\"prototype pollution\"). El ataque puede lanzarse de forma remota. La explotaci\u00f3n ha sido divulgada al p\u00fablico y puede utilizarse. La actualizaci\u00f3n a la versi\u00f3n 3.0.0 puede solucionar este problema. El nombre del parche es ddb6523832465d38c9d80189e9de60519ac307c3. Se recomienda actualizar el componente afectado. El identificador de esta vulnerabilidad es VDB-216464."
-      },
-      "references": [
-        "https://github.com/linkedin/dustjs/commit/ddb6523832465d38c9d80189e9de60519ac307c3",
-        "https://github.com/linkedin/dustjs/issues/804",
-        "https://github.com/linkedin/dustjs/pull/805",
-        "https://github.com/linkedin/dustjs/releases/tag/v3.0.0",
-        "https://vuldb.com/?ctiid.216464",
-        "https://vuldb.com/?id.216464"
       ]
     },
     {
@@ -8516,6 +8516,30 @@
       ]
     },
     {
+      "id": "nodejs-goof:CVE-2023-0842:xml2js:0.4.23",
+      "cve": "CVE-2023-0842",
+      "package": "xml2js",
+      "ecosystem": "npm",
+      "installed_version": "0.4.23",
+      "fixed_version": "0.5.0",
+      "app": "nodejs-goof",
+      "cvss": 5.3,
+      "epss": 0.01404,
+      "in_kev": false,
+      "kev_date_added": null,
+      "priority_score": 14,
+      "priority_label": "low",
+      "summary": {
+        "en": "xml2js version 0.4.23 allows an external attacker to edit or add new properties to an object. This is possible because the application does not properly validate incoming JSON keys, thus allowing the __proto__ property to be edited."
+      },
+      "references": [
+        "https://fluidattacks.com/advisories/myers/",
+        "https://github.com/Leonidas-from-XIV/node-xml2js/",
+        "https://github.com/Leonidas-from-XIV/node-xml2js/releases/tag/0.6.2",
+        "https://lists.debian.org/debian-lts-announce/2024/03/msg00013.html"
+      ]
+    },
+    {
       "id": "nodejs-goof:CVE-2020-26237:highlight.js:9.18.1",
       "cve": "CVE-2020-26237",
       "package": "highlight.js",
@@ -8540,30 +8564,6 @@
         "https://lists.debian.org/debian-lts-announce/2020/12/msg00041.html",
         "https://www.npmjs.com/package/highlight.js",
         "https://www.oracle.com/security-alerts/cpujul2022.html"
-      ]
-    },
-    {
-      "id": "nodejs-goof:CVE-2023-0842:xml2js:0.4.23",
-      "cve": "CVE-2023-0842",
-      "package": "xml2js",
-      "ecosystem": "npm",
-      "installed_version": "0.4.23",
-      "fixed_version": "0.5.0",
-      "app": "nodejs-goof",
-      "cvss": 5.3,
-      "epss": 0.01404,
-      "in_kev": false,
-      "kev_date_added": null,
-      "priority_score": 14,
-      "priority_label": "low",
-      "summary": {
-        "en": "xml2js version 0.4.23 allows an external attacker to edit or add new properties to an object. This is possible because the application does not properly validate incoming JSON keys, thus allowing the __proto__ property to be edited."
-      },
-      "references": [
-        "https://fluidattacks.com/advisories/myers/",
-        "https://github.com/Leonidas-from-XIV/node-xml2js/",
-        "https://github.com/Leonidas-from-XIV/node-xml2js/releases/tag/0.6.2",
-        "https://lists.debian.org/debian-lts-announce/2024/03/msg00013.html"
       ]
     },
     {
@@ -9299,28 +9299,6 @@
       ]
     },
     {
-      "id": "nodejs-goof:CVE-2017-16224:st:0.2.4",
-      "cve": "CVE-2017-16224",
-      "package": "st",
-      "ecosystem": "npm",
-      "installed_version": "0.2.4",
-      "fixed_version": "1.2.2",
-      "app": "nodejs-goof",
-      "cvss": 6.1,
-      "epss": 0.00849,
-      "in_kev": false,
-      "kev_date_added": null,
-      "priority_score": 16,
-      "priority_label": "low",
-      "summary": {
-        "en": "st is a module for serving static files. An attacker is able to craft a request that results in an HTTP 301 (redirect) to an entirely different domain. A request for: http://some.server.com//nodesecurity.org/%2e%2e would result in a 301 to //nodesecurity.org/%2e%2e which most browsers treat as a proper redirect as // is translated into the current schema being used. Mitigating factor: In order for this to work, st must be serving from the root of a server (/) rather than the typical sub directory (/static/) and the redirect URL will end with some form of URL encoded .. (\"%2e%2e\", \"%2e.\", \".%2e\").",
-        "es": "st es un m\u00f3dulo para servir archivos est\u00e1ticos. Un atacante puede manipular una petici\u00f3n que resulta en un error HTTP 301 (redirecci\u00f3n) a un dominio totalmente distinto. Una petici\u00f3n para: http://some.server.com//nodesecurity.org/%2e%2e resultar\u00eda en un error 301 a //nodesecurity.org/%2e%2e, el cual se considerar\u00eda una redirecci\u00f3n correcta por la mayor\u00eda de navegadores. Esto se debe a que // se traduce en el esquema actual en uso. Factor mitigador: para que esto funcione, st debe estar sirviendo desde el root de un servidor (/) en lugar del t\u00edpico subdirectorio (/static/) y la URL de redirecci\u00f3n debe terminar con alg\u00fan tipo de URL cifrada en .. (\"%2e%2e\", \"%2e.\", \".%2e\")."
-      },
-      "references": [
-        "https://nodesecurity.io/advisories/547"
-      ]
-    },
-    {
       "id": "nodejs-goof:CVE-2023-45133:babel-traverse:6.26.0",
       "cve": "CVE-2023-45133",
       "package": "babel-traverse",
@@ -9346,6 +9324,28 @@
         "https://github.com/babel/babel/security/advisories/GHSA-67hx-6x53-jw92",
         "https://lists.debian.org/debian-lts-announce/2023/10/msg00026.html",
         "https://www.debian.org/security/2023/dsa-5528"
+      ]
+    },
+    {
+      "id": "nodejs-goof:CVE-2017-16224:st:0.2.4",
+      "cve": "CVE-2017-16224",
+      "package": "st",
+      "ecosystem": "npm",
+      "installed_version": "0.2.4",
+      "fixed_version": "1.2.2",
+      "app": "nodejs-goof",
+      "cvss": 6.1,
+      "epss": 0.00849,
+      "in_kev": false,
+      "kev_date_added": null,
+      "priority_score": 16,
+      "priority_label": "low",
+      "summary": {
+        "en": "st is a module for serving static files. An attacker is able to craft a request that results in an HTTP 301 (redirect) to an entirely different domain. A request for: http://some.server.com//nodesecurity.org/%2e%2e would result in a 301 to //nodesecurity.org/%2e%2e which most browsers treat as a proper redirect as // is translated into the current schema being used. Mitigating factor: In order for this to work, st must be serving from the root of a server (/) rather than the typical sub directory (/static/) and the redirect URL will end with some form of URL encoded .. (\"%2e%2e\", \"%2e.\", \".%2e\").",
+        "es": "st es un m\u00f3dulo para servir archivos est\u00e1ticos. Un atacante puede manipular una petici\u00f3n que resulta en un error HTTP 301 (redirecci\u00f3n) a un dominio totalmente distinto. Una petici\u00f3n para: http://some.server.com//nodesecurity.org/%2e%2e resultar\u00eda en un error 301 a //nodesecurity.org/%2e%2e, el cual se considerar\u00eda una redirecci\u00f3n correcta por la mayor\u00eda de navegadores. Esto se debe a que // se traduce en el esquema actual en uso. Factor mitigador: para que esto funcione, st debe estar sirviendo desde el root de un servidor (/) en lugar del t\u00edpico subdirectorio (/static/) y la URL de redirecci\u00f3n debe terminar con alg\u00fan tipo de URL cifrada en .. (\"%2e%2e\", \"%2e.\", \".%2e\")."
+      },
+      "references": [
+        "https://nodesecurity.io/advisories/547"
       ]
     },
     {
@@ -10968,12 +10968,6 @@
   ],
   "history": [
     {
-      "date": "2026-10-14",
-      "findings_total": 343,
-      "critical": 4,
-      "high": 3
-    },
-    {
       "date": "2026-10-15",
       "findings_total": 343,
       "critical": 4,
@@ -11143,6 +11137,12 @@
     },
     {
       "date": "2026-11-16",
+      "findings_total": 394,
+      "critical": 3,
+      "high": 3
+    },
+    {
+      "date": "2026-11-17",
       "findings_total": 394,
       "critical": 3,
       "high": 3

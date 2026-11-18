@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-11-17T15:46:37.455274+00:00",
+  "generated_at": "2026-11-18T15:26:09.115734+00:00",
   "sources": {
     "kev": {
       "fetched": true,
@@ -1951,29 +1951,6 @@
       ]
     },
     {
-      "id": "pygoat:CVE-2026-112405:pillow:12.1.0",
-      "cve": "CVE-2026-112405",
-      "package": "pillow",
-      "ecosystem": "PyPI",
-      "installed_version": "12.1.0",
-      "fixed_version": "13.0.0",
-      "app": "pygoat",
-      "cvss": 7.5,
-      "epss": 0.00594,
-      "in_kev": false,
-      "kev_date_added": null,
-      "priority_score": 19,
-      "priority_label": "low",
-      "summary": {
-        "en": "Pillow is a Python imaging library. From 12.0.0 until 13.0.0, Pillow's Image.merge() can dereference a null image8 plane. Validation skips the first input band, allowing a 32-bit integer or floating-point image backed by image32 storage to be merged as a narrower multiband image. A crafted IPTC file can reach this path when an application opens and loads it, or a caller can invoke Image.merge() directly with such a first band. This causes a native process crash. This issue is fixed in version 13.0.0."
-      },
-      "references": [
-        "https://github.com/python-pillow/Pillow/commit/b6ee66e8b2c2c0932bdf65f963268d9f2927ef86",
-        "https://github.com/python-pillow/Pillow/releases/tag/13.0.0",
-        "https://github.com/python-pillow/Pillow/security/advisories/GHSA-cp9v-662q-vvx9"
-      ]
-    },
-    {
       "id": "pygoat:CVE-2026-112894:pillow:12.1.0",
       "cve": "CVE-2026-112894",
       "package": "pillow",
@@ -2017,6 +1994,29 @@
         "https://github.com/python-pillow/Pillow/commit/e2ae7eacad6de68c37eb28b633a97bebacf2c5bf",
         "https://github.com/python-pillow/Pillow/releases/tag/13.0.0",
         "https://github.com/python-pillow/Pillow/security/advisories/GHSA-p4wg-p73j-c528"
+      ]
+    },
+    {
+      "id": "pygoat:CVE-2026-112405:pillow:12.1.0",
+      "cve": "CVE-2026-112405",
+      "package": "pillow",
+      "ecosystem": "PyPI",
+      "installed_version": "12.1.0",
+      "fixed_version": "13.0.0",
+      "app": "pygoat",
+      "cvss": 7.5,
+      "epss": 0.00594,
+      "in_kev": false,
+      "kev_date_added": null,
+      "priority_score": 19,
+      "priority_label": "low",
+      "summary": {
+        "en": "Pillow is a Python imaging library. From 12.0.0 until 13.0.0, Pillow's Image.merge() can dereference a null image8 plane. Validation skips the first input band, allowing a 32-bit integer or floating-point image backed by image32 storage to be merged as a narrower multiband image. A crafted IPTC file can reach this path when an application opens and loads it, or a caller can invoke Image.merge() directly with such a first band. This causes a native process crash. This issue is fixed in version 13.0.0."
+      },
+      "references": [
+        "https://github.com/python-pillow/Pillow/commit/b6ee66e8b2c2c0932bdf65f963268d9f2927ef86",
+        "https://github.com/python-pillow/Pillow/releases/tag/13.0.0",
+        "https://github.com/python-pillow/Pillow/security/advisories/GHSA-cp9v-662q-vvx9"
       ]
     },
     {
@@ -2149,29 +2149,6 @@
       ]
     },
     {
-      "id": "pygoat:CVE-2026-112406:pillow:12.1.0",
-      "cve": "CVE-2026-112406",
-      "package": "pillow",
-      "ecosystem": "PyPI",
-      "installed_version": "12.1.0",
-      "fixed_version": "13.0.0",
-      "app": "pygoat",
-      "cvss": 7.5,
-      "epss": 0.00573,
-      "in_kev": false,
-      "kev_date_added": null,
-      "priority_score": 19,
-      "priority_label": "low",
-      "summary": {
-        "en": "Pillow is a Python imaging library. From 5.1.0 until 13.0.0, Pillow can enter an infinite loop while rewriting PDF pages. PdfParser.rewrite_pages() follows Parent relationships without detecting a cycle in the page tree. An attacker can supply a cyclic PDF to an application that appends an image to that PDF. This can hold the worker at full CPU and deny service. This issue is fixed in version 13.0.0."
-      },
-      "references": [
-        "https://github.com/python-pillow/Pillow/commit/b3ebf20c694f2f12537a629c30229a1d5a53f777",
-        "https://github.com/python-pillow/Pillow/releases/tag/13.0.0",
-        "https://github.com/python-pillow/Pillow/security/advisories/GHSA-f2g6-542v-9j58"
-      ]
-    },
-    {
       "id": "pygoat:CVE-2026-112397:pillow:12.1.0",
       "cve": "CVE-2026-112397",
       "package": "pillow",
@@ -2192,6 +2169,29 @@
         "https://github.com/python-pillow/Pillow/commit/18f7c0dfee93063c51db6ed0ca8c4da2999dcb64",
         "https://github.com/python-pillow/Pillow/releases/tag/13.0.0",
         "https://github.com/python-pillow/Pillow/security/advisories/GHSA-58r4-6rv3-gfh8"
+      ]
+    },
+    {
+      "id": "pygoat:CVE-2026-112406:pillow:12.1.0",
+      "cve": "CVE-2026-112406",
+      "package": "pillow",
+      "ecosystem": "PyPI",
+      "installed_version": "12.1.0",
+      "fixed_version": "13.0.0",
+      "app": "pygoat",
+      "cvss": 7.5,
+      "epss": 0.00573,
+      "in_kev": false,
+      "kev_date_added": null,
+      "priority_score": 19,
+      "priority_label": "low",
+      "summary": {
+        "en": "Pillow is a Python imaging library. From 5.1.0 until 13.0.0, Pillow can enter an infinite loop while rewriting PDF pages. PdfParser.rewrite_pages() follows Parent relationships without detecting a cycle in the page tree. An attacker can supply a cyclic PDF to an application that appends an image to that PDF. This can hold the worker at full CPU and deny service. This issue is fixed in version 13.0.0."
+      },
+      "references": [
+        "https://github.com/python-pillow/Pillow/commit/b3ebf20c694f2f12537a629c30229a1d5a53f777",
+        "https://github.com/python-pillow/Pillow/releases/tag/13.0.0",
+        "https://github.com/python-pillow/Pillow/security/advisories/GHSA-f2g6-542v-9j58"
       ]
     },
     {
@@ -2928,30 +2928,6 @@
       ]
     },
     {
-      "id": "pygoat:CVE-2026-1285:django:4.2",
-      "cve": "CVE-2026-1285",
-      "package": "django",
-      "ecosystem": "PyPI",
-      "installed_version": "4.2",
-      "fixed_version": "4.2.28",
-      "app": "pygoat",
-      "cvss": 7.5,
-      "epss": 0.01112,
-      "in_kev": false,
-      "kev_date_added": null,
-      "priority_score": 20,
-      "priority_label": "medium",
-      "summary": {
-        "en": "An issue was discovered in 6.0 before 6.0.2, 5.2 before 5.2.11, and 4.2 before 4.2.28.\n`django.utils.text.Truncator.chars()` and `Truncator.words()` methods (with `html=True`) and the `truncatechars_html` and `truncatewords_html` template filters allow a remote attacker to cause a potential denial-of-service via crafted inputs containing a large number of unmatched HTML end tags.\nEarlier, unsupported Django series (such as 5.0.x, 4.1.x, and 3.2.x) were not evaluated and may also be affected.\nDjango would like to thank Seokchan Yoon for reporting this issue.",
-        "es": "Se descubri\u00f3 un problema en 6.0 anterior a 6.0.2, 5.2 anterior a 5.2.11 y 4.2 anterior a 4.2.28.\nLos m\u00e9todos 'django.utils.text.Truncator.chars()' y 'Truncator.words()' (con 'html=True') y los filtros de plantilla 'truncatechars_html' y 'truncatewords_html' permiten a un atacante remoto causar una potencial denegaci\u00f3n de servicio mediante entradas manipuladas que contienen un gran n\u00famero de etiquetas de cierre HTML no coincidentes.\nSeries de Django anteriores y sin soporte (como 5.0.x, 4.1.x y 3.2.x) no fueron evaluadas y tambi\u00e9n pueden verse afectadas.\nDjango desea agradecer a Seokchan Yoon por informar de este problema."
-      },
-      "references": [
-        "https://docs.djangoproject.com/en/dev/releases/security/",
-        "https://groups.google.com/g/django-announce",
-        "https://www.djangoproject.com/weblog/2026/feb/03/security-releases/"
-      ]
-    },
-    {
       "id": "pygoat:CVE-2025-14550:django:4.2",
       "cve": "CVE-2025-14550",
       "package": "django",
@@ -2968,6 +2944,30 @@
       "summary": {
         "en": "An issue was discovered in 6.0 before 6.0.2, 5.2 before 5.2.11, and 4.2 before 4.2.28.\n`ASGIRequest` allows a remote attacker to cause a potential denial-of-service via a crafted request with multiple duplicate headers.\nEarlier, unsupported Django series (such as 5.0.x, 4.1.x, and 3.2.x) were not evaluated and may also be affected.\nDjango would like to thank Jiyong Yang for reporting this issue.",
         "es": "Se descubri\u00f3 un problema en 6.0 anterior a 6.0.2, 5.2 anterior a 5.2.11 y 4.2 anterior a 4.2.28.\n'ASGIRequest' permite a un atacante remoto causar una posible denegaci\u00f3n de servicio mediante una solicitud manipulada con m\u00faltiples encabezados duplicados.\nSeries de Django anteriores y no compatibles (como 5.0.x, 4.1.x y 3.2.x) no fueron evaluadas y tambi\u00e9n podr\u00edan verse afectadas.\nDjango desea agradecer a Jiyong Yang por informar sobre este problema."
+      },
+      "references": [
+        "https://docs.djangoproject.com/en/dev/releases/security/",
+        "https://groups.google.com/g/django-announce",
+        "https://www.djangoproject.com/weblog/2026/feb/03/security-releases/"
+      ]
+    },
+    {
+      "id": "pygoat:CVE-2026-1285:django:4.2",
+      "cve": "CVE-2026-1285",
+      "package": "django",
+      "ecosystem": "PyPI",
+      "installed_version": "4.2",
+      "fixed_version": "4.2.28",
+      "app": "pygoat",
+      "cvss": 7.5,
+      "epss": 0.01112,
+      "in_kev": false,
+      "kev_date_added": null,
+      "priority_score": 20,
+      "priority_label": "medium",
+      "summary": {
+        "en": "An issue was discovered in 6.0 before 6.0.2, 5.2 before 5.2.11, and 4.2 before 4.2.28.\n`django.utils.text.Truncator.chars()` and `Truncator.words()` methods (with `html=True`) and the `truncatechars_html` and `truncatewords_html` template filters allow a remote attacker to cause a potential denial-of-service via crafted inputs containing a large number of unmatched HTML end tags.\nEarlier, unsupported Django series (such as 5.0.x, 4.1.x, and 3.2.x) were not evaluated and may also be affected.\nDjango would like to thank Seokchan Yoon for reporting this issue.",
+        "es": "Se descubri\u00f3 un problema en 6.0 anterior a 6.0.2, 5.2 anterior a 5.2.11 y 4.2 anterior a 4.2.28.\nLos m\u00e9todos 'django.utils.text.Truncator.chars()' y 'Truncator.words()' (con 'html=True') y los filtros de plantilla 'truncatechars_html' y 'truncatewords_html' permiten a un atacante remoto causar una potencial denegaci\u00f3n de servicio mediante entradas manipuladas que contienen un gran n\u00famero de etiquetas de cierre HTML no coincidentes.\nSeries de Django anteriores y sin soporte (como 5.0.x, 4.1.x y 3.2.x) no fueron evaluadas y tambi\u00e9n pueden verse afectadas.\nDjango desea agradecer a Seokchan Yoon por informar de este problema."
       },
       "references": [
         "https://docs.djangoproject.com/en/dev/releases/security/",
@@ -3222,31 +3222,6 @@
       ]
     },
     {
-      "id": "pygoat:CVE-2026-59205:pillow:12.1.0",
-      "cve": "CVE-2026-59205",
-      "package": "pillow",
-      "ecosystem": "PyPI",
-      "installed_version": "12.1.0",
-      "fixed_version": "12.3.0",
-      "app": "pygoat",
-      "cvss": 7.5,
-      "epss": 0.00385,
-      "in_kev": false,
-      "kev_date_added": null,
-      "priority_score": 19,
-      "priority_label": "low",
-      "summary": {
-        "en": "Pillow is a Python imaging library. Prior to 12.3.0, Pillow's ImageCms.ImageCmsTransform.apply(im, imOut) API can trigger controlled native heap corruption when the caller supplies an output image whose mode does not match the transform's declared output mode. This issue is fixed in version 12.3.0.",
-        "es": "Pillow es una biblioteca de procesamiento de im\u00e1genes de Python. Antes de la versi\u00f3n 12.3.0, la API ImageCms.ImageCmsTransform.apply(im, imOut) de Pillow puede desencadenar una corrupci\u00f3n controlada del heap nativo cuando el llamador suministra una imagen de salida cuyo modo no coincide con el modo de salida declarado de la transformaci\u00f3n. Este problema se ha corregido en la versi\u00f3n 12.3.0."
-      },
-      "references": [
-        "https://github.com/python-pillow/Pillow/commit/a9ffc42bedf4fc0a7ef8d6486e7f9e81e3397721",
-        "https://github.com/python-pillow/Pillow/pull/9715",
-        "https://github.com/python-pillow/Pillow/releases/tag/12.3.0",
-        "https://github.com/python-pillow/Pillow/security/advisories/GHSA-9hw9-ch79-4vh6"
-      ]
-    },
-    {
       "id": "pygoat:CVE-2026-59199:pillow:12.1.0",
       "cve": "CVE-2026-59199",
       "package": "pillow",
@@ -3294,6 +3269,31 @@
         "https://github.com/python-pillow/Pillow/pull/9718",
         "https://github.com/python-pillow/Pillow/releases/tag/12.3.0",
         "https://github.com/python-pillow/Pillow/security/advisories/GHSA-jjj6-mw9f-p565"
+      ]
+    },
+    {
+      "id": "pygoat:CVE-2026-59205:pillow:12.1.0",
+      "cve": "CVE-2026-59205",
+      "package": "pillow",
+      "ecosystem": "PyPI",
+      "installed_version": "12.1.0",
+      "fixed_version": "12.3.0",
+      "app": "pygoat",
+      "cvss": 7.5,
+      "epss": 0.00385,
+      "in_kev": false,
+      "kev_date_added": null,
+      "priority_score": 19,
+      "priority_label": "low",
+      "summary": {
+        "en": "Pillow is a Python imaging library. Prior to 12.3.0, Pillow's ImageCms.ImageCmsTransform.apply(im, imOut) API can trigger controlled native heap corruption when the caller supplies an output image whose mode does not match the transform's declared output mode. This issue is fixed in version 12.3.0.",
+        "es": "Pillow es una biblioteca de procesamiento de im\u00e1genes de Python. Antes de la versi\u00f3n 12.3.0, la API ImageCms.ImageCmsTransform.apply(im, imOut) de Pillow puede desencadenar una corrupci\u00f3n controlada del heap nativo cuando el llamador suministra una imagen de salida cuyo modo no coincide con el modo de salida declarado de la transformaci\u00f3n. Este problema se ha corregido en la versi\u00f3n 12.3.0."
+      },
+      "references": [
+        "https://github.com/python-pillow/Pillow/commit/a9ffc42bedf4fc0a7ef8d6486e7f9e81e3397721",
+        "https://github.com/python-pillow/Pillow/pull/9715",
+        "https://github.com/python-pillow/Pillow/releases/tag/12.3.0",
+        "https://github.com/python-pillow/Pillow/security/advisories/GHSA-9hw9-ch79-4vh6"
       ]
     },
     {
@@ -6567,31 +6567,6 @@
       ]
     },
     {
-      "id": "nodejs-goof:CVE-2022-21680:marked:0.3.5",
-      "cve": "CVE-2022-21680",
-      "package": "marked",
-      "ecosystem": "npm",
-      "installed_version": "0.3.5",
-      "fixed_version": "4.0.10",
-      "app": "nodejs-goof",
-      "cvss": 7.5,
-      "epss": 0.02983,
-      "in_kev": false,
-      "kev_date_added": null,
-      "priority_score": 21,
-      "priority_label": "medium",
-      "summary": {
-        "en": "Marked is a markdown parser and compiler. Prior to version 4.0.10, the regular expression `block.def` may cause catastrophic backtracking against some strings and lead to a regular expression denial of service (ReDoS). Anyone who runs untrusted markdown through a vulnerable version of marked and does not use a worker with a time limit may be affected. This issue is patched in version 4.0.10. As a workaround, avoid running untrusted markdown through marked or run marked on a worker thread and set a reasonable time limit to prevent draining resources.",
-        "es": "Marked es un analizador y compilador de markdown. En versiones anteriores a 4.0.10, la expresi\u00f3n regular \"block.def\" pod\u00eda causar un retroceso catastr\u00f3fico contra algunas cadenas y conllevar a una denegaci\u00f3n de servicio por expresi\u00f3n regular (ReDoS). Cualquiera que ejecute markdown no confiable mediante una versi\u00f3n vulnerable de marked y no use un trabajador con l\u00edmite de tiempo puede verse afectado. Este problema est\u00e1 parcheado en la versi\u00f3n 4.0.10. Como medida de mitigaci\u00f3n, evite ejecutar markdown no confiable mediante marked o ejecute marked en un hilo de trabajo y establezca un l\u00edmite de tiempo razonable para evitar el agotamiento de los recursos"
-      },
-      "references": [
-        "https://github.com/markedjs/marked/commit/c4a3ccd344b6929afa8a1d50ac54a721e57012c0",
-        "https://github.com/markedjs/marked/releases/tag/v4.0.10",
-        "https://github.com/markedjs/marked/security/advisories/GHSA-rrrm-qjm4-v8hf",
-        "https://lists.fedoraproject.org/archives/list/package-announce%40lists.fedoraproject.org/message/AIXDMC3CSHYW3YWVSQOXAWLUYQHAO5UX/"
-      ]
-    },
-    {
       "id": "nodejs-goof:CVE-2026-4800:lodash:4.17.10",
       "cve": "CVE-2026-4800",
       "package": "lodash",
@@ -6892,6 +6867,31 @@
         "https://access.redhat.com/security/cve/CVE-2026-4800",
         "https://bugzilla.redhat.com/show_bug.cgi?id=2453496",
         "https://security.access.redhat.com/data/csaf/v2/vex/2026/cve-2026-4800.json"
+      ]
+    },
+    {
+      "id": "nodejs-goof:CVE-2022-21680:marked:0.3.5",
+      "cve": "CVE-2022-21680",
+      "package": "marked",
+      "ecosystem": "npm",
+      "installed_version": "0.3.5",
+      "fixed_version": "4.0.10",
+      "app": "nodejs-goof",
+      "cvss": 7.5,
+      "epss": 0.02983,
+      "in_kev": false,
+      "kev_date_added": null,
+      "priority_score": 21,
+      "priority_label": "medium",
+      "summary": {
+        "en": "Marked is a markdown parser and compiler. Prior to version 4.0.10, the regular expression `block.def` may cause catastrophic backtracking against some strings and lead to a regular expression denial of service (ReDoS). Anyone who runs untrusted markdown through a vulnerable version of marked and does not use a worker with a time limit may be affected. This issue is patched in version 4.0.10. As a workaround, avoid running untrusted markdown through marked or run marked on a worker thread and set a reasonable time limit to prevent draining resources.",
+        "es": "Marked es un analizador y compilador de markdown. En versiones anteriores a 4.0.10, la expresi\u00f3n regular \"block.def\" pod\u00eda causar un retroceso catastr\u00f3fico contra algunas cadenas y conllevar a una denegaci\u00f3n de servicio por expresi\u00f3n regular (ReDoS). Cualquiera que ejecute markdown no confiable mediante una versi\u00f3n vulnerable de marked y no use un trabajador con l\u00edmite de tiempo puede verse afectado. Este problema est\u00e1 parcheado en la versi\u00f3n 4.0.10. Como medida de mitigaci\u00f3n, evite ejecutar markdown no confiable mediante marked o ejecute marked en un hilo de trabajo y establezca un l\u00edmite de tiempo razonable para evitar el agotamiento de los recursos"
+      },
+      "references": [
+        "https://github.com/markedjs/marked/commit/c4a3ccd344b6929afa8a1d50ac54a721e57012c0",
+        "https://github.com/markedjs/marked/releases/tag/v4.0.10",
+        "https://github.com/markedjs/marked/security/advisories/GHSA-rrrm-qjm4-v8hf",
+        "https://lists.fedoraproject.org/archives/list/package-announce%40lists.fedoraproject.org/message/AIXDMC3CSHYW3YWVSQOXAWLUYQHAO5UX/"
       ]
     },
     {
@@ -10968,12 +10968,6 @@
   ],
   "history": [
     {
-      "date": "2026-10-15",
-      "findings_total": 343,
-      "critical": 4,
-      "high": 4
-    },
-    {
       "date": "2026-10-16",
       "findings_total": 343,
       "critical": 4,
@@ -11143,6 +11137,12 @@
     },
     {
       "date": "2026-11-17",
+      "findings_total": 394,
+      "critical": 3,
+      "high": 3
+    },
+    {
+      "date": "2026-11-18",
       "findings_total": 394,
       "critical": 3,
       "high": 3

@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-11-19T15:31:40.724018+00:00",
+  "generated_at": "2026-11-20T15:07:59.728824+00:00",
   "sources": {
     "kev": {
       "fetched": true,
@@ -1467,29 +1467,6 @@
       ]
     },
     {
-      "id": "pygoat:CVE-2025-66418:urllib3:1.26.9",
-      "cve": "CVE-2025-66418",
-      "package": "urllib3",
-      "ecosystem": "PyPI",
-      "installed_version": "1.26.9",
-      "fixed_version": "2.6.0",
-      "app": "pygoat",
-      "cvss": 7.5,
-      "epss": 0.00731,
-      "in_kev": false,
-      "kev_date_added": null,
-      "priority_score": 19,
-      "priority_label": "low",
-      "summary": {
-        "en": "urllib3 is a user-friendly HTTP client library for Python. Starting in version 1.24 and prior to 2.6.0, the number of links in the decompression chain was unbounded allowing a malicious server to insert a virtually unlimited number of compression steps leading to high CPU usage and massive memory allocation for the decompressed data. This vulnerability is fixed in 2.6.0.",
-        "es": "urllib3 es una biblioteca cliente HTTP f\u00e1cil de usar para Python. A partir de la versi\u00f3n 1.24 y en versiones anteriores a la 2.6.0, el n\u00famero de enlaces en la cadena de descompresi\u00f3n era ilimitado, lo que permit\u00eda a un servidor malicioso insertar un n\u00famero pr\u00e1cticamente ilimitado de pasos de compresi\u00f3n, lo que provocaba un alto uso de CPU y una asignaci\u00f3n masiva de memoria para los datos descomprimidos. Esta vulnerabilidad se corrigi\u00f3 en la versi\u00f3n 2.6.0."
-      },
-      "references": [
-        "https://github.com/urllib3/urllib3/commit/24d7b67eac89f94e11003424bcf0d8f7b72222a8",
-        "https://github.com/urllib3/urllib3/security/advisories/GHSA-gm62-xv2j-4w53"
-      ]
-    },
-    {
       "id": "pygoat:CVE-2025-66471:urllib3:1.26.9",
       "cve": "CVE-2025-66471",
       "package": "urllib3",
@@ -1510,6 +1487,29 @@
       "references": [
         "https://github.com/urllib3/urllib3/commit/c19571de34c47de3a766541b041637ba5f716ed7",
         "https://github.com/urllib3/urllib3/security/advisories/GHSA-2xpw-w6gg-jr37"
+      ]
+    },
+    {
+      "id": "pygoat:CVE-2025-66418:urllib3:1.26.9",
+      "cve": "CVE-2025-66418",
+      "package": "urllib3",
+      "ecosystem": "PyPI",
+      "installed_version": "1.26.9",
+      "fixed_version": "2.6.0",
+      "app": "pygoat",
+      "cvss": 7.5,
+      "epss": 0.00731,
+      "in_kev": false,
+      "kev_date_added": null,
+      "priority_score": 19,
+      "priority_label": "low",
+      "summary": {
+        "en": "urllib3 is a user-friendly HTTP client library for Python. Starting in version 1.24 and prior to 2.6.0, the number of links in the decompression chain was unbounded allowing a malicious server to insert a virtually unlimited number of compression steps leading to high CPU usage and massive memory allocation for the decompressed data. This vulnerability is fixed in 2.6.0.",
+        "es": "urllib3 es una biblioteca cliente HTTP f\u00e1cil de usar para Python. A partir de la versi\u00f3n 1.24 y en versiones anteriores a la 2.6.0, el n\u00famero de enlaces en la cadena de descompresi\u00f3n era ilimitado, lo que permit\u00eda a un servidor malicioso insertar un n\u00famero pr\u00e1cticamente ilimitado de pasos de compresi\u00f3n, lo que provocaba un alto uso de CPU y una asignaci\u00f3n masiva de memoria para los datos descomprimidos. Esta vulnerabilidad se corrigi\u00f3 en la versi\u00f3n 2.6.0."
+      },
+      "references": [
+        "https://github.com/urllib3/urllib3/commit/24d7b67eac89f94e11003424bcf0d8f7b72222a8",
+        "https://github.com/urllib3/urllib3/security/advisories/GHSA-gm62-xv2j-4w53"
       ]
     },
     {
@@ -1905,29 +1905,6 @@
       ]
     },
     {
-      "id": "pygoat:CVE-2026-112405:pillow:12.1.0",
-      "cve": "CVE-2026-112405",
-      "package": "pillow",
-      "ecosystem": "PyPI",
-      "installed_version": "12.1.0",
-      "fixed_version": "13.0.0",
-      "app": "pygoat",
-      "cvss": 7.5,
-      "epss": 0.00594,
-      "in_kev": false,
-      "kev_date_added": null,
-      "priority_score": 19,
-      "priority_label": "low",
-      "summary": {
-        "en": "Pillow is a Python imaging library. From 12.0.0 until 13.0.0, Pillow's Image.merge() can dereference a null image8 plane. Validation skips the first input band, allowing a 32-bit integer or floating-point image backed by image32 storage to be merged as a narrower multiband image. A crafted IPTC file can reach this path when an application opens and loads it, or a caller can invoke Image.merge() directly with such a first band. This causes a native process crash. This issue is fixed in version 13.0.0."
-      },
-      "references": [
-        "https://github.com/python-pillow/Pillow/commit/b6ee66e8b2c2c0932bdf65f963268d9f2927ef86",
-        "https://github.com/python-pillow/Pillow/releases/tag/13.0.0",
-        "https://github.com/python-pillow/Pillow/security/advisories/GHSA-cp9v-662q-vvx9"
-      ]
-    },
-    {
       "id": "pygoat:CVE-2026-112400:pillow:12.1.0",
       "cve": "CVE-2026-112400",
       "package": "pillow",
@@ -1948,29 +1925,6 @@
         "https://github.com/python-pillow/Pillow/commit/6faed707cfb760a4cbd726ddc8406f576cf35bf7",
         "https://github.com/python-pillow/Pillow/releases/tag/13.0.0",
         "https://github.com/python-pillow/Pillow/security/advisories/GHSA-65qm-jvmh-6pqg"
-      ]
-    },
-    {
-      "id": "pygoat:CVE-2026-112402:pillow:12.1.0",
-      "cve": "CVE-2026-112402",
-      "package": "pillow",
-      "ecosystem": "PyPI",
-      "installed_version": "12.1.0",
-      "fixed_version": "13.0.0",
-      "app": "pygoat",
-      "cvss": 7.5,
-      "epss": 0.00594,
-      "in_kev": false,
-      "kev_date_added": null,
-      "priority_score": 19,
-      "priority_label": "low",
-      "summary": {
-        "en": "Pillow is a Python imaging library. Prior to 13.0.0, Pillow can double free image memory when ImagingScaleAffine encounters a selective allocation failure. The affected fast path handles Transform.EXTENT or pure scale-and-translate Transform.AFFINE operations with the default NEAREST resampling. The output image allocation must succeed while the additional per-column lookup allocation fails, after which the error path deletes image storage that later cleanup releases again. An attacker who can drive such a large Image.transform() operation under memory pressure may trigger the failure. This can crash the process and may corrupt memory. This issue is fixed in version 13.0.0."
-      },
-      "references": [
-        "https://github.com/python-pillow/Pillow/commit/aafa6c75f7cdabb9f409a8aac7c780bea31d08d9",
-        "https://github.com/python-pillow/Pillow/releases/tag/13.0.0",
-        "https://github.com/python-pillow/Pillow/security/advisories/GHSA-7mwm-ghpf-9vrm"
       ]
     },
     {
@@ -2017,6 +1971,52 @@
         "https://github.com/python-pillow/Pillow/commit/e2ae7eacad6de68c37eb28b633a97bebacf2c5bf",
         "https://github.com/python-pillow/Pillow/releases/tag/13.0.0",
         "https://github.com/python-pillow/Pillow/security/advisories/GHSA-p4wg-p73j-c528"
+      ]
+    },
+    {
+      "id": "pygoat:CVE-2026-112402:pillow:12.1.0",
+      "cve": "CVE-2026-112402",
+      "package": "pillow",
+      "ecosystem": "PyPI",
+      "installed_version": "12.1.0",
+      "fixed_version": "13.0.0",
+      "app": "pygoat",
+      "cvss": 7.5,
+      "epss": 0.00594,
+      "in_kev": false,
+      "kev_date_added": null,
+      "priority_score": 19,
+      "priority_label": "low",
+      "summary": {
+        "en": "Pillow is a Python imaging library. Prior to 13.0.0, Pillow can double free image memory when ImagingScaleAffine encounters a selective allocation failure. The affected fast path handles Transform.EXTENT or pure scale-and-translate Transform.AFFINE operations with the default NEAREST resampling. The output image allocation must succeed while the additional per-column lookup allocation fails, after which the error path deletes image storage that later cleanup releases again. An attacker who can drive such a large Image.transform() operation under memory pressure may trigger the failure. This can crash the process and may corrupt memory. This issue is fixed in version 13.0.0."
+      },
+      "references": [
+        "https://github.com/python-pillow/Pillow/commit/aafa6c75f7cdabb9f409a8aac7c780bea31d08d9",
+        "https://github.com/python-pillow/Pillow/releases/tag/13.0.0",
+        "https://github.com/python-pillow/Pillow/security/advisories/GHSA-7mwm-ghpf-9vrm"
+      ]
+    },
+    {
+      "id": "pygoat:CVE-2026-112405:pillow:12.1.0",
+      "cve": "CVE-2026-112405",
+      "package": "pillow",
+      "ecosystem": "PyPI",
+      "installed_version": "12.1.0",
+      "fixed_version": "13.0.0",
+      "app": "pygoat",
+      "cvss": 7.5,
+      "epss": 0.00594,
+      "in_kev": false,
+      "kev_date_added": null,
+      "priority_score": 19,
+      "priority_label": "low",
+      "summary": {
+        "en": "Pillow is a Python imaging library. From 12.0.0 until 13.0.0, Pillow's Image.merge() can dereference a null image8 plane. Validation skips the first input band, allowing a 32-bit integer or floating-point image backed by image32 storage to be merged as a narrower multiband image. A crafted IPTC file can reach this path when an application opens and loads it, or a caller can invoke Image.merge() directly with such a first band. This causes a native process crash. This issue is fixed in version 13.0.0."
+      },
+      "references": [
+        "https://github.com/python-pillow/Pillow/commit/b6ee66e8b2c2c0932bdf65f963268d9f2927ef86",
+        "https://github.com/python-pillow/Pillow/releases/tag/13.0.0",
+        "https://github.com/python-pillow/Pillow/security/advisories/GHSA-cp9v-662q-vvx9"
       ]
     },
     {
@@ -2103,29 +2103,6 @@
       ]
     },
     {
-      "id": "pygoat:CVE-2026-112390:pillow:12.1.0",
-      "cve": "CVE-2026-112390",
-      "package": "pillow",
-      "ecosystem": "PyPI",
-      "installed_version": "12.1.0",
-      "fixed_version": "13.0.0",
-      "app": "pygoat",
-      "cvss": 7.5,
-      "epss": 0.00593,
-      "in_kev": false,
-      "kev_date_added": null,
-      "priority_score": 19,
-      "priority_label": "low",
-      "summary": {
-        "en": "Pillow is a Python imaging library. From 7.2.0 until 13.0.0, Pillow can enter an infinite loop while determining the frame count of a MIC image. MicImageFile inherits TIFF frame traversal, but MicImageFile.tell reports the OLE stream index and its seek() resets TIFF frame state, so an embedded TIFF with at least three IFDs never advances. When an application with olefile installed reads n_frames or saves all frames from a crafted MIC file, the non-advancing traversal can hold a worker at full CPU indefinitely. This issue is fixed in version 13.0.0."
-      },
-      "references": [
-        "https://github.com/python-pillow/Pillow/commit/26cb3ed061173b817b9ee4b6f507cb0e1e293218",
-        "https://github.com/python-pillow/Pillow/releases/tag/13.0.0",
-        "https://github.com/python-pillow/Pillow/security/advisories/GHSA-22hg-r758-rrw9"
-      ]
-    },
-    {
       "id": "pygoat:CVE-2026-112392:pillow:12.1.0",
       "cve": "CVE-2026-112392",
       "package": "pillow",
@@ -2146,6 +2123,29 @@
         "https://github.com/python-pillow/Pillow/commit/443e3130a8c11594fd0e296afad497e11e678961",
         "https://github.com/python-pillow/Pillow/releases/tag/13.0.0",
         "https://github.com/python-pillow/Pillow/security/advisories/GHSA-27h8-gf7j-v5hc"
+      ]
+    },
+    {
+      "id": "pygoat:CVE-2026-112390:pillow:12.1.0",
+      "cve": "CVE-2026-112390",
+      "package": "pillow",
+      "ecosystem": "PyPI",
+      "installed_version": "12.1.0",
+      "fixed_version": "13.0.0",
+      "app": "pygoat",
+      "cvss": 7.5,
+      "epss": 0.00593,
+      "in_kev": false,
+      "kev_date_added": null,
+      "priority_score": 19,
+      "priority_label": "low",
+      "summary": {
+        "en": "Pillow is a Python imaging library. From 7.2.0 until 13.0.0, Pillow can enter an infinite loop while determining the frame count of a MIC image. MicImageFile inherits TIFF frame traversal, but MicImageFile.tell reports the OLE stream index and its seek() resets TIFF frame state, so an embedded TIFF with at least three IFDs never advances. When an application with olefile installed reads n_frames or saves all frames from a crafted MIC file, the non-advancing traversal can hold a worker at full CPU indefinitely. This issue is fixed in version 13.0.0."
+      },
+      "references": [
+        "https://github.com/python-pillow/Pillow/commit/26cb3ed061173b817b9ee4b6f507cb0e1e293218",
+        "https://github.com/python-pillow/Pillow/releases/tag/13.0.0",
+        "https://github.com/python-pillow/Pillow/security/advisories/GHSA-22hg-r758-rrw9"
       ]
     },
     {
@@ -4497,7 +4497,7 @@
       "fixed_version": "2.33.0",
       "app": "pygoat",
       "cvss": 4.4,
-      "epss": 0.00194,
+      "epss": 0.00212,
       "in_kev": false,
       "kev_date_added": null,
       "priority_score": 11,
@@ -4536,28 +4536,6 @@
       ]
     },
     {
-      "id": "pygoat:CVE-2025-65431:django-allauth:0.52.0",
-      "cve": "CVE-2025-65431",
-      "package": "django-allauth",
-      "ecosystem": "PyPI",
-      "installed_version": "0.52.0",
-      "fixed_version": "65.13.0",
-      "app": "pygoat",
-      "cvss": 5.4,
-      "epss": 0.00175,
-      "in_kev": false,
-      "kev_date_added": null,
-      "priority_score": 14,
-      "priority_label": "low",
-      "summary": {
-        "en": "An issue was discovered in allauth-django before 65.13.0. Both Okta and NetIQ were using preferred_username as the identifier for third-party provider accounts. That value may be mutable and should therefore be avoided for authorization decisions. The providers are now using sub instead.",
-        "es": "Se descubri\u00f3 un problema en allauth-django antes de la versi\u00f3n 65.13.0. Tanto Okta como NetIQ estaban utilizando preferred_username como identificador para las cuentas de proveedores de terceros. Ese valor puede ser mutable y, por lo tanto, deber\u00eda evitarse para las decisiones de autorizaci\u00f3n. Los proveedores ahora est\u00e1n utilizando sub en su lugar."
-      },
-      "references": [
-        "https://allauth.org/news/2025/10/django-allauth-65.13.0-released/"
-      ]
-    },
-    {
       "id": "pygoat:CVE-2025-65430:django-allauth:0.52.0",
       "cve": "CVE-2025-65430",
       "package": "django-allauth",
@@ -4574,6 +4552,28 @@
       "summary": {
         "en": "An issue was discovered in allauth-django before 65.13.0. IdP: marking a user as is_active=False after having handed tokens for that user while the account was still active had no effect. Fixed the access/refresh tokens are now rejected.",
         "es": "Se descubri\u00f3 un problema en allauth-django antes de 65.13.0. IdP: marcar a un usuario como is_active=False despu\u00e9s de haber emitido tokens para ese usuario mientras la cuenta a\u00fan estaba activa no surt\u00eda efecto. Se corrigi\u00f3 que los tokens de acceso/actualizaci\u00f3n ahora son rechazados."
+      },
+      "references": [
+        "https://allauth.org/news/2025/10/django-allauth-65.13.0-released/"
+      ]
+    },
+    {
+      "id": "pygoat:CVE-2025-65431:django-allauth:0.52.0",
+      "cve": "CVE-2025-65431",
+      "package": "django-allauth",
+      "ecosystem": "PyPI",
+      "installed_version": "0.52.0",
+      "fixed_version": "65.13.0",
+      "app": "pygoat",
+      "cvss": 5.4,
+      "epss": 0.00175,
+      "in_kev": false,
+      "kev_date_added": null,
+      "priority_score": 14,
+      "priority_label": "low",
+      "summary": {
+        "en": "An issue was discovered in allauth-django before 65.13.0. Both Okta and NetIQ were using preferred_username as the identifier for third-party provider accounts. That value may be mutable and should therefore be avoided for authorization decisions. The providers are now using sub instead.",
+        "es": "Se descubri\u00f3 un problema en allauth-django antes de la versi\u00f3n 65.13.0. Tanto Okta como NetIQ estaban utilizando preferred_username como identificador para las cuentas de proveedores de terceros. Ese valor puede ser mutable y, por lo tanto, deber\u00eda evitarse para las decisiones de autorizaci\u00f3n. Los proveedores ahora est\u00e1n utilizando sub en su lugar."
       },
       "references": [
         "https://allauth.org/news/2025/10/django-allauth-65.13.0-released/"
@@ -10968,12 +10968,6 @@
   ],
   "history": [
     {
-      "date": "2026-10-17",
-      "findings_total": 343,
-      "critical": 4,
-      "high": 4
-    },
-    {
       "date": "2026-10-18",
       "findings_total": 343,
       "critical": 4,
@@ -11143,6 +11137,12 @@
     },
     {
       "date": "2026-11-19",
+      "findings_total": 394,
+      "critical": 3,
+      "high": 3
+    },
+    {
+      "date": "2026-11-20",
       "findings_total": 394,
       "critical": 3,
       "high": 3

@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-11-21T14:28:41.864817+00:00",
+  "generated_at": "2026-11-22T14:21:28.174549+00:00",
   "sources": {
     "kev": {
       "fetched": true,
@@ -97,10 +97,10 @@
       "fixed_version": "4.2.24",
       "app": "pygoat",
       "cvss": 7.1,
-      "epss": 0.28271,
+      "epss": 0.2653,
       "in_kev": false,
       "kev_date_added": null,
-      "priority_score": 39,
+      "priority_score": 38,
       "priority_label": "medium",
       "summary": {
         "en": "An issue was discovered in Django 4.2 before 4.2.24, 5.1 before 5.1.12, and 5.2 before 5.2.6. FilteredRelation is subject to SQL injection in column aliases, using a suitably crafted dictionary, with dictionary expansion, as the **kwargs passed QuerySet.annotate() or QuerySet.alias()."
@@ -591,6 +591,29 @@
       ]
     },
     {
+      "id": "pygoat:CVE-2026-112403:pillow:12.1.0",
+      "cve": "CVE-2026-112403",
+      "package": "pillow",
+      "ecosystem": "PyPI",
+      "installed_version": "12.1.0",
+      "fixed_version": "13.0.0",
+      "app": "pygoat",
+      "cvss": 9.8,
+      "epss": 0.01711,
+      "in_kev": false,
+      "kev_date_added": null,
+      "priority_score": 26,
+      "priority_label": "medium",
+      "summary": {
+        "en": "Pillow is a Python imaging library. Prior to 13.0.0, Pillow's JPEG decoder can write a full-width scanline into a buffer sized for a requested draft scale. ImagingJpegDecode does not verify libjpeg's actual output width and component count after scaling is requested, and an 8-bit lossless SOF3 JPEG decoded by a build linked to libjpeg-turbo 3.x can ignore the requested downscaling geometry. An attacker can supply such a JPEG to an application that uses draft() or thumbnail() to request downscaling. This can corrupt heap memory, crash the process, or potentially allow code execution. Older libjpeg-turbo 2.x and IJG builds reject the SOF3 input. This issue is fixed in version 13.0.0."
+      },
+      "references": [
+        "https://github.com/python-pillow/Pillow/commit/242a059aedc1935097d9aa1dc3f099750467ba75",
+        "https://github.com/python-pillow/Pillow/releases/tag/13.0.0",
+        "https://github.com/python-pillow/Pillow/security/advisories/GHSA-8g5g-8vmr-9782"
+      ]
+    },
+    {
       "id": "pygoat:CVE-2025-64458:django:4.2",
       "cve": "CVE-2025-64458",
       "package": "django",
@@ -1043,29 +1066,6 @@
         "https://www.djangoproject.com/weblog/2025/jan/14/security-releases/",
         "http://www.openwall.com/lists/oss-security/2025/01/14/2",
         "https://lists.debian.org/debian-lts-announce/2025/01/msg00024.html"
-      ]
-    },
-    {
-      "id": "pygoat:CVE-2026-112403:pillow:12.1.0",
-      "cve": "CVE-2026-112403",
-      "package": "pillow",
-      "ecosystem": "PyPI",
-      "installed_version": "12.1.0",
-      "fixed_version": "13.0.0",
-      "app": "pygoat",
-      "cvss": 9.8,
-      "epss": 0.00945,
-      "in_kev": false,
-      "kev_date_added": null,
-      "priority_score": 25,
-      "priority_label": "medium",
-      "summary": {
-        "en": "Pillow is a Python imaging library. Prior to 13.0.0, Pillow's JPEG decoder can write a full-width scanline into a buffer sized for a requested draft scale. ImagingJpegDecode does not verify libjpeg's actual output width and component count after scaling is requested, and an 8-bit lossless SOF3 JPEG decoded by a build linked to libjpeg-turbo 3.x can ignore the requested downscaling geometry. An attacker can supply such a JPEG to an application that uses draft() or thumbnail() to request downscaling. This can corrupt heap memory, crash the process, or potentially allow code execution. Older libjpeg-turbo 2.x and IJG builds reject the SOF3 input. This issue is fixed in version 13.0.0."
-      },
-      "references": [
-        "https://github.com/python-pillow/Pillow/commit/242a059aedc1935097d9aa1dc3f099750467ba75",
-        "https://github.com/python-pillow/Pillow/releases/tag/13.0.0",
-        "https://github.com/python-pillow/Pillow/security/advisories/GHSA-8g5g-8vmr-9782"
       ]
     },
     {
@@ -1563,6 +1563,30 @@
       ]
     },
     {
+      "id": "pygoat:CVE-2026-112902:pillow:12.1.0",
+      "cve": "CVE-2026-112902",
+      "package": "pillow",
+      "ecosystem": "PyPI",
+      "installed_version": "12.1.0",
+      "fixed_version": "13.0.0",
+      "app": "pygoat",
+      "cvss": 9.1,
+      "epss": 0.00638,
+      "in_kev": false,
+      "kev_date_added": null,
+      "priority_score": 23,
+      "priority_label": "medium",
+      "summary": {
+        "en": "Pillow is a Python imaging library. In versions through 12.3.0, the libtiff TIFF encoder can pass arguments to \u00a0TIFFSetField()\u00a0 that do not match libtiff\u2019s definition of the corresponding tag. When an application saves attacker-controlled image metadata through this encoder, crafted tag values can cause invalid memory reads, copying process memory into the encoded output or crashing the process. Applications that return the encoded output to an attacker can disclose that memory. The issue is reachable when re-saving compressed TIFF images and through certain conversions that preserve EXIF metadata into compressed TIFF output. This vulnerability is fixed in version 13.0.0."
+      },
+      "references": [
+        "https://github.com/python-pillow/Pillow/commit/570df030c0d30c2bf5336b2ab59f3902d8ab0b6d",
+        "https://github.com/python-pillow/Pillow/pull/10227",
+        "https://github.com/python-pillow/Pillow/releases/tag/13.0.0",
+        "https://github.com/python-pillow/Pillow/security/advisories/GHSA-xvh5-g6gv-559v"
+      ]
+    },
+    {
       "id": "pygoat:CVE-2023-30608:sqlparse:0.3.1",
       "cve": "CVE-2023-30608",
       "package": "sqlparse",
@@ -1642,30 +1666,6 @@
         "https://access.redhat.com/security/cve/CVE-2026-40192",
         "https://bugzilla.redhat.com/show_bug.cgi?id=2458856",
         "https://security.access.redhat.com/data/csaf/v2/vex/2026/cve-2026-40192.json"
-      ]
-    },
-    {
-      "id": "pygoat:CVE-2026-112902:pillow:12.1.0",
-      "cve": "CVE-2026-112902",
-      "package": "pillow",
-      "ecosystem": "PyPI",
-      "installed_version": "12.1.0",
-      "fixed_version": "13.0.0",
-      "app": "pygoat",
-      "cvss": 9.1,
-      "epss": 0.00613,
-      "in_kev": false,
-      "kev_date_added": null,
-      "priority_score": 23,
-      "priority_label": "medium",
-      "summary": {
-        "en": "Pillow is a Python imaging library. In versions through 12.3.0, the libtiff TIFF encoder can pass arguments to \u00a0TIFFSetField()\u00a0 that do not match libtiff\u2019s definition of the corresponding tag. When an application saves attacker-controlled image metadata through this encoder, crafted tag values can cause invalid memory reads, copying process memory into the encoded output or crashing the process. Applications that return the encoded output to an attacker can disclose that memory. The issue is reachable when re-saving compressed TIFF images and through certain conversions that preserve EXIF metadata into compressed TIFF output. This vulnerability is fixed in version 13.0.0."
-      },
-      "references": [
-        "https://github.com/python-pillow/Pillow/commit/570df030c0d30c2bf5336b2ab59f3902d8ab0b6d",
-        "https://github.com/python-pillow/Pillow/pull/10227",
-        "https://github.com/python-pillow/Pillow/releases/tag/13.0.0",
-        "https://github.com/python-pillow/Pillow/security/advisories/GHSA-xvh5-g6gv-559v"
       ]
     },
     {
@@ -1905,6 +1905,29 @@
       ]
     },
     {
+      "id": "pygoat:CVE-2026-112400:pillow:12.1.0",
+      "cve": "CVE-2026-112400",
+      "package": "pillow",
+      "ecosystem": "PyPI",
+      "installed_version": "12.1.0",
+      "fixed_version": "13.0.0",
+      "app": "pygoat",
+      "cvss": 7.5,
+      "epss": 0.00594,
+      "in_kev": false,
+      "kev_date_added": null,
+      "priority_score": 19,
+      "priority_label": "low",
+      "summary": {
+        "en": "Pillow is a Python imaging library. From 9.2.0 until 13.0.0, Pillow can retain a rejected GIF frame size after a decompression-bomb exception. In GifImageFile._seek, a crafted GIF can leave rejected dimensions stored after Image.DecompressionBombError; if an application catches that exception and continues processing the same image object, later seek or load operations allocate according to those dimensions and can exhaust memory, denying service. This issue is fixed in version 13.0.0."
+      },
+      "references": [
+        "https://github.com/python-pillow/Pillow/commit/6faed707cfb760a4cbd726ddc8406f576cf35bf7",
+        "https://github.com/python-pillow/Pillow/releases/tag/13.0.0",
+        "https://github.com/python-pillow/Pillow/security/advisories/GHSA-65qm-jvmh-6pqg"
+      ]
+    },
+    {
       "id": "pygoat:CVE-2026-112402:pillow:12.1.0",
       "cve": "CVE-2026-112402",
       "package": "pillow",
@@ -1925,29 +1948,6 @@
         "https://github.com/python-pillow/Pillow/commit/aafa6c75f7cdabb9f409a8aac7c780bea31d08d9",
         "https://github.com/python-pillow/Pillow/releases/tag/13.0.0",
         "https://github.com/python-pillow/Pillow/security/advisories/GHSA-7mwm-ghpf-9vrm"
-      ]
-    },
-    {
-      "id": "pygoat:CVE-2026-112405:pillow:12.1.0",
-      "cve": "CVE-2026-112405",
-      "package": "pillow",
-      "ecosystem": "PyPI",
-      "installed_version": "12.1.0",
-      "fixed_version": "13.0.0",
-      "app": "pygoat",
-      "cvss": 7.5,
-      "epss": 0.00594,
-      "in_kev": false,
-      "kev_date_added": null,
-      "priority_score": 19,
-      "priority_label": "low",
-      "summary": {
-        "en": "Pillow is a Python imaging library. From 12.0.0 until 13.0.0, Pillow's Image.merge() can dereference a null image8 plane. Validation skips the first input band, allowing a 32-bit integer or floating-point image backed by image32 storage to be merged as a narrower multiband image. A crafted IPTC file can reach this path when an application opens and loads it, or a caller can invoke Image.merge() directly with such a first band. This causes a native process crash. This issue is fixed in version 13.0.0."
-      },
-      "references": [
-        "https://github.com/python-pillow/Pillow/commit/b6ee66e8b2c2c0932bdf65f963268d9f2927ef86",
-        "https://github.com/python-pillow/Pillow/releases/tag/13.0.0",
-        "https://github.com/python-pillow/Pillow/security/advisories/GHSA-cp9v-662q-vvx9"
       ]
     },
     {
@@ -1994,29 +1994,6 @@
         "https://github.com/python-pillow/Pillow/commit/e2ae7eacad6de68c37eb28b633a97bebacf2c5bf",
         "https://github.com/python-pillow/Pillow/releases/tag/13.0.0",
         "https://github.com/python-pillow/Pillow/security/advisories/GHSA-p4wg-p73j-c528"
-      ]
-    },
-    {
-      "id": "pygoat:CVE-2026-112400:pillow:12.1.0",
-      "cve": "CVE-2026-112400",
-      "package": "pillow",
-      "ecosystem": "PyPI",
-      "installed_version": "12.1.0",
-      "fixed_version": "13.0.0",
-      "app": "pygoat",
-      "cvss": 7.5,
-      "epss": 0.00594,
-      "in_kev": false,
-      "kev_date_added": null,
-      "priority_score": 19,
-      "priority_label": "low",
-      "summary": {
-        "en": "Pillow is a Python imaging library. From 9.2.0 until 13.0.0, Pillow can retain a rejected GIF frame size after a decompression-bomb exception. In GifImageFile._seek, a crafted GIF can leave rejected dimensions stored after Image.DecompressionBombError; if an application catches that exception and continues processing the same image object, later seek or load operations allocate according to those dimensions and can exhaust memory, denying service. This issue is fixed in version 13.0.0."
-      },
-      "references": [
-        "https://github.com/python-pillow/Pillow/commit/6faed707cfb760a4cbd726ddc8406f576cf35bf7",
-        "https://github.com/python-pillow/Pillow/releases/tag/13.0.0",
-        "https://github.com/python-pillow/Pillow/security/advisories/GHSA-65qm-jvmh-6pqg"
       ]
     },
     {
@@ -2126,31 +2103,8 @@
       ]
     },
     {
-      "id": "pygoat:CVE-2026-112392:pillow:12.1.0",
-      "cve": "CVE-2026-112392",
-      "package": "pillow",
-      "ecosystem": "PyPI",
-      "installed_version": "12.1.0",
-      "fixed_version": "13.0.0",
-      "app": "pygoat",
-      "cvss": 7.5,
-      "epss": 0.00593,
-      "in_kev": false,
-      "kev_date_added": null,
-      "priority_score": 19,
-      "priority_label": "low",
-      "summary": {
-        "en": "Pillow is a Python imaging library. Prior to 13.0.0, Pillow's rank-based filters can dereference invalid image storage for a zero-size image. ImagingExpand() allocates a non-empty output and then faults while replicating edges by reading the first pixel from empty input storage; ImagingRankFilter is never reached. An attacker can supply or cause creation of a zero-size image to an application that applies a rank, median, minimum, or maximum filter. This causes a native process crash. This issue is fixed in version 13.0.0."
-      },
-      "references": [
-        "https://github.com/python-pillow/Pillow/commit/443e3130a8c11594fd0e296afad497e11e678961",
-        "https://github.com/python-pillow/Pillow/releases/tag/13.0.0",
-        "https://github.com/python-pillow/Pillow/security/advisories/GHSA-27h8-gf7j-v5hc"
-      ]
-    },
-    {
-      "id": "pygoat:CVE-2026-112397:pillow:12.1.0",
-      "cve": "CVE-2026-112397",
+      "id": "pygoat:CVE-2026-112399:pillow:12.1.0",
+      "cve": "CVE-2026-112399",
       "package": "pillow",
       "ecosystem": "PyPI",
       "installed_version": "12.1.0",
@@ -2163,12 +2117,12 @@
       "priority_score": 19,
       "priority_label": "low",
       "summary": {
-        "en": "Pillow is a Python imaging library. Prior to 13.0.0, Pillow's ImageMorph.MorphOp.apply() can access memory before a row buffer for a zero-width image. PPM and PGM input can create an image with width zero, and the native morphology routine indexes outrow[width - 1] without rejecting that geometry. An attacker can supply such an image to an application that applies a morphology operation. This can crash the process. This issue is fixed in version 13.0.0."
+        "en": "Pillow is a Python imaging library. From 8.1.0 until 13.0.0, Pillow can allocate an APNG disposal background at the full canvas size before applying the decompression-bomb check. A crafted APNG with a small first frame, a very large declared canvas, and background disposal or first-frame OP_PREVIOUS reaches PngImageFile._seek while Image.open() positions frame zero. The full-canvas allocation occurs inside Image.open() without requiring pixel loading or frame iteration. This can exhaust memory and deny service. This issue is fixed in version 13.0.0."
       },
       "references": [
-        "https://github.com/python-pillow/Pillow/commit/18f7c0dfee93063c51db6ed0ca8c4da2999dcb64",
+        "https://github.com/python-pillow/Pillow/commit/f1acfc54c53502948d0d14121872061df931db48",
         "https://github.com/python-pillow/Pillow/releases/tag/13.0.0",
-        "https://github.com/python-pillow/Pillow/security/advisories/GHSA-58r4-6rv3-gfh8"
+        "https://github.com/python-pillow/Pillow/security/advisories/GHSA-5xm2-6676-qcp9"
       ]
     },
     {
@@ -2220,6 +2174,29 @@
       ]
     },
     {
+      "id": "pygoat:CVE-2026-112394:pillow:12.1.0",
+      "cve": "CVE-2026-112394",
+      "package": "pillow",
+      "ecosystem": "PyPI",
+      "installed_version": "12.1.0",
+      "fixed_version": "13.0.0",
+      "app": "pygoat",
+      "cvss": 8.2,
+      "epss": 0.006,
+      "in_kev": false,
+      "kev_date_added": null,
+      "priority_score": 21,
+      "priority_label": "medium",
+      "summary": {
+        "en": "Pillow is a Python imaging library. Prior to 13.0.0, Pillow's P;2L and P;4L raw decoders can read past the end of an input buffer. ImagingRawDecode calculates a packed-pixel row size, while the unpackers read separately padded bit planes. A caller can supply a buffer and image dimensions whose accepted size is smaller than the unpacker's actual footprint. This can disclose up to three adjacent heap bytes in output pixels or crash the process. This issue is fixed in version 13.0.0."
+      },
+      "references": [
+        "https://github.com/python-pillow/Pillow/commit/392ee6f0d19a4adb766a63e9a99f3c28193b8d31",
+        "https://github.com/python-pillow/Pillow/releases/tag/13.0.0",
+        "https://github.com/python-pillow/Pillow/security/advisories/GHSA-4558-3h8r-v8xp"
+      ]
+    },
+    {
       "id": "pygoat:CVE-2024-49766:werkzeug:2.1.2",
       "cve": "CVE-2024-49766",
       "package": "werkzeug",
@@ -2268,6 +2245,52 @@
       ]
     },
     {
+      "id": "pygoat:CVE-2026-112397:pillow:12.1.0",
+      "cve": "CVE-2026-112397",
+      "package": "pillow",
+      "ecosystem": "PyPI",
+      "installed_version": "12.1.0",
+      "fixed_version": "13.0.0",
+      "app": "pygoat",
+      "cvss": 7.5,
+      "epss": 0.00532,
+      "in_kev": false,
+      "kev_date_added": null,
+      "priority_score": 19,
+      "priority_label": "low",
+      "summary": {
+        "en": "Pillow is a Python imaging library. Prior to 13.0.0, Pillow's ImageMorph.MorphOp.apply() can access memory before a row buffer for a zero-width image. PPM and PGM input can create an image with width zero, and the native morphology routine indexes outrow[width - 1] without rejecting that geometry. An attacker can supply such an image to an application that applies a morphology operation. This can crash the process. This issue is fixed in version 13.0.0."
+      },
+      "references": [
+        "https://github.com/python-pillow/Pillow/commit/18f7c0dfee93063c51db6ed0ca8c4da2999dcb64",
+        "https://github.com/python-pillow/Pillow/releases/tag/13.0.0",
+        "https://github.com/python-pillow/Pillow/security/advisories/GHSA-58r4-6rv3-gfh8"
+      ]
+    },
+    {
+      "id": "pygoat:CVE-2026-112405:pillow:12.1.0",
+      "cve": "CVE-2026-112405",
+      "package": "pillow",
+      "ecosystem": "PyPI",
+      "installed_version": "12.1.0",
+      "fixed_version": "13.0.0",
+      "app": "pygoat",
+      "cvss": 7.5,
+      "epss": 0.00532,
+      "in_kev": false,
+      "kev_date_added": null,
+      "priority_score": 19,
+      "priority_label": "low",
+      "summary": {
+        "en": "Pillow is a Python imaging library. From 12.0.0 until 13.0.0, Pillow's Image.merge() can dereference a null image8 plane. Validation skips the first input band, allowing a 32-bit integer or floating-point image backed by image32 storage to be merged as a narrower multiband image. A crafted IPTC file can reach this path when an application opens and loads it, or a caller can invoke Image.merge() directly with such a first band. This causes a native process crash. This issue is fixed in version 13.0.0."
+      },
+      "references": [
+        "https://github.com/python-pillow/Pillow/commit/b6ee66e8b2c2c0932bdf65f963268d9f2927ef86",
+        "https://github.com/python-pillow/Pillow/releases/tag/13.0.0",
+        "https://github.com/python-pillow/Pillow/security/advisories/GHSA-cp9v-662q-vvx9"
+      ]
+    },
+    {
       "id": "pygoat:CVE-2025-13372:django:4.2",
       "cve": "CVE-2025-13372",
       "package": "django",
@@ -2289,29 +2312,6 @@
         "https://docs.djangoproject.com/en/dev/releases/security/",
         "https://groups.google.com/g/django-announce",
         "https://www.djangoproject.com/weblog/2025/dec/02/security-releases/"
-      ]
-    },
-    {
-      "id": "pygoat:CVE-2026-112399:pillow:12.1.0",
-      "cve": "CVE-2026-112399",
-      "package": "pillow",
-      "ecosystem": "PyPI",
-      "installed_version": "12.1.0",
-      "fixed_version": "13.0.0",
-      "app": "pygoat",
-      "cvss": 7.5,
-      "epss": 0.00529,
-      "in_kev": false,
-      "kev_date_added": null,
-      "priority_score": 19,
-      "priority_label": "low",
-      "summary": {
-        "en": "Pillow is a Python imaging library. From 8.1.0 until 13.0.0, Pillow can allocate an APNG disposal background at the full canvas size before applying the decompression-bomb check. A crafted APNG with a small first frame, a very large declared canvas, and background disposal or first-frame OP_PREVIOUS reaches PngImageFile._seek while Image.open() positions frame zero. The full-canvas allocation occurs inside Image.open() without requiring pixel loading or frame iteration. This can exhaust memory and deny service. This issue is fixed in version 13.0.0."
-      },
-      "references": [
-        "https://github.com/python-pillow/Pillow/commit/f1acfc54c53502948d0d14121872061df931db48",
-        "https://github.com/python-pillow/Pillow/releases/tag/13.0.0",
-        "https://github.com/python-pillow/Pillow/security/advisories/GHSA-5xm2-6676-qcp9"
       ]
     },
     {
@@ -2363,26 +2363,26 @@
       ]
     },
     {
-      "id": "pygoat:CVE-2026-112394:pillow:12.1.0",
-      "cve": "CVE-2026-112394",
+      "id": "pygoat:CVE-2026-112392:pillow:12.1.0",
+      "cve": "CVE-2026-112392",
       "package": "pillow",
       "ecosystem": "PyPI",
       "installed_version": "12.1.0",
       "fixed_version": "13.0.0",
       "app": "pygoat",
-      "cvss": 8.2,
-      "epss": 0.00555,
+      "cvss": 7.5,
+      "epss": 0.0053,
       "in_kev": false,
       "kev_date_added": null,
-      "priority_score": 21,
-      "priority_label": "medium",
+      "priority_score": 19,
+      "priority_label": "low",
       "summary": {
-        "en": "Pillow is a Python imaging library. Prior to 13.0.0, Pillow's P;2L and P;4L raw decoders can read past the end of an input buffer. ImagingRawDecode calculates a packed-pixel row size, while the unpackers read separately padded bit planes. A caller can supply a buffer and image dimensions whose accepted size is smaller than the unpacker's actual footprint. This can disclose up to three adjacent heap bytes in output pixels or crash the process. This issue is fixed in version 13.0.0."
+        "en": "Pillow is a Python imaging library. Prior to 13.0.0, Pillow's rank-based filters can dereference invalid image storage for a zero-size image. ImagingExpand() allocates a non-empty output and then faults while replicating edges by reading the first pixel from empty input storage; ImagingRankFilter is never reached. An attacker can supply or cause creation of a zero-size image to an application that applies a rank, median, minimum, or maximum filter. This causes a native process crash. This issue is fixed in version 13.0.0."
       },
       "references": [
-        "https://github.com/python-pillow/Pillow/commit/392ee6f0d19a4adb766a63e9a99f3c28193b8d31",
+        "https://github.com/python-pillow/Pillow/commit/443e3130a8c11594fd0e296afad497e11e678961",
         "https://github.com/python-pillow/Pillow/releases/tag/13.0.0",
-        "https://github.com/python-pillow/Pillow/security/advisories/GHSA-4558-3h8r-v8xp"
+        "https://github.com/python-pillow/Pillow/security/advisories/GHSA-27h8-gf7j-v5hc"
       ]
     },
     {
@@ -2429,6 +2429,30 @@
         "https://github.com/python-pillow/Pillow/commit/68a3fe957d8a4d552e8c69d96066d749f0614c7e",
         "https://github.com/python-pillow/Pillow/releases/tag/13.0.0",
         "https://github.com/python-pillow/Pillow/security/advisories/GHSA-fc9g-5qg7-mf45"
+      ]
+    },
+    {
+      "id": "pygoat:CVE-2026-128066:pillow:12.1.0",
+      "cve": "CVE-2026-128066",
+      "package": "pillow",
+      "ecosystem": "PyPI",
+      "installed_version": "12.1.0",
+      "fixed_version": "13.0.0",
+      "app": "pygoat",
+      "cvss": null,
+      "epss": 0.00488,
+      "in_kev": false,
+      "kev_date_added": null,
+      "priority_score": 0,
+      "priority_label": "low",
+      "summary": {
+        "en": "Pillow is a Python imaging library. From 1.0 through 12.3.0, ImageFileDirectory_v2.load() in src/PIL/TiffImagePlugin.py retains a separate bytes object for each out-of-line IFD tag value without limiting the total data read or preventing distinct tags from referencing the same file region. A small crafted TIFF or EXIF-bearing JPEG, PNG, WebP, or MPO can therefore cause memory use quadratic in the input size. TIFF and some JPEG paths trigger parsing during Image.open(), while other formats are exposed when EXIF is requested, including through getexif() or ImageOps.exif_transpose(). The declared pixel dimensions do not bound this metadata allocation, so decompression-bomb checks do not prevent process memory exhaustion. This issue is fixed in version 13.0.0."
+      },
+      "references": [
+        "https://github.com/python-pillow/Pillow/commit/4908edaf7f416616784c7c03d8c1a60153710ffb",
+        "https://github.com/python-pillow/Pillow/commit/4b63dffd8a6d980fa0e21b40832fa6cbf033eacf",
+        "https://github.com/python-pillow/Pillow/releases/tag/13.0.0",
+        "https://github.com/python-pillow/Pillow/security/advisories/GHSA-wqgw-9xfh-qf2g"
       ]
     },
     {
@@ -2579,6 +2603,30 @@
       ]
     },
     {
+      "id": "pygoat:CVE-2026-96778:pillow:12.1.0",
+      "cve": "CVE-2026-96778",
+      "package": "pillow",
+      "ecosystem": "PyPI",
+      "installed_version": "12.1.0",
+      "fixed_version": "13.0.0",
+      "app": "pygoat",
+      "cvss": 8.8,
+      "epss": 0.00492,
+      "in_kev": false,
+      "kev_date_added": null,
+      "priority_score": 22,
+      "priority_label": "medium",
+      "summary": {
+        "en": "Pillow is a Python imaging library. From 9.4.0 until 13.0.0, ImagingJpegEncode() in src/libImaging/JpegEncode.c can call jpeg_write_marker() for a JPEG COM comment when an ICC profile has exactly filled the 65536-byte encoder buffer. libjpeg writes one byte before checking the exhausted free_in_buffer counter, which then wraps and permits the attacker-controlled comment and subsequent compressed image data to overwrite adjacent heap memory. Re-saving an untrusted image as JPEG while preserving its ICC profile and forwarded comment can crash the process and may enable code execution in suitable runtime and heap layouts. This issue is fixed in version 13.0.0."
+      },
+      "references": [
+        "https://github.com/python-pillow/Pillow/commit/02561b8dc6117d5670d4b469fecdd02c70854f9b",
+        "https://github.com/python-pillow/Pillow/pull/10124",
+        "https://github.com/python-pillow/Pillow/releases/tag/13.0.0",
+        "https://github.com/python-pillow/Pillow/security/advisories/GHSA-g7cr-3p24-7wf7"
+      ]
+    },
+    {
       "id": "pygoat:CVE-2026-112896:pillow:12.1.0",
       "cve": "CVE-2026-112896",
       "package": "pillow",
@@ -2610,7 +2658,7 @@
       "fixed_version": "13.0.0",
       "app": "pygoat",
       "cvss": 6.5,
-      "epss": 0.00514,
+      "epss": 0.00518,
       "in_kev": false,
       "kev_date_added": null,
       "priority_score": 17,
@@ -2622,6 +2670,30 @@
         "https://github.com/python-pillow/Pillow/commit/76869efdbbf2ad7dccd7536520fb61b7a00ab61e",
         "https://github.com/python-pillow/Pillow/releases/tag/13.0.0",
         "https://github.com/python-pillow/Pillow/security/advisories/GHSA-462x-pgg6-55fp"
+      ]
+    },
+    {
+      "id": "pygoat:CVE-2026-128067:pillow:12.1.0",
+      "cve": "CVE-2026-128067",
+      "package": "pillow",
+      "ecosystem": "PyPI",
+      "installed_version": "12.1.0",
+      "fixed_version": "13.0.0",
+      "app": "pygoat",
+      "cvss": null,
+      "epss": 0.00477,
+      "in_kev": false,
+      "kev_date_added": null,
+      "priority_score": 0,
+      "priority_label": "low",
+      "summary": {
+        "en": "Pillow is a Python imaging library. From 2.3.0 through 12.3.0, Pillow applications that save compressed TIFF images through libtiff can pass attacker-controlled image geometry tags to the encoder while allocating its row buffer from the actual image dimensions. The affected TiffImagePlugin._save path allows ImageWidth, ImageLength, or SamplesPerPixel from exif=, tiffinfo=, or a source TIFF IFD to make libtiff consume a larger scanline than the buffer supplied by ImagingLibTiffEncode. This can read heap memory into the generated TIFF or crash the process. When TIFF Predictor 2 is enabled, libtiff can rewrite the oversized scanline in place and corrupt memory beyond the buffer. A carried-over PlanarConfiguration value of 2 instead makes libtiff use a shorter scanline and can produce an undecodable output file, but is not established to cause the out-of-bounds access. This issue is fixed in version 13.0.0."
+      },
+      "references": [
+        "https://github.com/python-pillow/Pillow/commit/53318b50e8e9e85a57d033d4d879e1398d97aeb1",
+        "https://github.com/python-pillow/Pillow/commit/ec5f1cbcf67275641abaad5c065ffb64a0a804a9",
+        "https://github.com/python-pillow/Pillow/releases/tag/13.0.0",
+        "https://github.com/python-pillow/Pillow/security/advisories/GHSA-xcvg-w56q-r89m"
       ]
     },
     {
@@ -2654,51 +2726,26 @@
       ]
     },
     {
-      "id": "pygoat:CVE-2026-128067:pillow:12.1.0",
-      "cve": "CVE-2026-128067",
-      "package": "pillow",
+      "id": "pygoat:CVE-2026-97689:urllib3:1.26.9",
+      "cve": "CVE-2026-97689",
+      "package": "urllib3",
       "ecosystem": "PyPI",
-      "installed_version": "12.1.0",
-      "fixed_version": "13.0.0",
+      "installed_version": "1.26.9",
+      "fixed_version": "2.8.0",
       "app": "pygoat",
-      "cvss": null,
-      "epss": 0.00451,
+      "cvss": 7.5,
+      "epss": 0.0044,
       "in_kev": false,
       "kev_date_added": null,
-      "priority_score": 0,
+      "priority_score": 19,
       "priority_label": "low",
       "summary": {
-        "en": "Pillow is a Python imaging library. From 2.3.0 through 12.3.0, Pillow applications that save compressed TIFF images through libtiff can pass attacker-controlled image geometry tags to the encoder while allocating its row buffer from the actual image dimensions. The affected TiffImagePlugin._save path allows ImageWidth, ImageLength, or SamplesPerPixel from exif=, tiffinfo=, or a source TIFF IFD to make libtiff consume a larger scanline than the buffer supplied by ImagingLibTiffEncode. This can read heap memory into the generated TIFF or crash the process. When TIFF Predictor 2 is enabled, libtiff can rewrite the oversized scanline in place and corrupt memory beyond the buffer. A carried-over PlanarConfiguration value of 2 instead makes libtiff use a shorter scanline and can produce an undecodable output file, but is not established to cause the out-of-bounds access. This issue is fixed in version 13.0.0."
+        "en": "urllib3 is an HTTP client library for Python. From 1.10.3 until 2.8.0, the HTTPResponse.read_chunked and HTTPResponse.stream methods can allocate unbounded memory because the streaming chunk parser buffers the chunk-size field until newline or EOF without a length bound. The trigger is that a malicious server returns Transfer-Encoding: chunked followed by a very long run of bytes without a newline. The attack mechanism is that a malicious HTTP server sends a very long unterminated chunk-size line. The impact is that unbounded memory allocation can exhaust the client process. This issue is fixed in version 2.8.0."
       },
       "references": [
-        "https://github.com/python-pillow/Pillow/commit/53318b50e8e9e85a57d033d4d879e1398d97aeb1",
-        "https://github.com/python-pillow/Pillow/commit/ec5f1cbcf67275641abaad5c065ffb64a0a804a9",
-        "https://github.com/python-pillow/Pillow/releases/tag/13.0.0",
-        "https://github.com/python-pillow/Pillow/security/advisories/GHSA-xcvg-w56q-r89m"
-      ]
-    },
-    {
-      "id": "pygoat:CVE-2026-96778:pillow:12.1.0",
-      "cve": "CVE-2026-96778",
-      "package": "pillow",
-      "ecosystem": "PyPI",
-      "installed_version": "12.1.0",
-      "fixed_version": "13.0.0",
-      "app": "pygoat",
-      "cvss": 8.8,
-      "epss": 0.00454,
-      "in_kev": false,
-      "kev_date_added": null,
-      "priority_score": 22,
-      "priority_label": "medium",
-      "summary": {
-        "en": "Pillow is a Python imaging library. From 9.4.0 until 13.0.0, ImagingJpegEncode() in src/libImaging/JpegEncode.c can call jpeg_write_marker() for a JPEG COM comment when an ICC profile has exactly filled the 65536-byte encoder buffer. libjpeg writes one byte before checking the exhausted free_in_buffer counter, which then wraps and permits the attacker-controlled comment and subsequent compressed image data to overwrite adjacent heap memory. Re-saving an untrusted image as JPEG while preserving its ICC profile and forwarded comment can crash the process and may enable code execution in suitable runtime and heap layouts. This issue is fixed in version 13.0.0."
-      },
-      "references": [
-        "https://github.com/python-pillow/Pillow/commit/02561b8dc6117d5670d4b469fecdd02c70854f9b",
-        "https://github.com/python-pillow/Pillow/pull/10124",
-        "https://github.com/python-pillow/Pillow/releases/tag/13.0.0",
-        "https://github.com/python-pillow/Pillow/security/advisories/GHSA-g7cr-3p24-7wf7"
+        "https://github.com/urllib3/urllib3/commit/cd770b059b543be29298ea5c52afb0b1b090f5ed",
+        "https://github.com/urllib3/urllib3/releases/tag/2.8.0",
+        "https://github.com/urllib3/urllib3/security/advisories/GHSA-vxq7-64xx-v4gw"
       ]
     },
     {
@@ -2798,27 +2845,27 @@
       ]
     },
     {
-      "id": "pygoat:CVE-2026-112899:pillow:12.1.0",
-      "cve": "CVE-2026-112899",
+      "id": "pygoat:CVE-2026-96644:pillow:12.1.0",
+      "cve": "CVE-2026-96644",
       "package": "pillow",
       "ecosystem": "PyPI",
       "installed_version": "12.1.0",
       "fixed_version": "13.0.0",
       "app": "pygoat",
-      "cvss": 5.3,
-      "epss": 0.00547,
+      "cvss": 8.1,
+      "epss": 0.00433,
       "in_kev": false,
       "kev_date_added": null,
-      "priority_score": 14,
-      "priority_label": "low",
+      "priority_score": 21,
+      "priority_label": "medium",
       "summary": {
-        "en": "Pillow is a Python imaging library. In versions 2.3.0 through 12.3.0, EPS rendering does not validate the scaled image dimensions before invoking Ghostscript. Applications that process untrusted EPS or PostScript files using an application-selected scale greater than one can incur excessive Ghostscript CPU and temporary disk consumption. In versions with decompression-bomb protection, the scaled output is checked only after Ghostscript has completed rendering, allowing resource consumption beyond the configured pixel limit. The amplification depends on the scale selected by the application, not an attacker-controlled scale value. This issue is fixed in version 13.0.0."
+        "en": "Pillow is a Python imaging library. Prior to 13.0.0 on Windows, src/PIL/WmfImagePlugin.py passes unchecked 32-bit WMF or EMF dimensions to the native drawwmf handler in src/display.c. The handler sizes a DIB allocation from 16-bit-truncated bcWidth and bcHeight fields but copies pixel data using the original full dimensions. A crafted wide, short metafile can pass the pixel-count decompression-bomb check and make the Windows-only renderer read beyond the heap buffer, potentially disclosing memory or crashing the process. This issue is fixed in version 13.0.0."
       },
       "references": [
-        "https://github.com/python-pillow/Pillow/commit/3e8cc105588d1dfe062fcada0b6058c1b5f14b65",
-        "https://github.com/python-pillow/Pillow/pull/10112",
+        "https://github.com/python-pillow/Pillow/commit/4cf46bee338304c5c8968fd7f132ba0d40c428b7",
+        "https://github.com/python-pillow/Pillow/pull/10120",
         "https://github.com/python-pillow/Pillow/releases/tag/13.0.0",
-        "https://github.com/python-pillow/Pillow/security/advisories/GHSA-vx6w-vv9f-6gvg"
+        "https://github.com/python-pillow/Pillow/security/advisories/GHSA-9v9v-9qvf-h2hj"
       ]
     },
     {
@@ -3098,30 +3145,6 @@
       ]
     },
     {
-      "id": "pygoat:CVE-2026-128066:pillow:12.1.0",
-      "cve": "CVE-2026-128066",
-      "package": "pillow",
-      "ecosystem": "PyPI",
-      "installed_version": "12.1.0",
-      "fixed_version": "13.0.0",
-      "app": "pygoat",
-      "cvss": null,
-      "epss": 0.00377,
-      "in_kev": false,
-      "kev_date_added": null,
-      "priority_score": 0,
-      "priority_label": "low",
-      "summary": {
-        "en": "Pillow is a Python imaging library. From 1.0 through 12.3.0, ImageFileDirectory_v2.load() in src/PIL/TiffImagePlugin.py retains a separate bytes object for each out-of-line IFD tag value without limiting the total data read or preventing distinct tags from referencing the same file region. A small crafted TIFF or EXIF-bearing JPEG, PNG, WebP, or MPO can therefore cause memory use quadratic in the input size. TIFF and some JPEG paths trigger parsing during Image.open(), while other formats are exposed when EXIF is requested, including through getexif() or ImageOps.exif_transpose(). The declared pixel dimensions do not bound this metadata allocation, so decompression-bomb checks do not prevent process memory exhaustion. This issue is fixed in version 13.0.0."
-      },
-      "references": [
-        "https://github.com/python-pillow/Pillow/commit/4908edaf7f416616784c7c03d8c1a60153710ffb",
-        "https://github.com/python-pillow/Pillow/commit/4b63dffd8a6d980fa0e21b40832fa6cbf033eacf",
-        "https://github.com/python-pillow/Pillow/releases/tag/13.0.0",
-        "https://github.com/python-pillow/Pillow/security/advisories/GHSA-wqgw-9xfh-qf2g"
-      ]
-    },
-    {
       "id": "pygoat:CVE-2026-26007:cryptography:39.0.1",
       "cve": "CVE-2026-26007",
       "package": "cryptography",
@@ -3166,6 +3189,30 @@
         "https://access.redhat.com/security/cve/CVE-2026-26007",
         "https://bugzilla.redhat.com/show_bug.cgi?id=2438762",
         "https://security.access.redhat.com/data/csaf/v2/vex/2026/cve-2026-26007.json"
+      ]
+    },
+    {
+      "id": "pygoat:CVE-2026-112899:pillow:12.1.0",
+      "cve": "CVE-2026-112899",
+      "package": "pillow",
+      "ecosystem": "PyPI",
+      "installed_version": "12.1.0",
+      "fixed_version": "13.0.0",
+      "app": "pygoat",
+      "cvss": 5.3,
+      "epss": 0.00502,
+      "in_kev": false,
+      "kev_date_added": null,
+      "priority_score": 14,
+      "priority_label": "low",
+      "summary": {
+        "en": "Pillow is a Python imaging library. In versions 2.3.0 through 12.3.0, EPS rendering does not validate the scaled image dimensions before invoking Ghostscript. Applications that process untrusted EPS or PostScript files using an application-selected scale greater than one can incur excessive Ghostscript CPU and temporary disk consumption. In versions with decompression-bomb protection, the scaled output is checked only after Ghostscript has completed rendering, allowing resource consumption beyond the configured pixel limit. The amplification depends on the scale selected by the application, not an attacker-controlled scale value. This issue is fixed in version 13.0.0."
+      },
+      "references": [
+        "https://github.com/python-pillow/Pillow/commit/3e8cc105588d1dfe062fcada0b6058c1b5f14b65",
+        "https://github.com/python-pillow/Pillow/pull/10112",
+        "https://github.com/python-pillow/Pillow/releases/tag/13.0.0",
+        "https://github.com/python-pillow/Pillow/security/advisories/GHSA-vx6w-vv9f-6gvg"
       ]
     },
     {
@@ -3222,52 +3269,27 @@
       ]
     },
     {
-      "id": "pygoat:CVE-2026-96644:pillow:12.1.0",
-      "cve": "CVE-2026-96644",
-      "package": "pillow",
+      "id": "pygoat:CVE-2026-118669:oauthlib:3.2.2",
+      "cve": "CVE-2026-118669",
+      "package": "oauthlib",
       "ecosystem": "PyPI",
-      "installed_version": "12.1.0",
-      "fixed_version": "13.0.0",
+      "installed_version": "3.2.2",
+      "fixed_version": "4.0.0",
       "app": "pygoat",
-      "cvss": 8.1,
-      "epss": 0.00384,
+      "cvss": null,
+      "epss": 0.00369,
       "in_kev": false,
       "kev_date_added": null,
-      "priority_score": 21,
-      "priority_label": "medium",
-      "summary": {
-        "en": "Pillow is a Python imaging library. Prior to 13.0.0 on Windows, src/PIL/WmfImagePlugin.py passes unchecked 32-bit WMF or EMF dimensions to the native drawwmf handler in src/display.c. The handler sizes a DIB allocation from 16-bit-truncated bcWidth and bcHeight fields but copies pixel data using the original full dimensions. A crafted wide, short metafile can pass the pixel-count decompression-bomb check and make the Windows-only renderer read beyond the heap buffer, potentially disclosing memory or crashing the process. This issue is fixed in version 13.0.0."
-      },
-      "references": [
-        "https://github.com/python-pillow/Pillow/commit/4cf46bee338304c5c8968fd7f132ba0d40c428b7",
-        "https://github.com/python-pillow/Pillow/pull/10120",
-        "https://github.com/python-pillow/Pillow/releases/tag/13.0.0",
-        "https://github.com/python-pillow/Pillow/security/advisories/GHSA-9v9v-9qvf-h2hj"
-      ]
-    },
-    {
-      "id": "pygoat:CVE-2026-59205:pillow:12.1.0",
-      "cve": "CVE-2026-59205",
-      "package": "pillow",
-      "ecosystem": "PyPI",
-      "installed_version": "12.1.0",
-      "fixed_version": "12.3.0",
-      "app": "pygoat",
-      "cvss": 7.5,
-      "epss": 0.00385,
-      "in_kev": false,
-      "kev_date_added": null,
-      "priority_score": 19,
+      "priority_score": 0,
       "priority_label": "low",
       "summary": {
-        "en": "Pillow is a Python imaging library. Prior to 12.3.0, Pillow's ImageCms.ImageCmsTransform.apply(im, imOut) API can trigger controlled native heap corruption when the caller supplies an output image whose mode does not match the transform's declared output mode. This issue is fixed in version 12.3.0.",
-        "es": "Pillow es una biblioteca de procesamiento de im\u00e1genes de Python. Antes de la versi\u00f3n 12.3.0, la API ImageCms.ImageCmsTransform.apply(im, imOut) de Pillow puede desencadenar una corrupci\u00f3n controlada del heap nativo cuando el llamador suministra una imagen de salida cuyo modo no coincide con el modo de salida declarado de la transformaci\u00f3n. Este problema se ha corregido en la versi\u00f3n 12.3.0."
+        "en": "OAuthLib is an implementation of the OAuth request-signing logic for Python 3.6+. Prior to 4.0.0, the client_credentials and Resource Owner Password Credentials token grant handlers can authenticate request.client as one confidential client while retaining an attacker-supplied request.client_id for validate_grant_type and validate_scopes. A lower-privilege authenticated client can therefore cause grant and scope authorization to use another client's identity when an application validator relies on the documented client_id argument, potentially issuing tokens with unauthorized grants or scopes. Validators that authorize exclusively from request.client may not be affected. This issue is fixed in version 4.0.0."
       },
       "references": [
-        "https://github.com/python-pillow/Pillow/commit/a9ffc42bedf4fc0a7ef8d6486e7f9e81e3397721",
-        "https://github.com/python-pillow/Pillow/pull/9715",
-        "https://github.com/python-pillow/Pillow/releases/tag/12.3.0",
-        "https://github.com/python-pillow/Pillow/security/advisories/GHSA-9hw9-ch79-4vh6"
+        "https://github.com/oauthlib/oauthlib/commit/c951a1d09f99f14e3240973fa83c4f4287d4753d",
+        "https://github.com/oauthlib/oauthlib/pull/920",
+        "https://github.com/oauthlib/oauthlib/releases/tag/v4.0.0",
+        "https://github.com/oauthlib/oauthlib/security/advisories/GHSA-7984-qgvg-3j9c"
       ]
     },
     {
@@ -3321,6 +3343,55 @@
       ]
     },
     {
+      "id": "pygoat:CVE-2026-59205:pillow:12.1.0",
+      "cve": "CVE-2026-59205",
+      "package": "pillow",
+      "ecosystem": "PyPI",
+      "installed_version": "12.1.0",
+      "fixed_version": "12.3.0",
+      "app": "pygoat",
+      "cvss": 7.5,
+      "epss": 0.00385,
+      "in_kev": false,
+      "kev_date_added": null,
+      "priority_score": 19,
+      "priority_label": "low",
+      "summary": {
+        "en": "Pillow is a Python imaging library. Prior to 12.3.0, Pillow's ImageCms.ImageCmsTransform.apply(im, imOut) API can trigger controlled native heap corruption when the caller supplies an output image whose mode does not match the transform's declared output mode. This issue is fixed in version 12.3.0.",
+        "es": "Pillow es una biblioteca de procesamiento de im\u00e1genes de Python. Antes de la versi\u00f3n 12.3.0, la API ImageCms.ImageCmsTransform.apply(im, imOut) de Pillow puede desencadenar una corrupci\u00f3n controlada del heap nativo cuando el llamador suministra una imagen de salida cuyo modo no coincide con el modo de salida declarado de la transformaci\u00f3n. Este problema se ha corregido en la versi\u00f3n 12.3.0."
+      },
+      "references": [
+        "https://github.com/python-pillow/Pillow/commit/a9ffc42bedf4fc0a7ef8d6486e7f9e81e3397721",
+        "https://github.com/python-pillow/Pillow/pull/9715",
+        "https://github.com/python-pillow/Pillow/releases/tag/12.3.0",
+        "https://github.com/python-pillow/Pillow/security/advisories/GHSA-9hw9-ch79-4vh6"
+      ]
+    },
+    {
+      "id": "pygoat:CVE-2026-96642:pillow:12.1.0",
+      "cve": "CVE-2026-96642",
+      "package": "pillow",
+      "ecosystem": "PyPI",
+      "installed_version": "12.1.0",
+      "fixed_version": "13.0.0",
+      "app": "pygoat",
+      "cvss": 6.5,
+      "epss": 0.00395,
+      "in_kev": false,
+      "kev_date_added": null,
+      "priority_score": 17,
+      "priority_label": "low",
+      "summary": {
+        "en": "Pillow is a Python imaging library. Prior to 13.0.0, the TarIO initializer in src/PIL/TarIO.py accepts a negative octal member size and computes a backward seek that returns to the same 512-byte header. When the requested member name does not match, the parser repeatedly reads that header, consumes a full CPU core, and never returns. TarIO is reached only when an application directly uses PIL.TarIO.TarIO rather than the default Image.open() path. This issue is fixed in version 13.0.0."
+      },
+      "references": [
+        "https://github.com/python-pillow/Pillow/commit/19b695fdcc5eddc37374e2b1645fc4185edaf71d",
+        "https://github.com/python-pillow/Pillow/pull/10012",
+        "https://github.com/python-pillow/Pillow/releases/tag/13.0.0",
+        "https://github.com/python-pillow/Pillow/security/advisories/GHSA-3j72-p6qg-6xp7"
+      ]
+    },
+    {
       "id": "pygoat:CVE-2026-53877:django:4.2",
       "cve": "CVE-2026-53877",
       "package": "django",
@@ -3345,50 +3416,26 @@
       ]
     },
     {
-      "id": "pygoat:CVE-2026-97689:urllib3:1.26.9",
-      "cve": "CVE-2026-97689",
-      "package": "urllib3",
-      "ecosystem": "PyPI",
-      "installed_version": "1.26.9",
-      "fixed_version": "2.8.0",
-      "app": "pygoat",
-      "cvss": 7.5,
-      "epss": 0.00335,
-      "in_kev": false,
-      "kev_date_added": null,
-      "priority_score": 19,
-      "priority_label": "low",
-      "summary": {
-        "en": "urllib3 is an HTTP client library for Python. From 1.10.3 until 2.8.0, the HTTPResponse.read_chunked and HTTPResponse.stream methods can allocate unbounded memory because the streaming chunk parser buffers the chunk-size field until newline or EOF without a length bound. The trigger is that a malicious server returns Transfer-Encoding: chunked followed by a very long run of bytes without a newline. The attack mechanism is that a malicious HTTP server sends a very long unterminated chunk-size line. The impact is that unbounded memory allocation can exhaust the client process. This issue is fixed in version 2.8.0."
-      },
-      "references": [
-        "https://github.com/urllib3/urllib3/commit/cd770b059b543be29298ea5c52afb0b1b090f5ed",
-        "https://github.com/urllib3/urllib3/releases/tag/2.8.0",
-        "https://github.com/urllib3/urllib3/security/advisories/GHSA-vxq7-64xx-v4gw"
-      ]
-    },
-    {
-      "id": "pygoat:CVE-2026-96643:pillow:12.1.0",
-      "cve": "CVE-2026-96643",
+      "id": "pygoat:CVE-2026-112898:pillow:12.1.0",
+      "cve": "CVE-2026-112898",
       "package": "pillow",
       "ecosystem": "PyPI",
       "installed_version": "12.1.0",
       "fixed_version": "13.0.0",
       "app": "pygoat",
-      "cvss": 6.5,
-      "epss": 0.00373,
+      "cvss": 5.3,
+      "epss": 0.0046,
       "in_kev": false,
       "kev_date_added": null,
-      "priority_score": 17,
+      "priority_score": 14,
       "priority_label": "low",
       "summary": {
-        "en": "Pillow is a Python imaging library. From 11.0.0 until 13.0.0, Exif.load() in src/PIL/Image.py repeatedly slices the remaining EXIF data while it begins with the six-byte Exif header. src/PIL/PngImagePlugin.py accepts an uncapped PNG eXIf chunk, so a file filled with repeated headers causes a new shrinking copy on every iteration and quadratic CPU work. The condition is reachable through Image.getexif(), Image._getexif(), and ImageOps.exif_transpose(), including common photo-upload rotation workflows. This issue is fixed in version 13.0.0."
+        "en": "Pillow is a Python imaging library. From 9.1.0 until 13.0.0, Pillow can disclose uninitialized stack memory when Image.quantize() uses an empty palette. ImagingPaletteCacheUpdate() leaves a local cache array uninitialized when the palette has zero entries, and the conversion path emits those bytes as output pixel indices. An attacker who controls the palette image can obtain stack contents from a returned PNG or GIF. This can disclose addresses and stack-canary data without an out-of-bounds access, memory corruption, or process crash. This issue is fixed in version 13.0.0."
       },
       "references": [
-        "https://github.com/python-pillow/Pillow/commit/806e38381c781f32bbd22f4cd026678acd40fd6c",
-        "https://github.com/python-pillow/Pillow/pull/10073",
+        "https://github.com/python-pillow/Pillow/commit/13943c8f857b22f073d30f0ef9b725a0d255f1a4",
         "https://github.com/python-pillow/Pillow/releases/tag/13.0.0",
-        "https://github.com/python-pillow/Pillow/security/advisories/GHSA-g4qv-2jxx-769h"
+        "https://github.com/python-pillow/Pillow/security/advisories/GHSA-rfgq-q3w2-pmv2"
       ]
     },
     {
@@ -3413,6 +3460,30 @@
         "https://github.com/python-pillow/Pillow/pull/10076",
         "https://github.com/python-pillow/Pillow/releases/tag/13.0.0",
         "https://github.com/python-pillow/Pillow/security/advisories/GHSA-g842-9rc4-69pw"
+      ]
+    },
+    {
+      "id": "pygoat:CVE-2026-96643:pillow:12.1.0",
+      "cve": "CVE-2026-96643",
+      "package": "pillow",
+      "ecosystem": "PyPI",
+      "installed_version": "12.1.0",
+      "fixed_version": "13.0.0",
+      "app": "pygoat",
+      "cvss": 6.5,
+      "epss": 0.00373,
+      "in_kev": false,
+      "kev_date_added": null,
+      "priority_score": 17,
+      "priority_label": "low",
+      "summary": {
+        "en": "Pillow is a Python imaging library. From 11.0.0 until 13.0.0, Exif.load() in src/PIL/Image.py repeatedly slices the remaining EXIF data while it begins with the six-byte Exif header. src/PIL/PngImagePlugin.py accepts an uncapped PNG eXIf chunk, so a file filled with repeated headers causes a new shrinking copy on every iteration and quadratic CPU work. The condition is reachable through Image.getexif(), Image._getexif(), and ImageOps.exif_transpose(), including common photo-upload rotation workflows. This issue is fixed in version 13.0.0."
+      },
+      "references": [
+        "https://github.com/python-pillow/Pillow/commit/806e38381c781f32bbd22f4cd026678acd40fd6c",
+        "https://github.com/python-pillow/Pillow/pull/10073",
+        "https://github.com/python-pillow/Pillow/releases/tag/13.0.0",
+        "https://github.com/python-pillow/Pillow/security/advisories/GHSA-g4qv-2jxx-769h"
       ]
     },
     {
@@ -3506,54 +3577,6 @@
       "references": [
         "https://github.com/andialbrecht/sqlparse/commit/d1d80602741f77ec78e5a04ce4719244cf32352e",
         "https://github.com/andialbrecht/sqlparse/security/advisories/GHSA-prg7-hcfm-mfcr"
-      ]
-    },
-    {
-      "id": "pygoat:CVE-2026-96642:pillow:12.1.0",
-      "cve": "CVE-2026-96642",
-      "package": "pillow",
-      "ecosystem": "PyPI",
-      "installed_version": "12.1.0",
-      "fixed_version": "13.0.0",
-      "app": "pygoat",
-      "cvss": 6.5,
-      "epss": 0.00345,
-      "in_kev": false,
-      "kev_date_added": null,
-      "priority_score": 17,
-      "priority_label": "low",
-      "summary": {
-        "en": "Pillow is a Python imaging library. Prior to 13.0.0, the TarIO initializer in src/PIL/TarIO.py accepts a negative octal member size and computes a backward seek that returns to the same 512-byte header. When the requested member name does not match, the parser repeatedly reads that header, consumes a full CPU core, and never returns. TarIO is reached only when an application directly uses PIL.TarIO.TarIO rather than the default Image.open() path. This issue is fixed in version 13.0.0."
-      },
-      "references": [
-        "https://github.com/python-pillow/Pillow/commit/19b695fdcc5eddc37374e2b1645fc4185edaf71d",
-        "https://github.com/python-pillow/Pillow/pull/10012",
-        "https://github.com/python-pillow/Pillow/releases/tag/13.0.0",
-        "https://github.com/python-pillow/Pillow/security/advisories/GHSA-3j72-p6qg-6xp7"
-      ]
-    },
-    {
-      "id": "pygoat:CVE-2026-118669:oauthlib:3.2.2",
-      "cve": "CVE-2026-118669",
-      "package": "oauthlib",
-      "ecosystem": "PyPI",
-      "installed_version": "3.2.2",
-      "fixed_version": "4.0.0",
-      "app": "pygoat",
-      "cvss": null,
-      "epss": 0.00312,
-      "in_kev": false,
-      "kev_date_added": null,
-      "priority_score": 0,
-      "priority_label": "low",
-      "summary": {
-        "en": "OAuthLib is an implementation of the OAuth request-signing logic for Python 3.6+. Prior to 4.0.0, the client_credentials and Resource Owner Password Credentials token grant handlers can authenticate request.client as one confidential client while retaining an attacker-supplied request.client_id for validate_grant_type and validate_scopes. A lower-privilege authenticated client can therefore cause grant and scope authorization to use another client's identity when an application validator relies on the documented client_id argument, potentially issuing tokens with unauthorized grants or scopes. Validators that authorize exclusively from request.client may not be affected. This issue is fixed in version 4.0.0."
-      },
-      "references": [
-        "https://github.com/oauthlib/oauthlib/commit/c951a1d09f99f14e3240973fa83c4f4287d4753d",
-        "https://github.com/oauthlib/oauthlib/pull/920",
-        "https://github.com/oauthlib/oauthlib/releases/tag/v4.0.0",
-        "https://github.com/oauthlib/oauthlib/security/advisories/GHSA-7984-qgvg-3j9c"
       ]
     },
     {
@@ -3798,30 +3821,6 @@
       ]
     },
     {
-      "id": "pygoat:CVE-2026-96641:pillow:12.1.0",
-      "cve": "CVE-2026-96641",
-      "package": "pillow",
-      "ecosystem": "PyPI",
-      "installed_version": "12.1.0",
-      "fixed_version": "13.0.0",
-      "app": "pygoat",
-      "cvss": 6.5,
-      "epss": 0.00364,
-      "in_kev": false,
-      "kev_date_added": null,
-      "priority_score": 17,
-      "priority_label": "low",
-      "summary": {
-        "en": "Pillow is a Python imaging library. Prior to 13.0.0, PILfont text-width accumulation in src/_imaging.c checks positive glyph advances against INT_MAX but does not check negative advances against INT_MIN. Repeating a signed 16-bit advance of -32768 can therefore execute a signed C integer overflow in xsize += dx, producing a large positive width from a negative mathematical result. Applications that use getlength(), getsize(), or derived layout, quota, serialization, or allocation calculations can experience logic-integrity errors or resource consumption, while the high-level mask path commonly retains a decompression-bomb check. This issue is fixed in version 13.0.0."
-      },
-      "references": [
-        "https://github.com/python-pillow/Pillow/commit/80de4be9e38d3a6148dd4d8491eb80cd12b760a4",
-        "https://github.com/python-pillow/Pillow/pull/10010",
-        "https://github.com/python-pillow/Pillow/releases/tag/13.0.0",
-        "https://github.com/python-pillow/Pillow/security/advisories/GHSA-4rm8-3hmm-39fg"
-      ]
-    },
-    {
       "id": "pygoat:CVE-2026-96638:pillow:12.1.0",
       "cve": "CVE-2026-96638",
       "package": "pillow",
@@ -3843,6 +3842,30 @@
         "https://github.com/python-pillow/Pillow/pull/10015",
         "https://github.com/python-pillow/Pillow/releases/tag/13.0.0",
         "https://github.com/python-pillow/Pillow/security/advisories/GHSA-24rc-8hj2-v98c"
+      ]
+    },
+    {
+      "id": "pygoat:CVE-2026-96641:pillow:12.1.0",
+      "cve": "CVE-2026-96641",
+      "package": "pillow",
+      "ecosystem": "PyPI",
+      "installed_version": "12.1.0",
+      "fixed_version": "13.0.0",
+      "app": "pygoat",
+      "cvss": 6.5,
+      "epss": 0.00364,
+      "in_kev": false,
+      "kev_date_added": null,
+      "priority_score": 17,
+      "priority_label": "low",
+      "summary": {
+        "en": "Pillow is a Python imaging library. Prior to 13.0.0, PILfont text-width accumulation in src/_imaging.c checks positive glyph advances against INT_MAX but does not check negative advances against INT_MIN. Repeating a signed 16-bit advance of -32768 can therefore execute a signed C integer overflow in xsize += dx, producing a large positive width from a negative mathematical result. Applications that use getlength(), getsize(), or derived layout, quota, serialization, or allocation calculations can experience logic-integrity errors or resource consumption, while the high-level mask path commonly retains a decompression-bomb check. This issue is fixed in version 13.0.0."
+      },
+      "references": [
+        "https://github.com/python-pillow/Pillow/commit/80de4be9e38d3a6148dd4d8491eb80cd12b760a4",
+        "https://github.com/python-pillow/Pillow/pull/10010",
+        "https://github.com/python-pillow/Pillow/releases/tag/13.0.0",
+        "https://github.com/python-pillow/Pillow/security/advisories/GHSA-4rm8-3hmm-39fg"
       ]
     },
     {
@@ -3919,26 +3942,28 @@
       ]
     },
     {
-      "id": "pygoat:CVE-2026-112898:pillow:12.1.0",
-      "cve": "CVE-2026-112898",
-      "package": "pillow",
+      "id": "pygoat:CVE-2026-97687:urllib3:1.26.9",
+      "cve": "CVE-2026-97687",
+      "package": "urllib3",
       "ecosystem": "PyPI",
-      "installed_version": "12.1.0",
-      "fixed_version": "13.0.0",
+      "installed_version": "1.26.9",
+      "fixed_version": "2.8.0",
       "app": "pygoat",
-      "cvss": 5.3,
-      "epss": 0.00339,
+      "cvss": 8.1,
+      "epss": 0.00245,
       "in_kev": false,
       "kev_date_added": null,
-      "priority_score": 14,
-      "priority_label": "low",
+      "priority_score": 20,
+      "priority_label": "medium",
       "summary": {
-        "en": "Pillow is a Python imaging library. From 9.1.0 until 13.0.0, Pillow can disclose uninitialized stack memory when Image.quantize() uses an empty palette. ImagingPaletteCacheUpdate() leaves a local cache array uninitialized when the palette has zero entries, and the conversion path emits those bytes as output pixel indices. An attacker who controls the palette image can obtain stack contents from a returned PNG or GIF. This can disclose addresses and stack-canary data without an out-of-bounds access, memory corruption, or process crash. This issue is fixed in version 13.0.0."
+        "en": "urllib3 is an HTTP client library for Python. From 1.26.0 until 2.8.0, the proxy_ssl_context, proxy_assert_hostname, proxy_assert_fingerprint, ssl_context, cert_reqs, verify_mode, use_forwarding_for_https=True, and CERT_NONE configuration paths fail to remain separated because target-server TLS settings are incorrectly applied to the HTTPS proxy connection. The trigger is that an application uses an HTTPS proxy and configures target-server TLS settings that must remain separate from the proxy TLS handshake, including HTTPS forwarding with target-specific identity or credentials. Applying cert_reqs=CERT_NONE can overwrite proxy_ssl_context.verify_mode in place, and the mutation persists so later connections reusing the same context may connect to the HTTPS proxy without certificate verification. The attack mechanism is that an attacker intercepts and impersonates the HTTPS proxy after the effective proxy policy accepts the attacker's certificate. The impact is that the attacker can observe or modify forwarded traffic or receive a target TLS client certificate, while CONNECT tunneling still preserves the separate end-to-end target TLS connection. This issue is fixed in version 2.8.0."
       },
       "references": [
-        "https://github.com/python-pillow/Pillow/commit/13943c8f857b22f073d30f0ef9b725a0d255f1a4",
-        "https://github.com/python-pillow/Pillow/releases/tag/13.0.0",
-        "https://github.com/python-pillow/Pillow/security/advisories/GHSA-rfgq-q3w2-pmv2"
+        "https://github.com/urllib3/urllib3/commit/07408cec79d1856d81bb42c74a904a24fdb9e465",
+        "https://github.com/urllib3/urllib3/commit/b6447295fff7b38fdffc67e0df9712d60cef3cc3",
+        "https://github.com/urllib3/urllib3/pull/5093",
+        "https://github.com/urllib3/urllib3/releases/tag/2.8.0",
+        "https://github.com/urllib3/urllib3/security/advisories/GHSA-8988-9cw3-xx77"
       ]
     },
     {
@@ -4040,31 +4065,6 @@
       ]
     },
     {
-      "id": "pygoat:CVE-2026-97687:urllib3:1.26.9",
-      "cve": "CVE-2026-97687",
-      "package": "urllib3",
-      "ecosystem": "PyPI",
-      "installed_version": "1.26.9",
-      "fixed_version": "2.8.0",
-      "app": "pygoat",
-      "cvss": 8.1,
-      "epss": 0.00206,
-      "in_kev": false,
-      "kev_date_added": null,
-      "priority_score": 20,
-      "priority_label": "medium",
-      "summary": {
-        "en": "urllib3 is an HTTP client library for Python. From 1.26.0 until 2.8.0, the proxy_ssl_context, proxy_assert_hostname, proxy_assert_fingerprint, ssl_context, cert_reqs, verify_mode, use_forwarding_for_https=True, and CERT_NONE configuration paths fail to remain separated because target-server TLS settings are incorrectly applied to the HTTPS proxy connection. The trigger is that an application uses an HTTPS proxy and configures target-server TLS settings that must remain separate from the proxy TLS handshake, including HTTPS forwarding with target-specific identity or credentials. Applying cert_reqs=CERT_NONE can overwrite proxy_ssl_context.verify_mode in place, and the mutation persists so later connections reusing the same context may connect to the HTTPS proxy without certificate verification. The attack mechanism is that an attacker intercepts and impersonates the HTTPS proxy after the effective proxy policy accepts the attacker's certificate. The impact is that the attacker can observe or modify forwarded traffic or receive a target TLS client certificate, while CONNECT tunneling still preserves the separate end-to-end target TLS connection. This issue is fixed in version 2.8.0."
-      },
-      "references": [
-        "https://github.com/urllib3/urllib3/commit/07408cec79d1856d81bb42c74a904a24fdb9e465",
-        "https://github.com/urllib3/urllib3/commit/b6447295fff7b38fdffc67e0df9712d60cef3cc3",
-        "https://github.com/urllib3/urllib3/pull/5093",
-        "https://github.com/urllib3/urllib3/releases/tag/2.8.0",
-        "https://github.com/urllib3/urllib3/security/advisories/GHSA-8988-9cw3-xx77"
-      ]
-    },
-    {
       "id": "pygoat:CVE-2026-69248:cryptography:39.0.1",
       "cve": "CVE-2026-69248",
       "package": "cryptography",
@@ -4086,6 +4086,30 @@
         "https://github.com/pyca/cryptography/commit/4d035a4225965edeffd312079a510ef25fcfdcb2",
         "https://github.com/pyca/cryptography/pull/14888",
         "https://github.com/pyca/cryptography/security/advisories/GHSA-m2h6-j472-rp4c"
+      ]
+    },
+    {
+      "id": "pygoat:CVE-2026-25645:requests:2.28.2",
+      "cve": "CVE-2026-25645",
+      "package": "requests",
+      "ecosystem": "PyPI",
+      "installed_version": "2.28.2",
+      "fixed_version": "2.33.0",
+      "app": "pygoat",
+      "cvss": 4.4,
+      "epss": 0.00306,
+      "in_kev": false,
+      "kev_date_added": null,
+      "priority_score": 11,
+      "priority_label": "low",
+      "summary": {
+        "en": "Requests is a HTTP library. Prior to version 2.33.0, the `requests.utils.extract_zipped_paths()` utility function uses a predictable filename when extracting files from zip archives into the system temporary directory. If the target file already exists, it is reused without validation. A local attacker with write access to the temp directory could pre-create a malicious file that would be loaded in place of the legitimate one. Standard usage of the Requests library is not affected by this vulnerability. Only applications that call `extract_zipped_paths()` directly are impacted. Starting in version 2.33.0, the library extracts files to a non-deterministic location. If developers are unable to upgrade, they can set `TMPDIR` in their environment to a directory with restricted write access.",
+        "es": "Requests es una biblioteca HTTP. Antes de la versi\u00f3n 2.33.0, la funci\u00f3n de utilidad 'requests.utils.extract_zipped_paths()' utiliza un nombre de archivo predecible al extraer archivos de archivos zip en el directorio temporal del sistema. Si el archivo de destino ya existe, se reutiliza sin validaci\u00f3n. Un atacante local con acceso de escritura al directorio temporal podr\u00eda pre-crear un archivo malicioso que se cargar\u00eda en lugar del leg\u00edtimo. El uso est\u00e1ndar de la biblioteca Requests no se ve afectado por esta vulnerabilidad. Solo las aplicaciones que llaman a 'extract_zipped_paths()' directamente se ven afectadas. A partir de la versi\u00f3n 2.33.0, la biblioteca extrae archivos a una ubicaci\u00f3n no determinista. Si los desarrolladores no pueden actualizar, pueden establecer 'TMPDIR' en su entorno a un directorio con acceso de escritura restringido."
+      },
+      "references": [
+        "https://github.com/psf/requests/commit/66d21cb07bd6255b1280291c4fafb71803cdb3b7",
+        "https://github.com/psf/requests/releases/tag/v2.33.0",
+        "https://github.com/psf/requests/security/advisories/GHSA-gc5v-m9x4-r6x2"
       ]
     },
     {
@@ -4417,30 +4441,6 @@
       },
       "references": [
         "https://github.com/jpadilla/pyjwt/security/advisories/GHSA-993g-76c3-p5m4"
-      ]
-    },
-    {
-      "id": "pygoat:CVE-2026-25645:requests:2.28.2",
-      "cve": "CVE-2026-25645",
-      "package": "requests",
-      "ecosystem": "PyPI",
-      "installed_version": "2.28.2",
-      "fixed_version": "2.33.0",
-      "app": "pygoat",
-      "cvss": 4.4,
-      "epss": 0.00212,
-      "in_kev": false,
-      "kev_date_added": null,
-      "priority_score": 11,
-      "priority_label": "low",
-      "summary": {
-        "en": "Requests is a HTTP library. Prior to version 2.33.0, the `requests.utils.extract_zipped_paths()` utility function uses a predictable filename when extracting files from zip archives into the system temporary directory. If the target file already exists, it is reused without validation. A local attacker with write access to the temp directory could pre-create a malicious file that would be loaded in place of the legitimate one. Standard usage of the Requests library is not affected by this vulnerability. Only applications that call `extract_zipped_paths()` directly are impacted. Starting in version 2.33.0, the library extracts files to a non-deterministic location. If developers are unable to upgrade, they can set `TMPDIR` in their environment to a directory with restricted write access.",
-        "es": "Requests es una biblioteca HTTP. Antes de la versi\u00f3n 2.33.0, la funci\u00f3n de utilidad 'requests.utils.extract_zipped_paths()' utiliza un nombre de archivo predecible al extraer archivos de archivos zip en el directorio temporal del sistema. Si el archivo de destino ya existe, se reutiliza sin validaci\u00f3n. Un atacante local con acceso de escritura al directorio temporal podr\u00eda pre-crear un archivo malicioso que se cargar\u00eda en lugar del leg\u00edtimo. El uso est\u00e1ndar de la biblioteca Requests no se ve afectado por esta vulnerabilidad. Solo las aplicaciones que llaman a 'extract_zipped_paths()' directamente se ven afectadas. A partir de la versi\u00f3n 2.33.0, la biblioteca extrae archivos a una ubicaci\u00f3n no determinista. Si los desarrolladores no pueden actualizar, pueden establecer 'TMPDIR' en su entorno a un directorio con acceso de escritura restringido."
-      },
-      "references": [
-        "https://github.com/psf/requests/commit/66d21cb07bd6255b1280291c4fafb71803cdb3b7",
-        "https://github.com/psf/requests/releases/tag/v2.33.0",
-        "https://github.com/psf/requests/security/advisories/GHSA-gc5v-m9x4-r6x2"
       ]
     },
     {
@@ -6895,6 +6895,28 @@
       ]
     },
     {
+      "id": "nodejs-goof:CVE-2020-7610:bson:0.4.23",
+      "cve": "CVE-2020-7610",
+      "package": "bson",
+      "ecosystem": "npm",
+      "installed_version": "0.4.23",
+      "fixed_version": "1.1.4",
+      "app": "nodejs-goof",
+      "cvss": 9.8,
+      "epss": 0.02309,
+      "in_kev": false,
+      "kev_date_added": null,
+      "priority_score": 26,
+      "priority_label": "medium",
+      "summary": {
+        "en": "All versions of bson before 1.1.4 are vulnerable to Deserialization of Untrusted Data. The package will ignore an unknown value for an object's _bsotype, leading to cases where an object is serialized as a document rather than the intended BSON type.",
+        "es": "Todas las versiones de bson anteriores a 1.1.4, son vulnerables a la Deserializaci\u00f3n de Datos No Confiables. El paquete ignorar\u00e1 un valor desconocido para un _bsotype de objeto, conllevando a casos donde un objeto es serializado como un documento en lugar del tipo BSON previsto."
+      },
+      "references": [
+        "https://snyk.io/vuln/SNYK-JS-BSON-561052"
+      ]
+    },
+    {
       "id": "nodejs-goof:CVE-2022-21681:marked:0.3.5",
       "cve": "CVE-2022-21681",
       "package": "marked",
@@ -6916,28 +6938,6 @@
         "https://github.com/markedjs/marked/commit/8f806573a3f6c6b7a39b8cdb66ab5ebb8d55a5f5",
         "https://github.com/markedjs/marked/security/advisories/GHSA-5v2h-r2cx-5xgj",
         "https://lists.fedoraproject.org/archives/list/package-announce%40lists.fedoraproject.org/message/AIXDMC3CSHYW3YWVSQOXAWLUYQHAO5UX/"
-      ]
-    },
-    {
-      "id": "nodejs-goof:CVE-2020-7610:bson:0.4.23",
-      "cve": "CVE-2020-7610",
-      "package": "bson",
-      "ecosystem": "npm",
-      "installed_version": "0.4.23",
-      "fixed_version": "1.1.4",
-      "app": "nodejs-goof",
-      "cvss": 9.8,
-      "epss": 0.02265,
-      "in_kev": false,
-      "kev_date_added": null,
-      "priority_score": 26,
-      "priority_label": "medium",
-      "summary": {
-        "en": "All versions of bson before 1.1.4 are vulnerable to Deserialization of Untrusted Data. The package will ignore an unknown value for an object's _bsotype, leading to cases where an object is serialized as a document rather than the intended BSON type.",
-        "es": "Todas las versiones de bson anteriores a 1.1.4, son vulnerables a la Deserializaci\u00f3n de Datos No Confiables. El paquete ignorar\u00e1 un valor desconocido para un _bsotype de objeto, conllevando a casos donde un objeto es serializado como un documento en lugar del tipo BSON previsto."
-      },
-      "references": [
-        "https://snyk.io/vuln/SNYK-JS-BSON-561052"
       ]
     },
     {
@@ -8487,6 +8487,31 @@
       ]
     },
     {
+      "id": "nodejs-goof:CVE-2025-9288:sha.js:2.4.11",
+      "cve": "CVE-2025-9288",
+      "package": "sha.js",
+      "ecosystem": "npm",
+      "installed_version": "2.4.11",
+      "fixed_version": "2.4.12",
+      "app": "nodejs-goof",
+      "cvss": 9.1,
+      "epss": 0.00814,
+      "in_kev": false,
+      "kev_date_added": null,
+      "priority_score": 23,
+      "priority_label": "medium",
+      "summary": {
+        "en": "Improper Input Validation vulnerability in sha.js allows Input Data Manipulation.This issue affects sha.js: through 2.4.11.",
+        "es": "La vulnerabilidad de validaci\u00f3n de entrada incorrecta en sha.js permite la manipulaci\u00f3n de datos de entrada. Este problema afecta a sha.js: hasta 2.4.11."
+      },
+      "references": [
+        "https://github.com/browserify/sha.js/pull/78",
+        "https://github.com/browserify/sha.js/security/advisories/GHSA-95m3-7q98-8xr5",
+        "https://www.cve.org/CVERecord?id=CVE-2025-9287",
+        "https://lists.debian.org/debian-lts-announce/2025/09/msg00016.html"
+      ]
+    },
+    {
       "id": "nodejs-goof:CVE-2024-4067:micromatch:3.1.10",
       "cve": "CVE-2024-4067",
       "package": "micromatch",
@@ -8564,31 +8589,6 @@
         "https://lists.debian.org/debian-lts-announce/2020/12/msg00041.html",
         "https://www.npmjs.com/package/highlight.js",
         "https://www.oracle.com/security-alerts/cpujul2022.html"
-      ]
-    },
-    {
-      "id": "nodejs-goof:CVE-2025-9288:sha.js:2.4.11",
-      "cve": "CVE-2025-9288",
-      "package": "sha.js",
-      "ecosystem": "npm",
-      "installed_version": "2.4.11",
-      "fixed_version": "2.4.12",
-      "app": "nodejs-goof",
-      "cvss": 9.1,
-      "epss": 0.00783,
-      "in_kev": false,
-      "kev_date_added": null,
-      "priority_score": 23,
-      "priority_label": "medium",
-      "summary": {
-        "en": "Improper Input Validation vulnerability in sha.js allows Input Data Manipulation.This issue affects sha.js: through 2.4.11.",
-        "es": "La vulnerabilidad de validaci\u00f3n de entrada incorrecta en sha.js permite la manipulaci\u00f3n de datos de entrada. Este problema afecta a sha.js: hasta 2.4.11."
-      },
-      "references": [
-        "https://github.com/browserify/sha.js/pull/78",
-        "https://github.com/browserify/sha.js/security/advisories/GHSA-95m3-7q98-8xr5",
-        "https://www.cve.org/CVERecord?id=CVE-2025-9287",
-        "https://lists.debian.org/debian-lts-announce/2025/09/msg00016.html"
       ]
     },
     {
@@ -9191,32 +9191,6 @@
       ]
     },
     {
-      "id": "nodejs-goof:CVE-2026-69152:brace-expansion:1.1.11",
-      "cve": "CVE-2026-69152",
-      "package": "brace-expansion",
-      "ecosystem": "npm",
-      "installed_version": "1.1.11",
-      "fixed_version": "1.1.18",
-      "app": "nodejs-goof",
-      "cvss": 7.5,
-      "epss": 0.00647,
-      "in_kev": false,
-      "kev_date_added": null,
-      "priority_score": 19,
-      "priority_label": "low",
-      "summary": {
-        "en": "The brace-expansion library generates arbitrary strings containing a common prefix and suffix. Prior to 1.1.18, 2.1.4, 3.0.6, and 5.0.9, expand() does not apply maxLength while constructing comma-alternative intermediate arrays or padded sequences, allowing attacker-controlled input to exhaust memory or block the event loop. The fix for CVE-2026-14257 is bypassed by the vulnerability. This issue is fixed in versions 1.1.18, 2.1.4, 3.0.6, and 5.0.9.",
-        "es": "La biblioteca brace-expansion genera cadenas arbitrarias que contienen un prefijo y un sufijo comunes. Antes de 1.1.18, 2.1.4, 3.0.6 y 5.0.9, expand() no aplica maxLength mientras construye arrays intermedios de alternativas de coma o secuencias rellenadas, permitiendo que la entrada controlada por el atacante agote la memoria o bloquee el bucle de eventos. La correcci\u00f3n para CVE-2026-14257 es eludida por la vulnerabilidad. Este problema est\u00e1 corregido en las versiones 1.1.18, 2.1.4, 3.0.6 y 5.0.9."
-      },
-      "references": [
-        "https://github.com/juliangruber/brace-expansion/commit/139d015104e71433ad52a41d19467c48ecbb2c7d",
-        "https://github.com/juliangruber/brace-expansion/commit/1e30c930238d7162802d88a94189182def178dac",
-        "https://github.com/juliangruber/brace-expansion/commit/688a99eeaab02627c2b89ba8ba4821fecfa659cf",
-        "https://github.com/juliangruber/brace-expansion/commit/cb4b9e47cc2ec777c14b2b4492fb431a56f6a031",
-        "https://github.com/juliangruber/brace-expansion/security/advisories/GHSA-rgw5-rvv9-x895"
-      ]
-    },
-    {
       "id": "nodejs-goof:CVE-2026-14257:brace-expansion:1.1.11",
       "cve": "CVE-2026-14257",
       "package": "brace-expansion",
@@ -9523,6 +9497,56 @@
       ]
     },
     {
+      "id": "nodejs-goof:CVE-2026-69152:brace-expansion:1.1.11",
+      "cve": "CVE-2026-69152",
+      "package": "brace-expansion",
+      "ecosystem": "npm",
+      "installed_version": "1.1.11",
+      "fixed_version": "1.1.18",
+      "app": "nodejs-goof",
+      "cvss": 7.5,
+      "epss": 0.00571,
+      "in_kev": false,
+      "kev_date_added": null,
+      "priority_score": 19,
+      "priority_label": "low",
+      "summary": {
+        "en": "The brace-expansion library generates arbitrary strings containing a common prefix and suffix. Prior to 1.1.18, 2.1.4, 3.0.6, and 5.0.9, expand() does not apply maxLength while constructing comma-alternative intermediate arrays or padded sequences, allowing attacker-controlled input to exhaust memory or block the event loop. The fix for CVE-2026-14257 is bypassed by the vulnerability. This issue is fixed in versions 1.1.18, 2.1.4, 3.0.6, and 5.0.9.",
+        "es": "La biblioteca brace-expansion genera cadenas arbitrarias que contienen un prefijo y un sufijo comunes. Antes de 1.1.18, 2.1.4, 3.0.6 y 5.0.9, expand() no aplica maxLength mientras construye arrays intermedios de alternativas de coma o secuencias rellenadas, permitiendo que la entrada controlada por el atacante agote la memoria o bloquee el bucle de eventos. La correcci\u00f3n para CVE-2026-14257 es eludida por la vulnerabilidad. Este problema est\u00e1 corregido en las versiones 1.1.18, 2.1.4, 3.0.6 y 5.0.9."
+      },
+      "references": [
+        "https://github.com/juliangruber/brace-expansion/commit/139d015104e71433ad52a41d19467c48ecbb2c7d",
+        "https://github.com/juliangruber/brace-expansion/commit/1e30c930238d7162802d88a94189182def178dac",
+        "https://github.com/juliangruber/brace-expansion/commit/688a99eeaab02627c2b89ba8ba4821fecfa659cf",
+        "https://github.com/juliangruber/brace-expansion/commit/cb4b9e47cc2ec777c14b2b4492fb431a56f6a031",
+        "https://github.com/juliangruber/brace-expansion/security/advisories/GHSA-rgw5-rvv9-x895"
+      ]
+    },
+    {
+      "id": "nodejs-goof:CVE-2026-4867:path-to-regexp:0.1.3",
+      "cve": "CVE-2026-4867",
+      "package": "path-to-regexp",
+      "ecosystem": "npm",
+      "installed_version": "0.1.3",
+      "fixed_version": "0.1.13",
+      "app": "nodejs-goof",
+      "cvss": 7.5,
+      "epss": 0.00563,
+      "in_kev": false,
+      "kev_date_added": null,
+      "priority_score": 19,
+      "priority_label": "low",
+      "summary": {
+        "en": "Impact:\n\nA bad regular expression is generated any time you have three or more parameters within a single segment, separated by something that is not a period (.). For example, /:a-:b-:c or /:a-:b-:c-:d. The backtrack protection added in path-to-regexp@0.1.12 only prevents ambiguity for two parameters. With three or more, the generated lookahead does not block single separator characters, so capture groups overlap and cause catastrophic backtracking.\n\nPatches:\n\nUpgrade to path-to-regexp@0.1.13\n\nCustom regex patterns in route definitions (e.g., /:a-:b([^-/]+)-:c([^-/]+)) are not affected because they override the default capture group.\n\nWorkarounds:\n\nAll versions can be patched by providing a custom regular expression for parameters after the first in a single segment. As long as the custom regular expression does not match the text before the parameter, you will be safe. For example, change /:a-:b-:c to /:a-:b([^-/]+)-:c([^-/]+).\n\nIf paths cannot be rewritten and versions cannot be upgraded, another alternative is to limit the URL length.",
+        "es": "Impacto:\n\nSe genera una expresi\u00f3n regular incorrecta cada vez que se tienen tres o m\u00e1s par\u00e1metros dentro de un \u00fanico segmento, separados por algo que no sea un punto (.). Por ejemplo, /:a-:b-:c o /:a-:b-:c-:d. La protecci\u00f3n contra retroceso a\u00f1adida en path-to-regexp@0.1.12 solo previene la ambig\u00fcedad para dos par\u00e1metros. Con tres o m\u00e1s, el 'lookahead' generado no bloquea los caracteres separadores individuales, por lo que los grupos de captura se superponen y causan un retroceso catastr\u00f3fico.\n\nParches:\n\nActualizar a path-to-regexp@0.1.13\n\nLos patrones de expresiones regulares personalizados en las definiciones de ruta (por ejemplo, /:a-:b([^-/]+)-:c([^-/]+)) no se ven afectados porque anulan el grupo de captura predeterminado.\n\nSoluciones provisionales:\n\nTodas las versiones pueden ser parcheadas proporcionando una expresi\u00f3n regular personalizada para los par\u00e1metros despu\u00e9s del primero en un \u00fanico segmento. Siempre y cuando la expresi\u00f3n regular personalizada no coincida con el texto anterior al par\u00e1metro, estar\u00e1 seguro. Por ejemplo, cambie /:a-:b-:c a /:a-:b([^-/]+)-:c([^-/]+).\n\nSi las rutas no pueden ser reescritas y las versiones no pueden ser actualizadas, otra alternativa es limitar la longitud de la URL."
+      },
+      "references": [
+        "https://blakeembrey.com/posts/2024-09-web-redos",
+        "https://cna.openjsf.org/security-advisories.html",
+        "https://github.com/advisories/GHSA-9wv6-86v2-598j"
+      ]
+    },
+    {
       "id": "nodejs-goof:CVE-2025-12758:validator:13.5.2",
       "cve": "CVE-2025-12758",
       "package": "validator",
@@ -9623,30 +9647,6 @@
       ]
     },
     {
-      "id": "nodejs-goof:CVE-2026-4867:path-to-regexp:0.1.3",
-      "cve": "CVE-2026-4867",
-      "package": "path-to-regexp",
-      "ecosystem": "npm",
-      "installed_version": "0.1.3",
-      "fixed_version": "0.1.13",
-      "app": "nodejs-goof",
-      "cvss": 7.5,
-      "epss": 0.00527,
-      "in_kev": false,
-      "kev_date_added": null,
-      "priority_score": 19,
-      "priority_label": "low",
-      "summary": {
-        "en": "Impact:\n\nA bad regular expression is generated any time you have three or more parameters within a single segment, separated by something that is not a period (.). For example, /:a-:b-:c or /:a-:b-:c-:d. The backtrack protection added in path-to-regexp@0.1.12 only prevents ambiguity for two parameters. With three or more, the generated lookahead does not block single separator characters, so capture groups overlap and cause catastrophic backtracking.\n\nPatches:\n\nUpgrade to path-to-regexp@0.1.13\n\nCustom regex patterns in route definitions (e.g., /:a-:b([^-/]+)-:c([^-/]+)) are not affected because they override the default capture group.\n\nWorkarounds:\n\nAll versions can be patched by providing a custom regular expression for parameters after the first in a single segment. As long as the custom regular expression does not match the text before the parameter, you will be safe. For example, change /:a-:b-:c to /:a-:b([^-/]+)-:c([^-/]+).\n\nIf paths cannot be rewritten and versions cannot be upgraded, another alternative is to limit the URL length.",
-        "es": "Impacto:\n\nSe genera una expresi\u00f3n regular incorrecta cada vez que se tienen tres o m\u00e1s par\u00e1metros dentro de un \u00fanico segmento, separados por algo que no sea un punto (.). Por ejemplo, /:a-:b-:c o /:a-:b-:c-:d. La protecci\u00f3n contra retroceso a\u00f1adida en path-to-regexp@0.1.12 solo previene la ambig\u00fcedad para dos par\u00e1metros. Con tres o m\u00e1s, el 'lookahead' generado no bloquea los caracteres separadores individuales, por lo que los grupos de captura se superponen y causan un retroceso catastr\u00f3fico.\n\nParches:\n\nActualizar a path-to-regexp@0.1.13\n\nLos patrones de expresiones regulares personalizados en las definiciones de ruta (por ejemplo, /:a-:b([^-/]+)-:c([^-/]+)) no se ven afectados porque anulan el grupo de captura predeterminado.\n\nSoluciones provisionales:\n\nTodas las versiones pueden ser parcheadas proporcionando una expresi\u00f3n regular personalizada para los par\u00e1metros despu\u00e9s del primero en un \u00fanico segmento. Siempre y cuando la expresi\u00f3n regular personalizada no coincida con el texto anterior al par\u00e1metro, estar\u00e1 seguro. Por ejemplo, cambie /:a-:b-:c a /:a-:b([^-/]+)-:c([^-/]+).\n\nSi las rutas no pueden ser reescritas y las versiones no pueden ser actualizadas, otra alternativa es limitar la longitud de la URL."
-      },
-      "references": [
-        "https://blakeembrey.com/posts/2024-09-web-redos",
-        "https://cna.openjsf.org/security-advisories.html",
-        "https://github.com/advisories/GHSA-9wv6-86v2-598j"
-      ]
-    },
-    {
       "id": "nodejs-goof:CVE-2026-27904:minimatch:3.0.4",
       "cve": "CVE-2026-27904",
       "package": "minimatch",
@@ -9689,6 +9689,31 @@
         "https://github.com/patorjk/figlet.js/commit/cb2839d0e53aeafbd361e9587abc72e49e41cbb3",
         "https://github.com/patorjk/figlet.js/pull/169",
         "https://github.com/patorjk/figlet.js/security/advisories/GHSA-62ch-8vmq-8xm7"
+      ]
+    },
+    {
+      "id": "nodejs-goof:CVE-2026-102276:brace-expansion:1.1.11",
+      "cve": "CVE-2026-102276",
+      "package": "brace-expansion",
+      "ecosystem": "npm",
+      "installed_version": "1.1.11",
+      "fixed_version": "1.1.19",
+      "app": "nodejs-goof",
+      "cvss": 7.5,
+      "epss": 0.00491,
+      "in_kev": false,
+      "kev_date_added": null,
+      "priority_score": 19,
+      "priority_label": "low",
+      "summary": {
+        "en": "The brace-expansion library generates arbitrary strings containing a common prefix and suffix. Prior to 1.1.19, 2.1.5, 3.0.7, and 5.0.10, crafted brace patterns can exhaust the native stack in parseCommaParts because parseCommaParts recursively processes the remainder once per brace group and uses push.apply to pass every element of a very large comma-part array as a function argument. Patterns containing many comma-separated brace groups trigger the recursive path, while the large array triggers the argument-array path without deep recursion. These paths cause recursive and argument-array native stack exhaustion before max or maxLength can limit output, potentially terminating the Node.js process in a process-terminating denial of service. This issue is fixed in versions 1.1.19, 2.1.5, 3.0.7, and 5.0.10."
+      },
+      "references": [
+        "https://github.com/juliangruber/brace-expansion/commit/0bcbfc0a5928c3073d48f42999d1ce4fc1c42fbc",
+        "https://github.com/juliangruber/brace-expansion/commit/316359e6019c39b3254c8ba8e25dc586a480652c",
+        "https://github.com/juliangruber/brace-expansion/commit/5171e681c0922b7ae8bfaf9a331e309107be6edc",
+        "https://github.com/juliangruber/brace-expansion/commit/6735c94873ca570bcdd6a0690033bdd3126379d3",
+        "https://github.com/juliangruber/brace-expansion/security/advisories/GHSA-6j4f-fj2g-mc7p"
       ]
     },
     {
@@ -9741,28 +9766,32 @@
       ]
     },
     {
-      "id": "nodejs-goof:CVE-2026-102276:brace-expansion:1.1.11",
-      "cve": "CVE-2026-102276",
-      "package": "brace-expansion",
+      "id": "nodejs-goof:CVE-2026-125118:mongoose:4.2.4",
+      "cve": "CVE-2026-125118",
+      "package": "mongoose",
       "ecosystem": "npm",
-      "installed_version": "1.1.11",
-      "fixed_version": "1.1.19",
+      "installed_version": "4.2.4",
+      "fixed_version": "6.13.12",
       "app": "nodejs-goof",
-      "cvss": 7.5,
-      "epss": 0.00455,
+      "cvss": 6.5,
+      "epss": 0.00605,
       "in_kev": false,
       "kev_date_added": null,
-      "priority_score": 19,
+      "priority_score": 17,
       "priority_label": "low",
       "summary": {
-        "en": "The brace-expansion library generates arbitrary strings containing a common prefix and suffix. Prior to 1.1.19, 2.1.5, 3.0.7, and 5.0.10, crafted brace patterns can exhaust the native stack in parseCommaParts because parseCommaParts recursively processes the remainder once per brace group and uses push.apply to pass every element of a very large comma-part array as a function argument. Patterns containing many comma-separated brace groups trigger the recursive path, while the large array triggers the argument-array path without deep recursion. These paths cause recursive and argument-array native stack exhaustion before max or maxLength can limit output, potentially terminating the Node.js process in a process-terminating denial of service. This issue is fixed in versions 1.1.19, 2.1.5, 3.0.7, and 5.0.10."
+        "en": "Mongoose is a MongoDB object modeling tool designed to work in an asynchronous environment. Prior to 6.13.12, 7.8.13, 8.24.7, and 9.11.4, Schema.prototype.virtual() builds nested virtual paths without applying the special-property validation already used by Schema.path() and Schema.add(). An attacker who can influence virtual field names in dynamic schemas, content-management form builders, or schema-as-code systems can supply path segments such as __proto__, constructor, or prototype, causing the virtual-path reducer to write enumerable properties to Object.prototype or Function.prototype. The resulting prototype pollution can spoof inherited property checks such as authorization flags and can provide function-prototype gadget state to other server-side JavaScript code. This issue is fixed in versions 6.13.12, 7.8.13, 8.24.7, and 9.11.4."
       },
       "references": [
-        "https://github.com/juliangruber/brace-expansion/commit/0bcbfc0a5928c3073d48f42999d1ce4fc1c42fbc",
-        "https://github.com/juliangruber/brace-expansion/commit/316359e6019c39b3254c8ba8e25dc586a480652c",
-        "https://github.com/juliangruber/brace-expansion/commit/5171e681c0922b7ae8bfaf9a331e309107be6edc",
-        "https://github.com/juliangruber/brace-expansion/commit/6735c94873ca570bcdd6a0690033bdd3126379d3",
-        "https://github.com/juliangruber/brace-expansion/security/advisories/GHSA-6j4f-fj2g-mc7p"
+        "https://github.com/Automattic/mongoose/commit/318f7e09dd363a1dfddb8180878488dccd2796d1",
+        "https://github.com/Automattic/mongoose/commit/74df7769b5a8d89c4413b764029911ee915ea467",
+        "https://github.com/Automattic/mongoose/commit/7a2a6567abbb72c0430c8cc5b7942141844fecff",
+        "https://github.com/Automattic/mongoose/commit/fb467e6d33174293dc0360649f20ce68d99117a9",
+        "https://github.com/Automattic/mongoose/releases/tag/6.13.12",
+        "https://github.com/Automattic/mongoose/releases/tag/7.8.13",
+        "https://github.com/Automattic/mongoose/releases/tag/8.24.7",
+        "https://github.com/Automattic/mongoose/releases/tag/9.11.4",
+        "https://github.com/Automattic/mongoose/security/advisories/GHSA-6972-9mcm-vhwj"
       ]
     },
     {
@@ -10042,6 +10071,37 @@
       ]
     },
     {
+      "id": "nodejs-goof:CVE-2026-125116:mongoose:4.2.4",
+      "cve": "CVE-2026-125116",
+      "package": "mongoose",
+      "ecosystem": "npm",
+      "installed_version": "4.2.4",
+      "fixed_version": "6.13.12",
+      "app": "nodejs-goof",
+      "cvss": 4.8,
+      "epss": 0.00519,
+      "in_kev": false,
+      "kev_date_added": null,
+      "priority_score": 12,
+      "priority_label": "low",
+      "summary": {
+        "en": "Mongoose is a MongoDB object modeling tool designed to work in an asynchronous environment. Prior to 6.13.12, 7.8.13, 8.24.7, and 9.11.4, Mongoose uses attacker-controlled discriminator key values, including the default __t field, to index plain-object registries such as Model.discriminators and schema.discriminators without requiring an own property. Values such as constructor, toString, or hasOwnProperty can therefore resolve to inherited built-in functions instead of a registered discriminator, causing type confusion in model construction, document creation, hydration, query and update casting, embedded discriminators, and populate operations. In the bulkWrite() insertOne path with skipValidation enabled, a constructor value can cause a raw input object to be stored without schema casting or strict filtering, and a stored poisoned document can make every query that hydrates it fail until the document is removed. The weakness reads inherited properties but does not modify Object.prototype and is not prototype pollution. This issue is fixed in versions 6.13.12, 7.8.13, 8.24.7, and 9.11.4."
+      },
+      "references": [
+        "https://github.com/Automattic/mongoose/commit/0ecd8040d9b446f36535d79938c130c800f91766",
+        "https://github.com/Automattic/mongoose/commit/18afab75bea861f625b7c5b54635c84567ec566c",
+        "https://github.com/Automattic/mongoose/commit/390453c8ce1b36b6cfd1e63432a910da1f3d81d5",
+        "https://github.com/Automattic/mongoose/commit/8cee51beead554df1f3d05645edb439c69eb2a9b",
+        "https://github.com/Automattic/mongoose/commit/b26c43554233134ea978c5852babe13be858b2cf",
+        "https://github.com/Automattic/mongoose/commit/b68f90734b50cd22c89a669c8ca1469d7234b296",
+        "https://github.com/Automattic/mongoose/releases/tag/6.13.12",
+        "https://github.com/Automattic/mongoose/releases/tag/7.8.13",
+        "https://github.com/Automattic/mongoose/releases/tag/8.24.7",
+        "https://github.com/Automattic/mongoose/releases/tag/9.11.4",
+        "https://github.com/Automattic/mongoose/security/advisories/GHSA-wr5m-5jph-8m96"
+      ]
+    },
+    {
       "id": "nodejs-goof:CVE-2026-118664:decode-uri-component:0.2.0",
       "cve": "CVE-2026-118664",
       "package": "decode-uri-component",
@@ -10120,35 +10180,6 @@
         "https://access.redhat.com/security/cve/CVE-2026-33941",
         "https://bugzilla.redhat.com/show_bug.cgi?id=2452524",
         "https://security.access.redhat.com/data/csaf/v2/vex/2026/cve-2026-33941.json"
-      ]
-    },
-    {
-      "id": "nodejs-goof:CVE-2026-125118:mongoose:4.2.4",
-      "cve": "CVE-2026-125118",
-      "package": "mongoose",
-      "ecosystem": "npm",
-      "installed_version": "4.2.4",
-      "fixed_version": "6.13.12",
-      "app": "nodejs-goof",
-      "cvss": 6.5,
-      "epss": 0.004,
-      "in_kev": false,
-      "kev_date_added": null,
-      "priority_score": 17,
-      "priority_label": "low",
-      "summary": {
-        "en": "Mongoose is a MongoDB object modeling tool designed to work in an asynchronous environment. Prior to 6.13.12, 7.8.13, 8.24.7, and 9.11.4, Schema.prototype.virtual() builds nested virtual paths without applying the special-property validation already used by Schema.path() and Schema.add(). An attacker who can influence virtual field names in dynamic schemas, content-management form builders, or schema-as-code systems can supply path segments such as __proto__, constructor, or prototype, causing the virtual-path reducer to write enumerable properties to Object.prototype or Function.prototype. The resulting prototype pollution can spoof inherited property checks such as authorization flags and can provide function-prototype gadget state to other server-side JavaScript code. This issue is fixed in versions 6.13.12, 7.8.13, 8.24.7, and 9.11.4."
-      },
-      "references": [
-        "https://github.com/Automattic/mongoose/commit/318f7e09dd363a1dfddb8180878488dccd2796d1",
-        "https://github.com/Automattic/mongoose/commit/74df7769b5a8d89c4413b764029911ee915ea467",
-        "https://github.com/Automattic/mongoose/commit/7a2a6567abbb72c0430c8cc5b7942141844fecff",
-        "https://github.com/Automattic/mongoose/commit/fb467e6d33174293dc0360649f20ce68d99117a9",
-        "https://github.com/Automattic/mongoose/releases/tag/6.13.12",
-        "https://github.com/Automattic/mongoose/releases/tag/7.8.13",
-        "https://github.com/Automattic/mongoose/releases/tag/8.24.7",
-        "https://github.com/Automattic/mongoose/releases/tag/9.11.4",
-        "https://github.com/Automattic/mongoose/security/advisories/GHSA-6972-9mcm-vhwj"
       ]
     },
     {
@@ -10320,6 +10351,28 @@
       ]
     },
     {
+      "id": "nodejs-goof:CVE-2026-41907:uuid:3.3.2",
+      "cve": "CVE-2026-41907",
+      "package": "uuid",
+      "ecosystem": "npm",
+      "installed_version": "3.3.2",
+      "fixed_version": "11.1.1",
+      "app": "nodejs-goof",
+      "cvss": 7.5,
+      "epss": 0.00363,
+      "in_kev": false,
+      "kev_date_added": null,
+      "priority_score": 19,
+      "priority_label": "low",
+      "summary": {
+        "en": "uuid is for the creation of RFC9562 (formerly RFC4122) UUIDs. Prior to 14.0.0, v3, v5, and v6 accept external output buffers but do not reject out-of-range writes (small buf or large offset). This allows silent partial writes into caller-provided buffers. This vulnerability is fixed in 14.0.0.",
+        "es": "uuid es para la creaci\u00f3n de UUIDs RFC9562 (anteriormente RFC4122). Antes de la 14.0.0, v3, v5 y v6 aceptan b\u00faferes de salida externos pero no rechazan escrituras fuera de rango (b\u00fafer peque\u00f1o o desplazamiento grande). Esto permite escrituras parciales silenciosas en b\u00faferes proporcionados por el llamador. Esta vulnerabilidad est\u00e1 corregida en la 14.0.0."
+      },
+      "references": [
+        "https://github.com/uuidjs/uuid/security/advisories/GHSA-w5hq-g745-h8pq"
+      ]
+    },
+    {
       "id": "nodejs-goof:CVE-2026-82417:qs:2.4.2",
       "cve": "CVE-2026-82417",
       "package": "qs",
@@ -10454,28 +10507,6 @@
         "https://github.com/typeorm/typeorm/releases/tag/0.3.31",
         "https://github.com/typeorm/typeorm/releases/tag/1.1.0",
         "https://github.com/typeorm/typeorm/security/advisories/GHSA-2rp8-mm9q-fp49"
-      ]
-    },
-    {
-      "id": "nodejs-goof:CVE-2026-41907:uuid:3.3.2",
-      "cve": "CVE-2026-41907",
-      "package": "uuid",
-      "ecosystem": "npm",
-      "installed_version": "3.3.2",
-      "fixed_version": "11.1.1",
-      "app": "nodejs-goof",
-      "cvss": 7.5,
-      "epss": 0.0035,
-      "in_kev": false,
-      "kev_date_added": null,
-      "priority_score": 19,
-      "priority_label": "low",
-      "summary": {
-        "en": "uuid is for the creation of RFC9562 (formerly RFC4122) UUIDs. Prior to 14.0.0, v3, v5, and v6 accept external output buffers but do not reject out-of-range writes (small buf or large offset). This allows silent partial writes into caller-provided buffers. This vulnerability is fixed in 14.0.0.",
-        "es": "uuid es para la creaci\u00f3n de UUIDs RFC9562 (anteriormente RFC4122). Antes de la 14.0.0, v3, v5 y v6 aceptan b\u00faferes de salida externos pero no rechazan escrituras fuera de rango (b\u00fafer peque\u00f1o o desplazamiento grande). Esto permite escrituras parciales silenciosas en b\u00faferes proporcionados por el llamador. Esta vulnerabilidad est\u00e1 corregida en la 14.0.0."
-      },
-      "references": [
-        "https://github.com/uuidjs/uuid/security/advisories/GHSA-w5hq-g745-h8pq"
       ]
     },
     {
@@ -10644,37 +10675,6 @@
       "references": [
         "https://cna.openjsf.org/security-advisories.html",
         "https://github.com/expressjs/morgan/security/advisories/GHSA-4vj7-5mj6-jm8m"
-      ]
-    },
-    {
-      "id": "nodejs-goof:CVE-2026-125116:mongoose:4.2.4",
-      "cve": "CVE-2026-125116",
-      "package": "mongoose",
-      "ecosystem": "npm",
-      "installed_version": "4.2.4",
-      "fixed_version": "6.13.12",
-      "app": "nodejs-goof",
-      "cvss": 4.8,
-      "epss": 0.00339,
-      "in_kev": false,
-      "kev_date_added": null,
-      "priority_score": 12,
-      "priority_label": "low",
-      "summary": {
-        "en": "Mongoose is a MongoDB object modeling tool designed to work in an asynchronous environment. Prior to 6.13.12, 7.8.13, 8.24.7, and 9.11.4, Mongoose uses attacker-controlled discriminator key values, including the default __t field, to index plain-object registries such as Model.discriminators and schema.discriminators without requiring an own property. Values such as constructor, toString, or hasOwnProperty can therefore resolve to inherited built-in functions instead of a registered discriminator, causing type confusion in model construction, document creation, hydration, query and update casting, embedded discriminators, and populate operations. In the bulkWrite() insertOne path with skipValidation enabled, a constructor value can cause a raw input object to be stored without schema casting or strict filtering, and a stored poisoned document can make every query that hydrates it fail until the document is removed. The weakness reads inherited properties but does not modify Object.prototype and is not prototype pollution. This issue is fixed in versions 6.13.12, 7.8.13, 8.24.7, and 9.11.4."
-      },
-      "references": [
-        "https://github.com/Automattic/mongoose/commit/0ecd8040d9b446f36535d79938c130c800f91766",
-        "https://github.com/Automattic/mongoose/commit/18afab75bea861f625b7c5b54635c84567ec566c",
-        "https://github.com/Automattic/mongoose/commit/390453c8ce1b36b6cfd1e63432a910da1f3d81d5",
-        "https://github.com/Automattic/mongoose/commit/8cee51beead554df1f3d05645edb439c69eb2a9b",
-        "https://github.com/Automattic/mongoose/commit/b26c43554233134ea978c5852babe13be858b2cf",
-        "https://github.com/Automattic/mongoose/commit/b68f90734b50cd22c89a669c8ca1469d7234b296",
-        "https://github.com/Automattic/mongoose/releases/tag/6.13.12",
-        "https://github.com/Automattic/mongoose/releases/tag/7.8.13",
-        "https://github.com/Automattic/mongoose/releases/tag/8.24.7",
-        "https://github.com/Automattic/mongoose/releases/tag/9.11.4",
-        "https://github.com/Automattic/mongoose/security/advisories/GHSA-wr5m-5jph-8m96"
       ]
     },
     {
@@ -10903,7 +10903,7 @@
       "fixed_version": "2.8.0",
       "app": "vulnbeat",
       "cvss": 7.5,
-      "epss": 0.00335,
+      "epss": 0.0044,
       "in_kev": false,
       "kev_date_added": null,
       "priority_score": 19,
@@ -10915,6 +10915,31 @@
         "https://github.com/urllib3/urllib3/commit/cd770b059b543be29298ea5c52afb0b1b090f5ed",
         "https://github.com/urllib3/urllib3/releases/tag/2.8.0",
         "https://github.com/urllib3/urllib3/security/advisories/GHSA-vxq7-64xx-v4gw"
+      ]
+    },
+    {
+      "id": "vulnbeat:CVE-2026-97687:urllib3:2.7.0",
+      "cve": "CVE-2026-97687",
+      "package": "urllib3",
+      "ecosystem": "PyPI",
+      "installed_version": "2.7.0",
+      "fixed_version": "2.8.0",
+      "app": "vulnbeat",
+      "cvss": 8.1,
+      "epss": 0.00245,
+      "in_kev": false,
+      "kev_date_added": null,
+      "priority_score": 20,
+      "priority_label": "medium",
+      "summary": {
+        "en": "urllib3 is an HTTP client library for Python. From 1.26.0 until 2.8.0, the proxy_ssl_context, proxy_assert_hostname, proxy_assert_fingerprint, ssl_context, cert_reqs, verify_mode, use_forwarding_for_https=True, and CERT_NONE configuration paths fail to remain separated because target-server TLS settings are incorrectly applied to the HTTPS proxy connection. The trigger is that an application uses an HTTPS proxy and configures target-server TLS settings that must remain separate from the proxy TLS handshake, including HTTPS forwarding with target-specific identity or credentials. Applying cert_reqs=CERT_NONE can overwrite proxy_ssl_context.verify_mode in place, and the mutation persists so later connections reusing the same context may connect to the HTTPS proxy without certificate verification. The attack mechanism is that an attacker intercepts and impersonates the HTTPS proxy after the effective proxy policy accepts the attacker's certificate. The impact is that the attacker can observe or modify forwarded traffic or receive a target TLS client certificate, while CONNECT tunneling still preserves the separate end-to-end target TLS connection. This issue is fixed in version 2.8.0."
+      },
+      "references": [
+        "https://github.com/urllib3/urllib3/commit/07408cec79d1856d81bb42c74a904a24fdb9e465",
+        "https://github.com/urllib3/urllib3/commit/b6447295fff7b38fdffc67e0df9712d60cef3cc3",
+        "https://github.com/urllib3/urllib3/pull/5093",
+        "https://github.com/urllib3/urllib3/releases/tag/2.8.0",
+        "https://github.com/urllib3/urllib3/security/advisories/GHSA-8988-9cw3-xx77"
       ]
     },
     {
@@ -10939,40 +10964,9 @@
         "https://github.com/urllib3/urllib3/releases/tag/2.8.0",
         "https://github.com/urllib3/urllib3/security/advisories/GHSA-gh4c-6fx4-qh6g"
       ]
-    },
-    {
-      "id": "vulnbeat:CVE-2026-97687:urllib3:2.7.0",
-      "cve": "CVE-2026-97687",
-      "package": "urllib3",
-      "ecosystem": "PyPI",
-      "installed_version": "2.7.0",
-      "fixed_version": "2.8.0",
-      "app": "vulnbeat",
-      "cvss": 8.1,
-      "epss": 0.00206,
-      "in_kev": false,
-      "kev_date_added": null,
-      "priority_score": 20,
-      "priority_label": "medium",
-      "summary": {
-        "en": "urllib3 is an HTTP client library for Python. From 1.26.0 until 2.8.0, the proxy_ssl_context, proxy_assert_hostname, proxy_assert_fingerprint, ssl_context, cert_reqs, verify_mode, use_forwarding_for_https=True, and CERT_NONE configuration paths fail to remain separated because target-server TLS settings are incorrectly applied to the HTTPS proxy connection. The trigger is that an application uses an HTTPS proxy and configures target-server TLS settings that must remain separate from the proxy TLS handshake, including HTTPS forwarding with target-specific identity or credentials. Applying cert_reqs=CERT_NONE can overwrite proxy_ssl_context.verify_mode in place, and the mutation persists so later connections reusing the same context may connect to the HTTPS proxy without certificate verification. The attack mechanism is that an attacker intercepts and impersonates the HTTPS proxy after the effective proxy policy accepts the attacker's certificate. The impact is that the attacker can observe or modify forwarded traffic or receive a target TLS client certificate, while CONNECT tunneling still preserves the separate end-to-end target TLS connection. This issue is fixed in version 2.8.0."
-      },
-      "references": [
-        "https://github.com/urllib3/urllib3/commit/07408cec79d1856d81bb42c74a904a24fdb9e465",
-        "https://github.com/urllib3/urllib3/commit/b6447295fff7b38fdffc67e0df9712d60cef3cc3",
-        "https://github.com/urllib3/urllib3/pull/5093",
-        "https://github.com/urllib3/urllib3/releases/tag/2.8.0",
-        "https://github.com/urllib3/urllib3/security/advisories/GHSA-8988-9cw3-xx77"
-      ]
     }
   ],
   "history": [
-    {
-      "date": "2026-10-19",
-      "findings_total": 343,
-      "critical": 4,
-      "high": 3
-    },
     {
       "date": "2026-10-20",
       "findings_total": 343,
@@ -11143,6 +11137,12 @@
     },
     {
       "date": "2026-11-21",
+      "findings_total": 394,
+      "critical": 3,
+      "high": 3
+    },
+    {
+      "date": "2026-11-22",
       "findings_total": 394,
       "critical": 3,
       "high": 3

@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-11-22T14:21:28.174549+00:00",
+  "generated_at": "2026-11-23T17:44:04.399911+00:00",
   "sources": {
     "kev": {
       "fetched": true,
@@ -904,7 +904,7 @@
       "package": "django",
       "ecosystem": "PyPI",
       "installed_version": "4.2",
-      "fixed_version": "3.2.25",
+      "fixed_version": "4.2.11",
       "app": "pygoat",
       "cvss": 5.3,
       "epss": 0.01854,
@@ -938,7 +938,7 @@
       "package": "django",
       "ecosystem": "PyPI",
       "installed_version": "4.2",
-      "fixed_version": "4.2.11",
+      "fixed_version": "3.2.25",
       "app": "pygoat",
       "cvss": 5.3,
       "epss": 0.01854,
@@ -3736,7 +3736,7 @@
       "fixed_version": "2.14.0",
       "app": "pygoat",
       "cvss": 9.1,
-      "epss": 0.00236,
+      "epss": 0.00266,
       "in_kev": false,
       "kev_date_added": null,
       "priority_score": 23,
@@ -3782,7 +3782,7 @@
       "fixed_version": "2.15.0",
       "app": "pygoat",
       "cvss": 5.3,
-      "epss": 0.00413,
+      "epss": 0.00354,
       "in_kev": false,
       "kev_date_added": null,
       "priority_score": 14,
@@ -3794,30 +3794,6 @@
         "https://github.com/jpadilla/pyjwt/commit/5fde08a6cf906aa7698de2d6391d88b73006b17b",
         "https://github.com/jpadilla/pyjwt/releases/tag/2.15.0",
         "https://github.com/jpadilla/pyjwt/security/advisories/GHSA-42vr-xj54-vc7v"
-      ]
-    },
-    {
-      "id": "pygoat:CVE-2026-96636:pillow:12.1.0",
-      "cve": "CVE-2026-96636",
-      "package": "pillow",
-      "ecosystem": "PyPI",
-      "installed_version": "12.1.0",
-      "fixed_version": "13.0.0",
-      "app": "pygoat",
-      "cvss": 6.5,
-      "epss": 0.00364,
-      "in_kev": false,
-      "kev_date_added": null,
-      "priority_score": 17,
-      "priority_label": "low",
-      "summary": {
-        "en": "Pillow is a Python imaging library. Prior to 13.0.0, MpoImageFile.seek() and DcxImageFile.seek() reparse later MPO or DCX frames and replace self._size without rerunning Image._decompression_bomb_check(). A crafted multi-frame image can use a tiny first frame to pass Image.open() and then declare an over-limit later frame. Normal frame iteration through seek(), load(), or ImageSequence.Iterator can decode that frame and commit hundreds of megabytes or more, causing memory-exhaustion denial of service. This issue is fixed in version 13.0.0."
-      },
-      "references": [
-        "https://github.com/python-pillow/Pillow/commit/f1acfc54c53502948d0d14121872061df931db48",
-        "https://github.com/python-pillow/Pillow/pull/10011",
-        "https://github.com/python-pillow/Pillow/releases/tag/13.0.0",
-        "https://github.com/python-pillow/Pillow/security/advisories/GHSA-p8hx-v2p6-rp84"
       ]
     },
     {
@@ -3842,6 +3818,30 @@
         "https://github.com/python-pillow/Pillow/pull/10015",
         "https://github.com/python-pillow/Pillow/releases/tag/13.0.0",
         "https://github.com/python-pillow/Pillow/security/advisories/GHSA-24rc-8hj2-v98c"
+      ]
+    },
+    {
+      "id": "pygoat:CVE-2026-96636:pillow:12.1.0",
+      "cve": "CVE-2026-96636",
+      "package": "pillow",
+      "ecosystem": "PyPI",
+      "installed_version": "12.1.0",
+      "fixed_version": "13.0.0",
+      "app": "pygoat",
+      "cvss": 6.5,
+      "epss": 0.00364,
+      "in_kev": false,
+      "kev_date_added": null,
+      "priority_score": 17,
+      "priority_label": "low",
+      "summary": {
+        "en": "Pillow is a Python imaging library. Prior to 13.0.0, MpoImageFile.seek() and DcxImageFile.seek() reparse later MPO or DCX frames and replace self._size without rerunning Image._decompression_bomb_check(). A crafted multi-frame image can use a tiny first frame to pass Image.open() and then declare an over-limit later frame. Normal frame iteration through seek(), load(), or ImageSequence.Iterator can decode that frame and commit hundreds of megabytes or more, causing memory-exhaustion denial of service. This issue is fixed in version 13.0.0."
+      },
+      "references": [
+        "https://github.com/python-pillow/Pillow/commit/f1acfc54c53502948d0d14121872061df931db48",
+        "https://github.com/python-pillow/Pillow/pull/10011",
+        "https://github.com/python-pillow/Pillow/releases/tag/13.0.0",
+        "https://github.com/python-pillow/Pillow/security/advisories/GHSA-p8hx-v2p6-rp84"
       ]
     },
     {
@@ -4360,7 +4360,7 @@
       "fixed_version": "2.14.0",
       "app": "pygoat",
       "cvss": 4.4,
-      "epss": 0.00246,
+      "epss": 0.00212,
       "in_kev": false,
       "kev_date_added": null,
       "priority_score": 11,
@@ -4513,29 +4513,6 @@
       ]
     },
     {
-      "id": "pygoat:CVE-2026-27982:django-allauth:0.52.0",
-      "cve": "CVE-2026-27982",
-      "package": "django-allauth",
-      "ecosystem": "PyPI",
-      "installed_version": "0.52.0",
-      "fixed_version": "65.14.1",
-      "app": "pygoat",
-      "cvss": 6.1,
-      "epss": 0.00188,
-      "in_kev": false,
-      "kev_date_added": null,
-      "priority_score": 15,
-      "priority_label": "low",
-      "summary": {
-        "en": "An open redirect vulnerability exists in django-allauth versions prior to 65.14.1 when SAML IdP initiated SSO is enabled (it is disabled by default), which may allow an attacker to redirect users to an arbitrary external website via a crafted URL.",
-        "es": "Existe una vulnerabilidad de redirecci\u00f3n abierta en las versiones de django-allauth anteriores a la 65.14.1 cuando el SSO iniciado por el IdP de SAML est\u00e1 habilitado (est\u00e1 deshabilitado por defecto), lo que puede permitir a un atacante redirigir a los usuarios a un sitio web externo arbitrario a trav\u00e9s de una URL manipulada."
-      },
-      "references": [
-        "https://allauth.org/news/2026/02/django-allauth-65.14.1-released/",
-        "https://jvn.jp/en/jp/JVN23669411/"
-      ]
-    },
-    {
       "id": "pygoat:CVE-2025-65430:django-allauth:0.52.0",
       "cve": "CVE-2025-65430",
       "package": "django-allauth",
@@ -4577,6 +4554,29 @@
       },
       "references": [
         "https://allauth.org/news/2025/10/django-allauth-65.13.0-released/"
+      ]
+    },
+    {
+      "id": "pygoat:CVE-2026-27982:django-allauth:0.52.0",
+      "cve": "CVE-2026-27982",
+      "package": "django-allauth",
+      "ecosystem": "PyPI",
+      "installed_version": "0.52.0",
+      "fixed_version": "65.14.1",
+      "app": "pygoat",
+      "cvss": 6.1,
+      "epss": 0.00186,
+      "in_kev": false,
+      "kev_date_added": null,
+      "priority_score": 15,
+      "priority_label": "low",
+      "summary": {
+        "en": "An open redirect vulnerability exists in django-allauth versions prior to 65.14.1 when SAML IdP initiated SSO is enabled (it is disabled by default), which may allow an attacker to redirect users to an arbitrary external website via a crafted URL.",
+        "es": "Existe una vulnerabilidad de redirecci\u00f3n abierta en las versiones de django-allauth anteriores a la 65.14.1 cuando el SSO iniciado por el IdP de SAML est\u00e1 habilitado (est\u00e1 deshabilitado por defecto), lo que puede permitir a un atacante redirigir a los usuarios a un sitio web externo arbitrario a trav\u00e9s de una URL manipulada."
+      },
+      "references": [
+        "https://allauth.org/news/2026/02/django-allauth-65.14.1-released/",
+        "https://jvn.jp/en/jp/JVN23669411/"
       ]
     },
     {
@@ -5386,10 +5386,10 @@
       "fixed_version": "6.2.4",
       "app": "nodejs-goof",
       "cvss": 7.5,
-      "epss": 0.15695,
+      "epss": 0.20035,
       "in_kev": false,
       "kev_date_added": null,
-      "priority_score": 31,
+      "priority_score": 34,
       "priority_label": "medium",
       "summary": {
         "en": "qs before 6.10.3, as used in Express before 4.17.3 and other products, allows attackers to cause a Node process hang for an Express application because an __ proto__ key can be used. In many typical Express use cases, an unauthenticated remote attacker can place the attack payload in the query string of the URL that is used to visit the application, such as a[__proto__]=b&a[__proto__]&a[length]=100000000. The fix was backported to qs 6.9.7, 6.8.3, 6.7.3, 6.6.1, 6.5.3, 6.4.1, 6.3.3, and 6.2.4 (and therefore Express 4.17.3, which has \"deps: qs@6.9.7\" in its release description, is not vulnerable).",
@@ -5412,10 +5412,10 @@
       "fixed_version": "6.2.4",
       "app": "nodejs-goof",
       "cvss": 7.5,
-      "epss": 0.15695,
+      "epss": 0.20035,
       "in_kev": false,
       "kev_date_added": null,
-      "priority_score": 31,
+      "priority_score": 34,
       "priority_label": "medium",
       "summary": {
         "en": "qs before 6.10.3, as used in Express before 4.17.3 and other products, allows attackers to cause a Node process hang for an Express application because an __ proto__ key can be used. In many typical Express use cases, an unauthenticated remote attacker can place the attack payload in the query string of the URL that is used to visit the application, such as a[__proto__]=b&a[__proto__]&a[length]=100000000. The fix was backported to qs 6.9.7, 6.8.3, 6.7.3, 6.6.1, 6.5.3, 6.4.1, 6.3.3, and 6.2.4 (and therefore Express 4.17.3, which has \"deps: qs@6.9.7\" in its release description, is not vulnerable).",
@@ -5438,10 +5438,10 @@
       "fixed_version": "6.5.3",
       "app": "nodejs-goof",
       "cvss": 7.5,
-      "epss": 0.15695,
+      "epss": 0.20035,
       "in_kev": false,
       "kev_date_added": null,
-      "priority_score": 31,
+      "priority_score": 34,
       "priority_label": "medium",
       "summary": {
         "en": "qs before 6.10.3, as used in Express before 4.17.3 and other products, allows attackers to cause a Node process hang for an Express application because an __ proto__ key can be used. In many typical Express use cases, an unauthenticated remote attacker can place the attack payload in the query string of the URL that is used to visit the application, such as a[__proto__]=b&a[__proto__]&a[length]=100000000. The fix was backported to qs 6.9.7, 6.8.3, 6.7.3, 6.6.1, 6.5.3, 6.4.1, 6.3.3, and 6.2.4 (and therefore Express 4.17.3, which has \"deps: qs@6.9.7\" in its release description, is not vulnerable).",
@@ -5464,10 +5464,10 @@
       "fixed_version": "2.29.2",
       "app": "nodejs-goof",
       "cvss": 7.5,
-      "epss": 0.1384,
+      "epss": 0.05338,
       "in_kev": false,
       "kev_date_added": null,
-      "priority_score": 29,
+      "priority_score": 23,
       "priority_label": "medium",
       "summary": {
         "en": "Moment.js is a JavaScript date library for parsing, validating, manipulating, and formatting dates. A path traversal vulnerability impacts npm (server) users of Moment.js between versions 1.0.1 and 2.29.1, especially if a user-provided locale string is directly used to switch moment locale. This problem is patched in 2.29.2, and the patch can be applied to all affected versions. As a workaround, sanitize the user-provided locale name before passing it to Moment.js.",
@@ -7017,34 +7017,6 @@
       ]
     },
     {
-      "id": "nodejs-goof:CVE-2021-23362:hosted-git-info:2.6.0",
-      "cve": "CVE-2021-23362",
-      "package": "hosted-git-info",
-      "ecosystem": "npm",
-      "installed_version": "2.6.0",
-      "fixed_version": "2.8.9",
-      "app": "nodejs-goof",
-      "cvss": 5.3,
-      "epss": 0.03612,
-      "in_kev": false,
-      "kev_date_added": null,
-      "priority_score": 16,
-      "priority_label": "low",
-      "summary": {
-        "en": "The package hosted-git-info before 3.0.8 are vulnerable to Regular Expression Denial of Service (ReDoS) via regular expression shortcutMatch in the fromUrl function in index.js. The affected regular expression exhibits polynomial worst-case time complexity.",
-        "es": "El paquete hosted-git-info anterior a la versi\u00f3n 3.0.8 es vulnerable a la Denegaci\u00f3n de Servicio por Expresi\u00f3n Regular (ReDoS) a trav\u00e9s de la expresi\u00f3n regular shortcutMatch en la funci\u00f3n fromUrl en index.js. La expresi\u00f3n regular afectada muestra una complejidad de tiempo polin\u00f3mica en el peor de los casos"
-      },
-      "references": [
-        "https://cert-portal.siemens.com/productcert/pdf/ssa-389290.pdf",
-        "https://github.com/npm/hosted-git-info/commit/29adfe5ef789784c861b2cdeb15051ec2ba651a7",
-        "https://github.com/npm/hosted-git-info/commit/8d4b3697d79bcd89cdb36d1db165e3696c783a01",
-        "https://github.com/npm/hosted-git-info/commit/bede0dc38e1785e732bf0a48ba6f81a4a908eba3",
-        "https://github.com/npm/hosted-git-info/commits/v2",
-        "https://snyk.io/vuln/SNYK-JAVA-ORGWEBJARSNPM-1088356",
-        "https://snyk.io/vuln/SNYK-JS-HOSTEDGITINFO-1088355"
-      ]
-    },
-    {
       "id": "nodejs-goof:CVE-2026-33937:handlebars:4.0.11",
       "cve": "CVE-2026-33937",
       "package": "handlebars",
@@ -7053,7 +7025,7 @@
       "fixed_version": "4.7.9",
       "app": "nodejs-goof",
       "cvss": 9.8,
-      "epss": 0.0195,
+      "epss": 0.02084,
       "in_kev": false,
       "kev_date_added": null,
       "priority_score": 26,
@@ -7082,7 +7054,7 @@
       "fixed_version": "4.7.9",
       "app": "nodejs-goof",
       "cvss": 9.8,
-      "epss": 0.0195,
+      "epss": 0.02084,
       "in_kev": false,
       "kev_date_added": null,
       "priority_score": 26,
@@ -7100,6 +7072,34 @@
         "https://access.redhat.com/security/cve/CVE-2026-33937",
         "https://bugzilla.redhat.com/show_bug.cgi?id=2452523",
         "https://security.access.redhat.com/data/csaf/v2/vex/2026/cve-2026-33937.json"
+      ]
+    },
+    {
+      "id": "nodejs-goof:CVE-2021-23362:hosted-git-info:2.6.0",
+      "cve": "CVE-2021-23362",
+      "package": "hosted-git-info",
+      "ecosystem": "npm",
+      "installed_version": "2.6.0",
+      "fixed_version": "2.8.9",
+      "app": "nodejs-goof",
+      "cvss": 5.3,
+      "epss": 0.03612,
+      "in_kev": false,
+      "kev_date_added": null,
+      "priority_score": 16,
+      "priority_label": "low",
+      "summary": {
+        "en": "The package hosted-git-info before 3.0.8 are vulnerable to Regular Expression Denial of Service (ReDoS) via regular expression shortcutMatch in the fromUrl function in index.js. The affected regular expression exhibits polynomial worst-case time complexity.",
+        "es": "El paquete hosted-git-info anterior a la versi\u00f3n 3.0.8 es vulnerable a la Denegaci\u00f3n de Servicio por Expresi\u00f3n Regular (ReDoS) a trav\u00e9s de la expresi\u00f3n regular shortcutMatch en la funci\u00f3n fromUrl en index.js. La expresi\u00f3n regular afectada muestra una complejidad de tiempo polin\u00f3mica en el peor de los casos"
+      },
+      "references": [
+        "https://cert-portal.siemens.com/productcert/pdf/ssa-389290.pdf",
+        "https://github.com/npm/hosted-git-info/commit/29adfe5ef789784c861b2cdeb15051ec2ba651a7",
+        "https://github.com/npm/hosted-git-info/commit/8d4b3697d79bcd89cdb36d1db165e3696c783a01",
+        "https://github.com/npm/hosted-git-info/commit/bede0dc38e1785e732bf0a48ba6f81a4a908eba3",
+        "https://github.com/npm/hosted-git-info/commits/v2",
+        "https://snyk.io/vuln/SNYK-JAVA-ORGWEBJARSNPM-1088356",
+        "https://snyk.io/vuln/SNYK-JS-HOSTEDGITINFO-1088355"
       ]
     },
     {
@@ -7564,6 +7564,91 @@
         "https://github.com/ajv-validator/ajv/tags",
         "https://hackerone.com/bugs?subject=user&report_id=894259",
         "https://security.netapp.com/advisory/ntap-20240621-0007/"
+      ]
+    },
+    {
+      "id": "nodejs-goof:CVE-2026-12143:form-data:2.3.3",
+      "cve": "CVE-2026-12143",
+      "package": "form-data",
+      "ecosystem": "npm",
+      "installed_version": "2.3.3",
+      "fixed_version": "2.5.6",
+      "app": "nodejs-goof",
+      "cvss": 7.5,
+      "epss": 0.01524,
+      "in_kev": false,
+      "kev_date_added": null,
+      "priority_score": 20,
+      "priority_label": "medium",
+      "summary": {
+        "en": "form-data is a library for creating readable multipart/form-data streams. In versions through 4.0.5, the `field` argument to `FormData#append` and the `filename` option are concatenated verbatim into the `Content-Disposition` header without escaping carriage return (CR), line feed (LF), or double-quote (\") characters. An application that passes attacker-controlled data as a field name or filename (for example, an API gateway that turns JSON object keys into multipart field names) allows the attacker to terminate the header line and inject additional headers, or to smuggle entire additional multipart parts, into the request the application forwards to a backend. This can let the attacker add or override form fields (e.g. set `is_admin=true`) seen by the downstream parser. This is an instance of CWE-93 (CRLF injection). The fix escapes CR, LF, and `\"` as `%0D`, `%0A`, and `%22` in field names and filenames, matching the serialization browsers use per the WHATWG HTML multipart/form-data encoding algorithm. Exploitation requires the consuming application to use untrusted input as a field name or filename; applications that use only fixed/trusted field names are not affected. Fixed in 2.5.6, 3.0.5, and 4.0.6."
+      },
+      "references": [
+        "https://cwe.mitre.org/data/definitions/93.html",
+        "https://github.com/form-data/form-data/commit/64190db548c0179e37206858e39f27cf513e9435",
+        "https://github.com/form-data/form-data/commit/be3f3cf553978bac15a5182f1f3c3d2d38ccf229",
+        "https://github.com/form-data/form-data/commit/c7133499c2ee1b80c678e411244f4442bf902045",
+        "https://github.com/form-data/form-data/security/advisories/GHSA-hmw2-7cc7-3qxx",
+        "https://html.spec.whatwg.org/multipage/form-control-infrastructure.html#multipart-form-data",
+        "https://www.npmjs.com/package/form-data",
+        "https://access.redhat.com/errata/RHSA-2026:33155",
+        "https://access.redhat.com/errata/RHSA-2026:33160",
+        "https://access.redhat.com/errata/RHSA-2026:33163",
+        "https://access.redhat.com/errata/RHSA-2026:33173",
+        "https://access.redhat.com/errata/RHSA-2026:33183",
+        "https://access.redhat.com/errata/RHSA-2026:34342",
+        "https://access.redhat.com/errata/RHSA-2026:36319",
+        "https://access.redhat.com/errata/RHSA-2026:36625",
+        "https://access.redhat.com/errata/RHSA-2026:36754",
+        "https://access.redhat.com/errata/RHSA-2026:40262",
+        "https://access.redhat.com/errata/RHSA-2026:41031",
+        "https://access.redhat.com/errata/RHSA-2026:41066",
+        "https://access.redhat.com/errata/RHSA-2026:41928",
+        "https://access.redhat.com/errata/RHSA-2026:41929",
+        "https://access.redhat.com/errata/RHSA-2026:41951",
+        "https://access.redhat.com/errata/RHSA-2026:42146",
+        "https://access.redhat.com/errata/RHSA-2026:42796",
+        "https://access.redhat.com/errata/RHSA-2026:43052",
+        "https://access.redhat.com/errata/RHSA-2026:44263",
+        "https://access.redhat.com/errata/RHSA-2026:44267",
+        "https://access.redhat.com/errata/RHSA-2026:48124",
+        "https://access.redhat.com/errata/RHSA-2026:48151",
+        "https://access.redhat.com/errata/RHSA-2026:48693",
+        "https://access.redhat.com/errata/RHSA-2026:50300",
+        "https://access.redhat.com/errata/RHSA-2026:54770",
+        "https://access.redhat.com/errata/RHSA-2026:56338",
+        "https://access.redhat.com/errata/RHSA-2026:56366",
+        "https://access.redhat.com/errata/RHSA-2026:56431",
+        "https://access.redhat.com/errata/RHSA-2026:57013",
+        "https://access.redhat.com/errata/RHSA-2026:57545",
+        "https://access.redhat.com/errata/RHSA-2026:57590",
+        "https://access.redhat.com/errata/RHSA-2026:57801",
+        "https://access.redhat.com/errata/RHSA-2026:59136",
+        "https://access.redhat.com/errata/RHSA-2026:59153",
+        "https://access.redhat.com/errata/RHSA-2026:59155",
+        "https://access.redhat.com/errata/RHSA-2026:59556",
+        "https://access.redhat.com/errata/RHSA-2026:59557",
+        "https://access.redhat.com/errata/RHSA-2026:59558",
+        "https://access.redhat.com/errata/RHSA-2026:59559",
+        "https://access.redhat.com/errata/RHSA-2026:59579",
+        "https://access.redhat.com/errata/RHSA-2026:60387",
+        "https://access.redhat.com/errata/RHSA-2026:60388",
+        "https://access.redhat.com/errata/RHSA-2026:60389",
+        "https://access.redhat.com/errata/RHSA-2026:60390",
+        "https://access.redhat.com/errata/RHSA-2026:60391",
+        "https://access.redhat.com/errata/RHSA-2026:60446",
+        "https://access.redhat.com/errata/RHSA-2026:60477",
+        "https://access.redhat.com/errata/RHSA-2026:60520",
+        "https://access.redhat.com/errata/RHSA-2026:62260",
+        "https://access.redhat.com/errata/RHSA-2026:63047",
+        "https://access.redhat.com/errata/RHSA-2026:63355",
+        "https://access.redhat.com/errata/RHSA-2026:63373",
+        "https://access.redhat.com/errata/RHSA-2026:66003",
+        "https://access.redhat.com/errata/RHSA-2026:66488",
+        "https://access.redhat.com/errata/RHSA-2026:66545",
+        "https://access.redhat.com/security/cve/CVE-2026-12143",
+        "https://bugzilla.redhat.com/show_bug.cgi?id=2488480",
+        "https://security.access.redhat.com/data/csaf/v2/vex/2026/cve-2026-12143.json"
       ]
     },
     {
@@ -8439,6 +8524,29 @@
       ]
     },
     {
+      "id": "nodejs-goof:CVE-2024-45590:body-parser:1.9.0",
+      "cve": "CVE-2024-45590",
+      "package": "body-parser",
+      "ecosystem": "npm",
+      "installed_version": "1.9.0",
+      "fixed_version": "1.20.3",
+      "app": "nodejs-goof",
+      "cvss": 7.5,
+      "epss": 0.00956,
+      "in_kev": false,
+      "kev_date_added": null,
+      "priority_score": 19,
+      "priority_label": "low",
+      "summary": {
+        "en": "body-parser is Node.js body parsing middleware. body-parser <1.20.3 is vulnerable to denial of service when url encoding is enabled. A malicious actor using a specially crafted payload could flood the server with a large number of requests, resulting in denial of service. This issue is patched in 1.20.3.",
+        "es": "body-parser es un middleware de an\u00e1lisis de cuerpo de Node.js. body-parser en versiones anteriores a la 1.20.3 es vulnerable a la denegaci\u00f3n de servicio cuando la codificaci\u00f3n de URL est\u00e1 habilitada. Un actor malintencionado que utilice un payload especialmente manipulado podr\u00eda inundar el servidor con una gran cantidad de solicitudes, lo que provocar\u00eda una denegaci\u00f3n de servicio. Este problema se solucion\u00f3 en la versi\u00f3n 1.20.3."
+      },
+      "references": [
+        "https://github.com/expressjs/body-parser/commit/b2695c4450f06ba3b0ccf48d872a229bb41c9bce",
+        "https://github.com/expressjs/body-parser/security/advisories/GHSA-qwcr-r2fm-qrc7"
+      ]
+    },
+    {
       "id": "nodejs-goof:CVE-2026-106446:handlebars:4.0.11",
       "cve": "CVE-2026-106446",
       "package": "handlebars",
@@ -8715,26 +8823,29 @@
       ]
     },
     {
-      "id": "nodejs-goof:CVE-2024-45590:body-parser:1.9.0",
-      "cve": "CVE-2024-45590",
-      "package": "body-parser",
+      "id": "nodejs-goof:CVE-2025-12758:validator:13.5.2",
+      "cve": "CVE-2025-12758",
+      "package": "validator",
       "ecosystem": "npm",
-      "installed_version": "1.9.0",
-      "fixed_version": "1.20.3",
+      "installed_version": "13.5.2",
+      "fixed_version": "13.15.22",
       "app": "nodejs-goof",
       "cvss": 7.5,
-      "epss": 0.00824,
+      "epss": 0.00836,
       "in_kev": false,
       "kev_date_added": null,
       "priority_score": 19,
       "priority_label": "low",
       "summary": {
-        "en": "body-parser is Node.js body parsing middleware. body-parser <1.20.3 is vulnerable to denial of service when url encoding is enabled. A malicious actor using a specially crafted payload could flood the server with a large number of requests, resulting in denial of service. This issue is patched in 1.20.3.",
-        "es": "body-parser es un middleware de an\u00e1lisis de cuerpo de Node.js. body-parser en versiones anteriores a la 1.20.3 es vulnerable a la denegaci\u00f3n de servicio cuando la codificaci\u00f3n de URL est\u00e1 habilitada. Un actor malintencionado que utilice un payload especialmente manipulado podr\u00eda inundar el servidor con una gran cantidad de solicitudes, lo que provocar\u00eda una denegaci\u00f3n de servicio. Este problema se solucion\u00f3 en la versi\u00f3n 1.20.3."
+        "en": "Versions of the package validator before 13.15.22 are vulnerable to Incomplete Filtering of One or More Instances of Special Elements in the isLength() function that does not take into account Unicode variation selectors (\\uFE0F, \\uFE0E) appearing in a sequence which lead to improper string length calculation. This can lead to an application using isLength for input validation accepting strings significantly longer than intended, resulting in issues like data truncation in databases, buffer overflows in other system components, or denial-of-service.",
+        "es": "Versiones del paquete validador anteriores a la 13.15.22 son vulnerables a un Filtrado Incompleto de Una o M\u00e1s Instancias de Elementos Especiales en la funci\u00f3n isLength() que no tiene en cuenta los selectores de variaci\u00f3n Unicode (\\uFE0F, \\uFE0E) que aparecen en una secuencia, lo que lleva a un c\u00e1lculo incorrecto de la longitud de la cadena. Esto puede llevar a que una aplicaci\u00f3n que utiliza isLength para la validaci\u00f3n de entrada acepte cadenas significativamente m\u00e1s largas de lo previsto, lo que resulta en problemas como truncamiento de datos en bases de datos, desbordamientos de b\u00fafer en otros componentes del sistema o denegaci\u00f3n de servicio."
       },
       "references": [
-        "https://github.com/expressjs/body-parser/commit/b2695c4450f06ba3b0ccf48d872a229bb41c9bce",
-        "https://github.com/expressjs/body-parser/security/advisories/GHSA-qwcr-r2fm-qrc7"
+        "https://gist.github.com/koral--/ad31208b25b9e3d1e2e35f1d4d72572e",
+        "https://github.com/validatorjs/validator.js/pull/2616",
+        "https://security.snyk.io/vuln/SNYK-JAVA-ORGWEBJARSNPM-14152011",
+        "https://security.snyk.io/vuln/SNYK-JS-VALIDATOR-13653476",
+        "http://seclists.org/fulldisclosure/2026/Jan/27"
       ]
     },
     {
@@ -8761,30 +8872,6 @@
       ]
     },
     {
-      "id": "nodejs-goof:CVE-2024-52798:path-to-regexp:0.1.3",
-      "cve": "CVE-2024-52798",
-      "package": "path-to-regexp",
-      "ecosystem": "npm",
-      "installed_version": "0.1.3",
-      "fixed_version": "0.1.12",
-      "app": "nodejs-goof",
-      "cvss": null,
-      "epss": 0.00787,
-      "in_kev": false,
-      "kev_date_added": null,
-      "priority_score": 1,
-      "priority_label": "low",
-      "summary": {
-        "en": "path-to-regexp turns path strings into a regular expressions. In certain cases, path-to-regexp will output a regular expression that can be exploited to cause poor performance. The regular expression that is vulnerable to backtracking can be generated in the 0.1.x release of path-to-regexp. Upgrade to 0.1.12. This vulnerability exists because of an incomplete fix for CVE-2024-45296.",
-        "es": "path-to-regexp convierte las cadenas de ruta en expresiones regulares. En ciertos casos, path-to-regexp generar\u00e1 una expresi\u00f3n regular que puede aprovecharse para provocar un rendimiento deficiente. La expresi\u00f3n regular vulnerable al retroceso se puede generar en la versi\u00f3n 0.1.x de path-to-regexp. Actualice a la versi\u00f3n 0.1.12. Esta vulnerabilidad existe debido a una correcci\u00f3n incompleta de CVE-2024-45296."
-      },
-      "references": [
-        "https://github.com/pillarjs/path-to-regexp/commit/f01c26a013b1889f0c217c643964513acf17f6a4",
-        "https://github.com/pillarjs/path-to-regexp/security/advisories/GHSA-rhx6-c78j-4q9w",
-        "https://security.netapp.com/advisory/ntap-20250124-0002/"
-      ]
-    },
-    {
       "id": "nodejs-goof:CVE-2026-33938:handlebars:4.0.11",
       "cve": "CVE-2026-33938",
       "package": "handlebars",
@@ -8793,7 +8880,7 @@
       "fixed_version": "4.7.9",
       "app": "nodejs-goof",
       "cvss": 8.1,
-      "epss": 0.00737,
+      "epss": 0.00788,
       "in_kev": false,
       "kev_date_added": null,
       "priority_score": 21,
@@ -8822,7 +8909,7 @@
       "fixed_version": "4.7.9",
       "app": "nodejs-goof",
       "cvss": 8.1,
-      "epss": 0.00737,
+      "epss": 0.00788,
       "in_kev": false,
       "kev_date_added": null,
       "priority_score": 21,
@@ -8851,7 +8938,7 @@
       "fixed_version": "4.7.9",
       "app": "nodejs-goof",
       "cvss": 8.1,
-      "epss": 0.00731,
+      "epss": 0.00782,
       "in_kev": false,
       "kev_date_added": null,
       "priority_score": 21,
@@ -8880,7 +8967,7 @@
       "fixed_version": "4.7.9",
       "app": "nodejs-goof",
       "cvss": 8.1,
-      "epss": 0.00731,
+      "epss": 0.00782,
       "in_kev": false,
       "kev_date_added": null,
       "priority_score": 21,
@@ -8898,6 +8985,54 @@
         "https://access.redhat.com/security/cve/CVE-2026-33940",
         "https://bugzilla.redhat.com/show_bug.cgi?id=2452521",
         "https://security.access.redhat.com/data/csaf/v2/vex/2026/cve-2026-33940.json"
+      ]
+    },
+    {
+      "id": "nodejs-goof:CVE-2024-52798:path-to-regexp:0.1.3",
+      "cve": "CVE-2024-52798",
+      "package": "path-to-regexp",
+      "ecosystem": "npm",
+      "installed_version": "0.1.3",
+      "fixed_version": "0.1.12",
+      "app": "nodejs-goof",
+      "cvss": null,
+      "epss": 0.00787,
+      "in_kev": false,
+      "kev_date_added": null,
+      "priority_score": 1,
+      "priority_label": "low",
+      "summary": {
+        "en": "path-to-regexp turns path strings into a regular expressions. In certain cases, path-to-regexp will output a regular expression that can be exploited to cause poor performance. The regular expression that is vulnerable to backtracking can be generated in the 0.1.x release of path-to-regexp. Upgrade to 0.1.12. This vulnerability exists because of an incomplete fix for CVE-2024-45296.",
+        "es": "path-to-regexp convierte las cadenas de ruta en expresiones regulares. En ciertos casos, path-to-regexp generar\u00e1 una expresi\u00f3n regular que puede aprovecharse para provocar un rendimiento deficiente. La expresi\u00f3n regular vulnerable al retroceso se puede generar en la versi\u00f3n 0.1.x de path-to-regexp. Actualice a la versi\u00f3n 0.1.12. Esta vulnerabilidad existe debido a una correcci\u00f3n incompleta de CVE-2024-45296."
+      },
+      "references": [
+        "https://github.com/pillarjs/path-to-regexp/commit/f01c26a013b1889f0c217c643964513acf17f6a4",
+        "https://github.com/pillarjs/path-to-regexp/security/advisories/GHSA-rhx6-c78j-4q9w",
+        "https://security.netapp.com/advisory/ntap-20250124-0002/"
+      ]
+    },
+    {
+      "id": "nodejs-goof:CVE-2026-4867:path-to-regexp:0.1.3",
+      "cve": "CVE-2026-4867",
+      "package": "path-to-regexp",
+      "ecosystem": "npm",
+      "installed_version": "0.1.3",
+      "fixed_version": "0.1.13",
+      "app": "nodejs-goof",
+      "cvss": 7.5,
+      "epss": 0.00778,
+      "in_kev": false,
+      "kev_date_added": null,
+      "priority_score": 19,
+      "priority_label": "low",
+      "summary": {
+        "en": "Impact:\n\nA bad regular expression is generated any time you have three or more parameters within a single segment, separated by something that is not a period (.). For example, /:a-:b-:c or /:a-:b-:c-:d. The backtrack protection added in path-to-regexp@0.1.12 only prevents ambiguity for two parameters. With three or more, the generated lookahead does not block single separator characters, so capture groups overlap and cause catastrophic backtracking.\n\nPatches:\n\nUpgrade to path-to-regexp@0.1.13\n\nCustom regex patterns in route definitions (e.g., /:a-:b([^-/]+)-:c([^-/]+)) are not affected because they override the default capture group.\n\nWorkarounds:\n\nAll versions can be patched by providing a custom regular expression for parameters after the first in a single segment. As long as the custom regular expression does not match the text before the parameter, you will be safe. For example, change /:a-:b-:c to /:a-:b([^-/]+)-:c([^-/]+).\n\nIf paths cannot be rewritten and versions cannot be upgraded, another alternative is to limit the URL length.",
+        "es": "Impacto:\n\nSe genera una expresi\u00f3n regular incorrecta cada vez que se tienen tres o m\u00e1s par\u00e1metros dentro de un \u00fanico segmento, separados por algo que no sea un punto (.). Por ejemplo, /:a-:b-:c o /:a-:b-:c-:d. La protecci\u00f3n contra retroceso a\u00f1adida en path-to-regexp@0.1.12 solo previene la ambig\u00fcedad para dos par\u00e1metros. Con tres o m\u00e1s, el 'lookahead' generado no bloquea los caracteres separadores individuales, por lo que los grupos de captura se superponen y causan un retroceso catastr\u00f3fico.\n\nParches:\n\nActualizar a path-to-regexp@0.1.13\n\nLos patrones de expresiones regulares personalizados en las definiciones de ruta (por ejemplo, /:a-:b([^-/]+)-:c([^-/]+)) no se ven afectados porque anulan el grupo de captura predeterminado.\n\nSoluciones provisionales:\n\nTodas las versiones pueden ser parcheadas proporcionando una expresi\u00f3n regular personalizada para los par\u00e1metros despu\u00e9s del primero en un \u00fanico segmento. Siempre y cuando la expresi\u00f3n regular personalizada no coincida con el texto anterior al par\u00e1metro, estar\u00e1 seguro. Por ejemplo, cambie /:a-:b-:c a /:a-:b([^-/]+)-:c([^-/]+).\n\nSi las rutas no pueden ser reescritas y las versiones no pueden ser actualizadas, otra alternativa es limitar la longitud de la URL."
+      },
+      "references": [
+        "https://blakeembrey.com/posts/2024-09-web-redos",
+        "https://cna.openjsf.org/security-advisories.html",
+        "https://github.com/advisories/GHSA-9wv6-86v2-598j"
       ]
     },
     {
@@ -9106,115 +9241,6 @@
       ]
     },
     {
-      "id": "nodejs-goof:CVE-2026-12143:form-data:2.3.3",
-      "cve": "CVE-2026-12143",
-      "package": "form-data",
-      "ecosystem": "npm",
-      "installed_version": "2.3.3",
-      "fixed_version": "2.5.6",
-      "app": "nodejs-goof",
-      "cvss": 7.5,
-      "epss": 0.00669,
-      "in_kev": false,
-      "kev_date_added": null,
-      "priority_score": 19,
-      "priority_label": "low",
-      "summary": {
-        "en": "form-data is a library for creating readable multipart/form-data streams. In versions through 4.0.5, the `field` argument to `FormData#append` and the `filename` option are concatenated verbatim into the `Content-Disposition` header without escaping carriage return (CR), line feed (LF), or double-quote (\") characters. An application that passes attacker-controlled data as a field name or filename (for example, an API gateway that turns JSON object keys into multipart field names) allows the attacker to terminate the header line and inject additional headers, or to smuggle entire additional multipart parts, into the request the application forwards to a backend. This can let the attacker add or override form fields (e.g. set `is_admin=true`) seen by the downstream parser. This is an instance of CWE-93 (CRLF injection). The fix escapes CR, LF, and `\"` as `%0D`, `%0A`, and `%22` in field names and filenames, matching the serialization browsers use per the WHATWG HTML multipart/form-data encoding algorithm. Exploitation requires the consuming application to use untrusted input as a field name or filename; applications that use only fixed/trusted field names are not affected. Fixed in 2.5.6, 3.0.5, and 4.0.6."
-      },
-      "references": [
-        "https://cwe.mitre.org/data/definitions/93.html",
-        "https://github.com/form-data/form-data/commit/64190db548c0179e37206858e39f27cf513e9435",
-        "https://github.com/form-data/form-data/commit/be3f3cf553978bac15a5182f1f3c3d2d38ccf229",
-        "https://github.com/form-data/form-data/commit/c7133499c2ee1b80c678e411244f4442bf902045",
-        "https://github.com/form-data/form-data/security/advisories/GHSA-hmw2-7cc7-3qxx",
-        "https://html.spec.whatwg.org/multipage/form-control-infrastructure.html#multipart-form-data",
-        "https://www.npmjs.com/package/form-data",
-        "https://access.redhat.com/errata/RHSA-2026:33155",
-        "https://access.redhat.com/errata/RHSA-2026:33160",
-        "https://access.redhat.com/errata/RHSA-2026:33163",
-        "https://access.redhat.com/errata/RHSA-2026:33173",
-        "https://access.redhat.com/errata/RHSA-2026:33183",
-        "https://access.redhat.com/errata/RHSA-2026:34342",
-        "https://access.redhat.com/errata/RHSA-2026:36319",
-        "https://access.redhat.com/errata/RHSA-2026:36625",
-        "https://access.redhat.com/errata/RHSA-2026:36754",
-        "https://access.redhat.com/errata/RHSA-2026:40262",
-        "https://access.redhat.com/errata/RHSA-2026:41031",
-        "https://access.redhat.com/errata/RHSA-2026:41066",
-        "https://access.redhat.com/errata/RHSA-2026:41928",
-        "https://access.redhat.com/errata/RHSA-2026:41929",
-        "https://access.redhat.com/errata/RHSA-2026:41951",
-        "https://access.redhat.com/errata/RHSA-2026:42146",
-        "https://access.redhat.com/errata/RHSA-2026:42796",
-        "https://access.redhat.com/errata/RHSA-2026:43052",
-        "https://access.redhat.com/errata/RHSA-2026:44263",
-        "https://access.redhat.com/errata/RHSA-2026:44267",
-        "https://access.redhat.com/errata/RHSA-2026:48124",
-        "https://access.redhat.com/errata/RHSA-2026:48151",
-        "https://access.redhat.com/errata/RHSA-2026:48693",
-        "https://access.redhat.com/errata/RHSA-2026:50300",
-        "https://access.redhat.com/errata/RHSA-2026:54770",
-        "https://access.redhat.com/errata/RHSA-2026:56338",
-        "https://access.redhat.com/errata/RHSA-2026:56366",
-        "https://access.redhat.com/errata/RHSA-2026:56431",
-        "https://access.redhat.com/errata/RHSA-2026:57013",
-        "https://access.redhat.com/errata/RHSA-2026:57545",
-        "https://access.redhat.com/errata/RHSA-2026:57590",
-        "https://access.redhat.com/errata/RHSA-2026:57801",
-        "https://access.redhat.com/errata/RHSA-2026:59136",
-        "https://access.redhat.com/errata/RHSA-2026:59153",
-        "https://access.redhat.com/errata/RHSA-2026:59155",
-        "https://access.redhat.com/errata/RHSA-2026:59556",
-        "https://access.redhat.com/errata/RHSA-2026:59557",
-        "https://access.redhat.com/errata/RHSA-2026:59558",
-        "https://access.redhat.com/errata/RHSA-2026:59559",
-        "https://access.redhat.com/errata/RHSA-2026:59579",
-        "https://access.redhat.com/errata/RHSA-2026:60387",
-        "https://access.redhat.com/errata/RHSA-2026:60388",
-        "https://access.redhat.com/errata/RHSA-2026:60389",
-        "https://access.redhat.com/errata/RHSA-2026:60390",
-        "https://access.redhat.com/errata/RHSA-2026:60391",
-        "https://access.redhat.com/errata/RHSA-2026:60446",
-        "https://access.redhat.com/errata/RHSA-2026:60477",
-        "https://access.redhat.com/errata/RHSA-2026:60520",
-        "https://access.redhat.com/errata/RHSA-2026:62260",
-        "https://access.redhat.com/errata/RHSA-2026:63047",
-        "https://access.redhat.com/errata/RHSA-2026:63355",
-        "https://access.redhat.com/errata/RHSA-2026:63373",
-        "https://access.redhat.com/errata/RHSA-2026:66003",
-        "https://access.redhat.com/errata/RHSA-2026:66488",
-        "https://access.redhat.com/errata/RHSA-2026:66545",
-        "https://access.redhat.com/security/cve/CVE-2026-12143",
-        "https://bugzilla.redhat.com/show_bug.cgi?id=2488480",
-        "https://security.access.redhat.com/data/csaf/v2/vex/2026/cve-2026-12143.json"
-      ]
-    },
-    {
-      "id": "nodejs-goof:CVE-2026-14257:brace-expansion:1.1.11",
-      "cve": "CVE-2026-14257",
-      "package": "brace-expansion",
-      "ecosystem": "npm",
-      "installed_version": "1.1.11",
-      "fixed_version": "1.1.17",
-      "app": "nodejs-goof",
-      "cvss": 7.5,
-      "epss": 0.00643,
-      "in_kev": false,
-      "kev_date_added": null,
-      "priority_score": 19,
-      "priority_label": "low",
-      "summary": {
-        "en": "brace-expansion through 5.0.7 is vulnerable to denial of service via memory exhaustion. The expand() function limits the number of results with a max option (default 100,000) but does not bound the length of each result string. By chaining multiple brace groups, an attacker keeps the result count under the limit while making each result progressively longer, so total memory scales with both count and string length until the process hits a fatal, uncatchable out-of-memory error. About 7.5 KB of input ('{a,b}'.repeat(1500)) crashes a default Node.js process. Any application that passes attacker-influenced strings to brace-expansion.expand() - directly or transitively via minimatch / glob brace patterns - can be crashed by a small request. Fixed in 5.0.8 by adding a maxLength option (default 4,000,000) that bounds accumulated output and intermediate arrays.",
-        "es": "brace-expansion hasta la 5.0.7 es vulnerable a denegaci\u00f3n de servicio por agotamiento de memoria. La funci\u00f3n expand() limita el n\u00famero de resultados con una opci\u00f3n max (predeterminado 100.000) pero no limita la longitud de cada cadena de resultado. Al encadenar m\u00faltiples grupos de llaves, un atacante mantiene el recuento de resultados por debajo del l\u00edmite mientras hace que cada resultado sea progresivamente m\u00e1s largo, por lo que la memoria total escala tanto con el recuento como con la longitud de la cadena hasta que el proceso alcanza un error fatal e inatrapable de falta de memoria. Aproximadamente 7,5 KB de entrada (\u2019{a,b}\u2019.repeat(1500)) bloquea un proceso predeterminado de Node.js. Cualquier aplicaci\u00f3n que pase cadenas influenciadas por el atacante a brace-expansion.expand() - directa o transitivamente a trav\u00e9s de patrones de llaves de minimatch / glob - puede ser bloqueada por una peque\u00f1a solicitud. Solucionado en la 5.0.8 al a\u00f1adir una opci\u00f3n maxLength (predeterminado 4.000.000) que limita la salida acumulada y los arrays intermedios."
-      },
-      "references": [
-        "https://github.com/juliangruber/brace-expansion",
-        "https://github.com/juliangruber/brace-expansion/commit/a1bd33999ea75262c4749fff3bbb0d1372bd07b5",
-        "https://www.npmjs.com/package/brace-expansion"
-      ]
-    },
-    {
       "id": "nodejs-goof:CVE-2026-33939:handlebars:4.0.11",
       "cve": "CVE-2026-33939",
       "package": "handlebars",
@@ -9223,7 +9249,7 @@
       "fixed_version": "4.7.9",
       "app": "nodejs-goof",
       "cvss": 7.5,
-      "epss": 0.00641,
+      "epss": 0.00707,
       "in_kev": false,
       "kev_date_added": null,
       "priority_score": 19,
@@ -9252,7 +9278,7 @@
       "fixed_version": "4.7.9",
       "app": "nodejs-goof",
       "cvss": 7.5,
-      "epss": 0.00641,
+      "epss": 0.00707,
       "in_kev": false,
       "kev_date_added": null,
       "priority_score": 19,
@@ -9270,6 +9296,30 @@
         "https://access.redhat.com/security/cve/CVE-2026-33939",
         "https://bugzilla.redhat.com/show_bug.cgi?id=2452508",
         "https://security.access.redhat.com/data/csaf/v2/vex/2026/cve-2026-33939.json"
+      ]
+    },
+    {
+      "id": "nodejs-goof:CVE-2026-14257:brace-expansion:1.1.11",
+      "cve": "CVE-2026-14257",
+      "package": "brace-expansion",
+      "ecosystem": "npm",
+      "installed_version": "1.1.11",
+      "fixed_version": "1.1.17",
+      "app": "nodejs-goof",
+      "cvss": 7.5,
+      "epss": 0.00643,
+      "in_kev": false,
+      "kev_date_added": null,
+      "priority_score": 19,
+      "priority_label": "low",
+      "summary": {
+        "en": "brace-expansion through 5.0.7 is vulnerable to denial of service via memory exhaustion. The expand() function limits the number of results with a max option (default 100,000) but does not bound the length of each result string. By chaining multiple brace groups, an attacker keeps the result count under the limit while making each result progressively longer, so total memory scales with both count and string length until the process hits a fatal, uncatchable out-of-memory error. About 7.5 KB of input ('{a,b}'.repeat(1500)) crashes a default Node.js process. Any application that passes attacker-influenced strings to brace-expansion.expand() - directly or transitively via minimatch / glob brace patterns - can be crashed by a small request. Fixed in 5.0.8 by adding a maxLength option (default 4,000,000) that bounds accumulated output and intermediate arrays.",
+        "es": "brace-expansion hasta la 5.0.7 es vulnerable a denegaci\u00f3n de servicio por agotamiento de memoria. La funci\u00f3n expand() limita el n\u00famero de resultados con una opci\u00f3n max (predeterminado 100.000) pero no limita la longitud de cada cadena de resultado. Al encadenar m\u00faltiples grupos de llaves, un atacante mantiene el recuento de resultados por debajo del l\u00edmite mientras hace que cada resultado sea progresivamente m\u00e1s largo, por lo que la memoria total escala tanto con el recuento como con la longitud de la cadena hasta que el proceso alcanza un error fatal e inatrapable de falta de memoria. Aproximadamente 7,5 KB de entrada (\u2019{a,b}\u2019.repeat(1500)) bloquea un proceso predeterminado de Node.js. Cualquier aplicaci\u00f3n que pase cadenas influenciadas por el atacante a brace-expansion.expand() - directa o transitivamente a trav\u00e9s de patrones de llaves de minimatch / glob - puede ser bloqueada por una peque\u00f1a solicitud. Solucionado en la 5.0.8 al a\u00f1adir una opci\u00f3n maxLength (predeterminado 4.000.000) que limita la salida acumulada y los arrays intermedios."
+      },
+      "references": [
+        "https://github.com/juliangruber/brace-expansion",
+        "https://github.com/juliangruber/brace-expansion/commit/a1bd33999ea75262c4749fff3bbb0d1372bd07b5",
+        "https://www.npmjs.com/package/brace-expansion"
       ]
     },
     {
@@ -9298,6 +9348,28 @@
         "https://github.com/babel/babel/security/advisories/GHSA-67hx-6x53-jw92",
         "https://lists.debian.org/debian-lts-announce/2023/10/msg00026.html",
         "https://www.debian.org/security/2023/dsa-5528"
+      ]
+    },
+    {
+      "id": "nodejs-goof:CVE-2026-27903:minimatch:3.0.4",
+      "cve": "CVE-2026-27903",
+      "package": "minimatch",
+      "ecosystem": "npm",
+      "installed_version": "3.0.4",
+      "fixed_version": "3.1.3",
+      "app": "nodejs-goof",
+      "cvss": 7.5,
+      "epss": 0.00638,
+      "in_kev": false,
+      "kev_date_added": null,
+      "priority_score": 19,
+      "priority_label": "low",
+      "summary": {
+        "en": "minimatch is a minimal matching utility for converting glob expressions into JavaScript RegExp objects. Prior to version 10.2.3, 9.0.7, 8.0.6, 7.4.8, 6.2.2, 5.1.8, 4.2.5, and 3.1.3, `matchOne()` performs unbounded recursive backtracking when a glob pattern contains multiple non-adjacent `**` (GLOBSTAR) segments and the input path does not match. The time complexity is O(C(n, k)) -- binomial -- where `n` is the number of path segments and `k` is the number of globstars. With k=11 and n=30, a call to the default `minimatch()` API stalls for roughly 5 seconds. With k=13, it exceeds 15 seconds. No memoization or call budget exists to bound this behavior. Any application where an attacker can influence the glob pattern passed to `minimatch()` is vulnerable. The realistic attack surface includes build tools and task runners that accept user-supplied glob arguments (ESLint, Webpack, Rollup config), multi-tenant systems where one tenant configures glob-based rules that run in a shared process, admin or developer interfaces that accept ignore-rule or filter configuration as globs, and CI/CD pipelines that evaluate user-submitted config files containing glob patterns. An attacker who can place a crafted pattern into any of these paths can stall the Node.js event loop for tens of seconds per invocation. The pattern is 56 bytes for a 5-second stall and does not require authentication in contexts where pattern input is part of the feature. Versions 10.2.3, 9.0.7, 8.0.6, 7.4.8, 6.2.2, 5.1.8, 4.2.5, and 3.1.3 fix the issue.",
+        "es": "minimatch es una utilidad de coincidencia m\u00ednima para convertir expresiones glob en objetos RegExp de JavaScript. Antes de las versiones 10.2.3, 9.0.7, 8.0.6, 7.4.8, 6.2.2, 5.1.8, 4.2.5 y 3.1.3, 'matchOne()' realiza un retroceso recursivo ilimitado cuando un patr\u00f3n glob contiene m\u00faltiples segmentos '**' (GLOBSTAR) no adyacentes y la ruta de entrada no coincide. La complejidad temporal es O(C(n, k)) -- binomial -- donde 'n' es el n\u00famero de segmentos de ruta y 'k' es el n\u00famero de globstars. Con k=11 y n=30, una llamada a la API predeterminada de 'minimatch()' se detiene durante aproximadamente 5 segundos. Con k=13, supera los 15 segundos. No existe memoizaci\u00f3n ni presupuesto de llamadas para limitar este comportamiento. Cualquier aplicaci\u00f3n donde un atacante pueda influir en el patr\u00f3n glob pasado a 'minimatch()' es vulnerable. La superficie de ataque realista incluye herramientas de compilaci\u00f3n y ejecutores de tareas que aceptan argumentos glob proporcionados por el usuario (configuraci\u00f3n de ESLint, Webpack, Rollup), sistemas multi-inquilino donde un inquilino configura reglas basadas en glob que se ejecutan en un proceso compartido, interfaces de administrador o desarrollador que aceptan configuraci\u00f3n de reglas de ignorar o de filtro como globs, y pipelines de CI/CD que eval\u00faan archivos de configuraci\u00f3n enviados por el usuario que contienen patrones glob. Un atacante que pueda colocar un patr\u00f3n dise\u00f1ado en cualquiera de estas rutas puede detener el bucle de eventos de Node.js durante decenas de segundos por invocaci\u00f3n. El patr\u00f3n es de 56 bytes para una detenci\u00f3n de 5 segundos y no requiere autenticaci\u00f3n en contextos donde la entrada del patr\u00f3n es parte de la caracter\u00edstica. Las versiones 10.2.3, 9.0.7, 8.0.6, 7.4.8, 6.2.2, 5.1.8, 4.2.5 y 3.1.3 solucionan el problema."
+      },
+      "references": [
+        "https://github.com/isaacs/minimatch/security/advisories/GHSA-7r86-cg39-jmmj"
       ]
     },
     {
@@ -9475,28 +9547,6 @@
       ]
     },
     {
-      "id": "nodejs-goof:CVE-2026-27903:minimatch:3.0.4",
-      "cve": "CVE-2026-27903",
-      "package": "minimatch",
-      "ecosystem": "npm",
-      "installed_version": "3.0.4",
-      "fixed_version": "3.1.3",
-      "app": "nodejs-goof",
-      "cvss": 7.5,
-      "epss": 0.00576,
-      "in_kev": false,
-      "kev_date_added": null,
-      "priority_score": 19,
-      "priority_label": "low",
-      "summary": {
-        "en": "minimatch is a minimal matching utility for converting glob expressions into JavaScript RegExp objects. Prior to version 10.2.3, 9.0.7, 8.0.6, 7.4.8, 6.2.2, 5.1.8, 4.2.5, and 3.1.3, `matchOne()` performs unbounded recursive backtracking when a glob pattern contains multiple non-adjacent `**` (GLOBSTAR) segments and the input path does not match. The time complexity is O(C(n, k)) -- binomial -- where `n` is the number of path segments and `k` is the number of globstars. With k=11 and n=30, a call to the default `minimatch()` API stalls for roughly 5 seconds. With k=13, it exceeds 15 seconds. No memoization or call budget exists to bound this behavior. Any application where an attacker can influence the glob pattern passed to `minimatch()` is vulnerable. The realistic attack surface includes build tools and task runners that accept user-supplied glob arguments (ESLint, Webpack, Rollup config), multi-tenant systems where one tenant configures glob-based rules that run in a shared process, admin or developer interfaces that accept ignore-rule or filter configuration as globs, and CI/CD pipelines that evaluate user-submitted config files containing glob patterns. An attacker who can place a crafted pattern into any of these paths can stall the Node.js event loop for tens of seconds per invocation. The pattern is 56 bytes for a 5-second stall and does not require authentication in contexts where pattern input is part of the feature. Versions 10.2.3, 9.0.7, 8.0.6, 7.4.8, 6.2.2, 5.1.8, 4.2.5, and 3.1.3 fix the issue.",
-        "es": "minimatch es una utilidad de coincidencia m\u00ednima para convertir expresiones glob en objetos RegExp de JavaScript. Antes de las versiones 10.2.3, 9.0.7, 8.0.6, 7.4.8, 6.2.2, 5.1.8, 4.2.5 y 3.1.3, 'matchOne()' realiza un retroceso recursivo ilimitado cuando un patr\u00f3n glob contiene m\u00faltiples segmentos '**' (GLOBSTAR) no adyacentes y la ruta de entrada no coincide. La complejidad temporal es O(C(n, k)) -- binomial -- donde 'n' es el n\u00famero de segmentos de ruta y 'k' es el n\u00famero de globstars. Con k=11 y n=30, una llamada a la API predeterminada de 'minimatch()' se detiene durante aproximadamente 5 segundos. Con k=13, supera los 15 segundos. No existe memoizaci\u00f3n ni presupuesto de llamadas para limitar este comportamiento. Cualquier aplicaci\u00f3n donde un atacante pueda influir en el patr\u00f3n glob pasado a 'minimatch()' es vulnerable. La superficie de ataque realista incluye herramientas de compilaci\u00f3n y ejecutores de tareas que aceptan argumentos glob proporcionados por el usuario (configuraci\u00f3n de ESLint, Webpack, Rollup), sistemas multi-inquilino donde un inquilino configura reglas basadas en glob que se ejecutan en un proceso compartido, interfaces de administrador o desarrollador que aceptan configuraci\u00f3n de reglas de ignorar o de filtro como globs, y pipelines de CI/CD que eval\u00faan archivos de configuraci\u00f3n enviados por el usuario que contienen patrones glob. Un atacante que pueda colocar un patr\u00f3n dise\u00f1ado en cualquiera de estas rutas puede detener el bucle de eventos de Node.js durante decenas de segundos por invocaci\u00f3n. El patr\u00f3n es de 56 bytes para una detenci\u00f3n de 5 segundos y no requiere autenticaci\u00f3n en contextos donde la entrada del patr\u00f3n es parte de la caracter\u00edstica. Las versiones 10.2.3, 9.0.7, 8.0.6, 7.4.8, 6.2.2, 5.1.8, 4.2.5 y 3.1.3 solucionan el problema."
-      },
-      "references": [
-        "https://github.com/isaacs/minimatch/security/advisories/GHSA-7r86-cg39-jmmj"
-      ]
-    },
-    {
       "id": "nodejs-goof:CVE-2026-69152:brace-expansion:1.1.11",
       "cve": "CVE-2026-69152",
       "package": "brace-expansion",
@@ -9520,56 +9570,6 @@
         "https://github.com/juliangruber/brace-expansion/commit/688a99eeaab02627c2b89ba8ba4821fecfa659cf",
         "https://github.com/juliangruber/brace-expansion/commit/cb4b9e47cc2ec777c14b2b4492fb431a56f6a031",
         "https://github.com/juliangruber/brace-expansion/security/advisories/GHSA-rgw5-rvv9-x895"
-      ]
-    },
-    {
-      "id": "nodejs-goof:CVE-2026-4867:path-to-regexp:0.1.3",
-      "cve": "CVE-2026-4867",
-      "package": "path-to-regexp",
-      "ecosystem": "npm",
-      "installed_version": "0.1.3",
-      "fixed_version": "0.1.13",
-      "app": "nodejs-goof",
-      "cvss": 7.5,
-      "epss": 0.00563,
-      "in_kev": false,
-      "kev_date_added": null,
-      "priority_score": 19,
-      "priority_label": "low",
-      "summary": {
-        "en": "Impact:\n\nA bad regular expression is generated any time you have three or more parameters within a single segment, separated by something that is not a period (.). For example, /:a-:b-:c or /:a-:b-:c-:d. The backtrack protection added in path-to-regexp@0.1.12 only prevents ambiguity for two parameters. With three or more, the generated lookahead does not block single separator characters, so capture groups overlap and cause catastrophic backtracking.\n\nPatches:\n\nUpgrade to path-to-regexp@0.1.13\n\nCustom regex patterns in route definitions (e.g., /:a-:b([^-/]+)-:c([^-/]+)) are not affected because they override the default capture group.\n\nWorkarounds:\n\nAll versions can be patched by providing a custom regular expression for parameters after the first in a single segment. As long as the custom regular expression does not match the text before the parameter, you will be safe. For example, change /:a-:b-:c to /:a-:b([^-/]+)-:c([^-/]+).\n\nIf paths cannot be rewritten and versions cannot be upgraded, another alternative is to limit the URL length.",
-        "es": "Impacto:\n\nSe genera una expresi\u00f3n regular incorrecta cada vez que se tienen tres o m\u00e1s par\u00e1metros dentro de un \u00fanico segmento, separados por algo que no sea un punto (.). Por ejemplo, /:a-:b-:c o /:a-:b-:c-:d. La protecci\u00f3n contra retroceso a\u00f1adida en path-to-regexp@0.1.12 solo previene la ambig\u00fcedad para dos par\u00e1metros. Con tres o m\u00e1s, el 'lookahead' generado no bloquea los caracteres separadores individuales, por lo que los grupos de captura se superponen y causan un retroceso catastr\u00f3fico.\n\nParches:\n\nActualizar a path-to-regexp@0.1.13\n\nLos patrones de expresiones regulares personalizados en las definiciones de ruta (por ejemplo, /:a-:b([^-/]+)-:c([^-/]+)) no se ven afectados porque anulan el grupo de captura predeterminado.\n\nSoluciones provisionales:\n\nTodas las versiones pueden ser parcheadas proporcionando una expresi\u00f3n regular personalizada para los par\u00e1metros despu\u00e9s del primero en un \u00fanico segmento. Siempre y cuando la expresi\u00f3n regular personalizada no coincida con el texto anterior al par\u00e1metro, estar\u00e1 seguro. Por ejemplo, cambie /:a-:b-:c a /:a-:b([^-/]+)-:c([^-/]+).\n\nSi las rutas no pueden ser reescritas y las versiones no pueden ser actualizadas, otra alternativa es limitar la longitud de la URL."
-      },
-      "references": [
-        "https://blakeembrey.com/posts/2024-09-web-redos",
-        "https://cna.openjsf.org/security-advisories.html",
-        "https://github.com/advisories/GHSA-9wv6-86v2-598j"
-      ]
-    },
-    {
-      "id": "nodejs-goof:CVE-2025-12758:validator:13.5.2",
-      "cve": "CVE-2025-12758",
-      "package": "validator",
-      "ecosystem": "npm",
-      "installed_version": "13.5.2",
-      "fixed_version": "13.15.22",
-      "app": "nodejs-goof",
-      "cvss": 7.5,
-      "epss": 0.00554,
-      "in_kev": false,
-      "kev_date_added": null,
-      "priority_score": 19,
-      "priority_label": "low",
-      "summary": {
-        "en": "Versions of the package validator before 13.15.22 are vulnerable to Incomplete Filtering of One or More Instances of Special Elements in the isLength() function that does not take into account Unicode variation selectors (\\uFE0F, \\uFE0E) appearing in a sequence which lead to improper string length calculation. This can lead to an application using isLength for input validation accepting strings significantly longer than intended, resulting in issues like data truncation in databases, buffer overflows in other system components, or denial-of-service.",
-        "es": "Versiones del paquete validador anteriores a la 13.15.22 son vulnerables a un Filtrado Incompleto de Una o M\u00e1s Instancias de Elementos Especiales en la funci\u00f3n isLength() que no tiene en cuenta los selectores de variaci\u00f3n Unicode (\\uFE0F, \\uFE0E) que aparecen en una secuencia, lo que lleva a un c\u00e1lculo incorrecto de la longitud de la cadena. Esto puede llevar a que una aplicaci\u00f3n que utiliza isLength para la validaci\u00f3n de entrada acepte cadenas significativamente m\u00e1s largas de lo previsto, lo que resulta en problemas como truncamiento de datos en bases de datos, desbordamientos de b\u00fafer en otros componentes del sistema o denegaci\u00f3n de servicio."
-      },
-      "references": [
-        "https://gist.github.com/koral--/ad31208b25b9e3d1e2e35f1d4d72572e",
-        "https://github.com/validatorjs/validator.js/pull/2616",
-        "https://security.snyk.io/vuln/SNYK-JAVA-ORGWEBJARSNPM-14152011",
-        "https://security.snyk.io/vuln/SNYK-JS-VALIDATOR-13653476",
-        "http://seclists.org/fulldisclosure/2026/Jan/27"
       ]
     },
     {
@@ -9647,28 +9647,6 @@
       ]
     },
     {
-      "id": "nodejs-goof:CVE-2026-27904:minimatch:3.0.4",
-      "cve": "CVE-2026-27904",
-      "package": "minimatch",
-      "ecosystem": "npm",
-      "installed_version": "3.0.4",
-      "fixed_version": "3.1.4",
-      "app": "nodejs-goof",
-      "cvss": 7.5,
-      "epss": 0.00525,
-      "in_kev": false,
-      "kev_date_added": null,
-      "priority_score": 19,
-      "priority_label": "low",
-      "summary": {
-        "en": "minimatch is a minimal matching utility for converting glob expressions into JavaScript RegExp objects. Prior to version 10.2.3, 9.0.7, 8.0.6, 7.4.8, 6.2.2, 5.1.8, 4.2.5, and 3.1.4, nested `*()` extglobs produce regexps with nested unbounded quantifiers (e.g. `(?:(?:a|b)*)*`), which exhibit catastrophic backtracking in V8. With a 12-byte pattern `*(*(*(a|b)))` and an 18-byte non-matching input, `minimatch()` stalls for over 7 seconds. Adding a single nesting level or a few input characters pushes this to minutes. This is the most severe finding: it is triggered by the default `minimatch()` API with no special options, and the minimum viable pattern is only 12 bytes. The same issue affects `+()` extglobs equally. Versions 10.2.3, 9.0.7, 8.0.6, 7.4.8, 6.2.2, 5.1.8, 4.2.5, and 3.1.4 fix the issue.",
-        "es": "minimatch es una utilidad de coincidencia m\u00ednima para convertir expresiones glob en objetos RegExp de JavaScript. Antes de las versiones 10.2.3, 9.0.7, 8.0.6, 7.4.8, 6.2.2, 5.1.8, 4.2.5 y 3.1.4, los extglobs anidados '*( )' producen regexps con cuantificadores anidados ilimitados (por ejemplo, '(?:(?:a|b)*)*'), que exhiben retroceso catastr\u00f3fico en V8. Con un patr\u00f3n de 12 bytes '*(*(*(a|b)))' y una entrada no coincidente de 18 bytes, 'minimatch()' se detiene durante m\u00e1s de 7 segundos. A\u00f1adir un solo nivel de anidamiento o unos pocos caracteres de entrada eleva esto a minutos. Este es el hallazgo m\u00e1s grave: se activa por la API predeterminada de 'minimatch()' sin opciones especiales, y el patr\u00f3n m\u00ednimo viable es de solo 12 bytes. El mismo problema afecta a los extglobs '+()' por igual. Las versiones 10.2.3, 9.0.7, 8.0.6, 7.4.8, 6.2.2, 5.1.8, 4.2.5 y 3.1.4 solucionan el problema."
-      },
-      "references": [
-        "https://github.com/isaacs/minimatch/security/advisories/GHSA-23c5-xmqv-rm74"
-      ]
-    },
-    {
       "id": "nodejs-goof:CVE-2026-96780:figlet:1.5.0",
       "cve": "CVE-2026-96780",
       "package": "figlet",
@@ -9689,6 +9667,28 @@
         "https://github.com/patorjk/figlet.js/commit/cb2839d0e53aeafbd361e9587abc72e49e41cbb3",
         "https://github.com/patorjk/figlet.js/pull/169",
         "https://github.com/patorjk/figlet.js/security/advisories/GHSA-62ch-8vmq-8xm7"
+      ]
+    },
+    {
+      "id": "nodejs-goof:CVE-2026-27904:minimatch:3.0.4",
+      "cve": "CVE-2026-27904",
+      "package": "minimatch",
+      "ecosystem": "npm",
+      "installed_version": "3.0.4",
+      "fixed_version": "3.1.4",
+      "app": "nodejs-goof",
+      "cvss": 7.5,
+      "epss": 0.00517,
+      "in_kev": false,
+      "kev_date_added": null,
+      "priority_score": 19,
+      "priority_label": "low",
+      "summary": {
+        "en": "minimatch is a minimal matching utility for converting glob expressions into JavaScript RegExp objects. Prior to version 10.2.3, 9.0.7, 8.0.6, 7.4.8, 6.2.2, 5.1.8, 4.2.5, and 3.1.4, nested `*()` extglobs produce regexps with nested unbounded quantifiers (e.g. `(?:(?:a|b)*)*`), which exhibit catastrophic backtracking in V8. With a 12-byte pattern `*(*(*(a|b)))` and an 18-byte non-matching input, `minimatch()` stalls for over 7 seconds. Adding a single nesting level or a few input characters pushes this to minutes. This is the most severe finding: it is triggered by the default `minimatch()` API with no special options, and the minimum viable pattern is only 12 bytes. The same issue affects `+()` extglobs equally. Versions 10.2.3, 9.0.7, 8.0.6, 7.4.8, 6.2.2, 5.1.8, 4.2.5, and 3.1.4 fix the issue.",
+        "es": "minimatch es una utilidad de coincidencia m\u00ednima para convertir expresiones glob en objetos RegExp de JavaScript. Antes de las versiones 10.2.3, 9.0.7, 8.0.6, 7.4.8, 6.2.2, 5.1.8, 4.2.5 y 3.1.4, los extglobs anidados '*( )' producen regexps con cuantificadores anidados ilimitados (por ejemplo, '(?:(?:a|b)*)*'), que exhiben retroceso catastr\u00f3fico en V8. Con un patr\u00f3n de 12 bytes '*(*(*(a|b)))' y una entrada no coincidente de 18 bytes, 'minimatch()' se detiene durante m\u00e1s de 7 segundos. A\u00f1adir un solo nivel de anidamiento o unos pocos caracteres de entrada eleva esto a minutos. Este es el hallazgo m\u00e1s grave: se activa por la API predeterminada de 'minimatch()' sin opciones especiales, y el patr\u00f3n m\u00ednimo viable es de solo 12 bytes. El mismo problema afecta a los extglobs '+()' por igual. Las versiones 10.2.3, 9.0.7, 8.0.6, 7.4.8, 6.2.2, 5.1.8, 4.2.5 y 3.1.4 solucionan el problema."
+      },
+      "references": [
+        "https://github.com/isaacs/minimatch/security/advisories/GHSA-23c5-xmqv-rm74"
       ]
     },
     {
@@ -9749,7 +9749,7 @@
       "fixed_version": "0.3.17",
       "app": "nodejs-goof",
       "cvss": 7.5,
-      "epss": 0.0061,
+      "epss": 0.00621,
       "in_kev": false,
       "kev_date_added": null,
       "priority_score": 19,
@@ -9915,6 +9915,37 @@
       ]
     },
     {
+      "id": "nodejs-goof:CVE-2026-33750:brace-expansion:1.1.11",
+      "cve": "CVE-2026-33750",
+      "package": "brace-expansion",
+      "ecosystem": "npm",
+      "installed_version": "1.1.11",
+      "fixed_version": "1.1.13",
+      "app": "nodejs-goof",
+      "cvss": 6.5,
+      "epss": 0.00501,
+      "in_kev": false,
+      "kev_date_added": null,
+      "priority_score": 17,
+      "priority_label": "low",
+      "summary": {
+        "en": "The brace-expansion library generates arbitrary strings containing a common prefix and suffix. Prior to versions 5.0.5, 3.0.2, 2.0.3, and 1.1.13, a brace pattern with a zero step value (e.g., `{1..2..0}`) causes the sequence generation loop to run indefinitely, making the process hang for seconds and allocate heaps of memory. Versions 5.0.5, 3.0.2, 2.0.3, and 1.1.13 fix the issue. As a workaround, sanitize strings passed to `expand()` to ensure a step value of `0` is not used.",
+        "es": "La biblioteca brace-expansion genera cadenas arbitrarias que contienen un prefijo y un sufijo comunes. Antes de las versiones 5.0.5, 3.0.2, 2.0.3 y 1.1.13, un patr\u00f3n de corchetes con un valor de paso cero (por ejemplo, \u2019{1..2..0}\u2019) hace que el bucle de generaci\u00f3n de secuencia se ejecute indefinidamente, haciendo que el proceso se cuelgue por segundos y asigne montones de memoria. Las versiones 5.0.5, 3.0.2, 2.0.3 y 1.1.13 solucionan el problema. Como soluci\u00f3n alternativa, sanee las cadenas pasadas a expand() para asegurar que no se utilice un valor de paso de 0."
+      },
+      "references": [
+        "https://github.com/juliangruber/brace-expansion/blob/daa71bcb4a30a2df9bcb7f7b8daaf2ab30e5794a/src/index.ts#L107-L113",
+        "https://github.com/juliangruber/brace-expansion/blob/daa71bcb4a30a2df9bcb7f7b8daaf2ab30e5794a/src/index.ts#L184",
+        "https://github.com/juliangruber/brace-expansion/commit/311ac0d54994158c0a384e286a7d6cbb17ee8ed5",
+        "https://github.com/juliangruber/brace-expansion/commit/7fd684f89fdde3549563d0a6522226a9189472a2",
+        "https://github.com/juliangruber/brace-expansion/commit/b9cacd9e55e7a1fa588fe4b7bb1159d52f1d902a",
+        "https://github.com/juliangruber/brace-expansion/issues/98",
+        "https://github.com/juliangruber/brace-expansion/pull/95",
+        "https://github.com/juliangruber/brace-expansion/pull/96",
+        "https://github.com/juliangruber/brace-expansion/pull/97",
+        "https://github.com/juliangruber/brace-expansion/security/advisories/GHSA-f886-m6hf-6m8v"
+      ]
+    },
+    {
       "id": "nodejs-goof:CVE-2025-69873:ajv:6.10.2",
       "cve": "CVE-2025-69873",
       "package": "ajv",
@@ -10017,34 +10048,61 @@
       ]
     },
     {
-      "id": "nodejs-goof:CVE-2026-33750:brace-expansion:1.1.11",
-      "cve": "CVE-2026-33750",
-      "package": "brace-expansion",
+      "id": "nodejs-goof:CVE-2026-33941:handlebars:4.0.11",
+      "cve": "CVE-2026-33941",
+      "package": "handlebars",
       "ecosystem": "npm",
-      "installed_version": "1.1.11",
-      "fixed_version": "1.1.13",
+      "installed_version": "4.0.11",
+      "fixed_version": "4.7.9",
       "app": "nodejs-goof",
-      "cvss": 6.5,
-      "epss": 0.00457,
+      "cvss": 8.2,
+      "epss": 0.00332,
       "in_kev": false,
       "kev_date_added": null,
-      "priority_score": 17,
-      "priority_label": "low",
+      "priority_score": 21,
+      "priority_label": "medium",
       "summary": {
-        "en": "The brace-expansion library generates arbitrary strings containing a common prefix and suffix. Prior to versions 5.0.5, 3.0.2, 2.0.3, and 1.1.13, a brace pattern with a zero step value (e.g., `{1..2..0}`) causes the sequence generation loop to run indefinitely, making the process hang for seconds and allocate heaps of memory. Versions 5.0.5, 3.0.2, 2.0.3, and 1.1.13 fix the issue. As a workaround, sanitize strings passed to `expand()` to ensure a step value of `0` is not used.",
-        "es": "La biblioteca brace-expansion genera cadenas arbitrarias que contienen un prefijo y un sufijo comunes. Antes de las versiones 5.0.5, 3.0.2, 2.0.3 y 1.1.13, un patr\u00f3n de corchetes con un valor de paso cero (por ejemplo, \u2019{1..2..0}\u2019) hace que el bucle de generaci\u00f3n de secuencia se ejecute indefinidamente, haciendo que el proceso se cuelgue por segundos y asigne montones de memoria. Las versiones 5.0.5, 3.0.2, 2.0.3 y 1.1.13 solucionan el problema. Como soluci\u00f3n alternativa, sanee las cadenas pasadas a expand() para asegurar que no se utilice un valor de paso de 0."
+        "en": "Handlebars provides the power necessary to let users build semantic templates. In versions 4.0.0 through 4.7.8, the Handlebars CLI precompiler (`bin/handlebars` / `lib/precompiler.js`) concatenates user-controlled strings \u2014 template file names and several CLI options \u2014 directly into the JavaScript it emits, without any escaping or sanitization. An attacker who can influence template filenames or CLI arguments can inject arbitrary JavaScript that executes when the generated bundle is loaded in Node.js or a browser. Version 4.7.9 fixes the issue. Some workarounds are available. First, validate all CLI inputs before invoking the precompiler. Reject filenames and option values  that contain characters with JavaScript string-escaping significance (`\"`, `'`, `;`, etc.). Second, use a fixed, trusted namespace string passed via a configuration file rather than  command-line arguments in automated pipelines. Third, run the precompiler in a sandboxed environment (container with no write access to sensitive  paths) to limit the impact of successful exploitation. Fourth, audit template filenames in any repository or package that is consumed by an automated  build pipeline.",
+        "es": "Handlebars proporciona la potencia necesaria para permitir a los usuarios construir plantillas sem\u00e1nticas. En las versiones 4.0.0 a 4.7.8, el precompilador CLI de Handlebars (bin/handlebars / lib/precompiler.js) concatena cadenas controladas por el usuario - nombres de archivos de plantilla y varias opciones CLI - directamente en el JavaScript que emite, sin ning\u00fan escape o saneamiento. Un atacante que puede influir en los nombres de archivo de plantilla o los argumentos CLI puede inyectar JavaScript arbitrario que se ejecuta cuando el paquete generado se carga en Node.js o un navegador. La versi\u00f3n 4.7.9 corrige el problema. Algunas soluciones alternativas est\u00e1n disponibles. Primero, valide todas las entradas CLI antes de invocar el precompilador. Rechace los nombres de archivo y los valores de opci\u00f3n que contengan caracteres con significado de escape de cadena de JavaScript (\u201d, \u2019, ;, etc.). Segundo, utilice una cadena de espacio de nombres fija y de confianza pasada a trav\u00e9s de un archivo de configuraci\u00f3n en lugar de argumentos de l\u00ednea de comandos en pipelines automatizados. Tercero, ejecute el precompilador en un entorno aislado (contenedor sin acceso de escritura a rutas sensibles) para limitar el impacto de una explotaci\u00f3n exitosa. Cuarto, audite los nombres de archivo de plantilla en cualquier repositorio o paquete que sea consumido por un pipeline de compilaci\u00f3n automatizado."
       },
       "references": [
-        "https://github.com/juliangruber/brace-expansion/blob/daa71bcb4a30a2df9bcb7f7b8daaf2ab30e5794a/src/index.ts#L107-L113",
-        "https://github.com/juliangruber/brace-expansion/blob/daa71bcb4a30a2df9bcb7f7b8daaf2ab30e5794a/src/index.ts#L184",
-        "https://github.com/juliangruber/brace-expansion/commit/311ac0d54994158c0a384e286a7d6cbb17ee8ed5",
-        "https://github.com/juliangruber/brace-expansion/commit/7fd684f89fdde3549563d0a6522226a9189472a2",
-        "https://github.com/juliangruber/brace-expansion/commit/b9cacd9e55e7a1fa588fe4b7bb1159d52f1d902a",
-        "https://github.com/juliangruber/brace-expansion/issues/98",
-        "https://github.com/juliangruber/brace-expansion/pull/95",
-        "https://github.com/juliangruber/brace-expansion/pull/96",
-        "https://github.com/juliangruber/brace-expansion/pull/97",
-        "https://github.com/juliangruber/brace-expansion/security/advisories/GHSA-f886-m6hf-6m8v"
+        "https://github.com/handlebars-lang/handlebars.js/commit/68d8df5a88e0a26fe9e6084c5c6aaebe67b07da2",
+        "https://github.com/handlebars-lang/handlebars.js/releases/tag/v4.7.9",
+        "https://github.com/handlebars-lang/handlebars.js/security/advisories/GHSA-xjpj-3mr7-gcpf",
+        "https://access.redhat.com/errata/RHSA-2026:10175",
+        "https://access.redhat.com/errata/RHSA-2026:34342",
+        "https://access.redhat.com/security/cve/CVE-2026-33941",
+        "https://bugzilla.redhat.com/show_bug.cgi?id=2452524",
+        "https://security.access.redhat.com/data/csaf/v2/vex/2026/cve-2026-33941.json"
+      ]
+    },
+    {
+      "id": "nodejs-goof:CVE-2026-33941:handlebars:4.0.14",
+      "cve": "CVE-2026-33941",
+      "package": "handlebars",
+      "ecosystem": "npm",
+      "installed_version": "4.0.14",
+      "fixed_version": "4.7.9",
+      "app": "nodejs-goof",
+      "cvss": 8.2,
+      "epss": 0.00332,
+      "in_kev": false,
+      "kev_date_added": null,
+      "priority_score": 21,
+      "priority_label": "medium",
+      "summary": {
+        "en": "Handlebars provides the power necessary to let users build semantic templates. In versions 4.0.0 through 4.7.8, the Handlebars CLI precompiler (`bin/handlebars` / `lib/precompiler.js`) concatenates user-controlled strings \u2014 template file names and several CLI options \u2014 directly into the JavaScript it emits, without any escaping or sanitization. An attacker who can influence template filenames or CLI arguments can inject arbitrary JavaScript that executes when the generated bundle is loaded in Node.js or a browser. Version 4.7.9 fixes the issue. Some workarounds are available. First, validate all CLI inputs before invoking the precompiler. Reject filenames and option values  that contain characters with JavaScript string-escaping significance (`\"`, `'`, `;`, etc.). Second, use a fixed, trusted namespace string passed via a configuration file rather than  command-line arguments in automated pipelines. Third, run the precompiler in a sandboxed environment (container with no write access to sensitive  paths) to limit the impact of successful exploitation. Fourth, audit template filenames in any repository or package that is consumed by an automated  build pipeline.",
+        "es": "Handlebars proporciona la potencia necesaria para permitir a los usuarios construir plantillas sem\u00e1nticas. En las versiones 4.0.0 a 4.7.8, el precompilador CLI de Handlebars (bin/handlebars / lib/precompiler.js) concatena cadenas controladas por el usuario - nombres de archivos de plantilla y varias opciones CLI - directamente en el JavaScript que emite, sin ning\u00fan escape o saneamiento. Un atacante que puede influir en los nombres de archivo de plantilla o los argumentos CLI puede inyectar JavaScript arbitrario que se ejecuta cuando el paquete generado se carga en Node.js o un navegador. La versi\u00f3n 4.7.9 corrige el problema. Algunas soluciones alternativas est\u00e1n disponibles. Primero, valide todas las entradas CLI antes de invocar el precompilador. Rechace los nombres de archivo y los valores de opci\u00f3n que contengan caracteres con significado de escape de cadena de JavaScript (\u201d, \u2019, ;, etc.). Segundo, utilice una cadena de espacio de nombres fija y de confianza pasada a trav\u00e9s de un archivo de configuraci\u00f3n en lugar de argumentos de l\u00ednea de comandos en pipelines automatizados. Tercero, ejecute el precompilador en un entorno aislado (contenedor sin acceso de escritura a rutas sensibles) para limitar el impacto de una explotaci\u00f3n exitosa. Cuarto, audite los nombres de archivo de plantilla en cualquier repositorio o paquete que sea consumido por un pipeline de compilaci\u00f3n automatizado."
+      },
+      "references": [
+        "https://github.com/handlebars-lang/handlebars.js/commit/68d8df5a88e0a26fe9e6084c5c6aaebe67b07da2",
+        "https://github.com/handlebars-lang/handlebars.js/releases/tag/v4.7.9",
+        "https://github.com/handlebars-lang/handlebars.js/security/advisories/GHSA-xjpj-3mr7-gcpf",
+        "https://access.redhat.com/errata/RHSA-2026:10175",
+        "https://access.redhat.com/errata/RHSA-2026:34342",
+        "https://access.redhat.com/security/cve/CVE-2026-33941",
+        "https://bugzilla.redhat.com/show_bug.cgi?id=2452524",
+        "https://security.access.redhat.com/data/csaf/v2/vex/2026/cve-2026-33941.json"
       ]
     },
     {
@@ -10125,61 +10183,25 @@
       ]
     },
     {
-      "id": "nodejs-goof:CVE-2026-33941:handlebars:4.0.11",
-      "cve": "CVE-2026-33941",
-      "package": "handlebars",
+      "id": "nodejs-goof:CVE-2026-41907:uuid:3.3.2",
+      "cve": "CVE-2026-41907",
+      "package": "uuid",
       "ecosystem": "npm",
-      "installed_version": "4.0.11",
-      "fixed_version": "4.7.9",
+      "installed_version": "3.3.2",
+      "fixed_version": "11.1.1",
       "app": "nodejs-goof",
-      "cvss": 8.2,
-      "epss": 0.00303,
+      "cvss": 7.5,
+      "epss": 0.00401,
       "in_kev": false,
       "kev_date_added": null,
-      "priority_score": 21,
-      "priority_label": "medium",
+      "priority_score": 19,
+      "priority_label": "low",
       "summary": {
-        "en": "Handlebars provides the power necessary to let users build semantic templates. In versions 4.0.0 through 4.7.8, the Handlebars CLI precompiler (`bin/handlebars` / `lib/precompiler.js`) concatenates user-controlled strings \u2014 template file names and several CLI options \u2014 directly into the JavaScript it emits, without any escaping or sanitization. An attacker who can influence template filenames or CLI arguments can inject arbitrary JavaScript that executes when the generated bundle is loaded in Node.js or a browser. Version 4.7.9 fixes the issue. Some workarounds are available. First, validate all CLI inputs before invoking the precompiler. Reject filenames and option values  that contain characters with JavaScript string-escaping significance (`\"`, `'`, `;`, etc.). Second, use a fixed, trusted namespace string passed via a configuration file rather than  command-line arguments in automated pipelines. Third, run the precompiler in a sandboxed environment (container with no write access to sensitive  paths) to limit the impact of successful exploitation. Fourth, audit template filenames in any repository or package that is consumed by an automated  build pipeline.",
-        "es": "Handlebars proporciona la potencia necesaria para permitir a los usuarios construir plantillas sem\u00e1nticas. En las versiones 4.0.0 a 4.7.8, el precompilador CLI de Handlebars (bin/handlebars / lib/precompiler.js) concatena cadenas controladas por el usuario - nombres de archivos de plantilla y varias opciones CLI - directamente en el JavaScript que emite, sin ning\u00fan escape o saneamiento. Un atacante que puede influir en los nombres de archivo de plantilla o los argumentos CLI puede inyectar JavaScript arbitrario que se ejecuta cuando el paquete generado se carga en Node.js o un navegador. La versi\u00f3n 4.7.9 corrige el problema. Algunas soluciones alternativas est\u00e1n disponibles. Primero, valide todas las entradas CLI antes de invocar el precompilador. Rechace los nombres de archivo y los valores de opci\u00f3n que contengan caracteres con significado de escape de cadena de JavaScript (\u201d, \u2019, ;, etc.). Segundo, utilice una cadena de espacio de nombres fija y de confianza pasada a trav\u00e9s de un archivo de configuraci\u00f3n en lugar de argumentos de l\u00ednea de comandos en pipelines automatizados. Tercero, ejecute el precompilador en un entorno aislado (contenedor sin acceso de escritura a rutas sensibles) para limitar el impacto de una explotaci\u00f3n exitosa. Cuarto, audite los nombres de archivo de plantilla en cualquier repositorio o paquete que sea consumido por un pipeline de compilaci\u00f3n automatizado."
+        "en": "uuid is for the creation of RFC9562 (formerly RFC4122) UUIDs. Prior to 14.0.0, v3, v5, and v6 accept external output buffers but do not reject out-of-range writes (small buf or large offset). This allows silent partial writes into caller-provided buffers. This vulnerability is fixed in 14.0.0.",
+        "es": "uuid es para la creaci\u00f3n de UUIDs RFC9562 (anteriormente RFC4122). Antes de la 14.0.0, v3, v5 y v6 aceptan b\u00faferes de salida externos pero no rechazan escrituras fuera de rango (b\u00fafer peque\u00f1o o desplazamiento grande). Esto permite escrituras parciales silenciosas en b\u00faferes proporcionados por el llamador. Esta vulnerabilidad est\u00e1 corregida en la 14.0.0."
       },
       "references": [
-        "https://github.com/handlebars-lang/handlebars.js/commit/68d8df5a88e0a26fe9e6084c5c6aaebe67b07da2",
-        "https://github.com/handlebars-lang/handlebars.js/releases/tag/v4.7.9",
-        "https://github.com/handlebars-lang/handlebars.js/security/advisories/GHSA-xjpj-3mr7-gcpf",
-        "https://access.redhat.com/errata/RHSA-2026:10175",
-        "https://access.redhat.com/errata/RHSA-2026:34342",
-        "https://access.redhat.com/security/cve/CVE-2026-33941",
-        "https://bugzilla.redhat.com/show_bug.cgi?id=2452524",
-        "https://security.access.redhat.com/data/csaf/v2/vex/2026/cve-2026-33941.json"
-      ]
-    },
-    {
-      "id": "nodejs-goof:CVE-2026-33941:handlebars:4.0.14",
-      "cve": "CVE-2026-33941",
-      "package": "handlebars",
-      "ecosystem": "npm",
-      "installed_version": "4.0.14",
-      "fixed_version": "4.7.9",
-      "app": "nodejs-goof",
-      "cvss": 8.2,
-      "epss": 0.00303,
-      "in_kev": false,
-      "kev_date_added": null,
-      "priority_score": 21,
-      "priority_label": "medium",
-      "summary": {
-        "en": "Handlebars provides the power necessary to let users build semantic templates. In versions 4.0.0 through 4.7.8, the Handlebars CLI precompiler (`bin/handlebars` / `lib/precompiler.js`) concatenates user-controlled strings \u2014 template file names and several CLI options \u2014 directly into the JavaScript it emits, without any escaping or sanitization. An attacker who can influence template filenames or CLI arguments can inject arbitrary JavaScript that executes when the generated bundle is loaded in Node.js or a browser. Version 4.7.9 fixes the issue. Some workarounds are available. First, validate all CLI inputs before invoking the precompiler. Reject filenames and option values  that contain characters with JavaScript string-escaping significance (`\"`, `'`, `;`, etc.). Second, use a fixed, trusted namespace string passed via a configuration file rather than  command-line arguments in automated pipelines. Third, run the precompiler in a sandboxed environment (container with no write access to sensitive  paths) to limit the impact of successful exploitation. Fourth, audit template filenames in any repository or package that is consumed by an automated  build pipeline.",
-        "es": "Handlebars proporciona la potencia necesaria para permitir a los usuarios construir plantillas sem\u00e1nticas. En las versiones 4.0.0 a 4.7.8, el precompilador CLI de Handlebars (bin/handlebars / lib/precompiler.js) concatena cadenas controladas por el usuario - nombres de archivos de plantilla y varias opciones CLI - directamente en el JavaScript que emite, sin ning\u00fan escape o saneamiento. Un atacante que puede influir en los nombres de archivo de plantilla o los argumentos CLI puede inyectar JavaScript arbitrario que se ejecuta cuando el paquete generado se carga en Node.js o un navegador. La versi\u00f3n 4.7.9 corrige el problema. Algunas soluciones alternativas est\u00e1n disponibles. Primero, valide todas las entradas CLI antes de invocar el precompilador. Rechace los nombres de archivo y los valores de opci\u00f3n que contengan caracteres con significado de escape de cadena de JavaScript (\u201d, \u2019, ;, etc.). Segundo, utilice una cadena de espacio de nombres fija y de confianza pasada a trav\u00e9s de un archivo de configuraci\u00f3n en lugar de argumentos de l\u00ednea de comandos en pipelines automatizados. Tercero, ejecute el precompilador en un entorno aislado (contenedor sin acceso de escritura a rutas sensibles) para limitar el impacto de una explotaci\u00f3n exitosa. Cuarto, audite los nombres de archivo de plantilla en cualquier repositorio o paquete que sea consumido por un pipeline de compilaci\u00f3n automatizado."
-      },
-      "references": [
-        "https://github.com/handlebars-lang/handlebars.js/commit/68d8df5a88e0a26fe9e6084c5c6aaebe67b07da2",
-        "https://github.com/handlebars-lang/handlebars.js/releases/tag/v4.7.9",
-        "https://github.com/handlebars-lang/handlebars.js/security/advisories/GHSA-xjpj-3mr7-gcpf",
-        "https://access.redhat.com/errata/RHSA-2026:10175",
-        "https://access.redhat.com/errata/RHSA-2026:34342",
-        "https://access.redhat.com/security/cve/CVE-2026-33941",
-        "https://bugzilla.redhat.com/show_bug.cgi?id=2452524",
-        "https://security.access.redhat.com/data/csaf/v2/vex/2026/cve-2026-33941.json"
+        "https://github.com/uuidjs/uuid/security/advisories/GHSA-w5hq-g745-h8pq"
       ]
     },
     {
@@ -10197,7 +10219,7 @@
       "priority_score": 10,
       "priority_label": "low",
       "summary": {
-        "en": "Improper Input Validation vulnerability in qs (parse modules) allows HTTP DoS.This issue affects qs: < 6.14.1.\n\n\nSummary\n\nThe arrayLimit\u00a0option in qs did not enforce limits for bracket notation (a[]=1&a[]=2), only for indexed notation (a[0]=1). This is a consistency bug; arrayLimit\u00a0should apply uniformly across all array notations.\n\nNote:\u00a0The default parameterLimit\u00a0of 1000 effectively mitigates the DoS scenario originally described. With default options, bracket notation cannot produce arrays larger than parameterLimit\u00a0regardless of arrayLimit, because each a[]=valueconsumes one parameter slot. The severity has been reduced accordingly.\n\nDetails\n\nThe arrayLimit\u00a0option only checked limits for indexed notation (a[0]=1&a[1]=2) but did not enforce it for bracket notation (a[]=1&a[]=2).\n\nVulnerable code\u00a0(lib/parse.js:159-162):\n\nif (root === '[]' && options.parseArrays) {\n    obj = utils.combine([], leaf);  // No arrayLimit check\n}\n\n\n\n\n\nWorking code\u00a0(lib/parse.js:175):\n\nelse if (index <= options.arrayLimit) {  // Limit checked here\n    obj = [];\n    obj[index] = leaf;\n}\n\n\n\n\n\nThe bracket notation handler at line 159 uses utils.combine([], leaf)\u00a0without validating against options.arrayLimit, while indexed notation at line 175 checks index <= options.arrayLimit\u00a0before creating arrays.\n\n\n\nPoC\n\nconst qs = require('qs');\nconst result = qs.parse('a[]=1&a[]=2&a[]=3&a[]=4&a[]=5&a[]=6', { arrayLimit: 5 });\nconsole.log(result.a.length);  // Output: 6 (should be max 5)\n\n\n\n\n\nNote on parameterLimit interaction:\u00a0The original advisory's \"DoS demonstration\" claimed a length of 10,000, but parameterLimit\u00a0(default: 1000) caps parsing to 1,000 parameters. With default options, the actual output is 1,000, not 10,000.\n\nImpact\n\nConsistency bug in arrayLimit\u00a0enforcement. With default parameterLimit, the practical DoS risk is negligible since parameterLimit\u00a0already caps the total number of parsed parameters (and thus array elements from bracket notation). The risk increases only when parameterLimit\u00a0is explicitly set to a very high value.",
+        "en": "Improper Input Validation vulnerability in qs (parse modules) allows HTTP DoS.\n\nThis issue affects qs: < 6.14.1.\n\n\nSummary\n\n\n\n\n\nThe arrayLimit\u00a0option in qs did not enforce limits for bracket notation (a[]=1&a[]=2), only for indexed notation (a[0]=1). This is a consistency bug; arrayLimit\u00a0should apply uniformly across all array notations.\n\n\n\nNote:\u00a0The default parameterLimit\u00a0of 1000 effectively mitigates the DoS scenario originally described. With default options, bracket notation cannot produce arrays larger than parameterLimit\u00a0regardless of arrayLimit, because each a[]=valueconsumes one parameter slot. The severity has been reduced accordingly.\n\nDetails\n\n\n\n\n\nThe arrayLimit\u00a0option only checked limits for indexed notation (a[0]=1&a[1]=2) but did not enforce it for bracket notation (a[]=1&a[]=2).\n\n\n\nVulnerable code\u00a0(lib/parse.js:159-162):\n\n\n\nif (root === '[]' && options.parseArrays) {\n    obj = utils.combine([], leaf);  // No arrayLimit check\n}\n\n\n\n\n\n\n\nWorking code\u00a0(lib/parse.js:175):\n\n\n\nelse if (index <= options.arrayLimit) {  // Limit checked here\n    obj = [];\n    obj[index] = leaf;\n}\n\n\n\n\n\n\n\nThe bracket notation handler at line 159 uses utils.combine([], leaf)\u00a0without validating against options.arrayLimit, while indexed notation at line 175 checks index <= options.arrayLimit\u00a0before creating arrays.\n\n\n\n\n\nPoC\n\n\n\n\n\nconst qs = require('qs');\nconst result = qs.parse('a[]=1&a[]=2&a[]=3&a[]=4&a[]=5&a[]=6', { arrayLimit: 5 });\nconsole.log(result.a.length);  // Output: 6 (should be max 5)\n\n\n\n\n\n\n\nNote on parameterLimit interaction:\u00a0The original advisory's \"DoS demonstration\" claimed a length of 10,000, but parameterLimit\u00a0(default: 1000) caps parsing to 1,000 parameters. With default options, the actual output is 1,000, not 10,000.\n\nImpact\n\n\n\nConsistency bug in arrayLimit\u00a0enforcement. With default parameterLimit, the practical DoS risk is negligible since parameterLimit\u00a0already caps the total number of parsed parameters (and thus array elements from bracket notation). The risk increases only when parameterLimit\u00a0is explicitly set to a very high value.",
         "es": "Vulnerabilidad de validaci\u00f3n de entrada incorrecta en qs (m\u00f3dulos de an\u00e1lisis) permite DoS HTTP. Este problema afecta a qs: < 6.14.1.\n\nResumen\nLa opci\u00f3n arrayLimit en qs no aplica l\u00edmites para la notaci\u00f3n de corchetes (a[]=1&a[]=2), permitiendo a los atacantes causar denegaci\u00f3n de servicio mediante el agotamiento de la memoria. Las aplicaciones que utilizan arrayLimit para la protecci\u00f3n contra DoS son vulnerables.\n\nDetalles\nLa opci\u00f3n arrayLimit solo verifica los l\u00edmites para la notaci\u00f3n indexada (a[0]=1&a[1]=2) pero la omite completamente para la notaci\u00f3n de corchetes (a[]=1&a[]=2).\n\nC\u00f3digo vulnerable (lib/parse.js:159-162):\n\nif (root === '[]' && options.parseArrays) {\n    obj = utils.combine([], leaf);  // Sin verificaci\u00f3n de arrayLimit\n}\n\nC\u00f3digo funcional (lib/parse.js:175):\n\nelse if (index <= options.arrayLimit) {  // L\u00edmite verificado aqu\u00ed\n    obj = [];\n    obj[index] = leaf;\n}\n\nEl manejador de notaci\u00f3n de corchetes en la l\u00ednea 159 utiliza utils.combine([], leaf) sin validar contra options.arrayLimit, mientras que la notaci\u00f3n indexada en la l\u00ednea 175 verifica index <= options.arrayLimit antes de crear arreglos.\n\nPoC\nPrueba 1 - Omisi\u00f3n b\u00e1sica:\n\nnpm install qs\n\nconst qs = require('qs');\nconst result = qs.parse('a[]=1&a[]=2&a[]=3&a[]=4&a[]=5&a[]=6', { arrayLimit: 5 });\nconsole.log(result.a.length);  // Salida: 6 (deber\u00eda ser m\u00e1ximo 5)\n\nPrueba 2 - Demostraci\u00f3n de DoS:\n\nconst qs = require('qs');\nconst attack = 'a[]=' + Array(10000).fill('x').join('&a[]=');\nconst result = qs.parse(attack, { arrayLimit: 100 });\nconsole.log(result.a.length);  // Salida: 10000 (deber\u00eda ser m\u00e1ximo 100)\n\nConfiguraci\u00f3n:\n\n  *  arrayLimit: 5 (prueba 1) o arrayLimit: 100 (prueba 2)\n  *  Usar notaci\u00f3n de corchetes: a[]=value (no indexada a[0]=value)\n\nImpacto\nDenegaci\u00f3n de servicio mediante agotamiento de memoria. Afecta a las aplicaciones que utilizan qs.parse() con entrada controlada por el usuario y arrayLimit para protecci\u00f3n.\n\nEscenario de ataque:\n\n  *  El atacante env\u00eda una solicitud HTTP: GET /api/search?filters[]=x&filters[]=x&...&filters[]=x (m\u00e1s de 100,000 veces)\n  *  La aplicaci\u00f3n analiza con qs.parse(query, { arrayLimit: 100 })\n  *  qs ignora el l\u00edmite, analiza los 100,000 elementos en un arreglo\n  *  Memoria del servidor agotada ? la aplicaci\u00f3n falla o deja de responder\n  *  Servicio no disponible para todos los usuarios\nImpacto en el mundo real:\n\n  *  Una \u00fanica solicitud maliciosa puede colapsar el servidor\n  *  No se requiere autenticaci\u00f3n\n  *  F\u00e1cil de automatizar y escalar\n  *  Afecta a cualquier endpoint que analice cadenas de consulta con notaci\u00f3n de corchetes"
       },
       "references": [
@@ -10220,7 +10242,7 @@
       "priority_score": 10,
       "priority_label": "low",
       "summary": {
-        "en": "Improper Input Validation vulnerability in qs (parse modules) allows HTTP DoS.This issue affects qs: < 6.14.1.\n\n\nSummary\n\nThe arrayLimit\u00a0option in qs did not enforce limits for bracket notation (a[]=1&a[]=2), only for indexed notation (a[0]=1). This is a consistency bug; arrayLimit\u00a0should apply uniformly across all array notations.\n\nNote:\u00a0The default parameterLimit\u00a0of 1000 effectively mitigates the DoS scenario originally described. With default options, bracket notation cannot produce arrays larger than parameterLimit\u00a0regardless of arrayLimit, because each a[]=valueconsumes one parameter slot. The severity has been reduced accordingly.\n\nDetails\n\nThe arrayLimit\u00a0option only checked limits for indexed notation (a[0]=1&a[1]=2) but did not enforce it for bracket notation (a[]=1&a[]=2).\n\nVulnerable code\u00a0(lib/parse.js:159-162):\n\nif (root === '[]' && options.parseArrays) {\n    obj = utils.combine([], leaf);  // No arrayLimit check\n}\n\n\n\n\n\nWorking code\u00a0(lib/parse.js:175):\n\nelse if (index <= options.arrayLimit) {  // Limit checked here\n    obj = [];\n    obj[index] = leaf;\n}\n\n\n\n\n\nThe bracket notation handler at line 159 uses utils.combine([], leaf)\u00a0without validating against options.arrayLimit, while indexed notation at line 175 checks index <= options.arrayLimit\u00a0before creating arrays.\n\n\n\nPoC\n\nconst qs = require('qs');\nconst result = qs.parse('a[]=1&a[]=2&a[]=3&a[]=4&a[]=5&a[]=6', { arrayLimit: 5 });\nconsole.log(result.a.length);  // Output: 6 (should be max 5)\n\n\n\n\n\nNote on parameterLimit interaction:\u00a0The original advisory's \"DoS demonstration\" claimed a length of 10,000, but parameterLimit\u00a0(default: 1000) caps parsing to 1,000 parameters. With default options, the actual output is 1,000, not 10,000.\n\nImpact\n\nConsistency bug in arrayLimit\u00a0enforcement. With default parameterLimit, the practical DoS risk is negligible since parameterLimit\u00a0already caps the total number of parsed parameters (and thus array elements from bracket notation). The risk increases only when parameterLimit\u00a0is explicitly set to a very high value.",
+        "en": "Improper Input Validation vulnerability in qs (parse modules) allows HTTP DoS.\n\nThis issue affects qs: < 6.14.1.\n\n\nSummary\n\n\n\n\n\nThe arrayLimit\u00a0option in qs did not enforce limits for bracket notation (a[]=1&a[]=2), only for indexed notation (a[0]=1). This is a consistency bug; arrayLimit\u00a0should apply uniformly across all array notations.\n\n\n\nNote:\u00a0The default parameterLimit\u00a0of 1000 effectively mitigates the DoS scenario originally described. With default options, bracket notation cannot produce arrays larger than parameterLimit\u00a0regardless of arrayLimit, because each a[]=valueconsumes one parameter slot. The severity has been reduced accordingly.\n\nDetails\n\n\n\n\n\nThe arrayLimit\u00a0option only checked limits for indexed notation (a[0]=1&a[1]=2) but did not enforce it for bracket notation (a[]=1&a[]=2).\n\n\n\nVulnerable code\u00a0(lib/parse.js:159-162):\n\n\n\nif (root === '[]' && options.parseArrays) {\n    obj = utils.combine([], leaf);  // No arrayLimit check\n}\n\n\n\n\n\n\n\nWorking code\u00a0(lib/parse.js:175):\n\n\n\nelse if (index <= options.arrayLimit) {  // Limit checked here\n    obj = [];\n    obj[index] = leaf;\n}\n\n\n\n\n\n\n\nThe bracket notation handler at line 159 uses utils.combine([], leaf)\u00a0without validating against options.arrayLimit, while indexed notation at line 175 checks index <= options.arrayLimit\u00a0before creating arrays.\n\n\n\n\n\nPoC\n\n\n\n\n\nconst qs = require('qs');\nconst result = qs.parse('a[]=1&a[]=2&a[]=3&a[]=4&a[]=5&a[]=6', { arrayLimit: 5 });\nconsole.log(result.a.length);  // Output: 6 (should be max 5)\n\n\n\n\n\n\n\nNote on parameterLimit interaction:\u00a0The original advisory's \"DoS demonstration\" claimed a length of 10,000, but parameterLimit\u00a0(default: 1000) caps parsing to 1,000 parameters. With default options, the actual output is 1,000, not 10,000.\n\nImpact\n\n\n\nConsistency bug in arrayLimit\u00a0enforcement. With default parameterLimit, the practical DoS risk is negligible since parameterLimit\u00a0already caps the total number of parsed parameters (and thus array elements from bracket notation). The risk increases only when parameterLimit\u00a0is explicitly set to a very high value.",
         "es": "Vulnerabilidad de validaci\u00f3n de entrada incorrecta en qs (m\u00f3dulos de an\u00e1lisis) permite DoS HTTP. Este problema afecta a qs: < 6.14.1.\n\nResumen\nLa opci\u00f3n arrayLimit en qs no aplica l\u00edmites para la notaci\u00f3n de corchetes (a[]=1&a[]=2), permitiendo a los atacantes causar denegaci\u00f3n de servicio mediante el agotamiento de la memoria. Las aplicaciones que utilizan arrayLimit para la protecci\u00f3n contra DoS son vulnerables.\n\nDetalles\nLa opci\u00f3n arrayLimit solo verifica los l\u00edmites para la notaci\u00f3n indexada (a[0]=1&a[1]=2) pero la omite completamente para la notaci\u00f3n de corchetes (a[]=1&a[]=2).\n\nC\u00f3digo vulnerable (lib/parse.js:159-162):\n\nif (root === '[]' && options.parseArrays) {\n    obj = utils.combine([], leaf);  // Sin verificaci\u00f3n de arrayLimit\n}\n\nC\u00f3digo funcional (lib/parse.js:175):\n\nelse if (index <= options.arrayLimit) {  // L\u00edmite verificado aqu\u00ed\n    obj = [];\n    obj[index] = leaf;\n}\n\nEl manejador de notaci\u00f3n de corchetes en la l\u00ednea 159 utiliza utils.combine([], leaf) sin validar contra options.arrayLimit, mientras que la notaci\u00f3n indexada en la l\u00ednea 175 verifica index <= options.arrayLimit antes de crear arreglos.\n\nPoC\nPrueba 1 - Omisi\u00f3n b\u00e1sica:\n\nnpm install qs\n\nconst qs = require('qs');\nconst result = qs.parse('a[]=1&a[]=2&a[]=3&a[]=4&a[]=5&a[]=6', { arrayLimit: 5 });\nconsole.log(result.a.length);  // Salida: 6 (deber\u00eda ser m\u00e1ximo 5)\n\nPrueba 2 - Demostraci\u00f3n de DoS:\n\nconst qs = require('qs');\nconst attack = 'a[]=' + Array(10000).fill('x').join('&a[]=');\nconst result = qs.parse(attack, { arrayLimit: 100 });\nconsole.log(result.a.length);  // Salida: 10000 (deber\u00eda ser m\u00e1ximo 100)\n\nConfiguraci\u00f3n:\n\n  *  arrayLimit: 5 (prueba 1) o arrayLimit: 100 (prueba 2)\n  *  Usar notaci\u00f3n de corchetes: a[]=value (no indexada a[0]=value)\n\nImpacto\nDenegaci\u00f3n de servicio mediante agotamiento de memoria. Afecta a las aplicaciones que utilizan qs.parse() con entrada controlada por el usuario y arrayLimit para protecci\u00f3n.\n\nEscenario de ataque:\n\n  *  El atacante env\u00eda una solicitud HTTP: GET /api/search?filters[]=x&filters[]=x&...&filters[]=x (m\u00e1s de 100,000 veces)\n  *  La aplicaci\u00f3n analiza con qs.parse(query, { arrayLimit: 100 })\n  *  qs ignora el l\u00edmite, analiza los 100,000 elementos en un arreglo\n  *  Memoria del servidor agotada ? la aplicaci\u00f3n falla o deja de responder\n  *  Servicio no disponible para todos los usuarios\nImpacto en el mundo real:\n\n  *  Una \u00fanica solicitud maliciosa puede colapsar el servidor\n  *  No se requiere autenticaci\u00f3n\n  *  F\u00e1cil de automatizar y escalar\n  *  Afecta a cualquier endpoint que analice cadenas de consulta con notaci\u00f3n de corchetes"
       },
       "references": [
@@ -10243,7 +10265,7 @@
       "priority_score": 10,
       "priority_label": "low",
       "summary": {
-        "en": "Improper Input Validation vulnerability in qs (parse modules) allows HTTP DoS.This issue affects qs: < 6.14.1.\n\n\nSummary\n\nThe arrayLimit\u00a0option in qs did not enforce limits for bracket notation (a[]=1&a[]=2), only for indexed notation (a[0]=1). This is a consistency bug; arrayLimit\u00a0should apply uniformly across all array notations.\n\nNote:\u00a0The default parameterLimit\u00a0of 1000 effectively mitigates the DoS scenario originally described. With default options, bracket notation cannot produce arrays larger than parameterLimit\u00a0regardless of arrayLimit, because each a[]=valueconsumes one parameter slot. The severity has been reduced accordingly.\n\nDetails\n\nThe arrayLimit\u00a0option only checked limits for indexed notation (a[0]=1&a[1]=2) but did not enforce it for bracket notation (a[]=1&a[]=2).\n\nVulnerable code\u00a0(lib/parse.js:159-162):\n\nif (root === '[]' && options.parseArrays) {\n    obj = utils.combine([], leaf);  // No arrayLimit check\n}\n\n\n\n\n\nWorking code\u00a0(lib/parse.js:175):\n\nelse if (index <= options.arrayLimit) {  // Limit checked here\n    obj = [];\n    obj[index] = leaf;\n}\n\n\n\n\n\nThe bracket notation handler at line 159 uses utils.combine([], leaf)\u00a0without validating against options.arrayLimit, while indexed notation at line 175 checks index <= options.arrayLimit\u00a0before creating arrays.\n\n\n\nPoC\n\nconst qs = require('qs');\nconst result = qs.parse('a[]=1&a[]=2&a[]=3&a[]=4&a[]=5&a[]=6', { arrayLimit: 5 });\nconsole.log(result.a.length);  // Output: 6 (should be max 5)\n\n\n\n\n\nNote on parameterLimit interaction:\u00a0The original advisory's \"DoS demonstration\" claimed a length of 10,000, but parameterLimit\u00a0(default: 1000) caps parsing to 1,000 parameters. With default options, the actual output is 1,000, not 10,000.\n\nImpact\n\nConsistency bug in arrayLimit\u00a0enforcement. With default parameterLimit, the practical DoS risk is negligible since parameterLimit\u00a0already caps the total number of parsed parameters (and thus array elements from bracket notation). The risk increases only when parameterLimit\u00a0is explicitly set to a very high value.",
+        "en": "Improper Input Validation vulnerability in qs (parse modules) allows HTTP DoS.\n\nThis issue affects qs: < 6.14.1.\n\n\nSummary\n\n\n\n\n\nThe arrayLimit\u00a0option in qs did not enforce limits for bracket notation (a[]=1&a[]=2), only for indexed notation (a[0]=1). This is a consistency bug; arrayLimit\u00a0should apply uniformly across all array notations.\n\n\n\nNote:\u00a0The default parameterLimit\u00a0of 1000 effectively mitigates the DoS scenario originally described. With default options, bracket notation cannot produce arrays larger than parameterLimit\u00a0regardless of arrayLimit, because each a[]=valueconsumes one parameter slot. The severity has been reduced accordingly.\n\nDetails\n\n\n\n\n\nThe arrayLimit\u00a0option only checked limits for indexed notation (a[0]=1&a[1]=2) but did not enforce it for bracket notation (a[]=1&a[]=2).\n\n\n\nVulnerable code\u00a0(lib/parse.js:159-162):\n\n\n\nif (root === '[]' && options.parseArrays) {\n    obj = utils.combine([], leaf);  // No arrayLimit check\n}\n\n\n\n\n\n\n\nWorking code\u00a0(lib/parse.js:175):\n\n\n\nelse if (index <= options.arrayLimit) {  // Limit checked here\n    obj = [];\n    obj[index] = leaf;\n}\n\n\n\n\n\n\n\nThe bracket notation handler at line 159 uses utils.combine([], leaf)\u00a0without validating against options.arrayLimit, while indexed notation at line 175 checks index <= options.arrayLimit\u00a0before creating arrays.\n\n\n\n\n\nPoC\n\n\n\n\n\nconst qs = require('qs');\nconst result = qs.parse('a[]=1&a[]=2&a[]=3&a[]=4&a[]=5&a[]=6', { arrayLimit: 5 });\nconsole.log(result.a.length);  // Output: 6 (should be max 5)\n\n\n\n\n\n\n\nNote on parameterLimit interaction:\u00a0The original advisory's \"DoS demonstration\" claimed a length of 10,000, but parameterLimit\u00a0(default: 1000) caps parsing to 1,000 parameters. With default options, the actual output is 1,000, not 10,000.\n\nImpact\n\n\n\nConsistency bug in arrayLimit\u00a0enforcement. With default parameterLimit, the practical DoS risk is negligible since parameterLimit\u00a0already caps the total number of parsed parameters (and thus array elements from bracket notation). The risk increases only when parameterLimit\u00a0is explicitly set to a very high value.",
         "es": "Vulnerabilidad de validaci\u00f3n de entrada incorrecta en qs (m\u00f3dulos de an\u00e1lisis) permite DoS HTTP. Este problema afecta a qs: < 6.14.1.\n\nResumen\nLa opci\u00f3n arrayLimit en qs no aplica l\u00edmites para la notaci\u00f3n de corchetes (a[]=1&a[]=2), permitiendo a los atacantes causar denegaci\u00f3n de servicio mediante el agotamiento de la memoria. Las aplicaciones que utilizan arrayLimit para la protecci\u00f3n contra DoS son vulnerables.\n\nDetalles\nLa opci\u00f3n arrayLimit solo verifica los l\u00edmites para la notaci\u00f3n indexada (a[0]=1&a[1]=2) pero la omite completamente para la notaci\u00f3n de corchetes (a[]=1&a[]=2).\n\nC\u00f3digo vulnerable (lib/parse.js:159-162):\n\nif (root === '[]' && options.parseArrays) {\n    obj = utils.combine([], leaf);  // Sin verificaci\u00f3n de arrayLimit\n}\n\nC\u00f3digo funcional (lib/parse.js:175):\n\nelse if (index <= options.arrayLimit) {  // L\u00edmite verificado aqu\u00ed\n    obj = [];\n    obj[index] = leaf;\n}\n\nEl manejador de notaci\u00f3n de corchetes en la l\u00ednea 159 utiliza utils.combine([], leaf) sin validar contra options.arrayLimit, mientras que la notaci\u00f3n indexada en la l\u00ednea 175 verifica index <= options.arrayLimit antes de crear arreglos.\n\nPoC\nPrueba 1 - Omisi\u00f3n b\u00e1sica:\n\nnpm install qs\n\nconst qs = require('qs');\nconst result = qs.parse('a[]=1&a[]=2&a[]=3&a[]=4&a[]=5&a[]=6', { arrayLimit: 5 });\nconsole.log(result.a.length);  // Salida: 6 (deber\u00eda ser m\u00e1ximo 5)\n\nPrueba 2 - Demostraci\u00f3n de DoS:\n\nconst qs = require('qs');\nconst attack = 'a[]=' + Array(10000).fill('x').join('&a[]=');\nconst result = qs.parse(attack, { arrayLimit: 100 });\nconsole.log(result.a.length);  // Salida: 10000 (deber\u00eda ser m\u00e1ximo 100)\n\nConfiguraci\u00f3n:\n\n  *  arrayLimit: 5 (prueba 1) o arrayLimit: 100 (prueba 2)\n  *  Usar notaci\u00f3n de corchetes: a[]=value (no indexada a[0]=value)\n\nImpacto\nDenegaci\u00f3n de servicio mediante agotamiento de memoria. Afecta a las aplicaciones que utilizan qs.parse() con entrada controlada por el usuario y arrayLimit para protecci\u00f3n.\n\nEscenario de ataque:\n\n  *  El atacante env\u00eda una solicitud HTTP: GET /api/search?filters[]=x&filters[]=x&...&filters[]=x (m\u00e1s de 100,000 veces)\n  *  La aplicaci\u00f3n analiza con qs.parse(query, { arrayLimit: 100 })\n  *  qs ignora el l\u00edmite, analiza los 100,000 elementos en un arreglo\n  *  Memoria del servidor agotada ? la aplicaci\u00f3n falla o deja de responder\n  *  Servicio no disponible para todos los usuarios\nImpacto en el mundo real:\n\n  *  Una \u00fanica solicitud maliciosa puede colapsar el servidor\n  *  No se requiere autenticaci\u00f3n\n  *  F\u00e1cil de automatizar y escalar\n  *  Afecta a cualquier endpoint que analice cadenas de consulta con notaci\u00f3n de corchetes"
       },
       "references": [
@@ -10348,28 +10370,6 @@
         "https://github.com/nodeca/js-yaml/issues/730#issuecomment-3549635876",
         "https://github.com/nodeca/js-yaml/security/advisories/GHSA-mh29-5h37-fv8m",
         "https://github.com/advisories/GHSA-mh29-5h37-fv8m"
-      ]
-    },
-    {
-      "id": "nodejs-goof:CVE-2026-41907:uuid:3.3.2",
-      "cve": "CVE-2026-41907",
-      "package": "uuid",
-      "ecosystem": "npm",
-      "installed_version": "3.3.2",
-      "fixed_version": "11.1.1",
-      "app": "nodejs-goof",
-      "cvss": 7.5,
-      "epss": 0.00363,
-      "in_kev": false,
-      "kev_date_added": null,
-      "priority_score": 19,
-      "priority_label": "low",
-      "summary": {
-        "en": "uuid is for the creation of RFC9562 (formerly RFC4122) UUIDs. Prior to 14.0.0, v3, v5, and v6 accept external output buffers but do not reject out-of-range writes (small buf or large offset). This allows silent partial writes into caller-provided buffers. This vulnerability is fixed in 14.0.0.",
-        "es": "uuid es para la creaci\u00f3n de UUIDs RFC9562 (anteriormente RFC4122). Antes de la 14.0.0, v3, v5 y v6 aceptan b\u00faferes de salida externos pero no rechazan escrituras fuera de rango (b\u00fafer peque\u00f1o o desplazamiento grande). Esto permite escrituras parciales silenciosas en b\u00faferes proporcionados por el llamador. Esta vulnerabilidad est\u00e1 corregida en la 14.0.0."
-      },
-      "references": [
-        "https://github.com/uuidjs/uuid/security/advisories/GHSA-w5hq-g745-h8pq"
       ]
     },
     {
@@ -10701,6 +10701,54 @@
       ]
     },
     {
+      "id": "nodejs-goof:CVE-2026-33916:handlebars:4.0.11",
+      "cve": "CVE-2026-33916",
+      "package": "handlebars",
+      "ecosystem": "npm",
+      "installed_version": "4.0.11",
+      "fixed_version": "4.7.9",
+      "app": "nodejs-goof",
+      "cvss": 4.7,
+      "epss": 0.00332,
+      "in_kev": false,
+      "kev_date_added": null,
+      "priority_score": 12,
+      "priority_label": "low",
+      "summary": {
+        "en": "Handlebars provides the power necessary to let users build semantic templates. In versions 4.0.0 through 4.7.8, `resolvePartial()` in the Handlebars runtime resolves partial names via a plain property lookup on `options.partials` without guarding against prototype-chain traversal. When `Object.prototype` has been polluted with a string value whose key matches a partial reference in a template, the polluted string is used as the partial body and rendered without HTML escaping, resulting in reflected or stored XSS. Version 4.7.9 fixes the issue. Some workarounds are available. Apply `Object.freeze(Object.prototype)` early in application startup to prevent prototype  pollution. Note: this may break other libraries, and/or use the Handlebars runtime-only build (`handlebars/runtime`), which does not compile templates  and reduces the attack surface.",
+        "es": "Handlebars proporciona la potencia necesaria para permitir a los usuarios construir plantillas sem\u00e1nticas. En las versiones 4.0.0 a 4.7.8, \u201cresolvePartial()\u201d en el tiempo de ejecuci\u00f3n de Handlebars resuelve nombres de parciales a trav\u00e9s de una b\u00fasqueda de propiedad simple en \u201coptions.partials\u201d sin proteger contra el recorrido de la cadena de prototipos. Cuando \u201cObject.prototype\u201d ha sido contaminado con un valor de cadena cuya clave coincide con una referencia de parcial en una plantilla, la cadena contaminada se utiliza como cuerpo del parcial y se renderiza sin escape HTML, lo que resulta en XSS reflejado o almacenado. La versi\u00f3n 4.7.9 corrige el problema. Algunas soluciones alternativas est\u00e1n disponibles. Aplique \u201cObject.freeze(Object.prototype)\u201d al principio del inicio de la aplicaci\u00f3n para evitar la contaminaci\u00f3n de prototipos. Nota: esto puede romper otras bibliotecas, y/o use la compilaci\u00f3n solo en tiempo de ejecuci\u00f3n de Handlebars (\u201chandlebars/runtime\u201d), que no compila plantillas y reduce la superficie de ataque."
+      },
+      "references": [
+        "https://github.com/handlebars-lang/handlebars.js/commit/68d8df5a88e0a26fe9e6084c5c6aaebe67b07da2",
+        "https://github.com/handlebars-lang/handlebars.js/releases/tag/v4.7.9",
+        "https://github.com/handlebars-lang/handlebars.js/security/advisories/GHSA-2qvq-rjwj-gvw9"
+      ]
+    },
+    {
+      "id": "nodejs-goof:CVE-2026-33916:handlebars:4.0.14",
+      "cve": "CVE-2026-33916",
+      "package": "handlebars",
+      "ecosystem": "npm",
+      "installed_version": "4.0.14",
+      "fixed_version": "4.7.9",
+      "app": "nodejs-goof",
+      "cvss": 4.7,
+      "epss": 0.00332,
+      "in_kev": false,
+      "kev_date_added": null,
+      "priority_score": 12,
+      "priority_label": "low",
+      "summary": {
+        "en": "Handlebars provides the power necessary to let users build semantic templates. In versions 4.0.0 through 4.7.8, `resolvePartial()` in the Handlebars runtime resolves partial names via a plain property lookup on `options.partials` without guarding against prototype-chain traversal. When `Object.prototype` has been polluted with a string value whose key matches a partial reference in a template, the polluted string is used as the partial body and rendered without HTML escaping, resulting in reflected or stored XSS. Version 4.7.9 fixes the issue. Some workarounds are available. Apply `Object.freeze(Object.prototype)` early in application startup to prevent prototype  pollution. Note: this may break other libraries, and/or use the Handlebars runtime-only build (`handlebars/runtime`), which does not compile templates  and reduces the attack surface.",
+        "es": "Handlebars proporciona la potencia necesaria para permitir a los usuarios construir plantillas sem\u00e1nticas. En las versiones 4.0.0 a 4.7.8, \u201cresolvePartial()\u201d en el tiempo de ejecuci\u00f3n de Handlebars resuelve nombres de parciales a trav\u00e9s de una b\u00fasqueda de propiedad simple en \u201coptions.partials\u201d sin proteger contra el recorrido de la cadena de prototipos. Cuando \u201cObject.prototype\u201d ha sido contaminado con un valor de cadena cuya clave coincide con una referencia de parcial en una plantilla, la cadena contaminada se utiliza como cuerpo del parcial y se renderiza sin escape HTML, lo que resulta en XSS reflejado o almacenado. La versi\u00f3n 4.7.9 corrige el problema. Algunas soluciones alternativas est\u00e1n disponibles. Aplique \u201cObject.freeze(Object.prototype)\u201d al principio del inicio de la aplicaci\u00f3n para evitar la contaminaci\u00f3n de prototipos. Nota: esto puede romper otras bibliotecas, y/o use la compilaci\u00f3n solo en tiempo de ejecuci\u00f3n de Handlebars (\u201chandlebars/runtime\u201d), que no compila plantillas y reduce la superficie de ataque."
+      },
+      "references": [
+        "https://github.com/handlebars-lang/handlebars.js/commit/68d8df5a88e0a26fe9e6084c5c6aaebe67b07da2",
+        "https://github.com/handlebars-lang/handlebars.js/releases/tag/v4.7.9",
+        "https://github.com/handlebars-lang/handlebars.js/security/advisories/GHSA-2qvq-rjwj-gvw9"
+      ]
+    },
+    {
       "id": "nodejs-goof:CVE-2025-5889:brace-expansion:1.1.11",
       "cve": "CVE-2025-5889",
       "package": "brace-expansion",
@@ -10796,54 +10844,6 @@
         "https://github.com/handlebars-lang/handlebars.js/pull/2185",
         "https://github.com/handlebars-lang/handlebars.js/releases/tag/v4.7.10",
         "https://github.com/handlebars-lang/handlebars.js/security/advisories/GHSA-xw65-4hp5-5hc7"
-      ]
-    },
-    {
-      "id": "nodejs-goof:CVE-2026-33916:handlebars:4.0.11",
-      "cve": "CVE-2026-33916",
-      "package": "handlebars",
-      "ecosystem": "npm",
-      "installed_version": "4.0.11",
-      "fixed_version": "4.7.9",
-      "app": "nodejs-goof",
-      "cvss": 4.7,
-      "epss": 0.00286,
-      "in_kev": false,
-      "kev_date_added": null,
-      "priority_score": 12,
-      "priority_label": "low",
-      "summary": {
-        "en": "Handlebars provides the power necessary to let users build semantic templates. In versions 4.0.0 through 4.7.8, `resolvePartial()` in the Handlebars runtime resolves partial names via a plain property lookup on `options.partials` without guarding against prototype-chain traversal. When `Object.prototype` has been polluted with a string value whose key matches a partial reference in a template, the polluted string is used as the partial body and rendered without HTML escaping, resulting in reflected or stored XSS. Version 4.7.9 fixes the issue. Some workarounds are available. Apply `Object.freeze(Object.prototype)` early in application startup to prevent prototype  pollution. Note: this may break other libraries, and/or use the Handlebars runtime-only build (`handlebars/runtime`), which does not compile templates  and reduces the attack surface.",
-        "es": "Handlebars proporciona la potencia necesaria para permitir a los usuarios construir plantillas sem\u00e1nticas. En las versiones 4.0.0 a 4.7.8, \u201cresolvePartial()\u201d en el tiempo de ejecuci\u00f3n de Handlebars resuelve nombres de parciales a trav\u00e9s de una b\u00fasqueda de propiedad simple en \u201coptions.partials\u201d sin proteger contra el recorrido de la cadena de prototipos. Cuando \u201cObject.prototype\u201d ha sido contaminado con un valor de cadena cuya clave coincide con una referencia de parcial en una plantilla, la cadena contaminada se utiliza como cuerpo del parcial y se renderiza sin escape HTML, lo que resulta en XSS reflejado o almacenado. La versi\u00f3n 4.7.9 corrige el problema. Algunas soluciones alternativas est\u00e1n disponibles. Aplique \u201cObject.freeze(Object.prototype)\u201d al principio del inicio de la aplicaci\u00f3n para evitar la contaminaci\u00f3n de prototipos. Nota: esto puede romper otras bibliotecas, y/o use la compilaci\u00f3n solo en tiempo de ejecuci\u00f3n de Handlebars (\u201chandlebars/runtime\u201d), que no compila plantillas y reduce la superficie de ataque."
-      },
-      "references": [
-        "https://github.com/handlebars-lang/handlebars.js/commit/68d8df5a88e0a26fe9e6084c5c6aaebe67b07da2",
-        "https://github.com/handlebars-lang/handlebars.js/releases/tag/v4.7.9",
-        "https://github.com/handlebars-lang/handlebars.js/security/advisories/GHSA-2qvq-rjwj-gvw9"
-      ]
-    },
-    {
-      "id": "nodejs-goof:CVE-2026-33916:handlebars:4.0.14",
-      "cve": "CVE-2026-33916",
-      "package": "handlebars",
-      "ecosystem": "npm",
-      "installed_version": "4.0.14",
-      "fixed_version": "4.7.9",
-      "app": "nodejs-goof",
-      "cvss": 4.7,
-      "epss": 0.00286,
-      "in_kev": false,
-      "kev_date_added": null,
-      "priority_score": 12,
-      "priority_label": "low",
-      "summary": {
-        "en": "Handlebars provides the power necessary to let users build semantic templates. In versions 4.0.0 through 4.7.8, `resolvePartial()` in the Handlebars runtime resolves partial names via a plain property lookup on `options.partials` without guarding against prototype-chain traversal. When `Object.prototype` has been polluted with a string value whose key matches a partial reference in a template, the polluted string is used as the partial body and rendered without HTML escaping, resulting in reflected or stored XSS. Version 4.7.9 fixes the issue. Some workarounds are available. Apply `Object.freeze(Object.prototype)` early in application startup to prevent prototype  pollution. Note: this may break other libraries, and/or use the Handlebars runtime-only build (`handlebars/runtime`), which does not compile templates  and reduces the attack surface.",
-        "es": "Handlebars proporciona la potencia necesaria para permitir a los usuarios construir plantillas sem\u00e1nticas. En las versiones 4.0.0 a 4.7.8, \u201cresolvePartial()\u201d en el tiempo de ejecuci\u00f3n de Handlebars resuelve nombres de parciales a trav\u00e9s de una b\u00fasqueda de propiedad simple en \u201coptions.partials\u201d sin proteger contra el recorrido de la cadena de prototipos. Cuando \u201cObject.prototype\u201d ha sido contaminado con un valor de cadena cuya clave coincide con una referencia de parcial en una plantilla, la cadena contaminada se utiliza como cuerpo del parcial y se renderiza sin escape HTML, lo que resulta en XSS reflejado o almacenado. La versi\u00f3n 4.7.9 corrige el problema. Algunas soluciones alternativas est\u00e1n disponibles. Aplique \u201cObject.freeze(Object.prototype)\u201d al principio del inicio de la aplicaci\u00f3n para evitar la contaminaci\u00f3n de prototipos. Nota: esto puede romper otras bibliotecas, y/o use la compilaci\u00f3n solo en tiempo de ejecuci\u00f3n de Handlebars (\u201chandlebars/runtime\u201d), que no compila plantillas y reduce la superficie de ataque."
-      },
-      "references": [
-        "https://github.com/handlebars-lang/handlebars.js/commit/68d8df5a88e0a26fe9e6084c5c6aaebe67b07da2",
-        "https://github.com/handlebars-lang/handlebars.js/releases/tag/v4.7.9",
-        "https://github.com/handlebars-lang/handlebars.js/security/advisories/GHSA-2qvq-rjwj-gvw9"
       ]
     },
     {
@@ -10967,12 +10967,6 @@
     }
   ],
   "history": [
-    {
-      "date": "2026-10-20",
-      "findings_total": 343,
-      "critical": 4,
-      "high": 3
-    },
     {
       "date": "2026-10-21",
       "findings_total": 352,
@@ -11143,6 +11137,12 @@
     },
     {
       "date": "2026-11-22",
+      "findings_total": 394,
+      "critical": 3,
+      "high": 3
+    },
+    {
+      "date": "2026-11-23",
       "findings_total": 394,
       "critical": 3,
       "high": 3

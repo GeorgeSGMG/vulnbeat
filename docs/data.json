@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-11-23T17:44:04.399911+00:00",
+  "generated_at": "2026-11-24T17:15:38.739460+00:00",
   "sources": {
     "kev": {
       "fetched": true,
@@ -97,7 +97,7 @@
       "fixed_version": "4.2.24",
       "app": "pygoat",
       "cvss": 7.1,
-      "epss": 0.2653,
+      "epss": 0.27058,
       "in_kev": false,
       "kev_date_added": null,
       "priority_score": 38,
@@ -904,7 +904,7 @@
       "package": "django",
       "ecosystem": "PyPI",
       "installed_version": "4.2",
-      "fixed_version": "4.2.11",
+      "fixed_version": "3.2.25",
       "app": "pygoat",
       "cvss": 5.3,
       "epss": 0.01854,
@@ -938,7 +938,7 @@
       "package": "django",
       "ecosystem": "PyPI",
       "installed_version": "4.2",
-      "fixed_version": "3.2.25",
+      "fixed_version": "4.2.11",
       "app": "pygoat",
       "cvss": 5.3,
       "epss": 0.01854,
@@ -1521,7 +1521,7 @@
       "fixed_version": "4.2.30",
       "app": "pygoat",
       "cvss": 7.5,
-      "epss": 0.00799,
+      "epss": 0.00816,
       "in_kev": false,
       "kev_date_added": null,
       "priority_score": 19,
@@ -1793,7 +1793,7 @@
       "fixed_version": "4.2.30",
       "app": "pygoat",
       "cvss": 6.5,
-      "epss": 0.00913,
+      "epss": 0.00933,
       "in_kev": false,
       "kev_date_added": null,
       "priority_score": 17,
@@ -1928,29 +1928,6 @@
       ]
     },
     {
-      "id": "pygoat:CVE-2026-112402:pillow:12.1.0",
-      "cve": "CVE-2026-112402",
-      "package": "pillow",
-      "ecosystem": "PyPI",
-      "installed_version": "12.1.0",
-      "fixed_version": "13.0.0",
-      "app": "pygoat",
-      "cvss": 7.5,
-      "epss": 0.00594,
-      "in_kev": false,
-      "kev_date_added": null,
-      "priority_score": 19,
-      "priority_label": "low",
-      "summary": {
-        "en": "Pillow is a Python imaging library. Prior to 13.0.0, Pillow can double free image memory when ImagingScaleAffine encounters a selective allocation failure. The affected fast path handles Transform.EXTENT or pure scale-and-translate Transform.AFFINE operations with the default NEAREST resampling. The output image allocation must succeed while the additional per-column lookup allocation fails, after which the error path deletes image storage that later cleanup releases again. An attacker who can drive such a large Image.transform() operation under memory pressure may trigger the failure. This can crash the process and may corrupt memory. This issue is fixed in version 13.0.0."
-      },
-      "references": [
-        "https://github.com/python-pillow/Pillow/commit/aafa6c75f7cdabb9f409a8aac7c780bea31d08d9",
-        "https://github.com/python-pillow/Pillow/releases/tag/13.0.0",
-        "https://github.com/python-pillow/Pillow/security/advisories/GHSA-7mwm-ghpf-9vrm"
-      ]
-    },
-    {
       "id": "pygoat:CVE-2026-112894:pillow:12.1.0",
       "cve": "CVE-2026-112894",
       "package": "pillow",
@@ -1994,6 +1971,29 @@
         "https://github.com/python-pillow/Pillow/commit/e2ae7eacad6de68c37eb28b633a97bebacf2c5bf",
         "https://github.com/python-pillow/Pillow/releases/tag/13.0.0",
         "https://github.com/python-pillow/Pillow/security/advisories/GHSA-p4wg-p73j-c528"
+      ]
+    },
+    {
+      "id": "pygoat:CVE-2026-112402:pillow:12.1.0",
+      "cve": "CVE-2026-112402",
+      "package": "pillow",
+      "ecosystem": "PyPI",
+      "installed_version": "12.1.0",
+      "fixed_version": "13.0.0",
+      "app": "pygoat",
+      "cvss": 7.5,
+      "epss": 0.00594,
+      "in_kev": false,
+      "kev_date_added": null,
+      "priority_score": 19,
+      "priority_label": "low",
+      "summary": {
+        "en": "Pillow is a Python imaging library. Prior to 13.0.0, Pillow can double free image memory when ImagingScaleAffine encounters a selective allocation failure. The affected fast path handles Transform.EXTENT or pure scale-and-translate Transform.AFFINE operations with the default NEAREST resampling. The output image allocation must succeed while the additional per-column lookup allocation fails, after which the error path deletes image storage that later cleanup releases again. An attacker who can drive such a large Image.transform() operation under memory pressure may trigger the failure. This can crash the process and may corrupt memory. This issue is fixed in version 13.0.0."
+      },
+      "references": [
+        "https://github.com/python-pillow/Pillow/commit/aafa6c75f7cdabb9f409a8aac7c780bea31d08d9",
+        "https://github.com/python-pillow/Pillow/releases/tag/13.0.0",
+        "https://github.com/python-pillow/Pillow/security/advisories/GHSA-7mwm-ghpf-9vrm"
       ]
     },
     {
@@ -2245,29 +2245,6 @@
       ]
     },
     {
-      "id": "pygoat:CVE-2026-112397:pillow:12.1.0",
-      "cve": "CVE-2026-112397",
-      "package": "pillow",
-      "ecosystem": "PyPI",
-      "installed_version": "12.1.0",
-      "fixed_version": "13.0.0",
-      "app": "pygoat",
-      "cvss": 7.5,
-      "epss": 0.00532,
-      "in_kev": false,
-      "kev_date_added": null,
-      "priority_score": 19,
-      "priority_label": "low",
-      "summary": {
-        "en": "Pillow is a Python imaging library. Prior to 13.0.0, Pillow's ImageMorph.MorphOp.apply() can access memory before a row buffer for a zero-width image. PPM and PGM input can create an image with width zero, and the native morphology routine indexes outrow[width - 1] without rejecting that geometry. An attacker can supply such an image to an application that applies a morphology operation. This can crash the process. This issue is fixed in version 13.0.0."
-      },
-      "references": [
-        "https://github.com/python-pillow/Pillow/commit/18f7c0dfee93063c51db6ed0ca8c4da2999dcb64",
-        "https://github.com/python-pillow/Pillow/releases/tag/13.0.0",
-        "https://github.com/python-pillow/Pillow/security/advisories/GHSA-58r4-6rv3-gfh8"
-      ]
-    },
-    {
       "id": "pygoat:CVE-2026-112405:pillow:12.1.0",
       "cve": "CVE-2026-112405",
       "package": "pillow",
@@ -2288,6 +2265,29 @@
         "https://github.com/python-pillow/Pillow/commit/b6ee66e8b2c2c0932bdf65f963268d9f2927ef86",
         "https://github.com/python-pillow/Pillow/releases/tag/13.0.0",
         "https://github.com/python-pillow/Pillow/security/advisories/GHSA-cp9v-662q-vvx9"
+      ]
+    },
+    {
+      "id": "pygoat:CVE-2026-112397:pillow:12.1.0",
+      "cve": "CVE-2026-112397",
+      "package": "pillow",
+      "ecosystem": "PyPI",
+      "installed_version": "12.1.0",
+      "fixed_version": "13.0.0",
+      "app": "pygoat",
+      "cvss": 7.5,
+      "epss": 0.00532,
+      "in_kev": false,
+      "kev_date_added": null,
+      "priority_score": 19,
+      "priority_label": "low",
+      "summary": {
+        "en": "Pillow is a Python imaging library. Prior to 13.0.0, Pillow's ImageMorph.MorphOp.apply() can access memory before a row buffer for a zero-width image. PPM and PGM input can create an image with width zero, and the native morphology routine indexes outrow[width - 1] without rejecting that geometry. An attacker can supply such an image to an application that applies a morphology operation. This can crash the process. This issue is fixed in version 13.0.0."
+      },
+      "references": [
+        "https://github.com/python-pillow/Pillow/commit/18f7c0dfee93063c51db6ed0ca8c4da2999dcb64",
+        "https://github.com/python-pillow/Pillow/releases/tag/13.0.0",
+        "https://github.com/python-pillow/Pillow/security/advisories/GHSA-58r4-6rv3-gfh8"
       ]
     },
     {
@@ -2806,7 +2806,7 @@
       "fixed_version": "4.2.30",
       "app": "pygoat",
       "cvss": 7.5,
-      "epss": 0.00443,
+      "epss": 0.00453,
       "in_kev": false,
       "kev_date_added": null,
       "priority_score": 19,
@@ -3318,31 +3318,6 @@
       ]
     },
     {
-      "id": "pygoat:CVE-2026-59200:pillow:12.1.0",
-      "cve": "CVE-2026-59200",
-      "package": "pillow",
-      "ecosystem": "PyPI",
-      "installed_version": "12.1.0",
-      "fixed_version": "12.3.0",
-      "app": "pygoat",
-      "cvss": 7.5,
-      "epss": 0.00385,
-      "in_kev": false,
-      "kev_date_added": null,
-      "priority_score": 19,
-      "priority_label": "low",
-      "summary": {
-        "en": "Pillow is a Python imaging library. From 5.1.0 until 12.3.0, PdfParser.PdfStream.decode() in PIL/PdfParser.py calls zlib.decompress() with bufsize set to the PDF stream Length field without bounding the decompressed output size, allowing a crafted FlateDecode PDF stream to exhaust memory from a small file. This issue is fixed in version 12.3.0.",
-        "es": "Pillow es una biblioteca de im\u00e1genes de Python. Desde la versi\u00f3n 5.1.0 hasta la 12.3.0, PdfParser.PdfStream.decode() en PIL/PdfParser.py llama a zlib.decompress() con bufsize establecido al campo Length del flujo PDF sin limitar el tama\u00f1o de salida descomprimido, permitiendo que un flujo PDF FlateDecode manipulado agote la memoria desde un archivo peque\u00f1o. Este problema est\u00e1 solucionado en la versi\u00f3n 12.3.0."
-      },
-      "references": [
-        "https://github.com/python-pillow/Pillow/commit/f7a31ea75e460e108c37126da1f47812f21f6b09",
-        "https://github.com/python-pillow/Pillow/pull/9718",
-        "https://github.com/python-pillow/Pillow/releases/tag/12.3.0",
-        "https://github.com/python-pillow/Pillow/security/advisories/GHSA-jjj6-mw9f-p565"
-      ]
-    },
-    {
       "id": "pygoat:CVE-2026-59205:pillow:12.1.0",
       "cve": "CVE-2026-59205",
       "package": "pillow",
@@ -3365,6 +3340,31 @@
         "https://github.com/python-pillow/Pillow/pull/9715",
         "https://github.com/python-pillow/Pillow/releases/tag/12.3.0",
         "https://github.com/python-pillow/Pillow/security/advisories/GHSA-9hw9-ch79-4vh6"
+      ]
+    },
+    {
+      "id": "pygoat:CVE-2026-59200:pillow:12.1.0",
+      "cve": "CVE-2026-59200",
+      "package": "pillow",
+      "ecosystem": "PyPI",
+      "installed_version": "12.1.0",
+      "fixed_version": "12.3.0",
+      "app": "pygoat",
+      "cvss": 7.5,
+      "epss": 0.00385,
+      "in_kev": false,
+      "kev_date_added": null,
+      "priority_score": 19,
+      "priority_label": "low",
+      "summary": {
+        "en": "Pillow is a Python imaging library. From 5.1.0 until 12.3.0, PdfParser.PdfStream.decode() in PIL/PdfParser.py calls zlib.decompress() with bufsize set to the PDF stream Length field without bounding the decompressed output size, allowing a crafted FlateDecode PDF stream to exhaust memory from a small file. This issue is fixed in version 12.3.0.",
+        "es": "Pillow es una biblioteca de im\u00e1genes de Python. Desde la versi\u00f3n 5.1.0 hasta la 12.3.0, PdfParser.PdfStream.decode() en PIL/PdfParser.py llama a zlib.decompress() con bufsize establecido al campo Length del flujo PDF sin limitar el tama\u00f1o de salida descomprimido, permitiendo que un flujo PDF FlateDecode manipulado agote la memoria desde un archivo peque\u00f1o. Este problema est\u00e1 solucionado en la versi\u00f3n 12.3.0."
+      },
+      "references": [
+        "https://github.com/python-pillow/Pillow/commit/f7a31ea75e460e108c37126da1f47812f21f6b09",
+        "https://github.com/python-pillow/Pillow/pull/9718",
+        "https://github.com/python-pillow/Pillow/releases/tag/12.3.0",
+        "https://github.com/python-pillow/Pillow/security/advisories/GHSA-jjj6-mw9f-p565"
       ]
     },
     {
@@ -3580,6 +3580,29 @@
       ]
     },
     {
+      "id": "pygoat:CVE-2026-102268:pyjwt:2.4.0",
+      "cve": "CVE-2026-102268",
+      "package": "pyjwt",
+      "ecosystem": "PyPI",
+      "installed_version": "2.4.0",
+      "fixed_version": "2.14.0",
+      "app": "pygoat",
+      "cvss": 9.1,
+      "epss": 0.00266,
+      "in_kev": false,
+      "kev_date_added": null,
+      "priority_score": 23,
+      "priority_label": "medium",
+      "summary": {
+        "en": "PyJWT is a Python implementation of JSON Web Token standards. Prior to 2.14.0, is_pem_format in jwt/utils.py is affected because is_pem_format does not recognize every PEM representation accepted by the cryptography loader. This occurs when an application mixes HMAC and asymmetric algorithms and supplies a mutated public-key PEM as raw key bytes. As a result, HMACAlgorithm.prepare_key treats the unrecognized asymmetric public key as an HMAC secret. Consequently, an attacker who knows the public key can forge authenticated HMAC tokens. This issue is fixed in version 2.14.0."
+      },
+      "references": [
+        "https://github.com/jpadilla/pyjwt/commit/8b4e233a22206b34ec1186e912e75c0b2396ac07",
+        "https://github.com/jpadilla/pyjwt/releases/tag/2.14.0",
+        "https://github.com/jpadilla/pyjwt/security/advisories/GHSA-ffc3-869f-jxw9"
+      ]
+    },
+    {
       "id": "pygoat:CVE-2026-44431:urllib3:1.26.9",
       "cve": "CVE-2026-44431",
       "package": "urllib3",
@@ -3728,29 +3751,6 @@
       ]
     },
     {
-      "id": "pygoat:CVE-2026-102268:pyjwt:2.4.0",
-      "cve": "CVE-2026-102268",
-      "package": "pyjwt",
-      "ecosystem": "PyPI",
-      "installed_version": "2.4.0",
-      "fixed_version": "2.14.0",
-      "app": "pygoat",
-      "cvss": 9.1,
-      "epss": 0.00266,
-      "in_kev": false,
-      "kev_date_added": null,
-      "priority_score": 23,
-      "priority_label": "medium",
-      "summary": {
-        "en": "PyJWT is a Python implementation of JSON Web Token standards. Prior to 2.14.0, is_pem_format in jwt/utils.py is affected because is_pem_format does not recognize every PEM representation accepted by the cryptography loader. This occurs when an application mixes HMAC and asymmetric algorithms and supplies a mutated public-key PEM as raw key bytes. As a result, HMACAlgorithm.prepare_key treats the unrecognized asymmetric public key as an HMAC secret. Consequently, an attacker who knows the public key can forge authenticated HMAC tokens. This issue is fixed in version 2.14.0."
-      },
-      "references": [
-        "https://github.com/jpadilla/pyjwt/commit/8b4e233a22206b34ec1186e912e75c0b2396ac07",
-        "https://github.com/jpadilla/pyjwt/releases/tag/2.14.0",
-        "https://github.com/jpadilla/pyjwt/security/advisories/GHSA-ffc3-869f-jxw9"
-      ]
-    },
-    {
       "id": "pygoat:CVE-2026-71491:sqlparse:0.3.1",
       "cve": "CVE-2026-71491",
       "package": "sqlparse",
@@ -3771,53 +3771,6 @@
       "references": [
         "https://github.com/andialbrecht/sqlparse/commit/ef2012a5eeb491e604dea2b00d516904a3830c87",
         "https://github.com/andialbrecht/sqlparse/security/advisories/GHSA-f2ff-p2ww-7p4p"
-      ]
-    },
-    {
-      "id": "pygoat:CVE-2026-101918:pyjwt:2.4.0",
-      "cve": "CVE-2026-101918",
-      "package": "pyjwt",
-      "ecosystem": "PyPI",
-      "installed_version": "2.4.0",
-      "fixed_version": "2.15.0",
-      "app": "pygoat",
-      "cvss": 5.3,
-      "epss": 0.00354,
-      "in_kev": false,
-      "kev_date_added": null,
-      "priority_score": 14,
-      "priority_label": "low",
-      "summary": {
-        "en": "PyJWT is a Python implementation of JSON Web Token standards. From 2.0.0a1 until 2.15.0, PyJWT PyJWKClient.get_signing_key_from_jwt is affected because payload parser catches ValueError but not RecursionError. This occurs when an attacker-controlled recursively nested payload reaches json.loads. As a result, documented PyJWT exception handling does not contain the failure. Consequently, an unauthenticated request can raise an exception that may produce an HTTP 500 response. The advisory-defined affected implementation also includes jwt/api_jwt.py, verify_signature=False. This issue is fixed in version 2.15.0."
-      },
-      "references": [
-        "https://github.com/jpadilla/pyjwt/commit/5fde08a6cf906aa7698de2d6391d88b73006b17b",
-        "https://github.com/jpadilla/pyjwt/releases/tag/2.15.0",
-        "https://github.com/jpadilla/pyjwt/security/advisories/GHSA-42vr-xj54-vc7v"
-      ]
-    },
-    {
-      "id": "pygoat:CVE-2026-96638:pillow:12.1.0",
-      "cve": "CVE-2026-96638",
-      "package": "pillow",
-      "ecosystem": "PyPI",
-      "installed_version": "12.1.0",
-      "fixed_version": "13.0.0",
-      "app": "pygoat",
-      "cvss": 6.5,
-      "epss": 0.00364,
-      "in_kev": false,
-      "kev_date_added": null,
-      "priority_score": 17,
-      "priority_label": "low",
-      "summary": {
-        "en": "Pillow is a Python imaging library. From 9.1.0 until 13.0.0, BmpRleDecoder.decode() in src/PIL/BmpImagePlugin.py permits crafted RLE BMP delta escapes and absolute-mode runs to append beyond the remaining dest_length without a per-branch cap. A delta can add roughly 255 image rows in one iteration, so a kilobyte-sized file with a large but permitted width can expand the data bytearray to hundreds of megabytes or more, causing memory-exhaustion denial of service. This issue is fixed in version 13.0.0."
-      },
-      "references": [
-        "https://github.com/python-pillow/Pillow/commit/e7794835e323ff2691d9b3a974cade1a44301b9a",
-        "https://github.com/python-pillow/Pillow/pull/10015",
-        "https://github.com/python-pillow/Pillow/releases/tag/13.0.0",
-        "https://github.com/python-pillow/Pillow/security/advisories/GHSA-24rc-8hj2-v98c"
       ]
     },
     {
@@ -3842,6 +3795,30 @@
         "https://github.com/python-pillow/Pillow/pull/10011",
         "https://github.com/python-pillow/Pillow/releases/tag/13.0.0",
         "https://github.com/python-pillow/Pillow/security/advisories/GHSA-p8hx-v2p6-rp84"
+      ]
+    },
+    {
+      "id": "pygoat:CVE-2026-96638:pillow:12.1.0",
+      "cve": "CVE-2026-96638",
+      "package": "pillow",
+      "ecosystem": "PyPI",
+      "installed_version": "12.1.0",
+      "fixed_version": "13.0.0",
+      "app": "pygoat",
+      "cvss": 6.5,
+      "epss": 0.00364,
+      "in_kev": false,
+      "kev_date_added": null,
+      "priority_score": 17,
+      "priority_label": "low",
+      "summary": {
+        "en": "Pillow is a Python imaging library. From 9.1.0 until 13.0.0, BmpRleDecoder.decode() in src/PIL/BmpImagePlugin.py permits crafted RLE BMP delta escapes and absolute-mode runs to append beyond the remaining dest_length without a per-branch cap. A delta can add roughly 255 image rows in one iteration, so a kilobyte-sized file with a large but permitted width can expand the data bytearray to hundreds of megabytes or more, causing memory-exhaustion denial of service. This issue is fixed in version 13.0.0."
+      },
+      "references": [
+        "https://github.com/python-pillow/Pillow/commit/e7794835e323ff2691d9b3a974cade1a44301b9a",
+        "https://github.com/python-pillow/Pillow/pull/10015",
+        "https://github.com/python-pillow/Pillow/releases/tag/13.0.0",
+        "https://github.com/python-pillow/Pillow/security/advisories/GHSA-24rc-8hj2-v98c"
       ]
     },
     {
@@ -3964,6 +3941,29 @@
         "https://github.com/urllib3/urllib3/pull/5093",
         "https://github.com/urllib3/urllib3/releases/tag/2.8.0",
         "https://github.com/urllib3/urllib3/security/advisories/GHSA-8988-9cw3-xx77"
+      ]
+    },
+    {
+      "id": "pygoat:CVE-2026-101918:pyjwt:2.4.0",
+      "cve": "CVE-2026-101918",
+      "package": "pyjwt",
+      "ecosystem": "PyPI",
+      "installed_version": "2.4.0",
+      "fixed_version": "2.15.0",
+      "app": "pygoat",
+      "cvss": 5.3,
+      "epss": 0.00354,
+      "in_kev": false,
+      "kev_date_added": null,
+      "priority_score": 14,
+      "priority_label": "low",
+      "summary": {
+        "en": "PyJWT is a Python implementation of JSON Web Token standards. From 2.0.0a1 until 2.15.0, PyJWT PyJWKClient.get_signing_key_from_jwt is affected because payload parser catches ValueError but not RecursionError. This occurs when an attacker-controlled recursively nested payload reaches json.loads. As a result, documented PyJWT exception handling does not contain the failure. Consequently, an unauthenticated request can raise an exception that may produce an HTTP 500 response. The advisory-defined affected implementation also includes jwt/api_jwt.py, verify_signature=False. This issue is fixed in version 2.15.0."
+      },
+      "references": [
+        "https://github.com/jpadilla/pyjwt/commit/5fde08a6cf906aa7698de2d6391d88b73006b17b",
+        "https://github.com/jpadilla/pyjwt/releases/tag/2.15.0",
+        "https://github.com/jpadilla/pyjwt/security/advisories/GHSA-42vr-xj54-vc7v"
       ]
     },
     {
@@ -4264,7 +4264,7 @@
       "fixed_version": "4.2.30",
       "app": "pygoat",
       "cvss": 9.8,
-      "epss": 0.00466,
+      "epss": 0.00477,
       "in_kev": false,
       "kev_date_added": null,
       "priority_score": 25,
@@ -4352,29 +4352,6 @@
       ]
     },
     {
-      "id": "pygoat:CVE-2026-102270:pyjwt:2.4.0",
-      "cve": "CVE-2026-102270",
-      "package": "pyjwt",
-      "ecosystem": "PyPI",
-      "installed_version": "2.4.0",
-      "fixed_version": "2.14.0",
-      "app": "pygoat",
-      "cvss": 4.4,
-      "epss": 0.00212,
-      "in_kev": false,
-      "kev_date_added": null,
-      "priority_score": 11,
-      "priority_label": "low",
-      "summary": {
-        "en": "PyJWT is a Python implementation of JSON Web Token standards. Prior to 2.14.0, PyJWT is_pem_format is affected because lazy PEM regular expression backtracks extensively. This occurs when a certificate-like input contains repeated BEGIN markers without a matching END marker. As a result, is_pem_format performs unbounded backtracking while searching for a PEM end marker. Consequently, an attacker can cause intensive CPU consumption. This issue is fixed in version 2.14.0."
-      },
-      "references": [
-        "https://github.com/jpadilla/pyjwt/commit/8b4e233a22206b34ec1186e912e75c0b2396ac07",
-        "https://github.com/jpadilla/pyjwt/releases/tag/2.14.0",
-        "https://github.com/jpadilla/pyjwt/security/advisories/GHSA-jwrc-g2q2-pq5p"
-      ]
-    },
-    {
       "id": "pygoat:CVE-2026-102269:pyjwt:2.4.0",
       "cve": "CVE-2026-102269",
       "package": "pyjwt",
@@ -4441,6 +4418,29 @@
       },
       "references": [
         "https://github.com/jpadilla/pyjwt/security/advisories/GHSA-993g-76c3-p5m4"
+      ]
+    },
+    {
+      "id": "pygoat:CVE-2026-102270:pyjwt:2.4.0",
+      "cve": "CVE-2026-102270",
+      "package": "pyjwt",
+      "ecosystem": "PyPI",
+      "installed_version": "2.4.0",
+      "fixed_version": "2.14.0",
+      "app": "pygoat",
+      "cvss": 4.4,
+      "epss": 0.00212,
+      "in_kev": false,
+      "kev_date_added": null,
+      "priority_score": 11,
+      "priority_label": "low",
+      "summary": {
+        "en": "PyJWT is a Python implementation of JSON Web Token standards. Prior to 2.14.0, PyJWT is_pem_format is affected because lazy PEM regular expression backtracks extensively. This occurs when a certificate-like input contains repeated BEGIN markers without a matching END marker. As a result, is_pem_format performs unbounded backtracking while searching for a PEM end marker. Consequently, an attacker can cause intensive CPU consumption. This issue is fixed in version 2.14.0."
+      },
+      "references": [
+        "https://github.com/jpadilla/pyjwt/commit/8b4e233a22206b34ec1186e912e75c0b2396ac07",
+        "https://github.com/jpadilla/pyjwt/releases/tag/2.14.0",
+        "https://github.com/jpadilla/pyjwt/security/advisories/GHSA-jwrc-g2q2-pq5p"
       ]
     },
     {
@@ -4613,7 +4613,7 @@
       "fixed_version": "4.2.30",
       "app": "pygoat",
       "cvss": 2.7,
-      "epss": 0.00305,
+      "epss": 0.00312,
       "in_kev": false,
       "kev_date_added": null,
       "priority_score": 7,
@@ -5231,7 +5231,7 @@
       "fixed_version": "0.2.1",
       "app": "nodejs-goof",
       "cvss": 7.5,
-      "epss": 0.22539,
+      "epss": 0.22711,
       "in_kev": false,
       "kev_date_added": null,
       "priority_score": 36,
@@ -5307,74 +5307,6 @@
         "https://www.oracle.com/technetwork/security-advisory/cpujul2019-5072835.html",
         "https://www.oracle.com/technetwork/security-advisory/cpuoct2019-5072832.html",
         "https://www.tenable.com/security/tns-2019-08"
-      ]
-    },
-    {
-      "id": "nodejs-goof:CVE-2021-23337:lodash:4.17.10",
-      "cve": "CVE-2021-23337",
-      "package": "lodash",
-      "ecosystem": "npm",
-      "installed_version": "4.17.10",
-      "fixed_version": "4.17.21",
-      "app": "nodejs-goof",
-      "cvss": 7.2,
-      "epss": 0.20158,
-      "in_kev": false,
-      "kev_date_added": null,
-      "priority_score": 33,
-      "priority_label": "medium",
-      "summary": {
-        "en": "Lodash versions prior to 4.17.21 are vulnerable to Command Injection via the template function.",
-        "es": "Las versiones de Lodash anteriores a la 4.17.21 son vulnerables a la inyecci\u00f3n de comandos a trav\u00e9s de la funci\u00f3n de plantilla"
-      },
-      "references": [
-        "https://cert-portal.siemens.com/productcert/pdf/ssa-637483.pdf",
-        "https://github.com/lodash/lodash/blob/ddfd9b11a0126db2302cb70ec9973b66baec0975/lodash.js%23L14851",
-        "https://security.netapp.com/advisory/ntap-20210312-0006/",
-        "https://snyk.io/vuln/SNYK-JAVA-ORGFUJIONWEBJARS-1074932",
-        "https://snyk.io/vuln/SNYK-JAVA-ORGWEBJARS-1074930",
-        "https://snyk.io/vuln/SNYK-JAVA-ORGWEBJARSBOWER-1074928",
-        "https://snyk.io/vuln/SNYK-JAVA-ORGWEBJARSBOWERGITHUBLODASH-1074931",
-        "https://snyk.io/vuln/SNYK-JAVA-ORGWEBJARSNPM-1074929",
-        "https://snyk.io/vuln/SNYK-JS-LODASH-1040724",
-        "https://www.oracle.com//security-alerts/cpujul2021.html",
-        "https://www.oracle.com/security-alerts/cpujan2022.html",
-        "https://www.oracle.com/security-alerts/cpujul2022.html",
-        "https://www.oracle.com/security-alerts/cpuoct2021.html"
-      ]
-    },
-    {
-      "id": "nodejs-goof:CVE-2021-23337:lodash:4.17.4",
-      "cve": "CVE-2021-23337",
-      "package": "lodash",
-      "ecosystem": "npm",
-      "installed_version": "4.17.4",
-      "fixed_version": "4.17.21",
-      "app": "nodejs-goof",
-      "cvss": 7.2,
-      "epss": 0.20158,
-      "in_kev": false,
-      "kev_date_added": null,
-      "priority_score": 33,
-      "priority_label": "medium",
-      "summary": {
-        "en": "Lodash versions prior to 4.17.21 are vulnerable to Command Injection via the template function.",
-        "es": "Las versiones de Lodash anteriores a la 4.17.21 son vulnerables a la inyecci\u00f3n de comandos a trav\u00e9s de la funci\u00f3n de plantilla"
-      },
-      "references": [
-        "https://cert-portal.siemens.com/productcert/pdf/ssa-637483.pdf",
-        "https://github.com/lodash/lodash/blob/ddfd9b11a0126db2302cb70ec9973b66baec0975/lodash.js%23L14851",
-        "https://security.netapp.com/advisory/ntap-20210312-0006/",
-        "https://snyk.io/vuln/SNYK-JAVA-ORGFUJIONWEBJARS-1074932",
-        "https://snyk.io/vuln/SNYK-JAVA-ORGWEBJARS-1074930",
-        "https://snyk.io/vuln/SNYK-JAVA-ORGWEBJARSBOWER-1074928",
-        "https://snyk.io/vuln/SNYK-JAVA-ORGWEBJARSBOWERGITHUBLODASH-1074931",
-        "https://snyk.io/vuln/SNYK-JAVA-ORGWEBJARSNPM-1074929",
-        "https://snyk.io/vuln/SNYK-JS-LODASH-1040724",
-        "https://www.oracle.com//security-alerts/cpujul2021.html",
-        "https://www.oracle.com/security-alerts/cpujan2022.html",
-        "https://www.oracle.com/security-alerts/cpujul2022.html",
-        "https://www.oracle.com/security-alerts/cpuoct2021.html"
       ]
     },
     {
@@ -5456,32 +5388,71 @@
       ]
     },
     {
-      "id": "nodejs-goof:CVE-2022-24785:moment:2.15.1",
-      "cve": "CVE-2022-24785",
-      "package": "moment",
+      "id": "nodejs-goof:CVE-2021-23337:lodash:4.17.10",
+      "cve": "CVE-2021-23337",
+      "package": "lodash",
       "ecosystem": "npm",
-      "installed_version": "2.15.1",
-      "fixed_version": "2.29.2",
+      "installed_version": "4.17.10",
+      "fixed_version": "4.17.21",
       "app": "nodejs-goof",
-      "cvss": 7.5,
-      "epss": 0.05338,
+      "cvss": 7.2,
+      "epss": 0.20158,
       "in_kev": false,
       "kev_date_added": null,
-      "priority_score": 23,
+      "priority_score": 33,
       "priority_label": "medium",
       "summary": {
-        "en": "Moment.js is a JavaScript date library for parsing, validating, manipulating, and formatting dates. A path traversal vulnerability impacts npm (server) users of Moment.js between versions 1.0.1 and 2.29.1, especially if a user-provided locale string is directly used to switch moment locale. This problem is patched in 2.29.2, and the patch can be applied to all affected versions. As a workaround, sanitize the user-provided locale name before passing it to Moment.js.",
-        "es": "Moment.js es una librer\u00eda de fechas en JavaScript para analizar, comprobar, manipular y formatear fechas. Una vulnerabilidad de salto de ruta afecta a usuarios de npm (servidor) de Moment.js entre las versiones 1.0.1 y 2.29.1, especialmente si es usada directamente una cadena de configuraci\u00f3n regional proporcionada por el usuario para cambiar la configuraci\u00f3n regional de Moment. Este problema est\u00e1 parcheado en la versi\u00f3n 2.29.2, y el parche puede aplicarse a todas las versiones afectadas. Como medida de mitigaci\u00f3n, sanee el nombre de la configuraci\u00f3n regional proporcionada por el usuario antes de pasarlo a Moment.js"
+        "en": "Lodash versions prior to 4.17.21 are vulnerable to Command Injection via the template function.",
+        "es": "Las versiones de Lodash anteriores a la 4.17.21 son vulnerables a la inyecci\u00f3n de comandos a trav\u00e9s de la funci\u00f3n de plantilla"
       },
       "references": [
-        "https://github.com/moment/moment/commit/4211bfc8f15746be4019bba557e29a7ba83d54c5",
-        "https://github.com/moment/moment/security/advisories/GHSA-8hfj-j24r-96c4",
-        "https://lists.debian.org/debian-lts-announce/2023/01/msg00035.html",
-        "https://lists.fedoraproject.org/archives/list/package-announce%40lists.fedoraproject.org/message/6QIO6YNLTK2T7SPKDS4JEL45FANLNC2Q/",
-        "https://lists.fedoraproject.org/archives/list/package-announce%40lists.fedoraproject.org/message/ORJX2LF6KMPIHP6B2P6KZIVKMLE3LVJ5/",
-        "https://security.netapp.com/advisory/ntap-20220513-0006/",
-        "https://www.tenable.com/security/tns-2022-09",
-        "https://security.netapp.com/advisory/ntap-20241108-0002/"
+        "https://cert-portal.siemens.com/productcert/pdf/ssa-637483.pdf",
+        "https://github.com/lodash/lodash/blob/ddfd9b11a0126db2302cb70ec9973b66baec0975/lodash.js%23L14851",
+        "https://security.netapp.com/advisory/ntap-20210312-0006/",
+        "https://snyk.io/vuln/SNYK-JAVA-ORGFUJIONWEBJARS-1074932",
+        "https://snyk.io/vuln/SNYK-JAVA-ORGWEBJARS-1074930",
+        "https://snyk.io/vuln/SNYK-JAVA-ORGWEBJARSBOWER-1074928",
+        "https://snyk.io/vuln/SNYK-JAVA-ORGWEBJARSBOWERGITHUBLODASH-1074931",
+        "https://snyk.io/vuln/SNYK-JAVA-ORGWEBJARSNPM-1074929",
+        "https://snyk.io/vuln/SNYK-JS-LODASH-1040724",
+        "https://www.oracle.com//security-alerts/cpujul2021.html",
+        "https://www.oracle.com/security-alerts/cpujan2022.html",
+        "https://www.oracle.com/security-alerts/cpujul2022.html",
+        "https://www.oracle.com/security-alerts/cpuoct2021.html"
+      ]
+    },
+    {
+      "id": "nodejs-goof:CVE-2021-23337:lodash:4.17.4",
+      "cve": "CVE-2021-23337",
+      "package": "lodash",
+      "ecosystem": "npm",
+      "installed_version": "4.17.4",
+      "fixed_version": "4.17.21",
+      "app": "nodejs-goof",
+      "cvss": 7.2,
+      "epss": 0.20158,
+      "in_kev": false,
+      "kev_date_added": null,
+      "priority_score": 33,
+      "priority_label": "medium",
+      "summary": {
+        "en": "Lodash versions prior to 4.17.21 are vulnerable to Command Injection via the template function.",
+        "es": "Las versiones de Lodash anteriores a la 4.17.21 son vulnerables a la inyecci\u00f3n de comandos a trav\u00e9s de la funci\u00f3n de plantilla"
+      },
+      "references": [
+        "https://cert-portal.siemens.com/productcert/pdf/ssa-637483.pdf",
+        "https://github.com/lodash/lodash/blob/ddfd9b11a0126db2302cb70ec9973b66baec0975/lodash.js%23L14851",
+        "https://security.netapp.com/advisory/ntap-20210312-0006/",
+        "https://snyk.io/vuln/SNYK-JAVA-ORGFUJIONWEBJARS-1074932",
+        "https://snyk.io/vuln/SNYK-JAVA-ORGWEBJARS-1074930",
+        "https://snyk.io/vuln/SNYK-JAVA-ORGWEBJARSBOWER-1074928",
+        "https://snyk.io/vuln/SNYK-JAVA-ORGWEBJARSBOWERGITHUBLODASH-1074931",
+        "https://snyk.io/vuln/SNYK-JAVA-ORGWEBJARSNPM-1074929",
+        "https://snyk.io/vuln/SNYK-JS-LODASH-1040724",
+        "https://www.oracle.com//security-alerts/cpujul2021.html",
+        "https://www.oracle.com/security-alerts/cpujan2022.html",
+        "https://www.oracle.com/security-alerts/cpujul2022.html",
+        "https://www.oracle.com/security-alerts/cpuoct2021.html"
       ]
     },
     {
@@ -5974,6 +5945,35 @@
       ]
     },
     {
+      "id": "nodejs-goof:CVE-2022-24785:moment:2.15.1",
+      "cve": "CVE-2022-24785",
+      "package": "moment",
+      "ecosystem": "npm",
+      "installed_version": "2.15.1",
+      "fixed_version": "2.29.2",
+      "app": "nodejs-goof",
+      "cvss": 7.5,
+      "epss": 0.05338,
+      "in_kev": false,
+      "kev_date_added": null,
+      "priority_score": 23,
+      "priority_label": "medium",
+      "summary": {
+        "en": "Moment.js is a JavaScript date library for parsing, validating, manipulating, and formatting dates. A path traversal vulnerability impacts npm (server) users of Moment.js between versions 1.0.1 and 2.29.1, especially if a user-provided locale string is directly used to switch moment locale. This problem is patched in 2.29.2, and the patch can be applied to all affected versions. As a workaround, sanitize the user-provided locale name before passing it to Moment.js.",
+        "es": "Moment.js es una librer\u00eda de fechas en JavaScript para analizar, comprobar, manipular y formatear fechas. Una vulnerabilidad de salto de ruta afecta a usuarios de npm (servidor) de Moment.js entre las versiones 1.0.1 y 2.29.1, especialmente si es usada directamente una cadena de configuraci\u00f3n regional proporcionada por el usuario para cambiar la configuraci\u00f3n regional de Moment. Este problema est\u00e1 parcheado en la versi\u00f3n 2.29.2, y el parche puede aplicarse a todas las versiones afectadas. Como medida de mitigaci\u00f3n, sanee el nombre de la configuraci\u00f3n regional proporcionada por el usuario antes de pasarlo a Moment.js"
+      },
+      "references": [
+        "https://github.com/moment/moment/commit/4211bfc8f15746be4019bba557e29a7ba83d54c5",
+        "https://github.com/moment/moment/security/advisories/GHSA-8hfj-j24r-96c4",
+        "https://lists.debian.org/debian-lts-announce/2023/01/msg00035.html",
+        "https://lists.fedoraproject.org/archives/list/package-announce%40lists.fedoraproject.org/message/6QIO6YNLTK2T7SPKDS4JEL45FANLNC2Q/",
+        "https://lists.fedoraproject.org/archives/list/package-announce%40lists.fedoraproject.org/message/ORJX2LF6KMPIHP6B2P6KZIVKMLE3LVJ5/",
+        "https://security.netapp.com/advisory/ntap-20220513-0006/",
+        "https://www.tenable.com/security/tns-2022-09",
+        "https://security.netapp.com/advisory/ntap-20241108-0002/"
+      ]
+    },
+    {
       "id": "nodejs-goof:CVE-2021-23358:underscore:1.9.1",
       "cve": "CVE-2021-23358",
       "package": "underscore",
@@ -6199,10 +6199,10 @@
       "fixed_version": "5.13.23",
       "app": "nodejs-goof",
       "cvss": 9.1,
-      "epss": 0.03981,
+      "epss": 0.03402,
       "in_kev": false,
       "kev_date_added": null,
-      "priority_score": 26,
+      "priority_score": 25,
       "priority_label": "medium",
       "summary": {
         "en": "Mongoose before 8.8.3 can improperly use $where in match, leading to search injection.",
@@ -9692,28 +9692,28 @@
       ]
     },
     {
-      "id": "nodejs-goof:CVE-2026-102276:brace-expansion:1.1.11",
-      "cve": "CVE-2026-102276",
-      "package": "brace-expansion",
+      "id": "nodejs-goof:CVE-2018-25110:marked:0.3.5",
+      "cve": "CVE-2018-25110",
+      "package": "marked",
       "ecosystem": "npm",
-      "installed_version": "1.1.11",
-      "fixed_version": "1.1.19",
+      "installed_version": "0.3.5",
+      "fixed_version": "0.3.17",
       "app": "nodejs-goof",
       "cvss": 7.5,
-      "epss": 0.00491,
+      "epss": 0.00621,
       "in_kev": false,
       "kev_date_added": null,
       "priority_score": 19,
       "priority_label": "low",
       "summary": {
-        "en": "The brace-expansion library generates arbitrary strings containing a common prefix and suffix. Prior to 1.1.19, 2.1.5, 3.0.7, and 5.0.10, crafted brace patterns can exhaust the native stack in parseCommaParts because parseCommaParts recursively processes the remainder once per brace group and uses push.apply to pass every element of a very large comma-part array as a function argument. Patterns containing many comma-separated brace groups trigger the recursive path, while the large array triggers the argument-array path without deep recursion. These paths cause recursive and argument-array native stack exhaustion before max or maxLength can limit output, potentially terminating the Node.js process in a process-terminating denial of service. This issue is fixed in versions 1.1.19, 2.1.5, 3.0.7, and 5.0.10."
+        "en": "Marked prior to version 0.3.17 is vulnerable to a Regular Expression Denial of Service (ReDoS) attack due to catastrophic backtracking in several regular expressions used for parsing HTML tags and markdown links. An attacker can exploit this vulnerability by providing specially crafted markdown input, such as deeply nested or repetitively structured brackets or tag attributes, which cause the parser to hang and lead to a Denial of Service.",
+        "es": "Marked antes de la versi\u00f3n 0.3.17 es vulnerable a un ataque de denegaci\u00f3n de servicio de expresiones regulares (ReDoS) debido a un retroceso catastr\u00f3fico en varias expresiones regulares utilizadas para analizar etiquetas HTML y enlaces de Markdown. Un atacante puede explotar esta vulnerabilidad proporcionando una entrada de Markdown especialmente manipulada, como corchetes o atributos de etiqueta profundamente anidados o con estructura repetitiva, que provocan el bloqueo del analizador y provocan una denegaci\u00f3n de servicio."
       },
       "references": [
-        "https://github.com/juliangruber/brace-expansion/commit/0bcbfc0a5928c3073d48f42999d1ce4fc1c42fbc",
-        "https://github.com/juliangruber/brace-expansion/commit/316359e6019c39b3254c8ba8e25dc586a480652c",
-        "https://github.com/juliangruber/brace-expansion/commit/5171e681c0922b7ae8bfaf9a331e309107be6edc",
-        "https://github.com/juliangruber/brace-expansion/commit/6735c94873ca570bcdd6a0690033bdd3126379d3",
-        "https://github.com/juliangruber/brace-expansion/security/advisories/GHSA-6j4f-fj2g-mc7p"
+        "https://github.com/Checkmarx/Vulnerabilities-Proofs-of-Concept/tree/main/2018/CVE-2018-25110",
+        "https://github.com/markedjs/marked/commit/20bfc106013ed45713a21672ad4a34df94dcd485",
+        "https://github.com/markedjs/marked/issues/1070",
+        "https://github.com/markedjs/marked/pull/1083"
       ]
     },
     {
@@ -9741,28 +9741,28 @@
       ]
     },
     {
-      "id": "nodejs-goof:CVE-2018-25110:marked:0.3.5",
-      "cve": "CVE-2018-25110",
-      "package": "marked",
+      "id": "nodejs-goof:CVE-2026-102276:brace-expansion:1.1.11",
+      "cve": "CVE-2026-102276",
+      "package": "brace-expansion",
       "ecosystem": "npm",
-      "installed_version": "0.3.5",
-      "fixed_version": "0.3.17",
+      "installed_version": "1.1.11",
+      "fixed_version": "1.1.19",
       "app": "nodejs-goof",
       "cvss": 7.5,
-      "epss": 0.00621,
+      "epss": 0.00491,
       "in_kev": false,
       "kev_date_added": null,
       "priority_score": 19,
       "priority_label": "low",
       "summary": {
-        "en": "Marked prior to version 0.3.17 is vulnerable to a Regular Expression Denial of Service (ReDoS) attack due to catastrophic backtracking in several regular expressions used for parsing HTML tags and markdown links. An attacker can exploit this vulnerability by providing specially crafted markdown input, such as deeply nested or repetitively structured brackets or tag attributes, which cause the parser to hang and lead to a Denial of Service.",
-        "es": "Marked antes de la versi\u00f3n 0.3.17 es vulnerable a un ataque de denegaci\u00f3n de servicio de expresiones regulares (ReDoS) debido a un retroceso catastr\u00f3fico en varias expresiones regulares utilizadas para analizar etiquetas HTML y enlaces de Markdown. Un atacante puede explotar esta vulnerabilidad proporcionando una entrada de Markdown especialmente manipulada, como corchetes o atributos de etiqueta profundamente anidados o con estructura repetitiva, que provocan el bloqueo del analizador y provocan una denegaci\u00f3n de servicio."
+        "en": "The brace-expansion library generates arbitrary strings containing a common prefix and suffix. Prior to 1.1.19, 2.1.5, 3.0.7, and 5.0.10, crafted brace patterns can exhaust the native stack in parseCommaParts because parseCommaParts recursively processes the remainder once per brace group and uses push.apply to pass every element of a very large comma-part array as a function argument. Patterns containing many comma-separated brace groups trigger the recursive path, while the large array triggers the argument-array path without deep recursion. These paths cause recursive and argument-array native stack exhaustion before max or maxLength can limit output, potentially terminating the Node.js process in a process-terminating denial of service. This issue is fixed in versions 1.1.19, 2.1.5, 3.0.7, and 5.0.10."
       },
       "references": [
-        "https://github.com/Checkmarx/Vulnerabilities-Proofs-of-Concept/tree/main/2018/CVE-2018-25110",
-        "https://github.com/markedjs/marked/commit/20bfc106013ed45713a21672ad4a34df94dcd485",
-        "https://github.com/markedjs/marked/issues/1070",
-        "https://github.com/markedjs/marked/pull/1083"
+        "https://github.com/juliangruber/brace-expansion/commit/0bcbfc0a5928c3073d48f42999d1ce4fc1c42fbc",
+        "https://github.com/juliangruber/brace-expansion/commit/316359e6019c39b3254c8ba8e25dc586a480652c",
+        "https://github.com/juliangruber/brace-expansion/commit/5171e681c0922b7ae8bfaf9a331e309107be6edc",
+        "https://github.com/juliangruber/brace-expansion/commit/6735c94873ca570bcdd6a0690033bdd3126379d3",
+        "https://github.com/juliangruber/brace-expansion/security/advisories/GHSA-6j4f-fj2g-mc7p"
       ]
     },
     {
@@ -10968,12 +10968,6 @@
   ],
   "history": [
     {
-      "date": "2026-10-21",
-      "findings_total": 352,
-      "critical": 4,
-      "high": 3
-    },
-    {
       "date": "2026-10-22",
       "findings_total": 373,
       "critical": 3,
@@ -11143,6 +11137,12 @@
     },
     {
       "date": "2026-11-23",
+      "findings_total": 394,
+      "critical": 3,
+      "high": 3
+    },
+    {
+      "date": "2026-11-24",
       "findings_total": 394,
       "critical": 3,
       "high": 3

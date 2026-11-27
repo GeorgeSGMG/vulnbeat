@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-11-26T16:40:59.074028+00:00",
+  "generated_at": "2026-11-27T16:26:56.029647+00:00",
   "sources": {
     "kev": {
       "fetched": true,
@@ -953,7 +953,7 @@
       "fixed_version": "4.2.29",
       "app": "pygoat",
       "cvss": 7.5,
-      "epss": 0.0129,
+      "epss": 0.01374,
       "in_kev": false,
       "kev_date_added": null,
       "priority_score": 20,
@@ -1647,29 +1647,6 @@
       ]
     },
     {
-      "id": "pygoat:CVE-2025-66471:urllib3:1.26.9",
-      "cve": "CVE-2025-66471",
-      "package": "urllib3",
-      "ecosystem": "PyPI",
-      "installed_version": "1.26.9",
-      "fixed_version": "2.6.0",
-      "app": "pygoat",
-      "cvss": 7.5,
-      "epss": 0.00762,
-      "in_kev": false,
-      "kev_date_added": null,
-      "priority_score": 19,
-      "priority_label": "low",
-      "summary": {
-        "en": "urllib3 is a user-friendly HTTP client library for Python. Starting in version 1.0 and prior to 2.6.0, the Streaming API improperly handles highly compressed data. urllib3's streaming API is designed for the efficient handling of large HTTP responses by reading the content in chunks, rather than loading the entire response body into memory at once. When streaming a compressed response, urllib3 can perform decoding or decompression based on the HTTP Content-Encoding header (e.g., gzip, deflate, br, or zstd). The library must read compressed data from the network and decompress it until the requested chunk size is met. Any resulting decompressed data that exceeds the requested amount is held in an internal buffer for the next read operation. The decompression logic could cause urllib3 to fully decode a small amount of highly compressed data in a single operation. This can result in excessive resource consumption (high CPU usage and massive memory allocation for the decompressed data.",
-        "es": "urllib3 es una biblioteca cliente HTTP f\u00e1cil de usar para Python. A partir de la versi\u00f3n 1.0 y versiones anteriores a la 2.6.0, la API de Streaming maneja incorrectamente los datos altamente comprimidos. La API de streaming de urllib3 est\u00e1 dise\u00f1ada para el manejo eficiente de grandes respuestas HTTP leyendo el contenido en fragmentos, en lugar de cargar todo el cuerpo de la respuesta en la memoria de una sola vez. Al transmitir una respuesta comprimida, urllib3 puede realizar la decodificaci\u00f3n o descompresi\u00f3n bas\u00e1ndose en el encabezado HTTP Content-Encoding (por ejemplo, gzip, deflate, br o zstd). La biblioteca debe leer datos comprimidos de la red y descomprimirlos hasta que se alcance el tama\u00f1o de fragmento solicitado. Cualquier dato descomprimido resultante que exceda la cantidad solicitada se mantiene en un b\u00fafer interno para la siguiente operaci\u00f3n de lectura. La l\u00f3gica de descompresi\u00f3n podr\u00eda hacer que urllib3 decodifique completamente una peque\u00f1a cantidad de datos altamente comprimidos en una sola operaci\u00f3n. Esto puede resultar en un consumo excesivo de recursos (alto uso de CPU y asignaci\u00f3n masiva de memoria para los datos descomprimidos)."
-      },
-      "references": [
-        "https://github.com/urllib3/urllib3/commit/c19571de34c47de3a766541b041637ba5f716ed7",
-        "https://github.com/urllib3/urllib3/security/advisories/GHSA-2xpw-w6gg-jr37"
-      ]
-    },
-    {
       "id": "pygoat:CVE-2025-66418:urllib3:1.26.9",
       "cve": "CVE-2025-66418",
       "package": "urllib3",
@@ -1690,6 +1667,29 @@
       "references": [
         "https://github.com/urllib3/urllib3/commit/24d7b67eac89f94e11003424bcf0d8f7b72222a8",
         "https://github.com/urllib3/urllib3/security/advisories/GHSA-gm62-xv2j-4w53"
+      ]
+    },
+    {
+      "id": "pygoat:CVE-2025-66471:urllib3:1.26.9",
+      "cve": "CVE-2025-66471",
+      "package": "urllib3",
+      "ecosystem": "PyPI",
+      "installed_version": "1.26.9",
+      "fixed_version": "2.6.0",
+      "app": "pygoat",
+      "cvss": 7.5,
+      "epss": 0.00762,
+      "in_kev": false,
+      "kev_date_added": null,
+      "priority_score": 19,
+      "priority_label": "low",
+      "summary": {
+        "en": "urllib3 is a user-friendly HTTP client library for Python. Starting in version 1.0 and prior to 2.6.0, the Streaming API improperly handles highly compressed data. urllib3's streaming API is designed for the efficient handling of large HTTP responses by reading the content in chunks, rather than loading the entire response body into memory at once. When streaming a compressed response, urllib3 can perform decoding or decompression based on the HTTP Content-Encoding header (e.g., gzip, deflate, br, or zstd). The library must read compressed data from the network and decompress it until the requested chunk size is met. Any resulting decompressed data that exceeds the requested amount is held in an internal buffer for the next read operation. The decompression logic could cause urllib3 to fully decode a small amount of highly compressed data in a single operation. This can result in excessive resource consumption (high CPU usage and massive memory allocation for the decompressed data.",
+        "es": "urllib3 es una biblioteca cliente HTTP f\u00e1cil de usar para Python. A partir de la versi\u00f3n 1.0 y versiones anteriores a la 2.6.0, la API de Streaming maneja incorrectamente los datos altamente comprimidos. La API de streaming de urllib3 est\u00e1 dise\u00f1ada para el manejo eficiente de grandes respuestas HTTP leyendo el contenido en fragmentos, en lugar de cargar todo el cuerpo de la respuesta en la memoria de una sola vez. Al transmitir una respuesta comprimida, urllib3 puede realizar la decodificaci\u00f3n o descompresi\u00f3n bas\u00e1ndose en el encabezado HTTP Content-Encoding (por ejemplo, gzip, deflate, br o zstd). La biblioteca debe leer datos comprimidos de la red y descomprimirlos hasta que se alcance el tama\u00f1o de fragmento solicitado. Cualquier dato descomprimido resultante que exceda la cantidad solicitada se mantiene en un b\u00fafer interno para la siguiente operaci\u00f3n de lectura. La l\u00f3gica de descompresi\u00f3n podr\u00eda hacer que urllib3 decodifique completamente una peque\u00f1a cantidad de datos altamente comprimidos en una sola operaci\u00f3n. Esto puede resultar en un consumo excesivo de recursos (alto uso de CPU y asignaci\u00f3n masiva de memoria para los datos descomprimidos)."
+      },
+      "references": [
+        "https://github.com/urllib3/urllib3/commit/c19571de34c47de3a766541b041637ba5f716ed7",
+        "https://github.com/urllib3/urllib3/security/advisories/GHSA-2xpw-w6gg-jr37"
       ]
     },
     {
@@ -1951,29 +1951,6 @@
       ]
     },
     {
-      "id": "pygoat:CVE-2026-112400:pillow:12.1.0",
-      "cve": "CVE-2026-112400",
-      "package": "pillow",
-      "ecosystem": "PyPI",
-      "installed_version": "12.1.0",
-      "fixed_version": "13.0.0",
-      "app": "pygoat",
-      "cvss": 7.5,
-      "epss": 0.00644,
-      "in_kev": false,
-      "kev_date_added": null,
-      "priority_score": 19,
-      "priority_label": "low",
-      "summary": {
-        "en": "Pillow is a Python imaging library. From 9.2.0 until 13.0.0, Pillow can retain a rejected GIF frame size after a decompression-bomb exception. In GifImageFile._seek, a crafted GIF can leave rejected dimensions stored after Image.DecompressionBombError; if an application catches that exception and continues processing the same image object, later seek or load operations allocate according to those dimensions and can exhaust memory, denying service. This issue is fixed in version 13.0.0."
-      },
-      "references": [
-        "https://github.com/python-pillow/Pillow/commit/6faed707cfb760a4cbd726ddc8406f576cf35bf7",
-        "https://github.com/python-pillow/Pillow/releases/tag/13.0.0",
-        "https://github.com/python-pillow/Pillow/security/advisories/GHSA-65qm-jvmh-6pqg"
-      ]
-    },
-    {
       "id": "pygoat:CVE-2026-112399:pillow:12.1.0",
       "cve": "CVE-2026-112399",
       "package": "pillow",
@@ -1994,6 +1971,29 @@
         "https://github.com/python-pillow/Pillow/commit/f1acfc54c53502948d0d14121872061df931db48",
         "https://github.com/python-pillow/Pillow/releases/tag/13.0.0",
         "https://github.com/python-pillow/Pillow/security/advisories/GHSA-5xm2-6676-qcp9"
+      ]
+    },
+    {
+      "id": "pygoat:CVE-2026-112400:pillow:12.1.0",
+      "cve": "CVE-2026-112400",
+      "package": "pillow",
+      "ecosystem": "PyPI",
+      "installed_version": "12.1.0",
+      "fixed_version": "13.0.0",
+      "app": "pygoat",
+      "cvss": 7.5,
+      "epss": 0.00644,
+      "in_kev": false,
+      "kev_date_added": null,
+      "priority_score": 19,
+      "priority_label": "low",
+      "summary": {
+        "en": "Pillow is a Python imaging library. From 9.2.0 until 13.0.0, Pillow can retain a rejected GIF frame size after a decompression-bomb exception. In GifImageFile._seek, a crafted GIF can leave rejected dimensions stored after Image.DecompressionBombError; if an application catches that exception and continues processing the same image object, later seek or load operations allocate according to those dimensions and can exhaust memory, denying service. This issue is fixed in version 13.0.0."
+      },
+      "references": [
+        "https://github.com/python-pillow/Pillow/commit/6faed707cfb760a4cbd726ddc8406f576cf35bf7",
+        "https://github.com/python-pillow/Pillow/releases/tag/13.0.0",
+        "https://github.com/python-pillow/Pillow/security/advisories/GHSA-65qm-jvmh-6pqg"
       ]
     },
     {
@@ -2095,31 +2095,6 @@
       ]
     },
     {
-      "id": "pygoat:CVE-2026-59200:pillow:12.1.0",
-      "cve": "CVE-2026-59200",
-      "package": "pillow",
-      "ecosystem": "PyPI",
-      "installed_version": "12.1.0",
-      "fixed_version": "12.3.0",
-      "app": "pygoat",
-      "cvss": 7.5,
-      "epss": 0.00655,
-      "in_kev": false,
-      "kev_date_added": null,
-      "priority_score": 19,
-      "priority_label": "low",
-      "summary": {
-        "en": "Pillow is a Python imaging library. From 5.1.0 until 12.3.0, PdfParser.PdfStream.decode() in PIL/PdfParser.py calls zlib.decompress() with bufsize set to the PDF stream Length field without bounding the decompressed output size, allowing a crafted FlateDecode PDF stream to exhaust memory from a small file. This issue is fixed in version 12.3.0.",
-        "es": "Pillow es una biblioteca de im\u00e1genes de Python. Desde la versi\u00f3n 5.1.0 hasta la 12.3.0, PdfParser.PdfStream.decode() en PIL/PdfParser.py llama a zlib.decompress() con bufsize establecido al campo Length del flujo PDF sin limitar el tama\u00f1o de salida descomprimido, permitiendo que un flujo PDF FlateDecode manipulado agote la memoria desde un archivo peque\u00f1o. Este problema est\u00e1 solucionado en la versi\u00f3n 12.3.0."
-      },
-      "references": [
-        "https://github.com/python-pillow/Pillow/commit/f7a31ea75e460e108c37126da1f47812f21f6b09",
-        "https://github.com/python-pillow/Pillow/pull/9718",
-        "https://github.com/python-pillow/Pillow/releases/tag/12.3.0",
-        "https://github.com/python-pillow/Pillow/security/advisories/GHSA-jjj6-mw9f-p565"
-      ]
-    },
-    {
       "id": "pygoat:CVE-2026-59205:pillow:12.1.0",
       "cve": "CVE-2026-59205",
       "package": "pillow",
@@ -2142,6 +2117,31 @@
         "https://github.com/python-pillow/Pillow/pull/9715",
         "https://github.com/python-pillow/Pillow/releases/tag/12.3.0",
         "https://github.com/python-pillow/Pillow/security/advisories/GHSA-9hw9-ch79-4vh6"
+      ]
+    },
+    {
+      "id": "pygoat:CVE-2026-59200:pillow:12.1.0",
+      "cve": "CVE-2026-59200",
+      "package": "pillow",
+      "ecosystem": "PyPI",
+      "installed_version": "12.1.0",
+      "fixed_version": "12.3.0",
+      "app": "pygoat",
+      "cvss": 7.5,
+      "epss": 0.00655,
+      "in_kev": false,
+      "kev_date_added": null,
+      "priority_score": 19,
+      "priority_label": "low",
+      "summary": {
+        "en": "Pillow is a Python imaging library. From 5.1.0 until 12.3.0, PdfParser.PdfStream.decode() in PIL/PdfParser.py calls zlib.decompress() with bufsize set to the PDF stream Length field without bounding the decompressed output size, allowing a crafted FlateDecode PDF stream to exhaust memory from a small file. This issue is fixed in version 12.3.0.",
+        "es": "Pillow es una biblioteca de im\u00e1genes de Python. Desde la versi\u00f3n 5.1.0 hasta la 12.3.0, PdfParser.PdfStream.decode() en PIL/PdfParser.py llama a zlib.decompress() con bufsize establecido al campo Length del flujo PDF sin limitar el tama\u00f1o de salida descomprimido, permitiendo que un flujo PDF FlateDecode manipulado agote la memoria desde un archivo peque\u00f1o. Este problema est\u00e1 solucionado en la versi\u00f3n 12.3.0."
+      },
+      "references": [
+        "https://github.com/python-pillow/Pillow/commit/f7a31ea75e460e108c37126da1f47812f21f6b09",
+        "https://github.com/python-pillow/Pillow/pull/9718",
+        "https://github.com/python-pillow/Pillow/releases/tag/12.3.0",
+        "https://github.com/python-pillow/Pillow/security/advisories/GHSA-jjj6-mw9f-p565"
       ]
     },
     {
@@ -2242,30 +2242,6 @@
       ]
     },
     {
-      "id": "pygoat:CVE-2026-54060:pillow:12.1.0",
-      "cve": "CVE-2026-54060",
-      "package": "pillow",
-      "ecosystem": "PyPI",
-      "installed_version": "12.1.0",
-      "fixed_version": "12.3.0",
-      "app": "pygoat",
-      "cvss": 7.5,
-      "epss": 0.00644,
-      "in_kev": false,
-      "kev_date_added": null,
-      "priority_score": 19,
-      "priority_label": "low",
-      "summary": {
-        "en": "Pillow is a Python imaging library. Prior to 12.3.0, PIL/FontFile.py FontFile.compile() assembled per-glyph images into a combined bitmap with Image.new(\"1\", (xsize, ysize)) without calling Image._decompression_bomb_check(), allowing a font to trigger excessive allocation during conversion or saving. This issue is fixed in version 12.3.0.",
-        "es": "Pillow es una biblioteca de im\u00e1genes de Python. Antes de la versi\u00f3n 12.3.0, PIL/FontFile.py FontFile.compile() ensamblaba im\u00e1genes por glifo en un mapa de bits combinado con Image.new(\u20191\u2019, (xsize, ysize)) sin llamar a Image._decompression_bomb_check(), permitiendo que una fuente desencadenara una asignaci\u00f3n excesiva durante la conversi\u00f3n o el guardado. Este problema est\u00e1 solucionado en la versi\u00f3n 12.3.0."
-      },
-      "references": [
-        "https://github.com/python-pillow/Pillow/blob/main/docs/releasenotes/12.3.0.rst",
-        "https://github.com/python-pillow/Pillow/commit/0a263e6264aa5399988d9acd3bbfbca2ca3ec77d",
-        "https://github.com/python-pillow/Pillow/security/advisories/GHSA-5x94-69rx-g8h2"
-      ]
-    },
-    {
       "id": "pygoat:CVE-2026-55380:pillow:12.1.0",
       "cve": "CVE-2026-55380",
       "package": "pillow",
@@ -2287,6 +2263,30 @@
         "https://github.com/python-pillow/Pillow/blob/main/docs/releasenotes/12.3.0.rst",
         "https://github.com/python-pillow/Pillow/commit/f39b0ae6624eb2d7c5c5d651d9bb5fdbd96a8675",
         "https://github.com/python-pillow/Pillow/security/advisories/GHSA-phj9-mv4w-65pm"
+      ]
+    },
+    {
+      "id": "pygoat:CVE-2026-54060:pillow:12.1.0",
+      "cve": "CVE-2026-54060",
+      "package": "pillow",
+      "ecosystem": "PyPI",
+      "installed_version": "12.1.0",
+      "fixed_version": "12.3.0",
+      "app": "pygoat",
+      "cvss": 7.5,
+      "epss": 0.00644,
+      "in_kev": false,
+      "kev_date_added": null,
+      "priority_score": 19,
+      "priority_label": "low",
+      "summary": {
+        "en": "Pillow is a Python imaging library. Prior to 12.3.0, PIL/FontFile.py FontFile.compile() assembled per-glyph images into a combined bitmap with Image.new(\"1\", (xsize, ysize)) without calling Image._decompression_bomb_check(), allowing a font to trigger excessive allocation during conversion or saving. This issue is fixed in version 12.3.0.",
+        "es": "Pillow es una biblioteca de im\u00e1genes de Python. Antes de la versi\u00f3n 12.3.0, PIL/FontFile.py FontFile.compile() ensamblaba im\u00e1genes por glifo en un mapa de bits combinado con Image.new(\u20191\u2019, (xsize, ysize)) sin llamar a Image._decompression_bomb_check(), permitiendo que una fuente desencadenara una asignaci\u00f3n excesiva durante la conversi\u00f3n o el guardado. Este problema est\u00e1 solucionado en la versi\u00f3n 12.3.0."
+      },
+      "references": [
+        "https://github.com/python-pillow/Pillow/blob/main/docs/releasenotes/12.3.0.rst",
+        "https://github.com/python-pillow/Pillow/commit/0a263e6264aa5399988d9acd3bbfbca2ca3ec77d",
+        "https://github.com/python-pillow/Pillow/security/advisories/GHSA-5x94-69rx-g8h2"
       ]
     },
     {
@@ -2313,29 +2313,6 @@
       ]
     },
     {
-      "id": "pygoat:CVE-2026-112402:pillow:12.1.0",
-      "cve": "CVE-2026-112402",
-      "package": "pillow",
-      "ecosystem": "PyPI",
-      "installed_version": "12.1.0",
-      "fixed_version": "13.0.0",
-      "app": "pygoat",
-      "cvss": 7.5,
-      "epss": 0.00594,
-      "in_kev": false,
-      "kev_date_added": null,
-      "priority_score": 19,
-      "priority_label": "low",
-      "summary": {
-        "en": "Pillow is a Python imaging library. Prior to 13.0.0, Pillow can double free image memory when ImagingScaleAffine encounters a selective allocation failure. The affected fast path handles Transform.EXTENT or pure scale-and-translate Transform.AFFINE operations with the default NEAREST resampling. The output image allocation must succeed while the additional per-column lookup allocation fails, after which the error path deletes image storage that later cleanup releases again. An attacker who can drive such a large Image.transform() operation under memory pressure may trigger the failure. This can crash the process and may corrupt memory. This issue is fixed in version 13.0.0."
-      },
-      "references": [
-        "https://github.com/python-pillow/Pillow/commit/aafa6c75f7cdabb9f409a8aac7c780bea31d08d9",
-        "https://github.com/python-pillow/Pillow/releases/tag/13.0.0",
-        "https://github.com/python-pillow/Pillow/security/advisories/GHSA-7mwm-ghpf-9vrm"
-      ]
-    },
-    {
       "id": "pygoat:CVE-2026-112895:pillow:12.1.0",
       "cve": "CVE-2026-112895",
       "package": "pillow",
@@ -2356,6 +2333,29 @@
         "https://github.com/python-pillow/Pillow/commit/e2ae7eacad6de68c37eb28b633a97bebacf2c5bf",
         "https://github.com/python-pillow/Pillow/releases/tag/13.0.0",
         "https://github.com/python-pillow/Pillow/security/advisories/GHSA-p4wg-p73j-c528"
+      ]
+    },
+    {
+      "id": "pygoat:CVE-2026-112402:pillow:12.1.0",
+      "cve": "CVE-2026-112402",
+      "package": "pillow",
+      "ecosystem": "PyPI",
+      "installed_version": "12.1.0",
+      "fixed_version": "13.0.0",
+      "app": "pygoat",
+      "cvss": 7.5,
+      "epss": 0.00594,
+      "in_kev": false,
+      "kev_date_added": null,
+      "priority_score": 19,
+      "priority_label": "low",
+      "summary": {
+        "en": "Pillow is a Python imaging library. Prior to 13.0.0, Pillow can double free image memory when ImagingScaleAffine encounters a selective allocation failure. The affected fast path handles Transform.EXTENT or pure scale-and-translate Transform.AFFINE operations with the default NEAREST resampling. The output image allocation must succeed while the additional per-column lookup allocation fails, after which the error path deletes image storage that later cleanup releases again. An attacker who can drive such a large Image.transform() operation under memory pressure may trigger the failure. This can crash the process and may corrupt memory. This issue is fixed in version 13.0.0."
+      },
+      "references": [
+        "https://github.com/python-pillow/Pillow/commit/aafa6c75f7cdabb9f409a8aac7c780bea31d08d9",
+        "https://github.com/python-pillow/Pillow/releases/tag/13.0.0",
+        "https://github.com/python-pillow/Pillow/security/advisories/GHSA-7mwm-ghpf-9vrm"
       ]
     },
     {
@@ -2406,29 +2406,6 @@
       ]
     },
     {
-      "id": "pygoat:CVE-2026-112401:pillow:12.1.0",
-      "cve": "CVE-2026-112401",
-      "package": "pillow",
-      "ecosystem": "PyPI",
-      "installed_version": "12.1.0",
-      "fixed_version": "13.0.0",
-      "app": "pygoat",
-      "cvss": 7.5,
-      "epss": 0.00644,
-      "in_kev": false,
-      "kev_date_added": null,
-      "priority_score": 19,
-      "priority_label": "low",
-      "summary": {
-        "en": "Pillow is a Python imaging library. From 5.4.0 until 13.0.0, Pillow performs quadratic copying while parsing GIF comments. GifImageFile._seek() repeatedly appends immutable bytes for comment sub-blocks and multiple comment extensions, and frame zero is parsed during Image.open(). An attacker can submit a small-dimension GIF containing many comment extensions to any application that opens the file. This can consume excessive CPU and deny service before the application can inspect the image. This issue is fixed in version 13.0.0."
-      },
-      "references": [
-        "https://github.com/python-pillow/Pillow/commit/68a3fe957d8a4d552e8c69d96066d749f0614c7e",
-        "https://github.com/python-pillow/Pillow/releases/tag/13.0.0",
-        "https://github.com/python-pillow/Pillow/security/advisories/GHSA-74r2-7ff9-mjj2"
-      ]
-    },
-    {
       "id": "pygoat:CVE-2026-112901:pillow:12.1.0",
       "cve": "CVE-2026-112901",
       "package": "pillow",
@@ -2449,6 +2426,29 @@
         "https://github.com/python-pillow/Pillow/commit/2852a3e3d568997ddec745fc800991f138878f4b",
         "https://github.com/python-pillow/Pillow/releases/tag/13.0.0",
         "https://github.com/python-pillow/Pillow/security/advisories/GHSA-xgh8-jp6q-p5x8"
+      ]
+    },
+    {
+      "id": "pygoat:CVE-2026-112401:pillow:12.1.0",
+      "cve": "CVE-2026-112401",
+      "package": "pillow",
+      "ecosystem": "PyPI",
+      "installed_version": "12.1.0",
+      "fixed_version": "13.0.0",
+      "app": "pygoat",
+      "cvss": 7.5,
+      "epss": 0.00644,
+      "in_kev": false,
+      "kev_date_added": null,
+      "priority_score": 19,
+      "priority_label": "low",
+      "summary": {
+        "en": "Pillow is a Python imaging library. From 5.4.0 until 13.0.0, Pillow performs quadratic copying while parsing GIF comments. GifImageFile._seek() repeatedly appends immutable bytes for comment sub-blocks and multiple comment extensions, and frame zero is parsed during Image.open(). An attacker can submit a small-dimension GIF containing many comment extensions to any application that opens the file. This can consume excessive CPU and deny service before the application can inspect the image. This issue is fixed in version 13.0.0."
+      },
+      "references": [
+        "https://github.com/python-pillow/Pillow/commit/68a3fe957d8a4d552e8c69d96066d749f0614c7e",
+        "https://github.com/python-pillow/Pillow/releases/tag/13.0.0",
+        "https://github.com/python-pillow/Pillow/security/advisories/GHSA-74r2-7ff9-mjj2"
       ]
     },
     {
@@ -3053,29 +3053,6 @@
       ]
     },
     {
-      "id": "pygoat:CVE-2026-54284:sqlparse:0.3.1",
-      "cve": "CVE-2026-54284",
-      "package": "sqlparse",
-      "ecosystem": "PyPI",
-      "installed_version": "0.3.1",
-      "fixed_version": "0.6.0",
-      "app": "pygoat",
-      "cvss": null,
-      "epss": 0.00445,
-      "in_kev": false,
-      "kev_date_added": null,
-      "priority_score": 0,
-      "priority_label": "low",
-      "summary": {
-        "en": "sqlparse is a non-validating SQL parser module for Python. Prior to 0.6.0, TokenList construction and string conversion in sqlparse/sql.py repeatedly flatten nested token subtrees constructed by group_parenthesis and group_case, causing quadratic CPU consumption through sqlparse.parse(), sqlparse.format(), and sqlparse.split() before depth and token limits terminate processing. This issue is fixed in version 0.6.0.",
-        "es": "sqlparse es un m\u00f3dulo analizador SQL no validador para Python. Antes de 0.6.0, la construcci\u00f3n de TokenList y la conversi\u00f3n a cadena en sqlparse/sql.py aplanan repetidamente los sub\u00e1rboles de tokens anidados construidos por group_parenthesis y group_case, causando un consumo cuadr\u00e1tico de CPU a trav\u00e9s de sqlparse.parse(), sqlparse.format() y sqlparse.split() antes de que los l\u00edmites de profundidad y de tokens finalicen el procesamiento. Este problema se corrige en la versi\u00f3n 0.6.0."
-      },
-      "references": [
-        "https://github.com/andialbrecht/sqlparse/commit/939b129e24c0ad5d51368b1aa72fffcaca76f06f",
-        "https://github.com/andialbrecht/sqlparse/security/advisories/GHSA-pwgv-4x5q-6m9f"
-      ]
-    },
-    {
       "id": "pygoat:CVE-2026-71491:sqlparse:0.3.1",
       "cve": "CVE-2026-71491",
       "package": "sqlparse",
@@ -3096,6 +3073,29 @@
       "references": [
         "https://github.com/andialbrecht/sqlparse/commit/ef2012a5eeb491e604dea2b00d516904a3830c87",
         "https://github.com/andialbrecht/sqlparse/security/advisories/GHSA-f2ff-p2ww-7p4p"
+      ]
+    },
+    {
+      "id": "pygoat:CVE-2026-54284:sqlparse:0.3.1",
+      "cve": "CVE-2026-54284",
+      "package": "sqlparse",
+      "ecosystem": "PyPI",
+      "installed_version": "0.3.1",
+      "fixed_version": "0.6.0",
+      "app": "pygoat",
+      "cvss": null,
+      "epss": 0.00445,
+      "in_kev": false,
+      "kev_date_added": null,
+      "priority_score": 0,
+      "priority_label": "low",
+      "summary": {
+        "en": "sqlparse is a non-validating SQL parser module for Python. Prior to 0.6.0, TokenList construction and string conversion in sqlparse/sql.py repeatedly flatten nested token subtrees constructed by group_parenthesis and group_case, causing quadratic CPU consumption through sqlparse.parse(), sqlparse.format(), and sqlparse.split() before depth and token limits terminate processing. This issue is fixed in version 0.6.0.",
+        "es": "sqlparse es un m\u00f3dulo analizador SQL no validador para Python. Antes de 0.6.0, la construcci\u00f3n de TokenList y la conversi\u00f3n a cadena en sqlparse/sql.py aplanan repetidamente los sub\u00e1rboles de tokens anidados construidos por group_parenthesis y group_case, causando un consumo cuadr\u00e1tico de CPU a trav\u00e9s de sqlparse.parse(), sqlparse.format() y sqlparse.split() antes de que los l\u00edmites de profundidad y de tokens finalicen el procesamiento. Este problema se corrige en la versi\u00f3n 0.6.0."
+      },
+      "references": [
+        "https://github.com/andialbrecht/sqlparse/commit/939b129e24c0ad5d51368b1aa72fffcaca76f06f",
+        "https://github.com/andialbrecht/sqlparse/security/advisories/GHSA-pwgv-4x5q-6m9f"
       ]
     },
     {
@@ -3328,29 +3328,6 @@
       ]
     },
     {
-      "id": "pygoat:CVE-2026-101917:pyjwt:2.4.0",
-      "cve": "CVE-2026-101917",
-      "package": "pyjwt",
-      "ecosystem": "PyPI",
-      "installed_version": "2.4.0",
-      "fixed_version": "2.14.0",
-      "app": "pygoat",
-      "cvss": 5.3,
-      "epss": 0.00644,
-      "in_kev": false,
-      "kev_date_added": null,
-      "priority_score": 14,
-      "priority_label": "low",
-      "summary": {
-        "en": "PyJWT is a Python implementation of JSON Web Token standards. Prior to 2.14.0, PyJWT get_signing_key_from_jwt is affected because unknown kid misses force refreshes without a negative cache or minimum refresh interval. This occurs when unauthenticated tokens repeatedly use the same unknown kid or varying kid values absent from the cached JWKS. As a result, each cache miss causes PyJWKClient to refresh the JWKS. Consequently, attacker traffic can amplify outbound requests to the configured JWKS endpoint. This issue is fixed in version 2.14.0."
-      },
-      "references": [
-        "https://github.com/jpadilla/pyjwt/commit/ba4853a75fb9676362da17f67d0f64bd18afd4e1",
-        "https://github.com/jpadilla/pyjwt/releases/tag/2.14.0",
-        "https://github.com/jpadilla/pyjwt/security/advisories/GHSA-2gx3-rcp4-g85q"
-      ]
-    },
-    {
       "id": "pygoat:CVE-2026-101918:pyjwt:2.4.0",
       "cve": "CVE-2026-101918",
       "package": "pyjwt",
@@ -3371,6 +3348,29 @@
         "https://github.com/jpadilla/pyjwt/commit/5fde08a6cf906aa7698de2d6391d88b73006b17b",
         "https://github.com/jpadilla/pyjwt/releases/tag/2.15.0",
         "https://github.com/jpadilla/pyjwt/security/advisories/GHSA-42vr-xj54-vc7v"
+      ]
+    },
+    {
+      "id": "pygoat:CVE-2026-101917:pyjwt:2.4.0",
+      "cve": "CVE-2026-101917",
+      "package": "pyjwt",
+      "ecosystem": "PyPI",
+      "installed_version": "2.4.0",
+      "fixed_version": "2.14.0",
+      "app": "pygoat",
+      "cvss": 5.3,
+      "epss": 0.00644,
+      "in_kev": false,
+      "kev_date_added": null,
+      "priority_score": 14,
+      "priority_label": "low",
+      "summary": {
+        "en": "PyJWT is a Python implementation of JSON Web Token standards. Prior to 2.14.0, PyJWT get_signing_key_from_jwt is affected because unknown kid misses force refreshes without a negative cache or minimum refresh interval. This occurs when unauthenticated tokens repeatedly use the same unknown kid or varying kid values absent from the cached JWKS. As a result, each cache miss causes PyJWKClient to refresh the JWKS. Consequently, attacker traffic can amplify outbound requests to the configured JWKS endpoint. This issue is fixed in version 2.14.0."
+      },
+      "references": [
+        "https://github.com/jpadilla/pyjwt/commit/ba4853a75fb9676362da17f67d0f64bd18afd4e1",
+        "https://github.com/jpadilla/pyjwt/releases/tag/2.14.0",
+        "https://github.com/jpadilla/pyjwt/security/advisories/GHSA-2gx3-rcp4-g85q"
       ]
     },
     {
@@ -3723,30 +3723,6 @@
       ]
     },
     {
-      "id": "pygoat:CVE-2026-96641:pillow:12.1.0",
-      "cve": "CVE-2026-96641",
-      "package": "pillow",
-      "ecosystem": "PyPI",
-      "installed_version": "12.1.0",
-      "fixed_version": "13.0.0",
-      "app": "pygoat",
-      "cvss": 6.5,
-      "epss": 0.0046,
-      "in_kev": false,
-      "kev_date_added": null,
-      "priority_score": 17,
-      "priority_label": "low",
-      "summary": {
-        "en": "Pillow is a Python imaging library. Prior to 13.0.0, PILfont text-width accumulation in src/_imaging.c checks positive glyph advances against INT_MAX but does not check negative advances against INT_MIN. Repeating a signed 16-bit advance of -32768 can therefore execute a signed C integer overflow in xsize += dx, producing a large positive width from a negative mathematical result. Applications that use getlength(), getsize(), or derived layout, quota, serialization, or allocation calculations can experience logic-integrity errors or resource consumption, while the high-level mask path commonly retains a decompression-bomb check. This issue is fixed in version 13.0.0."
-      },
-      "references": [
-        "https://github.com/python-pillow/Pillow/commit/80de4be9e38d3a6148dd4d8491eb80cd12b760a4",
-        "https://github.com/python-pillow/Pillow/pull/10010",
-        "https://github.com/python-pillow/Pillow/releases/tag/13.0.0",
-        "https://github.com/python-pillow/Pillow/security/advisories/GHSA-4rm8-3hmm-39fg"
-      ]
-    },
-    {
       "id": "pygoat:CVE-2026-96638:pillow:12.1.0",
       "cve": "CVE-2026-96638",
       "package": "pillow",
@@ -3768,6 +3744,30 @@
         "https://github.com/python-pillow/Pillow/pull/10015",
         "https://github.com/python-pillow/Pillow/releases/tag/13.0.0",
         "https://github.com/python-pillow/Pillow/security/advisories/GHSA-24rc-8hj2-v98c"
+      ]
+    },
+    {
+      "id": "pygoat:CVE-2026-96641:pillow:12.1.0",
+      "cve": "CVE-2026-96641",
+      "package": "pillow",
+      "ecosystem": "PyPI",
+      "installed_version": "12.1.0",
+      "fixed_version": "13.0.0",
+      "app": "pygoat",
+      "cvss": 6.5,
+      "epss": 0.0046,
+      "in_kev": false,
+      "kev_date_added": null,
+      "priority_score": 17,
+      "priority_label": "low",
+      "summary": {
+        "en": "Pillow is a Python imaging library. Prior to 13.0.0, PILfont text-width accumulation in src/_imaging.c checks positive glyph advances against INT_MAX but does not check negative advances against INT_MIN. Repeating a signed 16-bit advance of -32768 can therefore execute a signed C integer overflow in xsize += dx, producing a large positive width from a negative mathematical result. Applications that use getlength(), getsize(), or derived layout, quota, serialization, or allocation calculations can experience logic-integrity errors or resource consumption, while the high-level mask path commonly retains a decompression-bomb check. This issue is fixed in version 13.0.0."
+      },
+      "references": [
+        "https://github.com/python-pillow/Pillow/commit/80de4be9e38d3a6148dd4d8491eb80cd12b760a4",
+        "https://github.com/python-pillow/Pillow/pull/10010",
+        "https://github.com/python-pillow/Pillow/releases/tag/13.0.0",
+        "https://github.com/python-pillow/Pillow/security/advisories/GHSA-4rm8-3hmm-39fg"
       ]
     },
     {
@@ -4255,28 +4255,6 @@
       ]
     },
     {
-      "id": "pygoat:CVE-2025-65430:django-allauth:0.52.0",
-      "cve": "CVE-2025-65430",
-      "package": "django-allauth",
-      "ecosystem": "PyPI",
-      "installed_version": "0.52.0",
-      "fixed_version": "65.13.0",
-      "app": "pygoat",
-      "cvss": 5.4,
-      "epss": 0.00305,
-      "in_kev": false,
-      "kev_date_added": null,
-      "priority_score": 14,
-      "priority_label": "low",
-      "summary": {
-        "en": "An issue was discovered in allauth-django before 65.13.0. IdP: marking a user as is_active=False after having handed tokens for that user while the account was still active had no effect. Fixed the access/refresh tokens are now rejected.",
-        "es": "Se descubri\u00f3 un problema en allauth-django antes de 65.13.0. IdP: marcar a un usuario como is_active=False despu\u00e9s de haber emitido tokens para ese usuario mientras la cuenta a\u00fan estaba activa no surt\u00eda efecto. Se corrigi\u00f3 que los tokens de acceso/actualizaci\u00f3n ahora son rechazados."
-      },
-      "references": [
-        "https://allauth.org/news/2025/10/django-allauth-65.13.0-released/"
-      ]
-    },
-    {
       "id": "pygoat:CVE-2025-65431:django-allauth:0.52.0",
       "cve": "CVE-2025-65431",
       "package": "django-allauth",
@@ -4293,6 +4271,28 @@
       "summary": {
         "en": "An issue was discovered in allauth-django before 65.13.0. Both Okta and NetIQ were using preferred_username as the identifier for third-party provider accounts. That value may be mutable and should therefore be avoided for authorization decisions. The providers are now using sub instead.",
         "es": "Se descubri\u00f3 un problema en allauth-django antes de la versi\u00f3n 65.13.0. Tanto Okta como NetIQ estaban utilizando preferred_username como identificador para las cuentas de proveedores de terceros. Ese valor puede ser mutable y, por lo tanto, deber\u00eda evitarse para las decisiones de autorizaci\u00f3n. Los proveedores ahora est\u00e1n utilizando sub en su lugar."
+      },
+      "references": [
+        "https://allauth.org/news/2025/10/django-allauth-65.13.0-released/"
+      ]
+    },
+    {
+      "id": "pygoat:CVE-2025-65430:django-allauth:0.52.0",
+      "cve": "CVE-2025-65430",
+      "package": "django-allauth",
+      "ecosystem": "PyPI",
+      "installed_version": "0.52.0",
+      "fixed_version": "65.13.0",
+      "app": "pygoat",
+      "cvss": 5.4,
+      "epss": 0.00305,
+      "in_kev": false,
+      "kev_date_added": null,
+      "priority_score": 14,
+      "priority_label": "low",
+      "summary": {
+        "en": "An issue was discovered in allauth-django before 65.13.0. IdP: marking a user as is_active=False after having handed tokens for that user while the account was still active had no effect. Fixed the access/refresh tokens are now rejected.",
+        "es": "Se descubri\u00f3 un problema en allauth-django antes de 65.13.0. IdP: marcar a un usuario como is_active=False despu\u00e9s de haber emitido tokens para ese usuario mientras la cuenta a\u00fan estaba activa no surt\u00eda efecto. Se corrigi\u00f3 que los tokens de acceso/actualizaci\u00f3n ahora son rechazados."
       },
       "references": [
         "https://allauth.org/news/2025/10/django-allauth-65.13.0-released/"
@@ -4379,7 +4379,7 @@
       "fixed_version": "4.2.29",
       "app": "pygoat",
       "cvss": 3.7,
-      "epss": 0.00374,
+      "epss": 0.00399,
       "in_kev": false,
       "kev_date_added": null,
       "priority_score": 10,
@@ -4675,6 +4675,29 @@
       ]
     },
     {
+      "id": "pygoat:CVE-2026-34073:cryptography:39.0.1",
+      "cve": "CVE-2026-34073",
+      "package": "cryptography",
+      "ecosystem": "PyPI",
+      "installed_version": "39.0.1",
+      "fixed_version": "46.0.6",
+      "app": "pygoat",
+      "cvss": 5.3,
+      "epss": 0.00207,
+      "in_kev": false,
+      "kev_date_added": null,
+      "priority_score": 13,
+      "priority_label": "low",
+      "summary": {
+        "en": "cryptography is a package designed to expose cryptographic primitives and recipes to Python developers. Prior to version 46.0.6, DNS name constraints were only validated against SANs within child certificates, and not the \"peer name\" presented during each validation. Consequently, cryptography would allow a peer named bar.example.com to validate against a wildcard leaf certificate for *.example.com, even if the leaf's parent certificate (or upwards) contained an excluded subtree constraint for bar.example.com. This issue has been patched in version 46.0.6.",
+        "es": "cryptography es un paquete dise\u00f1ado para exponer primitivas criptogr\u00e1ficas y recetas a los desarrolladores de Python. Antes de la versi\u00f3n 46.0.6, las restricciones de nombre DNS solo se validaban contra los SANs dentro de los certificados secundarios, y no contra el 'nombre del par' presentado durante cada validaci\u00f3n. En consecuencia, cryptography permitir\u00eda que un par llamado bar.example.com se validara contra un certificado hoja comod\u00edn para *.example.com, incluso si el certificado padre de la hoja (o superior) conten\u00eda una restricci\u00f3n de sub\u00e1rbol excluido para bar.example.com. Este problema ha sido parcheado en la versi\u00f3n 46.0.6."
+      },
+      "references": [
+        "https://github.com/pyca/cryptography/security/advisories/GHSA-m959-cc7f-wv43",
+        "https://www.kb.cert.org/vuls/id/948176"
+      ]
+    },
+    {
       "id": "pygoat:CVE-2026-55798:pillow:12.1.0",
       "cve": "CVE-2026-55798",
       "package": "pillow",
@@ -4698,29 +4721,6 @@
         "https://github.com/python-pillow/Pillow/commit/88194166691b7b603529b8b036ab3ab9cedd2de4",
         "https://github.com/python-pillow/Pillow/commit/b0e06caa64c1405aa3da0bb1d2bd9a77ca22de7f",
         "https://github.com/python-pillow/Pillow/security/advisories/GHSA-4x4j-2g7c-83w6"
-      ]
-    },
-    {
-      "id": "pygoat:CVE-2026-34073:cryptography:39.0.1",
-      "cve": "CVE-2026-34073",
-      "package": "cryptography",
-      "ecosystem": "PyPI",
-      "installed_version": "39.0.1",
-      "fixed_version": "46.0.6",
-      "app": "pygoat",
-      "cvss": 5.3,
-      "epss": 0.00207,
-      "in_kev": false,
-      "kev_date_added": null,
-      "priority_score": 13,
-      "priority_label": "low",
-      "summary": {
-        "en": "cryptography is a package designed to expose cryptographic primitives and recipes to Python developers. Prior to version 46.0.6, DNS name constraints were only validated against SANs within child certificates, and not the \"peer name\" presented during each validation. Consequently, cryptography would allow a peer named bar.example.com to validate against a wildcard leaf certificate for *.example.com, even if the leaf's parent certificate (or upwards) contained an excluded subtree constraint for bar.example.com. This issue has been patched in version 46.0.6.",
-        "es": "cryptography es un paquete dise\u00f1ado para exponer primitivas criptogr\u00e1ficas y recetas a los desarrolladores de Python. Antes de la versi\u00f3n 46.0.6, las restricciones de nombre DNS solo se validaban contra los SANs dentro de los certificados secundarios, y no contra el 'nombre del par' presentado durante cada validaci\u00f3n. En consecuencia, cryptography permitir\u00eda que un par llamado bar.example.com se validara contra un certificado hoja comod\u00edn para *.example.com, incluso si el certificado padre de la hoja (o superior) conten\u00eda una restricci\u00f3n de sub\u00e1rbol excluido para bar.example.com. Este problema ha sido parcheado en la versi\u00f3n 46.0.6."
-      },
-      "references": [
-        "https://github.com/pyca/cryptography/security/advisories/GHSA-m959-cc7f-wv43",
-        "https://www.kb.cert.org/vuls/id/948176"
       ]
     },
     {
@@ -6310,152 +6310,6 @@
       ]
     },
     {
-      "id": "nodejs-goof:CVE-2019-20920:handlebars:4.0.11",
-      "cve": "CVE-2019-20920",
-      "package": "handlebars",
-      "ecosystem": "npm",
-      "installed_version": "4.0.11",
-      "fixed_version": "4.5.3",
-      "app": "nodejs-goof",
-      "cvss": 8.1,
-      "epss": 0.03031,
-      "in_kev": false,
-      "kev_date_added": null,
-      "priority_score": 23,
-      "priority_label": "medium",
-      "summary": {
-        "en": "Handlebars before 3.0.8 and 4.x before 4.5.3 is vulnerable to Arbitrary Code Execution. The lookup helper fails to properly validate templates, allowing attackers to submit templates that execute arbitrary JavaScript. This can be used to run arbitrary code on a server processing Handlebars templates or in a victim's browser (effectively serving as XSS).",
-        "es": "Handlebars versiones anteriores a 3.0.8 y versiones 4.x anteriores a 4.5.3, son vulnerables a una ejecuci\u00f3n de c\u00f3digo arbitraria.&#xa0;El asistente de b\u00fasqueda no comprueba apropiadamente las plantillas, permitiendo a atacantes enviar plantillas que ejecutan JavaScript arbitrario.&#xa0;Esto se puede ser usado  para ejecutar c\u00f3digo arbitrario en un servidor que procesa las plantillas de Handlebars o en el navegador de una v\u00edctima (que sirve efectivamente como un XSS)"
-      },
-      "references": [
-        "https://snyk.io/vuln/SNYK-JS-HANDLEBARS-534478",
-        "https://www.npmjs.com/advisories/1316",
-        "https://www.npmjs.com/advisories/1324"
-      ]
-    },
-    {
-      "id": "nodejs-goof:CVE-2019-20920:handlebars:4.0.14",
-      "cve": "CVE-2019-20920",
-      "package": "handlebars",
-      "ecosystem": "npm",
-      "installed_version": "4.0.14",
-      "fixed_version": "4.5.3",
-      "app": "nodejs-goof",
-      "cvss": 8.1,
-      "epss": 0.03031,
-      "in_kev": false,
-      "kev_date_added": null,
-      "priority_score": 23,
-      "priority_label": "medium",
-      "summary": {
-        "en": "Handlebars before 3.0.8 and 4.x before 4.5.3 is vulnerable to Arbitrary Code Execution. The lookup helper fails to properly validate templates, allowing attackers to submit templates that execute arbitrary JavaScript. This can be used to run arbitrary code on a server processing Handlebars templates or in a victim's browser (effectively serving as XSS).",
-        "es": "Handlebars versiones anteriores a 3.0.8 y versiones 4.x anteriores a 4.5.3, son vulnerables a una ejecuci\u00f3n de c\u00f3digo arbitraria.&#xa0;El asistente de b\u00fasqueda no comprueba apropiadamente las plantillas, permitiendo a atacantes enviar plantillas que ejecutan JavaScript arbitrario.&#xa0;Esto se puede ser usado  para ejecutar c\u00f3digo arbitrario en un servidor que procesa las plantillas de Handlebars o en el navegador de una v\u00edctima (que sirve efectivamente como un XSS)"
-      },
-      "references": [
-        "https://snyk.io/vuln/SNYK-JS-HANDLEBARS-534478",
-        "https://www.npmjs.com/advisories/1316",
-        "https://www.npmjs.com/advisories/1324"
-      ]
-    },
-    {
-      "id": "nodejs-goof:CVE-2019-10747:set-value:0.4.3",
-      "cve": "CVE-2019-10747",
-      "package": "set-value",
-      "ecosystem": "npm",
-      "installed_version": "0.4.3",
-      "fixed_version": "2.0.1",
-      "app": "nodejs-goof",
-      "cvss": 9.8,
-      "epss": 0.02475,
-      "in_kev": false,
-      "kev_date_added": null,
-      "priority_score": 26,
-      "priority_label": "medium",
-      "summary": {
-        "en": "set-value is vulnerable to Prototype Pollution in versions lower than 3.0.1. The function mixin-deep could be tricked into adding or modifying properties of Object.prototype using any of the constructor, prototype and _proto_ payloads.",
-        "es": "set-value es vulnerable a Prototype Pollution en versiones anteriores a 2.0.1 y la versi\u00f3n 3.0.0. La funci\u00f3n mixin-deep podr\u00eda ser enga\u00f1ada para agregar o modificar propiedades de Object.prototype usando cualquiera de las cargas \u00fatiles de constructor, prototipo y _proto_ payloads."
-      },
-      "references": [
-        "https://lists.apache.org/thread.html/b46f35559c4a97cf74d2dd7fe5a48f8abf2ff37f879083920af9b292%40%3Cdev.drat.apache.org%3E",
-        "https://lists.fedoraproject.org/archives/list/package-announce%40lists.fedoraproject.org/message/3EJ36KV6MXQPUYTFCCTDY54E5Y7QP3AV/",
-        "https://lists.fedoraproject.org/archives/list/package-announce%40lists.fedoraproject.org/message/E3HNLQZQINMZK6GYB2UTKK4VU7WBV2OT/",
-        "https://snyk.io/vuln/SNYK-JS-SETVALUE-450213"
-      ]
-    },
-    {
-      "id": "nodejs-goof:CVE-2019-10747:set-value:2.0.0",
-      "cve": "CVE-2019-10747",
-      "package": "set-value",
-      "ecosystem": "npm",
-      "installed_version": "2.0.0",
-      "fixed_version": "2.0.1",
-      "app": "nodejs-goof",
-      "cvss": 9.8,
-      "epss": 0.02475,
-      "in_kev": false,
-      "kev_date_added": null,
-      "priority_score": 26,
-      "priority_label": "medium",
-      "summary": {
-        "en": "set-value is vulnerable to Prototype Pollution in versions lower than 3.0.1. The function mixin-deep could be tricked into adding or modifying properties of Object.prototype using any of the constructor, prototype and _proto_ payloads.",
-        "es": "set-value es vulnerable a Prototype Pollution en versiones anteriores a 2.0.1 y la versi\u00f3n 3.0.0. La funci\u00f3n mixin-deep podr\u00eda ser enga\u00f1ada para agregar o modificar propiedades de Object.prototype usando cualquiera de las cargas \u00fatiles de constructor, prototipo y _proto_ payloads."
-      },
-      "references": [
-        "https://lists.apache.org/thread.html/b46f35559c4a97cf74d2dd7fe5a48f8abf2ff37f879083920af9b292%40%3Cdev.drat.apache.org%3E",
-        "https://lists.fedoraproject.org/archives/list/package-announce%40lists.fedoraproject.org/message/3EJ36KV6MXQPUYTFCCTDY54E5Y7QP3AV/",
-        "https://lists.fedoraproject.org/archives/list/package-announce%40lists.fedoraproject.org/message/E3HNLQZQINMZK6GYB2UTKK4VU7WBV2OT/",
-        "https://snyk.io/vuln/SNYK-JS-SETVALUE-450213"
-      ]
-    },
-    {
-      "id": "nodejs-goof:CVE-2024-53900:mongoose:4.2.4",
-      "cve": "CVE-2024-53900",
-      "package": "mongoose",
-      "ecosystem": "npm",
-      "installed_version": "4.2.4",
-      "fixed_version": "5.13.23",
-      "app": "nodejs-goof",
-      "cvss": 9.1,
-      "epss": 0.02653,
-      "in_kev": false,
-      "kev_date_added": null,
-      "priority_score": 25,
-      "priority_label": "medium",
-      "summary": {
-        "en": "Mongoose before 8.8.3 can improperly use $where in match, leading to search injection.",
-        "es": " Mongoose anterior a 8.8.3 puede usar $where incorrectamente en la coincidencia."
-      },
-      "references": [
-        "https://github.com/Automattic/mongoose/blob/master/CHANGELOG.md",
-        "https://github.com/Automattic/mongoose/commit/c9e86bff7eef477da75a29af62a06d41a835a156",
-        "https://github.com/Automattic/mongoose/releases",
-        "https://github.com/advisories/GHSA-m7xq-9374-9rvx",
-        "https://www.npmjs.com/package/mongoose?activeTab=versions"
-      ]
-    },
-    {
-      "id": "nodejs-goof:CVE-2020-7610:bson:0.4.23",
-      "cve": "CVE-2020-7610",
-      "package": "bson",
-      "ecosystem": "npm",
-      "installed_version": "0.4.23",
-      "fixed_version": "1.1.4",
-      "app": "nodejs-goof",
-      "cvss": 9.8,
-      "epss": 0.02309,
-      "in_kev": false,
-      "kev_date_added": null,
-      "priority_score": 26,
-      "priority_label": "medium",
-      "summary": {
-        "en": "All versions of bson before 1.1.4 are vulnerable to Deserialization of Untrusted Data. The package will ignore an unknown value for an object's _bsotype, leading to cases where an object is serialized as a document rather than the intended BSON type.",
-        "es": "Todas las versiones de bson anteriores a 1.1.4, son vulnerables a la Deserializaci\u00f3n de Datos No Confiables. El paquete ignorar\u00e1 un valor desconocido para un _bsotype de objeto, conllevando a casos donde un objeto es serializado como un documento en lugar del tipo BSON previsto."
-      },
-      "references": [
-        "https://snyk.io/vuln/SNYK-JS-BSON-561052"
-      ]
-    },
-    {
       "id": "nodejs-goof:CVE-2026-4800:lodash:4.17.10",
       "cve": "CVE-2026-4800",
       "package": "lodash",
@@ -6756,6 +6610,152 @@
         "https://access.redhat.com/security/cve/CVE-2026-4800",
         "https://bugzilla.redhat.com/show_bug.cgi?id=2453496",
         "https://security.access.redhat.com/data/csaf/v2/vex/2026/cve-2026-4800.json"
+      ]
+    },
+    {
+      "id": "nodejs-goof:CVE-2019-20920:handlebars:4.0.11",
+      "cve": "CVE-2019-20920",
+      "package": "handlebars",
+      "ecosystem": "npm",
+      "installed_version": "4.0.11",
+      "fixed_version": "4.5.3",
+      "app": "nodejs-goof",
+      "cvss": 8.1,
+      "epss": 0.03031,
+      "in_kev": false,
+      "kev_date_added": null,
+      "priority_score": 23,
+      "priority_label": "medium",
+      "summary": {
+        "en": "Handlebars before 3.0.8 and 4.x before 4.5.3 is vulnerable to Arbitrary Code Execution. The lookup helper fails to properly validate templates, allowing attackers to submit templates that execute arbitrary JavaScript. This can be used to run arbitrary code on a server processing Handlebars templates or in a victim's browser (effectively serving as XSS).",
+        "es": "Handlebars versiones anteriores a 3.0.8 y versiones 4.x anteriores a 4.5.3, son vulnerables a una ejecuci\u00f3n de c\u00f3digo arbitraria.&#xa0;El asistente de b\u00fasqueda no comprueba apropiadamente las plantillas, permitiendo a atacantes enviar plantillas que ejecutan JavaScript arbitrario.&#xa0;Esto se puede ser usado  para ejecutar c\u00f3digo arbitrario en un servidor que procesa las plantillas de Handlebars o en el navegador de una v\u00edctima (que sirve efectivamente como un XSS)"
+      },
+      "references": [
+        "https://snyk.io/vuln/SNYK-JS-HANDLEBARS-534478",
+        "https://www.npmjs.com/advisories/1316",
+        "https://www.npmjs.com/advisories/1324"
+      ]
+    },
+    {
+      "id": "nodejs-goof:CVE-2019-20920:handlebars:4.0.14",
+      "cve": "CVE-2019-20920",
+      "package": "handlebars",
+      "ecosystem": "npm",
+      "installed_version": "4.0.14",
+      "fixed_version": "4.5.3",
+      "app": "nodejs-goof",
+      "cvss": 8.1,
+      "epss": 0.03031,
+      "in_kev": false,
+      "kev_date_added": null,
+      "priority_score": 23,
+      "priority_label": "medium",
+      "summary": {
+        "en": "Handlebars before 3.0.8 and 4.x before 4.5.3 is vulnerable to Arbitrary Code Execution. The lookup helper fails to properly validate templates, allowing attackers to submit templates that execute arbitrary JavaScript. This can be used to run arbitrary code on a server processing Handlebars templates or in a victim's browser (effectively serving as XSS).",
+        "es": "Handlebars versiones anteriores a 3.0.8 y versiones 4.x anteriores a 4.5.3, son vulnerables a una ejecuci\u00f3n de c\u00f3digo arbitraria.&#xa0;El asistente de b\u00fasqueda no comprueba apropiadamente las plantillas, permitiendo a atacantes enviar plantillas que ejecutan JavaScript arbitrario.&#xa0;Esto se puede ser usado  para ejecutar c\u00f3digo arbitrario en un servidor que procesa las plantillas de Handlebars o en el navegador de una v\u00edctima (que sirve efectivamente como un XSS)"
+      },
+      "references": [
+        "https://snyk.io/vuln/SNYK-JS-HANDLEBARS-534478",
+        "https://www.npmjs.com/advisories/1316",
+        "https://www.npmjs.com/advisories/1324"
+      ]
+    },
+    {
+      "id": "nodejs-goof:CVE-2019-10747:set-value:0.4.3",
+      "cve": "CVE-2019-10747",
+      "package": "set-value",
+      "ecosystem": "npm",
+      "installed_version": "0.4.3",
+      "fixed_version": "2.0.1",
+      "app": "nodejs-goof",
+      "cvss": 9.8,
+      "epss": 0.02475,
+      "in_kev": false,
+      "kev_date_added": null,
+      "priority_score": 26,
+      "priority_label": "medium",
+      "summary": {
+        "en": "set-value is vulnerable to Prototype Pollution in versions lower than 3.0.1. The function mixin-deep could be tricked into adding or modifying properties of Object.prototype using any of the constructor, prototype and _proto_ payloads.",
+        "es": "set-value es vulnerable a Prototype Pollution en versiones anteriores a 2.0.1 y la versi\u00f3n 3.0.0. La funci\u00f3n mixin-deep podr\u00eda ser enga\u00f1ada para agregar o modificar propiedades de Object.prototype usando cualquiera de las cargas \u00fatiles de constructor, prototipo y _proto_ payloads."
+      },
+      "references": [
+        "https://lists.apache.org/thread.html/b46f35559c4a97cf74d2dd7fe5a48f8abf2ff37f879083920af9b292%40%3Cdev.drat.apache.org%3E",
+        "https://lists.fedoraproject.org/archives/list/package-announce%40lists.fedoraproject.org/message/3EJ36KV6MXQPUYTFCCTDY54E5Y7QP3AV/",
+        "https://lists.fedoraproject.org/archives/list/package-announce%40lists.fedoraproject.org/message/E3HNLQZQINMZK6GYB2UTKK4VU7WBV2OT/",
+        "https://snyk.io/vuln/SNYK-JS-SETVALUE-450213"
+      ]
+    },
+    {
+      "id": "nodejs-goof:CVE-2019-10747:set-value:2.0.0",
+      "cve": "CVE-2019-10747",
+      "package": "set-value",
+      "ecosystem": "npm",
+      "installed_version": "2.0.0",
+      "fixed_version": "2.0.1",
+      "app": "nodejs-goof",
+      "cvss": 9.8,
+      "epss": 0.02475,
+      "in_kev": false,
+      "kev_date_added": null,
+      "priority_score": 26,
+      "priority_label": "medium",
+      "summary": {
+        "en": "set-value is vulnerable to Prototype Pollution in versions lower than 3.0.1. The function mixin-deep could be tricked into adding or modifying properties of Object.prototype using any of the constructor, prototype and _proto_ payloads.",
+        "es": "set-value es vulnerable a Prototype Pollution en versiones anteriores a 2.0.1 y la versi\u00f3n 3.0.0. La funci\u00f3n mixin-deep podr\u00eda ser enga\u00f1ada para agregar o modificar propiedades de Object.prototype usando cualquiera de las cargas \u00fatiles de constructor, prototipo y _proto_ payloads."
+      },
+      "references": [
+        "https://lists.apache.org/thread.html/b46f35559c4a97cf74d2dd7fe5a48f8abf2ff37f879083920af9b292%40%3Cdev.drat.apache.org%3E",
+        "https://lists.fedoraproject.org/archives/list/package-announce%40lists.fedoraproject.org/message/3EJ36KV6MXQPUYTFCCTDY54E5Y7QP3AV/",
+        "https://lists.fedoraproject.org/archives/list/package-announce%40lists.fedoraproject.org/message/E3HNLQZQINMZK6GYB2UTKK4VU7WBV2OT/",
+        "https://snyk.io/vuln/SNYK-JS-SETVALUE-450213"
+      ]
+    },
+    {
+      "id": "nodejs-goof:CVE-2024-53900:mongoose:4.2.4",
+      "cve": "CVE-2024-53900",
+      "package": "mongoose",
+      "ecosystem": "npm",
+      "installed_version": "4.2.4",
+      "fixed_version": "5.13.23",
+      "app": "nodejs-goof",
+      "cvss": 9.1,
+      "epss": 0.02653,
+      "in_kev": false,
+      "kev_date_added": null,
+      "priority_score": 25,
+      "priority_label": "medium",
+      "summary": {
+        "en": "Mongoose before 8.8.3 can improperly use $where in match, leading to search injection.",
+        "es": " Mongoose anterior a 8.8.3 puede usar $where incorrectamente en la coincidencia."
+      },
+      "references": [
+        "https://github.com/Automattic/mongoose/blob/master/CHANGELOG.md",
+        "https://github.com/Automattic/mongoose/commit/c9e86bff7eef477da75a29af62a06d41a835a156",
+        "https://github.com/Automattic/mongoose/releases",
+        "https://github.com/advisories/GHSA-m7xq-9374-9rvx",
+        "https://www.npmjs.com/package/mongoose?activeTab=versions"
+      ]
+    },
+    {
+      "id": "nodejs-goof:CVE-2020-7610:bson:0.4.23",
+      "cve": "CVE-2020-7610",
+      "package": "bson",
+      "ecosystem": "npm",
+      "installed_version": "0.4.23",
+      "fixed_version": "1.1.4",
+      "app": "nodejs-goof",
+      "cvss": 9.8,
+      "epss": 0.02309,
+      "in_kev": false,
+      "kev_date_added": null,
+      "priority_score": 26,
+      "priority_label": "medium",
+      "summary": {
+        "en": "All versions of bson before 1.1.4 are vulnerable to Deserialization of Untrusted Data. The package will ignore an unknown value for an object's _bsotype, leading to cases where an object is serialized as a document rather than the intended BSON type.",
+        "es": "Todas las versiones de bson anteriores a 1.1.4, son vulnerables a la Deserializaci\u00f3n de Datos No Confiables. El paquete ignorar\u00e1 un valor desconocido para un _bsotype de objeto, conllevando a casos donde un objeto es serializado como un documento en lugar del tipo BSON previsto."
+      },
+      "references": [
+        "https://snyk.io/vuln/SNYK-JS-BSON-561052"
       ]
     },
     {
@@ -7779,31 +7779,6 @@
       ]
     },
     {
-      "id": "nodejs-goof:CVE-2022-2564:mongoose:4.2.4",
-      "cve": "CVE-2022-2564",
-      "package": "mongoose",
-      "ecosystem": "npm",
-      "installed_version": "4.2.4",
-      "fixed_version": "5.13.15",
-      "app": "nodejs-goof",
-      "cvss": 9.8,
-      "epss": 0.01714,
-      "in_kev": false,
-      "kev_date_added": null,
-      "priority_score": 26,
-      "priority_label": "medium",
-      "summary": {
-        "en": "Prototype Pollution in GitHub repository automattic/mongoose prior to 6.4.6.",
-        "es": "Una Contaminaci\u00f3n de Prototipo en el repositorio de GitHub automattic/mongoose versiones anteriores a 6.4.6"
-      },
-      "references": [
-        "https://github.com/Automattic/mongoose/blob/51e758541763b6f14569744ced15cc23ab8b50c6/lib/schema.js#L88-L141",
-        "https://github.com/Automattic/mongoose/compare/6.4.5...6.4.6",
-        "https://github.com/automattic/mongoose/commit/a45cfb6b0ce0067ae9794cfa80f7917e1fb3c6f8",
-        "https://huntr.dev/bounties/055be524-9296-4b2f-b68d-6d5b810d1ddd"
-      ]
-    },
-    {
       "id": "nodejs-goof:CVE-2019-17426:mongoose:4.2.4",
       "cve": "CVE-2019-17426",
       "package": "mongoose",
@@ -7893,6 +7868,31 @@
       "references": [
         "https://github.com/chjj/marked/issues/937",
         "https://nodesecurity.io/advisories/531"
+      ]
+    },
+    {
+      "id": "nodejs-goof:CVE-2022-2564:mongoose:4.2.4",
+      "cve": "CVE-2022-2564",
+      "package": "mongoose",
+      "ecosystem": "npm",
+      "installed_version": "4.2.4",
+      "fixed_version": "5.13.15",
+      "app": "nodejs-goof",
+      "cvss": 9.8,
+      "epss": 0.01714,
+      "in_kev": false,
+      "kev_date_added": null,
+      "priority_score": 26,
+      "priority_label": "medium",
+      "summary": {
+        "en": "Prototype Pollution in GitHub repository automattic/mongoose prior to 6.4.6.",
+        "es": "Una Contaminaci\u00f3n de Prototipo en el repositorio de GitHub automattic/mongoose versiones anteriores a 6.4.6"
+      },
+      "references": [
+        "https://github.com/Automattic/mongoose/blob/51e758541763b6f14569744ced15cc23ab8b50c6/lib/schema.js#L88-L141",
+        "https://github.com/Automattic/mongoose/compare/6.4.5...6.4.6",
+        "https://github.com/automattic/mongoose/commit/a45cfb6b0ce0067ae9794cfa80f7917e1fb3c6f8",
+        "https://huntr.dev/bounties/055be524-9296-4b2f-b68d-6d5b810d1ddd"
       ]
     },
     {
@@ -8600,7 +8600,7 @@
       "fixed_version": "1.13.8",
       "app": "nodejs-goof",
       "cvss": 5.9,
-      "epss": 0.01193,
+      "epss": 0.01272,
       "in_kev": false,
       "kev_date_added": null,
       "priority_score": 16,
@@ -9100,29 +9100,6 @@
       ]
     },
     {
-      "id": "nodejs-goof:CVE-2026-39244:adm-zip:0.4.7",
-      "cve": "CVE-2026-39244",
-      "package": "adm-zip",
-      "ecosystem": "npm",
-      "installed_version": "0.4.7",
-      "fixed_version": "0.6.0",
-      "app": "nodejs-goof",
-      "cvss": 7.5,
-      "epss": 0.00841,
-      "in_kev": false,
-      "kev_date_added": null,
-      "priority_score": 19,
-      "priority_label": "low",
-      "summary": {
-        "en": "adm-zip before 0.5.18 is vulnerable to denial of service via a crafted ZIP file with a manipulated uncompressed size header field. In zipEntry.js line 103, Buffer.alloc(_centralHeader.size) allocates memory based on the declared uncompressed size from the ZIP central directory header without validating it against the actual compressed data size or imposing any upper bound. The size value is read directly from the binary header at entryHeader.js line 266 with no bounds check. An attacker can craft a ~120-byte ZIP file that declares ~4GB uncompressed size, causing a memory allocation amplification ratio of over 33 million to 1. The allocation occurs before CRC validation, so the malicious payload cannot be rejected early. All extraction and read methods are affected: readFile(), readAsText(), extractEntryTo(), extractAllTo(), extractAllToAsync(), test(), and entry.getData(). Any application accepting untrusted ZIP files via adm-zip is vulnerable to immediate process crash."
-      },
-      "references": [
-        "https://github.com/cthackers/adm-zip",
-        "https://github.com/cthackers/adm-zip/issues/568",
-        "https://www.npmjs.com/package/adm-zip"
-      ]
-    },
-    {
       "id": "nodejs-goof:CVE-2026-14257:brace-expansion:1.1.11",
       "cve": "CVE-2026-14257",
       "package": "brace-expansion",
@@ -9144,6 +9121,29 @@
         "https://github.com/juliangruber/brace-expansion",
         "https://github.com/juliangruber/brace-expansion/commit/a1bd33999ea75262c4749fff3bbb0d1372bd07b5",
         "https://www.npmjs.com/package/brace-expansion"
+      ]
+    },
+    {
+      "id": "nodejs-goof:CVE-2026-39244:adm-zip:0.4.7",
+      "cve": "CVE-2026-39244",
+      "package": "adm-zip",
+      "ecosystem": "npm",
+      "installed_version": "0.4.7",
+      "fixed_version": "0.6.0",
+      "app": "nodejs-goof",
+      "cvss": 7.5,
+      "epss": 0.00841,
+      "in_kev": false,
+      "kev_date_added": null,
+      "priority_score": 19,
+      "priority_label": "low",
+      "summary": {
+        "en": "adm-zip before 0.5.18 is vulnerable to denial of service via a crafted ZIP file with a manipulated uncompressed size header field. In zipEntry.js line 103, Buffer.alloc(_centralHeader.size) allocates memory based on the declared uncompressed size from the ZIP central directory header without validating it against the actual compressed data size or imposing any upper bound. The size value is read directly from the binary header at entryHeader.js line 266 with no bounds check. An attacker can craft a ~120-byte ZIP file that declares ~4GB uncompressed size, causing a memory allocation amplification ratio of over 33 million to 1. The allocation occurs before CRC validation, so the malicious payload cannot be rejected early. All extraction and read methods are affected: readFile(), readAsText(), extractEntryTo(), extractAllTo(), extractAllToAsync(), test(), and entry.getData(). Any application accepting untrusted ZIP files via adm-zip is vulnerable to immediate process crash."
+      },
+      "references": [
+        "https://github.com/cthackers/adm-zip",
+        "https://github.com/cthackers/adm-zip/issues/568",
+        "https://www.npmjs.com/package/adm-zip"
       ]
     },
     {
@@ -9514,7 +9514,7 @@
       "fixed_version": "1.1.19",
       "app": "nodejs-goof",
       "cvss": 7.5,
-      "epss": 0.0063,
+      "epss": 0.00491,
       "in_kev": false,
       "kev_date_added": null,
       "priority_score": 19,
@@ -9539,7 +9539,7 @@
       "fixed_version": "1.1.20",
       "app": "nodejs-goof",
       "cvss": 7.5,
-      "epss": 0.0063,
+      "epss": 0.00491,
       "in_kev": false,
       "kev_date_added": null,
       "priority_score": 19,
@@ -9807,29 +9807,6 @@
       ]
     },
     {
-      "id": "nodejs-goof:CVE-2026-118664:decode-uri-component:0.2.0",
-      "cve": "CVE-2026-118664",
-      "package": "decode-uri-component",
-      "ecosystem": "npm",
-      "installed_version": "0.2.0",
-      "fixed_version": "0.5.1",
-      "app": "nodejs-goof",
-      "cvss": null,
-      "epss": 0.00507,
-      "in_kev": false,
-      "kev_date_added": null,
-      "priority_score": 0,
-      "priority_label": "low",
-      "summary": {
-        "en": "decode-uri-component provides a more robust alternative to decodeURIComponent. Prior to 0.5.1, decodeUriComponent in index.js falls back to customDecodeURIComponent after native decoding throws, and the fallback collects every distinct percent-encoded run before performing a full-string regular-expression replacement for each entry. Malformed input containing many distinct runs can therefore make both the number of replacements and the scanned input length grow together, causing quadratic CPU consumption and blocking the Node.js event loop; request-body inputs can reach the demonstrated size, while ordinary URL header limits reduce the practical delay. This issue is fixed in version 0.5.1."
-      },
-      "references": [
-        "https://github.com/SamVerschueren/decode-uri-component/commit/fad01d65b93bd3f2f0dc32dfd8d57a38b57bc608",
-        "https://github.com/SamVerschueren/decode-uri-component/releases/tag/v0.5.1",
-        "https://github.com/SamVerschueren/decode-uri-component/security/advisories/GHSA-qr28-fpjm-wq7f"
-      ]
-    },
-    {
       "id": "nodejs-goof:CVE-2026-96780:figlet:1.5.0",
       "cve": "CVE-2026-96780",
       "package": "figlet",
@@ -9850,6 +9827,29 @@
         "https://github.com/patorjk/figlet.js/commit/cb2839d0e53aeafbd361e9587abc72e49e41cbb3",
         "https://github.com/patorjk/figlet.js/pull/169",
         "https://github.com/patorjk/figlet.js/security/advisories/GHSA-62ch-8vmq-8xm7"
+      ]
+    },
+    {
+      "id": "nodejs-goof:CVE-2026-118664:decode-uri-component:0.2.0",
+      "cve": "CVE-2026-118664",
+      "package": "decode-uri-component",
+      "ecosystem": "npm",
+      "installed_version": "0.2.0",
+      "fixed_version": "0.5.1",
+      "app": "nodejs-goof",
+      "cvss": null,
+      "epss": 0.00507,
+      "in_kev": false,
+      "kev_date_added": null,
+      "priority_score": 0,
+      "priority_label": "low",
+      "summary": {
+        "en": "decode-uri-component provides a more robust alternative to decodeURIComponent. Prior to 0.5.1, decodeUriComponent in index.js falls back to customDecodeURIComponent after native decoding throws, and the fallback collects every distinct percent-encoded run before performing a full-string regular-expression replacement for each entry. Malformed input containing many distinct runs can therefore make both the number of replacements and the scanned input length grow together, causing quadratic CPU consumption and blocking the Node.js event loop; request-body inputs can reach the demonstrated size, while ordinary URL header limits reduce the practical delay. This issue is fixed in version 0.5.1."
+      },
+      "references": [
+        "https://github.com/SamVerschueren/decode-uri-component/commit/fad01d65b93bd3f2f0dc32dfd8d57a38b57bc608",
+        "https://github.com/SamVerschueren/decode-uri-component/releases/tag/v0.5.1",
+        "https://github.com/SamVerschueren/decode-uri-component/security/advisories/GHSA-qr28-fpjm-wq7f"
       ]
     },
     {
@@ -10179,7 +10179,7 @@
       "fixed_version": "1.1.21",
       "app": "nodejs-goof",
       "cvss": 5.3,
-      "epss": 0.00524,
+      "epss": 0.00437,
       "in_kev": false,
       "kev_date_added": null,
       "priority_score": 14,
@@ -10562,7 +10562,7 @@
       "fixed_version": "3.15.0",
       "app": "nodejs-goof",
       "cvss": 5.3,
-      "epss": 0.00415,
+      "epss": 0.00386,
       "in_kev": false,
       "kev_date_added": null,
       "priority_score": 14,
@@ -10968,12 +10968,6 @@
   ],
   "history": [
     {
-      "date": "2026-10-24",
-      "findings_total": 384,
-      "critical": 3,
-      "high": 3
-    },
-    {
       "date": "2026-10-25",
       "findings_total": 386,
       "critical": 3,
@@ -11143,6 +11137,12 @@
     },
     {
       "date": "2026-11-26",
+      "findings_total": 394,
+      "critical": 3,
+      "high": 2
+    },
+    {
+      "date": "2026-11-27",
       "findings_total": 394,
       "critical": 3,
       "high": 2

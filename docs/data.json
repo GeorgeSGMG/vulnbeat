@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-11-27T16:26:56.029647+00:00",
+  "generated_at": "2026-11-28T15:19:22.766811+00:00",
   "sources": {
     "kev": {
       "fetched": true,
@@ -896,6 +896,33 @@
       ]
     },
     {
+      "id": "pygoat:CVE-2026-25673:django:4.2",
+      "cve": "CVE-2026-25673",
+      "package": "django",
+      "ecosystem": "PyPI",
+      "installed_version": "4.2",
+      "fixed_version": "4.2.29",
+      "app": "pygoat",
+      "cvss": 7.5,
+      "epss": 0.01374,
+      "in_kev": false,
+      "kev_date_added": null,
+      "priority_score": 20,
+      "priority_label": "medium",
+      "summary": {
+        "en": "An issue was discovered in 6.0 before 6.0.3, 5.2 before 5.2.12, and 4.2 before 4.2.29.\n`URLField.to_python()` in Django calls `urllib.parse.urlsplit()`, which performs NFKC normalization on Windows that is disproportionately slow for certain Unicode characters, allowing a remote attacker to cause denial of service via large URL inputs containing these characters.\nEarlier, unsupported Django series (such as 5.0.x, 4.1.x, and 3.2.x) were not evaluated and may also be affected.\nDjango would like to thank Seokchan Yoon for reporting this issue.",
+        "es": "Se descubri\u00f3 un problema en 6.0 anterior a 6.0.3, 5.2 anterior a 5.2.12, y 4.2 anterior a 4.2.29.\n`URLField.to_python()` en Django llama a `urllib.parse.urlsplit()`, que realiza la normalizaci\u00f3n NFKC en Windows, la cual es desproporcionadamente lenta para ciertos caracteres Unicode, permitiendo a un atacante remoto causar denegaci\u00f3n de servicio a trav\u00e9s de grandes entradas de URL que contienen estos caracteres.\nSeries de Django anteriores y no compatibles (como 5.0.x, 4.1.x y 3.2.x) no fueron evaluadas y tambi\u00e9n podr\u00edan estar afectadas.\nDjango desea agradecer a Seokchan Yoon por informar sobre este problema."
+      },
+      "references": [
+        "https://docs.djangoproject.com/en/dev/releases/security/",
+        "https://groups.google.com/g/django-announce",
+        "https://www.djangoproject.com/weblog/2026/mar/03/security-releases/",
+        "https://access.redhat.com/security/cve/CVE-2026-25673",
+        "https://bugzilla.redhat.com/show_bug.cgi?id=2444115",
+        "https://security.access.redhat.com/data/csaf/v2/vex/2026/cve-2026-25673.json"
+      ]
+    },
+    {
       "id": "pygoat:CVE-2024-41990:django:4.2",
       "cve": "CVE-2024-41990",
       "package": "django",
@@ -942,33 +969,6 @@
         "https://access.redhat.com/security/cve/CVE-2023-50782",
         "https://bugzilla.redhat.com/show_bug.cgi?id=2254432",
         "https://www.couchbase.com/alerts/"
-      ]
-    },
-    {
-      "id": "pygoat:CVE-2026-25673:django:4.2",
-      "cve": "CVE-2026-25673",
-      "package": "django",
-      "ecosystem": "PyPI",
-      "installed_version": "4.2",
-      "fixed_version": "4.2.29",
-      "app": "pygoat",
-      "cvss": 7.5,
-      "epss": 0.01374,
-      "in_kev": false,
-      "kev_date_added": null,
-      "priority_score": 20,
-      "priority_label": "medium",
-      "summary": {
-        "en": "An issue was discovered in 6.0 before 6.0.3, 5.2 before 5.2.12, and 4.2 before 4.2.29.\n`URLField.to_python()` in Django calls `urllib.parse.urlsplit()`, which performs NFKC normalization on Windows that is disproportionately slow for certain Unicode characters, allowing a remote attacker to cause denial of service via large URL inputs containing these characters.\nEarlier, unsupported Django series (such as 5.0.x, 4.1.x, and 3.2.x) were not evaluated and may also be affected.\nDjango would like to thank Seokchan Yoon for reporting this issue.",
-        "es": "Se descubri\u00f3 un problema en 6.0 anterior a 6.0.3, 5.2 anterior a 5.2.12, y 4.2 anterior a 4.2.29.\n`URLField.to_python()` en Django llama a `urllib.parse.urlsplit()`, que realiza la normalizaci\u00f3n NFKC en Windows, la cual es desproporcionadamente lenta para ciertos caracteres Unicode, permitiendo a un atacante remoto causar denegaci\u00f3n de servicio a trav\u00e9s de grandes entradas de URL que contienen estos caracteres.\nSeries de Django anteriores y no compatibles (como 5.0.x, 4.1.x y 3.2.x) no fueron evaluadas y tambi\u00e9n podr\u00edan estar afectadas.\nDjango desea agradecer a Seokchan Yoon por informar sobre este problema."
-      },
-      "references": [
-        "https://docs.djangoproject.com/en/dev/releases/security/",
-        "https://groups.google.com/g/django-announce",
-        "https://www.djangoproject.com/weblog/2026/mar/03/security-releases/",
-        "https://access.redhat.com/security/cve/CVE-2026-25673",
-        "https://bugzilla.redhat.com/show_bug.cgi?id=2444115",
-        "https://security.access.redhat.com/data/csaf/v2/vex/2026/cve-2026-25673.json"
       ]
     },
     {
@@ -2095,31 +2095,6 @@
       ]
     },
     {
-      "id": "pygoat:CVE-2026-59205:pillow:12.1.0",
-      "cve": "CVE-2026-59205",
-      "package": "pillow",
-      "ecosystem": "PyPI",
-      "installed_version": "12.1.0",
-      "fixed_version": "12.3.0",
-      "app": "pygoat",
-      "cvss": 7.5,
-      "epss": 0.00655,
-      "in_kev": false,
-      "kev_date_added": null,
-      "priority_score": 19,
-      "priority_label": "low",
-      "summary": {
-        "en": "Pillow is a Python imaging library. Prior to 12.3.0, Pillow's ImageCms.ImageCmsTransform.apply(im, imOut) API can trigger controlled native heap corruption when the caller supplies an output image whose mode does not match the transform's declared output mode. This issue is fixed in version 12.3.0.",
-        "es": "Pillow es una biblioteca de procesamiento de im\u00e1genes de Python. Antes de la versi\u00f3n 12.3.0, la API ImageCms.ImageCmsTransform.apply(im, imOut) de Pillow puede desencadenar una corrupci\u00f3n controlada del heap nativo cuando el llamador suministra una imagen de salida cuyo modo no coincide con el modo de salida declarado de la transformaci\u00f3n. Este problema se ha corregido en la versi\u00f3n 12.3.0."
-      },
-      "references": [
-        "https://github.com/python-pillow/Pillow/commit/a9ffc42bedf4fc0a7ef8d6486e7f9e81e3397721",
-        "https://github.com/python-pillow/Pillow/pull/9715",
-        "https://github.com/python-pillow/Pillow/releases/tag/12.3.0",
-        "https://github.com/python-pillow/Pillow/security/advisories/GHSA-9hw9-ch79-4vh6"
-      ]
-    },
-    {
       "id": "pygoat:CVE-2026-59200:pillow:12.1.0",
       "cve": "CVE-2026-59200",
       "package": "pillow",
@@ -2167,6 +2142,31 @@
         "https://github.com/python-pillow/Pillow/pull/9703",
         "https://github.com/python-pillow/Pillow/releases/tag/12.3.0",
         "https://github.com/python-pillow/Pillow/security/advisories/GHSA-6r8x-57c9-28j4"
+      ]
+    },
+    {
+      "id": "pygoat:CVE-2026-59205:pillow:12.1.0",
+      "cve": "CVE-2026-59205",
+      "package": "pillow",
+      "ecosystem": "PyPI",
+      "installed_version": "12.1.0",
+      "fixed_version": "12.3.0",
+      "app": "pygoat",
+      "cvss": 7.5,
+      "epss": 0.00655,
+      "in_kev": false,
+      "kev_date_added": null,
+      "priority_score": 19,
+      "priority_label": "low",
+      "summary": {
+        "en": "Pillow is a Python imaging library. Prior to 12.3.0, Pillow's ImageCms.ImageCmsTransform.apply(im, imOut) API can trigger controlled native heap corruption when the caller supplies an output image whose mode does not match the transform's declared output mode. This issue is fixed in version 12.3.0.",
+        "es": "Pillow es una biblioteca de procesamiento de im\u00e1genes de Python. Antes de la versi\u00f3n 12.3.0, la API ImageCms.ImageCmsTransform.apply(im, imOut) de Pillow puede desencadenar una corrupci\u00f3n controlada del heap nativo cuando el llamador suministra una imagen de salida cuyo modo no coincide con el modo de salida declarado de la transformaci\u00f3n. Este problema se ha corregido en la versi\u00f3n 12.3.0."
+      },
+      "references": [
+        "https://github.com/python-pillow/Pillow/commit/a9ffc42bedf4fc0a7ef8d6486e7f9e81e3397721",
+        "https://github.com/python-pillow/Pillow/pull/9715",
+        "https://github.com/python-pillow/Pillow/releases/tag/12.3.0",
+        "https://github.com/python-pillow/Pillow/security/advisories/GHSA-9hw9-ch79-4vh6"
       ]
     },
     {
@@ -2218,6 +2218,30 @@
       ]
     },
     {
+      "id": "pygoat:CVE-2026-54060:pillow:12.1.0",
+      "cve": "CVE-2026-54060",
+      "package": "pillow",
+      "ecosystem": "PyPI",
+      "installed_version": "12.1.0",
+      "fixed_version": "12.3.0",
+      "app": "pygoat",
+      "cvss": 7.5,
+      "epss": 0.00644,
+      "in_kev": false,
+      "kev_date_added": null,
+      "priority_score": 19,
+      "priority_label": "low",
+      "summary": {
+        "en": "Pillow is a Python imaging library. Prior to 12.3.0, PIL/FontFile.py FontFile.compile() assembled per-glyph images into a combined bitmap with Image.new(\"1\", (xsize, ysize)) without calling Image._decompression_bomb_check(), allowing a font to trigger excessive allocation during conversion or saving. This issue is fixed in version 12.3.0.",
+        "es": "Pillow es una biblioteca de im\u00e1genes de Python. Antes de la versi\u00f3n 12.3.0, PIL/FontFile.py FontFile.compile() ensamblaba im\u00e1genes por glifo en un mapa de bits combinado con Image.new(\u20191\u2019, (xsize, ysize)) sin llamar a Image._decompression_bomb_check(), permitiendo que una fuente desencadenara una asignaci\u00f3n excesiva durante la conversi\u00f3n o el guardado. Este problema est\u00e1 solucionado en la versi\u00f3n 12.3.0."
+      },
+      "references": [
+        "https://github.com/python-pillow/Pillow/blob/main/docs/releasenotes/12.3.0.rst",
+        "https://github.com/python-pillow/Pillow/commit/0a263e6264aa5399988d9acd3bbfbca2ca3ec77d",
+        "https://github.com/python-pillow/Pillow/security/advisories/GHSA-5x94-69rx-g8h2"
+      ]
+    },
+    {
       "id": "pygoat:CVE-2026-54059:pillow:12.1.0",
       "cve": "CVE-2026-54059",
       "package": "pillow",
@@ -2266,53 +2290,6 @@
       ]
     },
     {
-      "id": "pygoat:CVE-2026-54060:pillow:12.1.0",
-      "cve": "CVE-2026-54060",
-      "package": "pillow",
-      "ecosystem": "PyPI",
-      "installed_version": "12.1.0",
-      "fixed_version": "12.3.0",
-      "app": "pygoat",
-      "cvss": 7.5,
-      "epss": 0.00644,
-      "in_kev": false,
-      "kev_date_added": null,
-      "priority_score": 19,
-      "priority_label": "low",
-      "summary": {
-        "en": "Pillow is a Python imaging library. Prior to 12.3.0, PIL/FontFile.py FontFile.compile() assembled per-glyph images into a combined bitmap with Image.new(\"1\", (xsize, ysize)) without calling Image._decompression_bomb_check(), allowing a font to trigger excessive allocation during conversion or saving. This issue is fixed in version 12.3.0.",
-        "es": "Pillow es una biblioteca de im\u00e1genes de Python. Antes de la versi\u00f3n 12.3.0, PIL/FontFile.py FontFile.compile() ensamblaba im\u00e1genes por glifo en un mapa de bits combinado con Image.new(\u20191\u2019, (xsize, ysize)) sin llamar a Image._decompression_bomb_check(), permitiendo que una fuente desencadenara una asignaci\u00f3n excesiva durante la conversi\u00f3n o el guardado. Este problema est\u00e1 solucionado en la versi\u00f3n 12.3.0."
-      },
-      "references": [
-        "https://github.com/python-pillow/Pillow/blob/main/docs/releasenotes/12.3.0.rst",
-        "https://github.com/python-pillow/Pillow/commit/0a263e6264aa5399988d9acd3bbfbca2ca3ec77d",
-        "https://github.com/python-pillow/Pillow/security/advisories/GHSA-5x94-69rx-g8h2"
-      ]
-    },
-    {
-      "id": "pygoat:CVE-2026-112894:pillow:12.1.0",
-      "cve": "CVE-2026-112894",
-      "package": "pillow",
-      "ecosystem": "PyPI",
-      "installed_version": "12.1.0",
-      "fixed_version": "13.0.0",
-      "app": "pygoat",
-      "cvss": 7.5,
-      "epss": 0.00594,
-      "in_kev": false,
-      "kev_date_added": null,
-      "priority_score": 19,
-      "priority_label": "low",
-      "summary": {
-        "en": "Pillow is a Python imaging library. From 5.1.0 until 13.0.0, Pillow takes quadratic time to reserve PDF object identifiers when saving many frames with save_all enabled. PdfParser.next_object_id() repeatedly rebuilds and scans all previously reserved identifiers for every object. An attacker can supply a multi-frame image, including a small APNG with a large declared frame count, to an application that converts it to a multipage PDF. This can consume excessive CPU and deny service. This issue is fixed in version 13.0.0."
-      },
-      "references": [
-        "https://github.com/python-pillow/Pillow/commit/f6a852555f1a1bdff7781abf25f1a3b8bd6ce6cb",
-        "https://github.com/python-pillow/Pillow/releases/tag/13.0.0",
-        "https://github.com/python-pillow/Pillow/security/advisories/GHSA-jg86-v3jv-hrpm"
-      ]
-    },
-    {
       "id": "pygoat:CVE-2026-112895:pillow:12.1.0",
       "cve": "CVE-2026-112895",
       "package": "pillow",
@@ -2356,6 +2333,29 @@
         "https://github.com/python-pillow/Pillow/commit/aafa6c75f7cdabb9f409a8aac7c780bea31d08d9",
         "https://github.com/python-pillow/Pillow/releases/tag/13.0.0",
         "https://github.com/python-pillow/Pillow/security/advisories/GHSA-7mwm-ghpf-9vrm"
+      ]
+    },
+    {
+      "id": "pygoat:CVE-2026-112894:pillow:12.1.0",
+      "cve": "CVE-2026-112894",
+      "package": "pillow",
+      "ecosystem": "PyPI",
+      "installed_version": "12.1.0",
+      "fixed_version": "13.0.0",
+      "app": "pygoat",
+      "cvss": 7.5,
+      "epss": 0.00594,
+      "in_kev": false,
+      "kev_date_added": null,
+      "priority_score": 19,
+      "priority_label": "low",
+      "summary": {
+        "en": "Pillow is a Python imaging library. From 5.1.0 until 13.0.0, Pillow takes quadratic time to reserve PDF object identifiers when saving many frames with save_all enabled. PdfParser.next_object_id() repeatedly rebuilds and scans all previously reserved identifiers for every object. An attacker can supply a multi-frame image, including a small APNG with a large declared frame count, to an application that converts it to a multipage PDF. This can consume excessive CPU and deny service. This issue is fixed in version 13.0.0."
+      },
+      "references": [
+        "https://github.com/python-pillow/Pillow/commit/f6a852555f1a1bdff7781abf25f1a3b8bd6ce6cb",
+        "https://github.com/python-pillow/Pillow/releases/tag/13.0.0",
+        "https://github.com/python-pillow/Pillow/security/advisories/GHSA-jg86-v3jv-hrpm"
       ]
     },
     {
@@ -2406,29 +2406,6 @@
       ]
     },
     {
-      "id": "pygoat:CVE-2026-112901:pillow:12.1.0",
-      "cve": "CVE-2026-112901",
-      "package": "pillow",
-      "ecosystem": "PyPI",
-      "installed_version": "12.1.0",
-      "fixed_version": "13.0.0",
-      "app": "pygoat",
-      "cvss": 7.5,
-      "epss": 0.00644,
-      "in_kev": false,
-      "kev_date_added": null,
-      "priority_score": 19,
-      "priority_label": "low",
-      "summary": {
-        "en": "Pillow is a Python imaging library. Prior to 13.0.0, Pillow's XBM header parser is vulnerable to regular-expression denial of service. In XbmImageFile._open, when an application calls Image.open() on a small crafted XBM file, XbmImagePlugin applies a backtracking expression to the attacker-controlled header before image dimensions are accepted, stalling a worker for minutes and denying service. This issue is fixed in version 13.0.0."
-      },
-      "references": [
-        "https://github.com/python-pillow/Pillow/commit/2852a3e3d568997ddec745fc800991f138878f4b",
-        "https://github.com/python-pillow/Pillow/releases/tag/13.0.0",
-        "https://github.com/python-pillow/Pillow/security/advisories/GHSA-xgh8-jp6q-p5x8"
-      ]
-    },
-    {
       "id": "pygoat:CVE-2026-112401:pillow:12.1.0",
       "cve": "CVE-2026-112401",
       "package": "pillow",
@@ -2449,6 +2426,29 @@
         "https://github.com/python-pillow/Pillow/commit/68a3fe957d8a4d552e8c69d96066d749f0614c7e",
         "https://github.com/python-pillow/Pillow/releases/tag/13.0.0",
         "https://github.com/python-pillow/Pillow/security/advisories/GHSA-74r2-7ff9-mjj2"
+      ]
+    },
+    {
+      "id": "pygoat:CVE-2026-112901:pillow:12.1.0",
+      "cve": "CVE-2026-112901",
+      "package": "pillow",
+      "ecosystem": "PyPI",
+      "installed_version": "12.1.0",
+      "fixed_version": "13.0.0",
+      "app": "pygoat",
+      "cvss": 7.5,
+      "epss": 0.00644,
+      "in_kev": false,
+      "kev_date_added": null,
+      "priority_score": 19,
+      "priority_label": "low",
+      "summary": {
+        "en": "Pillow is a Python imaging library. Prior to 13.0.0, Pillow's XBM header parser is vulnerable to regular-expression denial of service. In XbmImageFile._open, when an application calls Image.open() on a small crafted XBM file, XbmImagePlugin applies a backtracking expression to the attacker-controlled header before image dimensions are accepted, stalling a worker for minutes and denying service. This issue is fixed in version 13.0.0."
+      },
+      "references": [
+        "https://github.com/python-pillow/Pillow/commit/2852a3e3d568997ddec745fc800991f138878f4b",
+        "https://github.com/python-pillow/Pillow/releases/tag/13.0.0",
+        "https://github.com/python-pillow/Pillow/security/advisories/GHSA-xgh8-jp6q-p5x8"
       ]
     },
     {
@@ -3244,30 +3244,6 @@
       ]
     },
     {
-      "id": "pygoat:CVE-2026-96643:pillow:12.1.0",
-      "cve": "CVE-2026-96643",
-      "package": "pillow",
-      "ecosystem": "PyPI",
-      "installed_version": "12.1.0",
-      "fixed_version": "13.0.0",
-      "app": "pygoat",
-      "cvss": 6.5,
-      "epss": 0.0046,
-      "in_kev": false,
-      "kev_date_added": null,
-      "priority_score": 17,
-      "priority_label": "low",
-      "summary": {
-        "en": "Pillow is a Python imaging library. From 11.0.0 until 13.0.0, Exif.load() in src/PIL/Image.py repeatedly slices the remaining EXIF data while it begins with the six-byte Exif header. src/PIL/PngImagePlugin.py accepts an uncapped PNG eXIf chunk, so a file filled with repeated headers causes a new shrinking copy on every iteration and quadratic CPU work. The condition is reachable through Image.getexif(), Image._getexif(), and ImageOps.exif_transpose(), including common photo-upload rotation workflows. This issue is fixed in version 13.0.0."
-      },
-      "references": [
-        "https://github.com/python-pillow/Pillow/commit/806e38381c781f32bbd22f4cd026678acd40fd6c",
-        "https://github.com/python-pillow/Pillow/pull/10073",
-        "https://github.com/python-pillow/Pillow/releases/tag/13.0.0",
-        "https://github.com/python-pillow/Pillow/security/advisories/GHSA-g4qv-2jxx-769h"
-      ]
-    },
-    {
       "id": "pygoat:CVE-2026-96642:pillow:12.1.0",
       "cve": "CVE-2026-96642",
       "package": "pillow",
@@ -3289,6 +3265,30 @@
         "https://github.com/python-pillow/Pillow/pull/10012",
         "https://github.com/python-pillow/Pillow/releases/tag/13.0.0",
         "https://github.com/python-pillow/Pillow/security/advisories/GHSA-3j72-p6qg-6xp7"
+      ]
+    },
+    {
+      "id": "pygoat:CVE-2026-96643:pillow:12.1.0",
+      "cve": "CVE-2026-96643",
+      "package": "pillow",
+      "ecosystem": "PyPI",
+      "installed_version": "12.1.0",
+      "fixed_version": "13.0.0",
+      "app": "pygoat",
+      "cvss": 6.5,
+      "epss": 0.0046,
+      "in_kev": false,
+      "kev_date_added": null,
+      "priority_score": 17,
+      "priority_label": "low",
+      "summary": {
+        "en": "Pillow is a Python imaging library. From 11.0.0 until 13.0.0, Exif.load() in src/PIL/Image.py repeatedly slices the remaining EXIF data while it begins with the six-byte Exif header. src/PIL/PngImagePlugin.py accepts an uncapped PNG eXIf chunk, so a file filled with repeated headers causes a new shrinking copy on every iteration and quadratic CPU work. The condition is reachable through Image.getexif(), Image._getexif(), and ImageOps.exif_transpose(), including common photo-upload rotation workflows. This issue is fixed in version 13.0.0."
+      },
+      "references": [
+        "https://github.com/python-pillow/Pillow/commit/806e38381c781f32bbd22f4cd026678acd40fd6c",
+        "https://github.com/python-pillow/Pillow/pull/10073",
+        "https://github.com/python-pillow/Pillow/releases/tag/13.0.0",
+        "https://github.com/python-pillow/Pillow/security/advisories/GHSA-g4qv-2jxx-769h"
       ]
     },
     {
@@ -3328,29 +3328,6 @@
       ]
     },
     {
-      "id": "pygoat:CVE-2026-101918:pyjwt:2.4.0",
-      "cve": "CVE-2026-101918",
-      "package": "pyjwt",
-      "ecosystem": "PyPI",
-      "installed_version": "2.4.0",
-      "fixed_version": "2.15.0",
-      "app": "pygoat",
-      "cvss": 5.3,
-      "epss": 0.00644,
-      "in_kev": false,
-      "kev_date_added": null,
-      "priority_score": 14,
-      "priority_label": "low",
-      "summary": {
-        "en": "PyJWT is a Python implementation of JSON Web Token standards. From 2.0.0a1 until 2.15.0, PyJWT PyJWKClient.get_signing_key_from_jwt is affected because payload parser catches ValueError but not RecursionError. This occurs when an attacker-controlled recursively nested payload reaches json.loads. As a result, documented PyJWT exception handling does not contain the failure. Consequently, an unauthenticated request can raise an exception that may produce an HTTP 500 response. The advisory-defined affected implementation also includes jwt/api_jwt.py, verify_signature=False. This issue is fixed in version 2.15.0."
-      },
-      "references": [
-        "https://github.com/jpadilla/pyjwt/commit/5fde08a6cf906aa7698de2d6391d88b73006b17b",
-        "https://github.com/jpadilla/pyjwt/releases/tag/2.15.0",
-        "https://github.com/jpadilla/pyjwt/security/advisories/GHSA-42vr-xj54-vc7v"
-      ]
-    },
-    {
       "id": "pygoat:CVE-2026-101917:pyjwt:2.4.0",
       "cve": "CVE-2026-101917",
       "package": "pyjwt",
@@ -3371,6 +3348,29 @@
         "https://github.com/jpadilla/pyjwt/commit/ba4853a75fb9676362da17f67d0f64bd18afd4e1",
         "https://github.com/jpadilla/pyjwt/releases/tag/2.14.0",
         "https://github.com/jpadilla/pyjwt/security/advisories/GHSA-2gx3-rcp4-g85q"
+      ]
+    },
+    {
+      "id": "pygoat:CVE-2026-101918:pyjwt:2.4.0",
+      "cve": "CVE-2026-101918",
+      "package": "pyjwt",
+      "ecosystem": "PyPI",
+      "installed_version": "2.4.0",
+      "fixed_version": "2.15.0",
+      "app": "pygoat",
+      "cvss": 5.3,
+      "epss": 0.00644,
+      "in_kev": false,
+      "kev_date_added": null,
+      "priority_score": 14,
+      "priority_label": "low",
+      "summary": {
+        "en": "PyJWT is a Python implementation of JSON Web Token standards. From 2.0.0a1 until 2.15.0, PyJWT PyJWKClient.get_signing_key_from_jwt is affected because payload parser catches ValueError but not RecursionError. This occurs when an attacker-controlled recursively nested payload reaches json.loads. As a result, documented PyJWT exception handling does not contain the failure. Consequently, an unauthenticated request can raise an exception that may produce an HTTP 500 response. The advisory-defined affected implementation also includes jwt/api_jwt.py, verify_signature=False. This issue is fixed in version 2.15.0."
+      },
+      "references": [
+        "https://github.com/jpadilla/pyjwt/commit/5fde08a6cf906aa7698de2d6391d88b73006b17b",
+        "https://github.com/jpadilla/pyjwt/releases/tag/2.15.0",
+        "https://github.com/jpadilla/pyjwt/security/advisories/GHSA-42vr-xj54-vc7v"
       ]
     },
     {
@@ -3699,6 +3699,30 @@
       ]
     },
     {
+      "id": "pygoat:CVE-2026-96641:pillow:12.1.0",
+      "cve": "CVE-2026-96641",
+      "package": "pillow",
+      "ecosystem": "PyPI",
+      "installed_version": "12.1.0",
+      "fixed_version": "13.0.0",
+      "app": "pygoat",
+      "cvss": 6.5,
+      "epss": 0.0046,
+      "in_kev": false,
+      "kev_date_added": null,
+      "priority_score": 17,
+      "priority_label": "low",
+      "summary": {
+        "en": "Pillow is a Python imaging library. Prior to 13.0.0, PILfont text-width accumulation in src/_imaging.c checks positive glyph advances against INT_MAX but does not check negative advances against INT_MIN. Repeating a signed 16-bit advance of -32768 can therefore execute a signed C integer overflow in xsize += dx, producing a large positive width from a negative mathematical result. Applications that use getlength(), getsize(), or derived layout, quota, serialization, or allocation calculations can experience logic-integrity errors or resource consumption, while the high-level mask path commonly retains a decompression-bomb check. This issue is fixed in version 13.0.0."
+      },
+      "references": [
+        "https://github.com/python-pillow/Pillow/commit/80de4be9e38d3a6148dd4d8491eb80cd12b760a4",
+        "https://github.com/python-pillow/Pillow/pull/10010",
+        "https://github.com/python-pillow/Pillow/releases/tag/13.0.0",
+        "https://github.com/python-pillow/Pillow/security/advisories/GHSA-4rm8-3hmm-39fg"
+      ]
+    },
+    {
       "id": "pygoat:CVE-2026-96636:pillow:12.1.0",
       "cve": "CVE-2026-96636",
       "package": "pillow",
@@ -3744,30 +3768,6 @@
         "https://github.com/python-pillow/Pillow/pull/10015",
         "https://github.com/python-pillow/Pillow/releases/tag/13.0.0",
         "https://github.com/python-pillow/Pillow/security/advisories/GHSA-24rc-8hj2-v98c"
-      ]
-    },
-    {
-      "id": "pygoat:CVE-2026-96641:pillow:12.1.0",
-      "cve": "CVE-2026-96641",
-      "package": "pillow",
-      "ecosystem": "PyPI",
-      "installed_version": "12.1.0",
-      "fixed_version": "13.0.0",
-      "app": "pygoat",
-      "cvss": 6.5,
-      "epss": 0.0046,
-      "in_kev": false,
-      "kev_date_added": null,
-      "priority_score": 17,
-      "priority_label": "low",
-      "summary": {
-        "en": "Pillow is a Python imaging library. Prior to 13.0.0, PILfont text-width accumulation in src/_imaging.c checks positive glyph advances against INT_MAX but does not check negative advances against INT_MIN. Repeating a signed 16-bit advance of -32768 can therefore execute a signed C integer overflow in xsize += dx, producing a large positive width from a negative mathematical result. Applications that use getlength(), getsize(), or derived layout, quota, serialization, or allocation calculations can experience logic-integrity errors or resource consumption, while the high-level mask path commonly retains a decompression-bomb check. This issue is fixed in version 13.0.0."
-      },
-      "references": [
-        "https://github.com/python-pillow/Pillow/commit/80de4be9e38d3a6148dd4d8491eb80cd12b760a4",
-        "https://github.com/python-pillow/Pillow/pull/10010",
-        "https://github.com/python-pillow/Pillow/releases/tag/13.0.0",
-        "https://github.com/python-pillow/Pillow/security/advisories/GHSA-4rm8-3hmm-39fg"
       ]
     },
     {
@@ -4255,28 +4255,6 @@
       ]
     },
     {
-      "id": "pygoat:CVE-2025-65431:django-allauth:0.52.0",
-      "cve": "CVE-2025-65431",
-      "package": "django-allauth",
-      "ecosystem": "PyPI",
-      "installed_version": "0.52.0",
-      "fixed_version": "65.13.0",
-      "app": "pygoat",
-      "cvss": 5.4,
-      "epss": 0.00305,
-      "in_kev": false,
-      "kev_date_added": null,
-      "priority_score": 14,
-      "priority_label": "low",
-      "summary": {
-        "en": "An issue was discovered in allauth-django before 65.13.0. Both Okta and NetIQ were using preferred_username as the identifier for third-party provider accounts. That value may be mutable and should therefore be avoided for authorization decisions. The providers are now using sub instead.",
-        "es": "Se descubri\u00f3 un problema en allauth-django antes de la versi\u00f3n 65.13.0. Tanto Okta como NetIQ estaban utilizando preferred_username como identificador para las cuentas de proveedores de terceros. Ese valor puede ser mutable y, por lo tanto, deber\u00eda evitarse para las decisiones de autorizaci\u00f3n. Los proveedores ahora est\u00e1n utilizando sub en su lugar."
-      },
-      "references": [
-        "https://allauth.org/news/2025/10/django-allauth-65.13.0-released/"
-      ]
-    },
-    {
       "id": "pygoat:CVE-2025-65430:django-allauth:0.52.0",
       "cve": "CVE-2025-65430",
       "package": "django-allauth",
@@ -4293,6 +4271,28 @@
       "summary": {
         "en": "An issue was discovered in allauth-django before 65.13.0. IdP: marking a user as is_active=False after having handed tokens for that user while the account was still active had no effect. Fixed the access/refresh tokens are now rejected.",
         "es": "Se descubri\u00f3 un problema en allauth-django antes de 65.13.0. IdP: marcar a un usuario como is_active=False despu\u00e9s de haber emitido tokens para ese usuario mientras la cuenta a\u00fan estaba activa no surt\u00eda efecto. Se corrigi\u00f3 que los tokens de acceso/actualizaci\u00f3n ahora son rechazados."
+      },
+      "references": [
+        "https://allauth.org/news/2025/10/django-allauth-65.13.0-released/"
+      ]
+    },
+    {
+      "id": "pygoat:CVE-2025-65431:django-allauth:0.52.0",
+      "cve": "CVE-2025-65431",
+      "package": "django-allauth",
+      "ecosystem": "PyPI",
+      "installed_version": "0.52.0",
+      "fixed_version": "65.13.0",
+      "app": "pygoat",
+      "cvss": 5.4,
+      "epss": 0.00305,
+      "in_kev": false,
+      "kev_date_added": null,
+      "priority_score": 14,
+      "priority_label": "low",
+      "summary": {
+        "en": "An issue was discovered in allauth-django before 65.13.0. Both Okta and NetIQ were using preferred_username as the identifier for third-party provider accounts. That value may be mutable and should therefore be avoided for authorization decisions. The providers are now using sub instead.",
+        "es": "Se descubri\u00f3 un problema en allauth-django antes de la versi\u00f3n 65.13.0. Tanto Okta como NetIQ estaban utilizando preferred_username como identificador para las cuentas de proveedores de terceros. Ese valor puede ser mutable y, por lo tanto, deber\u00eda evitarse para las decisiones de autorizaci\u00f3n. Los proveedores ahora est\u00e1n utilizando sub en su lugar."
       },
       "references": [
         "https://allauth.org/news/2025/10/django-allauth-65.13.0-released/"
@@ -4347,30 +4347,6 @@
       ]
     },
     {
-      "id": "pygoat:CVE-2026-49264:oauthlib:3.2.2",
-      "cve": "CVE-2026-49264",
-      "package": "oauthlib",
-      "ecosystem": "PyPI",
-      "installed_version": "3.2.2",
-      "fixed_version": "4.0.0",
-      "app": "pygoat",
-      "cvss": 6.1,
-      "epss": 0.00234,
-      "in_kev": false,
-      "kev_date_added": null,
-      "priority_score": 15,
-      "priority_label": "low",
-      "summary": {
-        "en": "OAuthLib is an implementation of the OAuth request-signing logic for Python 3.6+. From 0.6.1 until 4.0.0, OAuthLib's RevocationEndpoint in oauthlib/oauth2/rfc6749/endpoints/revocation.py reflects an unvalidated callback request parameter into success and error response bodies when enable_jsonp=True. The callback can come from the query string or request body and is used without restricting it to a legal JavaScript function name. A browser application that loads the revocation response as trusted JSONP and permits attacker influence over callback can therefore execute attacker-controlled JavaScript in the including application's origin, with access to its DOM and script-accessible data. The feature is disabled by default, so only deployments that explicitly enable JSONP are affected. This issue is fixed in version 4.0.0."
-      },
-      "references": [
-        "https://github.com/oauthlib/oauthlib/commit/c888359f3c42bec235b2c5caab2069c9ed62457c",
-        "https://github.com/oauthlib/oauthlib/pull/951",
-        "https://github.com/oauthlib/oauthlib/releases/tag/v4.0.0",
-        "https://github.com/oauthlib/oauthlib/security/advisories/GHSA-hj66-6f7g-4r5v"
-      ]
-    },
-    {
       "id": "pygoat:CVE-2026-25674:django:4.2",
       "cve": "CVE-2026-25674",
       "package": "django",
@@ -4392,6 +4368,30 @@
         "https://docs.djangoproject.com/en/dev/releases/security/",
         "https://groups.google.com/g/django-announce",
         "https://www.djangoproject.com/weblog/2026/mar/03/security-releases/"
+      ]
+    },
+    {
+      "id": "pygoat:CVE-2026-49264:oauthlib:3.2.2",
+      "cve": "CVE-2026-49264",
+      "package": "oauthlib",
+      "ecosystem": "PyPI",
+      "installed_version": "3.2.2",
+      "fixed_version": "4.0.0",
+      "app": "pygoat",
+      "cvss": 6.1,
+      "epss": 0.00234,
+      "in_kev": false,
+      "kev_date_added": null,
+      "priority_score": 15,
+      "priority_label": "low",
+      "summary": {
+        "en": "OAuthLib is an implementation of the OAuth request-signing logic for Python 3.6+. From 0.6.1 until 4.0.0, OAuthLib's RevocationEndpoint in oauthlib/oauth2/rfc6749/endpoints/revocation.py reflects an unvalidated callback request parameter into success and error response bodies when enable_jsonp=True. The callback can come from the query string or request body and is used without restricting it to a legal JavaScript function name. A browser application that loads the revocation response as trusted JSONP and permits attacker influence over callback can therefore execute attacker-controlled JavaScript in the including application's origin, with access to its DOM and script-accessible data. The feature is disabled by default, so only deployments that explicitly enable JSONP are affected. This issue is fixed in version 4.0.0."
+      },
+      "references": [
+        "https://github.com/oauthlib/oauthlib/commit/c888359f3c42bec235b2c5caab2069c9ed62457c",
+        "https://github.com/oauthlib/oauthlib/pull/951",
+        "https://github.com/oauthlib/oauthlib/releases/tag/v4.0.0",
+        "https://github.com/oauthlib/oauthlib/security/advisories/GHSA-hj66-6f7g-4r5v"
       ]
     },
     {
@@ -8487,6 +8487,30 @@
       ]
     },
     {
+      "id": "nodejs-goof:CVE-2026-27601:underscore:1.9.1",
+      "cve": "CVE-2026-27601",
+      "package": "underscore",
+      "ecosystem": "npm",
+      "installed_version": "1.9.1",
+      "fixed_version": "1.13.8",
+      "app": "nodejs-goof",
+      "cvss": 5.9,
+      "epss": 0.01272,
+      "in_kev": false,
+      "kev_date_added": null,
+      "priority_score": 16,
+      "priority_label": "low",
+      "summary": {
+        "en": "Underscore.js is a utility-belt library for JavaScript. Prior to 1.13.8, the _.flatten and _.isEqual functions use recursion without a depth limit. Under very specific conditions, detailed below, an attacker could exploit this in a Denial of Service (DoS) attack by triggering a stack overflow. Untrusted input must be used to create a recursive datastructure, for example using JSON.parse, with no enforced depth limit. The datastructure thus created must be passed to _.flatten or _.isEqual. In the case of _.flatten, the vulnerability can only be exploited if it is possible for a remote client to prepare a datastructure that consists of arrays at all levels AND if no finite depth limit is passed as the second argument to _.flatten. In the case of _.isEqual, the vulnerability can only be exploited if there exists a code path in which two distinct datastructures that were submitted by the same remote client are compared using _.isEqual. For example, if a client submits data that are stored in a database, and the same client can later submit another datastructure that is then compared to the data that were saved in the database previously, OR if a client submits a single request, but its data are parsed twice, creating two non-identical but equivalent datastructures that are then compared. Exceptions originating from the call to _.flatten or _.isEqual, as a result of a stack overflow, are not being caught. This vulnerability is fixed in 1.13.8.",
+        "es": "Underscore.js es una librer\u00eda de utilidades para JavaScript. Antes de la versi\u00f3n 1.13.8, las funciones _.flatten y _.isEqual usan recursi\u00f3n sin un l\u00edmite de profundidad. Bajo condiciones muy espec\u00edficas, detalladas a continuaci\u00f3n, un atacante podr\u00eda explotar esto en un ataque de denegaci\u00f3n de servicio (DoS) al desencadenar un desbordamiento de pila. Se debe usar entrada no confiable para crear una estructura de datos recursiva, por ejemplo, usando JSON.parse, sin un l\u00edmite de profundidad impuesto. La estructura de datos as\u00ed creada debe pasarse a _.flatten o _.isEqual. En el caso de _.flatten, la vulnerabilidad solo puede ser explotada si es posible para un cliente remoto preparar una estructura de datos que consista en arrays en todos los niveles Y si no se pasa un l\u00edmite de profundidad finito como segundo argumento a _.flatten. En el caso de _.isEqual, la vulnerabilidad solo puede ser explotada si existe una ruta de c\u00f3digo en la que dos estructuras de datos distintas que fueron enviadas por el mismo cliente remoto se comparan usando _.isEqual. Por ejemplo, si un cliente env\u00eda datos que se almacenan en una base de datos, y el mismo cliente puede luego enviar otra estructura de datos que luego se compara con los datos que se guardaron en la base de datos previamente, O si un cliente env\u00eda una \u00fanica solicitud, pero sus datos se analizan dos veces, creando dos estructuras de datos no id\u00e9nticas pero equivalentes que luego se comparan. Las excepciones que se originan de la llamada a _.flatten o _.isEqual, como resultado de un desbordamiento de pila, no est\u00e1n siendo capturadas. Esta vulnerabilidad est\u00e1 corregida en la versi\u00f3n 1.13.8."
+      },
+      "references": [
+        "https://github.com/jashkenas/underscore/commit/411e222eb0ca5d570cc4f6315c02c05b830ed2b4",
+        "https://github.com/jashkenas/underscore/commit/a6e23ae9647461ec33ad9f92a2ecfc220eea0a84",
+        "https://github.com/jashkenas/underscore/security/advisories/GHSA-qpx9-hpmf-5gmw"
+      ]
+    },
+    {
       "id": "nodejs-goof:CVE-2021-3765:validator:13.5.2",
       "cve": "CVE-2021-3765",
       "package": "validator",
@@ -8589,30 +8613,6 @@
         "https://github.com/Automattic/mongoose/releases/tag/8.24.3",
         "https://github.com/Automattic/mongoose/releases/tag/9.9.2",
         "https://github.com/Automattic/mongoose/security/advisories/GHSA-pcrw-h46h-c93h"
-      ]
-    },
-    {
-      "id": "nodejs-goof:CVE-2026-27601:underscore:1.9.1",
-      "cve": "CVE-2026-27601",
-      "package": "underscore",
-      "ecosystem": "npm",
-      "installed_version": "1.9.1",
-      "fixed_version": "1.13.8",
-      "app": "nodejs-goof",
-      "cvss": 5.9,
-      "epss": 0.01272,
-      "in_kev": false,
-      "kev_date_added": null,
-      "priority_score": 16,
-      "priority_label": "low",
-      "summary": {
-        "en": "Underscore.js is a utility-belt library for JavaScript. Prior to 1.13.8, the _.flatten and _.isEqual functions use recursion without a depth limit. Under very specific conditions, detailed below, an attacker could exploit this in a Denial of Service (DoS) attack by triggering a stack overflow. Untrusted input must be used to create a recursive datastructure, for example using JSON.parse, with no enforced depth limit. The datastructure thus created must be passed to _.flatten or _.isEqual. In the case of _.flatten, the vulnerability can only be exploited if it is possible for a remote client to prepare a datastructure that consists of arrays at all levels AND if no finite depth limit is passed as the second argument to _.flatten. In the case of _.isEqual, the vulnerability can only be exploited if there exists a code path in which two distinct datastructures that were submitted by the same remote client are compared using _.isEqual. For example, if a client submits data that are stored in a database, and the same client can later submit another datastructure that is then compared to the data that were saved in the database previously, OR if a client submits a single request, but its data are parsed twice, creating two non-identical but equivalent datastructures that are then compared. Exceptions originating from the call to _.flatten or _.isEqual, as a result of a stack overflow, are not being caught. This vulnerability is fixed in 1.13.8.",
-        "es": "Underscore.js es una librer\u00eda de utilidades para JavaScript. Antes de la versi\u00f3n 1.13.8, las funciones _.flatten y _.isEqual usan recursi\u00f3n sin un l\u00edmite de profundidad. Bajo condiciones muy espec\u00edficas, detalladas a continuaci\u00f3n, un atacante podr\u00eda explotar esto en un ataque de denegaci\u00f3n de servicio (DoS) al desencadenar un desbordamiento de pila. Se debe usar entrada no confiable para crear una estructura de datos recursiva, por ejemplo, usando JSON.parse, sin un l\u00edmite de profundidad impuesto. La estructura de datos as\u00ed creada debe pasarse a _.flatten o _.isEqual. En el caso de _.flatten, la vulnerabilidad solo puede ser explotada si es posible para un cliente remoto preparar una estructura de datos que consista en arrays en todos los niveles Y si no se pasa un l\u00edmite de profundidad finito como segundo argumento a _.flatten. En el caso de _.isEqual, la vulnerabilidad solo puede ser explotada si existe una ruta de c\u00f3digo en la que dos estructuras de datos distintas que fueron enviadas por el mismo cliente remoto se comparan usando _.isEqual. Por ejemplo, si un cliente env\u00eda datos que se almacenan en una base de datos, y el mismo cliente puede luego enviar otra estructura de datos que luego se compara con los datos que se guardaron en la base de datos previamente, O si un cliente env\u00eda una \u00fanica solicitud, pero sus datos se analizan dos veces, creando dos estructuras de datos no id\u00e9nticas pero equivalentes que luego se comparan. Las excepciones que se originan de la llamada a _.flatten o _.isEqual, como resultado de un desbordamiento de pila, no est\u00e1n siendo capturadas. Esta vulnerabilidad est\u00e1 corregida en la versi\u00f3n 1.13.8."
-      },
-      "references": [
-        "https://github.com/jashkenas/underscore/commit/411e222eb0ca5d570cc4f6315c02c05b830ed2b4",
-        "https://github.com/jashkenas/underscore/commit/a6e23ae9647461ec33ad9f92a2ecfc220eea0a84",
-        "https://github.com/jashkenas/underscore/security/advisories/GHSA-qpx9-hpmf-5gmw"
       ]
     },
     {
@@ -9488,7 +9488,7 @@
       "fixed_version": "3.15.0",
       "app": "nodejs-goof",
       "cvss": 7.5,
-      "epss": 0.00665,
+      "epss": 0.00517,
       "in_kev": false,
       "kev_date_added": null,
       "priority_score": 19,
@@ -9503,55 +9503,6 @@
         "https://github.com/nodeca/js-yaml/releases/tag/3.15.0",
         "https://github.com/nodeca/js-yaml/releases/tag/4.3.0",
         "https://github.com/nodeca/js-yaml/security/advisories/GHSA-52cp-r559-cp3m"
-      ]
-    },
-    {
-      "id": "nodejs-goof:CVE-2026-102276:brace-expansion:1.1.11",
-      "cve": "CVE-2026-102276",
-      "package": "brace-expansion",
-      "ecosystem": "npm",
-      "installed_version": "1.1.11",
-      "fixed_version": "1.1.19",
-      "app": "nodejs-goof",
-      "cvss": 7.5,
-      "epss": 0.00491,
-      "in_kev": false,
-      "kev_date_added": null,
-      "priority_score": 19,
-      "priority_label": "low",
-      "summary": {
-        "en": "The brace-expansion library generates arbitrary strings containing a common prefix and suffix. Prior to 1.1.19, 2.1.5, 3.0.7, and 5.0.10, crafted brace patterns can exhaust the native stack in parseCommaParts because parseCommaParts recursively processes the remainder once per brace group and uses push.apply to pass every element of a very large comma-part array as a function argument. Patterns containing many comma-separated brace groups trigger the recursive path, while the large array triggers the argument-array path without deep recursion. These paths cause recursive and argument-array native stack exhaustion before max or maxLength can limit output, potentially terminating the Node.js process in a process-terminating denial of service. This issue is fixed in versions 1.1.19, 2.1.5, 3.0.7, and 5.0.10."
-      },
-      "references": [
-        "https://github.com/juliangruber/brace-expansion/commit/0bcbfc0a5928c3073d48f42999d1ce4fc1c42fbc",
-        "https://github.com/juliangruber/brace-expansion/commit/316359e6019c39b3254c8ba8e25dc586a480652c",
-        "https://github.com/juliangruber/brace-expansion/commit/5171e681c0922b7ae8bfaf9a331e309107be6edc",
-        "https://github.com/juliangruber/brace-expansion/commit/6735c94873ca570bcdd6a0690033bdd3126379d3",
-        "https://github.com/juliangruber/brace-expansion/security/advisories/GHSA-6j4f-fj2g-mc7p"
-      ]
-    },
-    {
-      "id": "nodejs-goof:CVE-2026-102278:brace-expansion:1.1.11",
-      "cve": "CVE-2026-102278",
-      "package": "brace-expansion",
-      "ecosystem": "npm",
-      "installed_version": "1.1.11",
-      "fixed_version": "1.1.20",
-      "app": "nodejs-goof",
-      "cvss": 7.5,
-      "epss": 0.00491,
-      "in_kev": false,
-      "kev_date_added": null,
-      "priority_score": 19,
-      "priority_label": "low",
-      "summary": {
-        "en": "The brace-expansion library generates arbitrary strings containing a common prefix and suffix. Prior to 1.1.20, 2.1.6, 3.0.8, and 5.0.11, deeply nested brace groups cause expand_() to recurse once per nesting level at comma-member and single-set expansion sites, exhausting the native stack before output limits can apply and potentially terminating the Node.js process. expand_ performs uncontrolled recursion for nested brace alternatives and single-part sets. deeply nested brace groups supplied as an untrusted pattern. expand_ is affected. expand is affected. Comma members is affected. Single set is affected. native stack exhaustion during nested sub-expansion. process-terminating denial of service. This issue is fixed in versions 1.1.20, 2.1.6, 3.0.8, and 5.0.11."
-      },
-      "references": [
-        "https://github.com/juliangruber/brace-expansion/commit/1efee7c397c191da6287a78ec19512476a966a7b",
-        "https://github.com/juliangruber/brace-expansion/commit/935d78f32f335b2ff76578e5c5e877d31ae9888c",
-        "https://github.com/juliangruber/brace-expansion/commit/de84f144e9816f30e25fc8179e2e1249ab6df0db",
-        "https://github.com/juliangruber/brace-expansion/security/advisories/GHSA-qhr7-859c-m2p7"
       ]
     },
     {
@@ -9878,6 +9829,55 @@
       ]
     },
     {
+      "id": "nodejs-goof:CVE-2026-102276:brace-expansion:1.1.11",
+      "cve": "CVE-2026-102276",
+      "package": "brace-expansion",
+      "ecosystem": "npm",
+      "installed_version": "1.1.11",
+      "fixed_version": "1.1.19",
+      "app": "nodejs-goof",
+      "cvss": 7.5,
+      "epss": 0.00491,
+      "in_kev": false,
+      "kev_date_added": null,
+      "priority_score": 19,
+      "priority_label": "low",
+      "summary": {
+        "en": "The brace-expansion library generates arbitrary strings containing a common prefix and suffix. Prior to 1.1.19, 2.1.5, 3.0.7, and 5.0.10, crafted brace patterns can exhaust the native stack in parseCommaParts because parseCommaParts recursively processes the remainder once per brace group and uses push.apply to pass every element of a very large comma-part array as a function argument. Patterns containing many comma-separated brace groups trigger the recursive path, while the large array triggers the argument-array path without deep recursion. These paths cause recursive and argument-array native stack exhaustion before max or maxLength can limit output, potentially terminating the Node.js process in a process-terminating denial of service. This issue is fixed in versions 1.1.19, 2.1.5, 3.0.7, and 5.0.10."
+      },
+      "references": [
+        "https://github.com/juliangruber/brace-expansion/commit/0bcbfc0a5928c3073d48f42999d1ce4fc1c42fbc",
+        "https://github.com/juliangruber/brace-expansion/commit/316359e6019c39b3254c8ba8e25dc586a480652c",
+        "https://github.com/juliangruber/brace-expansion/commit/5171e681c0922b7ae8bfaf9a331e309107be6edc",
+        "https://github.com/juliangruber/brace-expansion/commit/6735c94873ca570bcdd6a0690033bdd3126379d3",
+        "https://github.com/juliangruber/brace-expansion/security/advisories/GHSA-6j4f-fj2g-mc7p"
+      ]
+    },
+    {
+      "id": "nodejs-goof:CVE-2026-102278:brace-expansion:1.1.11",
+      "cve": "CVE-2026-102278",
+      "package": "brace-expansion",
+      "ecosystem": "npm",
+      "installed_version": "1.1.11",
+      "fixed_version": "1.1.20",
+      "app": "nodejs-goof",
+      "cvss": 7.5,
+      "epss": 0.00491,
+      "in_kev": false,
+      "kev_date_added": null,
+      "priority_score": 19,
+      "priority_label": "low",
+      "summary": {
+        "en": "The brace-expansion library generates arbitrary strings containing a common prefix and suffix. Prior to 1.1.20, 2.1.6, 3.0.8, and 5.0.11, deeply nested brace groups cause expand_() to recurse once per nesting level at comma-member and single-set expansion sites, exhausting the native stack before output limits can apply and potentially terminating the Node.js process. expand_ performs uncontrolled recursion for nested brace alternatives and single-part sets. deeply nested brace groups supplied as an untrusted pattern. expand_ is affected. expand is affected. Comma members is affected. Single set is affected. native stack exhaustion during nested sub-expansion. process-terminating denial of service. This issue is fixed in versions 1.1.20, 2.1.6, 3.0.8, and 5.0.11."
+      },
+      "references": [
+        "https://github.com/juliangruber/brace-expansion/commit/1efee7c397c191da6287a78ec19512476a966a7b",
+        "https://github.com/juliangruber/brace-expansion/commit/935d78f32f335b2ff76578e5c5e877d31ae9888c",
+        "https://github.com/juliangruber/brace-expansion/commit/de84f144e9816f30e25fc8179e2e1249ab6df0db",
+        "https://github.com/juliangruber/brace-expansion/security/advisories/GHSA-qhr7-859c-m2p7"
+      ]
+    },
+    {
       "id": "nodejs-goof:CVE-2026-125118:mongoose:4.2.4",
       "cve": "CVE-2026-125118",
       "package": "mongoose",
@@ -10168,31 +10168,6 @@
         "https://github.com/expressjs/serve-static/commit/0c11fad159898cdc69fd9ab63269b72468ecaf6b",
         "https://github.com/expressjs/serve-static/commit/ce730896fddce1588111d9ef6fdf20896de5c6fa",
         "https://github.com/expressjs/serve-static/security/advisories/GHSA-cm22-4g7w-348p"
-      ]
-    },
-    {
-      "id": "nodejs-goof:CVE-2026-102277:brace-expansion:1.1.11",
-      "cve": "CVE-2026-102277",
-      "package": "brace-expansion",
-      "ecosystem": "npm",
-      "installed_version": "1.1.11",
-      "fixed_version": "1.1.21",
-      "app": "nodejs-goof",
-      "cvss": 5.3,
-      "epss": 0.00437,
-      "in_kev": false,
-      "kev_date_added": null,
-      "priority_score": 14,
-      "priority_label": "low",
-      "summary": {
-        "en": "The brace-expansion library generates arbitrary strings containing a common prefix and suffix. Prior to 1.1.21, 2.1.7, 3.0.9, and 5.0.12, the expand function handles untrusted {a},b}-shaped patterns with many trailing closing braces by restarting its scan once for each trailing closing brace. The successive full-input rescans with linear working-string growth cause quadratic CPU time and memory pressure that can block the Node.js event loop. The process eventually recovers, making the impact a recoverable CPU denial of service. This issue is fixed in versions 1.1.21, 2.1.7, 3.0.9, and 5.0.12."
-      },
-      "references": [
-        "https://github.com/juliangruber/brace-expansion/commit/33a5ef17b8d800bbfa8c52b14c39043b6aac1a96",
-        "https://github.com/juliangruber/brace-expansion/commit/bdff773f98e5988616b7039cc9b508df5d640b22",
-        "https://github.com/juliangruber/brace-expansion/commit/c55e67d8d8b1c56a2474afff15c2891166b2d364",
-        "https://github.com/juliangruber/brace-expansion/commit/ffdfa3e3806bed17c0874b8f1439b084de354a7e",
-        "https://github.com/juliangruber/brace-expansion/security/advisories/GHSA-q2hr-2g5m-vwhr"
       ]
     },
     {
@@ -10554,25 +10529,28 @@
       ]
     },
     {
-      "id": "nodejs-goof:CVE-2026-53550:js-yaml:3.13.1",
-      "cve": "CVE-2026-53550",
-      "package": "js-yaml",
+      "id": "nodejs-goof:CVE-2026-102277:brace-expansion:1.1.11",
+      "cve": "CVE-2026-102277",
+      "package": "brace-expansion",
       "ecosystem": "npm",
-      "installed_version": "3.13.1",
-      "fixed_version": "3.15.0",
+      "installed_version": "1.1.11",
+      "fixed_version": "1.1.21",
       "app": "nodejs-goof",
       "cvss": 5.3,
-      "epss": 0.00386,
+      "epss": 0.00437,
       "in_kev": false,
       "kev_date_added": null,
       "priority_score": 14,
       "priority_label": "low",
       "summary": {
-        "en": "js-yaml is a JavaScript YAML parser and dumper. Prior to 4.2.0 and 3.15.0, a crafted YAML document can trigger algorithmic CPU exhaustion in js-yaml merge-key processing (<<) by repeating the same alias many times in a merge sequence. This causes quadratic parse-time behavior relative to input size and can block a Node.js worker/event loop for seconds with a relatively small payload (tens of KB), resulting in denial of service. The issue is in merge handling inside lib/loader.js. This vulnerability is fixed in 4.2.0 and 3.15.0.",
-        "es": "js-yaml es un analizador y volcador YAML de JavaScript. Antes de 4.2.0 y 3.15.0, un documento YAML manipulado puede desencadenar un agotamiento algor\u00edtmico de la CPU en el procesamiento de claves de fusi\u00f3n (<<) de js-yaml al repetir el mismo alias muchas veces en una secuencia de fusi\u00f3n. Esto causa un comportamiento cuadr\u00e1tico en tiempo de an\u00e1lisis en relaci\u00f3n con el tama\u00f1o de la entrada y puede bloquear un worker/bucle de eventos de Node.js durante segundos con una carga \u00fatil relativamente peque\u00f1a (decenas de KB), resultando en denegaci\u00f3n de servicio. El problema est\u00e1 en el manejo de fusiones dentro de lib/loader.js. Esta vulnerabilidad est\u00e1 corregida en 4.2.0 y 3.15.0."
+        "en": "The brace-expansion library generates arbitrary strings containing a common prefix and suffix. Prior to 1.1.21, 2.1.7, 3.0.9, and 5.0.12, the expand function handles untrusted {a},b}-shaped patterns with many trailing closing braces by restarting its scan once for each trailing closing brace. The successive full-input rescans with linear working-string growth cause quadratic CPU time and memory pressure that can block the Node.js event loop. The process eventually recovers, making the impact a recoverable CPU denial of service. This issue is fixed in versions 1.1.21, 2.1.7, 3.0.9, and 5.0.12."
       },
       "references": [
-        "https://github.com/nodeca/js-yaml/security/advisories/GHSA-h67p-54hq-rp68"
+        "https://github.com/juliangruber/brace-expansion/commit/33a5ef17b8d800bbfa8c52b14c39043b6aac1a96",
+        "https://github.com/juliangruber/brace-expansion/commit/bdff773f98e5988616b7039cc9b508df5d640b22",
+        "https://github.com/juliangruber/brace-expansion/commit/c55e67d8d8b1c56a2474afff15c2891166b2d364",
+        "https://github.com/juliangruber/brace-expansion/commit/ffdfa3e3806bed17c0874b8f1439b084de354a7e",
+        "https://github.com/juliangruber/brace-expansion/security/advisories/GHSA-q2hr-2g5m-vwhr"
       ]
     },
     {
@@ -10746,6 +10724,28 @@
       "references": [
         "https://cna.openjsf.org/security-advisories.html",
         "https://github.com/expressjs/morgan/security/advisories/GHSA-jxfw-x594-9x9m"
+      ]
+    },
+    {
+      "id": "nodejs-goof:CVE-2026-53550:js-yaml:3.13.1",
+      "cve": "CVE-2026-53550",
+      "package": "js-yaml",
+      "ecosystem": "npm",
+      "installed_version": "3.13.1",
+      "fixed_version": "3.15.0",
+      "app": "nodejs-goof",
+      "cvss": 5.3,
+      "epss": 0.00386,
+      "in_kev": false,
+      "kev_date_added": null,
+      "priority_score": 14,
+      "priority_label": "low",
+      "summary": {
+        "en": "js-yaml is a JavaScript YAML parser and dumper. Prior to 4.2.0 and 3.15.0, a crafted YAML document can trigger algorithmic CPU exhaustion in js-yaml merge-key processing (<<) by repeating the same alias many times in a merge sequence. This causes quadratic parse-time behavior relative to input size and can block a Node.js worker/event loop for seconds with a relatively small payload (tens of KB), resulting in denial of service. The issue is in merge handling inside lib/loader.js. This vulnerability is fixed in 4.2.0 and 3.15.0.",
+        "es": "js-yaml es un analizador y volcador YAML de JavaScript. Antes de 4.2.0 y 3.15.0, un documento YAML manipulado puede desencadenar un agotamiento algor\u00edtmico de la CPU en el procesamiento de claves de fusi\u00f3n (<<) de js-yaml al repetir el mismo alias muchas veces en una secuencia de fusi\u00f3n. Esto causa un comportamiento cuadr\u00e1tico en tiempo de an\u00e1lisis en relaci\u00f3n con el tama\u00f1o de la entrada y puede bloquear un worker/bucle de eventos de Node.js durante segundos con una carga \u00fatil relativamente peque\u00f1a (decenas de KB), resultando en denegaci\u00f3n de servicio. El problema est\u00e1 en el manejo de fusiones dentro de lib/loader.js. Esta vulnerabilidad est\u00e1 corregida en 4.2.0 y 3.15.0."
+      },
+      "references": [
+        "https://github.com/nodeca/js-yaml/security/advisories/GHSA-h67p-54hq-rp68"
       ]
     },
     {
@@ -10968,12 +10968,6 @@
   ],
   "history": [
     {
-      "date": "2026-10-25",
-      "findings_total": 386,
-      "critical": 3,
-      "high": 3
-    },
-    {
       "date": "2026-10-26",
       "findings_total": 386,
       "critical": 3,
@@ -11143,6 +11137,12 @@
     },
     {
       "date": "2026-11-27",
+      "findings_total": 394,
+      "critical": 3,
+      "high": 2
+    },
+    {
+      "date": "2026-11-28",
       "findings_total": 394,
       "critical": 3,
       "high": 2
